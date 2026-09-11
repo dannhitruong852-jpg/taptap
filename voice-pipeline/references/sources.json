@@ -1,4 +1,35 @@
 {
   "policy": "Reference audio must be clean English, single-speaker, low-reverb, and have documented provenance and permission/license appropriate for local processing.",
-  "references": []
+  "references": [
+    {
+      "actor_id": "05",
+      "variant": "neutral",
+      "corpus": "CMU ARCTIC",
+      "speaker": "bdl",
+      "source_url": "https://festvox.org/cmu_arctic/cmu_us_bdl_arctic-0.95-release.tar.bz2",
+      "license_or_permission": "CMU ARCTIC BSD-style license; corpus documentation states commercial and non-commercial use is permitted and speakers signed releases.",
+      "local_path": "voice-pipeline/references/generated/actor05-neutral.wav",
+      "reference_pack_version": "cmu-arctic-pilot-v1"
+    },
+    {
+      "actor_id": "12",
+      "variant": "neutral",
+      "corpus": "CMU ARCTIC",
+      "speaker": "jmk",
+      "source_url": "https://festvox.org/cmu_arctic/cmu_us_jmk_arctic-0.95-release.tar.bz2",
+      "license_or_permission": "CMU ARCTIC BSD-style license; corpus documentation states commercial and non-commercial use is permitted and speakers signed releases.",
+      "local_path": "voice-pipeline/references/generated/actor12-neutral.wav",
+      "reference_pack_version": "cmu-arctic-pilot-v1"
+    },
+    {
+      "actor_id": "13",
+      "variant": "neutral",
+      "corpus": "CMU ARCTIC",
+      "speaker": "rms",
+      "source_url": "https://festvox.org/cmu_arctic/cmu_us_rms_arctic-0.95-release.tar.bz2",
+      "license_or_permission": "CMU ARCTIC BSD-style license; corpus documentation states commercial and non-commercial use is permitted and speakers signed releases.",
+      "local_path": "voice-pipeline/references/generated/actor13-neutral.wav",
+      "reference_pack_version": "cmu-arctic-pilot-v1"
+    }
+  ]
 }
