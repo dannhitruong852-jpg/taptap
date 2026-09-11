@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f5f1e8">
-  <meta name="description" content="2002 考研英语 Text 1 情绪精读器：免费、无 API、逐句朗读。">
-  <title>2002 Text 1 · 情绪精读</title>
+  <meta name="description" content="2002 考研英语 Text 1 B2 表演式精读器：预生成音频、逐句朗读、零运行时 TTS。">
+  <title>2002 Text 1 · B2 表演式精读</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body data-mood="warm">
@@ -13,10 +13,10 @@
     <header class="hero">
       <div class="topline">
         <span class="year-chip">2002 · Text 1</span>
-        <span class="free-chip">免费 · 无 API</span>
+        <span class="free-chip">预生成 · 零运行时 TTS</span>
       </div>
       <h1>让真题像故事一样被读出来</h1>
-      <p class="subtitle">同一个“讲述者”，根据句子的情境自动改变语速、音高、停顿和角色感。</p>
+      <p class="subtitle">同一篇文章按场景、角色和情绪切换声音；必要时一句内部也会切换演员。</p>
       <div class="director-card">
         <div class="director-icon">🎬</div>
         <div><div class="director-title">这篇文章怎么读</div><p id="article-background"></p></div>
@@ -27,13 +27,13 @@
         <button id="movie-mode" class="pill" type="button" aria-pressed="false">🎞 沉浸模式</button>
       </div>
     </header>
-    <section class="howto" aria-label="使用方法"><span>点任意一句</span><b>→</b><span>开始朗读</span><b>→</b><span>随时暂停</span></section>
+    <section class="howto" aria-label="使用方法"><span>点任意一句</span><b>→</b><span>播放预生成音频</span><b>→</b><span>随时暂停</span></section>
     <section id="sentence-list" class="sentence-list" aria-label="2002 Text 1 双语精读"></section>
-    <footer class="footer-note">朗读使用你设备自带的英语语音，不调用付费接口。不同设备的音色会略有差异。</footer>
+    <footer class="footer-note">本篇使用预生成表演式英语音频；播放时不调用 TTS 接口。不同角色和场景可在一句内部连续切换。</footer>
   </main>
   <aside id="player-shell" class="player-shell" aria-label="朗读播放器">
     <div class="progress-track"><div id="progress-fill" class="progress-fill"></div></div>
-    <div class="player-meta"><div><div id="player-position" class="player-position">01 / 21</div><div id="director-mood" class="director-mood">🙂 轻松讲解</div></div><div id="player-status" class="player-status">点 ▶ 开始</div></div>
+    <div class="player-meta"><div><div id="player-position" class="player-position">01 / 21</div><div id="director-mood" class="director-mood">温暖讲解 · 1</div></div><div id="player-status" class="player-status">正在加载音频清单</div></div>
     <div class="transport-row">
       <button id="previous" class="icon-button" type="button" aria-label="上一句">‹</button>
       <button id="replay" class="icon-button" type="button" aria-label="重播本句">↺</button>
