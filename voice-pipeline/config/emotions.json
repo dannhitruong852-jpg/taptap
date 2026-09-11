@@ -1,0 +1,13 @@
+{
+  "emotions": {
+    "neutral":   {"exaggeration":0.50,"cfg_weight":0.50},
+    "warm":      {"exaggeration":0.55,"cfg_weight":0.45},
+    "lively":    {"exaggeration":0.65,"cfg_weight":0.40},
+    "serious":   {"exaggeration":0.42,"cfg_weight":0.55},
+    "curious":   {"exaggeration":0.60,"cfg_weight":0.45},
+    "ironic":    {"exaggeration":0.66,"cfg_weight":0.36},
+    "tense":     {"exaggeration":0.72,"cfg_weight":0.34},
+    "emotional": {"exaggeration":0.75,"cfg_weight":0.32}
+  },
+  "intensity_rule": {"0":-0.08,"1":0.0,"2":0.10,"min":0.25,"max":0.90}
+}
