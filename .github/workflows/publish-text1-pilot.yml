@@ -1,0 +1,67 @@
+name: Publish 2002 Text 1 audio pilot
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [kaoyan-reader-v1]
+    paths:
+      - '.github/workflows/publish-text1-pilot.yml'
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      SOURCE_RUN_ID: '34623362146'
+      ARTIFACT_NAME: '2002-text1-b2-pilot'
+      TARGET_DIR: 'kaoyan-reader-v1/audio/2002/text1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: kaoyan-reader-v1
+          fetch-depth: 0
+
+      - name: Download validated audio artifact
+        run: |
+          rm -rf /tmp/text1-pilot
+          mkdir -p /tmp/text1-pilot
+          gh run download "$SOURCE_RUN_ID" -R "$GITHUB_REPOSITORY" -n "$ARTIFACT_NAME" -D /tmp/text1-pilot
+
+      - name: Validate artifact before publishing
+        run: |
+          test -f /tmp/text1-pilot/manifest.json
+          count=$(find /tmp/text1-pilot -maxdepth 1 -type f -name '*.opus' | wc -l)
+          test "$count" -eq 24
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path('/tmp/text1-pilot')
+          manifest = json.loads((root / 'manifest.json').read_text())
+          assert len(manifest['segments']) == 24
+          for segment_id, item in manifest['segments'].items():
+              assert (root / f'{segment_id}.opus').is_file(), segment_id
+              assert item['path'] == f'./audio/2002/text1/{segment_id}.opus'
+          print('artifact validation passed: 24/24 segments')
+          PY
+
+      - name: Install pilot into static site
+        run: |
+          mkdir -p "$TARGET_DIR"
+          rm -f "$TARGET_DIR"/*.opus
+          cp /tmp/text1-pilot/*.opus "$TARGET_DIR"/
+          cp /tmp/text1-pilot/manifest.json "$TARGET_DIR/manifest.json"
+
+      - name: Commit pilot and publish Pages branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$TARGET_DIR"
+          if ! git diff --cached --quiet; then
+            git commit -m 'feat: publish 2002 Text 1 Chatterbox audio'
+            git push origin HEAD:kaoyan-reader-v1
+          fi
+          git push --force origin HEAD:gh-pages
