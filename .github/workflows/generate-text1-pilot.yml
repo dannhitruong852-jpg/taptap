@@ -27,47 +27,51 @@ jobs:
       - name: Install system audio tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y ffmpeg bzip2
+          sudo apt-get install -y ffmpeg
 
-      - name: Install Chatterbox
+      - name: Install Chatterbox and Parquet reader
         run: |
           python -m pip install --upgrade pip
-          python -m pip install chatterbox-tts
+          python -m pip install chatterbox-tts pyarrow
 
-      - name: Download licensed CMU Arctic pilot references
+      - name: Download licensed CMU Arctic pilot references from Hugging Face mirror
         run: |
           mkdir -p /tmp/cmu-arctic voice-pipeline/references/generated
-          curl -L --fail --retry 3 -o /tmp/cmu-arctic/bdl.tar.bz2 https://festvox.org/cmu_arctic/cmu_us_bdl_arctic-0.95-release.tar.bz2
-          curl -L --fail --retry 3 -o /tmp/cmu-arctic/jmk.tar.bz2 https://festvox.org/cmu_arctic/cmu_us_jmk_arctic-0.95-release.tar.bz2
-          curl -L --fail --retry 3 -o /tmp/cmu-arctic/rms.tar.bz2 https://festvox.org/cmu_arctic/cmu_us_rms_arctic-0.95-release.tar.bz2
-          tar -xjf /tmp/cmu-arctic/bdl.tar.bz2 -C /tmp/cmu-arctic
-          tar -xjf /tmp/cmu-arctic/jmk.tar.bz2 -C /tmp/cmu-arctic
-          tar -xjf /tmp/cmu-arctic/rms.tar.bz2 -C /tmp/cmu-arctic
+          curl -L --fail --retry 3 -o /tmp/cmu-arctic/bdl.parquet 'https://huggingface.co/datasets/MikhailT/cmu-arctic/resolve/main/data/bdl-00000-of-00001-0c683a89629915f1.parquet?download=true'
+          curl -L --fail --retry 3 -o /tmp/cmu-arctic/jmk.parquet 'https://huggingface.co/datasets/MikhailT/cmu-arctic/resolve/main/data/jmk-00000-of-00001-1e65c0fe4d8b0b42.parquet?download=true'
+          curl -L --fail --retry 3 -o /tmp/cmu-arctic/rms.parquet 'https://huggingface.co/datasets/MikhailT/cmu-arctic/resolve/main/data/rms-00000-of-00001-0f0762376a6ef8cc.parquet?download=true'
 
       - name: Build 12-20 second reference clips
         run: |
           python - <<'PY'
+          import io
           import wave
           from pathlib import Path
+          import pyarrow.parquet as pq
 
           specs = {
-              'actor05-neutral.wav': Path('/tmp/cmu-arctic/cmu_us_bdl_arctic/wav'),
-              'actor12-neutral.wav': Path('/tmp/cmu-arctic/cmu_us_jmk_arctic/wav'),
-              'actor13-neutral.wav': Path('/tmp/cmu-arctic/cmu_us_rms_arctic/wav'),
+              'actor05-neutral.wav': Path('/tmp/cmu-arctic/bdl.parquet'),
+              'actor12-neutral.wav': Path('/tmp/cmu-arctic/jmk.parquet'),
+              'actor13-neutral.wav': Path('/tmp/cmu-arctic/rms.parquet'),
           }
           outdir = Path('voice-pipeline/references/generated')
           outdir.mkdir(parents=True, exist_ok=True)
-          for outname, wavdir in specs.items():
-              files = [wavdir / f'arctic_a{i:04d}.wav' for i in range(1, 9)]
+
+          for outname, parquet_path in specs.items():
+              table = pq.read_table(parquet_path, columns=['audio']).slice(0, 8)
+              rows = table.column('audio').to_pylist()
               frames = []
               params = None
-              for src in files:
-                  with wave.open(str(src), 'rb') as w:
+              for row in rows:
+                  data = row['bytes']
+                  if not data:
+                      raise RuntimeError(f'missing embedded audio bytes in {parquet_path}')
+                  with wave.open(io.BytesIO(data), 'rb') as w:
                       current = (w.getnchannels(), w.getsampwidth(), w.getframerate())
                       if params is None:
                           params = current
                       if current != params:
-                          raise RuntimeError(f'format mismatch in {src}')
+                          raise RuntimeError(f'format mismatch in {parquet_path}')
                       frames.append(w.readframes(w.getnframes()))
               with wave.open(str(outdir / outname), 'wb') as out:
                   out.setnchannels(params[0])
