@@ -1,0 +1,61 @@
+name: Chatterbox smoke test
+
+on:
+  push:
+    branches: [kaoyan-reader-v1]
+    paths:
+      - '.github/workflows/chatterbox-smoke.yml'
+      - 'voice-pipeline/**'
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install ffmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Install Chatterbox
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install chatterbox-tts
+
+      - name: Generate one English sample on CPU
+        env:
+          HF_HOME: ${{ runner.temp }}/hf-cache
+        run: |
+          mkdir -p smoke-out
+          python - <<'PY'
+          import torchaudio as ta
+          from chatterbox.tts import ChatterboxTTS
+
+          model = ChatterboxTTS.from_pretrained(device='cpu')
+          text = 'Who is that?'
+          wav = model.generate(text, exaggeration=0.60, cfg_weight=0.45)
+          ta.save('smoke-out/chatterbox-smoke.wav', wav, model.sr)
+          print('sample_rate=', model.sr)
+          print('frames=', wav.shape[-1])
+          PY
+
+      - name: Encode Opus and validate duration
+        run: |
+          ffmpeg -y -i smoke-out/chatterbox-smoke.wav -c:a libopus -b:a 48k smoke-out/chatterbox-smoke.opus
+          ffprobe -v error -show_entries format=duration -of default=nw=1 smoke-out/chatterbox-smoke.opus
+
+      - name: Upload smoke artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: chatterbox-smoke-audio
+          path: smoke-out/chatterbox-smoke.opus
+          if-no-files-found: error
+          retention-days: 3
