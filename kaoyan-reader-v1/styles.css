@@ -124,14 +124,38 @@ body.movie .en { font-size:clamp(18px,4.6vw,22px); line-height:1.5; }
   border:1px solid rgba(48,45,38,.13); border-radius:24px;
   background:rgba(251,249,244,.94); box-shadow:0 20px 60px rgba(45,38,27,.19);
   backdrop-filter: blur(18px); overflow:hidden;
+  transition: transform .28s cubic-bezier(.22,.78,.23,1), opacity .22s ease, border-radius .28s ease, box-shadow .28s ease;
+  will-change: transform;
 }
-.progress-track { height:3px; background:rgba(46,42,34,.08); }
+.player-shell.is-collapsed {
+  transform: translate(-50%, calc(100% - 36px));
+  border-radius:18px 18px 10px 10px;
+  box-shadow:0 10px 28px rgba(45,38,27,.12);
+}
+.player-shell.is-collapsed .player-meta,
+.player-shell.is-collapsed .transport-row {
+  opacity:0;
+  pointer-events:none;
+}
+.player-shell.is-collapsed .progress-track {
+  height:5px;
+}
+.player-shell.is-collapsed::after {
+  content:"";
+  position:absolute;
+  left:50%; top:10px;
+  width:46px; height:4px;
+  border-radius:999px;
+  background:rgba(36,35,31,.24);
+  transform:translateX(-50%);
+}
+.progress-track { height:3px; background:rgba(46,42,34,.08); transition:height .2s ease; }
 .progress-fill { width:4.76%; height:100%; background:#51442e; transition:width .25s ease; }
-.player-meta { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; padding:12px 15px 4px; }
+.player-meta { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; padding:12px 15px 4px; transition:opacity .16s ease; }
 .player-position { font-size:11px; color:#8e877c; font-weight:800; }
 .director-mood { margin-top:3px; font-size:13px; font-weight:800; }
 .player-status { max-width:45%; text-align:right; font-size:10px; line-height:1.4; color:#8a8378; }
-.transport-row { display:flex; align-items:center; justify-content:center; gap:8px; padding:8px 12px 14px; }
+.transport-row { display:flex; align-items:center; justify-content:center; gap:8px; padding:8px 12px 14px; transition:opacity .16s ease; }
 .icon-button, .play-button {
   border:0; border-radius:50%; display:grid; place-items:center; cursor:pointer;
 }
@@ -147,6 +171,10 @@ body.movie .en { font-size:clamp(18px,4.6vw,22px); line-height:1.5; }
   font-size:12px; opacity:0; pointer-events:none; transition:.2s ease;
 }
 .toast.show { opacity:1; transform:translate(-50%, 0); }
+
+@media (prefers-reduced-motion: reduce) {
+  .player-shell { transition:none; }
+}
 
 @media (min-width: 700px) {
   .page-shell { padding-top:48px; }
