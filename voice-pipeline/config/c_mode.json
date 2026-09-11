@@ -1,0 +1,12 @@
+{
+  "name": "C",
+  "description": "Understanding-first natural American conversational delivery",
+  "default_accent": "en-US",
+  "pace": "natural_conversational",
+  "max_low_contrast_run": 2,
+  "strong_acting_requires_textual_evidence": true,
+  "narration_is_never_flat": true,
+  "role_switch_requires_speaker_change": true,
+  "default_rate_range": [0.92, 1.06],
+  "hard_rate_range": [0.80, 1.10]
+}
