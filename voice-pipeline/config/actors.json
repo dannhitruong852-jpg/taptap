@@ -1,0 +1,19 @@
+{
+  "actors": [
+    {"id":"01","name":"Rational Thinker Male","accent":"en-US","base_rate":0.94,"role":"economic/business/social-science","style_note":"calm analytical intellectual cadence"},
+    {"id":"02","name":"Academic Explainer Female","accent":"en-US","base_rate":0.96,"role":"medicine/education/psychology","style_note":"clean professional warm academic delivery"},
+    {"id":"03","name":"Documentary Male","accent":"en-US","base_rate":0.91,"role":"history/nature/environment","style_note":"deep stable documentary presence"},
+    {"id":"04","name":"Documentary Female","accent":"en-US","base_rate":0.93,"role":"science/nature/culture","style_note":"cool restrained documentary delivery"},
+    {"id":"05","name":"Presentation Male","accent":"en-US","base_rate":0.97,"role":"technology/innovation/ideas","style_note":"clear rhythmic persuasive keynote cadence"},
+    {"id":"06","name":"Young Natural Female","accent":"en-US","base_rate":1.00,"role":"life/education/media","style_note":"relaxed contemporary conversational voice"},
+    {"id":"07","name":"Warm Story Female","accent":"en-US","base_rate":0.94,"role":"memoir/people/emotional-story","style_note":"warm intimate narrative voice"},
+    {"id":"08","name":"Tech Dry-Humor Male","accent":"en-US","base_rate":0.97,"role":"technology/future/irony","style_note":"casual dry-humor technology cadence"},
+    {"id":"09","name":"Authoritative Commentary Male","accent":"en-US","base_rate":0.90,"role":"policy/law/institutions","style_note":"firm weighty restrained commentary"},
+    {"id":"10","name":"Sharp Commentary Female","accent":"en-US","base_rate":0.95,"role":"social-commentary/conflict","style_note":"precise assertive analytical commentary"},
+    {"id":"11","name":"Cute Girl Character","accent":"en-US","base_rate":1.02,"role":"child/playful-dialogue/contrast","style_note":"bright cute girl character, lively but not shrill"},
+    {"id":"12","name":"Young Male Character","accent":"en-US","base_rate":1.01,"role":"student/young-character/dialogue","style_note":"clear agile youthful male dialogue"},
+    {"id":"13","name":"Older Male Character","accent":"en-US","base_rate":0.88,"role":"professor/older-character/fatherly","style_note":"older calm lightly textured male role"},
+    {"id":"14","name":"British Mature Male","accent":"en-GB","base_rate":0.92,"role":"UK/history/culture/institutions","style_note":"clear restrained mature British voice"},
+    {"id":"15","name":"British Clear Female","accent":"en-GB","base_rate":0.95,"role":"UK/education/culture/dialogue","style_note":"clear elegant natural British female voice"}
+  ]
+}
