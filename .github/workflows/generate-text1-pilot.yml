@@ -1,0 +1,113 @@
+name: Generate 2002 Text 1 B2 pilot
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [kaoyan-reader-v1]
+    paths:
+      - '.github/workflows/generate-text1-pilot.yml'
+      - 'voice-pipeline/generate_text1.py'
+      - 'voice-pipeline/render.py'
+      - 'voice-pipeline/config/**'
+      - 'voice-pipeline/references/sources.json'
+      - 'kaoyan-reader-v1/content/2002/text1.json'
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install system audio tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg bzip2
+
+      - name: Install Chatterbox
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install chatterbox-tts
+
+      - name: Download licensed CMU Arctic pilot references
+        run: |
+          mkdir -p /tmp/cmu-arctic voice-pipeline/references/generated
+          curl -L --fail --retry 3 -o /tmp/cmu-arctic/bdl.tar.bz2 https://festvox.org/cmu_arctic/cmu_us_bdl_arctic-0.95-release.tar.bz2
+          curl -L --fail --retry 3 -o /tmp/cmu-arctic/jmk.tar.bz2 https://festvox.org/cmu_arctic/cmu_us_jmk_arctic-0.95-release.tar.bz2
+          curl -L --fail --retry 3 -o /tmp/cmu-arctic/rms.tar.bz2 https://festvox.org/cmu_arctic/cmu_us_rms_arctic-0.95-release.tar.bz2
+          tar -xjf /tmp/cmu-arctic/bdl.tar.bz2 -C /tmp/cmu-arctic
+          tar -xjf /tmp/cmu-arctic/jmk.tar.bz2 -C /tmp/cmu-arctic
+          tar -xjf /tmp/cmu-arctic/rms.tar.bz2 -C /tmp/cmu-arctic
+
+      - name: Build 12-20 second reference clips
+        run: |
+          python - <<'PY'
+          import wave
+          from pathlib import Path
+
+          specs = {
+              'actor05-neutral.wav': Path('/tmp/cmu-arctic/cmu_us_bdl_arctic/wav'),
+              'actor12-neutral.wav': Path('/tmp/cmu-arctic/cmu_us_jmk_arctic/wav'),
+              'actor13-neutral.wav': Path('/tmp/cmu-arctic/cmu_us_rms_arctic/wav'),
+          }
+          outdir = Path('voice-pipeline/references/generated')
+          outdir.mkdir(parents=True, exist_ok=True)
+          for outname, wavdir in specs.items():
+              files = [wavdir / f'arctic_a{i:04d}.wav' for i in range(1, 9)]
+              frames = []
+              params = None
+              for src in files:
+                  with wave.open(str(src), 'rb') as w:
+                      current = (w.getnchannels(), w.getsampwidth(), w.getframerate())
+                      if params is None:
+                          params = current
+                      if current != params:
+                          raise RuntimeError(f'format mismatch in {src}')
+                      frames.append(w.readframes(w.getnframes()))
+              with wave.open(str(outdir / outname), 'wb') as out:
+                  out.setnchannels(params[0])
+                  out.setsampwidth(params[1])
+                  out.setframerate(params[2])
+                  out.writeframes(b''.join(frames))
+          PY
+          for f in voice-pipeline/references/generated/*.wav; do
+            ffmpeg -y -i "$f" -t 18 -af "loudnorm=I=-20:TP=-2:LRA=7" "${f%.wav}-trim.wav"
+            mv "${f%.wav}-trim.wav" "$f"
+            ffprobe -v error -show_entries format=duration -of default=nw=1 "$f"
+          done
+
+      - name: Run deterministic unit tests
+        run: |
+          PYTHONPATH=voice-pipeline python -m unittest discover -s voice-pipeline/tests -p 'test_*.py'
+
+      - name: Generate all 24 B2 segments
+        env:
+          HF_HOME: ${{ runner.temp }}/hf-cache
+        run: |
+          python voice-pipeline/generate_text1.py
+
+      - name: Validate generated pilot
+        run: |
+          test "$(find kaoyan-reader-v1/audio/2002/text1 -name '*.opus' | wc -l)" -eq 24
+          python - <<'PY'
+          import json
+          m=json.load(open('kaoyan-reader-v1/audio/2002/text1/manifest.json'))
+          assert len(m['segments']) == 24
+          assert list(m['segments'])[:3] == ['s01-a','s02-a','s03-a']
+          print('manifest-ok: 24 segments')
+          PY
+
+      - name: Upload complete pilot candidate
+        uses: actions/upload-artifact@v4
+        with:
+          name: 2002-text1-b2-pilot
+          path: |
+            kaoyan-reader-v1/audio/2002/text1/*.opus
+            kaoyan-reader-v1/audio/2002/text1/manifest.json
+          if-no-files-found: error
+          retention-days: 7
