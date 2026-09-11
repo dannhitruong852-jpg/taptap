@@ -13,3 +13,10 @@ def partition_segments(segments, shard_count):
         shards.append(items[start:end])
         start = end
     return shards
+
+
+def select_shard(segments, shard_count, shard_index):
+    """Return one zero-based shard from a stable contiguous partition."""
+    if shard_index < 0 or shard_index >= shard_count:
+        raise ValueError('shard_index out of range')
+    return partition_segments(segments, shard_count)[shard_index]
