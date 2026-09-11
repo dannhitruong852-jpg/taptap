@@ -1,8 +1,249 @@
 {
-  "generation_version": "pilot-v1",
+  "article": {
+    "year": 2002,
+    "section": "Text 1"
+  },
+  "model_version": "chatterbox-tts-0.1.7-original-english",
   "segments": {
-    "s10-a": {"path": "./audio/2002/text1/s10-a.opus", "qa_status": "fixture"},
-    "s10-b": {"path": "./audio/2002/text1/s10-b.opus", "qa_status": "fixture"},
-    "s10-c": {"path": "./audio/2002/text1/s10-c.opus", "qa_status": "fixture"}
+    "s01-a": {
+      "path": "./audio/2002/text1/s01-a.opus",
+      "actor_id": "05",
+      "emotion": "warm",
+      "intensity": 1,
+      "rate": 0.96,
+      "seed": 2002001,
+      "fingerprint": "edb218979104fad1594a980dd959f8d4117d78e9aaed05d60326e0b8d04e1e49",
+      "qa_status": "candidate"
+    },
+    "s02-a": {
+      "path": "./audio/2002/text1/s02-a.opus",
+      "actor_id": "05",
+      "emotion": "warm",
+      "intensity": 1,
+      "rate": 0.94,
+      "seed": 2002002,
+      "fingerprint": "cb986b3d611ba930b85ac99569e155820929f60bf5669c6c754764634c0d010e",
+      "qa_status": "candidate"
+    },
+    "s03-a": {
+      "path": "./audio/2002/text1/s03-a.opus",
+      "actor_id": "05",
+      "emotion": "neutral",
+      "intensity": 1,
+      "rate": 0.98,
+      "seed": 2002003,
+      "fingerprint": "b10d87c79da09024ef7d4ca647ba340219285a6a604f59813f7dea9b67e8845d",
+      "qa_status": "candidate"
+    },
+    "s04-a": {
+      "path": "./audio/2002/text1/s04-a.opus",
+      "actor_id": "05",
+      "emotion": "lively",
+      "intensity": 1,
+      "rate": 0.96,
+      "seed": 2002004,
+      "fingerprint": "dc7b272773eb6a1d096c95e3c011a745930880b40c53a1e28fbb7cd39d2bfa11",
+      "qa_status": "candidate"
+    },
+    "s05-a": {
+      "path": "./audio/2002/text1/s05-a.opus",
+      "actor_id": "05",
+      "emotion": "lively",
+      "intensity": 1,
+      "rate": 0.9,
+      "seed": 2002005,
+      "fingerprint": "4a7b6c47dd85f1cf6389eeb1b1f003f4bf259462b397b862842b77ebebefa96f",
+      "qa_status": "candidate"
+    },
+    "s06-a": {
+      "path": "./audio/2002/text1/s06-a.opus",
+      "actor_id": "05",
+      "emotion": "lively",
+      "intensity": 1,
+      "rate": 0.88,
+      "seed": 2002006,
+      "fingerprint": "8019a8ca6addaef69a83e07d8260d20103550317c2f85656d3de09507c095de9",
+      "qa_status": "candidate"
+    },
+    "s07-a": {
+      "path": "./audio/2002/text1/s07-a.opus",
+      "actor_id": "05",
+      "emotion": "lively",
+      "intensity": 1,
+      "rate": 0.9,
+      "seed": 2002007,
+      "fingerprint": "bcd93b5b5096b1f6ef9929e7005c05919ec4297705b6ec63e238fbc65d492165",
+      "qa_status": "candidate"
+    },
+    "s08-a": {
+      "path": "./audio/2002/text1/s08-a.opus",
+      "actor_id": "05",
+      "emotion": "tense",
+      "intensity": 1,
+      "rate": 0.96,
+      "seed": 2002008,
+      "fingerprint": "154b9fbf537e0464bc2e9b64d18e0622803d17d3c3f0a4d7d2f437b0800719b2",
+      "qa_status": "candidate"
+    },
+    "s09-a": {
+      "path": "./audio/2002/text1/s09-a.opus",
+      "actor_id": "12",
+      "emotion": "curious",
+      "intensity": 2,
+      "rate": 0.9,
+      "seed": 2002009,
+      "fingerprint": "7946de9f5d5b112ca2e2c38a31e607b180df854f7fd3c8a24f7211ca31921016",
+      "qa_status": "candidate"
+    },
+    "s09-b": {
+      "path": "./audio/2002/text1/s09-b.opus",
+      "actor_id": "05",
+      "emotion": "neutral",
+      "intensity": 1,
+      "rate": 0.95,
+      "seed": 2002010,
+      "fingerprint": "1323abc7f015f238b17ecb97c4b9b5711c4752755a0ad16fac801dcd0267fc3d",
+      "qa_status": "candidate"
+    },
+    "s10-a": {
+      "path": "./audio/2002/text1/s10-a.opus",
+      "actor_id": "13",
+      "emotion": "neutral",
+      "intensity": 1,
+      "rate": 0.91,
+      "seed": 2002011,
+      "fingerprint": "12871ab8bd0eff4479ca5fb65315b847837978259b610b8abf4d92ff3566ffd9",
+      "qa_status": "candidate"
+    },
+    "s10-b": {
+      "path": "./audio/2002/text1/s10-b.opus",
+      "actor_id": "05",
+      "emotion": "neutral",
+      "intensity": 0,
+      "rate": 0.95,
+      "seed": 2002012,
+      "fingerprint": "420114daf43d29fbfeb05a48b5611c2c0dbad1359fe473d44a60e44e03701c2a",
+      "qa_status": "candidate"
+    },
+    "s10-c": {
+      "path": "./audio/2002/text1/s10-c.opus",
+      "actor_id": "13",
+      "emotion": "ironic",
+      "intensity": 2,
+      "rate": 0.88,
+      "seed": 2002013,
+      "fingerprint": "17abdca5a42a1cee3e62a8755479db4973db9b8b4c632b3bfdc87e40fddb7110",
+      "qa_status": "candidate"
+    },
+    "s11-a": {
+      "path": "./audio/2002/text1/s11-a.opus",
+      "actor_id": "05",
+      "emotion": "neutral",
+      "intensity": 1,
+      "rate": 0.93,
+      "seed": 2002014,
+      "fingerprint": "4a9d19a6c37ca719d6b7bca9cc75100fc52bfa13403b8d304fe10e2d86fbdcf9",
+      "qa_status": "candidate"
+    },
+    "s12-a": {
+      "path": "./audio/2002/text1/s12-a.opus",
+      "actor_id": "05",
+      "emotion": "serious",
+      "intensity": 1,
+      "rate": 0.91,
+      "seed": 2002015,
+      "fingerprint": "a9def20d8b08722346e0ca6b7a53ce95e69ffd169cb979e69b1fcd5732261895",
+      "qa_status": "candidate"
+    },
+    "s13-a": {
+      "path": "./audio/2002/text1/s13-a.opus",
+      "actor_id": "05",
+      "emotion": "lively",
+      "intensity": 1,
+      "rate": 0.93,
+      "seed": 2002016,
+      "fingerprint": "02d446e22b9f35f6baeaad864bf2330501404e31fcaca30b3cf87eb1504e3ddc",
+      "qa_status": "candidate"
+    },
+    "s14-a": {
+      "path": "./audio/2002/text1/s14-a.opus",
+      "actor_id": "05",
+      "emotion": "warm",
+      "intensity": 1,
+      "rate": 0.93,
+      "seed": 2002017,
+      "fingerprint": "6c827f4e2c6501695d303458bb1670365026cc6551c68d090ebcd54903a36fa8",
+      "qa_status": "candidate"
+    },
+    "s15-a": {
+      "path": "./audio/2002/text1/s15-a.opus",
+      "actor_id": "05",
+      "emotion": "warm",
+      "intensity": 1,
+      "rate": 0.89,
+      "seed": 2002018,
+      "fingerprint": "9c232280b50c19a1225a5c2e51dbf67242dfdf37584858a968e4c46db7d6d774",
+      "qa_status": "candidate"
+    },
+    "s16-a": {
+      "path": "./audio/2002/text1/s16-a.opus",
+      "actor_id": "05",
+      "emotion": "lively",
+      "intensity": 1,
+      "rate": 0.86,
+      "seed": 2002019,
+      "fingerprint": "cfb5e8e4e1eb1f6f3c7f41a5e9fb4afe28f584b0f028dff4aebbc23d4e72faf4",
+      "qa_status": "candidate"
+    },
+    "s17-a": {
+      "path": "./audio/2002/text1/s17-a.opus",
+      "actor_id": "05",
+      "emotion": "serious",
+      "intensity": 1,
+      "rate": 0.8,
+      "seed": 2002020,
+      "fingerprint": "8b6fc9d9d3d6b915983d2366067f8ad8c1dc2037b76e0107c4dbbf609792b85e",
+      "qa_status": "candidate"
+    },
+    "s18-a": {
+      "path": "./audio/2002/text1/s18-a.opus",
+      "actor_id": "05",
+      "emotion": "curious",
+      "intensity": 1,
+      "rate": 0.82,
+      "seed": 2002021,
+      "fingerprint": "183d1af662cb30874dbe0e8e21529ded35dac3aedf18bd98c0bab7d49ea8b182",
+      "qa_status": "candidate"
+    },
+    "s19-a": {
+      "path": "./audio/2002/text1/s19-a.opus",
+      "actor_id": "05",
+      "emotion": "ironic",
+      "intensity": 1,
+      "rate": 0.88,
+      "seed": 2002022,
+      "fingerprint": "cabfc2e8427a267dea2367e44d31d62a6ea3e922e54218c67c61ce18c3e12c27",
+      "qa_status": "candidate"
+    },
+    "s20-a": {
+      "path": "./audio/2002/text1/s20-a.opus",
+      "actor_id": "05",
+      "emotion": "neutral",
+      "intensity": 1,
+      "rate": 0.89,
+      "seed": 2002023,
+      "fingerprint": "a071133a6c551ac9a6b48ada3d3243d0638aa984b9d830c2d8d2c8c3f4a8b578",
+      "qa_status": "candidate"
+    },
+    "s21-a": {
+      "path": "./audio/2002/text1/s21-a.opus",
+      "actor_id": "05",
+      "emotion": "warm",
+      "intensity": 0,
+      "rate": 0.9,
+      "seed": 2002024,
+      "fingerprint": "1ea14aa41a12ee1bfea6bd6fdd0670fa3b75684609c2291f92fd3c11c41d4885",
+      "qa_status": "candidate"
+    }
   }
 }
