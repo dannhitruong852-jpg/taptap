@@ -1,0 +1,5 @@
+const clamp=(value,min,max)=>Math.min(max,Math.max(min,value));
+export function effectiveRate(baseRate,speedMultiplier){return Number(clamp(baseRate*speedMultiplier,.5,1.6).toFixed(2));}
+export function nextIndex(index,delta,length){if(length<=0)return 0;return clamp(index+delta,0,length-1);}
+function voiceScore(voice){const name=(voice?.name||'').toLowerCase();const lang=(voice?.lang||'').toLowerCase();if(!lang.startsWith('en'))return-1000;let score=0;if(name.includes('natural'))score+=80;if(name.includes('premium'))score+=70;if(name.includes('enhanced'))score+=60;if(name.includes('microsoft'))score+=45;if(name.includes('google'))score+=35;if(name.includes('siri'))score+=30;if(lang==='en-us'||lang==='en-gb')score+=15;if(voice.default)score+=5;return score;}
+export function chooseVoicePair(voices=[]){const english=voices.filter(v=>(v.lang||'').toLowerCase().startsWith('en')).sort((a,b)=>voiceScore(b)-voiceScore(a));const narrator=english[0]||voices[0]||null;const dialogue=english.find(v=>narrator&&v.name!==narrator.name)||narrator;return{narrator,dialogue};}
