@@ -41,7 +41,8 @@ body.hide-vocab .sentence-card .vocab,body.hide-vocab .sentence-card .vocab.read
 .player-meta{min-height:34px;padding:9px 92px 0 16px;align-items:flex-start}
 .player-position,.player-status{display:none}
 .director-mood{margin:0;min-height:30px;display:flex;align-items:center;font-size:14px;font-weight:800;color:#24231f;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.transport-row{display:grid;grid-template-columns:44px 44px 58px 44px;gap:10px;justify-content:center;align-items:center;padding:1px 0 2px}
+.transport-row{display:grid;grid-template-columns:44px 44px 58px 44px 44px;gap:10px;justify-content:center;align-items:center;padding:1px 0 2px}
+.transport-row::after{content:"";width:44px;height:1px}
 .transport-row .icon-button,.transport-row .play-button{position:relative;padding:0;line-height:0;flex:0 0 auto;align-items:center;justify-content:center;font-size:0}
 .transport-row .icon-button{width:44px;height:44px}
 .transport-row .play-button{width:58px;height:58px}
@@ -65,7 +66,8 @@ body.hide-vocab .sentence-card .vocab,body.hide-vocab .sentence-card .vocab.read
   .howto{font-size:10px}
   .player-meta{padding-left:13px;padding-right:82px}
   .director-mood{font-size:13px}
-  .transport-row{grid-template-columns:44px 44px 56px 44px;gap:7px}
+  .transport-row{grid-template-columns:44px 44px 56px 44px 44px;gap:7px}
+  .transport-row::after{width:44px}
   .transport-row .icon-button{width:44px;height:44px}
   .transport-row .play-button{width:56px;height:56px}
   .magnetic-speed{grid-template-columns:44px minmax(0,1fr);gap:6px;padding-left:13px;padding-right:14px}
