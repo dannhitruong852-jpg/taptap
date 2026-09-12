@@ -22,7 +22,8 @@ test('transport controls share one shallow row without shrinking tap targets',()
 test('title and speed slider occupy the same thin lower strip',()=>{
   assert.match(css,/\.player-meta\{[^}]*position:absolute;[^}]*left:8px;bottom:0;[^}]*height:22px;[^}]*padding:0/s);
   assert.match(css,/\.director-mood\{[^}]*min-height:0;[^}]*font-size:10px/s);
-  assert.match(css,/\.magnetic-speed\{[^}]*position:absolute;[^}]*left:0;right:0;bottom:0;[^}]*padding:0 10px 1px 96px;[^}]*height:22px;[^}]*min-height:22px/s);
+  assert.match(css,/\.magnetic-speed\{[^}]*position:absolute;[^}]*left:0;right:0;bottom:0;/s);
+  assert.match(css,/\.magnetic-speed\{[^}]*height:22px;min-height:22px;[^}]*padding:0 10px 1px 96px;/s);
   assert.match(css,/\.speed-value\{[^}]*position:absolute;[^}]*top:-45px;right:8px;[^}]*width:56px;[^}]*height:36px/s);
   assert.match(css,/#speed-range\{[^}]*height:13px/s);
   assert.match(css,/\.speed-ticks\{[^}]*font-size:8px/s);
