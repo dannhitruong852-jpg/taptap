@@ -38,3 +38,9 @@
 }
 .sentence-card.is-active::after { opacity:1; }
 @media (min-width:700px){.sentence-card::after{left:56px;right:22px;}}
+
+/* C v4 Chinese follows reviewed semantic groups tied to real English word times. */
+.semantic-group { transition: color .08s linear, opacity .08s linear, background-color .08s linear; }
+.sentence-card.is-active .zh .semantic-group { opacity:.42; }
+.sentence-card.is-active .zh .semantic-group.is-read,
+.sentence-card.is-active .zh .semantic-group.is-reading { opacity:1; }

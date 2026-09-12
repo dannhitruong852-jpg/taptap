@@ -73,5 +73,12 @@ class SemanticSpanTests(unittest.TestCase):
                 self.assertIn('vocab', sentence)
 
 
+class SemanticWebArtifactTests(unittest.TestCase):
+    def test_built_reader_semantic_copy_matches_reviewed_source(self):
+        source=json.loads((ROOT/'content-pipeline/semantic_spans/2002.json').read_text(encoding='utf-8'))
+        built=json.loads((ROOT/'kaoyan-reader-v1/content/2002/semantic-spans.json').read_text(encoding='utf-8'))
+        self.assertEqual(built,source)
+
+
 if __name__ == '__main__':
     unittest.main()

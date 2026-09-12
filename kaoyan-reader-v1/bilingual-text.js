@@ -1,15 +1,21 @@
 import { escapeHtml } from './catalog.js';
 
+const WORD_RE=/[A-Za-z]+(?:['’][A-Za-z]+)*(?:-[A-Za-z]+(?:['’][A-Za-z]+)*)*|\d+(?:\.\d+)?/g;
+
 export function renderEnglish(sentence) {
-  const vocabulary = (sentence.vocab || []).filter(v => v.level >= 6);
-  return [...sentence.en.matchAll(/\s+|\S+/g)].map(match => {
-    const raw = match[0];
-    if (/^\s+$/.test(raw)) return escapeHtml(raw);
-    const start = match.index, end = start + raw.length;
-    const v = vocabulary.find(v => start < v.end && end > v.start);
-    const attrs = v ? ` vocab" data-pair="${v.start}:${v.end}" data-level="${v.level}" data-meaning="${escapeHtml(v.meaning || '')}` : '';
-    return `<span class="read-token${attrs}">${escapeHtml(raw)}</span>`;
-  }).join('');
+  const vocabulary=(sentence.vocab||[]).filter(v=>v.level>=6);
+  let html='',at=0;
+  for(const match of sentence.en.matchAll(WORD_RE)){
+    const start=match.index,end=start+match[0].length;
+    html+=escapeHtml(sentence.en.slice(at,start));
+    const v=vocabulary.find(v=>start<v.end&&end>v.start);
+    const classes=['read-token'];if(v)classes.push('vocab');
+    let attrs=`class="${classes.join(' ')}" data-char-start="${start}" data-char-end="${end}"`;
+    if(v)attrs+=` data-pair="${v.start}:${v.end}" data-level="${v.level}" data-meaning="${escapeHtml(v.meaning||'')}"`;
+    html+=`<span ${attrs}>${escapeHtml(match[0])}</span>`;
+    at=end;
+  }
+  return html+escapeHtml(sentence.en.slice(at));
 }
 
 export function validChineseRanges(sentence, pairs = []) {
@@ -27,16 +33,40 @@ export function validChineseRanges(sentence, pairs = []) {
   return ranges;
 }
 
-export function renderChinese(sentence, pairs = []) {
-  const ranges = validChineseRanges(sentence, pairs);
-  const boundaries = [...new Set([0,sentence.zh.length,...ranges.flatMap(r => [r.start,r.end])])].sort((a,b)=>a-b);
-  const tokens = str => [...str].map(c => /\s/.test(c) ? escapeHtml(c) : `<span class="read-token">${escapeHtml(c)}</span>`).join('');
-  let html = '';
-  for (let i=0; i<boundaries.length-1; i++) {
-    const start=boundaries[i], end=boundaries[i+1];
-    const active=ranges.filter(r => r.start<=start && r.end>=end);
-    const content=tokens(sentence.zh.slice(start,end));
-    html += active.length ? `<strong class="vocab zh-vocab" data-pair="${active.map(r=>r.pair).join(' ')}">${content}</strong>` : content;
+function renderChineseSlice(sentence,ranges,start,end,{legacyTokens=false}={}){
+  const clipped=ranges.filter(r=>r.start<end&&r.end>start);
+  const boundaries=[...new Set([start,end,...clipped.flatMap(r=>[Math.max(start,r.start),Math.min(end,r.end)])])].sort((a,b)=>a-b);
+  let html='';
+  for(let i=0;i<boundaries.length-1;i++){
+    const left=boundaries[i],right=boundaries[i+1];
+    const active=clipped.filter(r=>r.start<=left&&r.end>=right);
+    const raw=sentence.zh.slice(left,right);
+    const content=legacyTokens
+      ? [...raw].map(c=>/\s/.test(c)?escapeHtml(c):`<span class="read-token">${escapeHtml(c)}</span>`).join('')
+      : escapeHtml(raw);
+    html+=active.length?`<strong class="vocab zh-vocab" data-pair="${active.map(r=>r.pair).join(' ')}">${content}</strong>`:content;
   }
   return html;
+}
+
+function validSemanticGroups(sentence,groups){
+  if(!Array.isArray(groups)||!groups.length)return false;
+  let end=0;
+  for(const group of groups){
+    if(!Number.isInteger(group.zh_char_start)||!Number.isInteger(group.zh_char_end))return false;
+    if(group.zh_char_start!==end||group.zh_char_end<=group.zh_char_start||group.zh_char_end>sentence.zh.length)return false;
+    end=group.zh_char_end;
+  }
+  return end===sentence.zh.length;
+}
+
+export function renderChinese(sentence, pairs = [], semanticGroups = []) {
+  const ranges=validChineseRanges(sentence,pairs);
+  if(validSemanticGroups(sentence,semanticGroups)){
+    return semanticGroups.map((group,index)=>{
+      const content=renderChineseSlice(sentence,ranges,group.zh_char_start,group.zh_char_end);
+      return `<span class="semantic-group" data-semantic-index="${index}" data-en-word-start="${group.en_word_start}" data-en-word-end="${group.en_word_end}">${content}</span>`;
+    }).join('');
+  }
+  return renderChineseSlice(sentence,ranges,0,sentence.zh.length,{legacyTokens:true});
 }

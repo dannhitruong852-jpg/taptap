@@ -1,14 +1,16 @@
 import { buildSentenceQueue, nextSentenceIndex } from './playback.js';
 import { createAudioPlayer } from './audio-player.js';
-import { sentenceProgress } from './progress.js';
+import { sentenceProgress, isExplicitLegacyTimingVersion } from './progress.js';
+import { readStateAtTime, activeChineseGroups } from './time-index.js';
 import { renderEnglish, renderChinese } from './bilingual-text.js';
 import { createTapGuard, attachSpeedControl } from './reader-controls.js';
 import { resolvePlayerScroll } from './scroll-behavior.js';
 import { pickArticle, selectArticles, createSelectionLoader } from './catalog.js';
 
 let article={}, sentences=[], manifest={segments:{}};
-let catalog=null, loading=true, selectionGeneration=0, bilingualMappings={};
+let catalog=null, loading=true, selectionGeneration=0, bilingualMappings={}, semanticMappings={};
 const bilingualMapPromise=fetch('./content/2002/bilingual-highlights.json', {cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
+const semanticMapPromise=fetch('./content/2002/semantic-spans.json', {cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
 const loadSelection=createSelectionLoader();
 const articleSelect=document.querySelector('#article-select');
 const sectionSelect=document.querySelector('#section-select');
@@ -38,7 +40,7 @@ function renderSentences(){
   <button class="sentence-number sentence-play" type="button" aria-label="播放第 ${index+1} 句" title="播放本句"><span>${String(index+1).padStart(2,'0')}</span><span class="sentence-play-icon" aria-hidden="true">▶</span></button>
   <div class="sentence-content" role="button" tabindex="0" aria-expanded="false" aria-controls="translation-${sentence.id}" aria-label="第 ${index+1} 句，点击显示或收起译文">
    <div class="en" lang="en">${renderEnglish(sentence)}</div>
-   <div class="zh" lang="zh-CN" id="translation-${sentence.id}" hidden>${renderChinese(sentence,bilingualMappings[sentence.id]||[])}</div>
+   <div class="zh" lang="zh-CN" id="translation-${sentence.id}" hidden>${renderChinese(sentence,bilingualMappings[sentence.id]||[],manifest.sentences?.[sentence.id]?.words?semanticMappings[sentence.id]||[]:[])}</div>
   </div>
  </article>`).join('');
 }
@@ -50,15 +52,61 @@ function toggleTranslation(card){
 }
 function setPlaying(playing,paused=false){state.playing=playing;state.paused=paused;playButton.textContent=playing?'❚❚':'▶';playButton.setAttribute('aria-label',playing?'暂停':'播放');}
 function primarySegment(sentence){return sentence.segments[0]||{emotion:'neutral',intensity:0};}
-function paintReadProgress(index,progress){
+function setSentenceProgressBar(card,currentTime,duration,ended=false){
+  const progress=ended?1:(duration>0?Math.max(0,Math.min(1,currentTime/duration)):0);
+  card.style.setProperty('--sentence-progress',`${progress*100}%`);
+}
+function clearReadClasses(card){
+  card.querySelectorAll('.read-token,.semantic-group').forEach(token=>token.classList.remove('is-read','is-reading'));
+}
+function paintLegacyReadProgress(index,progress){
   const card=listEl.querySelector(`.sentence-card[data-index="${index}"]`);if(!card)return;
   for(const line of card.querySelectorAll('.en,.zh')){
-    const tokens=[...line.querySelectorAll('.read-token')];const read=Math.max(0,Math.min(tokens.length,Math.floor(progress*tokens.length+1e-6)));
+    const tokens=[...line.querySelectorAll('.read-token')];
+    const read=Math.max(0,Math.min(tokens.length,Math.floor(progress*tokens.length+1e-6)));
     tokens.forEach((token,i)=>{token.classList.toggle('is-read',i<read);token.classList.toggle('is-reading',i===read&&progress<1);});
   }
   card.style.setProperty('--sentence-progress',`${Math.max(0,Math.min(1,progress))*100}%`);
 }
-function resetOtherProgress(active){document.querySelectorAll('.sentence-card').forEach((card,i)=>{if(i!==active){card.style.removeProperty('--sentence-progress');card.querySelectorAll('.read-token').forEach(t=>t.classList.remove('is-read','is-reading'));}});}
+function timedSemanticGroups(sentenceId,words){
+  const groups=semanticMappings[sentenceId]||[];
+  const timed=[];
+  for(const group of groups){
+    const start=Number(group.en_word_start),end=Number(group.en_word_end);
+    if(!Number.isInteger(start)||!Number.isInteger(end)||start<0||end<=start||end>words.length)return [];
+    timed.push({...group,start:Number(words[start].start),end:Number(words[end-1].end)});
+  }
+  return timed;
+}
+function paintTimedReadProgress(index,words,currentTime,duration,ended=false){
+  const card=listEl.querySelector(`.sentence-card[data-index="${index}"]`);if(!card)return;
+  const tokens=[...card.querySelectorAll('.en .read-token')];
+  const sourceMatches=tokens.length===words.length&&tokens.every((token,i)=>Number(token.dataset.charStart)===Number(words[i].char_start)&&Number(token.dataset.charEnd)===Number(words[i].char_end));
+  if(sourceMatches){
+    const state=ended?{readThrough:words.length,active:-1}:readStateAtTime(words,currentTime);
+    tokens.forEach((token,i)=>{token.classList.toggle('is-read',i<state.readThrough);token.classList.toggle('is-reading',i===state.active);});
+  }else{
+    tokens.forEach(token=>token.classList.remove('is-read','is-reading'));
+  }
+  const groups=timedSemanticGroups(sentences[index]?.id,words);
+  const active=new Set(ended?[]:activeChineseGroups(groups,currentTime));
+  const zhGroups=[...card.querySelectorAll('.zh .semantic-group')];
+  zhGroups.forEach((node,i)=>{const group=groups[i];const read=Boolean(group)&&(ended||Number(group.end)<=currentTime);node.classList.toggle('is-read',read);node.classList.toggle('is-reading',Boolean(group)&&active.has(i));});
+  setSentenceProgressBar(card,currentTime,duration,ended);
+}
+function timingVersion(segment){return segment?.c_mode_version||manifest?.c_mode_version||segment?.render_version||manifest?.render_version||'';}
+function paintPlaybackProgress(index,segment,currentTime,duration,ended=false){
+  if(Array.isArray(segment?.words)&&segment.words.length){paintTimedReadProgress(index,segment.words,currentTime,duration,ended);return;}
+  if(isExplicitLegacyTimingVersion(timingVersion(segment))){paintLegacyReadProgress(index,ended?1:progressFromUpdate(segment,currentTime,duration));return;}
+  const card=listEl.querySelector(`.sentence-card[data-index="${index}"]`);if(card){clearReadClasses(card);setSentenceProgressBar(card,currentTime,duration,ended);}
+}
+function markSentenceComplete(index){
+  const card=listEl.querySelector(`.sentence-card[data-index="${index}"]`);if(!card)return;
+  card.querySelectorAll('.read-token,.semantic-group').forEach(node=>{node.classList.add('is-read');node.classList.remove('is-reading');});
+  card.style.setProperty('--sentence-progress','100%');
+}
+function resetSentenceProgress(index){const card=listEl.querySelector(`.sentence-card[data-index="${index}"]`);if(card){clearReadClasses(card);card.style.setProperty('--sentence-progress','0%');}}
+function resetOtherProgress(active){document.querySelectorAll('.sentence-card').forEach((card,i)=>{if(i!==active){card.style.removeProperty('--sentence-progress');clearReadClasses(card);}});}
 function updateActive(scroll=true){if(!sentences.length)return;const cards=[...document.querySelectorAll('.sentence-card')];cards.forEach((card,index)=>card.classList.toggle('is-active',index===state.current));const seg=primarySegment(sentences[state.current]);positionEl.textContent=`${String(state.current+1).padStart(2,'0')} / ${sentences.length}`;moodEl.textContent=`${emotionLabels[seg.emotion]||seg.emotion} · ${seg.intensity}`;progressEl.style.width=`${((state.current+1)/sentences.length)*100}%`;document.body.dataset.mood=seg.emotion;if(scroll&&!hasSelectedText()&&!tapGuard.active&&cards[state.current]){state.programmaticScrollUntil=performance.now()+900;cards[state.current].scrollIntoView({behavior:'smooth',block:'center'});}}
 function clearTimer(){if(state.timer)window.clearTimeout(state.timer);state.timer=null;}
 function progressFromUpdate(segment,currentTime,duration){
@@ -81,13 +129,13 @@ function preloadNext(index){
 const audioPlayer=createAudioPlayer({
  createAudio:src=>new Audio(src),
  onSegmentStart:segment=>{setPlaying(true,false);statusEl.textContent=`演员 ${segment.actor_id||primarySegment(sentences[state.current]).actor_id} · ${emotionLabels[segment.emotion||primarySegment(sentences[state.current]).emotion]||segment.emotion||'自然讲述'}`;},
- onTimeUpdate:({segment,currentTime,duration,ended})=>paintReadProgress(state.current,ended?1:progressFromUpdate(segment,currentTime,duration)),
- onSentenceEnd:()=>{paintReadProgress(state.current,1);if(state.current<sentences.length-1){speak(state.current+1);}else{setPlaying(false,false);statusEl.textContent='这一篇读完了 ✓';}},
+ onTimeUpdate:({segment,currentTime,duration,ended})=>paintPlaybackProgress(state.current,segment,currentTime,duration,Boolean(ended)),
+ onSentenceEnd:()=>{markSentenceComplete(state.current);if(state.current<sentences.length-1){speak(state.current+1);}else{setPlaying(false,false);statusEl.textContent='这一篇读完了 ✓';}},
  onError:()=>{setPlaying(false,false);statusEl.textContent='音频暂时不可用';showToast('这句音频尚未生成或加载失败');}
 });
 function speak(index,{scroll=true}={}){
  if(loading||!sentences.length)return;
- clearTimer();audioPlayer.stop();state.current=nextSentenceIndex(index,0,sentences.length);resetOtherProgress(state.current);paintReadProgress(state.current,0);
+ clearTimer();audioPlayer.stop();state.current=nextSentenceIndex(index,0,sentences.length);resetOtherProgress(state.current);resetSentenceProgress(state.current);
  const sentence=sentences[state.current];updateActive(scroll);
  const queue=queueForSentence(state.current);
  if(queue.length===0||queue.some(item=>!item.path)){setPlaying(false,false);statusEl.textContent='音频尚未生成';showToast('这句音频尚未生成');return;}
@@ -145,8 +193,9 @@ async function openArticle(entry){
  const selectionToken=++selectionGeneration;tapGuard.cancel();
  loading=true;clearTimer();audioPlayer.stop();setPlaying(false,false);playButton.disabled=true;statusEl.textContent='正在加载正文';
  try{
-  const [loaded,mappings]=await Promise.all([loadSelection(entry),bilingualMapPromise]);if(!loaded||selectionToken!==selectionGeneration)return;
+  const [loaded,mappings,semantic]=await Promise.all([loadSelection(entry),bilingualMapPromise,semanticMapPromise]);if(!loaded||selectionToken!==selectionGeneration)return;
   bilingualMappings=mappings?.articles?.[entry.id]||{};
+  semanticMappings=semantic?.articles?.[loaded.content.article_id]||{};
   ({article,sentences}=loaded.content);manifest=loaded.manifest;
   state.current=0;loading=false;playButton.disabled=false;
   backgroundEl.textContent=article.background;
@@ -158,7 +207,7 @@ async function openArticle(entry){
   const seamlessCount=sentences.filter(s=>manifest.sentences?.[s.id]?.path).length;
   document.querySelector('#content-status').textContent=`${sentences.length} 句中英对照 · 音频 ${audioCount}/${sentences.length} 句可播放${seamlessCount?` · C无缝 ${seamlessCount}/${sentences.length}`:''}`;
   statusEl.textContent=audioCount===sentences.length?'轻点查译文 · 点序号听本句':'正文已就绪 · 音频生成中';
-  history.replaceState(null,'',`#${entry.id}`);renderSentences();updateActive(false);paintReadProgress(0,0);applyPlayerVisibility(false);
+  history.replaceState(null,'',`#${entry.id}`);renderSentences();updateActive(false);resetSentenceProgress(0);applyPlayerVisibility(false);
  }catch(error){if(selectionToken!==selectionGeneration)return;loading=false;statusEl.textContent='正文加载失败';showToast('请重新选择文章或刷新页面');}
 }
 function fillArticleOptions(preferred){

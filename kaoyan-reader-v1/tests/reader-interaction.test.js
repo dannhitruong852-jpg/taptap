@@ -75,3 +75,24 @@ test('reordered Chinese clauses link repeated vocabulary to the right occurrence
  assert.equal(pairs.find(p=>p.en_start===51).zh_spans[0].start,32);
  assert.equal(pairs.find(p=>p.en_start===93).zh_spans[0].start,20);
 });
+
+test('English timing tokens preserve exact text and source offsets', () => {
+  const sentence={en:"Don't re-enter 20th-century rooms.",zh:'',vocab:[]};
+  const html=text.renderEnglish(sentence);
+  assert.equal(html.replace(/<[^>]+>/g,''),sentence.en);
+  assert.match(html,/data-char-start="0" data-char-end="5"/);
+  assert.match(html,/data-char-start="6" data-char-end="14"/);
+});
+
+test('Chinese semantic wrappers coexist with reviewed 6+ vocabulary emphasis', () => {
+  const sentence={en:'sympathy matters',zh:'也认同他们的看法',vocab:[{word:'sympathy',start:0,end:8,level:6}]};
+  const pairs=[{en_start:0,en_end:8,en_text:'sympathy',zh_spans:[{start:1,end:3,text:'认同'}]}];
+  const groups=[
+    {id:'g01',en_word_start:0,en_word_end:1,zh_char_start:0,zh_char_end:3},
+    {id:'g02',en_word_start:1,en_word_end:2,zh_char_start:3,zh_char_end:sentence.zh.length},
+  ];
+  const html=text.renderChinese(sentence,pairs,groups);
+  assert.equal((html.match(/semantic-group/g)||[]).length,2);
+  assert.match(html,/class="vocab zh-vocab"/);
+  assert.equal(html.replace(/<[^>]+>/g,''),sentence.zh);
+});
