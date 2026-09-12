@@ -17,23 +17,38 @@ def _profile_hash(profile: dict) -> str:
     return hashlib.sha256(payload.encode("utf-8")).hexdigest()
 
 
-def resolve_controls(actor_id: str, director_intent: str, intensity: int, profile_dir: Path, *, require_eligible: bool = True) -> dict:
-    """Resolve an approved actor-local calibration into Chatterbox controls.
+def _approval(profile_dir: Path, actor_id: str) -> dict | None:
+    path = profile_dir / "production_approvals.json"
+    if not path.is_file():
+        return None
+    data = json.loads(path.read_text(encoding="utf-8"))
+    return data.get("actors", {}).get(actor_id)
 
+
+def resolve_controls(actor_id: str, director_intent: str, intensity: int, profile_dir: Path, *, require_eligible: bool = True) -> dict:
+    """Resolve an actor-local calibration into Chatterbox controls.
+
+    A separately versioned human-approval overlay may promote a technically
+    generated audition profile without rewriting the immutable audition data.
     V4 deliberately has no fallback to legacy global emotion/PERFORMANCE tables.
     """
     if intensity not in (0, 1, 2):
         raise ValueError("intensity must be 0, 1, or 2")
-    path = Path(profile_dir) / f"{actor_id}.json"
+    profile_dir = Path(profile_dir)
+    path = profile_dir / f"{actor_id}.json"
     if not path.is_file():
         raise ValueError(f"missing actor calibration profile: {actor_id}")
     profile = json.loads(path.read_text(encoding="utf-8"))
-    if require_eligible and not profile.get("eligible", False):
+    approval = _approval(profile_dir, actor_id)
+    approved = bool(approval and approval.get("status") == "accepted")
+    if require_eligible and not (profile.get("eligible", False) or approved):
         raise ValueError(f"actor {actor_id} is not eligible for production")
     intents = profile.get("intent_profiles", {})
     if director_intent not in intents:
         raise ValueError(f"unknown director intent for actor {actor_id}: {director_intent}")
     selected = profile.get("selected_candidates", {}).get(director_intent)
+    if not selected and approved:
+        selected = approval.get("selected_candidates", {}).get(director_intent, approval.get("default_variant"))
     if not selected:
         raise ValueError(f"actor {actor_id} has no selected calibration for {director_intent}")
     variant = selected.get("variant") if isinstance(selected, dict) else selected
@@ -64,4 +79,5 @@ def resolve_controls(actor_id: str, director_intent: str, intensity: int, profil
         "post_tempo": False,
         "calibration_id": profile["calibration_id"],
         "profile_hash": _profile_hash(profile),
+        "approval_status": "accepted" if approved else profile.get("human_listening_qa", {}).get("status", "pending"),
     }
