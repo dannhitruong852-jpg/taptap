@@ -1,6 +1,8 @@
 const clamp = (v, min, max) => Math.min(max, Math.max(min, v));
 
 export function buildSentenceQueue(sentence, manifest) {
+  const seamless = manifest?.sentences?.[sentence.id];
+  if (seamless?.path) return [{ ...seamless, id: sentence.id }];
   return sentence.segments.map(segment => ({
     ...segment,
     ...manifest.segments[segment.id]
