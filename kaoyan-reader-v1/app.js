@@ -28,7 +28,7 @@ const progressEl=document.querySelector('#progress-fill');
 const playerShell=document.querySelector('#player-shell');
 const vocabButton=document.querySelector('#toggle-vocab');
 const toast=document.querySelector('#toast');
-const state={current:0,speed:1,playing:false,paused:false,showVocab:true,timer:null,playerHidden:false,scrollAnchorY:Math.max(0,window.scrollY||0),scrollFrame:null,preloader:null};
+const state={current:0,speed:1,playing:false,paused:false,showVocab:true,timer:null,playerHidden:false,programmaticScrollUntil:0,scrollAnchorY:Math.max(0,window.scrollY||0),scrollFrame:null,preloader:null};
 const emotionLabels={neutral:'自然讲述',warm:'温暖讲解',lively:'轻快生动',serious:'严肃克制',curious:'好奇追问',ironic:'冷幽默',tense:'紧张转折',emotional:'情绪加强'};
 function escapeHtml(value){return value.replace(/[&<>"]/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[char]));}
 function hasSelectedText(){return Boolean(window.getSelection()?.toString());}
@@ -59,7 +59,7 @@ function paintReadProgress(index,progress){
   card.style.setProperty('--sentence-progress',`${Math.max(0,Math.min(1,progress))*100}%`);
 }
 function resetOtherProgress(active){document.querySelectorAll('.sentence-card').forEach((card,i)=>{if(i!==active){card.style.removeProperty('--sentence-progress');card.querySelectorAll('.read-token').forEach(t=>t.classList.remove('is-read','is-reading'));}});}
-function updateActive(scroll=true){if(!sentences.length)return;const cards=[...document.querySelectorAll('.sentence-card')];cards.forEach((card,index)=>card.classList.toggle('is-active',index===state.current));const seg=primarySegment(sentences[state.current]);positionEl.textContent=`${String(state.current+1).padStart(2,'0')} / ${sentences.length}`;moodEl.textContent=`${emotionLabels[seg.emotion]||seg.emotion} · ${seg.intensity}`;progressEl.style.width=`${((state.current+1)/sentences.length)*100}%`;document.body.dataset.mood=seg.emotion;if(scroll&&!hasSelectedText()&&!tapGuard.active&&cards[state.current])cards[state.current].scrollIntoView({behavior:'smooth',block:'center'});}
+function updateActive(scroll=true){if(!sentences.length)return;const cards=[...document.querySelectorAll('.sentence-card')];cards.forEach((card,index)=>card.classList.toggle('is-active',index===state.current));const seg=primarySegment(sentences[state.current]);positionEl.textContent=`${String(state.current+1).padStart(2,'0')} / ${sentences.length}`;moodEl.textContent=`${emotionLabels[seg.emotion]||seg.emotion} · ${seg.intensity}`;progressEl.style.width=`${((state.current+1)/sentences.length)*100}%`;document.body.dataset.mood=seg.emotion;if(scroll&&!hasSelectedText()&&!tapGuard.active&&cards[state.current]){state.programmaticScrollUntil=performance.now()+900;cards[state.current].scrollIntoView({behavior:'smooth',block:'center'});}}
 function clearTimer(){if(state.timer)window.clearTimeout(state.timer);state.timer=null;}
 function progressFromUpdate(segment,currentTime,duration){
   const cues=segment?.cues;
@@ -103,7 +103,7 @@ function togglePlay(){
 function move(delta){if(loading)return;speak(nextSentenceIndex(state.current,delta,sentences.length));}
 function showToast(message){toast.textContent=message;toast.classList.add('show');window.clearTimeout(showToast.timer);showToast.timer=window.setTimeout(()=>toast.classList.remove('show'),1900);}
 function applyPlayerVisibility(hidden){state.playerHidden=hidden;playerShell.classList.toggle('is-collapsed',hidden);playerShell.setAttribute('data-collapsed',String(hidden));}
-function handleViewportScroll(){state.scrollFrame=null;const result=resolvePlayerScroll({anchorY:state.scrollAnchorY,currentY:window.scrollY,hidden:state.playerHidden,threshold:24,topBoundary:8});state.scrollAnchorY=result.anchorY;if(result.hidden!==state.playerHidden)applyPlayerVisibility(result.hidden);}
+function handleViewportScroll(){state.scrollFrame=null;if(performance.now()<state.programmaticScrollUntil){state.scrollAnchorY=Math.max(0,window.scrollY||0);return;}const result=resolvePlayerScroll({anchorY:state.scrollAnchorY,currentY:window.scrollY,hidden:state.playerHidden,threshold:24,topBoundary:8});state.scrollAnchorY=result.anchorY;if(result.hidden!==state.playerHidden)applyPlayerVisibility(result.hidden);}
 function queueViewportScroll(){if(state.scrollFrame!==null)return;state.scrollFrame=window.requestAnimationFrame(handleViewportScroll);}
 listEl.addEventListener('pointerdown',event=>{
  const card=event.target.closest('.sentence-card');
@@ -134,6 +134,9 @@ vocabButton.addEventListener('click',()=>{
  document.body.classList.toggle('hide-vocab',!state.showVocab);
  vocabButton.setAttribute('aria-checked',String(state.showVocab));
 });
+window.addEventListener('wheel',()=>{state.programmaticScrollUntil=0;},{passive:true});
+window.addEventListener('touchmove',()=>{state.programmaticScrollUntil=0;},{passive:true});
+window.addEventListener('scrollend',()=>{state.programmaticScrollUntil=0;state.scrollAnchorY=Math.max(0,window.scrollY||0);},{passive:true});
 window.addEventListener('scroll',queueViewportScroll,{passive:true});
 window.addEventListener('beforeunload',()=>audioPlayer.stop());
 
