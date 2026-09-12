@@ -1,0 +1,60 @@
+name: Reader pipeline checks
+
+on:
+  push:
+    branches: [kaoyan-reader-v1]
+    paths:
+      - '.github/workflows/reader-pipeline-checks.yml'
+      - 'content-pipeline/**'
+      - 'voice-pipeline/**'
+      - 'kaoyan-reader-v1/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Content tests
+        id: content
+        continue-on-error: true
+        run: PYTHONPATH=content-pipeline python -m unittest discover -s content-pipeline/tests -v
+      - name: Voice tests
+        id: voice
+        continue-on-error: true
+        run: PYTHONPATH=voice-pipeline python -m unittest discover -s voice-pipeline/tests -v
+      - name: Reader tests
+        id: reader
+        continue-on-error: true
+        working-directory: kaoyan-reader-v1
+        run: npm test
+      - name: Save exact source snapshot
+        if: always()
+        run: git archive --format=tar HEAD | gzip > /tmp/reader-source.tar.gz
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reader-source-${{ github.sha }}
+          path: /tmp/reader-source.tar.gz
+          retention-days: 3
+      - name: Require all suites
+        if: always()
+        env:
+          CONTENT: ${{ steps.content.outcome }}
+          VOICE: ${{ steps.voice.outcome }}
+          READER: ${{ steps.reader.outcome }}
+        run: |
+          printf 'content=%s voice=%s reader=%s\n' "$CONTENT" "$VOICE" "$READER"
+          test "$CONTENT" = success
+          test "$VOICE" = success
+          test "$READER" = success
