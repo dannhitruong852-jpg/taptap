@@ -1,0 +1,153 @@
+name: 2002 C v2 pilot - cloze and Text 1
+
+on:
+  push:
+    branches: [kaoyan-reader-v1]
+    paths:
+      - '.github/workflows/generate-2002-c-v2-pilot.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: 2002-c-v2-pilot
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify source and C v2 contracts
+        run: |
+          PYTHONPATH=content-pipeline python content-pipeline/build_2002.py
+          PYTHONPATH=content-pipeline python -m unittest discover -s content-pipeline/tests -v
+          PYTHONPATH=voice-pipeline python -m unittest discover -s voice-pipeline/tests -v
+          cd kaoyan-reader-v1 && npm test
+      - name: Prepare lawful pilot references
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          python voice-pipeline/prepare_2002_references.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: 2002-v2-reference-clips
+          path: voice-pipeline/references/generated/*.wav
+          retention-days: 7
+
+  render:
+    needs: prepare
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        article: [cloze, text1]
+        shard: [0, 1, 2]
+    env:
+      HF_HOME: /tmp/chatterbox-hf-cache
+      TTS_THREADS: '4'
+      OMP_NUM_THREADS: '4'
+      MKL_NUM_THREADS: '4'
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - name: Rebuild exact directed source
+        run: PYTHONPATH=content-pipeline python content-pipeline/build_2002.py
+      - uses: actions/download-artifact@v4
+        with:
+          name: 2002-v2-reference-clips
+          path: voice-pipeline/references/generated
+      - uses: actions/cache@v4
+        with:
+          path: /tmp/chatterbox-hf-cache
+          key: chatterbox-original-en-017-v1
+      - uses: actions/cache@v4
+        with:
+          path: kaoyan-reader-v1/audio/2002/c-${{ matrix.article }}
+          key: c2002-v2-${{ matrix.article }}-${{ matrix.shard }}-${{ hashFiles('content-pipeline/curated/2002.json', 'content-pipeline/build_2002.py', 'voice-pipeline/generate_2002_v2.py') }}
+          restore-keys: |
+            c2002-v2-${{ matrix.article }}-${{ matrix.shard }}-
+      - name: Install original English Chatterbox
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          python -m pip install chatterbox-tts==0.1.7
+      - name: Render expressive chunks with no artificial pause or post-tempo
+        run: python voice-pipeline/generate_2002_v2.py --article '${{ matrix.article }}' --shard '${{ matrix.shard }}' --shards 3
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: 2002-c-v2-${{ matrix.article }}-shard${{ matrix.shard }}
+          path: kaoyan-reader-v1/audio/2002/c-${{ matrix.article }}
+          if-no-files-found: error
+          retention-days: 7
+
+  publish:
+    needs: [prepare, render]
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: write
+      pages: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: kaoyan-reader-v1
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build exact content and install merge runtime
+        run: |
+          PYTHONPATH=content-pipeline python content-pipeline/build_2002.py
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          mkdir -p /tmp/2002-v2-audio
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: 2002-c-v2-*-shard*
+          path: /tmp/2002-v2-audio
+      - name: Assemble seamless sentences and real cue timelines
+        run: PYTHONPATH=voice-pipeline python voice-pipeline/merge_2002_v2.py --incoming /tmp/2002-v2-audio
+      - name: Verify reader after v2 manifest assembly
+        run: cd kaoyan-reader-v1 && npm test
+      - name: Commit only the two v2 pilot articles
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add kaoyan-reader-v1/audio/2002/c-cloze kaoyan-reader-v1/audio/2002/c-text1 reports/qa/2002-c-v2-pilot.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'audio: publish gapless expressive C v2 pilot for cloze and Text 1'
+            git push origin HEAD:kaoyan-reader-v1
+          fi
+      - name: Publish reader to existing Pages site
+        run: bash scripts/publish-reader.sh
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: 2002-c-v2-pilot-status
+          path: |
+            reports/qa/2002-c-v2-pilot.json
+            kaoyan-reader-v1/audio/2002/c-cloze/manifest.json
+            kaoyan-reader-v1/audio/2002/c-text1/manifest.json
+          if-no-files-found: warn
+          retention-days: 14
