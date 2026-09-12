@@ -36,6 +36,7 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y ffmpeg
+          python -m pip install pyarrow
           python voice-pipeline/prepare_2002_references.py
       - uses: actions/upload-artifact@v4
         with:
