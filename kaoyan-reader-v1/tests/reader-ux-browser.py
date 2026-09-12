@@ -88,8 +88,12 @@ class ReaderUX(unittest.TestCase):
     def test_05_player_previous_next_controls_switch_whole_articles_not_sentences(self):
         p=self.page;p.locator('.sentence-play').nth(1).click();p.wait_for_function('window.__audio.some(a=>!a.paused&&a.currentTime>.1)',timeout=15000)
         self.assertTrue(p.locator('#player-position').inner_text().startswith('02'))
-        p.locator('#next').click();p.wait_for_function("document.querySelector('#article-select').value==='2002-text2'");self.assertEqual(p.locator('#article-select').input_value(),'2002-text2');self.assertTrue(p.locator('#player-position').inner_text().startswith('01'))
-        p.locator('#previous').click();p.wait_for_function("document.querySelector('#article-select').value==='2002-text1'");self.assertEqual(p.locator('#article-select').input_value(),'2002-text1')
+        p.locator('#next').click()
+        p.wait_for_function("document.querySelector('#article-select').value==='2002-text2' && document.querySelector('#player-position').textContent.trim().startsWith('01') && document.querySelectorAll('.sentence-card').length===16")
+        self.assertEqual(p.locator('#article-select').input_value(),'2002-text2');self.assertTrue(p.locator('#player-position').inner_text().startswith('01'))
+        p.locator('#previous').click()
+        p.wait_for_function("document.querySelector('#article-select').value==='2002-text1' && document.querySelector('#player-position').textContent.trim().startsWith('01') && document.querySelectorAll('.sentence-card').length===21")
+        self.assertEqual(p.locator('#article-select').input_value(),'2002-text1')
         self.assertEqual(p.locator('#replay').count(),0)
 
     def test_06_all_articles_text_unchanged_and_hidden(self):
