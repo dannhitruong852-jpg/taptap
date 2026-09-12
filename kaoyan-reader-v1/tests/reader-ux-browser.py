@@ -178,20 +178,21 @@ class ReaderUX(unittest.TestCase):
         self.assertLessEqual(p.evaluate('document.documentElement.scrollWidth'),p.evaluate('window.innerWidth'))
         p.screenshot(path=str(REPORT/'english-only-mobile.png'),full_page=False)
 
-    def test_08_compact_player_is_centered_and_transport_buttons_are_symmetric(self):
+    def test_08_x_style_player_is_full_width_bottom_dock_and_play_is_centered(self):
         p=self.page
         shell=p.locator('#player-shell').bounding_box()
-        self.assertAlmostEqual(shell['width'],390*.62,delta=1.5)
-        self.assertAlmostEqual(shell['x'],(390-shell['width'])/2,delta=1.5)
+        self.assertAlmostEqual(shell['width'],390,delta=1.5)
+        self.assertAlmostEqual(shell['x'],0,delta=1.5)
+        self.assertAlmostEqual(shell['y']+shell['height'],844,delta=1.5)
+        self.assertGreaterEqual(shell['height'],218)
         buttons=[p.locator(sel).bounding_box() for sel in ['#previous','#replay','#play-toggle','#next']]
-        self.assertEqual([(round(b['width']),round(b['height'])) for b in buttons],[(44,44),(44,44),(56,56),(44,44)])
-        centers=[b['x']+b['width']/2 for b in buttons]
-        self.assertAlmostEqual(centers[1]-centers[0],centers[3]-centers[2],delta=6)
-        for selector in ['#previous','#replay','#play-toggle','#next']:
-            style=p.locator(selector).evaluate("el=>{const b=getComputedStyle(el,'::before');return {left:b.left,top:b.top,position:b.position};}")
-            self.assertEqual(style['position'],'absolute')
+        self.assertEqual([(round(b['width']),round(b['height'])) for b in buttons],[(52,52),(52,52),(68,68),(52,52)])
+        play=buttons[2]
+        self.assertAlmostEqual(play['x']+play['width']/2,195,delta=1.5)
+        speed=p.locator('#speed-value').bounding_box()
+        self.assertLessEqual(abs((speed['x']+speed['width'])-(390-20)),1.5)
         self.assertLessEqual(p.locator('#player-shell').evaluate('el=>el.scrollWidth'),p.locator('#player-shell').evaluate('el=>el.clientWidth')+1)
-        p.screenshot(path=str(REPORT/'compact-player-mobile.png'),full_page=False)
+        p.screenshot(path=str(REPORT/'x-style-player-mobile.png'),full_page=False)
 
     def test_09_real_timestamp_index_and_three_mobile_widths(self):
         p=self.page
@@ -203,19 +204,23 @@ class ReaderUX(unittest.TestCase):
         self.assertEqual(result[0],0)
         self.assertEqual(result[1],3)
         self.assertEqual(result[2],{'readThrough':0,'active':0})
-        for width,height,expected in [(320,700,236),(390,844,390*.62),(412,915,412*.62)]:
+        for width,height in [(320,700),(390,844),(412,915)]:
             context=self.browser.new_context(viewport={'width':width,'height':height},has_touch=True,is_mobile=True)
             try:
                 page=context.new_page();page.goto(reader_url('task8-size'));page.wait_for_selector('#player-shell')
                 shell=page.locator('#player-shell').bounding_box()
-                self.assertAlmostEqual(shell['width'],expected,delta=1.5,msg=str((width,height,shell)))
-                self.assertAlmostEqual(shell['x'],(width-shell['width'])/2,delta=1.5)
+                self.assertAlmostEqual(shell['width'],width,delta=1.5,msg=str((width,height,shell)))
+                self.assertAlmostEqual(shell['x'],0,delta=1.5)
+                self.assertAlmostEqual(shell['y']+shell['height'],height,delta=1.5)
                 self.assertLessEqual(page.evaluate('document.documentElement.scrollWidth'),width)
-                self.assertGreater(page.locator('#speed-range').bounding_box()['width'],45)
-                for selector,side in [('#previous',44),('#replay',44),('#play-toggle',56),('#next',44)]:
+                self.assertGreater(page.locator('#speed-range').bounding_box()['width'],160)
+                expected=[52,52,68,52] if width>350 else [48,48,64,48]
+                for selector,side in zip(['#previous','#replay','#play-toggle','#next'],expected):
                     box=page.locator(selector).bounding_box()
                     self.assertAlmostEqual(box['width'],side,delta=.6)
                     self.assertAlmostEqual(box['height'],side,delta=.6)
+                play=page.locator('#play-toggle').bounding_box()
+                self.assertAlmostEqual(play['x']+play['width']/2,width/2,delta=1.5)
             finally:
                 context.close()
 
