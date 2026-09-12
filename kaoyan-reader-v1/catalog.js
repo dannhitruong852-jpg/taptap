@@ -27,15 +27,20 @@ export function highlightVocabulary(en, vocabulary = [], enabled = true) {
 }
 export function manifestForVersion(entry, audioVersion = '') {
   if (audioVersion === 'v4') {
-    const prefix=`${entry.year}-`;
-    const article=String(entry.id || '').startsWith(prefix) ? String(entry.id).slice(prefix.length) : String(entry.id || '');
+    const prefix = `${entry.year}-`;
+    const id = String(entry.id || '');
+    const article = id.startsWith(prefix) ? id.slice(prefix.length) : id;
     return `./audio/${entry.year}/v4/c-${article}/manifest.json`;
   }
   return entry.manifest;
 }
 export function createSelectionLoader(fetcher = fetch, options = {}) {
   let generation=0;
-  const audioVersion=options?.audioVersion || '';
+  const explicit = options?.audioVersion;
+  const fromLocation = typeof location !== 'undefined'
+    ? new URLSearchParams(location.search).get('audioVersion') || ''
+    : '';
+  const audioVersion = explicit === undefined ? fromLocation : explicit;
   return async function load(entry) {
     const token=++generation;
     const manifestPath=manifestForVersion(entry,audioVersion);
