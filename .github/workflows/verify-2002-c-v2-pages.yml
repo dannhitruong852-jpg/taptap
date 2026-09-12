@@ -1,0 +1,63 @@
+name: Verify 2002 C v2 public pilot
+
+on:
+  push:
+    branches: [kaoyan-reader-v1]
+    paths:
+      - '.github/workflows/verify-2002-c-v2-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Fetch real GitHub Pages files with propagation retries
+        run: |
+          set -euo pipefail
+          base='https://dannhitruong852-jpg.github.io/taptap/kaoyan-reader-v1'
+          mkdir -p /tmp/live2002
+          for attempt in $(seq 1 20); do
+            ok=1
+            curl -fsSL "$base/index.html?probe=$GITHUB_RUN_ID-$attempt" -o /tmp/live2002/index.html || ok=0
+            curl -fsSL "$base/app.js?probe=$GITHUB_RUN_ID-$attempt" -o /tmp/live2002/app.js || ok=0
+            curl -fsSL "$base/audio/2002/c-cloze/manifest.json?probe=$GITHUB_RUN_ID-$attempt" -o /tmp/live2002/cloze.json || ok=0
+            curl -fsSL "$base/audio/2002/c-text1/manifest.json?probe=$GITHUB_RUN_ID-$attempt" -o /tmp/live2002/text1.json || ok=0
+            if [ "$ok" = 1 ] && grep -q 'readalong.css' /tmp/live2002/index.html && grep -q 'paintReadProgress' /tmp/live2002/app.js && grep -q 'v2-s01.opus' /tmp/live2002/cloze.json && grep -q 'v2-s01.opus' /tmp/live2002/text1.json; then
+              echo "Public C v2 pilot is live on attempt $attempt"
+              break
+            fi
+            if [ "$attempt" = 20 ]; then
+              echo 'Public site did not expose the complete C v2 pilot.' >&2
+              exit 1
+            fi
+            sleep 10
+          done
+      - name: Verify both public manifests are complete and zero-gap by contract
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          expected={'cloze':13,'text1':21}
+          for article,count in expected.items():
+              data=json.loads(Path(f'/tmp/live2002/{article}.json').read_text())
+              assert data['c_mode_version']=='v2-pilot'
+              assert data['v2_status']=='complete_candidate'
+              assert data['v2_missing_segments']==[]
+              assert len(data['sentences'])==count
+              for sid,row in data['sentences'].items():
+                  assert row['artificial_pause_ms']==0
+                  assert row['post_tempo'] is False
+                  assert row['path'].endswith(f'v2-{sid}.opus')
+                  cues=row['cues']
+                  assert cues and cues[0]['start']==0
+                  for left,right in zip(cues,cues[1:]):
+                      assert abs(left['end']-right['start']) < 0.002
+          print('live manifests: 13 + 21 seamless sentences, no artificial pause')
+          PY
