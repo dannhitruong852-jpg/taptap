@@ -11,8 +11,8 @@ test('mobile player becomes a full-width bottom dock with safe-area spacing',()=
 
 test('transport grid keeps the play button on the exact visual center',()=>{
   assert.match(css,/\.transport-row\{[^}]*display:grid;[^}]*grid-template-columns:52px 52px 68px 52px 52px;[^}]*justify-content:center/s);
-  assert.match(css,/\.transport-row \.icon-button\{width:52px;height:52px;\}/);
-  assert.match(css,/\.transport-row \.play-button\{width:68px;height:68px;\}/);
+  assert.match(css,/\.transport-row \.icon-button\{width:52px;height:52px;?\}/);
+  assert.match(css,/\.transport-row \.play-button\{width:68px;height:68px;?\}/);
   assert.match(css,/gap:clamp\(8px,3vw,12px\)/);
 });
 
