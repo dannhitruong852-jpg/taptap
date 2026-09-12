@@ -13,6 +13,11 @@ ROOT = Path(__file__).resolve().parents[1]
 REPORT = ROOT.parent / 'reports/browser/reader-ux'
 REPORT.mkdir(parents=True, exist_ok=True)
 BASE = os.getenv('READER_BASE_URL', 'http://127.0.0.1:8766/').rstrip('/') + '/'
+AUDIO_VERSION = os.getenv('READER_AUDIO_VERSION', '').strip()
+
+def reader_url(ui='reader-ux'):
+    version = f'&audioVersion={AUDIO_VERSION}' if AUDIO_VERSION else ''
+    return BASE + f'?ui={ui}{version}#2002-text1'
 server = None
 if not os.getenv('READER_BASE_URL'):
     class QuietHandler(SimpleHTTPRequestHandler):
@@ -43,7 +48,7 @@ class ReaderUX(unittest.TestCase):
             window.__audio.push(a);return a; };
           window.Audio.prototype=NativeAudio.prototype;
         })();''')
-        self.page.goto(BASE + '?ui=reader-ux#2002-text1')
+        self.page.goto(reader_url())
         self.page.wait_for_selector('.sentence-card')
 
     def tearDown(self):
@@ -201,7 +206,7 @@ class ReaderUX(unittest.TestCase):
         for width,height,expected in [(320,700,236),(390,844,390*.62),(412,915,412*.62)]:
             context=self.browser.new_context(viewport={'width':width,'height':height},has_touch=True,is_mobile=True)
             try:
-                page=context.new_page();page.goto(BASE+'?ui=task8-size#2002-text1');page.wait_for_selector('#player-shell')
+                page=context.new_page();page.goto(reader_url('task8-size'));page.wait_for_selector('#player-shell')
                 shell=page.locator('#player-shell').bounding_box()
                 self.assertAlmostEqual(shell['width'],expected,delta=1.5,msg=str((width,height,shell)))
                 self.assertAlmostEqual(shell['x'],(width-shell['width'])/2,delta=1.5)
@@ -217,7 +222,7 @@ class ReaderUX(unittest.TestCase):
 if __name__=='__main__':
     try:
         result=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(ReaderUX))
-        (REPORT/'result.json').write_text(json.dumps({'base_url':BASE,'tests':result.testsRun,'failures':len(result.failures),'errors':len(result.errors),'passed':result.wasSuccessful()},indent=2))
+        (REPORT/'result.json').write_text(json.dumps({'base_url':BASE,'audio_version':AUDIO_VERSION,'tests':result.testsRun,'failures':len(result.failures),'errors':len(result.errors),'passed':result.wasSuccessful()},indent=2))
     finally:
         if server:server.shutdown()
     raise SystemExit(0 if result.wasSuccessful() else 1)
