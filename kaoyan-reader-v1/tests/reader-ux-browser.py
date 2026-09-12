@@ -123,6 +123,8 @@ class ReaderUX(unittest.TestCase):
             self.assertEqual(p.evaluate('window.__active.playbackRate'),expected)
         self.assertGreaterEqual(p.evaluate('window.__active.currentTime'),p.evaluate('window.__before'))
         self.assertEqual(p.locator('.zh:visible').count(),0)
+        # Wait for an actual progress event before pausing; .2 seconds need not finish a token.
+        p.wait_for_selector('.en .is-read', timeout=10000)
         p.locator('#play-toggle').click()
         p.wait_for_timeout(150)
         self.assertTrue(p.evaluate('window.__active.paused'))

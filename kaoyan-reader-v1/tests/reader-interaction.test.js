@@ -68,3 +68,10 @@ test('every project 6-9 vocabulary occurrence in all six articles has a reviewed
     }
   }
 });
+
+test('reordered Chinese clauses link repeated vocabulary to the right occurrence', () => {
+ const data=JSON.parse(readFileSync(new URL('../content/2002/bilingual-highlights.json',import.meta.url)));
+ const pairs=data.articles['2002-text4'].s08;
+ assert.equal(pairs.find(p=>p.en_start===51).zh_spans[0].start,32);
+ assert.equal(pairs.find(p=>p.en_start===93).zh_spans[0].start,20);
+});
