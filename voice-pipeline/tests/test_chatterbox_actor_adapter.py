@@ -74,6 +74,23 @@ class ActorAdapterTests(unittest.TestCase):
         self.assertEqual(a['calibration_id'], 'actor-05-audition-v1')
         self.assertTrue(a['reference_path'].endswith('actor05-curious.wav'))
 
+    def test_human_approval_overlay_can_promote_audition_profile(self):
+        pending = profile('04', 0.52, 0.41, eligible=False, selected=False)
+        (self.dir / '04.json').write_text(json.dumps(pending), encoding='utf-8')
+        approvals = {
+            'actors': {
+                '04': {
+                    'status': 'accepted',
+                    'eligible_for': ['2002', 'production'],
+                    'default_variant': 'B'
+                }
+            }
+        }
+        (self.dir / 'production_approvals.json').write_text(json.dumps(approvals), encoding='utf-8')
+        resolved = resolve_controls('04', 'curious_probe', 1, self.dir)
+        self.assertEqual(resolved['selected_variant'], 'B')
+        self.assertEqual(resolved['approval_status'], 'accepted')
+
 
 if __name__ == '__main__':
     unittest.main()
