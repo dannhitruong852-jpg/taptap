@@ -1,0 +1,70 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+// The implementation does not exist at RED; assert the missing contract explicitly.
+const controls = await import('../reader-controls.js').catch(() => ({}));
+const text = await import('../bilingual-text.js').catch(() => ({}));
+
+test('speed control snaps to exactly five specified rates, including both endpoints', () => {
+  assert.equal(typeof controls.snapSpeed, 'function', 'five-stop speed controller is missing');
+  assert.deepEqual(controls.SPEED_STOPS, [0.7, 1, 1.25, 1.5, 2]);
+  for (const [input, expected] of [[-2,.7],[.83,.7],[.91,1],[1.18,1.25],[1.4,1.5],[1.8,2],[4,2]]) {
+    assert.equal(controls.snapSpeed(input), expected);
+  }
+});
+test('drag preview interpolates but release selects only a magnetic stop', () => {
+  assert.equal(typeof controls.rateAtPosition, 'function', 'drag interpolation is missing');
+  assert.equal(controls.rateAtPosition(1.5), 1.125);
+  assert.equal(controls.rateAtPosition(-1), .7);
+  assert.equal(controls.rateAtPosition(8), 2);
+});
+test('tap detection rejects long presses, selection, scrolling and cancelled pointers', () => {
+  assert.equal(typeof controls.createTapGuard, 'function', 'native-selection-safe tap guard is missing');
+  let now=0;
+  const guard=controls.createTapGuard({now:()=>now});
+  const pointer={pointerId:1,button:0,isPrimary:true,clientX:50,clientY:50};
+  guard.down(pointer,'s01',false);now=80;guard.up(pointer);
+  assert.equal(guard.accept('s01',false),true);
+  guard.down(pointer,'s01',false);now+=600;guard.up(pointer);
+  assert.equal(guard.accept('s01',false),false);
+  guard.down(pointer,'s01',false);guard.move({...pointer,clientY:75});now+=100;guard.up(pointer);
+  assert.equal(guard.accept('s01',false),false);
+  guard.down(pointer,'s01',true);now+=80;guard.up(pointer);
+  assert.equal(guard.accept('s01',false),false);
+  guard.down(pointer,'s01',false);guard.cancel();guard.up(pointer);
+  assert.equal(guard.accept('s01',false),false);
+  guard.down(pointer,'s01',false);now+=80;guard.up(pointer);
+  assert.equal(guard.accept('s02',false),false);
+});
+test('bilingual renderer uses occurrence-specific Chinese ranges and never changes plain text', () => {
+  assert.equal(typeof text.renderChinese, 'function', 'bound Chinese vocabulary renderer is missing');
+  const sentence={en:'sympathy',zh:'也认同他们的看法',vocab:[{word:'sympathy',start:0,end:8,level:6}]};
+  const pairs=[{en_start:0,en_end:8,en_text:'sympathy',zh_spans:[{start:1,end:3,text:'认同'}]}];
+  const html=text.renderChinese(sentence,pairs);
+  assert.match(html,/class="vocab zh-vocab"/);
+  assert.match(html,/data-pair="0:8"/);
+  assert.equal(html.replace(/<[^>]+>/g,''),sentence.zh);
+  assert.equal(text.renderChinese(sentence,[{...pairs[0],zh_spans:[{start:0,end:2,text:'错误'}]}]).includes('zh-vocab'),false);
+});
+test('every project 6-9 vocabulary occurrence in all six articles has a reviewed Chinese match', () => {
+  let mappings;
+  try { mappings=JSON.parse(readFileSync(new URL('../content/2002/bilingual-highlights.json',import.meta.url))); } catch {}
+  assert.ok(mappings?.articles,'reviewed bilingual mappings are missing');
+  for (const name of ['cloze','text1','text2','text3','text4','translation']) {
+    const doc=JSON.parse(readFileSync(new URL(`../content/2002/c/${name}.json`,import.meta.url)));
+    for (const s of doc.sentences) {
+      const expected=(s.vocab||[]).filter(v=>v.level>=6);
+      const pairs=mappings.articles[`2002-${name}`]?.[s.id]||[];
+      assert.equal(pairs.length,expected.length,`${name}/${s.id} coverage`);
+      for(const v of expected){
+        const pair=pairs.find(p=>p.en_start===v.start&&p.en_end===v.end);
+        assert.equal(pair?.en_text,s.en.slice(v.start,v.end),`${name}/${s.id}/${v.word}`);
+        assert.ok(pair.zh_spans.length);
+        for(const span of pair.zh_spans){
+          assert.ok(Number.isInteger(span.start)&&span.start>=0&&span.end>span.start);
+          assert.equal(s.zh.slice(span.start,span.end),span.text);
+        }
+      }
+    }
+  }
+});

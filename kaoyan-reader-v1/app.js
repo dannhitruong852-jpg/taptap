@@ -1,11 +1,14 @@
 import { buildSentenceQueue, nextSentenceIndex } from './playback.js';
 import { createAudioPlayer } from './audio-player.js';
 import { sentenceProgress } from './progress.js';
+import { renderEnglish, renderChinese } from './bilingual-text.js';
+import { createTapGuard, attachSpeedControl } from './reader-controls.js';
 import { resolvePlayerScroll } from './scroll-behavior.js';
 import { pickArticle, selectArticles, createSelectionLoader } from './catalog.js';
 
 let article={}, sentences=[], manifest={segments:{}};
-let catalog=null, loading=true;
+let catalog=null, loading=true, selectionGeneration=0, bilingualMappings={};
+const bilingualMapPromise=fetch('./content/2002/bilingual-highlights.json', {cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
 const loadSelection=createSelectionLoader();
 const articleSelect=document.querySelector('#article-select');
 const sectionSelect=document.querySelector('#section-select');
@@ -23,27 +26,28 @@ const moodEl=document.querySelector('#director-mood');
 const statusEl=document.querySelector('#player-status');
 const progressEl=document.querySelector('#progress-fill');
 const playerShell=document.querySelector('#player-shell');
-const chineseButton=document.querySelector('#toggle-chinese');
 const vocabButton=document.querySelector('#toggle-vocab');
-const movieButton=document.querySelector('#movie-mode');
-const speedButtons=[...document.querySelectorAll('[data-speed]')];
 const toast=document.querySelector('#toast');
-const state={current:0,speed:1,playing:false,paused:false,showChinese:true,showVocab:true,movie:false,timer:null,playerHidden:false,scrollAnchorY:Math.max(0,window.scrollY||0),scrollFrame:null,preloader:null};
+const state={current:0,speed:1,playing:false,paused:false,showVocab:true,timer:null,playerHidden:false,scrollAnchorY:Math.max(0,window.scrollY||0),scrollFrame:null,preloader:null};
 const emotionLabels={neutral:'自然讲述',warm:'温暖讲解',lively:'轻快生动',serious:'严肃克制',curious:'好奇追问',ironic:'冷幽默',tense:'紧张转折',emotional:'情绪加强'};
 function escapeHtml(value){return value.replace(/[&<>"]/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[char]));}
-function timedEnglish(sentence){
-  const out=[];let offset=0;
-  for(const match of sentence.en.matchAll(/\S+\s*/g)){
-    const raw=match[0], start=match.index, end=start+raw.trimEnd().length;
-    const vocab=sentence.vocab?.find(v=>start<v.end&&end>v.start&&v.level>=6);
-    const attrs=vocab?` vocab" data-level="${vocab.level}" data-meaning="${escapeHtml(vocab.meaning)}`:'"';
-    out.push(`<span class="read-token${attrs}">${escapeHtml(raw)}</span>`);offset=end;
-  }
-  if(offset<sentence.en.length)out.push(escapeHtml(sentence.en.slice(offset)));
-  return out.join('');
+function hasSelectedText(){return Boolean(window.getSelection()?.toString());}
+const tapGuard=createTapGuard();
+function renderSentences(){
+ listEl.innerHTML=sentences.map((sentence,index)=>`<article class="sentence-card${index===state.current?' is-active':''}" data-index="${index}" data-translation-open="false">
+  <button class="sentence-number sentence-play" type="button" aria-label="播放第 ${index+1} 句" title="播放本句"><span>${String(index+1).padStart(2,'0')}</span><span class="sentence-play-icon" aria-hidden="true">▶</span></button>
+  <div class="sentence-content" role="button" tabindex="0" aria-expanded="false" aria-controls="translation-${sentence.id}" aria-label="第 ${index+1} 句，点击显示或收起译文">
+   <div class="en" lang="en">${renderEnglish(sentence)}</div>
+   <div class="zh" lang="zh-CN" id="translation-${sentence.id}" hidden>${renderChinese(sentence,bilingualMappings[sentence.id]||[])}</div>
+  </div>
+ </article>`).join('');
 }
-function timedChinese(sentence){return [...sentence.zh].map(char=>/\s/.test(char)?escapeHtml(char):`<span class="read-token">${escapeHtml(char)}</span>`).join('');}
-function renderSentences(){listEl.innerHTML=sentences.map((sentence,index)=>`<article class="sentence-card${index===state.current?' is-active':''}" data-index="${index}" tabindex="0" aria-label="第 ${index+1} 句，点击朗读"><div class="sentence-number">${String(index+1).padStart(2,'0')}</div><div class="en">${timedEnglish(sentence)}</div><div class="zh">${timedChinese(sentence)}</div></article>`).join('');}
+function toggleTranslation(card){
+ const zh=card.querySelector('.zh');
+ zh.hidden=!zh.hidden;
+ card.dataset.translationOpen=String(!zh.hidden);
+ card.querySelector('.sentence-content').setAttribute('aria-expanded',String(!zh.hidden));
+}
 function setPlaying(playing,paused=false){state.playing=playing;state.paused=paused;playButton.textContent=playing?'❚❚':'▶';playButton.setAttribute('aria-label',playing?'暂停':'播放');}
 function primarySegment(sentence){return sentence.segments[0]||{emotion:'neutral',intensity:0};}
 function paintReadProgress(index,progress){
@@ -55,7 +59,7 @@ function paintReadProgress(index,progress){
   card.style.setProperty('--sentence-progress',`${Math.max(0,Math.min(1,progress))*100}%`);
 }
 function resetOtherProgress(active){document.querySelectorAll('.sentence-card').forEach((card,i)=>{if(i!==active){card.style.removeProperty('--sentence-progress');card.querySelectorAll('.read-token').forEach(t=>t.classList.remove('is-read','is-reading'));}});}
-function updateActive(scroll=true){if(!sentences.length)return;const cards=[...document.querySelectorAll('.sentence-card')];cards.forEach((card,index)=>card.classList.toggle('is-active',index===state.current));const seg=primarySegment(sentences[state.current]);positionEl.textContent=`${String(state.current+1).padStart(2,'0')} / ${sentences.length}`;moodEl.textContent=`${emotionLabels[seg.emotion]||seg.emotion} · ${seg.intensity}`;progressEl.style.width=`${((state.current+1)/sentences.length)*100}%`;document.body.dataset.mood=seg.emotion;if(scroll&&cards[state.current])cards[state.current].scrollIntoView({behavior:'smooth',block:'center'});}
+function updateActive(scroll=true){if(!sentences.length)return;const cards=[...document.querySelectorAll('.sentence-card')];cards.forEach((card,index)=>card.classList.toggle('is-active',index===state.current));const seg=primarySegment(sentences[state.current]);positionEl.textContent=`${String(state.current+1).padStart(2,'0')} / ${sentences.length}`;moodEl.textContent=`${emotionLabels[seg.emotion]||seg.emotion} · ${seg.intensity}`;progressEl.style.width=`${((state.current+1)/sentences.length)*100}%`;document.body.dataset.mood=seg.emotion;if(scroll&&!hasSelectedText()&&!tapGuard.active&&cards[state.current])cards[state.current].scrollIntoView({behavior:'smooth',block:'center'});}
 function clearTimer(){if(state.timer)window.clearTimeout(state.timer);state.timer=null;}
 function progressFromUpdate(segment,currentTime,duration){
   const cues=segment?.cues;
@@ -101,22 +105,45 @@ function showToast(message){toast.textContent=message;toast.classList.add('show'
 function applyPlayerVisibility(hidden){state.playerHidden=hidden;playerShell.classList.toggle('is-collapsed',hidden);playerShell.setAttribute('data-collapsed',String(hidden));}
 function handleViewportScroll(){state.scrollFrame=null;const result=resolvePlayerScroll({anchorY:state.scrollAnchorY,currentY:window.scrollY,hidden:state.playerHidden,threshold:24,topBoundary:8});state.scrollAnchorY=result.anchorY;if(result.hidden!==state.playerHidden)applyPlayerVisibility(result.hidden);}
 function queueViewportScroll(){if(state.scrollFrame!==null)return;state.scrollFrame=window.requestAnimationFrame(handleViewportScroll);}
-listEl.addEventListener('click',event=>{const vocab=event.target.closest('.vocab');if(vocab&&state.showVocab){event.stopPropagation();showToast(`${vocab.textContent.trim()} · ${vocab.dataset.level}级 · ${vocab.dataset.meaning}`);return;}const card=event.target.closest('.sentence-card');if(card)speak(Number(card.dataset.index));});
-listEl.addEventListener('keydown',event=>{if(event.key!=='Enter'&&event.key!==' ')return;const card=event.target.closest('.sentence-card');if(!card)return;event.preventDefault();speak(Number(card.dataset.index));});
+listEl.addEventListener('pointerdown',event=>{
+ const card=event.target.closest('.sentence-card');
+ if(card&&!event.target.closest('button'))tapGuard.down(event,card.dataset.index,hasSelectedText());
+},{passive:true});
+listEl.addEventListener('pointermove',event=>tapGuard.move(event),{passive:true});
+window.addEventListener('pointerup',event=>tapGuard.up(event),{passive:true});
+window.addEventListener('pointercancel',()=>tapGuard.cancel(),{passive:true});
+listEl.addEventListener('contextmenu',()=>tapGuard.cancel(),{passive:true});
+listEl.addEventListener('click',event=>{
+ const card=event.target.closest('.sentence-card');if(!card||loading)return;
+ if(event.target.closest('.sentence-play')){speak(Number(card.dataset.index),{scroll:false});applyPlayerVisibility(false);state.scrollAnchorY=Math.max(0,window.scrollY||0);return;}
+ if(event.detail>1)return;
+ if(tapGuard.accept(card.dataset.index,hasSelectedText(),event.detail===0))toggleTranslation(card);
+});
+listEl.addEventListener('keydown',event=>{
+ if(event.key!=='Enter'&&event.key!==' ')return;
+ if(!event.target.matches('.sentence-content')||hasSelectedText())return;
+ event.preventDefault();toggleTranslation(event.target.closest('.sentence-card'));
+});
 playButton.addEventListener('click',togglePlay);previousButton.addEventListener('click',()=>move(-1));nextButton.addEventListener('click',()=>move(1));replayButton.addEventListener('click',()=>speak(state.current));
-playerShell.addEventListener('click',event=>{if(state.playerHidden&&!event.target.closest('button')){applyPlayerVisibility(false);state.scrollAnchorY=Math.max(0,window.scrollY||0);}});
-speedButtons.forEach(button=>button.addEventListener('click',()=>{state.speed=Number(button.dataset.speed);speedButtons.forEach(item=>item.classList.toggle('is-active',item===button));audioPlayer.setPlaybackRate(state.speed);showToast(`朗读速度 ${button.textContent}`);}));
-chineseButton.addEventListener('click',()=>{state.showChinese=!state.showChinese;document.body.classList.toggle('hide-chinese',!state.showChinese);chineseButton.classList.toggle('is-on',state.showChinese);chineseButton.setAttribute('aria-pressed',String(state.showChinese));chineseButton.textContent=`中译 · ${state.showChinese?'开':'关'}`;});
-vocabButton.addEventListener('click',()=>{state.showVocab=!state.showVocab;document.body.classList.toggle('hide-vocab',!state.showVocab);vocabButton.classList.toggle('is-on',state.showVocab);vocabButton.setAttribute('aria-pressed',String(state.showVocab));vocabButton.textContent=`难词 6+ · ${state.showVocab?'开':'关'}`;});
-movieButton.addEventListener('click',()=>{state.movie=!state.movie;document.body.classList.toggle('movie',state.movie);movieButton.classList.toggle('is-on',state.movie);movieButton.setAttribute('aria-pressed',String(state.movie));movieButton.textContent=state.movie?'退出沉浸':'🎞 沉浸模式';if(state.movie)showToast('中文暂时隐藏，只听英文');});
+playerShell.addEventListener('click',event=>{if(state.playerHidden&&!event.target.closest('button,input')){applyPlayerVisibility(false);state.scrollAnchorY=Math.max(0,window.scrollY||0);}});
+attachSpeedControl(document.querySelector('#speed-control'),rate=>{
+ state.speed=rate;audioPlayer.setPlaybackRate(rate);
+});
+vocabButton.addEventListener('click',()=>{
+ state.showVocab=!state.showVocab;
+ document.body.classList.toggle('hide-vocab',!state.showVocab);
+ vocabButton.setAttribute('aria-checked',String(state.showVocab));
+});
 window.addEventListener('scroll',queueViewportScroll,{passive:true});
 window.addEventListener('beforeunload',()=>audioPlayer.stop());
 
 async function openArticle(entry){
  if(!entry)return;
+ const selectionToken=++selectionGeneration;tapGuard.cancel();
  loading=true;clearTimer();audioPlayer.stop();setPlaying(false,false);playButton.disabled=true;statusEl.textContent='正在加载正文';
  try{
-  const loaded=await loadSelection(entry);if(!loaded)return;
+  const [loaded,mappings]=await Promise.all([loadSelection(entry),bilingualMapPromise]);if(!loaded||selectionToken!==selectionGeneration)return;
+  bilingualMappings=mappings?.articles?.[entry.id]||{};
   ({article,sentences}=loaded.content);manifest=loaded.manifest;
   state.current=0;loading=false;playButton.disabled=false;
   backgroundEl.textContent=article.background;
@@ -127,9 +154,9 @@ async function openArticle(entry){
   const audioCount=sentences.filter(s=>manifest.sentences?.[s.id]?.path||s.segments.every(x=>manifest.segments?.[x.id]?.path)).length;
   const seamlessCount=sentences.filter(s=>manifest.sentences?.[s.id]?.path).length;
   document.querySelector('#content-status').textContent=`${sentences.length} 句中英对照 · 音频 ${audioCount}/${sentences.length} 句可播放${seamlessCount?` · C v2无缝 ${seamlessCount}/${sentences.length}`:''}`;
-  statusEl.textContent=audioCount===sentences.length?'静态音频 · 点句播放':'正文已就绪 · 音频生成中';
+  statusEl.textContent=audioCount===sentences.length?'轻点查译文 · 点序号听本句':'正文已就绪 · 音频生成中';
   history.replaceState(null,'',`#${entry.id}`);renderSentences();updateActive(false);paintReadProgress(0,0);applyPlayerVisibility(false);
- }catch(error){loading=false;statusEl.textContent='正文加载失败';showToast('请重新选择文章或刷新页面');}
+ }catch(error){if(selectionToken!==selectionGeneration)return;loading=false;statusEl.textContent='正文加载失败';showToast('请重新选择文章或刷新页面');}
 }
 function fillArticleOptions(preferred){
  const entries=selectArticles(catalog,yearSelect.value,sectionSelect.value);

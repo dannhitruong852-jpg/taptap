@@ -1,0 +1,83 @@
+name: Reader tap-translate and magnetic speed acceptance
+on:
+  push:
+    branches: [kaoyan-reader-v1]
+    paths:
+      - '.github/workflows/reader-ux-acceptance.yml'
+      - 'kaoyan-reader-v1/app.js'
+      - 'kaoyan-reader-v1/index.html'
+      - 'kaoyan-reader-v1/reader-controls*'
+      - 'kaoyan-reader-v1/bilingual-text.js'
+      - 'kaoyan-reader-v1/content/2002/bilingual-highlights.json'
+      - 'kaoyan-reader-v1/tests/reader-*'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: reader-ux-acceptance
+  cancel-in-progress: false
+jobs:
+  verify-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: write
+      pages: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify content, audio contracts, vocabulary pairing and controls
+        run: |
+          PYTHONPATH=content-pipeline python content-pipeline/build_2002.py
+          PYTHONPATH=content-pipeline python -m unittest discover -s content-pipeline/tests -v
+          PYTHONPATH=voice-pipeline python -m unittest discover -s voice-pipeline/tests -v
+          cd kaoyan-reader-v1 && npm test
+      - name: Install browser verification only - no TTS generation
+        run: |
+          python -m pip install playwright==1.55.0
+          python -m playwright install --with-deps chromium
+      - name: Exercise real mobile gestures, selection, highlighting, playback and all five speeds
+        run: python kaoyan-reader-v1/tests/reader-ux-browser.py
+      - name: Publish only after interaction tests pass and source is still current
+        run: |
+          git fetch origin kaoyan-reader-v1
+          test "$(git rev-parse origin/kaoyan-reader-v1)" = "$GITHUB_SHA"
+          bash scripts/publish-reader.sh
+      - name: Wait for the exact public UI and new modules
+        run: |
+          python - <<'PY'
+          import hashlib,time,urllib.request
+          from pathlib import Path
+          root=Path('kaoyan-reader-v1')
+          names=['index.html','app.js','reader-controls.js','bilingual-text.js','reader-controls.css','content/2002/bilingual-highlights.json']
+          base='https://dannhitruong852-jpg.github.io/taptap/kaoyan-reader-v1/'
+          for attempt in range(36):
+              try:
+                  for name in names:
+                      data=urllib.request.urlopen(base+name+'?verify=tap-translate-v1-'+str(attempt),timeout=20).read()
+                      assert hashlib.sha256(data).digest()==hashlib.sha256((root/name).read_bytes()).digest(),name
+                  print('All public UI bytes match this tested commit');break
+              except Exception as exc:
+                  print(exc,flush=True)
+                  if attempt==35:raise
+                  time.sleep(5)
+          PY
+      - name: Re-run interaction tests against the real Pages site
+        env:
+          READER_BASE_URL: https://dannhitruong852-jpg.github.io/taptap/kaoyan-reader-v1/
+        run: python kaoyan-reader-v1/tests/reader-ux-browser.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reader-ux-acceptance-${{ github.sha }}
+          path: reports/browser/reader-ux
+          retention-days: 14

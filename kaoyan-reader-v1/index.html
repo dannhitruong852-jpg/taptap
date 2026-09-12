@@ -9,8 +9,9 @@
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./catalog.css">
   <link rel="stylesheet" href="./readalong.css">
+  <link rel="stylesheet" href="./reader-controls.css">
 </head>
-<body data-mood="warm">
+<body data-mood="warm" data-reader-ui="tap-translate-v1">
   <main class="page-shell">
     <header class="hero">
       <div class="topline">
@@ -29,13 +30,12 @@
         <div class="director-icon">🎬</div>
         <div><div class="director-title">这篇文章怎么读</div><p id="article-background"></p></div>
       </div>
-      <div class="mode-row">
-        <button id="toggle-chinese" class="pill is-on" type="button" aria-pressed="true">中译 · 开</button>
-        <button id="toggle-vocab" class="pill is-on" type="button" aria-pressed="true">难词 6+ · 开</button>
-        <button id="movie-mode" class="pill" type="button" aria-pressed="false">🎞 沉浸模式</button>
+      <div class="reader-settings">
+        <span>先读英文，轻点查译文</span>
+        <button id="toggle-vocab" class="vocab-toggle" type="button" role="switch" aria-checked="true" aria-label="6级及以上难词双语标注"><span>难词 6+</span><i aria-hidden="true"></i></button>
       </div>
     </header>
-    <section class="howto" aria-label="使用方法"><span>点任意一句</span><b>→</b><span>播放预生成音频</span><b>→</b><span>中英文字同步推进</span></section>
+    <section class="howto" aria-label="使用方法"><span>轻点句框查译文</span><b>·</b><span>长按文字复制</span><b>·</b><span>点序号播放</span></section>
     <section id="sentence-list" class="sentence-list" aria-label="2002 Text 1 双语精读"></section>
     <footer class="footer-note">只读真题正文，不含题目选项和作文。词汇使用本项目1—9级学习标尺，6级及以上突出显示，并非官方词汇分级。音频为预生成候选版，播放时不调用TTS。</footer>
   </main>
@@ -47,10 +47,19 @@
       <button id="replay" class="icon-button" type="button" aria-label="重播本句">↺</button>
       <button id="play-toggle" class="play-button" type="button" aria-label="播放">▶</button>
       <button id="next" class="icon-button" type="button" aria-label="下一句">›</button>
-      <div class="speed-control" aria-label="朗读速度"><button type="button" data-speed="0.85">0.85</button><button type="button" data-speed="1" class="is-active">1×</button><button type="button" data-speed="1.15">1.15</button></div>
+
+    </div>
+    <div id="speed-control" class="magnetic-speed" style="--speed-position:25%">
+      <label class="speed-label" for="speed-range">倍速</label>
+      <div class="speed-track">
+        <output class="speed-bubble" aria-hidden="true">1.0×</output>
+        <input id="speed-range" type="range" min="0" max="4" step="0.01" value="1" aria-label="朗读倍速，五档磁吸" aria-valuetext="1.0×">
+        <div class="speed-ticks" aria-hidden="true"><span data-stop="0">0.7</span><span data-stop="1" class="is-selected">1.0</span><span data-stop="2">1.25</span><span data-stop="3">1.5</span><span data-stop="4">2.0</span></div>
+      </div>
+      <button id="speed-value" class="speed-value" type="button" aria-label="按住并左右滑动调整倍速">1.0×</button>
     </div>
   </aside>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script type="module" src="./app.js"></script>
+  <script type="module" src="./app.js?v=tap-translate-v1"></script>
 </body>
 </html>
