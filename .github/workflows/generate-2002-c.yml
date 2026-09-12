@@ -1,0 +1,185 @@
+name: 2002 C acceptance build
+
+on:
+  push:
+    branches: [kaoyan-reader-v1]
+    paths:
+      - '.github/workflows/generate-2002-c.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: 2002-c-acceptance
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      pages: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build and verify all six curated study units
+        run: |
+          PYTHONPATH=content-pipeline python content-pipeline/build_2002.py
+          PYTHONPATH=content-pipeline python -m unittest discover -s content-pipeline/tests -v
+          PYTHONPATH=voice-pipeline python -m unittest discover -s voice-pipeline/tests -v
+          cd kaoyan-reader-v1 && npm test
+      - name: Install browser test runtime and reference reader
+        run: |
+          python -m pip install playwright==1.55.0 pyarrow
+          python -m playwright install --with-deps chromium
+      - name: Verify real mobile layout navigation and scroll restoration
+        run: python kaoyan-reader-v1/tests/browser-smoke.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: 2002-mobile-browser-check
+          path: reports/browser
+          if-no-files-found: warn
+      - name: Commit generated content without rewriting other work
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add kaoyan-reader-v1/content/2002/c kaoyan-reader-v1/content/catalog.json reports/extraction
+          if ! git diff --cached --quiet; then
+            git commit -m 'content: compile 91 aligned sentences for 2002 C acceptance'
+            git push origin HEAD:kaoyan-reader-v1
+          fi
+      - name: Publish readable candidate before audio jobs
+        id: publish_text
+        continue-on-error: true
+        run: bash scripts/publish-reader.sh
+      - name: Prepare the licensed reference clips
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          python voice-pipeline/prepare_2002_references.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: 2002-reference-clips
+          path: voice-pipeline/references/generated/*.wav
+          retention-days: 7
+      - uses: actions/upload-artifact@v4
+        with:
+          name: 2002-content-candidate
+          path: |
+            kaoyan-reader-v1/content
+            reports/extraction
+          retention-days: 7
+
+  render:
+    needs: prepare
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    strategy:
+      fail-fast: false
+      max-parallel: 18
+      matrix:
+        article: [cloze, text1, text2, text3, text4, translation]
+        shard: [0, 1, 2]
+    env:
+      HF_HOME: ${{ runner.temp }}/hf-cache
+      TTS_THREADS: '4'
+      OMP_NUM_THREADS: '4'
+      MKL_NUM_THREADS: '4'
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - name: Rebuild the exact directed input
+        run: PYTHONPATH=content-pipeline python content-pipeline/build_2002.py
+      - uses: actions/download-artifact@v4
+        with:
+          name: 2002-reference-clips
+          path: voice-pipeline/references/generated
+      - uses: actions/cache@v4
+        with:
+          path: ${{ runner.temp }}/hf-cache
+          key: chatterbox-original-en-017-v1
+      - uses: actions/cache@v4
+        with:
+          path: kaoyan-reader-v1/audio/2002/c-${{ matrix.article }}
+          key: c2002-${{ matrix.article }}-${{ matrix.shard }}-${{ hashFiles('content-pipeline/curated/2002.json', 'content-pipeline/build_2002.py', 'voice-pipeline/generate_2002.py') }}
+          restore-keys: |
+            c2002-${{ matrix.article }}-${{ matrix.shard }}-
+      - name: Install original English Chatterbox
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          python -m pip install chatterbox-tts==0.1.7
+      - name: Render with bounded retries and failure isolation
+        run: python voice-pipeline/generate_2002.py --article '${{ matrix.article }}' --shard '${{ matrix.shard }}' --shards 3
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: 2002-c-${{ matrix.article }}-shard${{ matrix.shard }}
+          path: kaoyan-reader-v1/audio/2002/c-${{ matrix.article }}
+          if-no-files-found: warn
+          retention-days: 7
+
+  publish:
+    if: always() && needs.prepare.result == 'success'
+    needs: [prepare, render]
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      pages: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: kaoyan-reader-v1
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build exact content and download partial artifacts
+        run: |
+          git diff --exit-code "$GITHUB_SHA" HEAD -- content-pipeline/curated/2002.json content-pipeline/build_2002.py voice-pipeline/generate_2002.py
+          PYTHONPATH=content-pipeline python content-pipeline/build_2002.py
+          mkdir -p /tmp/2002-audio
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          pattern: 2002-c-*-shard*
+          path: /tmp/2002-audio
+      - name: Merge only intact fingerprint-matching clips
+        run: python voice-pipeline/merge_2002.py --incoming /tmp/2002-audio
+      - name: Commit audio and explicit QA report to development branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add kaoyan-reader-v1/audio/2002/c-* kaoyan-reader-v1/content/2002/audio-status.json reports/qa
+          if ! git diff --cached --quiet; then
+            git commit -m 'audio: publish verified 2002 C candidates and missing-segment report'
+            git push origin HEAD:kaoyan-reader-v1
+          fi
+      - name: Update existing Pages without a force push
+        run: bash scripts/publish-reader.sh
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: 2002-final-status
+          path: |
+            reports/qa
+            kaoyan-reader-v1/content/2002/audio-status.json

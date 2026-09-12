@@ -1,0 +1,9 @@
+/* Catalog extends the original reader; the player shell and scroll contract stay intact. */
+.catalog-controls{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0 12px}
+.catalog-controls label{display:flex;flex-direction:column;gap:7px;font-size:12px;color:var(--muted,#74736f)}
+.catalog-controls .article-control{grid-column:1/-1}
+.catalog-controls select{width:100%;min-height:46px;padding:10px 12px;border:1px solid #d8d4ca;border-radius:12px;background:#fffdf8;color:#303631;font:inherit;font-size:15px}
+.content-status{font-size:12px;line-height:1.8;color:#74736f}
+.player-shell button:disabled{opacity:.45;cursor:wait}
+.hide-vocab strong.vocab{font-weight:inherit;background:none;border:0}
+@media(min-width:720px){.catalog-controls{grid-template-columns:95px 120px minmax(0,1fr)}.catalog-controls .article-control{grid-column:auto}}

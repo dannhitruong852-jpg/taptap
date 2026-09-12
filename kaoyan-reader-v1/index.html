@@ -4,9 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f5f1e8">
-  <meta name="description" content="2002 考研英语 Text 1 B2 表演式精读器：预生成音频、逐句朗读、零运行时 TTS。">
-  <title>2002 Text 1 · B2 表演式精读</title>
+  <meta name="description" content="2002 考研英语 C 模式双语精读：预生成音频、逐句朗读、零运行时 TTS。">
+  <title>2002 · 英语真题精读</title>
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./catalog.css">
 </head>
 <body data-mood="warm">
   <main class="page-shell">
@@ -15,8 +16,14 @@
         <span class="year-chip">2002 · Text 1</span>
         <span class="free-chip">预生成 · 零运行时 TTS</span>
       </div>
-      <h1>让真题像故事一样被读出来</h1>
-      <p class="subtitle">同一篇文章按场景、角色和情绪切换声音；必要时一句内部也会切换演员。</p>
+      <h1 id="article-title">把真题读懂，也听懂</h1>
+      <p class="subtitle">逐句中英对照 · 理解导向的美式日常交流式朗读</p>
+      <nav class="catalog-controls" aria-label="试卷文章目录">
+        <label>年份<select id="year-select"><option>2002</option></select></label>
+        <label>题型<select id="section-select"><option value="">全部</option><option value="cloze">完型</option><option value="reading">阅读</option><option value="translation">翻译</option></select></label>
+        <label class="article-control">文章<select id="article-select" aria-label="选择文章"></select></label>
+      </nav>
+      <p id="content-status" class="content-status" aria-live="polite">正在加载2002年目录</p>
       <div class="director-card">
         <div class="director-icon">🎬</div>
         <div><div class="director-title">这篇文章怎么读</div><p id="article-background"></p></div>
@@ -29,7 +36,7 @@
     </header>
     <section class="howto" aria-label="使用方法"><span>点任意一句</span><b>→</b><span>播放预生成音频</span><b>→</b><span>随时暂停</span></section>
     <section id="sentence-list" class="sentence-list" aria-label="2002 Text 1 双语精读"></section>
-    <footer class="footer-note">本篇使用预生成表演式英语音频；播放时不调用 TTS 接口。不同角色和场景可在一句内部连续切换。</footer>
+    <footer class="footer-note">只读真题正文，不含题目选项和作文。词汇使用本项目1—9级学习标尺，6级及以上突出显示，并非官方词汇分级。音频为预生成候选版，播放时不调用TTS。</footer>
   </main>
   <aside id="player-shell" class="player-shell" aria-label="朗读播放器">
     <div class="progress-track"><div id="progress-fill" class="progress-fill"></div></div>

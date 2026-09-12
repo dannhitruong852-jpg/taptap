@@ -1,5 +1,4 @@
 name: Reader pipeline checks
-
 on:
   push:
     branches: [kaoyan-reader-v1]
@@ -9,10 +8,8 @@ on:
       - 'voice-pipeline/**'
       - 'kaoyan-reader-v1/**'
   workflow_dispatch:
-
 permissions:
   contents: read
-
 jobs:
   checks:
     runs-on: ubuntu-latest
@@ -25,6 +22,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Build curated 2002 content
+        run: PYTHONPATH=content-pipeline python content-pipeline/build_2002.py
       - name: Content tests
         id: content
         continue-on-error: true
