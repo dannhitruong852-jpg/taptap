@@ -9,16 +9,20 @@ on:
         default: '2002'
         type: choice
         options: ['2002']
+  push:
+    branches: [c-v4-2002-complete]
+    paths: ['.github/c-v4-run-token']
 
 permissions:
   contents: read
 
 concurrency:
-  group: c-v4-candidate-${{ inputs.year }}-${{ github.ref }}
+  group: c-v4-candidate-${{ inputs.year || '2002' }}-${{ github.ref }}
   cancel-in-progress: false
 
 env:
   PYTHONUNBUFFERED: '1'
+  YEAR: ${{ inputs.year || '2002' }}
   CANDIDATE_QUERY: audioVersion=v4
 
 jobs:
@@ -114,7 +118,7 @@ jobs:
         env:
           TTS_THREADS: '4'
         run: >-
-          PYTHONPATH=voice-pipeline python voice-pipeline/generate_c_v4.py --year '${{ inputs.year }}'
+          PYTHONPATH=voice-pipeline python voice-pipeline/generate_c_v4.py --year '${{ env.YEAR }}'
           --article '${{ matrix.article }}' --shard '${{ matrix.shard }}' --shards 3
           --output '/tmp/c-v4-render/${{ matrix.article }}-${{ matrix.shard }}'
       - uses: actions/upload-artifact@v4
@@ -144,9 +148,9 @@ jobs:
           pattern: c-v4-render-*
           path: /tmp/c-v4-incoming
       - name: Merge to one final Opus and MP3 per sentence
-        run: PYTHONPATH=voice-pipeline python voice-pipeline/merge_c_v4.py --year '${{ inputs.year }}' --incoming /tmp/c-v4-incoming --root kaoyan-reader-v1
+        run: PYTHONPATH=voice-pipeline python voice-pipeline/merge_c_v4.py --year '${{ env.YEAR }}' --incoming /tmp/c-v4-incoming --root kaoyan-reader-v1
       - name: Technical candidate verification
-        run: PYTHONPATH=voice-pipeline python voice-pipeline/verify_c_v4.py --year '${{ inputs.year }}' --root kaoyan-reader-v1
+        run: PYTHONPATH=voice-pipeline python voice-pipeline/verify_c_v4.py --year '${{ env.YEAR }}' --root kaoyan-reader-v1
       - name: Package merged candidate
         run: |
           mkdir -p /tmp/c-v4-merged/kaoyan-reader-v1/audio/2002 /tmp/c-v4-merged/kaoyan-reader-v1/reports
@@ -182,7 +186,7 @@ jobs:
       - name: Install pinned CPU alignment stack
         run: python -m pip install --index-url https://download.pytorch.org/whl/cpu torch==2.7.1 torchaudio==2.7.1
       - name: Align final sentence audio to exact source transcript
-        run: PYTHONPATH=voice-pipeline python voice-pipeline/alignment/align_manifests.py --year '${{ inputs.year }}' --root kaoyan-reader-v1
+        run: PYTHONPATH=voice-pipeline python voice-pipeline/alignment/align_manifests.py --year '${{ env.YEAR }}' --root kaoyan-reader-v1
       - name: Validate 91 alignments and reviewed semantic timing
         run: |
           PYTHONPATH=content-pipeline:voice-pipeline python - <<'PY'
