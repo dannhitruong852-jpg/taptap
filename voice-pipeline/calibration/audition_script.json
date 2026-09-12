@@ -1,0 +1,15 @@
+{
+  "version": "c-v4-audition-v1",
+  "scenes": [
+    {"id":"plain_explanation","intent":"neutral_explain","text":"A good explanation makes a difficult idea feel clear without making it feel small."},
+    {"id":"rational_analysis","intent":"serious_analysis","text":"The important question is not whether the change is impressive, but whether the evidence actually supports the conclusion."},
+    {"id":"warm_conversation","intent":"warm_explain","text":"You can think of it this way: the idea is familiar, but the reason behind it may be easier to miss."},
+    {"id":"story_setup","intent":"narrative_build","text":"At first, nothing about the morning seemed unusual, and that was precisely why the next moment mattered."},
+    {"id":"turn_contrast","intent":"contrast","text":"The machines are not truly intelligent yet, but they are coming much closer than most people expected."},
+    {"id":"information_emphasis","intent":"information_peak","text":"What matters most is the final distinction: speed alone is not the same thing as understanding."},
+    {"id":"restrained_humor","intent":"restrained_irony","text":"That sounds like a perfect solution, until you notice the small problem that it does not actually work."},
+    {"id":"serious_commentary","intent":"serious_analysis","text":"Once a medical decision becomes irreversible, confidence is not enough; the reasoning has to survive careful scrutiny."},
+    {"id":"quotation_role","intent":"quoted_character","text":"I understand the risk, she said, but I still want to know what happens if we do nothing."},
+    {"id":"long_complex_sentence","intent":"qualification","text":"Although the new system can recognize patterns with remarkable speed, its apparent confidence should not be confused with judgment, because the conditions that produced a correct answer today may change tomorrow."}
+  ]
+}
