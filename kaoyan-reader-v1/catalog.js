@@ -4,6 +4,11 @@ export function selectArticles(catalog, year, section = '') {
 export function pickArticle(catalog, id) {
   return catalog.articles.find(item => item.id === id) || catalog.articles[0];
 }
+export function adjacentArticle(catalog, id, delta) {
+  const index=catalog.articles.findIndex(item=>item.id===id);
+  const target=index+Number(delta||0);
+  return index>=0&&target>=0&&target<catalog.articles.length?catalog.articles[target]:null;
+}
 export function escapeHtml(value) {
   return String(value).replace(/[&<>"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[char]));
 }
