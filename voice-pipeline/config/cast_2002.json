@@ -1,0 +1,70 @@
+{
+  "version": "2002-content-cast-v1",
+  "usage": "noncommercial study reader; anonymous dataset speaker IDs, no endorsement or impersonation",
+  "license": "EARS CC BY-NC 4.0",
+  "license_url": "https://github.com/facebookresearch/ears_dataset/blob/main/LICENSE",
+  "articles": {
+    "cloze": {
+      "primary_actor_id": "04",
+      "role": "science/history explainer",
+      "rationale": "A calm documentary-style female narrator suits the historical evolution of communications media.",
+      "context_zh": "把印刷、报纸与电子传播放回历史进程中理解。主讲人04以冷静、克制的纪录片式女声铺开时间线，再突出计算机带来的变化；复杂处自然稍缓，不采用教学慢速。完型已依据可追溯答案还原，选项不进入阅读页面。"
+    },
+    "text1": {
+      "primary_actor_id": "05",
+      "role": "presentation coach",
+      "rationale": "A rhythmic conversational male presenter suits practical advice, storytelling and a restrained punchline.",
+      "context_zh": "像面对面分享演讲经验。主讲人05保持清晰、有节奏的演讲型男声；天堂故事先舒展铺垫，到插队动作加快，再克制地落下笑点。新来者12、圣彼得13，只有真实角色变化才换声。"
+    },
+    "text2": {
+      "primary_actor_id": "08",
+      "role": "technology explainer",
+      "rationale": "A younger dry-humor male technology narrator suits familiar machines, robotics and the common-sense contrast.",
+      "context_zh": "从熟悉的机器讲到真正智能的难点。主讲人08采用自然、带一点干幽默的科技男声；列举能力时轻快，转入常识、感知与筛选信息时突出逻辑反差；NASA负责人戴夫·拉弗里的直接引语由01承担。"
+    },
+    "text3": {
+      "primary_actor_id": "01",
+      "role": "economic analyst",
+      "rationale": "A calm analytical male narrator suits comparisons among oil shocks, inflation and energy intensity.",
+      "context_zh": "以一个带担忧的反问开场，再像日常讨论经济问题那样逐层解释。主讲人01保持理性分析型男声，区分旧冲击与新条件、富裕经济体与新兴经济体；数字服务比较，不念成新闻播报。"
+    },
+    "text4": {
+      "primary_actor_id": "09",
+      "role": "policy and ethics commentator",
+      "rationale": "A mature restrained male commentator suits law, medical ethics and distinctions of intention and risk.",
+      "context_zh": "这是历史试卷中的医疗伦理讨论，不是现实医疗建议。主讲人09用有分量但克制的政策伦理评论男声，清楚区分意图与风险、镇痛与延长痛苦；乔治·安纳斯的直接引语使用13号。"
+    },
+    "translation": {
+      "primary_actor_id": "02",
+      "role": "academic explainer",
+      "rationale": "A clear professional female academic voice suits abstract behavioral-science concepts.",
+      "context_zh": "2002年的Part B是英译汉。主讲人02用清晰、专业、温和的学术解释型女声处理行为科学概念；保留原卷指定翻译的五处划线原文，去掉题号与说明。原文第四句的They指上文的freedom and dignity；末句these issues指技术由谁使用、用于何种目的。"
+    }
+  },
+  "role_actors": {
+    "new_arrival": "12",
+    "st_peter": "13",
+    "dave_lavery": "01",
+    "george_annas": "13"
+  },
+  "reference_tasks": {
+    "neutral": "rainbow_01_regular",
+    "warm": "emo_contentment_sentences",
+    "lively": "emo_realization_sentences",
+    "serious": "rainbow_02_regular",
+    "curious": "emo_interest_sentences",
+    "ironic": "emo_amusement_sentences",
+    "tense": "emo_distress_sentences",
+    "emotional": "emo_sadness_sentences"
+  },
+  "actors": {
+    "01": {"speaker":"p017","gender":"male","age_group":"36-45","native_language":"american english"},
+    "02": {"speaker":"p014","gender":"female","age_group":"26-35","native_language":"american english"},
+    "04": {"speaker":"p024","gender":"female","age_group":"36-45","native_language":"american english"},
+    "05": {"speaker":"p007","gender":"male","age_group":"36-45","native_language":"american english"},
+    "08": {"speaker":"p023","gender":"male","age_group":"26-35","native_language":"american english"},
+    "09": {"speaker":"p025","gender":"male","age_group":"46-55","native_language":"american english"},
+    "12": {"speaker":"p004","gender":"male","age_group":"18-25","native_language":"american english"},
+    "13": {"speaker":"p087","gender":"male","age_group":"56-65","native_language":"american english"}
+  }
+}
