@@ -1,0 +1,53 @@
+name: Verify live 2002 Pages
+on:
+  push:
+    branches: [kaoyan-reader-v1]
+    paths: ['.github/workflows/verify-2002-pages.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - name: Verify actual public responses, not just a branch commit
+        run: |
+          python3 - <<'PY'
+          import json, time, urllib.request
+          base='https://dannhitruong852-jpg.github.io/taptap/kaoyan-reader-v1/'
+          report={}
+          def get(path):
+              request=urllib.request.Request(base+path,headers={'Cache-Control':'no-cache','User-Agent':'2002-reader-deployment-check'})
+              with urllib.request.urlopen(request,timeout=20) as response:
+                  assert response.status==200
+                  return response.read().decode('utf-8')
+          for attempt in range(18):
+              try:
+                  html=get('')
+                  assert 'id="article-select"' in html
+                  catalog=json.loads(get('content/catalog.json'))
+                  assert len(catalog['articles'])==6
+                  articles=[]
+                  for entry in catalog['articles']:
+                      doc=json.loads(get(entry['content'].removeprefix('./')))
+                      assert len(doc['sentences'])==entry['sentences']
+                      assert all(s['en'] and s['zh'] for s in doc['sentences'])
+                      articles.append({'id':entry['id'],'sentences':len(doc['sentences'])})
+                  assert sum(x['sentences'] for x in articles)==91
+                  report={'status':'passed','url':base,'articles':articles,'sentence_total':91,
+                          'checked_at_utc':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),
+                          'audio_validation':'separate generation and listening acceptance'}
+                  break
+              except Exception as error:
+                  print(f'Attempt {attempt+1}: {error}',flush=True)
+                  if attempt==17:raise
+                  time.sleep(10)
+          print(json.dumps(report,indent=2))
+          with open('/tmp/2002-live-pages.json','w') as output:json.dump(report,output,indent=2)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: 2002-live-pages-report
+          path: /tmp/2002-live-pages.json
+          retention-days: 7
