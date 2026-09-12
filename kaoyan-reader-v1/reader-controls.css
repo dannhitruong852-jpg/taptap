@@ -65,8 +65,8 @@ body.hide-vocab .sentence-card .vocab,body.hide-vocab .sentence-card .vocab.read
   .howto{font-size:10px}
   .player-meta{padding-left:13px;padding-right:82px}
   .director-mood{font-size:13px}
-  .transport-row{grid-template-columns:42px 42px 56px 42px;gap:8px}
-  .transport-row .icon-button{width:42px;height:42px}
+  .transport-row{grid-template-columns:44px 44px 56px 44px;gap:7px}
+  .transport-row .icon-button{width:44px;height:44px}
   .transport-row .play-button{width:56px;height:56px}
   .magnetic-speed{grid-template-columns:44px minmax(0,1fr);gap:6px;padding-left:13px;padding-right:14px}
   .speed-value{right:13px;width:62px;min-width:62px}
