@@ -3,7 +3,7 @@ on:
   push:
     branches: [kaoyan-reader-v1, c-v4-2002-complete]
     paths:
-      - '.github/workflows/reader-pipeline-checks.yml'
+      - '.github/workflows/**'
       - 'content-pipeline/**'
       - 'voice-pipeline/**'
       - 'kaoyan-reader-v1/**'
@@ -13,7 +13,7 @@ permissions:
 jobs:
   checks:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
