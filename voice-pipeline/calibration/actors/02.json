@@ -1,0 +1,422 @@
+{
+  "schema_version": "c-v4-actor-calibration-1",
+  "calibration_id": "actor-02-audition-v1",
+  "actor_id": "02",
+  "source_speaker": "p014",
+  "source_corpus": "EARS",
+  "source_license": "CC BY-NC 4.0",
+  "persona": "Academic Explainer Female",
+  "role": "medicine/education/psychology",
+  "age_impression": "26-35",
+  "accent": "en-US",
+  "voice_character": "clean professional warm academic delivery",
+  "references": {
+    "neutral": "actor02-neutral.wav",
+    "warm": "actor02-warm.wav",
+    "lively": "actor02-lively.wav",
+    "serious": "actor02-serious.wav",
+    "curious": "actor02-curious.wav",
+    "ironic": "actor02-ironic.wav",
+    "tense": "actor02-tense.wav",
+    "emotional": "actor02-emotional.wav"
+  },
+  "natural_rate": {
+    "source_baseline": 0.96,
+    "audition_wpm_range": [
+      139,
+      182
+    ]
+  },
+  "intensity_range": [
+    0,
+    2
+  ],
+  "long_sentence_stability": "unverified_pending_audition",
+  "emotional_plasticity": "unverified_pending_audition",
+  "character_consistency": "unverified_pending_audition",
+  "known_model_risks": [
+    "repetition or truncation on long clauses",
+    "identity drift at expressive extremes"
+  ],
+  "avoid_regions": [
+    {
+      "reason": "over-performance risk",
+      "exaggeration_above": 0.85
+    },
+    {
+      "reason": "flattened delivery risk",
+      "cfg_weight_above": 0.7
+    }
+  ],
+  "intent_profiles": {
+    "neutral_explain": {
+      "reference_state": "neutral",
+      "center": {
+        "exaggeration": 0.47,
+        "cfg_weight": 0.45,
+        "temperature": 0.768,
+        "repetition_penalty": 1.195
+      },
+      "step": {
+        "exaggeration": 0.08,
+        "cfg_weight": -0.04,
+        "temperature": 0.025
+      },
+      "intensity_shift": {
+        "exaggeration": 0.03,
+        "cfg_weight": -0.015
+      },
+      "bounds": {
+        "exaggeration": [
+          0.25,
+          0.85
+        ],
+        "cfg_weight": [
+          0.25,
+          0.7
+        ],
+        "temperature": [
+          0.65,
+          0.95
+        ],
+        "repetition_penalty": [
+          1.1,
+          1.3
+        ]
+      }
+    },
+    "serious_analysis": {
+      "reference_state": "serious",
+      "center": {
+        "exaggeration": 0.436,
+        "cfg_weight": 0.496,
+        "temperature": 0.778,
+        "repetition_penalty": 1.195
+      },
+      "step": {
+        "exaggeration": 0.08,
+        "cfg_weight": -0.04,
+        "temperature": 0.025
+      },
+      "intensity_shift": {
+        "exaggeration": 0.03,
+        "cfg_weight": -0.015
+      },
+      "bounds": {
+        "exaggeration": [
+          0.25,
+          0.85
+        ],
+        "cfg_weight": [
+          0.25,
+          0.7
+        ],
+        "temperature": [
+          0.65,
+          0.95
+        ],
+        "repetition_penalty": [
+          1.1,
+          1.3
+        ]
+      }
+    },
+    "warm_explain": {
+      "reference_state": "warm",
+      "center": {
+        "exaggeration": 0.54,
+        "cfg_weight": 0.402,
+        "temperature": 0.768,
+        "repetition_penalty": 1.195
+      },
+      "step": {
+        "exaggeration": 0.08,
+        "cfg_weight": -0.04,
+        "temperature": 0.025
+      },
+      "intensity_shift": {
+        "exaggeration": 0.03,
+        "cfg_weight": -0.015
+      },
+      "bounds": {
+        "exaggeration": [
+          0.25,
+          0.85
+        ],
+        "cfg_weight": [
+          0.25,
+          0.7
+        ],
+        "temperature": [
+          0.65,
+          0.95
+        ],
+        "repetition_penalty": [
+          1.1,
+          1.3
+        ]
+      }
+    },
+    "narrative_build": {
+      "reference_state": "neutral",
+      "center": {
+        "exaggeration": 0.526,
+        "cfg_weight": 0.43,
+        "temperature": 0.778,
+        "repetition_penalty": 1.195
+      },
+      "step": {
+        "exaggeration": 0.08,
+        "cfg_weight": -0.04,
+        "temperature": 0.025
+      },
+      "intensity_shift": {
+        "exaggeration": 0.03,
+        "cfg_weight": -0.015
+      },
+      "bounds": {
+        "exaggeration": [
+          0.25,
+          0.85
+        ],
+        "cfg_weight": [
+          0.25,
+          0.7
+        ],
+        "temperature": [
+          0.65,
+          0.95
+        ],
+        "repetition_penalty": [
+          1.1,
+          1.3
+        ]
+      }
+    },
+    "contrast": {
+      "reference_state": "lively",
+      "center": {
+        "exaggeration": 0.58,
+        "cfg_weight": 0.386,
+        "temperature": 0.768,
+        "repetition_penalty": 1.195
+      },
+      "step": {
+        "exaggeration": 0.08,
+        "cfg_weight": -0.04,
+        "temperature": 0.025
+      },
+      "intensity_shift": {
+        "exaggeration": 0.03,
+        "cfg_weight": -0.015
+      },
+      "bounds": {
+        "exaggeration": [
+          0.25,
+          0.85
+        ],
+        "cfg_weight": [
+          0.25,
+          0.7
+        ],
+        "temperature": [
+          0.65,
+          0.95
+        ],
+        "repetition_penalty": [
+          1.1,
+          1.3
+        ]
+      }
+    },
+    "information_peak": {
+      "reference_state": "lively",
+      "center": {
+        "exaggeration": 0.606,
+        "cfg_weight": 0.372,
+        "temperature": 0.778,
+        "repetition_penalty": 1.195
+      },
+      "step": {
+        "exaggeration": 0.08,
+        "cfg_weight": -0.04,
+        "temperature": 0.025
+      },
+      "intensity_shift": {
+        "exaggeration": 0.03,
+        "cfg_weight": -0.015
+      },
+      "bounds": {
+        "exaggeration": [
+          0.25,
+          0.85
+        ],
+        "cfg_weight": [
+          0.25,
+          0.7
+        ],
+        "temperature": [
+          0.65,
+          0.95
+        ],
+        "repetition_penalty": [
+          1.1,
+          1.3
+        ]
+      }
+    },
+    "restrained_irony": {
+      "reference_state": "ironic",
+      "center": {
+        "exaggeration": 0.55,
+        "cfg_weight": 0.46,
+        "temperature": 0.768,
+        "repetition_penalty": 1.195
+      },
+      "step": {
+        "exaggeration": 0.08,
+        "cfg_weight": -0.04,
+        "temperature": 0.025
+      },
+      "intensity_shift": {
+        "exaggeration": 0.03,
+        "cfg_weight": -0.015
+      },
+      "bounds": {
+        "exaggeration": [
+          0.25,
+          0.85
+        ],
+        "cfg_weight": [
+          0.25,
+          0.7
+        ],
+        "temperature": [
+          0.65,
+          0.95
+        ],
+        "repetition_penalty": [
+          1.1,
+          1.3
+        ]
+      }
+    },
+    "quoted_character": {
+      "reference_state": "emotional",
+      "center": {
+        "exaggeration": 0.576,
+        "cfg_weight": 0.396,
+        "temperature": 0.778,
+        "repetition_penalty": 1.195
+      },
+      "step": {
+        "exaggeration": 0.08,
+        "cfg_weight": -0.04,
+        "temperature": 0.025
+      },
+      "intensity_shift": {
+        "exaggeration": 0.03,
+        "cfg_weight": -0.015
+      },
+      "bounds": {
+        "exaggeration": [
+          0.25,
+          0.85
+        ],
+        "cfg_weight": [
+          0.25,
+          0.7
+        ],
+        "temperature": [
+          0.65,
+          0.95
+        ],
+        "repetition_penalty": [
+          1.1,
+          1.3
+        ]
+      }
+    },
+    "qualification": {
+      "reference_state": "serious",
+      "center": {
+        "exaggeration": 0.45,
+        "cfg_weight": 0.482,
+        "temperature": 0.768,
+        "repetition_penalty": 1.195
+      },
+      "step": {
+        "exaggeration": 0.08,
+        "cfg_weight": -0.04,
+        "temperature": 0.025
+      },
+      "intensity_shift": {
+        "exaggeration": 0.03,
+        "cfg_weight": -0.015
+      },
+      "bounds": {
+        "exaggeration": [
+          0.25,
+          0.85
+        ],
+        "cfg_weight": [
+          0.25,
+          0.7
+        ],
+        "temperature": [
+          0.65,
+          0.95
+        ],
+        "repetition_penalty": [
+          1.1,
+          1.3
+        ]
+      }
+    },
+    "curious_probe": {
+      "reference_state": "curious",
+      "center": {
+        "exaggeration": 0.553,
+        "cfg_weight": 0.425,
+        "temperature": 0.788,
+        "repetition_penalty": 1.195
+      },
+      "step": {
+        "exaggeration": 0.08,
+        "cfg_weight": -0.04,
+        "temperature": 0.025
+      },
+      "intensity_shift": {
+        "exaggeration": 0.03,
+        "cfg_weight": -0.015
+      },
+      "bounds": {
+        "exaggeration": [
+          0.25,
+          0.85
+        ],
+        "cfg_weight": [
+          0.25,
+          0.7
+        ],
+        "temperature": [
+          0.65,
+          0.95
+        ],
+        "repetition_penalty": [
+          1.1,
+          1.3
+        ]
+      }
+    }
+  },
+  "selected_candidates": {},
+  "human_listening_qa": {
+    "status": "pending",
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "notes": null
+  },
+  "eligible": false,
+  "eligible_for": []
+}

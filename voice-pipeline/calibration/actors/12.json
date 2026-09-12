@@ -1,0 +1,422 @@
+{
+  "schema_version": "c-v4-actor-calibration-1",
+  "calibration_id": "actor-12-audition-v1",
+  "actor_id": "12",
+  "source_speaker": "p004",
+  "source_corpus": "EARS",
+  "source_license": "CC BY-NC 4.0",
+  "persona": "Young Male Character",
+  "role": "student/young-character/dialogue",
+  "age_impression": "18-25",
+  "accent": "en-US",
+  "voice_character": "clear agile youthful male dialogue",
+  "references": {
+    "neutral": "actor12-neutral.wav",
+    "warm": "actor12-warm.wav",
+    "lively": "actor12-lively.wav",
+    "serious": "actor12-serious.wav",
+    "curious": "actor12-curious.wav",
+    "ironic": "actor12-ironic.wav",
+    "tense": "actor12-tense.wav",
+    "emotional": "actor12-emotional.wav"
+  },
+  "natural_rate": {
+    "source_baseline": 1.01,
+    "audition_wpm_range": [
+      135,
+      178
+    ]
+  },
+  "intensity_range": [
+    0,
+    2
+  ],
+  "long_sentence_stability": "unverified_pending_audition",
+  "emotional_plasticity": "unverified_pending_audition",
+  "character_consistency": "unverified_pending_audition",
+  "known_model_risks": [
+    "repetition or truncation on long clauses",
+    "identity drift at expressive extremes"
+  ],
+  "avoid_regions": [
+    {
+      "reason": "over-performance risk",
+      "exaggeration_above": 0.85
+    },
+    {
+      "reason": "flattened delivery risk",
+      "cfg_weight_above": 0.7
+    }
+  ],
+  "intent_profiles": {
+    "neutral_explain": {
+      "reference_state": "neutral",
+      "center": {
+        "exaggeration": 0.55,
+        "cfg_weight": 0.38,
+        "temperature": 0.808,
+        "repetition_penalty": 1.18
+      },
+      "step": {
+        "exaggeration": 0.07,
+        "cfg_weight": -0.035,
+        "temperature": 0.025
+      },
+      "intensity_shift": {
+        "exaggeration": 0.025,
+        "cfg_weight": -0.015
+      },
+      "bounds": {
+        "exaggeration": [
+          0.25,
+          0.85
+        ],
+        "cfg_weight": [
+          0.25,
+          0.7
+        ],
+        "temperature": [
+          0.65,
+          0.95
+        ],
+        "repetition_penalty": [
+          1.1,
+          1.3
+        ]
+      }
+    },
+    "serious_analysis": {
+      "reference_state": "serious",
+      "center": {
+        "exaggeration": 0.516,
+        "cfg_weight": 0.426,
+        "temperature": 0.818,
+        "repetition_penalty": 1.18
+      },
+      "step": {
+        "exaggeration": 0.07,
+        "cfg_weight": -0.035,
+        "temperature": 0.025
+      },
+      "intensity_shift": {
+        "exaggeration": 0.025,
+        "cfg_weight": -0.015
+      },
+      "bounds": {
+        "exaggeration": [
+          0.25,
+          0.85
+        ],
+        "cfg_weight": [
+          0.25,
+          0.7
+        ],
+        "temperature": [
+          0.65,
+          0.95
+        ],
+        "repetition_penalty": [
+          1.1,
+          1.3
+        ]
+      }
+    },
+    "warm_explain": {
+      "reference_state": "warm",
+      "center": {
+        "exaggeration": 0.62,
+        "cfg_weight": 0.332,
+        "temperature": 0.808,
+        "repetition_penalty": 1.18
+      },
+      "step": {
+        "exaggeration": 0.07,
+        "cfg_weight": -0.035,
+        "temperature": 0.025
+      },
+      "intensity_shift": {
+        "exaggeration": 0.025,
+        "cfg_weight": -0.015
+      },
+      "bounds": {
+        "exaggeration": [
+          0.25,
+          0.85
+        ],
+        "cfg_weight": [
+          0.25,
+          0.7
+        ],
+        "temperature": [
+          0.65,
+          0.95
+        ],
+        "repetition_penalty": [
+          1.1,
+          1.3
+        ]
+      }
+    },
+    "narrative_build": {
+      "reference_state": "neutral",
+      "center": {
+        "exaggeration": 0.606,
+        "cfg_weight": 0.36,
+        "temperature": 0.818,
+        "repetition_penalty": 1.18
+      },
+      "step": {
+        "exaggeration": 0.07,
+        "cfg_weight": -0.035,
+        "temperature": 0.025
+      },
+      "intensity_shift": {
+        "exaggeration": 0.025,
+        "cfg_weight": -0.015
+      },
+      "bounds": {
+        "exaggeration": [
+          0.25,
+          0.85
+        ],
+        "cfg_weight": [
+          0.25,
+          0.7
+        ],
+        "temperature": [
+          0.65,
+          0.95
+        ],
+        "repetition_penalty": [
+          1.1,
+          1.3
+        ]
+      }
+    },
+    "contrast": {
+      "reference_state": "lively",
+      "center": {
+        "exaggeration": 0.66,
+        "cfg_weight": 0.316,
+        "temperature": 0.808,
+        "repetition_penalty": 1.18
+      },
+      "step": {
+        "exaggeration": 0.07,
+        "cfg_weight": -0.035,
+        "temperature": 0.025
+      },
+      "intensity_shift": {
+        "exaggeration": 0.025,
+        "cfg_weight": -0.015
+      },
+      "bounds": {
+        "exaggeration": [
+          0.25,
+          0.85
+        ],
+        "cfg_weight": [
+          0.25,
+          0.7
+        ],
+        "temperature": [
+          0.65,
+          0.95
+        ],
+        "repetition_penalty": [
+          1.1,
+          1.3
+        ]
+      }
+    },
+    "information_peak": {
+      "reference_state": "lively",
+      "center": {
+        "exaggeration": 0.686,
+        "cfg_weight": 0.302,
+        "temperature": 0.818,
+        "repetition_penalty": 1.18
+      },
+      "step": {
+        "exaggeration": 0.07,
+        "cfg_weight": -0.035,
+        "temperature": 0.025
+      },
+      "intensity_shift": {
+        "exaggeration": 0.025,
+        "cfg_weight": -0.015
+      },
+      "bounds": {
+        "exaggeration": [
+          0.25,
+          0.85
+        ],
+        "cfg_weight": [
+          0.25,
+          0.7
+        ],
+        "temperature": [
+          0.65,
+          0.95
+        ],
+        "repetition_penalty": [
+          1.1,
+          1.3
+        ]
+      }
+    },
+    "restrained_irony": {
+      "reference_state": "ironic",
+      "center": {
+        "exaggeration": 0.63,
+        "cfg_weight": 0.39,
+        "temperature": 0.808,
+        "repetition_penalty": 1.18
+      },
+      "step": {
+        "exaggeration": 0.07,
+        "cfg_weight": -0.035,
+        "temperature": 0.025
+      },
+      "intensity_shift": {
+        "exaggeration": 0.025,
+        "cfg_weight": -0.015
+      },
+      "bounds": {
+        "exaggeration": [
+          0.25,
+          0.85
+        ],
+        "cfg_weight": [
+          0.25,
+          0.7
+        ],
+        "temperature": [
+          0.65,
+          0.95
+        ],
+        "repetition_penalty": [
+          1.1,
+          1.3
+        ]
+      }
+    },
+    "quoted_character": {
+      "reference_state": "emotional",
+      "center": {
+        "exaggeration": 0.656,
+        "cfg_weight": 0.326,
+        "temperature": 0.818,
+        "repetition_penalty": 1.18
+      },
+      "step": {
+        "exaggeration": 0.07,
+        "cfg_weight": -0.035,
+        "temperature": 0.025
+      },
+      "intensity_shift": {
+        "exaggeration": 0.025,
+        "cfg_weight": -0.015
+      },
+      "bounds": {
+        "exaggeration": [
+          0.25,
+          0.85
+        ],
+        "cfg_weight": [
+          0.25,
+          0.7
+        ],
+        "temperature": [
+          0.65,
+          0.95
+        ],
+        "repetition_penalty": [
+          1.1,
+          1.3
+        ]
+      }
+    },
+    "qualification": {
+      "reference_state": "serious",
+      "center": {
+        "exaggeration": 0.53,
+        "cfg_weight": 0.412,
+        "temperature": 0.808,
+        "repetition_penalty": 1.18
+      },
+      "step": {
+        "exaggeration": 0.07,
+        "cfg_weight": -0.035,
+        "temperature": 0.025
+      },
+      "intensity_shift": {
+        "exaggeration": 0.025,
+        "cfg_weight": -0.015
+      },
+      "bounds": {
+        "exaggeration": [
+          0.25,
+          0.85
+        ],
+        "cfg_weight": [
+          0.25,
+          0.7
+        ],
+        "temperature": [
+          0.65,
+          0.95
+        ],
+        "repetition_penalty": [
+          1.1,
+          1.3
+        ]
+      }
+    },
+    "curious_probe": {
+      "reference_state": "curious",
+      "center": {
+        "exaggeration": 0.625,
+        "cfg_weight": 0.355,
+        "temperature": 0.828,
+        "repetition_penalty": 1.18
+      },
+      "step": {
+        "exaggeration": 0.07,
+        "cfg_weight": -0.035,
+        "temperature": 0.025
+      },
+      "intensity_shift": {
+        "exaggeration": 0.025,
+        "cfg_weight": -0.015
+      },
+      "bounds": {
+        "exaggeration": [
+          0.25,
+          0.85
+        ],
+        "cfg_weight": [
+          0.25,
+          0.7
+        ],
+        "temperature": [
+          0.65,
+          0.95
+        ],
+        "repetition_penalty": [
+          1.1,
+          1.3
+        ]
+      }
+    }
+  },
+  "selected_candidates": {},
+  "human_listening_qa": {
+    "status": "pending",
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "notes": null
+  },
+  "eligible": false,
+  "eligible_for": []
+}
