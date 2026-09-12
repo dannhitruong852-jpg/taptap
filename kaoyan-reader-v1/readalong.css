@@ -1,0 +1,40 @@
+.read-token {
+  transition: color .08s linear, opacity .08s linear, background-color .08s linear;
+}
+.sentence-card.is-active .en .read-token,
+.sentence-card.is-active .zh .read-token {
+  color: inherit;
+  opacity: .42;
+}
+.sentence-card.is-active .en .read-token.is-read,
+.sentence-card.is-active .zh .read-token.is-read {
+  opacity: 1;
+}
+.sentence-card.is-active .en .read-token.is-reading {
+  opacity: 1;
+  text-shadow: 0 0 0 currentColor;
+}
+.sentence-card.is-active .zh .read-token.is-reading {
+  opacity: .9;
+}
+.sentence-card.is-active .en .vocab.read-token {
+  background: linear-gradient(transparent 67%, rgba(215,181,110,.26) 0);
+}
+.sentence-card.is-active .en .vocab.read-token.is-read,
+.sentence-card.is-active .en .vocab.read-token.is-reading {
+  background: linear-gradient(transparent 63%, rgba(215,181,110,.52) 0);
+}
+.sentence-card::after {
+  content:"";
+  position:absolute;
+  left:43px;
+  right:13px;
+  bottom:0;
+  height:2px;
+  border-radius:999px;
+  background:linear-gradient(90deg, rgba(81,68,46,.72) 0 var(--sentence-progress,0%), rgba(81,68,46,.08) var(--sentence-progress,0%) 100%);
+  opacity:0;
+  transition:opacity .18s ease;
+}
+.sentence-card.is-active::after { opacity:1; }
+@media (min-width:700px){.sentence-card::after{left:56px;right:22px;}}
