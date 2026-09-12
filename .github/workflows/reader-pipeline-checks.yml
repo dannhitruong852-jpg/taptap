@@ -1,9 +1,9 @@
 name: Reader pipeline checks
 on:
   push:
-    branches: [kaoyan-reader-v1]
+    branches: [kaoyan-reader-v1, c-v4-2002-complete]
     paths:
-      - '.github/workflows/reader-pipeline-checks.yml'
+      - '.github/workflows/**'
       - 'content-pipeline/**'
       - 'voice-pipeline/**'
       - 'kaoyan-reader-v1/**'
@@ -13,7 +13,7 @@ permissions:
 jobs:
   checks:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -37,6 +37,14 @@ jobs:
         continue-on-error: true
         working-directory: kaoyan-reader-v1
         run: npm test
+      - name: Install browser verification
+        run: |
+          python -m pip install playwright==1.55.0
+          python -m playwright install --with-deps chromium
+      - name: Browser interaction tests
+        id: browser
+        continue-on-error: true
+        run: python kaoyan-reader-v1/tests/reader-ux-browser.py
       - name: Save exact source snapshot
         if: always()
         run: git archive --format=tar HEAD | gzip > /tmp/reader-source.tar.gz
@@ -52,8 +60,10 @@ jobs:
           CONTENT: ${{ steps.content.outcome }}
           VOICE: ${{ steps.voice.outcome }}
           READER: ${{ steps.reader.outcome }}
+          BROWSER: ${{ steps.browser.outcome }}
         run: |
-          printf 'content=%s voice=%s reader=%s\n' "$CONTENT" "$VOICE" "$READER"
+          printf 'content=%s voice=%s reader=%s browser=%s\n' "$CONTENT" "$VOICE" "$READER" "$BROWSER"
           test "$CONTENT" = success
           test "$VOICE" = success
           test "$READER" = success
+          test "$BROWSER" = success

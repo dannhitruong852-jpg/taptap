@@ -1,0 +1,63 @@
+name: Verify public C v4 reader candidate
+
+on:
+  workflow_dispatch:
+    inputs:
+      year:
+        description: Candidate year
+        required: true
+        default: '2002'
+        type: choice
+        options: ['2002']
+
+permissions:
+  contents: read
+
+jobs:
+  public-verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      PUBLIC_ROOT: https://dannhitruong852-jpg.github.io/taptap/kaoyan-reader-v1/
+      READER_BASE_URL: https://dannhitruong852-jpg.github.io/taptap/kaoyan-reader-v1/
+      READER_AUDIO_VERSION: v4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build local source truth for browser comparisons
+        run: PYTHONPATH=content-pipeline python content-pipeline/build_2002.py
+      - name: Verify all six public manifests, 91 word arrays, QA gates and codecs
+        run: |
+          python - <<'PY'
+          import json,os,urllib.request
+          base=os.environ['PUBLIC_ROOT'];articles=['cloze','text1','text2','text3','text4','translation']
+          total=0
+          for article in articles:
+              with urllib.request.urlopen(f'{base}audio/2002/v4/c-{article}/manifest.json?verify={os.environ.get("GITHUB_RUN_ID","")}',timeout=30) as r:
+                  manifest=json.load(r)
+              assert manifest['alignment_status']=='passed'
+              assert manifest['qa']['voice']=='pending'
+              assert manifest['qa']['c_direction']=='pending'
+              for sid,entry in manifest['sentences'].items():
+                  assert entry['alignment_status']=='passed'
+                  assert entry['words']
+                  assert entry['qa']['voice']=='pending'
+                  assert entry['qa']['c_direction']=='pending'
+                  for key in ('path','mp3_path'):
+                      req=urllib.request.Request(base+entry[key].removeprefix('./'),method='HEAD')
+                      with urllib.request.urlopen(req,timeout=30) as response:assert response.status==200
+                  total+=1
+          assert total==91,total
+          print('verified public sentence assets',total)
+          PY
+      - name: Install Chromium
+        run: |
+          python -m pip install playwright==1.55.0
+          python -m playwright install --with-deps chromium
+      - name: Verify public mobile candidate at all five playback speeds
+        run: python kaoyan-reader-v1/tests/reader-ux-browser.py

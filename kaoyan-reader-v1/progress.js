@@ -9,6 +9,11 @@ export function sentenceProgress(cues, cueIndex, cueTime) {
   return clamp(absolute / total);
 }
 
+export function isExplicitLegacyTimingVersion(version) {
+  const value=String(version || '').toLowerCase();
+  return /(^|-)v[123](?:-|$)/.test(value);
+}
+
 export function progressStyle(progress) {
   const pct = Number((clamp(progress) * 100).toFixed(2));
   return `--read-progress:${pct}%`;

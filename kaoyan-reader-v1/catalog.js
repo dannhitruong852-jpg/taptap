@@ -25,13 +25,28 @@ export function highlightVocabulary(en, vocabulary = [], enabled = true) {
   }
   return html+escapeHtml(en.slice(at));
 }
-export function createSelectionLoader(fetcher = fetch) {
+export function manifestForVersion(entry, audioVersion = '') {
+  if (audioVersion === 'v4') {
+    const prefix = `${entry.year}-`;
+    const id = String(entry.id || '');
+    const article = id.startsWith(prefix) ? id.slice(prefix.length) : id;
+    return `./audio/${entry.year}/v4/c-${article}/manifest.json`;
+  }
+  return entry.manifest;
+}
+export function createSelectionLoader(fetcher = fetch, options = {}) {
   let generation=0;
+  const explicit = options?.audioVersion;
+  const fromLocation = typeof location !== 'undefined'
+    ? new URLSearchParams(location.search).get('audioVersion') || ''
+    : '';
+  const audioVersion = explicit === undefined ? fromLocation : explicit;
   return async function load(entry) {
     const token=++generation;
+    const manifestPath=manifestForVersion(entry,audioVersion);
     const [content, manifest] = await Promise.all([
       fetcher(entry.content).then(r => { if(!r.ok) throw new Error('content-load-failed'); return r.json(); }),
-      fetcher(entry.manifest, {cache:'no-cache'}).then(r => r.ok ? r.json() : {segments:{}}).catch(()=>({segments:{}}))
+      fetcher(manifestPath, {cache:'no-cache'}).then(r => r.ok ? r.json() : {segments:{}}).catch(()=>({segments:{}}))
     ]);
     return token === generation ? {content,manifest} : null;
   };

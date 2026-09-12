@@ -169,6 +169,10 @@ def main():
             write_json(ROOT / 'reports/extraction/2002-cloze-provenance.json',
                        {'source':source['cloze_key'], 'template':template,'answers':answers,'choices':choices,
                         'restored_blanks':20,'status':'verified_against_publisher_key_and_user_pdf_choices'})
+    semantic_path = ROOT / 'content-pipeline/semantic_spans/2002.json'
+    if semantic_path.is_file():
+        semantic = json.loads(semantic_path.read_text(encoding='utf-8'))
+        write_json(ROOT / 'kaoyan-reader-v1/content/2002/semantic-spans.json', semantic)
     write_json(ROOT / 'kaoyan-reader-v1/content/catalog.json',catalog)
     write_json(ROOT / 'reports/extraction/2002.json',
                {'year':2002,'source_filename':source['source_filename'], 'source_sha256':source['source_sha256'],

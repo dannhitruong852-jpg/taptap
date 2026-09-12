@@ -25,3 +25,15 @@ test('missing audio manifest does not block reading content',async()=>{
  const result=await loader({content:'body',manifest:'missing'});
  assert.equal(result.content.sentences.length,1);assert.deepEqual(result.manifest.segments,{});
 });
+test('v4 candidate manifest is opt-in and default remains accepted v3',async()=>{
+ const requests=[];
+ const fetcher=async url=>{requests.push(url);return {ok:true,json:async()=>url.includes('/v4/')?{c_mode_version:'v4'}:{c_mode_version:'v3-content-cast'}}};
+ const entry={id:'2002-text1',year:2002,content:'./content/2002/c/text1.json',manifest:'./audio/2002/c-text1/manifest.json'};
+ const normal=createSelectionLoader(fetcher,{audioVersion:''});
+ await normal(entry);
+ assert.equal(requests.at(-1),'./audio/2002/c-text1/manifest.json');
+ requests.length=0;
+ const candidate=createSelectionLoader(fetcher,{audioVersion:'v4'});
+ await candidate(entry);
+ assert.equal(requests.at(-1),'./audio/2002/v4/c-text1/manifest.json');
+});

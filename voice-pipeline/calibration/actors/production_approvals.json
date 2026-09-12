@@ -1,0 +1,15 @@
+{
+  "schema_version": "c-v4-production-approvals-1",
+  "reviewed_at": "2026-09-13",
+  "review_basis": "User listened to the complete 8-actor A/B/C audition board and judged the set acceptable for first production. Balanced B is the first-production baseline; article-level QA may trigger actor-local recalibration without changing the universal directing system.",
+  "actors": {
+    "01": {"status": "accepted", "eligible_for": ["2002", "production"], "default_variant": "B"},
+    "02": {"status": "accepted", "eligible_for": ["2002", "production"], "default_variant": "B"},
+    "04": {"status": "accepted", "eligible_for": ["2002", "production"], "default_variant": "B"},
+    "05": {"status": "accepted", "eligible_for": ["2002", "production"], "default_variant": "B"},
+    "08": {"status": "accepted", "eligible_for": ["2002", "production"], "default_variant": "B"},
+    "09": {"status": "accepted", "eligible_for": ["2002", "production"], "default_variant": "B"},
+    "12": {"status": "accepted", "eligible_for": ["2002", "production"], "default_variant": "B"},
+    "13": {"status": "accepted", "eligible_for": ["2002", "production"], "default_variant": "B"}
+  }
+}

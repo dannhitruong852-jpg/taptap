@@ -13,6 +13,11 @@ ROOT = Path(__file__).resolve().parents[1]
 REPORT = ROOT.parent / 'reports/browser/reader-ux'
 REPORT.mkdir(parents=True, exist_ok=True)
 BASE = os.getenv('READER_BASE_URL', 'http://127.0.0.1:8766/').rstrip('/') + '/'
+AUDIO_VERSION = os.getenv('READER_AUDIO_VERSION', '').strip()
+
+def reader_url(ui='reader-ux'):
+    version = f'&audioVersion={AUDIO_VERSION}' if AUDIO_VERSION else ''
+    return BASE + f'?ui={ui}{version}#2002-text1'
 server = None
 if not os.getenv('READER_BASE_URL'):
     class QuietHandler(SimpleHTTPRequestHandler):
@@ -43,7 +48,7 @@ class ReaderUX(unittest.TestCase):
             window.__audio.push(a);return a; };
           window.Audio.prototype=NativeAudio.prototype;
         })();''')
-        self.page.goto(BASE + '?ui=reader-ux#2002-text1')
+        self.page.goto(reader_url())
         self.page.wait_for_selector('.sentence-card')
 
     def tearDown(self):
@@ -71,7 +76,6 @@ class ReaderUX(unittest.TestCase):
         p=self.page
         first=p.locator('.sentence-card').nth(0)
         en=first.locator('.en')
-        # Put the intended text in the middle of the viewport, safely above the fixed player.
         en.evaluate("el=>el.scrollIntoView({block:'center',behavior:'instant'})")
         p.wait_for_timeout(100)
         box=en.bounding_box();x,y=box['x']+35,box['y']+12
@@ -174,23 +178,56 @@ class ReaderUX(unittest.TestCase):
         self.assertLessEqual(p.evaluate('document.documentElement.scrollWidth'),p.evaluate('window.innerWidth'))
         p.screenshot(path=str(REPORT/'english-only-mobile.png'),full_page=False)
 
-    def test_08_compact_player_is_centered_and_transport_buttons_are_symmetric(self):
+    def test_08_x_style_player_is_full_width_bottom_dock_and_play_is_centered(self):
         p=self.page
         shell=p.locator('#player-shell').bounding_box()
-        self.assertLessEqual(shell['width'],350.5)
-        self.assertAlmostEqual(shell['x'],(390-shell['width'])/2,delta=1.5)
-        buttons=[p.locator(s).bounding_box() for s in ['#previous','#replay','#play-toggle','#next']]
-        centers=[b['x']+b['width']/2 for b in buttons]
-        self.assertAlmostEqual(centers[1]-centers[0],centers[3]-centers[2],delta=6)
-        for selector in ['#previous','#replay','#play-toggle','#next']:
-            style=p.locator(selector).evaluate("el=>{const b=getComputedStyle(el,'::before');return {left:b.left,top:b.top,position:b.position};}")
-            self.assertEqual(style['position'],'absolute')
-        p.screenshot(path=str(REPORT/'compact-player-mobile.png'),full_page=False)
+        self.assertAlmostEqual(shell['width'],390,delta=1.5)
+        self.assertAlmostEqual(shell['x'],0,delta=1.5)
+        self.assertAlmostEqual(shell['y']+shell['height'],844,delta=1.5)
+        self.assertGreaterEqual(shell['height'],218)
+        buttons=[p.locator(sel).bounding_box() for sel in ['#previous','#replay','#play-toggle','#next']]
+        self.assertEqual([(round(b['width']),round(b['height'])) for b in buttons],[(52,52),(52,52),(68,68),(52,52)])
+        play=buttons[2]
+        self.assertAlmostEqual(play['x']+play['width']/2,195,delta=1.5)
+        speed=p.locator('#speed-value').bounding_box()
+        self.assertLessEqual(abs((speed['x']+speed['width'])-(390-20)),1.5)
+        self.assertLessEqual(p.locator('#player-shell').evaluate('el=>el.scrollWidth'),p.locator('#player-shell').evaluate('el=>el.clientWidth')+1)
+        p.screenshot(path=str(REPORT/'x-style-player-mobile.png'),full_page=False)
+
+    def test_09_real_timestamp_index_and_three_mobile_widths(self):
+        p=self.page
+        script="""async()=>{const m=await import('./time-index.js');const words=[
+          {start:0,end:4},{start:4,end:4.5},{start:4.5,end:5},{start:5,end:5.5},{start:5.5,end:6},
+          {start:6,end:6.8},{start:6.8,end:7.5},{start:7.5,end:8.2},{start:8.2,end:9},{start:9,end:10}];
+          return [m.activeWordIndex(words,3),m.activeWordIndex(words,5.25),m.readStateAtTime(words,3)];}"""
+        result=p.evaluate(script)
+        self.assertEqual(result[0],0)
+        self.assertEqual(result[1],3)
+        self.assertEqual(result[2],{'readThrough':0,'active':0})
+        for width,height in [(320,700),(390,844),(412,915)]:
+            context=self.browser.new_context(viewport={'width':width,'height':height},has_touch=True,is_mobile=True)
+            try:
+                page=context.new_page();page.goto(reader_url('task8-size'));page.wait_for_selector('#player-shell')
+                shell=page.locator('#player-shell').bounding_box()
+                self.assertAlmostEqual(shell['width'],width,delta=1.5,msg=str((width,height,shell)))
+                self.assertAlmostEqual(shell['x'],0,delta=1.5)
+                self.assertAlmostEqual(shell['y']+shell['height'],height,delta=1.5)
+                self.assertLessEqual(page.evaluate('document.documentElement.scrollWidth'),width)
+                self.assertGreater(page.locator('#speed-range').bounding_box()['width'],160)
+                expected=[52,52,68,52] if width>350 else [48,48,64,48]
+                for selector,side in zip(['#previous','#replay','#play-toggle','#next'],expected):
+                    box=page.locator(selector).bounding_box()
+                    self.assertAlmostEqual(box['width'],side,delta=.6)
+                    self.assertAlmostEqual(box['height'],side,delta=.6)
+                play=page.locator('#play-toggle').bounding_box()
+                self.assertAlmostEqual(play['x']+play['width']/2,width/2,delta=1.5)
+            finally:
+                context.close()
 
 if __name__=='__main__':
     try:
         result=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(ReaderUX))
-        (REPORT/'result.json').write_text(json.dumps({'base_url':BASE,'tests':result.testsRun,'failures':len(result.failures),'errors':len(result.errors),'passed':result.wasSuccessful()},indent=2))
+        (REPORT/'result.json').write_text(json.dumps({'base_url':BASE,'audio_version':AUDIO_VERSION,'tests':result.testsRun,'failures':len(result.failures),'errors':len(result.errors),'passed':result.wasSuccessful()},indent=2))
     finally:
         if server:server.shutdown()
     raise SystemExit(0 if result.wasSuccessful() else 1)
