@@ -1,0 +1,45 @@
+{
+  "articles": [
+    {
+      "id": "cloze",
+      "available": 24,
+      "missing": [],
+      "status": "complete_candidate"
+    },
+    {
+      "id": "text1",
+      "available": 36,
+      "missing": [],
+      "status": "complete_candidate"
+    },
+    {
+      "id": "text2",
+      "available": 30,
+      "missing": [],
+      "status": "complete_candidate"
+    },
+    {
+      "id": "text3",
+      "available": 31,
+      "missing": [],
+      "status": "complete_candidate"
+    },
+    {
+      "id": "text4",
+      "available": 32,
+      "missing": [],
+      "status": "complete_candidate"
+    },
+    {
+      "id": "translation",
+      "available": 12,
+      "missing": [],
+      "status": "complete_candidate"
+    }
+  ],
+  "generated_segments": 165,
+  "missing_segments": 0,
+  "asr_qa": "not_performed",
+  "speaker_qa": "not_performed",
+  "c_listening_acceptance": "pending"
+}
