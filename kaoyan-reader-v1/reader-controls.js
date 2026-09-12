@@ -1,17 +1,11 @@
-// A continuous drag preview with five discrete, stable resting speeds.
-export const SPEED_STOPS = Object.freeze([0.7, 1, 1.25, 1.5, 2]);
-const clamp = (v, lo, hi) => Math.min(hi, Math.max(lo, v));
+export const SPEED_STOPS = Object.freeze([0.7, 1, 1.3, 1.7]);
 export function snapSpeed(value) {
   if (!Number.isFinite(Number(value))) return 1;
   return SPEED_STOPS.reduce((best, rate) => Math.abs(rate-value) < Math.abs(best-value) ? rate : best);
 }
-export function rateAtPosition(position) {
-  const p = clamp(Number(position) || 0, 0, 4), i = Math.floor(p);
-  return i === 4 ? 2 : SPEED_STOPS[i] + (SPEED_STOPS[i+1]-SPEED_STOPS[i])*(p-i);
-}
 export function formatSpeed(rate) {
-  const rounded = Number(rate.toFixed(2));
-  return `${Number.isInteger(rounded) ? rounded.toFixed(1) : rounded}\u00d7`;
+  const rounded = Number(Number(rate).toFixed(1));
+  return `${rounded.toFixed(1)}×`;
 }
 
 // Never prevent pointer or context-menu defaults on the selectable article text.
@@ -43,64 +37,35 @@ export function createTapGuard({now = () => performance.now(), maxDuration = 450
 }
 
 export function attachSpeedControl(root, onRate) {
-  const range = root.querySelector('input[type="range"]');
-  const value = root.querySelector('.speed-value');
-  const bubble = root.querySelector('.speed-bubble');
-  let stablePosition = 1, numberDrag = null;
-  function update(position) {
-    const pos = clamp(Number(position) || 0, 0, 4);
-    range.value = String(pos);
-    const rate = Number(rateAtPosition(pos).toFixed(3));
-    const label = formatSpeed(rate);
-    value.textContent = label; bubble.textContent = label;
-    range.setAttribute('aria-valuetext', label);
-    root.style.setProperty('--speed-position', `${pos/4*100}%`);
-    root.querySelectorAll('[data-stop]').forEach(el => el.classList.toggle('is-selected', Number(el.dataset.stop) === Math.round(pos)));
+  const trigger=root.querySelector('#speed-value,.speed-value');
+  const menu=root.querySelector('.speed-menu');
+  const options=[...root.querySelectorAll('[data-speed]')];
+  let rate=1;
+  function setOpen(open){
+    root.classList.toggle('is-open',open);
+    trigger.setAttribute('aria-expanded',String(open));
+    menu.hidden=!open;
+  }
+  function select(next){
+    rate=snapSpeed(Number(next));
+    const label=formatSpeed(rate);
+    trigger.textContent=label;
+    trigger.setAttribute('aria-label',`倍速 ${label}`);
+    options.forEach(option=>{
+      const selected=Number(option.dataset.speed)===rate;
+      option.classList.toggle('is-selected',selected);
+      option.setAttribute('aria-checked',String(selected));
+    });
     onRate(rate);
+    setOpen(false);
   }
-  function start() { root.classList.add('is-dragging'); }
-  function finish(cancelled = false) {
-    const position = cancelled ? stablePosition : Math.round(Number(range.value));
-    stablePosition = position; update(position);
-    root.classList.remove('is-dragging');
-  }
-  range.addEventListener('pointerdown', start);
-  range.addEventListener('input', () => update(range.value));
-  range.addEventListener('change', () => finish());
-  range.addEventListener('pointerup', () => finish());
-  range.addEventListener('pointercancel', () => finish(true));
-  range.addEventListener('blur', () => finish());
-  range.addEventListener('keydown', event => {
-    const delta = {ArrowLeft:-1, ArrowDown:-1, ArrowRight:1, ArrowUp:1};
-    let position = Math.round(Number(range.value));
-    if (event.key in delta) position += delta[event.key];
-    else if (event.key === 'Home') position = 0;
-    else if (event.key === 'End') position = 4;
-    else return;
-    event.preventDefault(); stablePosition = clamp(position, 0, 4); update(stablePosition);
+  trigger.addEventListener('click',event=>{event.stopPropagation();setOpen(!root.classList.contains('is-open'));});
+  options.forEach(option=>option.addEventListener('click',event=>{event.stopPropagation();select(option.dataset.speed);}));
+  document.addEventListener('click',event=>{if(!root.contains(event.target))setOpen(false);});
+  root.addEventListener('keydown',event=>{
+    if(event.key==='Escape'){setOpen(false);trigger.focus();}
   });
-  // The displayed number is itself a drag handle. Dragging is relative, so it
-  // never jumps to 2x just because the finger started on the number at the right.
-  value.addEventListener('pointerdown', event => {
-    if (event.isPrimary === false || event.button > 0) return;
-    event.preventDefault();
-    numberDrag = {id:event.pointerId, x:event.clientX, position:Number(range.value)};
-    value.setPointerCapture(event.pointerId); start();
-  });
-  value.addEventListener('pointermove', event => {
-    if (!numberDrag || event.pointerId !== numberDrag.id) return;
-    const width = Math.max(80, range.getBoundingClientRect().width);
-    update(numberDrag.position + (event.clientX-numberDrag.x)/width*4);
-  });
-  const stopNumberDrag = cancelled => {
-    if (!numberDrag) return;
-    numberDrag = null; finish(cancelled);
-  };
-  value.addEventListener('pointerup', () => stopNumberDrag(false));
-  value.addEventListener('pointercancel', () => stopNumberDrag(true));
-  value.addEventListener('lostpointercapture', () => stopNumberDrag(false));
-  value.addEventListener('keydown', event => {
-    if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); range.focus(); }
-  });
-  update(stablePosition);
+  setOpen(false);
+  select(1);
+  return {setRate:select,close:()=>setOpen(false),getRate:()=>rate};
 }
