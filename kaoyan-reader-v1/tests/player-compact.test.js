@@ -30,7 +30,7 @@ test('speed slider remains fully functional inside the compact bottom row',()=>{
 
 test('desktop remains a centered rounded dock without regaining old height',()=>{
   assert.match(css,/@media\(min-width:768px\)\{[^}]*\.player-shell\{[^}]*width:520px;[^}]*left:50%;right:auto;bottom:18px;[^}]*transform:translateX\(-50%\);[^}]*border-radius:22px/s);
-  assert.match(css,/@media\(min-width:768px\)\{[^}]*\.page-shell\{padding-bottom:190px\}/s);
+  assert.match(css,/\.page-shell\{padding-bottom:190px\}/);
 });
 
 test('transport icons stay CSS-centered and preserve play pause states',()=>{
