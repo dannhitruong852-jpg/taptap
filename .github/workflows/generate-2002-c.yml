@@ -93,7 +93,7 @@ jobs:
         article: [cloze, text1, text2, text3, text4, translation]
         shard: [0, 1, 2]
     env:
-      HF_HOME: ${{ runner.temp }}/hf-cache
+      HF_HOME: /tmp/chatterbox-hf-cache
       TTS_THREADS: '4'
       OMP_NUM_THREADS: '4'
       MKL_NUM_THREADS: '4'
@@ -112,7 +112,7 @@ jobs:
           path: voice-pipeline/references/generated
       - uses: actions/cache@v4
         with:
-          path: ${{ runner.temp }}/hf-cache
+          path: /tmp/chatterbox-hf-cache
           key: chatterbox-original-en-017-v1
       - uses: actions/cache@v4
         with:
