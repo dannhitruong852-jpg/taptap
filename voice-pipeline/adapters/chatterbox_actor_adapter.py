@@ -18,7 +18,7 @@ def _profile_hash(profile: dict) -> str:
 
 
 def _approval(profile_dir: Path, actor_id: str) -> dict | None:
-    path = profile_dir / "production_approvals.json"
+    path = Path(profile_dir) / "production_approvals.json"
     if not path.is_file():
         return None
     data = json.loads(path.read_text(encoding="utf-8"))
@@ -26,11 +26,11 @@ def _approval(profile_dir: Path, actor_id: str) -> dict | None:
 
 
 def resolve_controls(actor_id: str, director_intent: str, intensity: int, profile_dir: Path, *, require_eligible: bool = True) -> dict:
-    """Resolve an actor-local calibration into Chatterbox controls.
+    """Resolve approved actor-local calibration into Chatterbox controls.
 
-    A separately versioned human-approval overlay may promote a technically
-    generated audition profile without rewriting the immutable audition data.
     V4 deliberately has no fallback to legacy global emotion/PERFORMANCE tables.
+    A separate production approval layer may promote an audition profile without
+    mutating the immutable audition JSON.
     """
     if intensity not in (0, 1, 2):
         raise ValueError("intensity must be 0, 1, or 2")
@@ -48,7 +48,7 @@ def resolve_controls(actor_id: str, director_intent: str, intensity: int, profil
         raise ValueError(f"unknown director intent for actor {actor_id}: {director_intent}")
     selected = profile.get("selected_candidates", {}).get(director_intent)
     if not selected and approved:
-        selected = approval.get("selected_candidates", {}).get(director_intent, approval.get("default_variant"))
+        selected = approval.get("intent_variants", {}).get(director_intent) or approval.get("default_variant")
     if not selected:
         raise ValueError(f"actor {actor_id} has no selected calibration for {director_intent}")
     variant = selected.get("variant") if isinstance(selected, dict) else selected
@@ -79,5 +79,5 @@ def resolve_controls(actor_id: str, director_intent: str, intensity: int, profil
         "post_tempo": False,
         "calibration_id": profile["calibration_id"],
         "profile_hash": _profile_hash(profile),
-        "approval_status": "accepted" if approved else profile.get("human_listening_qa", {}).get("status", "pending"),
+        "approval_status": approval.get("status") if approval else profile.get("human_listening_qa", {}).get("status", "pending"),
     }
