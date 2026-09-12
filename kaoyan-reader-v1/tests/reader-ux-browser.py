@@ -37,8 +37,11 @@ class ReaderUX(unittest.TestCase):
         self.page = self.context.new_page()
         self.errors = []
         self.page.on('pageerror', lambda e:self.errors.append(str(e)))
-        self.page.add_init_script('''(() => { const NativeAudio=window.Audio; window.__audio=[];
-          window.Audio=function(...args){ const a=new NativeAudio(...args);window.__audio.push(a);return a; };
+        self.page.add_init_script('''(() => { const NativeAudio=window.Audio; window.__audio=[]; window.__audioEvents=[];
+          window.Audio=function(...args){ const a=new NativeAudio(...args); a.__createdStack=new Error('Audio created').stack; a.__playCalls=0;
+            const nativePlay=a.play.bind(a); a.play=(...playArgs)=>{a.__playCalls++;window.__audioEvents.push({type:'play-call',src:a.src,stack:new Error('play called').stack});return nativePlay(...playArgs);};
+            for(const type of ['play','playing','pause','loadstart','error']) a.addEventListener(type,()=>window.__audioEvents.push({type,src:a.src,currentTime:a.currentTime,paused:a.paused}));
+            window.__audio.push(a);return a; };
           window.Audio.prototype=NativeAudio.prototype;
         })();''')
         self.page.goto(BASE + '?ui=reader-ux#2002-text1')
@@ -83,7 +86,8 @@ class ReaderUX(unittest.TestCase):
         self.assertEqual(p.evaluate('getSelection().toString()'),before)
         first.locator('.en').dispatch_event('click',{'detail':1})
         self.assertFalse(first.locator('.zh').is_visible())
-        self.assertEqual(p.evaluate('window.__audio.filter(a=>!a.paused).length'),0)
+        diag=p.evaluate('''() => ({audios:window.__audio.map(a=>({src:a.src,paused:a.paused,currentTime:a.currentTime,readyState:a.readyState,networkState:a.networkState,playCalls:a.__playCalls,stack:a.__createdStack})),events:window.__audioEvents})''')
+        self.assertEqual(sum(1 for a in diag['audios'] if not a['paused']),0,json.dumps(diag,ensure_ascii=False,indent=2))
         p.evaluate('getSelection().removeAllRanges()')
         p.mouse.move(x,y);p.mouse.down();p.mouse.move(x+70,y+20,steps=5);p.mouse.up()
         self.assertFalse(first.locator('.zh').is_visible())
@@ -123,13 +127,11 @@ class ReaderUX(unittest.TestCase):
             self.assertEqual(p.evaluate('window.__active.playbackRate'),expected)
         self.assertGreaterEqual(p.evaluate('window.__active.currentTime'),p.evaluate('window.__before'))
         self.assertEqual(p.locator('.zh:visible').count(),0)
-        # Wait for an actual progress event before pausing; .2 seconds need not finish a token.
         p.wait_for_selector('.en .is-read', timeout=10000)
         p.locator('#play-toggle').click()
         p.wait_for_timeout(150)
         self.assertTrue(p.evaluate('window.__active.paused'))
         self.assertGreater(p.locator('.en .is-read').count(),0)
-        # Hold, drag and release: the value grows while held, then snaps.
         b=slider.bounding_box();p.mouse.move(b['x']+b['width']*.39,b['y']+b['height']/2);p.mouse.down()
         self.assertTrue(p.locator('#speed-control').evaluate("el=>el.classList.contains('is-dragging')"))
         p.screenshot(path=str(REPORT/'speed-drag-mobile.png'),full_page=False)
