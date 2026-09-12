@@ -1,0 +1,64 @@
+{
+  "year": 2002,
+  "source_filename": "2002年考研英语真题（可复制、可搜索）.pdf",
+  "source_sha256": "55fb0335e629fa71d71d5220af1215345ef3cf2cc23344adc44d0373f64aaa47",
+  "curated_sha256": "ceef36df17a0fdf5bacce55d68d0d7ad718392c51b2f5315e18585d41b741302",
+  "method": "visual PDF review plus explicit curated manuscript; not unverified regex output",
+  "cloze_count": 1,
+  "reading_count": 4,
+  "part_b_count": 0,
+  "translation_count": 1,
+  "translation_selection": "five original underlined segments; surrounding context only in separate introductory note",
+  "excluded_pages": [
+    4,
+    6,
+    8,
+    10,
+    12
+  ],
+  "corrections": [
+    "PDF text-layer quote artifacts restored visually",
+    "Text 1 alternatively if: no inserted comma",
+    "Text 2 and Text 3 for/far text-layer errors restored from rendered page",
+    "Original early 20th century and machine panel error wording preserved; not silently corrected"
+  ],
+  "warnings": [
+    "Audio requires C-mode listening acceptance",
+    "Only three licensed pilot reference voices configured",
+    "Vocabulary is a transparent curated study scale, not an official external standard"
+  ],
+  "suspected_contamination": [],
+  "unresolved_sections": [],
+  "articles": [
+    {
+      "id": "cloze",
+      "sentences": 13,
+      "segments": 24
+    },
+    {
+      "id": "text1",
+      "sentences": 21,
+      "segments": 36
+    },
+    {
+      "id": "text2",
+      "sentences": 16,
+      "segments": 30
+    },
+    {
+      "id": "text3",
+      "sentences": 21,
+      "segments": 31
+    },
+    {
+      "id": "text4",
+      "sentences": 15,
+      "segments": 32
+    },
+    {
+      "id": "translation",
+      "sentences": 5,
+      "segments": 12
+    }
+  ]
+}

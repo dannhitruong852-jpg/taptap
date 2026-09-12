@@ -1,0 +1,1091 @@
+{
+  "year": 2002,
+  "section_type": "reading",
+  "article_id": "text4",
+  "source_sha256": "55fb0335e629fa71d71d5220af1215345ef3cf2cc23344adc44d0373f64aaa47",
+  "source_pages": [
+    9
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "05",
+  "article_context": "这是历史试卷中的医疗伦理讨论，不是现实医疗建议。用有温度但克制的解释语气，清楚区分意图与风险、镇痛与延长痛苦。乔治·安纳斯的直接引语使用13号，其余保持主讲05号。",
+  "article": {
+    "year": 2002,
+    "section": "text4",
+    "title": "阅读四 · 临终照护与医疗责任",
+    "background": "这是历史试卷中的医疗伦理讨论，不是现实医疗建议。用有温度但克制的解释语气，清楚区分意图与风险、镇痛与延长痛苦。乔治·安纳斯的直接引语使用13号，其余保持主讲05号。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "reference_pack_status": "three licensed pilot voices; not the full 15-actor pack",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "The Supreme Court’s decisions on physician-assisted suicide carry important implications for how medicine seeks to relieve dying patients of pain and suffering.",
+      "zh": "最高法院关于医生协助自杀的裁决，对医学界应如何减轻临终患者的疼痛与痛苦，具有重要意义。",
+      "vocab": [
+        {
+          "word": "physician-assisted",
+          "lemma": "physician-assisted",
+          "level": 8,
+          "meaning": "医生协助的",
+          "start": 33,
+          "end": 51
+        },
+        {
+          "word": "suicide",
+          "lemma": "suicide",
+          "level": 6,
+          "meaning": "自杀",
+          "start": 52,
+          "end": 59
+        },
+        {
+          "word": "implications",
+          "lemma": "implication",
+          "level": 6,
+          "meaning": "影响；含义",
+          "start": 76,
+          "end": 88
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "important implications",
+        "pain and suffering"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "The Supreme Court’s decisions on physician-assisted suicide carry important implications ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "exaggeration": 0.52,
+          "cfg_weight": 0.46,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2002/c-text4/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s01-02",
+          "text": "for how medicine seeks to relieve dying patients of pain and suffering.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.555,
+          "cfg_weight": 0.46,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text4/s01-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 2,
+      "en": "Although it ruled that there is no constitutional right to physician-assisted suicide, the Court in effect supported the medical principle of “double effect,” a centuries-old moral principle holding that an action having two effects—a good one that is intended and a harmful one that is foreseen—is permissible if the actor intends only the good effect.",
+      "zh": "尽管法院裁定，宪法并未赋予人们接受医生协助自杀的权利，但它实际上支持了医学上的“双重效应”原则。这一已有数百年历史的道德原则认为：某项行为即使会产生两种效果——一种是有意追求的良好效果，另一种是可以预见的有害效果——只要行为者意在实现的仅是良好效果，该行为便是可以允许的。",
+      "vocab": [
+        {
+          "word": "constitutional",
+          "lemma": "constitutional",
+          "level": 7,
+          "meaning": "宪法的",
+          "start": 35,
+          "end": 49
+        },
+        {
+          "word": "physician-assisted",
+          "lemma": "physician-assisted",
+          "level": 8,
+          "meaning": "医生协助的",
+          "start": 59,
+          "end": 77
+        },
+        {
+          "word": "suicide",
+          "lemma": "suicide",
+          "level": 6,
+          "meaning": "自杀",
+          "start": 78,
+          "end": 85
+        },
+        {
+          "word": "permissible",
+          "lemma": "permissible",
+          "level": 7,
+          "meaning": "可允许的",
+          "start": 299,
+          "end": 310
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "Although",
+        "double effect",
+        "intends only the good effect"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Although it ruled that there is no constitutional right to physician-assisted suicide, ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.61,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2002/c-text4/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s02-02",
+          "text": "the Court in effect supported the medical principle of “double effect,” ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.61,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2002/c-text4/s02-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s02-03",
+          "text": "a centuries-old moral principle holding that an action having two effects—a good one that is intended and a harmful one that is foreseen—",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.61,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2002/c-text4/s02-03.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s02-04",
+          "text": "is permissible if the actor intends only the good effect.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.96,
+          "exaggeration": 0.645,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text4/s02-04.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 3,
+      "en": "Doctors have used that principle in recent years to justify using high doses of morphine to control terminally ill patients’ pain, even though increasing dosages will eventually kill the patient.",
+      "zh": "近年来，医生援引这一原则，为使用大剂量吗啡控制绝症患者的疼痛提供正当依据，尽管不断增加剂量最终会导致患者死亡。",
+      "vocab": [
+        {
+          "word": "morphine",
+          "lemma": "morphine",
+          "level": 8,
+          "meaning": "吗啡",
+          "start": 80,
+          "end": 88
+        },
+        {
+          "word": "terminally",
+          "lemma": "terminally",
+          "level": 7,
+          "meaning": "处于晚期地",
+          "start": 100,
+          "end": 110
+        },
+        {
+          "word": "dosages",
+          "lemma": "dosage",
+          "level": 7,
+          "meaning": "剂量",
+          "start": 154,
+          "end": 161
+        }
+      ],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "control",
+        "even though"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Doctors have used that principle in recent years to justify using high doses of morphine to control terminally ill patients’ pain, ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "exaggeration": 0.5,
+          "cfg_weight": 0.47,
+          "pause_before_ms": 0,
+          "pause_after_ms": 85,
+          "audio_path": "./audio/2002/c-text4/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s03-02",
+          "text": "even though increasing dosages will eventually kill the patient.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.95,
+          "exaggeration": 0.535,
+          "cfg_weight": 0.47,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text4/s03-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 4,
+      "en": "Nancy Dubler, director of Montefiore Medical Center, contends that the principle will shield doctors who “until now have very, very strongly insisted that they could not give patients sufficient medication to control their pain if that might hasten death”.",
+      "zh": "蒙蒂菲奥里医疗中心主任南希·达布勒认为，这一原则将为医生提供保护；这些医生“直到现在还极其坚决地认为，如果用药可能加速死亡，他们就不能给予患者足够的药物来控制疼痛”。",
+      "vocab": [
+        {
+          "word": "contends",
+          "lemma": "contend",
+          "level": 6,
+          "meaning": "主张；声称",
+          "start": 53,
+          "end": 61
+        },
+        {
+          "word": "medication",
+          "lemma": "medication",
+          "level": 6,
+          "meaning": "药物治疗；药物",
+          "start": 195,
+          "end": 205
+        },
+        {
+          "word": "hasten",
+          "lemma": "hasten",
+          "level": 7,
+          "meaning": "加速",
+          "start": 242,
+          "end": 248
+        }
+      ],
+      "discourse_function": "report",
+      "prosody_focus": [
+        "will shield doctors",
+        "if that might hasten death"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Nancy Dubler, director of Montefiore Medical Center, contends that the principle will shield doctors ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "exaggeration": 0.5,
+          "cfg_weight": 0.48,
+          "pause_before_ms": 0,
+          "pause_after_ms": 75,
+          "audio_path": "./audio/2002/c-text4/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s04-02",
+          "text": "who “until now have very, very strongly insisted that they could not give patients sufficient medication to control their pain if that might hasten death”.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "exaggeration": 0.5,
+          "cfg_weight": 0.48,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text4/s04-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 5,
+      "en": "George Annas, chair of the health law department at Boston University, maintains that, as long as a doctor prescribes a drug for a legitimate medical purpose, the doctor has done nothing illegal even if the patient uses the drug to hasten death.",
+      "zh": "波士顿大学卫生法系主任乔治·安纳斯坚持认为，只要医生开药是出于正当的医疗目的，那么即使患者使用该药来加速死亡，医生也没有违法。",
+      "vocab": [
+        {
+          "word": "prescribes",
+          "lemma": "prescribe",
+          "level": 6,
+          "meaning": "开药；规定",
+          "start": 107,
+          "end": 117
+        },
+        {
+          "word": "legitimate",
+          "lemma": "legitimate",
+          "level": 6,
+          "meaning": "正当的；合法的",
+          "start": 131,
+          "end": 141
+        },
+        {
+          "word": "hasten",
+          "lemma": "hasten",
+          "level": 7,
+          "meaning": "加速",
+          "start": 232,
+          "end": 238
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "as long as",
+        "legitimate medical purpose",
+        "even if"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "George Annas, chair of the health law department at Boston University, maintains that, ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "exaggeration": 0.52,
+          "cfg_weight": 0.46,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2002/c-text4/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s05-02",
+          "text": "as long as a doctor prescribes a drug for a legitimate medical purpose, ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "exaggeration": 0.52,
+          "cfg_weight": 0.46,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2002/c-text4/s05-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s05-03",
+          "text": "the doctor has done nothing illegal even if the patient uses the drug to hasten death.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.555,
+          "cfg_weight": 0.46,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text4/s05-03.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 5,
+      "en": "“It’s like surgery,” he says.",
+      "zh": "“这就像做手术一样，”他说。",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [
+        "like surgery"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "“It’s like surgery,” ",
+          "speaker_role": "george_annas",
+          "actor_id": "13",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "exaggeration": 0.6,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 85,
+          "audio_path": "./audio/2002/c-text4/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s06-02",
+          "text": "he says.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "exaggeration": 0.6,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text4/s06-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 5,
+      "en": "“We don’t call those deaths homicides because the doctors didn’t intend to kill their patients, although they risked their death.",
+      "zh": "“我们不会把那些死亡称为他杀，因为医生并无杀死患者的意图，尽管他们冒了患者可能死亡的风险。",
+      "vocab": [
+        {
+          "word": "homicides",
+          "lemma": "homicide",
+          "level": 8,
+          "meaning": "他杀",
+          "start": 28,
+          "end": 37
+        }
+      ],
+      "discourse_function": "explain_quote",
+      "prosody_focus": [
+        "didn’t intend",
+        "risked"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "“We don’t call those deaths homicides because the doctors didn’t intend to kill their patients, ",
+          "speaker_role": "george_annas",
+          "actor_id": "13",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "exaggeration": 0.57,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 95,
+          "audio_path": "./audio/2002/c-text4/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s07-02",
+          "text": "although they risked their death.",
+          "speaker_role": "george_annas",
+          "actor_id": "13",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "exaggeration": 0.57,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text4/s07-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 5,
+      "en": "If you’re a physician, you can risk your patient’s suicide as long as you don’t intend their suicide.”",
+      "zh": "如果你是一名医生，只要你并非有意促成患者自杀，就可以承担患者可能自杀的风险。”",
+      "vocab": [
+        {
+          "word": "physician",
+          "lemma": "physician",
+          "level": 6,
+          "meaning": "医生",
+          "start": 12,
+          "end": 21
+        },
+        {
+          "word": "suicide",
+          "lemma": "suicide",
+          "level": 6,
+          "meaning": "自杀",
+          "start": 51,
+          "end": 58
+        },
+        {
+          "word": "suicide",
+          "lemma": "suicide",
+          "level": 6,
+          "meaning": "自杀",
+          "start": 93,
+          "end": 100
+        }
+      ],
+      "discourse_function": "qualify_quote",
+      "prosody_focus": [
+        "risk",
+        "as long as",
+        "don’t intend"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "If you’re a physician, you can risk your patient’s suicide as long as you don’t intend their suicide.”",
+          "speaker_role": "george_annas",
+          "actor_id": "13",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.96,
+          "exaggeration": 0.55,
+          "cfg_weight": 0.46,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text4/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 6,
+      "en": "On another level, many in the medical community acknowledge that the assisted-suicide debate has been fueled in part by the despair of patients for whom modern medicine has prolonged the physical agony of dying.",
+      "zh": "从另一个层面看，医学界许多人承认，关于协助自杀的争论，部分源于患者的绝望：对这些患者而言，现代医学延长了临终过程中的肉体折磨。",
+      "vocab": [
+        {
+          "word": "agony",
+          "lemma": "agony",
+          "level": 7,
+          "meaning": "极度痛苦",
+          "start": 196,
+          "end": 201
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "in part",
+        "despair",
+        "prolonged"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "On another level, many in the medical community acknowledge that the assisted-suicide debate ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.61,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2002/c-text4/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s09-02",
+          "text": "has been fueled in part by the despair of patients for whom modern medicine has prolonged the physical agony of dying.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.96,
+          "exaggeration": 0.645,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text4/s09-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 7,
+      "en": "Just three weeks before the Court’s ruling on physician-assisted suicide, the National Academy of Science (NAS) released a two-volume report, Approaching Death: Improving Care at the End of Life.",
+      "zh": "就在法院就医生协助自杀作出裁决的三周前，美国国家科学院发布了一份两卷本报告，题为《走近死亡：改善生命末期的照护》。",
+      "vocab": [
+        {
+          "word": "physician-assisted",
+          "lemma": "physician-assisted",
+          "level": 8,
+          "meaning": "医生协助的",
+          "start": 46,
+          "end": 64
+        },
+        {
+          "word": "suicide",
+          "lemma": "suicide",
+          "level": 6,
+          "meaning": "自杀",
+          "start": 65,
+          "end": 72
+        }
+      ],
+      "discourse_function": "report",
+      "prosody_focus": [
+        "three weeks before",
+        "Improving Care at the End of Life"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "Just three weeks before the Court’s ruling on physician-assisted suicide, ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "exaggeration": 0.5,
+          "cfg_weight": 0.48,
+          "pause_before_ms": 0,
+          "pause_after_ms": 75,
+          "audio_path": "./audio/2002/c-text4/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s10-02",
+          "text": "the National Academy of Science (NAS) released a two-volume report, Approaching Death: Improving Care at the End of Life.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "exaggeration": 0.5,
+          "cfg_weight": 0.48,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text4/s10-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 7,
+      "en": "It identifies the undertreatment of pain and the aggressive use of “ineffectual and forced medical procedures that may prolong and even dishonor the period of dying” as the twin problems of end-of-life care.",
+      "zh": "报告指出，临终照护存在两大问题：一是疼痛治疗不足，二是过度采用“无效且强行实施的医疗措施，这些措施可能延长临终过程，甚至使这一过程失去尊严”。",
+      "vocab": [
+        {
+          "word": "undertreatment",
+          "lemma": "undertreatment",
+          "level": 8,
+          "meaning": "治疗不足",
+          "start": 18,
+          "end": 32
+        },
+        {
+          "word": "aggressive",
+          "lemma": "aggressive",
+          "level": 6,
+          "meaning": "积极强力的；过度积极的",
+          "start": 49,
+          "end": 59
+        },
+        {
+          "word": "ineffectual",
+          "lemma": "ineffectual",
+          "level": 8,
+          "meaning": "无效的",
+          "start": 68,
+          "end": 79
+        },
+        {
+          "word": "dishonor",
+          "lemma": "dishonor",
+          "level": 7,
+          "meaning": "使丧失尊严",
+          "start": 136,
+          "end": 144
+        }
+      ],
+      "discourse_function": "compare",
+      "prosody_focus": [
+        "undertreatment of pain",
+        "aggressive use",
+        "twin problems"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "It identifies the undertreatment of pain and the aggressive use of “ineffectual and forced medical procedures ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.57,
+          "cfg_weight": 0.44,
+          "pause_before_ms": 0,
+          "pause_after_ms": 95,
+          "audio_path": "./audio/2002/c-text4/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s11-02",
+          "text": "that may prolong and even dishonor the period of dying” as the twin problems of end-of-life care.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "exaggeration": 0.605,
+          "cfg_weight": 0.44,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text4/s11-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 8,
+      "en": "The profession is taking steps to require young doctors to train in hospices, to test knowledge of aggressive pain management therapies, to develop a Medicare billing code for hospital-based care, and to develop new standards for assessing and treating pain at the end of life.",
+      "zh": "医学界正采取措施，要求年轻医生在临终关怀机构接受培训，考查他们对积极镇痛疗法的了解，为医院提供的照护制定医疗保险计费代码，并制定评估和治疗生命末期疼痛的新标准。",
+      "vocab": [
+        {
+          "word": "hospices",
+          "lemma": "hospice",
+          "level": 8,
+          "meaning": "临终关怀机构",
+          "start": 68,
+          "end": 76
+        },
+        {
+          "word": "aggressive",
+          "lemma": "aggressive",
+          "level": 6,
+          "meaning": "积极强力的；过度积极的",
+          "start": 99,
+          "end": 109
+        },
+        {
+          "word": "therapies",
+          "lemma": "therapy",
+          "level": 6,
+          "meaning": "疗法",
+          "start": 126,
+          "end": 135
+        }
+      ],
+      "discourse_function": "sequence",
+      "prosody_focus": [
+        "taking steps",
+        "pain management",
+        "new standards"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "The profession is taking steps to require young doctors to train in hospices, ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "exaggeration": 0.55,
+          "cfg_weight": 0.45,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2002/c-text4/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s12-02",
+          "text": "to test knowledge of aggressive pain management therapies, to develop a Medicare billing code for hospital-based care, ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "exaggeration": 0.55,
+          "cfg_weight": 0.45,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2002/c-text4/s12-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s12-03",
+          "text": "and to develop new standards for assessing and treating pain at the end of life.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "exaggeration": 0.55,
+          "cfg_weight": 0.45,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text4/s12-03.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 9,
+      "en": "Annas says lawyers can play a key role in insisting that these well-meaning medical initiatives translate into better care.",
+      "zh": "安纳斯说，律师可以发挥关键作用，督促这些出于善意的医疗举措真正转化为更好的照护。",
+      "vocab": [
+        {
+          "word": "initiatives",
+          "lemma": "initiative",
+          "level": 6,
+          "meaning": "举措；倡议",
+          "start": 84,
+          "end": 95
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "translate into better care"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "Annas says lawyers can play a key role in insisting that these well-meaning medical initiatives translate into better care.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "exaggeration": 0.6,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text4/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 9,
+      "en": "“Large numbers of physicians seem unconcerned with the pain their patients are needlessly and predictably suffering”, to the extent that it constitutes “systematic patient abuse”.",
+      "zh": "“许多医生似乎漠不关心，任由患者承受本无必要、而且完全可以预见的疼痛”，其程度甚至构成了“系统性的患者虐待”。",
+      "vocab": [
+        {
+          "word": "physicians",
+          "lemma": "physician",
+          "level": 6,
+          "meaning": "医生",
+          "start": 18,
+          "end": 28
+        },
+        {
+          "word": "constitutes",
+          "lemma": "constitute",
+          "level": 6,
+          "meaning": "构成",
+          "start": 140,
+          "end": 151
+        },
+        {
+          "word": "systematic",
+          "lemma": "systematic",
+          "level": 6,
+          "meaning": "系统性的",
+          "start": 153,
+          "end": 163
+        }
+      ],
+      "discourse_function": "evaluation_quote",
+      "prosody_focus": [
+        "needlessly and predictably",
+        "systematic patient abuse"
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": "Explicit evaluation: systematic patient abuse",
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "“Large numbers of physicians seem unconcerned with the pain their patients are needlessly and predictably suffering”, ",
+          "speaker_role": "george_annas",
+          "actor_id": "13",
+          "emotion": "serious",
+          "intensity": 2,
+          "rate": 0.97,
+          "exaggeration": 0.62,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 115,
+          "audio_path": "./audio/2002/c-text4/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s14-02",
+          "text": "to the extent that it constitutes “systematic patient abuse”.",
+          "speaker_role": "george_annas",
+          "actor_id": "13",
+          "emotion": "serious",
+          "intensity": 2,
+          "rate": 0.97,
+          "exaggeration": 0.62,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text4/s14-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 9,
+      "en": "He says medical licensing boards “must make it clear...that painful deaths are presumptively ones that are incompetently managed and should result in license suspension.”",
+      "zh": "他说，医疗执照管理机构“必须明确……原则上应推定，患者在痛苦中死去是处置不当所致，并应因此暂停相关医生的执业资格”。",
+      "vocab": [
+        {
+          "word": "presumptively",
+          "lemma": "presumptively",
+          "level": 9,
+          "meaning": "按推定；原则上推定",
+          "start": 79,
+          "end": 92
+        },
+        {
+          "word": "incompetently",
+          "lemma": "incompetently",
+          "level": 8,
+          "meaning": "不称职地；处置不当地",
+          "start": 107,
+          "end": 120
+        },
+        {
+          "word": "suspension",
+          "lemma": "suspension",
+          "level": 7,
+          "meaning": "暂停；停职",
+          "start": 158,
+          "end": 168
+        }
+      ],
+      "discourse_function": "warning",
+      "prosody_focus": [
+        "must make it clear",
+        "presumptively",
+        "license suspension"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "He says medical licensing boards “must make it clear...that painful deaths are presumptively ones ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "exaggeration": 0.57,
+          "cfg_weight": 0.45,
+          "pause_before_ms": 0,
+          "pause_after_ms": 105,
+          "audio_path": "./audio/2002/c-text4/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s15-02",
+          "text": "that are incompetently managed and should result in license suspension.”",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "exaggeration": 0.57,
+          "cfg_weight": 0.45,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text4/s15-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1122 @@
+{
+  "year": 2002,
+  "section_type": "reading",
+  "article_id": "text1",
+  "source_sha256": "55fb0335e629fa71d71d5220af1215345ef3cf2cc23344adc44d0373f64aaa47",
+  "source_pages": [
+    3
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "05",
+  "article_context": "像面对面分享演讲经验。叙述本身也有重点和起伏；天堂故事先舒展铺垫，到插队动作加快，再克制地落下笑点。主讲人05、新来者12、圣彼得13，不能靠频繁换声代替韵律。",
+  "article": {
+    "year": 2002,
+    "section": "text1",
+    "title": "阅读一 · 如何恰当地运用幽默",
+    "background": "像面对面分享演讲经验。叙述本身也有重点和起伏；天堂故事先舒展铺垫，到插队动作加快，再克制地落下笑点。主讲人05、新来者12、圣彼得13，不能靠频繁换声代替韵律。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "reference_pack_status": "three licensed pilot voices; not the full 15-actor pack",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "If you intend using humor in your talk to make people smile, you must know how to identify shared experiences and problems.",
+      "zh": "如果你想在讲话中运用幽默，让听众会心一笑，就得懂得如何找出大家共有的经历和问题。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "shared experiences and problems"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "If you intend using humor in your talk to make people smile, ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "exaggeration": 0.52,
+          "cfg_weight": 0.46,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2002/c-text1/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s01-02",
+          "text": "you must know how to identify shared experiences and problems.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.555,
+          "cfg_weight": 0.46,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text1/s01-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Your humor must be relevant to the audience and should help to show them that you are one of them or that you understand their situation and are in sympathy with their point of view.",
+      "zh": "你的幽默必须与听众相关，并应让他们感到：你和他们是一路人，或者你了解他们的处境，也认同他们的看法。",
+      "vocab": [
+        {
+          "word": "sympathy",
+          "lemma": "sympathy",
+          "level": 6,
+          "meaning": "认同；同情",
+          "start": 148,
+          "end": 156
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "relevant to the audience",
+        "one of them"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Your humor must be relevant to the audience ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "exaggeration": 0.6,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 90,
+          "audio_path": "./audio/2002/c-text1/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s02-02",
+          "text": "and should help to show them that you are one of them or that you understand their situation and are in sympathy with their point of view.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "exaggeration": 0.6,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text1/s02-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "Depending on whom you are addressing, the problems will be different.",
+      "zh": "听众不同，所涉及的问题也会不同。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "whom",
+        "different"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Depending on whom you are addressing, the problems will be different.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "exaggeration": 0.5,
+          "cfg_weight": 0.47,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text1/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 1,
+      "en": "If you are talking to a group of managers, you may refer to the disorganized methods of their secretaries; alternatively if you are addressing secretaries, you may want to comment on their disorganized bosses.",
+      "zh": "如果你面对的是一群经理，可以谈谈他们的秘书做事如何缺乏条理；反过来，如果听众是秘书，你就不妨说说他们那些办事杂乱无章的上司。",
+      "vocab": [
+        {
+          "word": "disorganized",
+          "lemma": "disorganized",
+          "level": 6,
+          "meaning": "杂乱无章的",
+          "start": 64,
+          "end": 76
+        },
+        {
+          "word": "disorganized",
+          "lemma": "disorganized",
+          "level": 6,
+          "meaning": "杂乱无章的",
+          "start": 189,
+          "end": 201
+        }
+      ],
+      "discourse_function": "compare",
+      "prosody_focus": [
+        "managers",
+        "secretaries",
+        "bosses"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "If you are talking to a group of managers, you may refer to the disorganized methods of their secretaries; ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.57,
+          "cfg_weight": 0.44,
+          "pause_before_ms": 0,
+          "pause_after_ms": 95,
+          "audio_path": "./audio/2002/c-text1/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s04-02",
+          "text": "alternatively if you are addressing secretaries, you may want to comment on their disorganized bosses.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "exaggeration": 0.605,
+          "cfg_weight": 0.44,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text1/s04-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "Here is an example, which I heard at a nurses’ convention, of a story which works well because the audience all shared the same view of doctors.",
+      "zh": "下面这个故事是我在一次护士大会上听来的。它之所以效果很好，是因为在场听众对医生都有着同样的看法。",
+      "vocab": [
+        {
+          "word": "convention",
+          "lemma": "convention",
+          "level": 6,
+          "meaning": "大会；惯例",
+          "start": 47,
+          "end": 57
+        }
+      ],
+      "discourse_function": "story",
+      "prosody_focus": [
+        "nurses’ convention",
+        "same view of doctors"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Here is an example, which I heard at a nurses’ convention, ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "exaggeration": 0.56,
+          "cfg_weight": 0.44,
+          "pause_before_ms": 0,
+          "pause_after_ms": 75,
+          "audio_path": "./audio/2002/c-text1/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s05-02",
+          "text": "of a story which works well because the audience all shared the same view of doctors.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "exaggeration": 0.56,
+          "cfg_weight": 0.44,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text1/s05-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "A man arrives in heaven and is being shown around by St. Peter.",
+      "zh": "一个人来到天堂，圣彼得正领着他四处参观。",
+      "vocab": [],
+      "discourse_function": "story",
+      "prosody_focus": [
+        "arrives in heaven",
+        "St. Peter"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "A man arrives in heaven and is being shown around by St. Peter.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "exaggeration": 0.56,
+          "cfg_weight": 0.44,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text1/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "He sees wonderful accommodations, beautiful gardens, sunny weather, and so on.",
+      "zh": "他看到的是舒适的住处、美丽的花园、晴朗的天气，等等。",
+      "vocab": [
+        {
+          "word": "accommodations",
+          "lemma": "accommodation",
+          "level": 6,
+          "meaning": "住处；住宿",
+          "start": 18,
+          "end": 32
+        }
+      ],
+      "discourse_function": "settle",
+      "prosody_focus": [
+        "wonderful",
+        "beautiful",
+        "sunny"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "He sees wonderful accommodations, beautiful gardens, sunny weather, and so on.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.49,
+          "cfg_weight": 0.48,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text1/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 2,
+      "en": "Everyone is very peaceful, polite and friendly until, waiting in a line for lunch, the new arrival is suddenly pushed aside by a man in a white coat, who rushes to the head of the line, grabs his food and stomps over to a table by himself.",
+      "zh": "人人都平和、礼貌而友善。可就在这位新来者排队领午餐时，一个穿白大褂的人突然把他推到一旁，冲到队伍最前面，抓起食物，重重地迈着步子，独自走到一张桌子旁。",
+      "vocab": [
+        {
+          "word": "stomps",
+          "lemma": "stomp",
+          "level": 7,
+          "meaning": "重重地迈步",
+          "start": 205,
+          "end": 211
+        }
+      ],
+      "discourse_function": "action_turn",
+      "prosody_focus": [
+        "peaceful, polite and friendly",
+        "until",
+        "rushes",
+        "grabs",
+        "stomps"
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": "until: calm setup interrupted by pushing, rushing, grabbing and stomping",
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "Everyone is very peaceful, polite and friendly ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 2,
+          "rate": 0.97,
+          "exaggeration": 0.48,
+          "cfg_weight": 0.48,
+          "pause_before_ms": 0,
+          "pause_after_ms": 70,
+          "audio_path": "./audio/2002/c-text1/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s08-02",
+          "text": "until, waiting in a line for lunch, the new arrival is suddenly pushed aside by a man in a white coat, ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "curious",
+          "intensity": 2,
+          "rate": 1.0,
+          "exaggeration": 0.6,
+          "cfg_weight": 0.44,
+          "pause_before_ms": 0,
+          "pause_after_ms": 70,
+          "audio_path": "./audio/2002/c-text1/s08-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s08-03",
+          "text": "who rushes to the head of the line, grabs his food and stomps over to a table by himself.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "lively",
+          "intensity": 2,
+          "rate": 1.06,
+          "exaggeration": 0.68,
+          "cfg_weight": 0.4,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text1/s08-03.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 2,
+      "en": "“Who is that?” the new arrival asked St. Peter.",
+      "zh": "“那是谁？”新来的人问圣彼得。",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [
+        "Who"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "“Who is that?” ",
+          "speaker_role": "new_arrival",
+          "actor_id": "12",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "exaggeration": 0.6,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 85,
+          "audio_path": "./audio/2002/c-text1/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s09-02",
+          "text": "the new arrival asked St. Peter.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "exaggeration": 0.6,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text1/s09-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 2,
+      "en": "“Oh, that’s God,” came the reply, “but sometimes he thinks he’s a doctor.”",
+      "zh": "“哦，那是上帝，”圣彼得回答，“不过，他有时以为自己是个医生。”",
+      "vocab": [],
+      "discourse_function": "irony",
+      "prosody_focus": [
+        "God",
+        "but",
+        "a doctor"
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": "The God/doctor reversal is the explicit punchline",
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "“Oh, that’s God,” ",
+          "speaker_role": "st_peter",
+          "actor_id": "13",
+          "emotion": "ironic",
+          "intensity": 2,
+          "rate": 0.97,
+          "exaggeration": 0.65,
+          "cfg_weight": 0.39,
+          "pause_before_ms": 0,
+          "pause_after_ms": 180,
+          "audio_path": "./audio/2002/c-text1/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s10-02",
+          "text": "came the reply, ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 2,
+          "rate": 0.97,
+          "exaggeration": 0.5,
+          "cfg_weight": 0.39,
+          "pause_before_ms": 0,
+          "pause_after_ms": 180,
+          "audio_path": "./audio/2002/c-text1/s10-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s10-03",
+          "text": "“but sometimes he thinks he’s a doctor.”",
+          "speaker_role": "st_peter",
+          "actor_id": "13",
+          "emotion": "ironic",
+          "intensity": 2,
+          "rate": 0.97,
+          "exaggeration": 0.65,
+          "cfg_weight": 0.39,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text1/s10-03.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 3,
+      "en": "If you are part of the group which you are addressing, you will be in a position to know the experiences and problems which are common to all of you and it’ll be appropriate for you to make a passing remark about the inedible canteen food or the chairman’s notorious bad taste in ties.",
+      "zh": "如果你本就是听众中的一员，你自然了解大家共有的经历和问题；这时，顺口调侃一下食堂难以下咽的饭菜，或是那位会长挑领带时出了名的糟糕品味，就很合适。",
+      "vocab": [
+        {
+          "word": "inedible",
+          "lemma": "inedible",
+          "level": 7,
+          "meaning": "难以下咽的",
+          "start": 217,
+          "end": 225
+        },
+        {
+          "word": "canteen",
+          "lemma": "canteen",
+          "level": 6,
+          "meaning": "食堂",
+          "start": 226,
+          "end": 233
+        },
+        {
+          "word": "notorious",
+          "lemma": "notorious",
+          "level": 7,
+          "meaning": "声名狼藉的",
+          "start": 257,
+          "end": 266
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "part of the group",
+        "appropriate",
+        "passing remark"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "If you are part of the group which you are addressing, ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "exaggeration": 0.52,
+          "cfg_weight": 0.46,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2002/c-text1/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s11-02",
+          "text": "you will be in a position to know the experiences and problems which are common to all of you ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "exaggeration": 0.52,
+          "cfg_weight": 0.46,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2002/c-text1/s11-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s11-03",
+          "text": "and it’ll be appropriate for you to make a passing remark about the inedible canteen food or the chairman’s notorious bad taste in ties.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.555,
+          "cfg_weight": 0.46,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text1/s11-03.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 3,
+      "en": "With other audiences you mustn’t attempt to cut in with humor as they will resent an outsider making disparaging remarks about their canteen or their chairman.",
+      "zh": "可面对其他群体的听众，就不要贸然拿这些事开玩笑，因为他们会反感一个外人对自己的食堂或会长说三道四。",
+      "vocab": [
+        {
+          "word": "resent",
+          "lemma": "resent",
+          "level": 6,
+          "meaning": "反感；怨恨",
+          "start": 75,
+          "end": 81
+        },
+        {
+          "word": "disparaging",
+          "lemma": "disparaging",
+          "level": 8,
+          "meaning": "贬损的",
+          "start": 101,
+          "end": 112
+        },
+        {
+          "word": "canteen",
+          "lemma": "canteen",
+          "level": 6,
+          "meaning": "食堂",
+          "start": 133,
+          "end": 140
+        }
+      ],
+      "discourse_function": "warning",
+      "prosody_focus": [
+        "mustn’t",
+        "an outsider",
+        "resent"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "With other audiences you mustn’t attempt to cut in with humor ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "exaggeration": 0.57,
+          "cfg_weight": 0.45,
+          "pause_before_ms": 0,
+          "pause_after_ms": 105,
+          "audio_path": "./audio/2002/c-text1/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s12-02",
+          "text": "as they will resent an outsider making disparaging remarks about their canteen or their chairman.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "exaggeration": 0.57,
+          "cfg_weight": 0.45,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text1/s12-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 3,
+      "en": "You will be on safer ground if you stick to scapegoats like the Post Office or the telephone system.",
+      "zh": "把调侃对象限定在邮局、电话系统这类常被拿来出气的机构上，就稳妥多了。",
+      "vocab": [
+        {
+          "word": "scapegoats",
+          "lemma": "scapegoat",
+          "level": 8,
+          "meaning": "替罪羊；出气对象",
+          "start": 44,
+          "end": 54
+        }
+      ],
+      "discourse_function": "resolve",
+      "prosody_focus": [
+        "safer ground",
+        "scapegoats"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "You will be on safer ground if you stick to scapegoats like the Post Office or the telephone system.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.0,
+          "exaggeration": 0.55,
+          "cfg_weight": 0.46,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text1/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 4,
+      "en": "If you feel awkward being humorous, you must practice so that it becomes more natural.",
+      "zh": "如果你讲起幽默来觉得别扭，就必须练习，让它逐渐变得自然。",
+      "vocab": [
+        {
+          "word": "awkward",
+          "lemma": "awkward",
+          "level": 6,
+          "meaning": "别扭的；尴尬的",
+          "start": 12,
+          "end": 19
+        }
+      ],
+      "discourse_function": "encourage",
+      "prosody_focus": [
+        "practice",
+        "more natural"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "If you feel awkward being humorous, you must practice so that it becomes more natural.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.0,
+          "exaggeration": 0.57,
+          "cfg_weight": 0.44,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text1/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 4,
+      "en": "Include a few casual and apparently off-the-cuff remarks which you can deliver in a relaxed and unforced manner.",
+      "zh": "可以穿插几句随意、听来像是即兴想到的话，用轻松、不做作的方式说出来。",
+      "vocab": [
+        {
+          "word": "off-the-cuff",
+          "lemma": "off-the-cuff",
+          "level": 8,
+          "meaning": "即兴的",
+          "start": 36,
+          "end": 48
+        },
+        {
+          "word": "unforced",
+          "lemma": "unforced",
+          "level": 7,
+          "meaning": "不做作的",
+          "start": 96,
+          "end": 104
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "off-the-cuff",
+        "relaxed and unforced"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "Include a few casual and apparently off-the-cuff remarks ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "exaggeration": 0.52,
+          "cfg_weight": 0.46,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2002/c-text1/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s15-02",
+          "text": "which you can deliver in a relaxed and unforced manner.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.555,
+          "cfg_weight": 0.46,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text1/s15-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 4,
+      "en": "Often it’s the delivery which causes the audience to smile, so speak slowly and remember that a raised eyebrow or an unbelieving look may help to show that you are making a light-hearted remark.",
+      "zh": "逗笑听众的，往往是表达方式。因此，讲话不妨从容些；还要记住，挑一挑眉，或露出不敢相信的神情，都能帮助听众明白：你是在轻松地开个玩笑。",
+      "vocab": [
+        {
+          "word": "delivery",
+          "lemma": "delivery",
+          "level": 6,
+          "meaning": "表达方式",
+          "start": 15,
+          "end": 23
+        },
+        {
+          "word": "light-hearted",
+          "lemma": "light-hearted",
+          "level": 7,
+          "meaning": "轻松愉快的",
+          "start": 173,
+          "end": 186
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "the delivery",
+        "a raised eyebrow",
+        "light-hearted"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "Often it’s the delivery which causes the audience to smile, ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "exaggeration": 0.6,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 90,
+          "audio_path": "./audio/2002/c-text1/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s16-02",
+          "text": "so speak slowly and remember that a raised eyebrow or an unbelieving look may help to show that you are making a light-hearted remark.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "exaggeration": 0.6,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text1/s16-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 5,
+      "en": "Look for the humor.",
+      "zh": "去发现幽默。",
+      "vocab": [],
+      "discourse_function": "encourage",
+      "prosody_focus": [
+        "Look"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "Look for the humor.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.0,
+          "exaggeration": 0.57,
+          "cfg_weight": 0.44,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text1/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 5,
+      "en": "It often comes from the unexpected.",
+      "zh": "幽默往往来自出人意料之处。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "unexpected"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "It often comes from the unexpected.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "exaggeration": 0.52,
+          "cfg_weight": 0.46,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text1/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 5,
+      "en": "A twist on a familiar quote “If at first you don’t succeed, give up” or a play on words or on a situation.",
+      "zh": "比如，把熟悉的名言稍作改动，变成“如果一开始没成功，那就放弃吧”；或者玩个文字游戏，或者借某种情境开个玩笑。",
+      "vocab": [],
+      "discourse_function": "playful",
+      "prosody_focus": [
+        "give up",
+        "play on words"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "A twist on a familiar quote “If at first you don’t succeed, give up” ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "exaggeration": 0.62,
+          "cfg_weight": 0.41,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2002/c-text1/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s19-02",
+          "text": "or a play on words or on a situation.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "exaggeration": 0.62,
+          "cfg_weight": 0.41,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text1/s19-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "paragraph": 5,
+      "en": "Search for exaggeration and understatements.",
+      "zh": "找找可以夸张或轻描淡写的地方。",
+      "vocab": [
+        {
+          "word": "exaggeration",
+          "lemma": "exaggeration",
+          "level": 7,
+          "meaning": "夸张",
+          "start": 11,
+          "end": 23
+        },
+        {
+          "word": "understatements",
+          "lemma": "understatement",
+          "level": 7,
+          "meaning": "轻描淡写",
+          "start": 28,
+          "end": 43
+        }
+      ],
+      "discourse_function": "compare",
+      "prosody_focus": [
+        "exaggeration",
+        "understatements"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s20-01",
+          "text": "Search for exaggeration and understatements.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.57,
+          "cfg_weight": 0.44,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text1/s20-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "paragraph": 5,
+      "en": "Look at your talk and pick out a few words or sentences which you can turn about and inject with humor.",
+      "zh": "看看你的讲话内容，挑出几个词或几句话，稍加变化，为它们注入幽默。",
+      "vocab": [
+        {
+          "word": "inject",
+          "lemma": "inject",
+          "level": 6,
+          "meaning": "注入",
+          "start": 85,
+          "end": 91
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "turn about",
+        "inject with humor"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s21-01",
+          "text": "Look at your talk and pick out a few words or sentences which you can turn about and inject with humor.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "exaggeration": 0.56,
+          "cfg_weight": 0.46,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text1/s21-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

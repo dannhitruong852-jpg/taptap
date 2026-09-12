@@ -1,0 +1,774 @@
+{
+  "year": 2002,
+  "section_type": "cloze",
+  "article_id": "cloze",
+  "source_sha256": "55fb0335e629fa71d71d5220af1215345ef3cf2cc23344adc44d0373f64aaa47",
+  "source_pages": [
+    1,
+    2
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "05",
+  "article_context": "把印刷、报纸与电子传播放回历史进程中理解。先铺陈时间线，再突出计算机带来的变化；复杂处自然稍缓，不采用教学慢速。完型已依据可追溯答案还原，选项不进入阅读页面。",
+  "article": {
+    "year": 2002,
+    "section": "cloze",
+    "title": "完型 · 传播技术的演变",
+    "background": "把印刷、报纸与电子传播放回历史进程中理解。先铺陈时间线，再突出计算机带来的变化；复杂处自然稍缓，不采用教学慢速。完型已依据可追溯答案还原，选项不进入阅读页面。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "reference_pack_status": "three licensed pilot voices; not the full 15-actor pack",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "Comparisons were drawn between the development of television in the 20th century and the diffusion of printing in the 15th and 16th centuries.",
+      "zh": "人们曾把20世纪电视的发展与15、16世纪印刷术的传播相比较。",
+      "vocab": [
+        {
+          "word": "diffusion",
+          "lemma": "diffusion",
+          "level": 7,
+          "meaning": "传播；扩散",
+          "start": 89,
+          "end": 98
+        }
+      ],
+      "discourse_function": "compare",
+      "prosody_focus": [
+        "development of television",
+        "diffusion of printing"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "Comparisons were drawn between the development of television in the 20th century ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.57,
+          "cfg_weight": 0.44,
+          "pause_before_ms": 0,
+          "pause_after_ms": 95,
+          "audio_path": "./audio/2002/c-cloze/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s01-02",
+          "text": "and the diffusion of printing in the 15th and 16th centuries.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "exaggeration": 0.605,
+          "cfg_weight": 0.44,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-cloze/s01-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Yet much had happened between.",
+      "zh": "然而，在这两者之间的漫长岁月里，还发生了许多事情。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "Yet",
+        "between"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Yet much had happened between.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.61,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-cloze/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "As was discussed before, it was not until the 19th century that the newspaper became the dominant pre-electronic medium, following in the wake of the pamphlet and the book and in the company of the periodical.",
+      "zh": "如前所述，直到19世纪，报纸才成为电子传播时代到来之前的主导媒介；它继小册子和书籍之后兴起，并与期刊相伴发展。",
+      "vocab": [
+        {
+          "word": "dominant",
+          "lemma": "dominant",
+          "level": 6,
+          "meaning": "占主导地位的",
+          "start": 89,
+          "end": 97
+        },
+        {
+          "word": "pre-electronic",
+          "lemma": "pre-electronic",
+          "level": 7,
+          "meaning": "电子时代之前的",
+          "start": 98,
+          "end": 112
+        },
+        {
+          "word": "medium",
+          "lemma": "medium",
+          "level": 6,
+          "meaning": "媒介",
+          "start": 113,
+          "end": 119
+        },
+        {
+          "word": "pamphlet",
+          "lemma": "pamphlet",
+          "level": 7,
+          "meaning": "小册子",
+          "start": 150,
+          "end": 158
+        },
+        {
+          "word": "periodical",
+          "lemma": "periodical",
+          "level": 7,
+          "meaning": "期刊",
+          "start": 198,
+          "end": 208
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "not until the 19th century",
+        "dominant pre-electronic medium"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "As was discussed before, it was not until the 19th century that the newspaper became the dominant pre-electronic medium, ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "exaggeration": 0.52,
+          "cfg_weight": 0.46,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2002/c-cloze/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s03-02",
+          "text": "following in the wake of the pamphlet and the book and in the company of the periodical.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.555,
+          "cfg_weight": 0.46,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-cloze/s03-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 1,
+      "en": "It was during the same time that the communications revolution speeded up, beginning with transport, the railway, and leading on through the telegraph, the telephone, radio, and motion pictures into the 20th-century world of the motor car and the air plane.",
+      "zh": "也正是在这一时期，传播革命加快了步伐：从交通运输、铁路开始，继而经过电报、电话、广播和电影，一路迈入以汽车和飞机为标志的20世纪。",
+      "vocab": [
+        {
+          "word": "telegraph",
+          "lemma": "telegraph",
+          "level": 6,
+          "meaning": "电报",
+          "start": 141,
+          "end": 150
+        }
+      ],
+      "discourse_function": "sequence",
+      "prosody_focus": [
+        "speeded up",
+        "beginning",
+        "leading on",
+        "into"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "It was during the same time that the communications revolution speeded up, ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "exaggeration": 0.55,
+          "cfg_weight": 0.45,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2002/c-cloze/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s04-02",
+          "text": "beginning with transport, the railway, and leading on through the telegraph, the telephone, radio, and motion pictures ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "exaggeration": 0.55,
+          "cfg_weight": 0.45,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2002/c-cloze/s04-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s04-03",
+          "text": "into the 20th-century world of the motor car and the air plane.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "exaggeration": 0.55,
+          "cfg_weight": 0.45,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-cloze/s04-03.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 1,
+      "en": "Not everyone sees that process in perspective.",
+      "zh": "并不是每个人都能从历史全局来看待这一进程。",
+      "vocab": [
+        {
+          "word": "perspective",
+          "lemma": "perspective",
+          "level": 6,
+          "meaning": "全局视角",
+          "start": 34,
+          "end": 45
+        }
+      ],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "Not everyone",
+        "in perspective"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Not everyone sees that process in perspective.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "exaggeration": 0.5,
+          "cfg_weight": 0.47,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-cloze/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 1,
+      "en": "It is important to do so.",
+      "zh": "而这样看待它，十分重要。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "important"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "It is important to do so.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "exaggeration": 0.6,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-cloze/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "It is generally recognized, however, that the introduction of the computer in the early 20th century, followed by the invention of the integrated circuit during the 1960s, radically changed the process, although its impact on the media was not immediately apparent.",
+      "zh": "不过，人们普遍认为，20世纪初计算机的问世，以及随后在20世纪60年代集成电路的发明，彻底改变了这一进程，尽管它对传媒的影响并未立即显现。",
+      "vocab": [
+        {
+          "word": "integrated",
+          "lemma": "integrated",
+          "level": 6,
+          "meaning": "集成的；整合的",
+          "start": 135,
+          "end": 145
+        },
+        {
+          "word": "circuit",
+          "lemma": "circuit",
+          "level": 6,
+          "meaning": "电路",
+          "start": 146,
+          "end": 153
+        },
+        {
+          "word": "radically",
+          "lemma": "radically",
+          "level": 6,
+          "meaning": "根本地；彻底地",
+          "start": 172,
+          "end": 181
+        },
+        {
+          "word": "apparent",
+          "lemma": "apparent",
+          "level": 6,
+          "meaning": "显而易见的",
+          "start": 256,
+          "end": 264
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "however",
+        "radically changed",
+        "not immediately apparent"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "It is generally recognized, however, that the introduction of the computer in the early 20th century, ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.61,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2002/c-cloze/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s07-02",
+          "text": "followed by the invention of the integrated circuit during the 1960s, radically changed the process, ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.61,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2002/c-cloze/s07-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s07-03",
+          "text": "although its impact on the media was not immediately apparent.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.96,
+          "exaggeration": 0.645,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-cloze/s07-03.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 2,
+      "en": "As time went by, computers became smaller and more powerful, and they became “personal” too, as well as institutional, with display becoming sharper and storage capacity increasing.",
+      "zh": "随着时间推移，计算机体积越来越小，功能越来越强；除了供机构使用之外，也开始为个人所用，同时显示更清晰，存储容量也不断增大。",
+      "vocab": [
+        {
+          "word": "institutional",
+          "lemma": "institutional",
+          "level": 7,
+          "meaning": "机构使用的；制度性的",
+          "start": 104,
+          "end": 117
+        },
+        {
+          "word": "capacity",
+          "lemma": "capacity",
+          "level": 6,
+          "meaning": "容量",
+          "start": 161,
+          "end": 169
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": [
+        "smaller and more powerful",
+        "personal",
+        "institutional"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "As time went by, computers became smaller and more powerful, ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "exaggeration": 0.55,
+          "cfg_weight": 0.45,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2002/c-cloze/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s08-02",
+          "text": "and they became “personal” too, as well as institutional, ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "exaggeration": 0.55,
+          "cfg_weight": 0.45,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2002/c-cloze/s08-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s08-03",
+          "text": "with display becoming sharper and storage capacity increasing.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "exaggeration": 0.55,
+          "cfg_weight": 0.45,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-cloze/s08-03.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 2,
+      "en": "They were thought of, like people, in terms of generations, with the distance between generations much smaller.",
+      "zh": "人们像划分人的世代一样，把计算机也划分为一代又一代，只不过两代之间的时间间隔要短得多。",
+      "vocab": [],
+      "discourse_function": "compare",
+      "prosody_focus": [
+        "generations",
+        "much smaller"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "They were thought of, like people, in terms of generations, ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.57,
+          "cfg_weight": 0.44,
+          "pause_before_ms": 0,
+          "pause_after_ms": 95,
+          "audio_path": "./audio/2002/c-cloze/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s09-02",
+          "text": "with the distance between generations much smaller.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "exaggeration": 0.605,
+          "cfg_weight": 0.44,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-cloze/s09-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 3,
+      "en": "It was within the computer age that the term “information society” began to be widely used to describe the context within which we now live.",
+      "zh": "正是在计算机时代，“信息社会”这一术语开始被广泛用来描述我们如今所处的环境。",
+      "vocab": [
+        {
+          "word": "context",
+          "lemma": "context",
+          "level": 6,
+          "meaning": "背景；环境",
+          "start": 107,
+          "end": 114
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "information society",
+        "context"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "It was within the computer age that the term “information society” began to be widely used ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "exaggeration": 0.52,
+          "cfg_weight": 0.46,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2002/c-cloze/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s10-02",
+          "text": "to describe the context within which we now live.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.555,
+          "cfg_weight": 0.46,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-cloze/s10-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 3,
+      "en": "The communications revolution has influenced both work and leisure and how we think and feel both about place and time, but there have been controversial views about its economic, political, social and cultural implications.",
+      "zh": "传播革命不仅影响了工作与休闲，也影响了我们对空间和时间的思考与感受；但对于它在经济、政治、社会和文化上的影响，人们一直存在争议。",
+      "vocab": [
+        {
+          "word": "controversial",
+          "lemma": "controversial",
+          "level": 7,
+          "meaning": "有争议的",
+          "start": 140,
+          "end": 153
+        },
+        {
+          "word": "implications",
+          "lemma": "implication",
+          "level": 6,
+          "meaning": "影响；含义",
+          "start": 211,
+          "end": 223
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "both work and leisure",
+        "but",
+        "controversial views"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "The communications revolution has influenced both work and leisure and how we think and feel both about place and time, ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.61,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2002/c-cloze/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s11-02",
+          "text": "but there have been controversial views about its economic, political, social and cultural implications.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.96,
+          "exaggeration": 0.645,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-cloze/s11-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 3,
+      "en": "“Benefits” have been weighed against “harmful” outcomes.",
+      "zh": "人们不断权衡它带来的“益处”与“有害”后果。",
+      "vocab": [],
+      "discourse_function": "compare",
+      "prosody_focus": [
+        "Benefits",
+        "harmful"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "“Benefits” have been weighed against “harmful” outcomes.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.57,
+          "cfg_weight": 0.44,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-cloze/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 3,
+      "en": "And generalizations have proved difficult.",
+      "zh": "而事实证明，要作出概括性的结论并不容易。",
+      "vocab": [
+        {
+          "word": "generalizations",
+          "lemma": "generalization",
+          "level": 7,
+          "meaning": "概括；概论",
+          "start": 4,
+          "end": 19
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "generalizations",
+        "difficult"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "And generalizations have proved difficult.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "exaggeration": 0.56,
+          "cfg_weight": 0.46,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-cloze/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

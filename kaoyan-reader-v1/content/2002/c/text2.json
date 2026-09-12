@@ -1,0 +1,1029 @@
+{
+  "year": 2002,
+  "section_type": "reading",
+  "article_id": "text2",
+  "source_sha256": "55fb0335e629fa71d71d5220af1215345ef3cf2cc23344adc44d0373f64aaa47",
+  "source_pages": [
+    5
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "05",
+  "article_context": "从熟悉的机器讲到真正智能的难点。列举能力时轻快自然，转入常识、感知与筛选信息时突出逻辑反差；NASA引语由12号承担，主讲人保持05号。",
+  "article": {
+    "year": 2002,
+    "section": "text2",
+    "title": "阅读二 · 机器人与人的感知",
+    "background": "从熟悉的机器讲到真正智能的难点。列举能力时轻快自然，转入常识、感知与筛选信息时突出逻辑反差；NASA引语由12号承担，主讲人保持05号。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "reference_pack_status": "three licensed pilot voices; not the full 15-actor pack",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "Since the dawn of human ingenuity, people have devised ever more cunning tools to cope with work that is dangerous, boring, burdensome, or just plain nasty.",
+      "zh": "自人类开始展现创造才智以来，人们便不断设计出更巧妙的工具，去应对危险、枯燥、繁重，或纯粹令人厌恶的工作。",
+      "vocab": [
+        {
+          "word": "ingenuity",
+          "lemma": "ingenuity",
+          "level": 8,
+          "meaning": "创造才智",
+          "start": 24,
+          "end": 33
+        },
+        {
+          "word": "devised",
+          "lemma": "devise",
+          "level": 6,
+          "meaning": "设计；想出",
+          "start": 47,
+          "end": 54
+        },
+        {
+          "word": "cunning",
+          "lemma": "cunning",
+          "level": 7,
+          "meaning": "巧妙的；狡猾的",
+          "start": 65,
+          "end": 72
+        },
+        {
+          "word": "burdensome",
+          "lemma": "burdensome",
+          "level": 7,
+          "meaning": "繁重的",
+          "start": 124,
+          "end": 134
+        }
+      ],
+      "discourse_function": "story",
+      "prosody_focus": [
+        "ever more cunning tools",
+        "dangerous, boring, burdensome"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "Since the dawn of human ingenuity, people have devised ever more cunning tools ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "exaggeration": 0.56,
+          "cfg_weight": 0.44,
+          "pause_before_ms": 0,
+          "pause_after_ms": 75,
+          "audio_path": "./audio/2002/c-text2/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s01-02",
+          "text": "to cope with work that is dangerous, boring, burdensome, or just plain nasty.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "exaggeration": 0.56,
+          "cfg_weight": 0.44,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text2/s01-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "That compulsion has resulted in robotics—the science of conferring various human capabilities on machines.",
+      "zh": "正是这种强烈的需求催生了机器人学——一门将人的各种能力赋予机器的科学。",
+      "vocab": [
+        {
+          "word": "compulsion",
+          "lemma": "compulsion",
+          "level": 8,
+          "meaning": "强烈冲动；迫切需要",
+          "start": 5,
+          "end": 15
+        },
+        {
+          "word": "robotics",
+          "lemma": "robotics",
+          "level": 7,
+          "meaning": "机器人学",
+          "start": 32,
+          "end": 40
+        },
+        {
+          "word": "conferring",
+          "lemma": "confer",
+          "level": 7,
+          "meaning": "赋予",
+          "start": 56,
+          "end": 66
+        },
+        {
+          "word": "capabilities",
+          "lemma": "capability",
+          "level": 6,
+          "meaning": "能力",
+          "start": 81,
+          "end": 93
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "robotics",
+        "human capabilities"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "That compulsion has resulted in robotics—the science of conferring various human capabilities on machines.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "exaggeration": 0.52,
+          "cfg_weight": 0.46,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text2/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "And if scientists have yet to create the mechanical version of science fiction, they have begun to come close.",
+      "zh": "虽然科学家还没有造出科幻作品中那样的机器，但他们已经开始接近这一目标。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "have yet to",
+        "come close"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "And if scientists have yet to create the mechanical version of science fiction, ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "exaggeration": 0.5,
+          "cfg_weight": 0.47,
+          "pause_before_ms": 0,
+          "pause_after_ms": 85,
+          "audio_path": "./audio/2002/c-text2/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s03-02",
+          "text": "they have begun to come close.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.95,
+          "exaggeration": 0.535,
+          "cfg_weight": 0.47,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text2/s03-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "As a result, the modern world is increasingly populated by intelligent gizmos whose presence we barely notice but whose universal existence has removed much human labor.",
+      "zh": "于是，现代世界里智能装置越来越多。我们几乎察觉不到它们的存在，但它们无处不在，已替人类省去了大量劳动。",
+      "vocab": [
+        {
+          "word": "gizmos",
+          "lemma": "gizmo",
+          "level": 8,
+          "meaning": "小装置",
+          "start": 71,
+          "end": 77
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "barely notice",
+        "removed much human labor"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "As a result, the modern world is increasingly populated by intelligent gizmos ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.61,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2002/c-text2/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s04-02",
+          "text": "whose presence we barely notice but whose universal existence has removed much human labor.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.96,
+          "exaggeration": 0.645,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text2/s04-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "Our factories hum to the rhythm of robot assembly arms.",
+      "zh": "在工厂里，机器装配臂有节奏地运转，发出阵阵嗡鸣。",
+      "vocab": [
+        {
+          "word": "assembly",
+          "lemma": "assembly",
+          "level": 6,
+          "meaning": "装配",
+          "start": 41,
+          "end": 49
+        }
+      ],
+      "discourse_function": "example",
+      "prosody_focus": [
+        "robot assembly arms"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Our factories hum to the rhythm of robot assembly arms.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "exaggeration": 0.5,
+          "cfg_weight": 0.47,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text2/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "Our banking is done at automated teller terminals that thank us with mechanical politeness for the transaction.",
+      "zh": "我们在自动柜员机上办理银行业务，交易结束后，机器还会机械而礼貌地向我们道谢。",
+      "vocab": [
+        {
+          "word": "automated",
+          "lemma": "automated",
+          "level": 7,
+          "meaning": "自动化的",
+          "start": 23,
+          "end": 32
+        },
+        {
+          "word": "transaction",
+          "lemma": "transaction",
+          "level": 6,
+          "meaning": "交易",
+          "start": 99,
+          "end": 110
+        }
+      ],
+      "discourse_function": "example",
+      "prosody_focus": [
+        "automated teller terminals",
+        "mechanical politeness"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "Our banking is done at automated teller terminals that thank us with mechanical politeness for the transaction.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "exaggeration": 0.59,
+          "cfg_weight": 0.47,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text2/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "Our subway trains are controlled by tireless robot-drivers.",
+      "zh": "我们的地铁列车由不知疲倦的机器人司机控制。",
+      "vocab": [],
+      "discourse_function": "example",
+      "prosody_focus": [
+        "tireless robot-drivers"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "Our subway trains are controlled by tireless robot-drivers.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "exaggeration": 0.5,
+          "cfg_weight": 0.47,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text2/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 2,
+      "en": "And thanks to the continual miniaturization of electronics and micro-mechanics, there are already robot systems that can perform some kinds of brain and bone surgery with submillimeter accuracy—far greater precision than highly skilled physicians can achieve with their hands alone.",
+      "zh": "而且，由于电子设备和微机械不断小型化，如今已有机器人系统能以亚毫米级的精度实施某些脑部和骨科手术——这远非技艺高超的医生单凭双手所能达到。",
+      "vocab": [
+        {
+          "word": "miniaturization",
+          "lemma": "miniaturization",
+          "level": 9,
+          "meaning": "小型化",
+          "start": 28,
+          "end": 43
+        },
+        {
+          "word": "micro-mechanics",
+          "lemma": "micro-mechanics",
+          "level": 9,
+          "meaning": "微机械",
+          "start": 63,
+          "end": 78
+        },
+        {
+          "word": "submillimeter",
+          "lemma": "submillimeter",
+          "level": 9,
+          "meaning": "亚毫米级的",
+          "start": 171,
+          "end": 184
+        },
+        {
+          "word": "precision",
+          "lemma": "precision",
+          "level": 6,
+          "meaning": "精度",
+          "start": 206,
+          "end": 215
+        },
+        {
+          "word": "physicians",
+          "lemma": "physician",
+          "level": 6,
+          "meaning": "医生",
+          "start": 236,
+          "end": 246
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "submillimeter accuracy",
+        "far greater precision"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "And thanks to the continual miniaturization of electronics and micro-mechanics, ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "exaggeration": 0.6,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 90,
+          "audio_path": "./audio/2002/c-text2/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s08-02",
+          "text": "there are already robot systems that can perform some kinds of brain and bone surgery with submillimeter accuracy—",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "exaggeration": 0.6,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 90,
+          "audio_path": "./audio/2002/c-text2/s08-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s08-03",
+          "text": "far greater precision than highly skilled physicians can achieve with their hands alone.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "exaggeration": 0.6,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text2/s08-03.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 3,
+      "en": "But if robots are to reach the next stage of laborsaving utility, they will have to operate with less human supervision and be able to make at least a few decisions for themselves—goals that pose a real challenge.",
+      "zh": "但是，机器人若要在节省人力方面更进一步，就必须在更少的人为监督下工作，并至少能够自主作出一些决定——这些目标构成了真正的挑战。",
+      "vocab": [
+        {
+          "word": "laborsaving",
+          "lemma": "laborsaving",
+          "level": 7,
+          "meaning": "节省人力的",
+          "start": 45,
+          "end": 56
+        },
+        {
+          "word": "supervision",
+          "lemma": "supervision",
+          "level": 6,
+          "meaning": "监督",
+          "start": 108,
+          "end": 119
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "less human supervision",
+        "for themselves",
+        "real challenge"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "But if robots are to reach the next stage of laborsaving utility, ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.61,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2002/c-text2/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s09-02",
+          "text": "they will have to operate with less human supervision and be able to make at least a few decisions for themselves—",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.61,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2002/c-text2/s09-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s09-03",
+          "text": "goals that pose a real challenge.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.96,
+          "exaggeration": 0.645,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text2/s09-03.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 3,
+      "en": "“While we know how to tell a robot to handle a specific error,” says Dave Lavery, manager of a robotics program at NASA, “we can't yet give a robot enough ‘common sense’ to reliably interact with a dynamic world.”",
+      "zh": "美国国家航空航天局一个机器人项目的负责人戴夫·拉弗里说：“尽管我们知道如何指示机器人处理某个特定错误，却还无法赋予它足够的‘常识’，让它可靠地应对不断变化的世界。”",
+      "vocab": [
+        {
+          "word": "robotics",
+          "lemma": "robotics",
+          "level": 7,
+          "meaning": "机器人学",
+          "start": 95,
+          "end": 103
+        },
+        {
+          "word": "interact",
+          "lemma": "interact",
+          "level": 6,
+          "meaning": "相互作用；互动",
+          "start": 182,
+          "end": 190
+        },
+        {
+          "word": "dynamic",
+          "lemma": "dynamic",
+          "level": 6,
+          "meaning": "不断变化的；动态的",
+          "start": 198,
+          "end": 205
+        }
+      ],
+      "discourse_function": "dialogue",
+      "prosody_focus": [
+        "a specific error",
+        "can't yet",
+        "common sense"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "“While we know how to tell a robot to handle a specific error,” ",
+          "speaker_role": "dave_lavery",
+          "actor_id": "12",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "exaggeration": 0.6,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 85,
+          "audio_path": "./audio/2002/c-text2/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s10-02",
+          "text": "says Dave Lavery, manager of a robotics program at NASA, ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "exaggeration": 0.6,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 85,
+          "audio_path": "./audio/2002/c-text2/s10-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s10-03",
+          "text": "“we can't yet give a robot enough ‘common sense’ to reliably interact with a dynamic world.”",
+          "speaker_role": "dave_lavery",
+          "actor_id": "12",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "exaggeration": 0.6,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text2/s10-03.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 4,
+      "en": "Indeed the quest for true artificial intelligence has produced very mixed results.",
+      "zh": "的确，对真正人工智能的探索，取得的结果一直有喜有忧。",
+      "vocab": [
+        {
+          "word": "quest",
+          "lemma": "quest",
+          "level": 7,
+          "meaning": "探索；追求",
+          "start": 11,
+          "end": 16
+        },
+        {
+          "word": "artificial",
+          "lemma": "artificial",
+          "level": 6,
+          "meaning": "人造的",
+          "start": 26,
+          "end": 36
+        }
+      ],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "true artificial intelligence",
+        "very mixed results"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "Indeed the quest for true artificial intelligence has produced very mixed results.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "exaggeration": 0.5,
+          "cfg_weight": 0.47,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text2/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 4,
+      "en": "Despite a spell of initial optimism in the 1960s and 1970s when it appeared that transistor circuits and microprocessors might be able to copy the action of the human brain by the year 2010, researchers lately have begun to extend that forecast by decades if not centuries.",
+      "zh": "20世纪60年代和70年代，研究者起初曾一度乐观，认为到2010年，晶体管电路和微处理器或许就能模拟人脑的活动；但近来，他们已开始把这一预期向后推迟几十年，甚至几百年。",
+      "vocab": [
+        {
+          "word": "transistor",
+          "lemma": "transistor",
+          "level": 8,
+          "meaning": "晶体管",
+          "start": 81,
+          "end": 91
+        },
+        {
+          "word": "microprocessors",
+          "lemma": "microprocessor",
+          "level": 8,
+          "meaning": "微处理器",
+          "start": 105,
+          "end": 120
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "initial optimism",
+        "by decades if not centuries"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "Despite a spell of initial optimism in the 1960s and 1970s ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.61,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2002/c-text2/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s12-02",
+          "text": "when it appeared that transistor circuits and microprocessors might be able to copy the action of the human brain by the year 2010, ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.61,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2002/c-text2/s12-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s12-03",
+          "text": "researchers lately have begun to extend that forecast by decades if not centuries.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.96,
+          "exaggeration": 0.645,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text2/s12-03.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 5,
+      "en": "What they found, in attempting to model thought, is that the human brain's roughly one hundred billion nerve cells are much more talented—and human perception far more complicated—than previously imagined.",
+      "zh": "研究者在尝试模拟思维时发现，人脑中约一千亿个神经细胞的能力远比先前想象的强大，而人的感知也远比先前想象的复杂。",
+      "vocab": [
+        {
+          "word": "perception",
+          "lemma": "perception",
+          "level": 6,
+          "meaning": "感知",
+          "start": 148,
+          "end": 158
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "much more talented",
+        "far more complicated"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "What they found, in attempting to model thought, is that the human brain's roughly one hundred billion nerve cells are much more talented—",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "exaggeration": 0.6,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 90,
+          "audio_path": "./audio/2002/c-text2/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s13-02",
+          "text": "and human perception far more complicated—than previously imagined.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "exaggeration": 0.6,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text2/s13-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 5,
+      "en": "They have built robots that can recognize the error of a machine panel by a fraction of a millimeter in a controlled factory environment.",
+      "zh": "他们已经造出机器人，能够在受控的工厂环境中识别机器面板上不足一毫米的误差。",
+      "vocab": [],
+      "discourse_function": "example",
+      "prosody_focus": [
+        "a fraction of a millimeter",
+        "controlled factory environment"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "They have built robots that can recognize the error of a machine panel by a fraction of a millimeter in a controlled factory environment.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "exaggeration": 0.5,
+          "cfg_weight": 0.47,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text2/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 5,
+      "en": "But the human mind can glimpse a rapidly changing scene and immediately disregard the 98 percent that is irrelevant, instantaneously focusing on the monkey at the side of a winding forest road or the single suspicious face in a big crowd.",
+      "zh": "而人只需瞥一眼迅速变化的场景，就能立即忽略其中98%的无关信息，瞬间将注意力集中到蜿蜒林间小路旁的猴子，或茫茫人群中那一张可疑的面孔上。",
+      "vocab": [
+        {
+          "word": "disregard",
+          "lemma": "disregard",
+          "level": 6,
+          "meaning": "忽略",
+          "start": 72,
+          "end": 81
+        },
+        {
+          "word": "irrelevant",
+          "lemma": "irrelevant",
+          "level": 6,
+          "meaning": "无关的",
+          "start": 105,
+          "end": 115
+        },
+        {
+          "word": "instantaneously",
+          "lemma": "instantaneously",
+          "level": 8,
+          "meaning": "瞬间地",
+          "start": 117,
+          "end": 132
+        },
+        {
+          "word": "suspicious",
+          "lemma": "suspicious",
+          "level": 6,
+          "meaning": "可疑的",
+          "start": 207,
+          "end": 217
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "98 percent that is irrelevant",
+        "instantaneously focusing"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "But the human mind can glimpse a rapidly changing scene and immediately disregard the 98 percent that is irrelevant, ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.61,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2002/c-text2/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s15-02",
+          "text": "instantaneously focusing on the monkey at the side of a winding forest road or the single suspicious face in a big crowd.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.96,
+          "exaggeration": 0.645,
+          "cfg_weight": 0.43,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text2/s15-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 5,
+      "en": "The most advanced computer systems on Earth can't approach that kind of ability, and neuroscientists still don’t know quite how we do it.",
+      "zh": "地球上最先进的计算机系统也无法接近这种能力，而神经科学家至今仍不十分清楚，我们究竟是怎样做到的。",
+      "vocab": [
+        {
+          "word": "neuroscientists",
+          "lemma": "neuroscientist",
+          "level": 8,
+          "meaning": "神经科学家",
+          "start": 85,
+          "end": 100
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "can't approach",
+        "still don’t know"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "The most advanced computer systems on Earth can't approach that kind of ability, ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "exaggeration": 0.56,
+          "cfg_weight": 0.46,
+          "pause_before_ms": 0,
+          "pause_after_ms": 95,
+          "audio_path": "./audio/2002/c-text2/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s16-02",
+          "text": "and neuroscientists still don’t know quite how we do it.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.95,
+          "exaggeration": 0.595,
+          "cfg_weight": 0.46,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-text2/s16-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

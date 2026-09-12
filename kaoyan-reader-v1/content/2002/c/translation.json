@@ -1,0 +1,366 @@
+{
+  "year": 2002,
+  "section_type": "translation",
+  "article_id": "translation",
+  "source_sha256": "55fb0335e629fa71d71d5220af1215345ef3cf2cc23344adc44d0373f64aaa47",
+  "source_pages": [
+    11
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "05",
+  "article_context": "2002年的Part B是英译汉。这里保留原卷指定翻译的五处划线原文，去掉题号与说明。原文第四句的They指上文的freedom and dignity；末句these issues指技术由谁使用、用于何种目的。",
+  "article": {
+    "year": 2002,
+    "section": "translation",
+    "title": "翻译 · 行为科学的解释方式",
+    "background": "2002年的Part B是英译汉。这里保留原卷指定翻译的五处划线原文，去掉题号与说明。原文第四句的They指上文的freedom and dignity；末句these issues指技术由谁使用、用于何种目的。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "reference_pack_status": "three licensed pilot voices; not the full 15-actor pack",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "One difficulty is that almost all of what is called behavioral science continues to trace behavior to states of mind, feelings, traits of character, human nature, and so on.",
+      "zh": "困难之一在于，所谓的行为科学几乎都仍然把行为归因于心理状态、情感、性格特征、人性等等。",
+      "vocab": [
+        {
+          "word": "behavioral",
+          "lemma": "behavioral",
+          "level": 6,
+          "meaning": "行为的",
+          "start": 52,
+          "end": 62
+        },
+        {
+          "word": "traits",
+          "lemma": "trait",
+          "level": 6,
+          "meaning": "特征",
+          "start": 128,
+          "end": 134
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "almost all",
+        "continues to trace behavior"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "One difficulty is that almost all of what is called behavioral science ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "exaggeration": 0.52,
+          "cfg_weight": 0.46,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2002/c-translation/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s01-02",
+          "text": "continues to trace behavior to states of mind, feelings, traits of character, human nature, and so on.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.555,
+          "cfg_weight": 0.46,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-translation/s01-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 2,
+      "en": "The behavioral sciences have been slow to change partly because the explanatory items often seem to be directly observed and partly because other kinds of explanations have been hard to find.",
+      "zh": "行为科学之所以迟迟未能改变，部分原因是这些用来解释行为的因素往往看起来可以直接观察到，另一部分原因则是其他解释方式一直难以找到。",
+      "vocab": [
+        {
+          "word": "behavioral",
+          "lemma": "behavioral",
+          "level": 6,
+          "meaning": "行为的",
+          "start": 4,
+          "end": 14
+        },
+        {
+          "word": "explanatory",
+          "lemma": "explanatory",
+          "level": 7,
+          "meaning": "解释性的",
+          "start": 68,
+          "end": 79
+        }
+      ],
+      "discourse_function": "compare",
+      "prosody_focus": [
+        "partly because",
+        "and partly because"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "The behavioral sciences have been slow to change ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.57,
+          "cfg_weight": 0.44,
+          "pause_before_ms": 0,
+          "pause_after_ms": 95,
+          "audio_path": "./audio/2002/c-translation/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s02-02",
+          "text": "partly because the explanatory items often seem to be directly observed ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.57,
+          "cfg_weight": 0.44,
+          "pause_before_ms": 0,
+          "pause_after_ms": 95,
+          "audio_path": "./audio/2002/c-translation/s02-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s02-03",
+          "text": "and partly because other kinds of explanations have been hard to find.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "exaggeration": 0.605,
+          "cfg_weight": 0.44,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-translation/s02-03.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 3,
+      "en": "The role of natural selection in evolution was formulated only a little more than a hundred years ago, and the selective role of the environment in shaping and maintaining the behavior of the individual is only beginning to be recognized and studied.",
+      "zh": "自然选择在进化中的作用，直到一百多年前才得到阐明；而环境在塑造和维持个体行为方面所起的选择作用，则才刚刚开始得到认识和研究。",
+      "vocab": [
+        {
+          "word": "formulated",
+          "lemma": "formulate",
+          "level": 7,
+          "meaning": "阐明；系统表述",
+          "start": 47,
+          "end": 57
+        },
+        {
+          "word": "selective",
+          "lemma": "selective",
+          "level": 6,
+          "meaning": "选择性的",
+          "start": 111,
+          "end": 120
+        }
+      ],
+      "discourse_function": "compare",
+      "prosody_focus": [
+        "only a little more than a hundred years ago",
+        "only beginning"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "The role of natural selection in evolution was formulated only a little more than a hundred years ago, ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.57,
+          "cfg_weight": 0.44,
+          "pause_before_ms": 0,
+          "pause_after_ms": 95,
+          "audio_path": "./audio/2002/c-translation/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s03-02",
+          "text": "and the selective role of the environment in shaping and maintaining the behavior of the individual ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.57,
+          "cfg_weight": 0.44,
+          "pause_before_ms": 0,
+          "pause_after_ms": 95,
+          "audio_path": "./audio/2002/c-translation/s03-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s03-03",
+          "text": "is only beginning to be recognized and studied.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "exaggeration": 0.605,
+          "cfg_weight": 0.44,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-translation/s03-03.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 4,
+      "en": "They are the possessions of the autonomous (self-governing) man of traditional theory, and they are essential to practices in which a person is held responsible for his conduct and given credit for his achievements.",
+      "zh": "它们是传统理论中自主的人所拥有的属性；而要求个人为自己的行为负责，并把他的成就归功于他本人，这些做法都以它们为必要前提。",
+      "vocab": [
+        {
+          "word": "autonomous",
+          "lemma": "autonomous",
+          "level": 7,
+          "meaning": "自主的",
+          "start": 32,
+          "end": 42
+        },
+        {
+          "word": "self-governing",
+          "lemma": "self-governing",
+          "level": 7,
+          "meaning": "自治的；自主的",
+          "start": 44,
+          "end": 58
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "autonomous",
+        "responsible for his conduct",
+        "credit for his achievements"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "They are the possessions of the autonomous (self-governing) man of traditional theory, ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "exaggeration": 0.52,
+          "cfg_weight": 0.46,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2002/c-translation/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s04-02",
+          "text": "and they are essential to practices in which a person is held responsible for his conduct and given credit for his achievements.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "exaggeration": 0.555,
+          "cfg_weight": 0.46,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-translation/s04-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 5,
+      "en": "Until these issues are resolved, a technology of behavior will continue to be rejected, and with it possibly the only way to solve our problems.",
+      "zh": "在这些问题得到解决之前，行为技术仍会遭到拒绝；随之被拒绝的，可能还有解决我们问题的唯一途径。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "Until",
+        "continue to be rejected",
+        "possibly the only way"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Until these issues are resolved, a technology of behavior will continue to be rejected, ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "exaggeration": 0.56,
+          "cfg_weight": 0.46,
+          "pause_before_ms": 0,
+          "pause_after_ms": 95,
+          "audio_path": "./audio/2002/c-translation/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s05-02",
+          "text": "and with it possibly the only way to solve our problems.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.95,
+          "exaggeration": 0.595,
+          "cfg_weight": 0.46,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2002/c-translation/s05-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

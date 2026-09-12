@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "years": [
+    2002
+  ],
+  "default_article": "2002-text1",
+  "articles": [
+    {
+      "id": "2002-cloze",
+      "year": 2002,
+      "section_type": "cloze",
+      "title": "完型 · 传播技术的演变",
+      "content": "./content/2002/c/cloze.json",
+      "manifest": "./audio/2002/c-cloze/manifest.json",
+      "sentences": 13
+    },
+    {
+      "id": "2002-text1",
+      "year": 2002,
+      "section_type": "reading",
+      "title": "阅读一 · 如何恰当地运用幽默",
+      "content": "./content/2002/c/text1.json",
+      "manifest": "./audio/2002/c-text1/manifest.json",
+      "sentences": 21
+    },
+    {
+      "id": "2002-text2",
+      "year": 2002,
+      "section_type": "reading",
+      "title": "阅读二 · 机器人与人的感知",
+      "content": "./content/2002/c/text2.json",
+      "manifest": "./audio/2002/c-text2/manifest.json",
+      "sentences": 16
+    },
+    {
+      "id": "2002-text3",
+      "year": 2002,
+      "section_type": "reading",
+      "title": "阅读三 · 油价冲击为何不同",
+      "content": "./content/2002/c/text3.json",
+      "manifest": "./audio/2002/c-text3/manifest.json",
+      "sentences": 21
+    },
+    {
+      "id": "2002-text4",
+      "year": 2002,
+      "section_type": "reading",
+      "title": "阅读四 · 临终照护与医疗责任",
+      "content": "./content/2002/c/text4.json",
+      "manifest": "./audio/2002/c-text4/manifest.json",
+      "sentences": 15
+    },
+    {
+      "id": "2002-translation",
+      "year": 2002,
+      "section_type": "translation",
+      "title": "翻译 · 行为科学的解释方式",
+      "content": "./content/2002/c/translation.json",
+      "manifest": "./audio/2002/c-translation/manifest.json",
+      "sentences": 5
+    }
+  ]
+}
