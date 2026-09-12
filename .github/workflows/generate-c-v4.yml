@@ -1,0 +1,346 @@
+name: C v4 candidate production
+
+on:
+  workflow_dispatch:
+    inputs:
+      year:
+        description: Production year
+        required: true
+        default: '2002'
+        type: choice
+        options: ['2002']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: c-v4-candidate-${{ inputs.year }}-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  PYTHONUNBUFFERED: '1'
+  CANDIDATE_QUERY: audioVersion=v4
+
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build exact 2002 content
+        run: PYTHONPATH=content-pipeline python content-pipeline/build_2002.py
+      - name: Deterministic content and voice contracts
+        run: |
+          PYTHONPATH=content-pipeline python -m unittest discover -s content-pipeline/tests -v
+          PYTHONPATH=voice-pipeline python -m unittest discover -s voice-pipeline/tests -v
+          npm --prefix kaoyan-reader-v1 test
+      - name: Require approved production calibrations
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('voice-pipeline/calibration/actors')
+          approvals=json.loads((root/'production_approvals.json').read_text())['actors']
+          required=['01','02','04','05','08','09','12','13']
+          for actor in required:
+              assert actor in approvals, actor
+              assert approvals[actor]['status']=='accepted', actor
+              assert approvals[actor]['default_variant']=='B', actor
+              assert (root/f'{actor}.json').is_file(), actor
+          print('approved actors:', ','.join(required))
+          PY
+
+  references:
+    needs: contracts
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        actor: ['01', '02', '04', '05', '08', '09', '12', '13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install reference dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          python -m pip install numpy soundfile
+      - name: Prepare actor reference pack
+        run: python voice-pipeline/prepare_2002_cast_references.py --actor '${{ matrix.actor }}' --output voice-pipeline/references/2002-cast
+      - uses: actions/upload-artifact@v4
+        with:
+          name: c-v4-ref-${{ matrix.actor }}
+          path: voice-pipeline/references/2002-cast
+          retention-days: 3
+
+  render:
+    needs: references
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix:
+        article: [cloze, text1, text2, text3, text4, translation]
+        shard: [0, 1, 2]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - name: Restore actor references
+        uses: actions/download-artifact@v4
+        with:
+          pattern: c-v4-ref-*
+          merge-multiple: true
+          path: voice-pipeline/references/2002-cast
+      - name: Install Chatterbox and codecs
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          python -m pip install chatterbox-tts==0.1.7
+      - name: Build exact source content
+        run: PYTHONPATH=content-pipeline python content-pipeline/build_2002.py
+      - name: Render C v4 shard
+        env:
+          TTS_THREADS: '4'
+        run: >-
+          PYTHONPATH=voice-pipeline python voice-pipeline/generate_c_v4.py --year '${{ inputs.year }}'
+          --article '${{ matrix.article }}' --shard '${{ matrix.shard }}' --shards 3
+          --output '/tmp/c-v4-render/${{ matrix.article }}-${{ matrix.shard }}'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: c-v4-render-${{ matrix.article }}-${{ matrix.shard }}
+          path: /tmp/c-v4-render/${{ matrix.article }}-${{ matrix.shard }}
+          retention-days: 3
+
+  merge:
+    needs: render
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install codecs
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+      - name: Build exact source content
+        run: PYTHONPATH=content-pipeline python content-pipeline/build_2002.py
+      - name: Download all render shards
+        uses: actions/download-artifact@v4
+        with:
+          pattern: c-v4-render-*
+          path: /tmp/c-v4-incoming
+      - name: Merge to one final Opus and MP3 per sentence
+        run: PYTHONPATH=voice-pipeline python voice-pipeline/merge_c_v4.py --year '${{ inputs.year }}' --incoming /tmp/c-v4-incoming --root kaoyan-reader-v1
+      - name: Technical candidate verification
+        run: PYTHONPATH=voice-pipeline python voice-pipeline/verify_c_v4.py --year '${{ inputs.year }}' --root kaoyan-reader-v1
+      - name: Package merged candidate
+        run: |
+          mkdir -p /tmp/c-v4-merged/kaoyan-reader-v1/audio/2002 /tmp/c-v4-merged/kaoyan-reader-v1/reports
+          cp -a kaoyan-reader-v1/audio/2002/v4 /tmp/c-v4-merged/kaoyan-reader-v1/audio/2002/
+          cp -a kaoyan-reader-v1/reports/. /tmp/c-v4-merged/kaoyan-reader-v1/reports/ 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: c-v4-merged
+          path: /tmp/c-v4-merged
+          retention-days: 3
+
+  align:
+    needs: merge
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build exact source content
+        run: PYTHONPATH=content-pipeline python content-pipeline/build_2002.py
+      - name: Restore merged final audio
+        uses: actions/download-artifact@v4
+        with:
+          name: c-v4-merged
+          path: .
+      - name: Cache forced-alignment model
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/torch/hub
+          key: wav2vec2-${{ runner.os }}-torch-2.7.1
+      - name: Install pinned CPU alignment stack
+        run: python -m pip install --index-url https://download.pytorch.org/whl/cpu torch==2.7.1 torchaudio==2.7.1
+      - name: Align final sentence audio to exact source transcript
+        run: PYTHONPATH=voice-pipeline python voice-pipeline/alignment/align_manifests.py --year '${{ inputs.year }}' --root kaoyan-reader-v1
+      - name: Validate 91 alignments and reviewed semantic timing
+        run: |
+          PYTHONPATH=content-pipeline:voice-pipeline python - <<'PY'
+          import json
+          from pathlib import Path
+          from semantic_spans import load_semantic_spans,validate_semantic_groups,attach_semantic_times
+          root=Path('kaoyan-reader-v1'); year=2002
+          articles=['cloze','text1','text2','text3','text4','translation']
+          spans=load_semantic_spans(Path('content-pipeline/semantic_spans/2002.json'))
+          total=0
+          for article in articles:
+              content=json.loads((root/f'content/{year}/c/{article}.json').read_text())
+              manifest=json.loads((root/f'audio/{year}/v4/c-{article}/manifest.json').read_text())
+              by_id={s['id']:s for s in content['sentences']}
+              assert manifest['alignment_status']=='passed', article
+              for sid,entry in manifest['sentences'].items():
+                  assert entry['alignment_status']=='passed', (article,sid)
+                  assert entry['words'], (article,sid)
+                  assert entry['qa']['voice']=='pending'
+                  assert entry['qa']['c_direction']=='pending'
+                  groups=spans['articles'][article][sid]
+                  assert not validate_semantic_groups(by_id[sid],groups), (article,sid)
+                  timed=attach_semantic_times(groups,entry['words'])
+                  assert len(timed)==len(groups) and all(g['end']>=g['start'] for g in timed)
+                  total+=1
+          assert total==91,total
+          print('aligned semantic sentences',total)
+          PY
+      - name: Package aligned candidate
+        run: |
+          mkdir -p /tmp/c-v4-aligned/kaoyan-reader-v1/audio/2002 /tmp/c-v4-aligned/kaoyan-reader-v1/reports
+          cp -a kaoyan-reader-v1/audio/2002/v4 /tmp/c-v4-aligned/kaoyan-reader-v1/audio/2002/
+          cp -a kaoyan-reader-v1/reports/. /tmp/c-v4-aligned/kaoyan-reader-v1/reports/ 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: c-v4-aligned
+          path: /tmp/c-v4-aligned
+          retention-days: 3
+
+  verify-reader:
+    needs: align
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Restore aligned candidate
+        uses: actions/download-artifact@v4
+        with:
+          name: c-v4-aligned
+          path: .
+      - name: Build runtime content
+        run: PYTHONPATH=content-pipeline python content-pipeline/build_2002.py
+      - name: Deterministic regression suites
+        run: |
+          PYTHONPATH=content-pipeline python -m unittest discover -s content-pipeline/tests -v
+          PYTHONPATH=voice-pipeline python -m unittest discover -s voice-pipeline/tests -v
+          npm --prefix kaoyan-reader-v1 test
+      - name: Install Chromium verification
+        run: |
+          python -m pip install playwright==1.55.0
+          python -m playwright install --with-deps chromium
+      - name: Candidate mobile Chromium checks at all five speeds
+        env:
+          READER_AUDIO_VERSION: v4
+        run: python kaoyan-reader-v1/tests/reader-ux-browser.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: c-v4-reader-results
+          path: reports/browser/reader-ux
+          retention-days: 3
+
+  publish-candidate:
+    needs: verify-reader
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+      pages: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Restore aligned candidate
+        uses: actions/download-artifact@v4
+        with:
+          name: c-v4-aligned
+          path: .
+      - name: Restore browser QA results
+        uses: actions/download-artifact@v4
+        with:
+          name: c-v4-reader-results
+          path: reports/browser/reader-ux
+      - name: Build runtime content and calibration provenance
+        run: |
+          PYTHONPATH=content-pipeline python content-pipeline/build_2002.py
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          root=Path('voice-pipeline/calibration/actors')
+          files=['01','02','04','05','08','09','12','13']
+          hashes={a:hashlib.sha256((root/f'{a}.json').read_bytes()).hexdigest() for a in files}
+          hashes['production_approvals']=hashlib.sha256((root/'production_approvals.json').read_bytes()).hexdigest()
+          out=Path('kaoyan-reader-v1/reports/c-v4-2002-calibration-hashes.json');out.parent.mkdir(parents=True,exist_ok=True)
+          out.write_text(json.dumps(hashes,indent=2)+'\n')
+          PY
+      - name: Archive full 2002 C v4 engineering candidate
+        uses: actions/upload-artifact@v4
+        with:
+          name: 2002-c-v4-candidate
+          path: |
+            kaoyan-reader-v1/audio/2002/v4
+            kaoyan-reader-v1/reports
+            reports/browser/reader-ux
+            voice-pipeline/calibration/actors/*.json
+          retention-days: 14
+      - name: Publish candidate namespace without promoting default audio
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash scripts/publish-reader.sh
+      - name: Verify public candidate manifests, 91 timestamps and both codecs
+        env:
+          PUBLIC_ROOT: https://dannhitruong852-jpg.github.io/taptap/kaoyan-reader-v1/
+        run: |
+          python - <<'PY'
+          import json,os,time,urllib.request
+          base=os.environ['PUBLIC_ROOT'];articles=['cloze','text1','text2','text3','text4','translation']
+          def get(url):
+              req=urllib.request.Request(url,headers={'Cache-Control':'no-cache','User-Agent':'c-v4-public-smoke'})
+              with urllib.request.urlopen(req,timeout=30) as r:return r.read()
+          last=None
+          for attempt in range(36):
+              try:
+                  manifests={a:json.loads(get(f'{base}audio/2002/v4/c-{a}/manifest.json?run={os.environ.get("GITHUB_RUN_ID","")}')) for a in articles}
+                  if all(m.get('alignment_status')=='passed' for m in manifests.values()):break
+              except Exception as exc:last=exc
+              time.sleep(10)
+          else: raise RuntimeError(f'candidate did not become public: {last}')
+          total=0
+          for article,m in manifests.items():
+              assert m['qa']['voice']=='pending'
+              assert m['qa']['c_direction']=='pending'
+              for sid,entry in m['sentences'].items():
+                  assert entry['alignment_status']=='passed'
+                  assert entry['words']
+                  for key in ('path','mp3_path'):
+                      url=base+entry[key].removeprefix('./')
+                      req=urllib.request.Request(url,method='HEAD',headers={'Cache-Control':'no-cache','User-Agent':'c-v4-public-smoke'})
+                      with urllib.request.urlopen(req,timeout=30) as r: assert r.status==200
+                  total+=1
+          assert total==91,total
+          print('public C v4 candidate sentences',total)
+          PY
