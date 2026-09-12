@@ -10,6 +10,7 @@ on:
       - 'kaoyan-reader-v1/bilingual-text.js'
       - 'kaoyan-reader-v1/content/2002/bilingual-highlights.json'
       - 'kaoyan-reader-v1/tests/reader-*'
+      - 'kaoyan-reader-v1/tests/player-compact.test.js'
   workflow_dispatch:
 permissions:
   contents: read
