@@ -37,10 +37,9 @@ class ReaderUX(unittest.TestCase):
         self.page = self.context.new_page()
         self.errors = []
         self.page.on('pageerror', lambda e:self.errors.append(str(e)))
-        self.page.add_init_script('''(() => { const NativeAudio=window.Audio; window.__audio=[]; window.__audioEvents=[];
-          window.Audio=function(...args){ const a=new NativeAudio(...args); a.__createdStack=new Error('Audio created').stack; a.__playCalls=0;
-            const nativePlay=a.play.bind(a); a.play=(...playArgs)=>{a.__playCalls++;window.__audioEvents.push({type:'play-call',src:a.src,stack:new Error('play called').stack});return nativePlay(...playArgs);};
-            for(const type of ['play','playing','pause','loadstart','error']) a.addEventListener(type,()=>window.__audioEvents.push({type,src:a.src,currentTime:a.currentTime,paused:a.paused}));
+        self.page.add_init_script('''(() => { const NativeAudio=window.Audio; window.__audio=[];
+          window.Audio=function(...args){ const a=new NativeAudio(...args); a.__playCalls=0;
+            const nativePlay=a.play.bind(a); a.play=(...playArgs)=>{a.__playCalls++;return nativePlay(...playArgs);};
             window.__audio.push(a);return a; };
           window.Audio.prototype=NativeAudio.prototype;
         })();''')
@@ -59,7 +58,7 @@ class ReaderUX(unittest.TestCase):
         card.locator('.en').tap()
         self.assertTrue(card.locator('.zh').is_visible())
         self.assertEqual(p.locator('.zh:visible').count(),1)
-        self.assertEqual(p.evaluate('window.__audio.filter(a=>!a.paused).length'),0)
+        self.assertEqual(sum(p.evaluate('window.__audio.map(a=>a.__playCalls)')),0)
         card.locator('.en').tap()
         self.assertFalse(card.locator('.zh').is_visible())
         p.select_option('#article-select','2002-cloze')
@@ -68,30 +67,34 @@ class ReaderUX(unittest.TestCase):
         p.reload();p.wait_for_selector('.sentence-card')
         self.assertEqual(p.locator('.zh:visible').count(),0)
 
-    def test_02_native_selection_long_press_and_drag_do_not_toggle(self):
+    def test_02_native_selection_long_press_and_drag_do_not_toggle_or_play(self):
         p=self.page
         first=p.locator('.sentence-card').nth(0)
-        first.scroll_into_view_if_needed()
-        box=first.locator('.en').bounding_box()
-        x,y=box['x']+35,box['y']+12
+        en=first.locator('.en')
+        # Put the intended text in the middle of the viewport, safely above the fixed player.
+        en.evaluate("el=>el.scrollIntoView({block:'center',behavior:'instant'})")
+        p.wait_for_timeout(100)
+        box=en.bounding_box();x,y=box['x']+35,box['y']+12
+        self.assertTrue(en.evaluate("(el,p)=>{const hit=document.elementFromPoint(p.x,p.y);return !!hit&&(hit===el||el.contains(hit));}", {'x':x,'y':y}), 'long-press coordinate must actually hit English text, not the fixed player')
         p.mouse.move(x,y);p.mouse.down();p.wait_for_timeout(650);p.mouse.up()
         self.assertFalse(first.locator('.zh').is_visible())
+        self.assertEqual(sum(p.evaluate('window.__audio.map(a=>a.__playCalls)')),0)
         p.evaluate('''(() => {const n=document.querySelector('.en .read-token').firstChild;
           const r=document.createRange();r.selectNodeContents(n);getSelection().removeAllRanges();getSelection().addRange(r);
         })()''')
         before=p.evaluate('getSelection().toString()')
         self.assertTrue(before)
-        prevented=first.locator('.en').evaluate("el=>!el.dispatchEvent(new MouseEvent('contextmenu',{bubbles:true,cancelable:true}))")
+        prevented=en.evaluate("el=>!el.dispatchEvent(new MouseEvent('contextmenu',{bubbles:true,cancelable:true}))")
         self.assertFalse(prevented,'native context menu must not be prevented')
         self.assertEqual(p.evaluate('getSelection().toString()'),before)
-        first.locator('.en').dispatch_event('click',{'detail':1})
+        en.dispatch_event('click',{'detail':1})
         self.assertFalse(first.locator('.zh').is_visible())
-        diag=p.evaluate('''() => ({audios:window.__audio.map(a=>({src:a.src,paused:a.paused,currentTime:a.currentTime,readyState:a.readyState,networkState:a.networkState,playCalls:a.__playCalls,stack:a.__createdStack})),events:window.__audioEvents})''')
-        self.assertEqual(sum(1 for a in diag['audios'] if not a['paused']),0,json.dumps(diag,ensure_ascii=False,indent=2))
+        self.assertEqual(sum(p.evaluate('window.__audio.map(a=>a.__playCalls)')),0)
         p.evaluate('getSelection().removeAllRanges()')
         p.mouse.move(x,y);p.mouse.down();p.mouse.move(x+70,y+20,steps=5);p.mouse.up()
         self.assertFalse(first.locator('.zh').is_visible())
-        self.assertEqual(first.locator('.en').evaluate('el=>getComputedStyle(el).userSelect'),'text')
+        self.assertEqual(sum(p.evaluate('window.__audio.map(a=>a.__playCalls)')),0)
+        self.assertEqual(en.evaluate('el=>getComputedStyle(el).userSelect'),'text')
 
     def test_03_bilingual_highlights_and_single_global_switch(self):
         p=self.page
@@ -101,7 +104,7 @@ class ReaderUX(unittest.TestCase):
         card.locator('.en').tap()
         en=card.locator('.en .vocab').first;zh=card.locator('.zh .zh-vocab').first
         self.assertEqual(en.inner_text().strip(),'sympathy')
-        self.assertEqual(zh.inner_text(),'\u8ba4\u540c')
+        self.assertEqual(zh.inner_text(),'认同')
         self.assertGreaterEqual(int(zh.evaluate('el=>getComputedStyle(el).fontWeight')),700)
         p.locator('#toggle-vocab').click()
         self.assertLess(int(en.evaluate('el=>getComputedStyle(el).fontWeight')),700)
@@ -119,7 +122,7 @@ class ReaderUX(unittest.TestCase):
         slider=p.locator('#speed-range')
         slider.focus();slider.press('End')
         self.assertEqual(p.evaluate('window.__active.playbackRate'),2)
-        self.assertEqual(p.locator('#speed-value').inner_text(),'2.0\u00d7')
+        self.assertEqual(p.locator('#speed-value').inner_text(),'2.0×')
         slider.press('Home')
         self.assertEqual(p.evaluate('window.__active.playbackRate'),.7)
         for expected in [1,1.25,1.5,2]:
@@ -170,6 +173,19 @@ class ReaderUX(unittest.TestCase):
         self.assertEqual(p.locator('#player-shell').get_attribute('data-collapsed'),'false')
         self.assertLessEqual(p.evaluate('document.documentElement.scrollWidth'),p.evaluate('window.innerWidth'))
         p.screenshot(path=str(REPORT/'english-only-mobile.png'),full_page=False)
+
+    def test_08_compact_player_is_centered_and_transport_buttons_are_symmetric(self):
+        p=self.page
+        shell=p.locator('#player-shell').bounding_box()
+        self.assertLessEqual(shell['width'],350.5)
+        self.assertAlmostEqual(shell['x'],(390-shell['width'])/2,delta=1.5)
+        buttons=[p.locator(s).bounding_box() for s in ['#previous','#replay','#play-toggle','#next']]
+        centers=[b['x']+b['width']/2 for b in buttons]
+        self.assertAlmostEqual(centers[1]-centers[0],centers[3]-centers[2],delta=6)
+        for selector in ['#previous','#replay','#play-toggle','#next']:
+            style=p.locator(selector).evaluate("el=>{const b=getComputedStyle(el,'::before');return {left:b.left,top:b.top,position:b.position};}")
+            self.assertEqual(style['position'],'absolute')
+        p.screenshot(path=str(REPORT/'compact-player-mobile.png'),full_page=False)
 
 if __name__=='__main__':
     try:
