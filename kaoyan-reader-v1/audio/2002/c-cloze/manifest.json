@@ -584,5 +584,398 @@
   "asr_qa": "not_performed",
   "speaker_qa": "not_performed",
   "listening_qa": "pending_user_acceptance",
-  "status": "complete_candidate"
+  "status": "complete_candidate",
+  "sentences": {
+    "s01": {
+      "id": "s01",
+      "path": "./audio/2002/c-cloze/v2-s01.opus",
+      "mp3_path": "./audio/2002/c-cloze/v2-s01.mp3",
+      "duration_seconds": 7.554,
+      "cues": [
+        {
+          "id": "s01-01",
+          "text": "Comparisons were drawn between the development of television in the 20th century ",
+          "emotion": "neutral",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 3.923
+        },
+        {
+          "id": "s01-02",
+          "text": "and the diffusion of printing in the 15th and 16th centuries.",
+          "emotion": "neutral",
+          "intensity": 1,
+          "start": 3.923,
+          "end": 7.554
+        }
+      ],
+      "actor_id": "05",
+      "emotion": "neutral",
+      "intensity": 1,
+      "c_mode_version": "v2-pilot",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    },
+    "s02": {
+      "id": "s02",
+      "path": "./audio/2002/c-cloze/v2-s02.opus",
+      "mp3_path": "./audio/2002/c-cloze/v2-s02.mp3",
+      "duration_seconds": 1.694,
+      "cues": [
+        {
+          "id": "s02-01",
+          "text": "Yet much had happened between.",
+          "emotion": "serious",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 1.694
+        }
+      ],
+      "actor_id": "05",
+      "emotion": "serious",
+      "intensity": 1,
+      "c_mode_version": "v2-pilot",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    },
+    "s03": {
+      "id": "s03",
+      "path": "./audio/2002/c-cloze/v2-s03.opus",
+      "mp3_path": "./audio/2002/c-cloze/v2-s03.mp3",
+      "duration_seconds": 10.846,
+      "cues": [
+        {
+          "id": "s03-01",
+          "text": "As was discussed before, it was not until the 19th century that the newspaper became the dominant pre-electronic medium, ",
+          "emotion": "neutral",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 6.963
+        },
+        {
+          "id": "s03-02",
+          "text": "following in the wake of the pamphlet and the book and in the company of the periodical.",
+          "emotion": "neutral",
+          "intensity": 1,
+          "start": 6.963,
+          "end": 10.846
+        }
+      ],
+      "actor_id": "05",
+      "emotion": "neutral",
+      "intensity": 1,
+      "c_mode_version": "v2-pilot",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    },
+    "s04": {
+      "id": "s04",
+      "path": "./audio/2002/c-cloze/v2-s04.opus",
+      "mp3_path": "./audio/2002/c-cloze/v2-s04.mp3",
+      "duration_seconds": 12.618,
+      "cues": [
+        {
+          "id": "s04-01",
+          "text": "It was during the same time that the communications revolution speeded up, ",
+          "emotion": "lively",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 3.845
+        },
+        {
+          "id": "s04-02",
+          "text": "beginning with transport, the railway, and leading on through the telegraph, the telephone, radio, and motion pictures ",
+          "emotion": "lively",
+          "intensity": 1,
+          "start": 3.845,
+          "end": 9.56
+        },
+        {
+          "id": "s04-03",
+          "text": "into the 20th-century world of the motor car and the air plane.",
+          "emotion": "lively",
+          "intensity": 1,
+          "start": 9.56,
+          "end": 12.618
+        }
+      ],
+      "actor_id": "05",
+      "emotion": "lively",
+      "intensity": 1,
+      "c_mode_version": "v2-pilot",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    },
+    "s05": {
+      "id": "s05",
+      "path": "./audio/2002/c-cloze/v2-s05.opus",
+      "mp3_path": "./audio/2002/c-cloze/v2-s05.mp3",
+      "duration_seconds": 2.456,
+      "cues": [
+        {
+          "id": "s05-01",
+          "text": "Not everyone sees that process in perspective.",
+          "emotion": "neutral",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 2.456
+        }
+      ],
+      "actor_id": "05",
+      "emotion": "neutral",
+      "intensity": 1,
+      "c_mode_version": "v2-pilot",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    },
+    "s06": {
+      "id": "s06",
+      "path": "./audio/2002/c-cloze/v2-s06.opus",
+      "mp3_path": "./audio/2002/c-cloze/v2-s06.mp3",
+      "duration_seconds": 1.824,
+      "cues": [
+        {
+          "id": "s06-01",
+          "text": "It is important to do so.",
+          "emotion": "warm",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 1.824
+        }
+      ],
+      "actor_id": "05",
+      "emotion": "warm",
+      "intensity": 1,
+      "c_mode_version": "v2-pilot",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    },
+    "s07": {
+      "id": "s07",
+      "path": "./audio/2002/c-cloze/v2-s07.opus",
+      "mp3_path": "./audio/2002/c-cloze/v2-s07.mp3",
+      "duration_seconds": 14.082,
+      "cues": [
+        {
+          "id": "s07-01",
+          "text": "It is generally recognized, however, that the introduction of the computer in the early 20th century, ",
+          "emotion": "serious",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 5.157
+        },
+        {
+          "id": "s07-02",
+          "text": "followed by the invention of the integrated circuit during the 1960s, radically changed the process, ",
+          "emotion": "serious",
+          "intensity": 1,
+          "start": 5.157,
+          "end": 10.61
+        },
+        {
+          "id": "s07-03",
+          "text": "although its impact on the media was not immediately apparent.",
+          "emotion": "serious",
+          "intensity": 1,
+          "start": 10.61,
+          "end": 14.082
+        }
+      ],
+      "actor_id": "05",
+      "emotion": "serious",
+      "intensity": 1,
+      "c_mode_version": "v2-pilot",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    },
+    "s08": {
+      "id": "s08",
+      "path": "./audio/2002/c-cloze/v2-s08.opus",
+      "mp3_path": "./audio/2002/c-cloze/v2-s08.mp3",
+      "duration_seconds": 9.84,
+      "cues": [
+        {
+          "id": "s08-01",
+          "text": "As time went by, computers became smaller and more powerful, ",
+          "emotion": "lively",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 3.248
+        },
+        {
+          "id": "s08-02",
+          "text": "and they became “personal” too, as well as institutional, ",
+          "emotion": "lively",
+          "intensity": 1,
+          "start": 3.248,
+          "end": 6.691
+        },
+        {
+          "id": "s08-03",
+          "text": "with display becoming sharper and storage capacity increasing.",
+          "emotion": "lively",
+          "intensity": 1,
+          "start": 6.691,
+          "end": 9.84
+        }
+      ],
+      "actor_id": "05",
+      "emotion": "lively",
+      "intensity": 1,
+      "c_mode_version": "v2-pilot",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    },
+    "s09": {
+      "id": "s09",
+      "path": "./audio/2002/c-cloze/v2-s09.opus",
+      "mp3_path": "./audio/2002/c-cloze/v2-s09.mp3",
+      "duration_seconds": 5.498,
+      "cues": [
+        {
+          "id": "s09-01",
+          "text": "They were thought of, like people, in terms of generations, ",
+          "emotion": "neutral",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 2.925
+        },
+        {
+          "id": "s09-02",
+          "text": "with the distance between generations much smaller.",
+          "emotion": "neutral",
+          "intensity": 1,
+          "start": 2.925,
+          "end": 5.498
+        }
+      ],
+      "actor_id": "05",
+      "emotion": "neutral",
+      "intensity": 1,
+      "c_mode_version": "v2-pilot",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    },
+    "s10": {
+      "id": "s10",
+      "path": "./audio/2002/c-cloze/v2-s10.opus",
+      "mp3_path": "./audio/2002/c-cloze/v2-s10.mp3",
+      "duration_seconds": 8.279,
+      "cues": [
+        {
+          "id": "s10-01",
+          "text": "It was within the computer age that the term “information society” began to be widely used ",
+          "emotion": "neutral",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 5.558
+        },
+        {
+          "id": "s10-02",
+          "text": "to describe the context within which we now live.",
+          "emotion": "neutral",
+          "intensity": 1,
+          "start": 5.558,
+          "end": 8.279
+        }
+      ],
+      "actor_id": "05",
+      "emotion": "neutral",
+      "intensity": 1,
+      "c_mode_version": "v2-pilot",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    },
+    "s11": {
+      "id": "s11",
+      "path": "./audio/2002/c-cloze/v2-s11.opus",
+      "mp3_path": "./audio/2002/c-cloze/v2-s11.mp3",
+      "duration_seconds": 11.723,
+      "cues": [
+        {
+          "id": "s11-01",
+          "text": "The communications revolution has influenced both work and leisure and how we think and feel both about place and time, ",
+          "emotion": "serious",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 6.556
+        },
+        {
+          "id": "s11-02",
+          "text": "but there have been controversial views about its economic, political, social and cultural implications.",
+          "emotion": "serious",
+          "intensity": 1,
+          "start": 6.556,
+          "end": 11.723
+        }
+      ],
+      "actor_id": "05",
+      "emotion": "serious",
+      "intensity": 1,
+      "c_mode_version": "v2-pilot",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    },
+    "s12": {
+      "id": "s12",
+      "path": "./audio/2002/c-cloze/v2-s12.opus",
+      "mp3_path": "./audio/2002/c-cloze/v2-s12.mp3",
+      "duration_seconds": 3.068,
+      "cues": [
+        {
+          "id": "s12-01",
+          "text": "“Benefits” have been weighed against “harmful” outcomes.",
+          "emotion": "neutral",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 3.068
+        }
+      ],
+      "actor_id": "05",
+      "emotion": "neutral",
+      "intensity": 1,
+      "c_mode_version": "v2-pilot",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    },
+    "s13": {
+      "id": "s13",
+      "path": "./audio/2002/c-cloze/v2-s13.opus",
+      "mp3_path": "./audio/2002/c-cloze/v2-s13.mp3",
+      "duration_seconds": 1.987,
+      "cues": [
+        {
+          "id": "s13-01",
+          "text": "And generalizations have proved difficult.",
+          "emotion": "warm",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 1.987
+        }
+      ],
+      "actor_id": "05",
+      "emotion": "warm",
+      "intensity": 1,
+      "c_mode_version": "v2-pilot",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    }
+  },
+  "c_mode_version": "v2-pilot",
+  "v2_missing_segments": [],
+  "v2_rejected": [],
+  "v2_status": "complete_candidate"
 }
