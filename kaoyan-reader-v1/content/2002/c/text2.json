@@ -7,18 +7,18 @@
     5
   ],
   "accent": "en-US",
-  "primary_actor_id": "05",
-  "article_context": "从熟悉的机器讲到真正智能的难点。列举能力时轻快自然，转入常识、感知与筛选信息时突出逻辑反差；NASA引语由12号承担，主讲人保持05号。",
+  "primary_actor_id": "08",
+  "article_context": "从熟悉的机器讲到真正智能的难点。主讲人08采用自然、带一点干幽默的科技男声；列举能力时轻快，转入常识、感知与筛选信息时突出逻辑反差；NASA负责人戴夫·拉弗里的直接引语由01承担。",
   "article": {
     "year": 2002,
     "section": "text2",
     "title": "阅读二 · 机器人与人的感知",
-    "background": "从熟悉的机器讲到真正智能的难点。列举能力时轻快自然，转入常识、感知与筛选信息时突出逻辑反差；NASA引语由12号承担，主讲人保持05号。"
+    "background": "从熟悉的机器讲到真正智能的难点。主讲人08采用自然、带一点干幽默的科技男声；列举能力时轻快，转入常识、感知与筛选信息时突出逻辑反差；NASA负责人戴夫·拉弗里的直接引语由01承担。"
   },
   "editorial_status": "reviewed_candidate",
-  "audio_status": "not_rendered",
+  "audio_status": "v3_render_pending",
   "vocabulary_scale": "project-curated-1-9-v1",
-  "reference_pack_status": "three licensed pilot voices; not the full 15-actor pack",
+  "reference_pack_status": "2002 C v3 content-selected cast: six primary narrators plus explicit dialogue roles; full 15-slot registry remains available for other articles",
   "sentences": [
     {
       "id": "s01",
@@ -71,23 +71,23 @@
           "id": "s01-01",
           "text": "Since the dawn of human ingenuity, people have devised ever more cunning tools ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "08",
           "emotion": "warm",
           "intensity": 1,
           "rate": 1.01,
           "exaggeration": 0.56,
           "cfg_weight": 0.44,
           "pause_before_ms": 0,
-          "pause_after_ms": 75,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text2/s01-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s01-02",
           "text": "to cope with work that is dangerous, boring, burdensome, or just plain nasty.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "08",
           "emotion": "warm",
           "intensity": 1,
           "rate": 1.01,
@@ -96,8 +96,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text2/s01-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -152,7 +152,7 @@
           "id": "s02-01",
           "text": "That compulsion has resulted in robotics—the science of conferring various human capabilities on machines.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "08",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 1.0,
@@ -161,8 +161,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text2/s02-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -184,23 +184,23 @@
           "id": "s03-01",
           "text": "And if scientists have yet to create the mechanical version of science fiction, ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "08",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.97,
           "exaggeration": 0.5,
           "cfg_weight": 0.47,
           "pause_before_ms": 0,
-          "pause_after_ms": 85,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text2/s03-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s03-02",
           "text": "they have begun to come close.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "08",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.95,
@@ -209,8 +209,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text2/s03-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -241,23 +241,23 @@
           "id": "s04-01",
           "text": "As a result, the modern world is increasingly populated by intelligent gizmos ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "08",
           "emotion": "serious",
           "intensity": 1,
           "rate": 0.98,
           "exaggeration": 0.61,
           "cfg_weight": 0.43,
           "pause_before_ms": 0,
-          "pause_after_ms": 130,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text2/s04-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s04-02",
           "text": "whose presence we barely notice but whose universal existence has removed much human labor.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "08",
           "emotion": "serious",
           "intensity": 1,
           "rate": 0.96,
@@ -266,8 +266,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text2/s04-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -297,7 +297,7 @@
           "id": "s05-01",
           "text": "Our factories hum to the rhythm of robot assembly arms.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "08",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 1.02,
@@ -306,8 +306,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text2/s05-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -346,7 +346,7 @@
           "id": "s06-01",
           "text": "Our banking is done at automated teller terminals that thank us with mechanical politeness for the transaction.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "08",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 1.02,
@@ -355,8 +355,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text2/s06-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -377,7 +377,7 @@
           "id": "s07-01",
           "text": "Our subway trains are controlled by tireless robot-drivers.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "08",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 1.02,
@@ -386,8 +386,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text2/s07-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -450,39 +450,39 @@
           "id": "s08-01",
           "text": "And thanks to the continual miniaturization of electronics and micro-mechanics, ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "08",
           "emotion": "warm",
           "intensity": 1,
           "rate": 0.97,
           "exaggeration": 0.6,
           "cfg_weight": 0.43,
           "pause_before_ms": 0,
-          "pause_after_ms": 90,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text2/s08-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s08-02",
           "text": "there are already robot systems that can perform some kinds of brain and bone surgery with submillimeter accuracy—",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "08",
           "emotion": "warm",
           "intensity": 1,
           "rate": 0.97,
           "exaggeration": 0.6,
           "cfg_weight": 0.43,
           "pause_before_ms": 0,
-          "pause_after_ms": 90,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text2/s08-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s08-03",
           "text": "far greater precision than highly skilled physicians can achieve with their hands alone.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "08",
           "emotion": "warm",
           "intensity": 1,
           "rate": 0.97,
@@ -491,8 +491,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text2/s08-03.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -532,39 +532,39 @@
           "id": "s09-01",
           "text": "But if robots are to reach the next stage of laborsaving utility, ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "08",
           "emotion": "serious",
           "intensity": 1,
           "rate": 0.98,
           "exaggeration": 0.61,
           "cfg_weight": 0.43,
           "pause_before_ms": 0,
-          "pause_after_ms": 130,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text2/s09-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s09-02",
           "text": "they will have to operate with less human supervision and be able to make at least a few decisions for themselves—",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "08",
           "emotion": "serious",
           "intensity": 1,
           "rate": 0.98,
           "exaggeration": 0.61,
           "cfg_weight": 0.43,
           "pause_before_ms": 0,
-          "pause_after_ms": 130,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text2/s09-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s09-03",
           "text": "goals that pose a real challenge.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "08",
           "emotion": "serious",
           "intensity": 1,
           "rate": 0.96,
@@ -573,8 +573,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text2/s09-03.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -622,39 +622,39 @@
           "id": "s10-01",
           "text": "“While we know how to tell a robot to handle a specific error,” ",
           "speaker_role": "dave_lavery",
-          "actor_id": "12",
+          "actor_id": "01",
           "emotion": "curious",
           "intensity": 1,
           "rate": 1.0,
           "exaggeration": 0.6,
           "cfg_weight": 0.43,
           "pause_before_ms": 0,
-          "pause_after_ms": 85,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text2/s10-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s10-02",
           "text": "says Dave Lavery, manager of a robotics program at NASA, ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "08",
           "emotion": "curious",
           "intensity": 1,
           "rate": 1.0,
           "exaggeration": 0.6,
           "cfg_weight": 0.43,
           "pause_before_ms": 0,
-          "pause_after_ms": 85,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text2/s10-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s10-03",
           "text": "“we can't yet give a robot enough ‘common sense’ to reliably interact with a dynamic world.”",
           "speaker_role": "dave_lavery",
-          "actor_id": "12",
+          "actor_id": "01",
           "emotion": "curious",
           "intensity": 1,
           "rate": 1.0,
@@ -663,8 +663,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text2/s10-03.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -703,7 +703,7 @@
           "id": "s11-01",
           "text": "Indeed the quest for true artificial intelligence has produced very mixed results.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "08",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.97,
@@ -712,8 +712,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text2/s11-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -752,39 +752,39 @@
           "id": "s12-01",
           "text": "Despite a spell of initial optimism in the 1960s and 1970s ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "08",
           "emotion": "serious",
           "intensity": 1,
           "rate": 0.98,
           "exaggeration": 0.61,
           "cfg_weight": 0.43,
           "pause_before_ms": 0,
-          "pause_after_ms": 130,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text2/s12-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s12-02",
           "text": "when it appeared that transistor circuits and microprocessors might be able to copy the action of the human brain by the year 2010, ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "08",
           "emotion": "serious",
           "intensity": 1,
           "rate": 0.98,
           "exaggeration": 0.61,
           "cfg_weight": 0.43,
           "pause_before_ms": 0,
-          "pause_after_ms": 130,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text2/s12-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s12-03",
           "text": "researchers lately have begun to extend that forecast by decades if not centuries.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "08",
           "emotion": "serious",
           "intensity": 1,
           "rate": 0.96,
@@ -793,8 +793,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text2/s12-03.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -825,23 +825,23 @@
           "id": "s13-01",
           "text": "What they found, in attempting to model thought, is that the human brain's roughly one hundred billion nerve cells are much more talented—",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "08",
           "emotion": "warm",
           "intensity": 1,
           "rate": 0.97,
           "exaggeration": 0.6,
           "cfg_weight": 0.43,
           "pause_before_ms": 0,
-          "pause_after_ms": 90,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text2/s13-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s13-02",
           "text": "and human perception far more complicated—than previously imagined.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "08",
           "emotion": "warm",
           "intensity": 1,
           "rate": 0.97,
@@ -850,8 +850,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text2/s13-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -873,7 +873,7 @@
           "id": "s14-01",
           "text": "They have built robots that can recognize the error of a machine panel by a fraction of a millimeter in a controlled factory environment.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "08",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 1.02,
@@ -882,8 +882,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text2/s14-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -938,23 +938,23 @@
           "id": "s15-01",
           "text": "But the human mind can glimpse a rapidly changing scene and immediately disregard the 98 percent that is irrelevant, ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "08",
           "emotion": "serious",
           "intensity": 1,
           "rate": 0.98,
           "exaggeration": 0.61,
           "cfg_weight": 0.43,
           "pause_before_ms": 0,
-          "pause_after_ms": 130,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text2/s15-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s15-02",
           "text": "instantaneously focusing on the monkey at the side of a winding forest road or the single suspicious face in a big crowd.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "08",
           "emotion": "serious",
           "intensity": 1,
           "rate": 0.96,
@@ -963,8 +963,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text2/s15-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -995,23 +995,23 @@
           "id": "s16-01",
           "text": "The most advanced computer systems on Earth can't approach that kind of ability, ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "08",
           "emotion": "warm",
           "intensity": 1,
           "rate": 0.97,
           "exaggeration": 0.56,
           "cfg_weight": 0.46,
           "pause_before_ms": 0,
-          "pause_after_ms": 95,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text2/s16-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s16-02",
           "text": "and neuroscientists still don’t know quite how we do it.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "08",
           "emotion": "warm",
           "intensity": 1,
           "rate": 0.95,
@@ -1020,8 +1020,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text2/s16-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     }

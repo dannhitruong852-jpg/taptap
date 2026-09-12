@@ -588,9 +588,13 @@
   "sentences": {
     "s01": {
       "id": "s01",
-      "path": "./audio/2002/c-cloze/v2-s01.opus",
-      "mp3_path": "./audio/2002/c-cloze/v2-s01.mp3",
-      "duration_seconds": 7.554,
+      "path": "./audio/2002/c-cloze/v3-s01.opus",
+      "mp3_path": "./audio/2002/c-cloze/v3-s01.mp3",
+      "duration_seconds": 7.497,
+      "files": {
+        "v3-s01.opus": "f414f83899f04d495650cc9fe381cb15ec042758c8d1580e9ca741cb540ccf02",
+        "v3-s01.mp3": "06843e8664a52e648df516725d9365150f8fb223a3cbf18e56d23a7235e3504a"
+      },
       "cues": [
         {
           "id": "s01-01",
@@ -598,30 +602,38 @@
           "emotion": "neutral",
           "intensity": 1,
           "start": 0.0,
-          "end": 3.923
+          "end": 3.847
         },
         {
           "id": "s01-02",
           "text": "and the diffusion of printing in the 15th and 16th centuries.",
           "emotion": "neutral",
           "intensity": 1,
-          "start": 3.923,
-          "end": 7.554
+          "start": 3.847,
+          "end": 7.497
         }
       ],
-      "actor_id": "05",
+      "actor_id": "04",
+      "actor_sequence": [
+        "04",
+        "04"
+      ],
       "emotion": "neutral",
       "intensity": 1,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     },
     "s02": {
       "id": "s02",
-      "path": "./audio/2002/c-cloze/v2-s02.opus",
-      "mp3_path": "./audio/2002/c-cloze/v2-s02.mp3",
-      "duration_seconds": 1.694,
+      "path": "./audio/2002/c-cloze/v3-s02.opus",
+      "mp3_path": "./audio/2002/c-cloze/v3-s02.mp3",
+      "duration_seconds": 1.612,
+      "files": {
+        "v3-s02.opus": "5ee115358e9b05548cd92ff5dd93fb3052ca02d6f704cb1f1efe5ae3b0d1b97b",
+        "v3-s02.mp3": "5f1cda2433b01f6c1186481ef47e0cb1e483843f1f83d94dea652ef510cfaf61"
+      },
       "cues": [
         {
           "id": "s02-01",
@@ -629,22 +641,29 @@
           "emotion": "serious",
           "intensity": 1,
           "start": 0.0,
-          "end": 1.694
+          "end": 1.612
         }
       ],
-      "actor_id": "05",
+      "actor_id": "04",
+      "actor_sequence": [
+        "04"
+      ],
       "emotion": "serious",
       "intensity": 1,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     },
     "s03": {
       "id": "s03",
-      "path": "./audio/2002/c-cloze/v2-s03.opus",
-      "mp3_path": "./audio/2002/c-cloze/v2-s03.mp3",
-      "duration_seconds": 10.846,
+      "path": "./audio/2002/c-cloze/v3-s03.opus",
+      "mp3_path": "./audio/2002/c-cloze/v3-s03.mp3",
+      "duration_seconds": 11.242,
+      "files": {
+        "v3-s03.opus": "d92527e5e513d6a391ec698ccfd534cd5925a3dbbc17b59e0d9b6ffc971b9b65",
+        "v3-s03.mp3": "66f280c001793bc98aed43a786ab5c0197c19fd798d1aaad58901cd44c24ce2e"
+      },
       "cues": [
         {
           "id": "s03-01",
@@ -652,30 +671,38 @@
           "emotion": "neutral",
           "intensity": 1,
           "start": 0.0,
-          "end": 6.963
+          "end": 7.0
         },
         {
           "id": "s03-02",
           "text": "following in the wake of the pamphlet and the book and in the company of the periodical.",
           "emotion": "neutral",
           "intensity": 1,
-          "start": 6.963,
-          "end": 10.846
+          "start": 7.0,
+          "end": 11.242
         }
       ],
-      "actor_id": "05",
+      "actor_id": "04",
+      "actor_sequence": [
+        "04",
+        "04"
+      ],
       "emotion": "neutral",
       "intensity": 1,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     },
     "s04": {
       "id": "s04",
-      "path": "./audio/2002/c-cloze/v2-s04.opus",
-      "mp3_path": "./audio/2002/c-cloze/v2-s04.mp3",
-      "duration_seconds": 12.618,
+      "path": "./audio/2002/c-cloze/v3-s04.opus",
+      "mp3_path": "./audio/2002/c-cloze/v3-s04.mp3",
+      "duration_seconds": 13.062,
+      "files": {
+        "v3-s04.opus": "304f1bf142eb110a3947f4e381e6b456784d29e4f6402157741f723f3e804f12",
+        "v3-s04.mp3": "8043d925ef7d65b58a64131094c8d421c4c4ee5c82d35d7dbd3979cf1b6f61aa"
+      },
       "cues": [
         {
           "id": "s04-01",
@@ -683,38 +710,47 @@
           "emotion": "lively",
           "intensity": 1,
           "start": 0.0,
-          "end": 3.845
+          "end": 3.564
         },
         {
           "id": "s04-02",
           "text": "beginning with transport, the railway, and leading on through the telegraph, the telephone, radio, and motion pictures ",
           "emotion": "lively",
           "intensity": 1,
-          "start": 3.845,
-          "end": 9.56
+          "start": 3.564,
+          "end": 9.992
         },
         {
           "id": "s04-03",
           "text": "into the 20th-century world of the motor car and the air plane.",
           "emotion": "lively",
           "intensity": 1,
-          "start": 9.56,
-          "end": 12.618
+          "start": 9.992,
+          "end": 13.062
         }
       ],
-      "actor_id": "05",
+      "actor_id": "04",
+      "actor_sequence": [
+        "04",
+        "04",
+        "04"
+      ],
       "emotion": "lively",
       "intensity": 1,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     },
     "s05": {
       "id": "s05",
-      "path": "./audio/2002/c-cloze/v2-s05.opus",
-      "mp3_path": "./audio/2002/c-cloze/v2-s05.mp3",
-      "duration_seconds": 2.456,
+      "path": "./audio/2002/c-cloze/v3-s05.opus",
+      "mp3_path": "./audio/2002/c-cloze/v3-s05.mp3",
+      "duration_seconds": 2.619,
+      "files": {
+        "v3-s05.opus": "5989526ca69939682f42bfd1fade4e02ba09d8d7c7c5b4132df9a9661616dc4b",
+        "v3-s05.mp3": "8398ce8927a5397b0623ffec6a0934eb452c4b1d16de6962a69c96b2c85ebfa2"
+      },
       "cues": [
         {
           "id": "s05-01",
@@ -722,22 +758,29 @@
           "emotion": "neutral",
           "intensity": 1,
           "start": 0.0,
-          "end": 2.456
+          "end": 2.619
         }
       ],
-      "actor_id": "05",
+      "actor_id": "04",
+      "actor_sequence": [
+        "04"
+      ],
       "emotion": "neutral",
       "intensity": 1,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     },
     "s06": {
       "id": "s06",
-      "path": "./audio/2002/c-cloze/v2-s06.opus",
-      "mp3_path": "./audio/2002/c-cloze/v2-s06.mp3",
-      "duration_seconds": 1.824,
+      "path": "./audio/2002/c-cloze/v3-s06.opus",
+      "mp3_path": "./audio/2002/c-cloze/v3-s06.mp3",
+      "duration_seconds": 1.762,
+      "files": {
+        "v3-s06.opus": "5ff1f721a7ed876cbd7243615f9f3ed58b0ccd9532d88395942371ccc28a2605",
+        "v3-s06.mp3": "57d0829d8ba3c1646e19dc4735129402df5ed03062c643ef5514cf10dd187aa9"
+      },
       "cues": [
         {
           "id": "s06-01",
@@ -745,22 +788,29 @@
           "emotion": "warm",
           "intensity": 1,
           "start": 0.0,
-          "end": 1.824
+          "end": 1.762
         }
       ],
-      "actor_id": "05",
+      "actor_id": "04",
+      "actor_sequence": [
+        "04"
+      ],
       "emotion": "warm",
       "intensity": 1,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     },
     "s07": {
       "id": "s07",
-      "path": "./audio/2002/c-cloze/v2-s07.opus",
-      "mp3_path": "./audio/2002/c-cloze/v2-s07.mp3",
-      "duration_seconds": 14.082,
+      "path": "./audio/2002/c-cloze/v3-s07.opus",
+      "mp3_path": "./audio/2002/c-cloze/v3-s07.mp3",
+      "duration_seconds": 15.087,
+      "files": {
+        "v3-s07.opus": "76064321e7cf76c6cefce2fbf2bd89b22a88d69203cb0db11e943f735ce92800",
+        "v3-s07.mp3": "94ab1ae8494e4cf41897eadacf291ca9674893f1b1f1fe73725df2624bd67d0d"
+      },
       "cues": [
         {
           "id": "s07-01",
@@ -768,38 +818,47 @@
           "emotion": "serious",
           "intensity": 1,
           "start": 0.0,
-          "end": 5.157
+          "end": 6.407
         },
         {
           "id": "s07-02",
           "text": "followed by the invention of the integrated circuit during the 1960s, radically changed the process, ",
           "emotion": "serious",
           "intensity": 1,
-          "start": 5.157,
-          "end": 10.61
+          "start": 6.407,
+          "end": 12.027
         },
         {
           "id": "s07-03",
           "text": "although its impact on the media was not immediately apparent.",
           "emotion": "serious",
           "intensity": 1,
-          "start": 10.61,
-          "end": 14.082
+          "start": 12.027,
+          "end": 15.087
         }
       ],
-      "actor_id": "05",
+      "actor_id": "04",
+      "actor_sequence": [
+        "04",
+        "04",
+        "04"
+      ],
       "emotion": "serious",
       "intensity": 1,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     },
     "s08": {
       "id": "s08",
-      "path": "./audio/2002/c-cloze/v2-s08.opus",
-      "mp3_path": "./audio/2002/c-cloze/v2-s08.mp3",
-      "duration_seconds": 9.84,
+      "path": "./audio/2002/c-cloze/v3-s08.opus",
+      "mp3_path": "./audio/2002/c-cloze/v3-s08.mp3",
+      "duration_seconds": 11.008,
+      "files": {
+        "v3-s08.opus": "c63a68986f1cca615dcf95d6958f597657f333c73004ad2895150a16afa9e738",
+        "v3-s08.mp3": "2c7b126478b6aaab859453204a90d7f8dc6235c25d8e556e27d463244068e5cd"
+      },
       "cues": [
         {
           "id": "s08-01",
@@ -807,38 +866,47 @@
           "emotion": "lively",
           "intensity": 1,
           "start": 0.0,
-          "end": 3.248
+          "end": 3.966
         },
         {
           "id": "s08-02",
           "text": "and they became “personal” too, as well as institutional, ",
           "emotion": "lively",
           "intensity": 1,
-          "start": 3.248,
-          "end": 6.691
+          "start": 3.966,
+          "end": 7.833
         },
         {
           "id": "s08-03",
           "text": "with display becoming sharper and storage capacity increasing.",
           "emotion": "lively",
           "intensity": 1,
-          "start": 6.691,
-          "end": 9.84
+          "start": 7.833,
+          "end": 11.008
         }
       ],
-      "actor_id": "05",
+      "actor_id": "04",
+      "actor_sequence": [
+        "04",
+        "04",
+        "04"
+      ],
       "emotion": "lively",
       "intensity": 1,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     },
     "s09": {
       "id": "s09",
-      "path": "./audio/2002/c-cloze/v2-s09.opus",
-      "mp3_path": "./audio/2002/c-cloze/v2-s09.mp3",
-      "duration_seconds": 5.498,
+      "path": "./audio/2002/c-cloze/v3-s09.opus",
+      "mp3_path": "./audio/2002/c-cloze/v3-s09.mp3",
+      "duration_seconds": 6.313,
+      "files": {
+        "v3-s09.opus": "2d3f3b7d4e49c3f52f96a55ba50ba1c6fc0d523cc6b04db1f71e01e9cbe8959d",
+        "v3-s09.mp3": "27764b5fbb6e8f4a1e0499acc6e6e8e3ad690c35337bc45c931aabcb04cc7d5d"
+      },
       "cues": [
         {
           "id": "s09-01",
@@ -846,30 +914,38 @@
           "emotion": "neutral",
           "intensity": 1,
           "start": 0.0,
-          "end": 2.925
+          "end": 3.255
         },
         {
           "id": "s09-02",
           "text": "with the distance between generations much smaller.",
           "emotion": "neutral",
           "intensity": 1,
-          "start": 2.925,
-          "end": 5.498
+          "start": 3.255,
+          "end": 6.313
         }
       ],
-      "actor_id": "05",
+      "actor_id": "04",
+      "actor_sequence": [
+        "04",
+        "04"
+      ],
       "emotion": "neutral",
       "intensity": 1,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     },
     "s10": {
       "id": "s10",
-      "path": "./audio/2002/c-cloze/v2-s10.opus",
-      "mp3_path": "./audio/2002/c-cloze/v2-s10.mp3",
-      "duration_seconds": 8.279,
+      "path": "./audio/2002/c-cloze/v3-s10.opus",
+      "mp3_path": "./audio/2002/c-cloze/v3-s10.mp3",
+      "duration_seconds": 8.364,
+      "files": {
+        "v3-s10.opus": "3e68be5671e59a0f73069d20cfc0e74bb4fe9ffce644df2f20c08c21d9e874b7",
+        "v3-s10.mp3": "fc6bec1ae0f6bb585a6bddc7089cde08f7c911944f3d7cabf058fa8c08d7cb9a"
+      },
       "cues": [
         {
           "id": "s10-01",
@@ -877,30 +953,38 @@
           "emotion": "neutral",
           "intensity": 1,
           "start": 0.0,
-          "end": 5.558
+          "end": 5.936
         },
         {
           "id": "s10-02",
           "text": "to describe the context within which we now live.",
           "emotion": "neutral",
           "intensity": 1,
-          "start": 5.558,
-          "end": 8.279
+          "start": 5.936,
+          "end": 8.364
         }
       ],
-      "actor_id": "05",
+      "actor_id": "04",
+      "actor_sequence": [
+        "04",
+        "04"
+      ],
       "emotion": "neutral",
       "intensity": 1,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     },
     "s11": {
       "id": "s11",
-      "path": "./audio/2002/c-cloze/v2-s11.opus",
-      "mp3_path": "./audio/2002/c-cloze/v2-s11.mp3",
-      "duration_seconds": 11.723,
+      "path": "./audio/2002/c-cloze/v3-s11.opus",
+      "mp3_path": "./audio/2002/c-cloze/v3-s11.mp3",
+      "duration_seconds": 12.687,
+      "files": {
+        "v3-s11.opus": "5595b44c108a62ea0a1f814bb637d8d3a315ce36fe100a011da93e192d89eef3",
+        "v3-s11.mp3": "fdcb9dcde225896292c6ac92346863ce3cc98993411b3643748b764a89cc8555"
+      },
       "cues": [
         {
           "id": "s11-01",
@@ -908,30 +992,38 @@
           "emotion": "serious",
           "intensity": 1,
           "start": 0.0,
-          "end": 6.556
+          "end": 6.991
         },
         {
           "id": "s11-02",
           "text": "but there have been controversial views about its economic, political, social and cultural implications.",
           "emotion": "serious",
           "intensity": 1,
-          "start": 6.556,
-          "end": 11.723
+          "start": 6.991,
+          "end": 12.687
         }
       ],
-      "actor_id": "05",
+      "actor_id": "04",
+      "actor_sequence": [
+        "04",
+        "04"
+      ],
       "emotion": "serious",
       "intensity": 1,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     },
     "s12": {
       "id": "s12",
-      "path": "./audio/2002/c-cloze/v2-s12.opus",
-      "mp3_path": "./audio/2002/c-cloze/v2-s12.mp3",
-      "duration_seconds": 3.068,
+      "path": "./audio/2002/c-cloze/v3-s12.opus",
+      "mp3_path": "./audio/2002/c-cloze/v3-s12.mp3",
+      "duration_seconds": 3.041,
+      "files": {
+        "v3-s12.opus": "48be5661c4e50b6e5908c32f050163a24156eab40269d307efb816964c13a82f",
+        "v3-s12.mp3": "5e269fa810c61037770368b1a85033b4251a56626495f6c6df4cc238531cecaf"
+      },
       "cues": [
         {
           "id": "s12-01",
@@ -939,22 +1031,29 @@
           "emotion": "neutral",
           "intensity": 1,
           "start": 0.0,
-          "end": 3.068
+          "end": 3.041
         }
       ],
-      "actor_id": "05",
+      "actor_id": "04",
+      "actor_sequence": [
+        "04"
+      ],
       "emotion": "neutral",
       "intensity": 1,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     },
     "s13": {
       "id": "s13",
-      "path": "./audio/2002/c-cloze/v2-s13.opus",
-      "mp3_path": "./audio/2002/c-cloze/v2-s13.mp3",
-      "duration_seconds": 1.987,
+      "path": "./audio/2002/c-cloze/v3-s13.opus",
+      "mp3_path": "./audio/2002/c-cloze/v3-s13.mp3",
+      "duration_seconds": 3.107,
+      "files": {
+        "v3-s13.opus": "a38f4086fbc2366a81a3b0f115ea8ff2404ae29ceb141153fa77b3cba516c084",
+        "v3-s13.mp3": "ba06ccd70c643347296aea39f312a55a7abae8a33022d08defaa507b60dae5bd"
+      },
       "cues": [
         {
           "id": "s13-01",
@@ -962,20 +1061,26 @@
           "emotion": "warm",
           "intensity": 1,
           "start": 0.0,
-          "end": 1.987
+          "end": 3.107
         }
       ],
-      "actor_id": "05",
+      "actor_id": "04",
+      "actor_sequence": [
+        "04"
+      ],
       "emotion": "warm",
       "intensity": 1,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     }
   },
-  "c_mode_version": "v2-pilot",
+  "c_mode_version": "v3-content-cast",
   "v2_missing_segments": [],
   "v2_rejected": [],
-  "v2_status": "complete_candidate"
+  "v2_status": "complete_candidate",
+  "v3_missing_segments": [],
+  "v3_rejected": [],
+  "v3_status": "complete_candidate"
 }

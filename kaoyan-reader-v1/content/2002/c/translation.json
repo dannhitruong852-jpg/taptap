@@ -7,18 +7,18 @@
     11
   ],
   "accent": "en-US",
-  "primary_actor_id": "05",
-  "article_context": "2002年的Part B是英译汉。这里保留原卷指定翻译的五处划线原文，去掉题号与说明。原文第四句的They指上文的freedom and dignity；末句these issues指技术由谁使用、用于何种目的。",
+  "primary_actor_id": "02",
+  "article_context": "2002年的Part B是英译汉。主讲人02用清晰、专业、温和的学术解释型女声处理行为科学概念；保留原卷指定翻译的五处划线原文，去掉题号与说明。原文第四句的They指上文的freedom and dignity；末句these issues指技术由谁使用、用于何种目的。",
   "article": {
     "year": 2002,
     "section": "translation",
     "title": "翻译 · 行为科学的解释方式",
-    "background": "2002年的Part B是英译汉。这里保留原卷指定翻译的五处划线原文，去掉题号与说明。原文第四句的They指上文的freedom and dignity；末句these issues指技术由谁使用、用于何种目的。"
+    "background": "2002年的Part B是英译汉。主讲人02用清晰、专业、温和的学术解释型女声处理行为科学概念；保留原卷指定翻译的五处划线原文，去掉题号与说明。原文第四句的They指上文的freedom and dignity；末句these issues指技术由谁使用、用于何种目的。"
   },
   "editorial_status": "reviewed_candidate",
-  "audio_status": "not_rendered",
+  "audio_status": "v3_render_pending",
   "vocabulary_scale": "project-curated-1-9-v1",
-  "reference_pack_status": "three licensed pilot voices; not the full 15-actor pack",
+  "reference_pack_status": "2002 C v3 content-selected cast: six primary narrators plus explicit dialogue roles; full 15-slot registry remains available for other articles",
   "sentences": [
     {
       "id": "s01",
@@ -55,23 +55,23 @@
           "id": "s01-01",
           "text": "One difficulty is that almost all of what is called behavioral science ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "02",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 1.0,
           "exaggeration": 0.52,
           "cfg_weight": 0.46,
           "pause_before_ms": 0,
-          "pause_after_ms": 65,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-translation/s01-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s01-02",
           "text": "continues to trace behavior to states of mind, feelings, traits of character, human nature, and so on.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "02",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.98,
@@ -80,8 +80,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-translation/s01-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -120,39 +120,39 @@
           "id": "s02-01",
           "text": "The behavioral sciences have been slow to change ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "02",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.98,
           "exaggeration": 0.57,
           "cfg_weight": 0.44,
           "pause_before_ms": 0,
-          "pause_after_ms": 95,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-translation/s02-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s02-02",
           "text": "partly because the explanatory items often seem to be directly observed ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "02",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.98,
           "exaggeration": 0.57,
           "cfg_weight": 0.44,
           "pause_before_ms": 0,
-          "pause_after_ms": 95,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-translation/s02-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s02-03",
           "text": "and partly because other kinds of explanations have been hard to find.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "02",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.96,
@@ -161,8 +161,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-translation/s02-03.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -201,39 +201,39 @@
           "id": "s03-01",
           "text": "The role of natural selection in evolution was formulated only a little more than a hundred years ago, ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "02",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.98,
           "exaggeration": 0.57,
           "cfg_weight": 0.44,
           "pause_before_ms": 0,
-          "pause_after_ms": 95,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-translation/s03-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s03-02",
           "text": "and the selective role of the environment in shaping and maintaining the behavior of the individual ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "02",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.98,
           "exaggeration": 0.57,
           "cfg_weight": 0.44,
           "pause_before_ms": 0,
-          "pause_after_ms": 95,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-translation/s03-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s03-03",
           "text": "is only beginning to be recognized and studied.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "02",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.96,
@@ -242,8 +242,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-translation/s03-03.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -283,23 +283,23 @@
           "id": "s04-01",
           "text": "They are the possessions of the autonomous (self-governing) man of traditional theory, ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "02",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 1.0,
           "exaggeration": 0.52,
           "cfg_weight": 0.46,
           "pause_before_ms": 0,
-          "pause_after_ms": 65,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-translation/s04-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s04-02",
           "text": "and they are essential to practices in which a person is held responsible for his conduct and given credit for his achievements.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "02",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.98,
@@ -308,8 +308,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-translation/s04-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -332,23 +332,23 @@
           "id": "s05-01",
           "text": "Until these issues are resolved, a technology of behavior will continue to be rejected, ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "02",
           "emotion": "warm",
           "intensity": 1,
           "rate": 0.97,
           "exaggeration": 0.56,
           "cfg_weight": 0.46,
           "pause_before_ms": 0,
-          "pause_after_ms": 95,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-translation/s05-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s05-02",
           "text": "and with it possibly the only way to solve our problems.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "02",
           "emotion": "warm",
           "intensity": 1,
           "rate": 0.95,
@@ -357,8 +357,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-translation/s05-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     }

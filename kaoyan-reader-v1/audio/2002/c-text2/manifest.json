@@ -728,5 +728,617 @@
   "asr_qa": "not_performed",
   "speaker_qa": "not_performed",
   "listening_qa": "pending_user_acceptance",
-  "status": "complete_candidate"
+  "status": "complete_candidate",
+  "sentences": {
+    "s01": {
+      "id": "s01",
+      "path": "./audio/2002/c-text2/v3-s01.opus",
+      "mp3_path": "./audio/2002/c-text2/v3-s01.mp3",
+      "duration_seconds": 9.855,
+      "files": {
+        "v3-s01.opus": "e750b17e38fa26cfe1372b3d430da6bb2912af6c33d58f0bceaf0213139720b6",
+        "v3-s01.mp3": "2b2b8fe9d3a4eebe0bb84da588cccfb5cf6d37cc99b3a7c0ca5217bf8a97f6b5"
+      },
+      "cues": [
+        {
+          "id": "s01-01",
+          "text": "Since the dawn of human ingenuity, people have devised ever more cunning tools ",
+          "emotion": "warm",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 4.878
+        },
+        {
+          "id": "s01-02",
+          "text": "to cope with work that is dangerous, boring, burdensome, or just plain nasty.",
+          "emotion": "warm",
+          "intensity": 1,
+          "start": 4.878,
+          "end": 9.855
+        }
+      ],
+      "actor_id": "08",
+      "actor_sequence": [
+        "08",
+        "08"
+      ],
+      "emotion": "warm",
+      "intensity": 1,
+      "c_mode_version": "v3-content-cast",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    },
+    "s02": {
+      "id": "s02",
+      "path": "./audio/2002/c-text2/v3-s02.opus",
+      "mp3_path": "./audio/2002/c-text2/v3-s02.mp3",
+      "duration_seconds": 6.072,
+      "files": {
+        "v3-s02.opus": "e18881a9991185dc7136477684bd928bea308f56290623d7fc1a697e8472a768",
+        "v3-s02.mp3": "73656d5b95735bd6ef2f7b958b431a23ae9aad3d6cb0a88399ceab288429a924"
+      },
+      "cues": [
+        {
+          "id": "s02-01",
+          "text": "That compulsion has resulted in robotics—the science of conferring various human capabilities on machines.",
+          "emotion": "neutral",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 6.072
+        }
+      ],
+      "actor_id": "08",
+      "actor_sequence": [
+        "08"
+      ],
+      "emotion": "neutral",
+      "intensity": 1,
+      "c_mode_version": "v3-content-cast",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    },
+    "s03": {
+      "id": "s03",
+      "path": "./audio/2002/c-text2/v3-s03.opus",
+      "mp3_path": "./audio/2002/c-text2/v3-s03.mp3",
+      "duration_seconds": 5.076,
+      "files": {
+        "v3-s03.opus": "94991758471d9104d2985f4952026e7e35b86e7d014af37455668371f564c711",
+        "v3-s03.mp3": "9cb5fc84b25802d273d01d846bf92cb2ec7b91a77633a8ed6d960cb84876df14"
+      },
+      "cues": [
+        {
+          "id": "s03-01",
+          "text": "And if scientists have yet to create the mechanical version of science fiction, ",
+          "emotion": "neutral",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 3.571
+        },
+        {
+          "id": "s03-02",
+          "text": "they have begun to come close.",
+          "emotion": "neutral",
+          "intensity": 1,
+          "start": 3.571,
+          "end": 5.076
+        }
+      ],
+      "actor_id": "08",
+      "actor_sequence": [
+        "08",
+        "08"
+      ],
+      "emotion": "neutral",
+      "intensity": 1,
+      "c_mode_version": "v3-content-cast",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    },
+    "s04": {
+      "id": "s04",
+      "path": "./audio/2002/c-text2/v3-s04.opus",
+      "mp3_path": "./audio/2002/c-text2/v3-s04.mp3",
+      "duration_seconds": 10.534,
+      "files": {
+        "v3-s04.opus": "0cdb6a11fde9fab60be2d1360e2a34ae0f482d83ccbd6de99f8b14f66684b9f6",
+        "v3-s04.mp3": "493e1c97ca98bba89ea0dc9b978ce3d8cf1b14fa0bce5172afdd7ab35f873a7a"
+      },
+      "cues": [
+        {
+          "id": "s04-01",
+          "text": "As a result, the modern world is increasingly populated by intelligent gizmos ",
+          "emotion": "serious",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 5.168
+        },
+        {
+          "id": "s04-02",
+          "text": "whose presence we barely notice but whose universal existence has removed much human labor.",
+          "emotion": "serious",
+          "intensity": 1,
+          "start": 5.168,
+          "end": 10.534
+        }
+      ],
+      "actor_id": "08",
+      "actor_sequence": [
+        "08",
+        "08"
+      ],
+      "emotion": "serious",
+      "intensity": 1,
+      "c_mode_version": "v3-content-cast",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    },
+    "s05": {
+      "id": "s05",
+      "path": "./audio/2002/c-text2/v3-s05.opus",
+      "mp3_path": "./audio/2002/c-text2/v3-s05.mp3",
+      "duration_seconds": 3.249,
+      "files": {
+        "v3-s05.opus": "7cbce9b57ca4a13394d70656fc6fe7c77d52807fe568252a6ffc28cd05aa88c7",
+        "v3-s05.mp3": "e25f281946643bc7ecfd0a7b579a823882bf4901bbaa7437c7d845e13ee6f36a"
+      },
+      "cues": [
+        {
+          "id": "s05-01",
+          "text": "Our factories hum to the rhythm of robot assembly arms.",
+          "emotion": "neutral",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 3.249
+        }
+      ],
+      "actor_id": "08",
+      "actor_sequence": [
+        "08"
+      ],
+      "emotion": "neutral",
+      "intensity": 1,
+      "c_mode_version": "v3-content-cast",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    },
+    "s06": {
+      "id": "s06",
+      "path": "./audio/2002/c-text2/v3-s06.opus",
+      "mp3_path": "./audio/2002/c-text2/v3-s06.mp3",
+      "duration_seconds": 5.757,
+      "files": {
+        "v3-s06.opus": "3d8992658a1168a8347796555c3aa4c98179c7b1b0de66773447c9150498f700",
+        "v3-s06.mp3": "a72637258bd4d0f9dad066deb3887bdc272136c4075075eb0bd4e798e92411b3"
+      },
+      "cues": [
+        {
+          "id": "s06-01",
+          "text": "Our banking is done at automated teller terminals that thank us with mechanical politeness for the transaction.",
+          "emotion": "neutral",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 5.757
+        }
+      ],
+      "actor_id": "08",
+      "actor_sequence": [
+        "08"
+      ],
+      "emotion": "neutral",
+      "intensity": 1,
+      "c_mode_version": "v3-content-cast",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    },
+    "s07": {
+      "id": "s07",
+      "path": "./audio/2002/c-text2/v3-s07.opus",
+      "mp3_path": "./audio/2002/c-text2/v3-s07.mp3",
+      "duration_seconds": 3.245,
+      "files": {
+        "v3-s07.opus": "8e6f3230ee5bd5994cfbbea62254816fc54a52bec930eb1f433af0c61eb8969e",
+        "v3-s07.mp3": "324f87e2c699ea06da44dc09f4a4ce8f6cddc2941b69458d7a0529ee12539f7b"
+      },
+      "cues": [
+        {
+          "id": "s07-01",
+          "text": "Our subway trains are controlled by tireless robot-drivers.",
+          "emotion": "neutral",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 3.245
+        }
+      ],
+      "actor_id": "08",
+      "actor_sequence": [
+        "08"
+      ],
+      "emotion": "neutral",
+      "intensity": 1,
+      "c_mode_version": "v3-content-cast",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    },
+    "s08": {
+      "id": "s08",
+      "path": "./audio/2002/c-text2/v3-s08.opus",
+      "mp3_path": "./audio/2002/c-text2/v3-s08.mp3",
+      "duration_seconds": 17.5,
+      "files": {
+        "v3-s08.opus": "4d4eac7ad2233dc138be47f8919191603e83f6a163c468469dd64bc73f8107ec",
+        "v3-s08.mp3": "233a545b8599c190c007b24658af929f470d25b3bf8c2598e6fe65364bdd877b"
+      },
+      "cues": [
+        {
+          "id": "s08-01",
+          "text": "And thanks to the continual miniaturization of electronics and micro-mechanics, ",
+          "emotion": "warm",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 5.438
+        },
+        {
+          "id": "s08-02",
+          "text": "there are already robot systems that can perform some kinds of brain and bone surgery with submillimeter accuracy—",
+          "emotion": "warm",
+          "intensity": 1,
+          "start": 5.438,
+          "end": 12.062
+        },
+        {
+          "id": "s08-03",
+          "text": "far greater precision than highly skilled physicians can achieve with their hands alone.",
+          "emotion": "warm",
+          "intensity": 1,
+          "start": 12.062,
+          "end": 17.5
+        }
+      ],
+      "actor_id": "08",
+      "actor_sequence": [
+        "08",
+        "08",
+        "08"
+      ],
+      "emotion": "warm",
+      "intensity": 1,
+      "c_mode_version": "v3-content-cast",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    },
+    "s09": {
+      "id": "s09",
+      "path": "./audio/2002/c-text2/v3-s09.opus",
+      "mp3_path": "./audio/2002/c-text2/v3-s09.mp3",
+      "duration_seconds": 12.774,
+      "files": {
+        "v3-s09.opus": "9e2e1b1e7ef895b0b43a41681cbe8b3c1705e45241e7f3f41cbf861c95cbce37",
+        "v3-s09.mp3": "6958a8a39b50d8b96f72120ce9fd8ef23c2beafbae5b74dc6aa7e36aa5ead1cd"
+      },
+      "cues": [
+        {
+          "id": "s09-01",
+          "text": "But if robots are to reach the next stage of laborsaving utility, ",
+          "emotion": "serious",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 4.164
+        },
+        {
+          "id": "s09-02",
+          "text": "they will have to operate with less human supervision and be able to make at least a few decisions for themselves—",
+          "emotion": "serious",
+          "intensity": 1,
+          "start": 4.164,
+          "end": 10.405
+        },
+        {
+          "id": "s09-03",
+          "text": "goals that pose a real challenge.",
+          "emotion": "serious",
+          "intensity": 1,
+          "start": 10.405,
+          "end": 12.774
+        }
+      ],
+      "actor_id": "08",
+      "actor_sequence": [
+        "08",
+        "08",
+        "08"
+      ],
+      "emotion": "serious",
+      "intensity": 1,
+      "c_mode_version": "v3-content-cast",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    },
+    "s10": {
+      "id": "s10",
+      "path": "./audio/2002/c-text2/v3-s10.opus",
+      "mp3_path": "./audio/2002/c-text2/v3-s10.mp3",
+      "duration_seconds": 13.226,
+      "files": {
+        "v3-s10.opus": "0623befbe7633fca6b6d0f9369ca1871441f728a331c0b00672c7a9e37b14508",
+        "v3-s10.mp3": "febeeeedeba12e7f65f18ee592765f02ed7c0f7638a308d871b8c1d8a13bafbf"
+      },
+      "cues": [
+        {
+          "id": "s10-01",
+          "text": "“While we know how to tell a robot to handle a specific error,” ",
+          "emotion": "curious",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 3.482
+        },
+        {
+          "id": "s10-02",
+          "text": "says Dave Lavery, manager of a robotics program at NASA, ",
+          "emotion": "curious",
+          "intensity": 1,
+          "start": 3.482,
+          "end": 7.46
+        },
+        {
+          "id": "s10-03",
+          "text": "“we can't yet give a robot enough ‘common sense’ to reliably interact with a dynamic world.”",
+          "emotion": "curious",
+          "intensity": 1,
+          "start": 7.46,
+          "end": 13.226
+        }
+      ],
+      "actor_id": "01",
+      "actor_sequence": [
+        "01",
+        "08",
+        "01"
+      ],
+      "emotion": "curious",
+      "intensity": 1,
+      "c_mode_version": "v3-content-cast",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    },
+    "s11": {
+      "id": "s11",
+      "path": "./audio/2002/c-text2/v3-s11.opus",
+      "mp3_path": "./audio/2002/c-text2/v3-s11.mp3",
+      "duration_seconds": 4.473,
+      "files": {
+        "v3-s11.opus": "9f887aece94eca84f94e1084bb7e46aebdb1e2d0f3f6fea9e1f7a37e9145209f",
+        "v3-s11.mp3": "d99296fc3dedd66770199b68ddbc47f6b870544f3093a1b171fdeb521b4f4056"
+      },
+      "cues": [
+        {
+          "id": "s11-01",
+          "text": "Indeed the quest for true artificial intelligence has produced very mixed results.",
+          "emotion": "neutral",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 4.473
+        }
+      ],
+      "actor_id": "08",
+      "actor_sequence": [
+        "08"
+      ],
+      "emotion": "neutral",
+      "intensity": 1,
+      "c_mode_version": "v3-content-cast",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    },
+    "s12": {
+      "id": "s12",
+      "path": "./audio/2002/c-text2/v3-s12.opus",
+      "mp3_path": "./audio/2002/c-text2/v3-s12.mp3",
+      "duration_seconds": 17.89,
+      "files": {
+        "v3-s12.opus": "e44df629e8497ed4424c3fd1b224a310818aa1f13fb893c2351beafc30459bc7",
+        "v3-s12.mp3": "154acd2338167b7f5c7ef3a936bd2efbe8544b78fb50d3f3f7f2cce4253ea10c"
+      },
+      "cues": [
+        {
+          "id": "s12-01",
+          "text": "Despite a spell of initial optimism in the 1960s and 1970s ",
+          "emotion": "serious",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 4.673
+        },
+        {
+          "id": "s12-02",
+          "text": "when it appeared that transistor circuits and microprocessors might be able to copy the action of the human brain by the year 2010, ",
+          "emotion": "serious",
+          "intensity": 1,
+          "start": 4.673,
+          "end": 12.721
+        },
+        {
+          "id": "s12-03",
+          "text": "researchers lately have begun to extend that forecast by decades if not centuries.",
+          "emotion": "serious",
+          "intensity": 1,
+          "start": 12.721,
+          "end": 17.89
+        }
+      ],
+      "actor_id": "08",
+      "actor_sequence": [
+        "08",
+        "08",
+        "08"
+      ],
+      "emotion": "serious",
+      "intensity": 1,
+      "c_mode_version": "v3-content-cast",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    },
+    "s13": {
+      "id": "s13",
+      "path": "./audio/2002/c-text2/v3-s13.opus",
+      "mp3_path": "./audio/2002/c-text2/v3-s13.mp3",
+      "duration_seconds": 11.107,
+      "files": {
+        "v3-s13.opus": "bcba1780739157ec026e6427826b561af91375edec535a9d928e47f90b95f934",
+        "v3-s13.mp3": "43ae626c429ee8e08ee1a224c9e519430939c4e45fa39ab02dd4475862636d92"
+      },
+      "cues": [
+        {
+          "id": "s13-01",
+          "text": "What they found, in attempting to model thought, is that the human brain's roughly one hundred billion nerve cells are much more talented—",
+          "emotion": "warm",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 7.139
+        },
+        {
+          "id": "s13-02",
+          "text": "and human perception far more complicated—than previously imagined.",
+          "emotion": "warm",
+          "intensity": 1,
+          "start": 7.139,
+          "end": 11.107
+        }
+      ],
+      "actor_id": "08",
+      "actor_sequence": [
+        "08",
+        "08"
+      ],
+      "emotion": "warm",
+      "intensity": 1,
+      "c_mode_version": "v3-content-cast",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    },
+    "s14": {
+      "id": "s14",
+      "path": "./audio/2002/c-text2/v3-s14.opus",
+      "mp3_path": "./audio/2002/c-text2/v3-s14.mp3",
+      "duration_seconds": 7.546,
+      "files": {
+        "v3-s14.opus": "5a3710fffa31c2d6d309f7ac37aabd0cb619ede6fd3f9ae9ec0c3b5e0e5610f3",
+        "v3-s14.mp3": "0b23075d405e247964576e583c0f08df8612b779c713ce5b381164c1e3c19151"
+      },
+      "cues": [
+        {
+          "id": "s14-01",
+          "text": "They have built robots that can recognize the error of a machine panel by a fraction of a millimeter in a controlled factory environment.",
+          "emotion": "neutral",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 7.546
+        }
+      ],
+      "actor_id": "08",
+      "actor_sequence": [
+        "08"
+      ],
+      "emotion": "neutral",
+      "intensity": 1,
+      "c_mode_version": "v3-content-cast",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    },
+    "s15": {
+      "id": "s15",
+      "path": "./audio/2002/c-text2/v3-s15.opus",
+      "mp3_path": "./audio/2002/c-text2/v3-s15.mp3",
+      "duration_seconds": 13.652,
+      "files": {
+        "v3-s15.opus": "019a5d226225871c38f70b2ae0ccb003d1f3b7e408483b2ae9bb5a2438f2fc21",
+        "v3-s15.mp3": "20cac7844e531fc60e45e7b5cd00aa49416a8380e2d1aef9c30b4f3a1e09e0ca"
+      },
+      "cues": [
+        {
+          "id": "s15-01",
+          "text": "But the human mind can glimpse a rapidly changing scene and immediately disregard the 98 percent that is irrelevant, ",
+          "emotion": "serious",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 6.529
+        },
+        {
+          "id": "s15-02",
+          "text": "instantaneously focusing on the monkey at the side of a winding forest road or the single suspicious face in a big crowd.",
+          "emotion": "serious",
+          "intensity": 1,
+          "start": 6.529,
+          "end": 13.652
+        }
+      ],
+      "actor_id": "08",
+      "actor_sequence": [
+        "08",
+        "08"
+      ],
+      "emotion": "serious",
+      "intensity": 1,
+      "c_mode_version": "v3-content-cast",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    },
+    "s16": {
+      "id": "s16",
+      "path": "./audio/2002/c-text2/v3-s16.opus",
+      "mp3_path": "./audio/2002/c-text2/v3-s16.mp3",
+      "duration_seconds": 8.011,
+      "files": {
+        "v3-s16.opus": "58bd0fe6c1b22d1d74b79085b63143a8a7c671d1c1fd75eff9ea053985661304",
+        "v3-s16.mp3": "d67d6f9dee364760a2eb5d4093aae6a4ca525f3df7aebaa76c500a502bbee0f8"
+      },
+      "cues": [
+        {
+          "id": "s16-01",
+          "text": "The most advanced computer systems on Earth can't approach that kind of ability, ",
+          "emotion": "warm",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 4.45
+        },
+        {
+          "id": "s16-02",
+          "text": "and neuroscientists still don’t know quite how we do it.",
+          "emotion": "warm",
+          "intensity": 1,
+          "start": 4.45,
+          "end": 8.011
+        }
+      ],
+      "actor_id": "08",
+      "actor_sequence": [
+        "08",
+        "08"
+      ],
+      "emotion": "warm",
+      "intensity": 1,
+      "c_mode_version": "v3-content-cast",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    }
+  },
+  "c_mode_version": "v3-content-cast",
+  "v3_missing_segments": [],
+  "v3_rejected": [],
+  "v3_status": "complete_candidate"
 }

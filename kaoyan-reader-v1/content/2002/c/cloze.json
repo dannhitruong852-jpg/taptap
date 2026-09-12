@@ -8,18 +8,18 @@
     2
   ],
   "accent": "en-US",
-  "primary_actor_id": "05",
-  "article_context": "把印刷、报纸与电子传播放回历史进程中理解。先铺陈时间线，再突出计算机带来的变化；复杂处自然稍缓，不采用教学慢速。完型已依据可追溯答案还原，选项不进入阅读页面。",
+  "primary_actor_id": "04",
+  "article_context": "把印刷、报纸与电子传播放回历史进程中理解。主讲人04以冷静、克制的纪录片式女声铺开时间线，再突出计算机带来的变化；复杂处自然稍缓，不采用教学慢速。完型已依据可追溯答案还原，选项不进入阅读页面。",
   "article": {
     "year": 2002,
     "section": "cloze",
     "title": "完型 · 传播技术的演变",
-    "background": "把印刷、报纸与电子传播放回历史进程中理解。先铺陈时间线，再突出计算机带来的变化；复杂处自然稍缓，不采用教学慢速。完型已依据可追溯答案还原，选项不进入阅读页面。"
+    "background": "把印刷、报纸与电子传播放回历史进程中理解。主讲人04以冷静、克制的纪录片式女声铺开时间线，再突出计算机带来的变化；复杂处自然稍缓，不采用教学慢速。完型已依据可追溯答案还原，选项不进入阅读页面。"
   },
   "editorial_status": "reviewed_candidate",
-  "audio_status": "not_rendered",
+  "audio_status": "v3_render_pending",
   "vocabulary_scale": "project-curated-1-9-v1",
-  "reference_pack_status": "three licensed pilot voices; not the full 15-actor pack",
+  "reference_pack_status": "2002 C v3 content-selected cast: six primary narrators plus explicit dialogue roles; full 15-slot registry remains available for other articles",
   "sentences": [
     {
       "id": "s01",
@@ -48,23 +48,23 @@
           "id": "s01-01",
           "text": "Comparisons were drawn between the development of television in the 20th century ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "04",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.98,
           "exaggeration": 0.57,
           "cfg_weight": 0.44,
           "pause_before_ms": 0,
-          "pause_after_ms": 95,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-cloze/s01-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s01-02",
           "text": "and the diffusion of printing in the 15th and 16th centuries.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "04",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.96,
@@ -73,8 +73,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-cloze/s01-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -96,7 +96,7 @@
           "id": "s02-01",
           "text": "Yet much had happened between.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "04",
           "emotion": "serious",
           "intensity": 1,
           "rate": 0.98,
@@ -105,8 +105,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-cloze/s02-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -169,23 +169,23 @@
           "id": "s03-01",
           "text": "As was discussed before, it was not until the 19th century that the newspaper became the dominant pre-electronic medium, ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "04",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 1.0,
           "exaggeration": 0.52,
           "cfg_weight": 0.46,
           "pause_before_ms": 0,
-          "pause_after_ms": 65,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-cloze/s03-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s03-02",
           "text": "following in the wake of the pamphlet and the book and in the company of the periodical.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "04",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.98,
@@ -194,8 +194,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-cloze/s03-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -228,39 +228,39 @@
           "id": "s04-01",
           "text": "It was during the same time that the communications revolution speeded up, ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "04",
           "emotion": "lively",
           "intensity": 1,
           "rate": 1.03,
           "exaggeration": 0.55,
           "cfg_weight": 0.45,
           "pause_before_ms": 0,
-          "pause_after_ms": 65,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-cloze/s04-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s04-02",
           "text": "beginning with transport, the railway, and leading on through the telegraph, the telephone, radio, and motion pictures ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "04",
           "emotion": "lively",
           "intensity": 1,
           "rate": 1.03,
           "exaggeration": 0.55,
           "cfg_weight": 0.45,
           "pause_before_ms": 0,
-          "pause_after_ms": 65,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-cloze/s04-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s04-03",
           "text": "into the 20th-century world of the motor car and the air plane.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "04",
           "emotion": "lively",
           "intensity": 1,
           "rate": 1.03,
@@ -269,8 +269,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-cloze/s04-03.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -301,7 +301,7 @@
           "id": "s05-01",
           "text": "Not everyone sees that process in perspective.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "04",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.97,
@@ -310,8 +310,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-cloze/s05-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -332,7 +332,7 @@
           "id": "s06-01",
           "text": "It is important to do so.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "04",
           "emotion": "warm",
           "intensity": 1,
           "rate": 0.97,
@@ -341,8 +341,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-cloze/s06-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -398,39 +398,39 @@
           "id": "s07-01",
           "text": "It is generally recognized, however, that the introduction of the computer in the early 20th century, ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "04",
           "emotion": "serious",
           "intensity": 1,
           "rate": 0.98,
           "exaggeration": 0.61,
           "cfg_weight": 0.43,
           "pause_before_ms": 0,
-          "pause_after_ms": 130,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-cloze/s07-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s07-02",
           "text": "followed by the invention of the integrated circuit during the 1960s, radically changed the process, ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "04",
           "emotion": "serious",
           "intensity": 1,
           "rate": 0.98,
           "exaggeration": 0.61,
           "cfg_weight": 0.43,
           "pause_before_ms": 0,
-          "pause_after_ms": 130,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-cloze/s07-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s07-03",
           "text": "although its impact on the media was not immediately apparent.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "04",
           "emotion": "serious",
           "intensity": 1,
           "rate": 0.96,
@@ -439,8 +439,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-cloze/s07-03.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -480,39 +480,39 @@
           "id": "s08-01",
           "text": "As time went by, computers became smaller and more powerful, ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "04",
           "emotion": "lively",
           "intensity": 1,
           "rate": 1.02,
           "exaggeration": 0.55,
           "cfg_weight": 0.45,
           "pause_before_ms": 0,
-          "pause_after_ms": 65,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-cloze/s08-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s08-02",
           "text": "and they became “personal” too, as well as institutional, ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "04",
           "emotion": "lively",
           "intensity": 1,
           "rate": 1.02,
           "exaggeration": 0.55,
           "cfg_weight": 0.45,
           "pause_before_ms": 0,
-          "pause_after_ms": 65,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-cloze/s08-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s08-03",
           "text": "with display becoming sharper and storage capacity increasing.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "04",
           "emotion": "lively",
           "intensity": 1,
           "rate": 1.02,
@@ -521,8 +521,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-cloze/s08-03.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -544,23 +544,23 @@
           "id": "s09-01",
           "text": "They were thought of, like people, in terms of generations, ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "04",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.98,
           "exaggeration": 0.57,
           "cfg_weight": 0.44,
           "pause_before_ms": 0,
-          "pause_after_ms": 95,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-cloze/s09-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s09-02",
           "text": "with the distance between generations much smaller.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "04",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.96,
@@ -569,8 +569,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-cloze/s09-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -601,23 +601,23 @@
           "id": "s10-01",
           "text": "It was within the computer age that the term “information society” began to be widely used ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "04",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 1.0,
           "exaggeration": 0.52,
           "cfg_weight": 0.46,
           "pause_before_ms": 0,
-          "pause_after_ms": 65,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-cloze/s10-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s10-02",
           "text": "to describe the context within which we now live.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "04",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.98,
@@ -626,8 +626,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-cloze/s10-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -667,23 +667,23 @@
           "id": "s11-01",
           "text": "The communications revolution has influenced both work and leisure and how we think and feel both about place and time, ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "04",
           "emotion": "serious",
           "intensity": 1,
           "rate": 0.98,
           "exaggeration": 0.61,
           "cfg_weight": 0.43,
           "pause_before_ms": 0,
-          "pause_after_ms": 130,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-cloze/s11-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s11-02",
           "text": "but there have been controversial views about its economic, political, social and cultural implications.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "04",
           "emotion": "serious",
           "intensity": 1,
           "rate": 0.96,
@@ -692,8 +692,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-cloze/s11-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -715,7 +715,7 @@
           "id": "s12-01",
           "text": "“Benefits” have been weighed against “harmful” outcomes.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "04",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.98,
@@ -724,8 +724,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-cloze/s12-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -756,7 +756,7 @@
           "id": "s13-01",
           "text": "And generalizations have proved difficult.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "04",
           "emotion": "warm",
           "intensity": 1,
           "rate": 0.97,
@@ -765,8 +765,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-cloze/s13-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     }

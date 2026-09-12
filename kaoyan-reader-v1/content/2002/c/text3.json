@@ -7,18 +7,18 @@
     7
   ],
   "accent": "en-US",
-  "primary_actor_id": "13",
-  "article_context": "以一个带担忧的反问开场，再像日常讨论经济问题那样逐层解释。区分旧冲击与新条件、富裕经济体与新兴经济体；数字服务比较，不念成新闻播报。",
+  "primary_actor_id": "01",
+  "article_context": "以一个带担忧的反问开场，再像日常讨论经济问题那样逐层解释。主讲人01保持理性分析型男声，区分旧冲击与新条件、富裕经济体与新兴经济体；数字服务比较，不念成新闻播报。",
   "article": {
     "year": 2002,
     "section": "text3",
     "title": "阅读三 · 油价冲击为何不同",
-    "background": "以一个带担忧的反问开场，再像日常讨论经济问题那样逐层解释。区分旧冲击与新条件、富裕经济体与新兴经济体；数字服务比较，不念成新闻播报。"
+    "background": "以一个带担忧的反问开场，再像日常讨论经济问题那样逐层解释。主讲人01保持理性分析型男声，区分旧冲击与新条件、富裕经济体与新兴经济体；数字服务比较，不念成新闻播报。"
   },
   "editorial_status": "reviewed_candidate",
-  "audio_status": "not_rendered",
+  "audio_status": "v3_render_pending",
   "vocabulary_scale": "project-curated-1-9-v1",
-  "reference_pack_status": "three licensed pilot voices; not the full 15-actor pack",
+  "reference_pack_status": "2002 C v3 content-selected cast: six primary narrators plus explicit dialogue roles; full 15-slot registry remains available for other articles",
   "sentences": [
     {
       "id": "s01",
@@ -38,7 +38,7 @@
           "id": "s01-01",
           "text": "Could the bad old days of economic decline be about to return?",
           "speaker_role": "narrator",
-          "actor_id": "13",
+          "actor_id": "01",
           "emotion": "curious",
           "intensity": 1,
           "rate": 0.98,
@@ -47,8 +47,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text3/s01-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -80,23 +80,23 @@
           "id": "s02-01",
           "text": "Since OPEC agreed to supply-cuts in March, ",
           "speaker_role": "narrator",
-          "actor_id": "13",
+          "actor_id": "01",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.96,
           "exaggeration": 0.54,
           "cfg_weight": 0.47,
           "pause_before_ms": 0,
-          "pause_after_ms": 90,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text3/s02-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s02-02",
           "text": "the price of crude oil has jumped to almost $26 a barrel, up from less than $10 last December.",
           "speaker_role": "narrator",
-          "actor_id": "13",
+          "actor_id": "01",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.96,
@@ -105,8 +105,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text3/s02-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -137,23 +137,23 @@
           "id": "s03-01",
           "text": "This near-tripling of oil prices calls up scary memories of the 1973 oil shock, when prices quadrupled, ",
           "speaker_role": "narrator",
-          "actor_id": "13",
+          "actor_id": "01",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.98,
           "exaggeration": 0.57,
           "cfg_weight": 0.44,
           "pause_before_ms": 0,
-          "pause_after_ms": 95,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text3/s03-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s03-02",
           "text": "and 1979-1980, when they also almost tripled.",
           "speaker_role": "narrator",
-          "actor_id": "13",
+          "actor_id": "01",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.96,
@@ -162,8 +162,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text3/s03-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -202,7 +202,7 @@
           "id": "s04-01",
           "text": "Both previous shocks resulted in double-digit inflation and global economic decline.",
           "speaker_role": "narrator",
-          "actor_id": "13",
+          "actor_id": "01",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 1.0,
@@ -211,8 +211,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text3/s04-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -234,7 +234,7 @@
           "id": "s05-01",
           "text": "So where are the headlines warning of gloom and doom this time?",
           "speaker_role": "narrator",
-          "actor_id": "13",
+          "actor_id": "01",
           "emotion": "curious",
           "intensity": 1,
           "rate": 0.98,
@@ -243,8 +243,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text3/s05-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -275,7 +275,7 @@
           "id": "s06-01",
           "text": "The oil price was given another push up this week when Iraq suspended oil exports.",
           "speaker_role": "narrator",
-          "actor_id": "13",
+          "actor_id": "01",
           "emotion": "lively",
           "intensity": 1,
           "rate": 1.02,
@@ -284,8 +284,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text3/s06-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -316,23 +316,23 @@
           "id": "s07-01",
           "text": "Strengthening economic growth, at the same time as winter grips the northern hemisphere, ",
           "speaker_role": "narrator",
-          "actor_id": "13",
+          "actor_id": "01",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.97,
           "exaggeration": 0.5,
           "cfg_weight": 0.47,
           "pause_before_ms": 0,
-          "pause_after_ms": 85,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text3/s07-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s07-02",
           "text": "could push the price higher still in the short term.",
           "speaker_role": "narrator",
-          "actor_id": "13",
+          "actor_id": "01",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.95,
@@ -341,8 +341,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text3/s07-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -364,7 +364,7 @@
           "id": "s08-01",
           "text": "Yet there are good reasons to expect the economic consequences now to be less severe than in the 1970s.",
           "speaker_role": "narrator",
-          "actor_id": "13",
+          "actor_id": "01",
           "emotion": "serious",
           "intensity": 1,
           "rate": 0.98,
@@ -373,8 +373,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text3/s08-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -404,7 +404,7 @@
           "id": "s09-01",
           "text": "In most countries the cost of crude oil now accounts for a smaller share of the price of petrol than it did in the 1970s.",
           "speaker_role": "narrator",
-          "actor_id": "13",
+          "actor_id": "01",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.98,
@@ -413,8 +413,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text3/s09-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -453,23 +453,23 @@
           "id": "s10-01",
           "text": "In Europe, taxes account for up to four-fifths of the retail price, ",
           "speaker_role": "narrator",
-          "actor_id": "13",
+          "actor_id": "01",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 1.0,
           "exaggeration": 0.52,
           "cfg_weight": 0.46,
           "pause_before_ms": 0,
-          "pause_after_ms": 65,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text3/s10-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s10-02",
           "text": "so even quite big changes in the price of crude have a more muted effect on pump prices than in the past.",
           "speaker_role": "narrator",
-          "actor_id": "13",
+          "actor_id": "01",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.98,
@@ -478,8 +478,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text3/s10-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -501,23 +501,23 @@
           "id": "s11-01",
           "text": "Rich economies are also less dependent on oil than they were, ",
           "speaker_role": "narrator",
-          "actor_id": "13",
+          "actor_id": "01",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 1.0,
           "exaggeration": 0.52,
           "cfg_weight": 0.46,
           "pause_before_ms": 0,
-          "pause_after_ms": 65,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text3/s11-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s11-02",
           "text": "and so less sensitive to swings in the oil price.",
           "speaker_role": "narrator",
-          "actor_id": "13",
+          "actor_id": "01",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.98,
@@ -526,8 +526,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text3/s11-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -567,23 +567,23 @@
           "id": "s12-01",
           "text": "Energy conservation, a shift to other fuels and a decline in the importance of heavy, energy-intensive industries ",
           "speaker_role": "narrator",
-          "actor_id": "13",
+          "actor_id": "01",
           "emotion": "lively",
           "intensity": 1,
           "rate": 1.03,
           "exaggeration": 0.55,
           "cfg_weight": 0.45,
           "pause_before_ms": 0,
-          "pause_after_ms": 65,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text3/s12-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s12-02",
           "text": "have reduced oil consumption.",
           "speaker_role": "narrator",
-          "actor_id": "13",
+          "actor_id": "01",
           "emotion": "lively",
           "intensity": 1,
           "rate": 1.03,
@@ -592,8 +592,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text3/s12-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -623,7 +623,7 @@
           "id": "s13-01",
           "text": "Software, consultancy and mobile telephones use far less oil than steel or car production.",
           "speaker_role": "narrator",
-          "actor_id": "13",
+          "actor_id": "01",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.98,
@@ -632,8 +632,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text3/s13-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -655,7 +655,7 @@
           "id": "s14-01",
           "text": "For each dollar of GDP (in constant prices) rich economies now use nearly 50% less oil than in 1973.",
           "speaker_role": "narrator",
-          "actor_id": "13",
+          "actor_id": "01",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.96,
@@ -664,8 +664,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text3/s14-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -687,39 +687,39 @@
           "id": "s15-01",
           "text": "The OECD estimates in its latest Economic Outlook that, ",
           "speaker_role": "narrator",
-          "actor_id": "13",
+          "actor_id": "01",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.96,
           "exaggeration": 0.54,
           "cfg_weight": 0.47,
           "pause_before_ms": 0,
-          "pause_after_ms": 90,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text3/s15-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s15-02",
           "text": "if oil prices averaged $22 a barrel for a full year, compared with $13 in 1998, ",
           "speaker_role": "narrator",
-          "actor_id": "13",
+          "actor_id": "01",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.96,
           "exaggeration": 0.54,
           "cfg_weight": 0.47,
           "pause_before_ms": 0,
-          "pause_after_ms": 90,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text3/s15-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s15-03",
           "text": "this would increase the oil import bill in rich economies by only 0.25-0.5% of GDP.",
           "speaker_role": "narrator",
-          "actor_id": "13",
+          "actor_id": "01",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.96,
@@ -728,8 +728,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text3/s15-03.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -750,7 +750,7 @@
           "id": "s16-01",
           "text": "That is less than one-quarter of the income loss in 1974 or 1980.",
           "speaker_role": "narrator",
-          "actor_id": "13",
+          "actor_id": "01",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.98,
@@ -759,8 +759,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text3/s16-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -792,23 +792,23 @@
           "id": "s17-01",
           "text": "On the other hand, oil-importing emerging economies—to which heavy industry has shifted—",
           "speaker_role": "narrator",
-          "actor_id": "13",
+          "actor_id": "01",
           "emotion": "serious",
           "intensity": 1,
           "rate": 0.98,
           "exaggeration": 0.61,
           "cfg_weight": 0.43,
           "pause_before_ms": 0,
-          "pause_after_ms": 130,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text3/s17-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s17-02",
           "text": "have become more energy-intensive, and so could be more seriously squeezed.",
           "speaker_role": "narrator",
-          "actor_id": "13",
+          "actor_id": "01",
           "emotion": "serious",
           "intensity": 1,
           "rate": 0.96,
@@ -817,8 +817,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text3/s17-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -849,23 +849,23 @@
           "id": "s18-01",
           "text": "One more reason not to lose sleep over the rise in oil prices is that, ",
           "speaker_role": "narrator",
-          "actor_id": "13",
+          "actor_id": "01",
           "emotion": "serious",
           "intensity": 1,
           "rate": 0.98,
           "exaggeration": 0.61,
           "cfg_weight": 0.43,
           "pause_before_ms": 0,
-          "pause_after_ms": 130,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text3/s18-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s18-02",
           "text": "unlike the rises in the 1970s, it has not occurred against the background of general commodity-price inflation and global excess demand.",
           "speaker_role": "narrator",
-          "actor_id": "13",
+          "actor_id": "01",
           "emotion": "serious",
           "intensity": 1,
           "rate": 0.96,
@@ -874,8 +874,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text3/s18-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -905,7 +905,7 @@
           "id": "s19-01",
           "text": "A sizable portion of the world is only just emerging from economic decline.",
           "speaker_role": "narrator",
-          "actor_id": "13",
+          "actor_id": "01",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.97,
@@ -914,8 +914,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text3/s19-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -945,7 +945,7 @@
           "id": "s20-01",
           "text": "The Economist’s commodity price index is broadly unchanging from a year ago.",
           "speaker_role": "narrator",
-          "actor_id": "13",
+          "actor_id": "01",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.96,
@@ -954,8 +954,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text3/s20-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -986,7 +986,7 @@
           "id": "s21-01",
           "text": "In 1973 commodity prices jumped by 70%, and in 1979 by almost 30%.",
           "speaker_role": "narrator",
-          "actor_id": "13",
+          "actor_id": "01",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.98,
@@ -995,8 +995,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text3/s21-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     }

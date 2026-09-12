@@ -8,17 +8,17 @@
   ],
   "accent": "en-US",
   "primary_actor_id": "05",
-  "article_context": "像面对面分享演讲经验。叙述本身也有重点和起伏；天堂故事先舒展铺垫，到插队动作加快，再克制地落下笑点。主讲人05、新来者12、圣彼得13，不能靠频繁换声代替韵律。",
+  "article_context": "像面对面分享演讲经验。主讲人05保持清晰、有节奏的演讲型男声；天堂故事先舒展铺垫，到插队动作加快，再克制地落下笑点。新来者12、圣彼得13，只有真实角色变化才换声。",
   "article": {
     "year": 2002,
     "section": "text1",
     "title": "阅读一 · 如何恰当地运用幽默",
-    "background": "像面对面分享演讲经验。叙述本身也有重点和起伏；天堂故事先舒展铺垫，到插队动作加快，再克制地落下笑点。主讲人05、新来者12、圣彼得13，不能靠频繁换声代替韵律。"
+    "background": "像面对面分享演讲经验。主讲人05保持清晰、有节奏的演讲型男声；天堂故事先舒展铺垫，到插队动作加快，再克制地落下笑点。新来者12、圣彼得13，只有真实角色变化才换声。"
   },
   "editorial_status": "reviewed_candidate",
-  "audio_status": "not_rendered",
+  "audio_status": "v3_render_pending",
   "vocabulary_scale": "project-curated-1-9-v1",
-  "reference_pack_status": "three licensed pilot voices; not the full 15-actor pack",
+  "reference_pack_status": "2002 C v3 content-selected cast: six primary narrators plus explicit dialogue roles; full 15-slot registry remains available for other articles",
   "sentences": [
     {
       "id": "s01",
@@ -44,10 +44,10 @@
           "exaggeration": 0.52,
           "cfg_weight": 0.46,
           "pause_before_ms": 0,
-          "pause_after_ms": 65,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s01-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s01-02",
@@ -62,8 +62,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s01-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -101,10 +101,10 @@
           "exaggeration": 0.6,
           "cfg_weight": 0.43,
           "pause_before_ms": 0,
-          "pause_after_ms": 90,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s02-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s02-02",
@@ -119,8 +119,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s02-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -151,8 +151,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s03-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -199,10 +199,10 @@
           "exaggeration": 0.57,
           "cfg_weight": 0.44,
           "pause_before_ms": 0,
-          "pause_after_ms": 95,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s04-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s04-02",
@@ -217,8 +217,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s04-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -256,10 +256,10 @@
           "exaggeration": 0.56,
           "cfg_weight": 0.44,
           "pause_before_ms": 0,
-          "pause_after_ms": 75,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s05-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s05-02",
@@ -274,8 +274,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s05-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -306,8 +306,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s06-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -348,8 +348,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s07-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -390,10 +390,10 @@
           "exaggeration": 0.48,
           "cfg_weight": 0.48,
           "pause_before_ms": 0,
-          "pause_after_ms": 70,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s08-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s08-02",
@@ -406,10 +406,10 @@
           "exaggeration": 0.6,
           "cfg_weight": 0.44,
           "pause_before_ms": 0,
-          "pause_after_ms": 70,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s08-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s08-03",
@@ -424,8 +424,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s08-03.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -453,10 +453,10 @@
           "exaggeration": 0.6,
           "cfg_weight": 0.43,
           "pause_before_ms": 0,
-          "pause_after_ms": 85,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s09-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s09-02",
@@ -471,8 +471,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s09-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -502,10 +502,10 @@
           "exaggeration": 0.65,
           "cfg_weight": 0.39,
           "pause_before_ms": 0,
-          "pause_after_ms": 180,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s10-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s10-02",
@@ -518,10 +518,10 @@
           "exaggeration": 0.5,
           "cfg_weight": 0.39,
           "pause_before_ms": 0,
-          "pause_after_ms": 180,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s10-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s10-03",
@@ -536,8 +536,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s10-03.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -592,10 +592,10 @@
           "exaggeration": 0.52,
           "cfg_weight": 0.46,
           "pause_before_ms": 0,
-          "pause_after_ms": 65,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s11-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s11-02",
@@ -608,10 +608,10 @@
           "exaggeration": 0.52,
           "cfg_weight": 0.46,
           "pause_before_ms": 0,
-          "pause_after_ms": 65,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s11-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s11-03",
@@ -626,8 +626,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s11-03.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -682,10 +682,10 @@
           "exaggeration": 0.57,
           "cfg_weight": 0.45,
           "pause_before_ms": 0,
-          "pause_after_ms": 105,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s12-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s12-02",
@@ -700,8 +700,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s12-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -741,8 +741,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s13-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -782,8 +782,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s14-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -829,10 +829,10 @@
           "exaggeration": 0.52,
           "cfg_weight": 0.46,
           "pause_before_ms": 0,
-          "pause_after_ms": 65,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s15-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s15-02",
@@ -847,8 +847,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s15-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -895,10 +895,10 @@
           "exaggeration": 0.6,
           "cfg_weight": 0.43,
           "pause_before_ms": 0,
-          "pause_after_ms": 90,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s16-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s16-02",
@@ -913,8 +913,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s16-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -944,8 +944,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s17-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -975,8 +975,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s18-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -1005,10 +1005,10 @@
           "exaggeration": 0.62,
           "cfg_weight": 0.41,
           "pause_before_ms": 0,
-          "pause_after_ms": 130,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s19-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s19-02",
@@ -1023,8 +1023,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s19-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -1072,8 +1072,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s20-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -1113,8 +1113,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text1/s21-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     }

@@ -7,18 +7,18 @@
     9
   ],
   "accent": "en-US",
-  "primary_actor_id": "05",
-  "article_context": "这是历史试卷中的医疗伦理讨论，不是现实医疗建议。用有温度但克制的解释语气，清楚区分意图与风险、镇痛与延长痛苦。乔治·安纳斯的直接引语使用13号，其余保持主讲05号。",
+  "primary_actor_id": "09",
+  "article_context": "这是历史试卷中的医疗伦理讨论，不是现实医疗建议。主讲人09用有分量但克制的政策伦理评论男声，清楚区分意图与风险、镇痛与延长痛苦；乔治·安纳斯的直接引语使用13号。",
   "article": {
     "year": 2002,
     "section": "text4",
     "title": "阅读四 · 临终照护与医疗责任",
-    "background": "这是历史试卷中的医疗伦理讨论，不是现实医疗建议。用有温度但克制的解释语气，清楚区分意图与风险、镇痛与延长痛苦。乔治·安纳斯的直接引语使用13号，其余保持主讲05号。"
+    "background": "这是历史试卷中的医疗伦理讨论，不是现实医疗建议。主讲人09用有分量但克制的政策伦理评论男声，清楚区分意图与风险、镇痛与延长痛苦；乔治·安纳斯的直接引语使用13号。"
   },
   "editorial_status": "reviewed_candidate",
-  "audio_status": "not_rendered",
+  "audio_status": "v3_render_pending",
   "vocabulary_scale": "project-curated-1-9-v1",
-  "reference_pack_status": "three licensed pilot voices; not the full 15-actor pack",
+  "reference_pack_status": "2002 C v3 content-selected cast: six primary narrators plus explicit dialogue roles; full 15-slot registry remains available for other articles",
   "sentences": [
     {
       "id": "s01",
@@ -63,23 +63,23 @@
           "id": "s01-01",
           "text": "The Supreme Court’s decisions on physician-assisted suicide carry important implications ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "09",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 1.0,
           "exaggeration": 0.52,
           "cfg_weight": 0.46,
           "pause_before_ms": 0,
-          "pause_after_ms": 65,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text4/s01-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s01-02",
           "text": "for how medicine seeks to relieve dying patients of pain and suffering.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "09",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.98,
@@ -88,8 +88,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text4/s01-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -145,55 +145,55 @@
           "id": "s02-01",
           "text": "Although it ruled that there is no constitutional right to physician-assisted suicide, ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "09",
           "emotion": "serious",
           "intensity": 1,
           "rate": 0.98,
           "exaggeration": 0.61,
           "cfg_weight": 0.43,
           "pause_before_ms": 0,
-          "pause_after_ms": 130,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text4/s02-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s02-02",
           "text": "the Court in effect supported the medical principle of “double effect,” ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "09",
           "emotion": "serious",
           "intensity": 1,
           "rate": 0.98,
           "exaggeration": 0.61,
           "cfg_weight": 0.43,
           "pause_before_ms": 0,
-          "pause_after_ms": 130,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text4/s02-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s02-03",
           "text": "a centuries-old moral principle holding that an action having two effects—a good one that is intended and a harmful one that is foreseen—",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "09",
           "emotion": "serious",
           "intensity": 1,
           "rate": 0.98,
           "exaggeration": 0.61,
           "cfg_weight": 0.43,
           "pause_before_ms": 0,
-          "pause_after_ms": 130,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text4/s02-03.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s02-04",
           "text": "is permissible if the actor intends only the good effect.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "09",
           "emotion": "serious",
           "intensity": 1,
           "rate": 0.96,
@@ -202,8 +202,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text4/s02-04.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -250,23 +250,23 @@
           "id": "s03-01",
           "text": "Doctors have used that principle in recent years to justify using high doses of morphine to control terminally ill patients’ pain, ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "09",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.97,
           "exaggeration": 0.5,
           "cfg_weight": 0.47,
           "pause_before_ms": 0,
-          "pause_after_ms": 85,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text4/s03-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s03-02",
           "text": "even though increasing dosages will eventually kill the patient.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "09",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.95,
@@ -275,8 +275,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text4/s03-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -323,23 +323,23 @@
           "id": "s04-01",
           "text": "Nancy Dubler, director of Montefiore Medical Center, contends that the principle will shield doctors ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "09",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 1.0,
           "exaggeration": 0.5,
           "cfg_weight": 0.48,
           "pause_before_ms": 0,
-          "pause_after_ms": 75,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text4/s04-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s04-02",
           "text": "who “until now have very, very strongly insisted that they could not give patients sufficient medication to control their pain if that might hasten death”.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "09",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 1.0,
@@ -348,8 +348,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text4/s04-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -397,39 +397,39 @@
           "id": "s05-01",
           "text": "George Annas, chair of the health law department at Boston University, maintains that, ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "09",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 1.0,
           "exaggeration": 0.52,
           "cfg_weight": 0.46,
           "pause_before_ms": 0,
-          "pause_after_ms": 65,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text4/s05-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s05-02",
           "text": "as long as a doctor prescribes a drug for a legitimate medical purpose, ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "09",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 1.0,
           "exaggeration": 0.52,
           "cfg_weight": 0.46,
           "pause_before_ms": 0,
-          "pause_after_ms": 65,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text4/s05-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s05-03",
           "text": "the doctor has done nothing illegal even if the patient uses the drug to hasten death.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "09",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.98,
@@ -438,8 +438,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text4/s05-03.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -467,16 +467,16 @@
           "exaggeration": 0.6,
           "cfg_weight": 0.43,
           "pause_before_ms": 0,
-          "pause_after_ms": 85,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text4/s06-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s06-02",
           "text": "he says.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "09",
           "emotion": "curious",
           "intensity": 1,
           "rate": 1.0,
@@ -485,8 +485,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text4/s06-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -524,10 +524,10 @@
           "exaggeration": 0.57,
           "cfg_weight": 0.43,
           "pause_before_ms": 0,
-          "pause_after_ms": 95,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text4/s07-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s07-02",
@@ -542,8 +542,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text4/s07-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -600,8 +600,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text4/s08-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -633,23 +633,23 @@
           "id": "s09-01",
           "text": "On another level, many in the medical community acknowledge that the assisted-suicide debate ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "09",
           "emotion": "serious",
           "intensity": 1,
           "rate": 0.98,
           "exaggeration": 0.61,
           "cfg_weight": 0.43,
           "pause_before_ms": 0,
-          "pause_after_ms": 130,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text4/s09-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s09-02",
           "text": "has been fueled in part by the despair of patients for whom modern medicine has prolonged the physical agony of dying.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "09",
           "emotion": "serious",
           "intensity": 1,
           "rate": 0.96,
@@ -658,8 +658,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text4/s09-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -698,23 +698,23 @@
           "id": "s10-01",
           "text": "Just three weeks before the Court’s ruling on physician-assisted suicide, ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "09",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 1.0,
           "exaggeration": 0.5,
           "cfg_weight": 0.48,
           "pause_before_ms": 0,
-          "pause_after_ms": 75,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text4/s10-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s10-02",
           "text": "the National Academy of Science (NAS) released a two-volume report, Approaching Death: Improving Care at the End of Life.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "09",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 1.0,
@@ -723,8 +723,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text4/s10-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -780,23 +780,23 @@
           "id": "s11-01",
           "text": "It identifies the undertreatment of pain and the aggressive use of “ineffectual and forced medical procedures ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "09",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.98,
           "exaggeration": 0.57,
           "cfg_weight": 0.44,
           "pause_before_ms": 0,
-          "pause_after_ms": 95,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text4/s11-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s11-02",
           "text": "that may prolong and even dishonor the period of dying” as the twin problems of end-of-life care.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "09",
           "emotion": "neutral",
           "intensity": 1,
           "rate": 0.96,
@@ -805,8 +805,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text4/s11-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -854,39 +854,39 @@
           "id": "s12-01",
           "text": "The profession is taking steps to require young doctors to train in hospices, ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "09",
           "emotion": "lively",
           "intensity": 1,
           "rate": 1.03,
           "exaggeration": 0.55,
           "cfg_weight": 0.45,
           "pause_before_ms": 0,
-          "pause_after_ms": 65,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text4/s12-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s12-02",
           "text": "to test knowledge of aggressive pain management therapies, to develop a Medicare billing code for hospital-based care, ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "09",
           "emotion": "lively",
           "intensity": 1,
           "rate": 1.03,
           "exaggeration": 0.55,
           "cfg_weight": 0.45,
           "pause_before_ms": 0,
-          "pause_after_ms": 65,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text4/s12-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s12-03",
           "text": "and to develop new standards for assessing and treating pain at the end of life.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "09",
           "emotion": "lively",
           "intensity": 1,
           "rate": 1.03,
@@ -895,8 +895,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text4/s12-03.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -926,7 +926,7 @@
           "id": "s13-01",
           "text": "Annas says lawyers can play a key role in insisting that these well-meaning medical initiatives translate into better care.",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "09",
           "emotion": "warm",
           "intensity": 1,
           "rate": 0.97,
@@ -935,8 +935,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text4/s13-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -990,10 +990,10 @@
           "exaggeration": 0.62,
           "cfg_weight": 0.43,
           "pause_before_ms": 0,
-          "pause_after_ms": 115,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text4/s14-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s14-02",
@@ -1008,8 +1008,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text4/s14-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     },
@@ -1057,23 +1057,23 @@
           "id": "s15-01",
           "text": "He says medical licensing boards “must make it clear...that painful deaths are presumptively ones ",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "09",
           "emotion": "serious",
           "intensity": 1,
           "rate": 0.97,
           "exaggeration": 0.57,
           "cfg_weight": 0.45,
           "pause_before_ms": 0,
-          "pause_after_ms": 105,
+          "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text4/s15-01.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         },
         {
           "id": "s15-02",
           "text": "that are incompetently managed and should result in license suspension.”",
           "speaker_role": "narrator",
-          "actor_id": "05",
+          "actor_id": "09",
           "emotion": "serious",
           "intensity": 1,
           "rate": 0.97,
@@ -1082,8 +1082,8 @@
           "pause_before_ms": 0,
           "pause_after_ms": 0,
           "audio_path": "./audio/2002/c-text4/s15-02.opus",
-          "generation_fingerprint": "pending-render",
-          "qa_status": "not_generated"
+          "generation_fingerprint": "pending-v3-render",
+          "qa_status": "not_generated_v3"
         }
       ]
     }

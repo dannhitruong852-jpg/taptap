@@ -876,9 +876,13 @@
   "sentences": {
     "s01": {
       "id": "s01",
-      "path": "./audio/2002/c-text1/v2-s01.opus",
-      "mp3_path": "./audio/2002/c-text1/v2-s01.mp3",
-      "duration_seconds": 6.837,
+      "path": "./audio/2002/c-text1/v3-s01.opus",
+      "mp3_path": "./audio/2002/c-text1/v3-s01.mp3",
+      "duration_seconds": 5.837,
+      "files": {
+        "v3-s01.opus": "5ae8e54e50e280dc5f36d55859d2177298a5c6f32af861bd7fb5a639d2459e27",
+        "v3-s01.mp3": "8bbd3b63ff330765c3b8734a331fca2356ccc034ac791834ab1ee6fd8b463d99"
+      },
       "cues": [
         {
           "id": "s01-01",
@@ -886,30 +890,38 @@
           "emotion": "neutral",
           "intensity": 1,
           "start": 0.0,
-          "end": 3.418
+          "end": 2.68
         },
         {
           "id": "s01-02",
           "text": "you must know how to identify shared experiences and problems.",
           "emotion": "neutral",
           "intensity": 1,
-          "start": 3.418,
-          "end": 6.837
+          "start": 2.68,
+          "end": 5.837
         }
       ],
       "actor_id": "05",
+      "actor_sequence": [
+        "05",
+        "05"
+      ],
       "emotion": "neutral",
       "intensity": 1,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     },
     "s02": {
       "id": "s02",
-      "path": "./audio/2002/c-text1/v2-s02.opus",
-      "mp3_path": "./audio/2002/c-text1/v2-s02.mp3",
-      "duration_seconds": 8.237,
+      "path": "./audio/2002/c-text1/v3-s02.opus",
+      "mp3_path": "./audio/2002/c-text1/v3-s02.mp3",
+      "duration_seconds": 9.478,
+      "files": {
+        "v3-s02.opus": "213d2e2a5b3d07124dce13b2148f44802e7a625e1eb4713f0c4b01cf9664d768",
+        "v3-s02.mp3": "b90176b865344be27ff384edc2c6b8877842b3144b7d095cfa8e4aac609d5459"
+      },
       "cues": [
         {
           "id": "s02-01",
@@ -917,30 +929,38 @@
           "emotion": "warm",
           "intensity": 1,
           "start": 0.0,
-          "end": 2.46
+          "end": 2.351
         },
         {
           "id": "s02-02",
           "text": "and should help to show them that you are one of them or that you understand their situation and are in sympathy with their point of view.",
           "emotion": "warm",
           "intensity": 1,
-          "start": 2.46,
-          "end": 8.237
+          "start": 2.351,
+          "end": 9.478
         }
       ],
       "actor_id": "05",
+      "actor_sequence": [
+        "05",
+        "05"
+      ],
       "emotion": "warm",
       "intensity": 1,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     },
     "s03": {
       "id": "s03",
-      "path": "./audio/2002/c-text1/v2-s03.opus",
-      "mp3_path": "./audio/2002/c-text1/v2-s03.mp3",
-      "duration_seconds": 3.312,
+      "path": "./audio/2002/c-text1/v3-s03.opus",
+      "mp3_path": "./audio/2002/c-text1/v3-s03.mp3",
+      "duration_seconds": 2.857,
+      "files": {
+        "v3-s03.opus": "4e02e02cd383bea248e2b34f21dda54a8a4d0f2cc1286bd67b82f616c7214df2",
+        "v3-s03.mp3": "21f7af1bbde24763633fdd7710167fba92c2d19ab8fd3566b77d9c035653d934"
+      },
       "cues": [
         {
           "id": "s03-01",
@@ -948,22 +968,29 @@
           "emotion": "neutral",
           "intensity": 1,
           "start": 0.0,
-          "end": 3.312
+          "end": 2.857
         }
       ],
       "actor_id": "05",
+      "actor_sequence": [
+        "05"
+      ],
       "emotion": "neutral",
       "intensity": 1,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     },
     "s04": {
       "id": "s04",
-      "path": "./audio/2002/c-text1/v2-s04.opus",
-      "mp3_path": "./audio/2002/c-text1/v2-s04.mp3",
-      "duration_seconds": 11.254,
+      "path": "./audio/2002/c-text1/v3-s04.opus",
+      "mp3_path": "./audio/2002/c-text1/v3-s04.mp3",
+      "duration_seconds": 10.348,
+      "files": {
+        "v3-s04.opus": "a0e16e9a8039e2848f3e2ae610c8730e6c48b1e55926a567534a36515e761a33",
+        "v3-s04.mp3": "134061cda0ff275dad09d7b3a655acee94ae5c06b0ca12f7acac6fb75604d3a6"
+      },
       "cues": [
         {
           "id": "s04-01",
@@ -971,30 +998,38 @@
           "emotion": "neutral",
           "intensity": 1,
           "start": 0.0,
-          "end": 5.378
+          "end": 5.174
         },
         {
           "id": "s04-02",
           "text": "alternatively if you are addressing secretaries, you may want to comment on their disorganized bosses.",
           "emotion": "neutral",
           "intensity": 1,
-          "start": 5.378,
-          "end": 11.254
+          "start": 5.174,
+          "end": 10.348
         }
       ],
       "actor_id": "05",
+      "actor_sequence": [
+        "05",
+        "05"
+      ],
       "emotion": "neutral",
       "intensity": 1,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     },
     "s05": {
       "id": "s05",
-      "path": "./audio/2002/c-text1/v2-s05.opus",
-      "mp3_path": "./audio/2002/c-text1/v2-s05.mp3",
-      "duration_seconds": 7.045,
+      "path": "./audio/2002/c-text1/v3-s05.opus",
+      "mp3_path": "./audio/2002/c-text1/v3-s05.mp3",
+      "duration_seconds": 7.065,
+      "files": {
+        "v3-s05.opus": "0db1ccc79928d4d85709f3843c8fca9c6c55d5672f6a41d8026fecde4641d3e1",
+        "v3-s05.mp3": "231e5be17f4d15e08a03763718bbc2c2ea8fcfb9473150f59ba167693596b754"
+      },
       "cues": [
         {
           "id": "s05-01",
@@ -1002,30 +1037,38 @@
           "emotion": "warm",
           "intensity": 1,
           "start": 0.0,
-          "end": 2.883
+          "end": 3.141
         },
         {
           "id": "s05-02",
           "text": "of a story which works well because the audience all shared the same view of doctors.",
           "emotion": "warm",
           "intensity": 1,
-          "start": 2.883,
-          "end": 7.045
+          "start": 3.141,
+          "end": 7.065
         }
       ],
       "actor_id": "05",
+      "actor_sequence": [
+        "05",
+        "05"
+      ],
       "emotion": "warm",
       "intensity": 1,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     },
     "s06": {
       "id": "s06",
-      "path": "./audio/2002/c-text1/v2-s06.opus",
-      "mp3_path": "./audio/2002/c-text1/v2-s06.mp3",
-      "duration_seconds": 3.18,
+      "path": "./audio/2002/c-text1/v3-s06.opus",
+      "mp3_path": "./audio/2002/c-text1/v3-s06.mp3",
+      "duration_seconds": 4.314,
+      "files": {
+        "v3-s06.opus": "2c2e1d5782f772547ad10435f86d475d2e4d59fc4e5f2cb1774fcb8fb10a1b1e",
+        "v3-s06.mp3": "be5da2cf239f5d0c797efea4744a675e9609c54dfdf968baa7091d645e1a0892"
+      },
       "cues": [
         {
           "id": "s06-01",
@@ -1033,22 +1076,29 @@
           "emotion": "warm",
           "intensity": 1,
           "start": 0.0,
-          "end": 3.18
+          "end": 4.314
         }
       ],
       "actor_id": "05",
+      "actor_sequence": [
+        "05"
+      ],
       "emotion": "warm",
       "intensity": 1,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     },
     "s07": {
       "id": "s07",
-      "path": "./audio/2002/c-text1/v2-s07.opus",
-      "mp3_path": "./audio/2002/c-text1/v2-s07.mp3",
-      "duration_seconds": 4.109,
+      "path": "./audio/2002/c-text1/v3-s07.opus",
+      "mp3_path": "./audio/2002/c-text1/v3-s07.mp3",
+      "duration_seconds": 5.141,
+      "files": {
+        "v3-s07.opus": "78f16ddabb1aef29cf04c90bc18155b5565256a1111bf00422641bde93c67fd6",
+        "v3-s07.mp3": "8d040841125cb8c6958a23b989bc280a9c2ba0078ae38fbf1c83f92047d852b6"
+      },
       "cues": [
         {
           "id": "s07-01",
@@ -1056,22 +1106,29 @@
           "emotion": "warm",
           "intensity": 1,
           "start": 0.0,
-          "end": 4.109
+          "end": 5.141
         }
       ],
       "actor_id": "05",
+      "actor_sequence": [
+        "05"
+      ],
       "emotion": "warm",
       "intensity": 1,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     },
     "s08": {
       "id": "s08",
-      "path": "./audio/2002/c-text1/v2-s08.opus",
-      "mp3_path": "./audio/2002/c-text1/v2-s08.mp3",
-      "duration_seconds": 13.52,
+      "path": "./audio/2002/c-text1/v3-s08.opus",
+      "mp3_path": "./audio/2002/c-text1/v3-s08.mp3",
+      "duration_seconds": 18.165,
+      "files": {
+        "v3-s08.opus": "d62828c0819f5210caa4938dbe56fa1b23ba6d9f99d85991dcf463d4fd8eee25",
+        "v3-s08.mp3": "a6793f0a1d625dad7c0fff6fb87dd373bd549be4ab0b2ac076e9a931cffce23a"
+      },
       "cues": [
         {
           "id": "s08-01",
@@ -1079,38 +1136,47 @@
           "emotion": "warm",
           "intensity": 2,
           "start": 0.0,
-          "end": 2.394
+          "end": 3.873
         },
         {
           "id": "s08-02",
           "text": "until, waiting in a line for lunch, the new arrival is suddenly pushed aside by a man in a white coat, ",
           "emotion": "curious",
           "intensity": 2,
-          "start": 2.394,
-          "end": 8.454
+          "start": 3.873,
+          "end": 10.82
         },
         {
           "id": "s08-03",
           "text": "who rushes to the head of the line, grabs his food and stomps over to a table by himself.",
           "emotion": "lively",
           "intensity": 2,
-          "start": 8.454,
-          "end": 13.52
+          "start": 10.82,
+          "end": 18.165
         }
       ],
       "actor_id": "05",
+      "actor_sequence": [
+        "05",
+        "05",
+        "05"
+      ],
       "emotion": "warm",
       "intensity": 2,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     },
     "s09": {
       "id": "s09",
-      "path": "./audio/2002/c-text1/v2-s09.opus",
-      "mp3_path": "./audio/2002/c-text1/v2-s09.mp3",
-      "duration_seconds": 2.833,
+      "path": "./audio/2002/c-text1/v3-s09.opus",
+      "mp3_path": "./audio/2002/c-text1/v3-s09.mp3",
+      "duration_seconds": 3.521,
+      "files": {
+        "v3-s09.opus": "4d317ca9f53ed5751e6d8057a61c68363a90c6b71333f111da365459119f57c5",
+        "v3-s09.mp3": "3ac6ec476a34c20082cdc6e16e01c5aafc41c5429bce264d43dde96043cc6853"
+      },
       "cues": [
         {
           "id": "s09-01",
@@ -1118,30 +1184,38 @@
           "emotion": "curious",
           "intensity": 1,
           "start": 0.0,
-          "end": 0.874
+          "end": 1.512
         },
         {
           "id": "s09-02",
           "text": "the new arrival asked St. Peter.",
           "emotion": "curious",
           "intensity": 1,
-          "start": 0.874,
-          "end": 2.833
+          "start": 1.512,
+          "end": 3.521
         }
       ],
       "actor_id": "12",
+      "actor_sequence": [
+        "12",
+        "05"
+      ],
       "emotion": "curious",
       "intensity": 1,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     },
     "s10": {
       "id": "s10",
-      "path": "./audio/2002/c-text1/v2-s10.opus",
-      "mp3_path": "./audio/2002/c-text1/v2-s10.mp3",
-      "duration_seconds": 4.746,
+      "path": "./audio/2002/c-text1/v3-s10.opus",
+      "mp3_path": "./audio/2002/c-text1/v3-s10.mp3",
+      "duration_seconds": 5.236,
+      "files": {
+        "v3-s10.opus": "653d98f00824bc87a466893f863bf8b40460eec8f6131afdddd2a264452912fd",
+        "v3-s10.mp3": "c9a655ff8fe2dbca75b14ed4f9828fc52b6cd78e44adb212a614e5f275581644"
+      },
       "cues": [
         {
           "id": "s10-01",
@@ -1149,38 +1223,47 @@
           "emotion": "ironic",
           "intensity": 2,
           "start": 0.0,
-          "end": 1.872
+          "end": 1.944
         },
         {
           "id": "s10-02",
           "text": "came the reply, ",
           "emotion": "neutral",
           "intensity": 2,
-          "start": 1.872,
-          "end": 2.804
+          "start": 1.944,
+          "end": 3.195
         },
         {
           "id": "s10-03",
           "text": "“but sometimes he thinks he’s a doctor.”",
           "emotion": "ironic",
           "intensity": 2,
-          "start": 2.804,
-          "end": 4.746
+          "start": 3.195,
+          "end": 5.236
         }
       ],
       "actor_id": "13",
+      "actor_sequence": [
+        "13",
+        "05",
+        "13"
+      ],
       "emotion": "ironic",
       "intensity": 2,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     },
     "s11": {
       "id": "s11",
-      "path": "./audio/2002/c-text1/v2-s11.opus",
-      "mp3_path": "./audio/2002/c-text1/v2-s11.mp3",
-      "duration_seconds": 14.503,
+      "path": "./audio/2002/c-text1/v3-s11.opus",
+      "mp3_path": "./audio/2002/c-text1/v3-s11.mp3",
+      "duration_seconds": 12.704,
+      "files": {
+        "v3-s11.opus": "20a8e14b3bd4f1a5d01bf70d3835577c7dcf449196955f72f1eb67d09d548556",
+        "v3-s11.mp3": "b558bc0fbb8c9098f8de886853c4c818088b07c2dce5841972876d182090494f"
+      },
       "cues": [
         {
           "id": "s11-01",
@@ -1188,38 +1271,47 @@
           "emotion": "neutral",
           "intensity": 1,
           "start": 0.0,
-          "end": 2.336
+          "end": 2.192
         },
         {
           "id": "s11-02",
           "text": "you will be in a position to know the experiences and problems which are common to all of you ",
           "emotion": "neutral",
           "intensity": 1,
-          "start": 2.336,
-          "end": 6.789
+          "start": 2.192,
+          "end": 6.061
         },
         {
           "id": "s11-03",
           "text": "and it’ll be appropriate for you to make a passing remark about the inedible canteen food or the chairman’s notorious bad taste in ties.",
           "emotion": "neutral",
           "intensity": 1,
-          "start": 6.789,
-          "end": 14.503
+          "start": 6.061,
+          "end": 12.704
         }
       ],
       "actor_id": "05",
+      "actor_sequence": [
+        "05",
+        "05",
+        "05"
+      ],
       "emotion": "neutral",
       "intensity": 1,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     },
     "s12": {
       "id": "s12",
-      "path": "./audio/2002/c-text1/v2-s12.opus",
-      "mp3_path": "./audio/2002/c-text1/v2-s12.mp3",
-      "duration_seconds": 7.604,
+      "path": "./audio/2002/c-text1/v3-s12.opus",
+      "mp3_path": "./audio/2002/c-text1/v3-s12.mp3",
+      "duration_seconds": 8.075,
+      "files": {
+        "v3-s12.opus": "8da0dec0c815ee464ed211a01ab77ff8d5fcf478491ccded09577375aec50e46",
+        "v3-s12.mp3": "a20739ccb46a88b3095439209e9eb47053afbb3f28c416ea3a38540907556e40"
+      },
       "cues": [
         {
           "id": "s12-01",
@@ -1227,30 +1319,38 @@
           "emotion": "serious",
           "intensity": 1,
           "start": 0.0,
-          "end": 3.063
+          "end": 2.835
         },
         {
           "id": "s12-02",
           "text": "as they will resent an outsider making disparaging remarks about their canteen or their chairman.",
           "emotion": "serious",
           "intensity": 1,
-          "start": 3.063,
-          "end": 7.604
+          "start": 2.835,
+          "end": 8.075
         }
       ],
       "actor_id": "05",
+      "actor_sequence": [
+        "05",
+        "05"
+      ],
       "emotion": "serious",
       "intensity": 1,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     },
     "s13": {
       "id": "s13",
-      "path": "./audio/2002/c-text1/v2-s13.opus",
-      "mp3_path": "./audio/2002/c-text1/v2-s13.mp3",
-      "duration_seconds": 5.219,
+      "path": "./audio/2002/c-text1/v3-s13.opus",
+      "mp3_path": "./audio/2002/c-text1/v3-s13.mp3",
+      "duration_seconds": 6.193,
+      "files": {
+        "v3-s13.opus": "e5129e4c443abcd10be49c8111cae0c54c77da0dfc2eafbecc97f7c8733a4c75",
+        "v3-s13.mp3": "f56a6d6f4c68f0e50b168299f70f723e5634b49ab954de826595e0e70203320f"
+      },
       "cues": [
         {
           "id": "s13-01",
@@ -1258,22 +1358,29 @@
           "emotion": "warm",
           "intensity": 1,
           "start": 0.0,
-          "end": 5.219
+          "end": 6.193
         }
       ],
       "actor_id": "05",
+      "actor_sequence": [
+        "05"
+      ],
       "emotion": "warm",
       "intensity": 1,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     },
     "s14": {
       "id": "s14",
-      "path": "./audio/2002/c-text1/v2-s14.opus",
-      "mp3_path": "./audio/2002/c-text1/v2-s14.mp3",
-      "duration_seconds": 4.609,
+      "path": "./audio/2002/c-text1/v3-s14.opus",
+      "mp3_path": "./audio/2002/c-text1/v3-s14.mp3",
+      "duration_seconds": 5.478,
+      "files": {
+        "v3-s14.opus": "64119bde8c41c8b80ffa4c8d44eaa5f083a48eda25242cadf44cee6265e086fb",
+        "v3-s14.mp3": "e1fbfcdcc82b8c70f1d8e122502eb8a2188c9482bc6fe3ce3df9044ba8b0ab2b"
+      },
       "cues": [
         {
           "id": "s14-01",
@@ -1281,22 +1388,29 @@
           "emotion": "warm",
           "intensity": 1,
           "start": 0.0,
-          "end": 4.609
+          "end": 5.478
         }
       ],
       "actor_id": "05",
+      "actor_sequence": [
+        "05"
+      ],
       "emotion": "warm",
       "intensity": 1,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     },
     "s15": {
       "id": "s15",
-      "path": "./audio/2002/c-text1/v2-s15.opus",
-      "mp3_path": "./audio/2002/c-text1/v2-s15.mp3",
-      "duration_seconds": 5.908,
+      "path": "./audio/2002/c-text1/v3-s15.opus",
+      "mp3_path": "./audio/2002/c-text1/v3-s15.mp3",
+      "duration_seconds": 5.733,
+      "files": {
+        "v3-s15.opus": "cf8302befd9a8170a80ab61eb2f0c4200cd5abac1fa28428399e9cc0268d4e00",
+        "v3-s15.mp3": "a16553231157f2abefc5f4bde8b4313583b53012c6d9b8952551ae3b0c0eefb2"
+      },
       "cues": [
         {
           "id": "s15-01",
@@ -1304,30 +1418,38 @@
           "emotion": "neutral",
           "intensity": 1,
           "start": 0.0,
-          "end": 3.248
+          "end": 2.997
         },
         {
           "id": "s15-02",
           "text": "which you can deliver in a relaxed and unforced manner.",
           "emotion": "neutral",
           "intensity": 1,
-          "start": 3.248,
-          "end": 5.908
+          "start": 2.997,
+          "end": 5.733
         }
       ],
       "actor_id": "05",
+      "actor_sequence": [
+        "05",
+        "05"
+      ],
       "emotion": "neutral",
       "intensity": 1,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     },
     "s16": {
       "id": "s16",
-      "path": "./audio/2002/c-text1/v2-s16.opus",
-      "mp3_path": "./audio/2002/c-text1/v2-s16.mp3",
-      "duration_seconds": 9.476,
+      "path": "./audio/2002/c-text1/v3-s16.opus",
+      "mp3_path": "./audio/2002/c-text1/v3-s16.mp3",
+      "duration_seconds": 11.627,
+      "files": {
+        "v3-s16.opus": "d0a6026733c765dc86d54f8a4b0ea37356ab6af529c8b7d17604ee796e8223ac",
+        "v3-s16.mp3": "767c10748f3f8a04e1540a26bf0fa8781a2e042800db0f13155e1a76027fcd51"
+      },
       "cues": [
         {
           "id": "s16-01",
@@ -1335,30 +1457,38 @@
           "emotion": "warm",
           "intensity": 1,
           "start": 0.0,
-          "end": 2.534
+          "end": 3.779
         },
         {
           "id": "s16-02",
           "text": "so speak slowly and remember that a raised eyebrow or an unbelieving look may help to show that you are making a light-hearted remark.",
           "emotion": "warm",
           "intensity": 1,
-          "start": 2.534,
-          "end": 9.476
+          "start": 3.779,
+          "end": 11.627
         }
       ],
       "actor_id": "05",
+      "actor_sequence": [
+        "05",
+        "05"
+      ],
       "emotion": "warm",
       "intensity": 1,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     },
     "s17": {
       "id": "s17",
-      "path": "./audio/2002/c-text1/v2-s17.opus",
-      "mp3_path": "./audio/2002/c-text1/v2-s17.mp3",
-      "duration_seconds": 1.42,
+      "path": "./audio/2002/c-text1/v3-s17.opus",
+      "mp3_path": "./audio/2002/c-text1/v3-s17.mp3",
+      "duration_seconds": 1.135,
+      "files": {
+        "v3-s17.opus": "8d799fb8652c283e1035d53c9f160833e005103b8c2e206e413107133130db0c",
+        "v3-s17.mp3": "27e82e14d1737f841e4823cb5c611701704202f8e1e4ff875db857ce0bf79e00"
+      },
       "cues": [
         {
           "id": "s17-01",
@@ -1366,22 +1496,29 @@
           "emotion": "warm",
           "intensity": 1,
           "start": 0.0,
-          "end": 1.42
+          "end": 1.135
         }
       ],
       "actor_id": "05",
+      "actor_sequence": [
+        "05"
+      ],
       "emotion": "warm",
       "intensity": 1,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     },
     "s18": {
       "id": "s18",
-      "path": "./audio/2002/c-text1/v2-s18.opus",
-      "mp3_path": "./audio/2002/c-text1/v2-s18.mp3",
-      "duration_seconds": 1.877,
+      "path": "./audio/2002/c-text1/v3-s18.opus",
+      "mp3_path": "./audio/2002/c-text1/v3-s18.mp3",
+      "duration_seconds": 3.015,
+      "files": {
+        "v3-s18.opus": "abb1e937b4ce3e22eeaedaaa5159b8976dc00db7f3607bdedc6111588debb829",
+        "v3-s18.mp3": "00a91fb9599d74e5d0549680445d2570af154f2af216f76bf4bceb7861287c09"
+      },
       "cues": [
         {
           "id": "s18-01",
@@ -1389,22 +1526,29 @@
           "emotion": "neutral",
           "intensity": 1,
           "start": 0.0,
-          "end": 1.877
+          "end": 3.015
         }
       ],
       "actor_id": "05",
+      "actor_sequence": [
+        "05"
+      ],
       "emotion": "neutral",
       "intensity": 1,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     },
     "s19": {
       "id": "s19",
-      "path": "./audio/2002/c-text1/v2-s19.opus",
-      "mp3_path": "./audio/2002/c-text1/v2-s19.mp3",
-      "duration_seconds": 6.441,
+      "path": "./audio/2002/c-text1/v3-s19.opus",
+      "mp3_path": "./audio/2002/c-text1/v3-s19.mp3",
+      "duration_seconds": 6.338,
+      "files": {
+        "v3-s19.opus": "03e78fff0ee2d54f54a3f0a6dbde3422fc704f2dca99c33660f01c157be8ca6f",
+        "v3-s19.mp3": "d4f80003c11156dd34ddc5ec74a2f190a6c11120dfe3f197ebf83bc3873400ee"
+      },
       "cues": [
         {
           "id": "s19-01",
@@ -1412,30 +1556,38 @@
           "emotion": "lively",
           "intensity": 1,
           "start": 0.0,
-          "end": 3.953
+          "end": 3.993
         },
         {
           "id": "s19-02",
           "text": "or a play on words or on a situation.",
           "emotion": "lively",
           "intensity": 1,
-          "start": 3.953,
-          "end": 6.441
+          "start": 3.993,
+          "end": 6.338
         }
       ],
       "actor_id": "05",
+      "actor_sequence": [
+        "05",
+        "05"
+      ],
       "emotion": "lively",
       "intensity": 1,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     },
     "s20": {
       "id": "s20",
-      "path": "./audio/2002/c-text1/v2-s20.opus",
-      "mp3_path": "./audio/2002/c-text1/v2-s20.mp3",
-      "duration_seconds": 2.857,
+      "path": "./audio/2002/c-text1/v3-s20.opus",
+      "mp3_path": "./audio/2002/c-text1/v3-s20.mp3",
+      "duration_seconds": 2.457,
+      "files": {
+        "v3-s20.opus": "6eda1865db1be454e28dd938c6bd30d31a9968cfba79cd038f4739853b14719b",
+        "v3-s20.mp3": "a4cfed2aeed7bd7ad646a91dd889b803b176a317a799b9ada89788145fb37dae"
+      },
       "cues": [
         {
           "id": "s20-01",
@@ -1443,22 +1595,29 @@
           "emotion": "neutral",
           "intensity": 1,
           "start": 0.0,
-          "end": 2.857
+          "end": 2.457
         }
       ],
       "actor_id": "05",
+      "actor_sequence": [
+        "05"
+      ],
       "emotion": "neutral",
       "intensity": 1,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     },
     "s21": {
       "id": "s21",
-      "path": "./audio/2002/c-text1/v2-s21.opus",
-      "mp3_path": "./audio/2002/c-text1/v2-s21.mp3",
-      "duration_seconds": 5.085,
+      "path": "./audio/2002/c-text1/v3-s21.opus",
+      "mp3_path": "./audio/2002/c-text1/v3-s21.mp3",
+      "duration_seconds": 6.197,
+      "files": {
+        "v3-s21.opus": "a118526be715ed317426fe1c513525d2abfd546b347bc33b6411acd0d9996bf6",
+        "v3-s21.mp3": "772684b9e392d39c7e5b8180b3f40d6ecada9139de5cbca085bdfbd2cabad2c1"
+      },
       "cues": [
         {
           "id": "s21-01",
@@ -1466,20 +1625,26 @@
           "emotion": "warm",
           "intensity": 1,
           "start": 0.0,
-          "end": 5.085
+          "end": 6.197
         }
       ],
       "actor_id": "05",
+      "actor_sequence": [
+        "05"
+      ],
       "emotion": "warm",
       "intensity": 1,
-      "c_mode_version": "v2-pilot",
+      "c_mode_version": "v3-content-cast",
       "artificial_pause_ms": 0,
       "post_tempo": false,
       "qa_status": "candidate"
     }
   },
-  "c_mode_version": "v2-pilot",
+  "c_mode_version": "v3-content-cast",
   "v2_missing_segments": [],
   "v2_rejected": [],
-  "v2_status": "complete_candidate"
+  "v2_status": "complete_candidate",
+  "v3_missing_segments": [],
+  "v3_rejected": [],
+  "v3_status": "complete_candidate"
 }

@@ -296,5 +296,224 @@
   "asr_qa": "not_performed",
   "speaker_qa": "not_performed",
   "listening_qa": "pending_user_acceptance",
-  "status": "complete_candidate"
+  "status": "complete_candidate",
+  "sentences": {
+    "s01": {
+      "id": "s01",
+      "path": "./audio/2002/c-translation/v3-s01.opus",
+      "mp3_path": "./audio/2002/c-translation/v3-s01.mp3",
+      "duration_seconds": 9.923,
+      "files": {
+        "v3-s01.opus": "6ed896f50f095b0dae0010ed650b01b218ac4ef1ec1a0e841299d7fc29baf779",
+        "v3-s01.mp3": "1fb0a9b427d54abfb1e28bdd47b2a28b324e64ef2e67d02904e9fa701ccbf3b4"
+      },
+      "cues": [
+        {
+          "id": "s01-01",
+          "text": "One difficulty is that almost all of what is called behavioral science ",
+          "emotion": "neutral",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 3.97
+        },
+        {
+          "id": "s01-02",
+          "text": "continues to trace behavior to states of mind, feelings, traits of character, human nature, and so on.",
+          "emotion": "neutral",
+          "intensity": 1,
+          "start": 3.97,
+          "end": 9.923
+        }
+      ],
+      "actor_id": "02",
+      "actor_sequence": [
+        "02",
+        "02"
+      ],
+      "emotion": "neutral",
+      "intensity": 1,
+      "c_mode_version": "v3-content-cast",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    },
+    "s02": {
+      "id": "s02",
+      "path": "./audio/2002/c-translation/v3-s02.opus",
+      "mp3_path": "./audio/2002/c-translation/v3-s02.mp3",
+      "duration_seconds": 10.243,
+      "files": {
+        "v3-s02.opus": "8882015277d159a471ea95d5f2c00611dbca5a99219d4a8dbf11d5800f50dc62",
+        "v3-s02.mp3": "43ec01ce2195e783c40fb3eab82bedada292542fcae946a02c43703a9338517f"
+      },
+      "cues": [
+        {
+          "id": "s02-01",
+          "text": "The behavioral sciences have been slow to change ",
+          "emotion": "neutral",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 2.609
+        },
+        {
+          "id": "s02-02",
+          "text": "partly because the explanatory items often seem to be directly observed ",
+          "emotion": "neutral",
+          "intensity": 1,
+          "start": 2.609,
+          "end": 6.871
+        },
+        {
+          "id": "s02-03",
+          "text": "and partly because other kinds of explanations have been hard to find.",
+          "emotion": "neutral",
+          "intensity": 1,
+          "start": 6.871,
+          "end": 10.243
+        }
+      ],
+      "actor_id": "02",
+      "actor_sequence": [
+        "02",
+        "02",
+        "02"
+      ],
+      "emotion": "neutral",
+      "intensity": 1,
+      "c_mode_version": "v3-content-cast",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    },
+    "s03": {
+      "id": "s03",
+      "path": "./audio/2002/c-translation/v3-s03.opus",
+      "mp3_path": "./audio/2002/c-translation/v3-s03.mp3",
+      "duration_seconds": 13.422,
+      "files": {
+        "v3-s03.opus": "90c74519a0f8da0e3d3b7ad852ff10c6708d7f8f7a8f26bb6967d95972e45099",
+        "v3-s03.mp3": "b937d7eda477b4e0f0f591916b4b7974f9ac866f64a71dd20eb820ca7449f662"
+      },
+      "cues": [
+        {
+          "id": "s03-01",
+          "text": "The role of natural selection in evolution was formulated only a little more than a hundred years ago, ",
+          "emotion": "neutral",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 5.363
+        },
+        {
+          "id": "s03-02",
+          "text": "and the selective role of the environment in shaping and maintaining the behavior of the individual ",
+          "emotion": "neutral",
+          "intensity": 1,
+          "start": 5.363,
+          "end": 10.725
+        },
+        {
+          "id": "s03-03",
+          "text": "is only beginning to be recognized and studied.",
+          "emotion": "neutral",
+          "intensity": 1,
+          "start": 10.725,
+          "end": 13.422
+        }
+      ],
+      "actor_id": "02",
+      "actor_sequence": [
+        "02",
+        "02",
+        "02"
+      ],
+      "emotion": "neutral",
+      "intensity": 1,
+      "c_mode_version": "v3-content-cast",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    },
+    "s04": {
+      "id": "s04",
+      "path": "./audio/2002/c-translation/v3-s04.opus",
+      "mp3_path": "./audio/2002/c-translation/v3-s04.mp3",
+      "duration_seconds": 11.931,
+      "files": {
+        "v3-s04.opus": "041e4d4a344abbf21228531117ed342eb7c085297dadcc91b18003ae260cc3e9",
+        "v3-s04.mp3": "0956eac4aeff7970f5c333fa5ff76726bec8403715830d35c6ac9edc882793fa"
+      },
+      "cues": [
+        {
+          "id": "s04-01",
+          "text": "They are the possessions of the autonomous (self-governing) man of traditional theory, ",
+          "emotion": "neutral",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 4.675
+        },
+        {
+          "id": "s04-02",
+          "text": "and they are essential to practices in which a person is held responsible for his conduct and given credit for his achievements.",
+          "emotion": "neutral",
+          "intensity": 1,
+          "start": 4.675,
+          "end": 11.931
+        }
+      ],
+      "actor_id": "02",
+      "actor_sequence": [
+        "02",
+        "02"
+      ],
+      "emotion": "neutral",
+      "intensity": 1,
+      "c_mode_version": "v3-content-cast",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    },
+    "s05": {
+      "id": "s05",
+      "path": "./audio/2002/c-translation/v3-s05.opus",
+      "mp3_path": "./audio/2002/c-translation/v3-s05.mp3",
+      "duration_seconds": 9.742,
+      "files": {
+        "v3-s05.opus": "114ee6bb137fefb11ca59feeb548e1377c31bf36fd084c14618641fe87bdbd55",
+        "v3-s05.mp3": "d51cda334103ae6ef12a2c85c67694048eedc02db35001a35d4d0357967c8506"
+      },
+      "cues": [
+        {
+          "id": "s05-01",
+          "text": "Until these issues are resolved, a technology of behavior will continue to be rejected, ",
+          "emotion": "warm",
+          "intensity": 1,
+          "start": 0.0,
+          "end": 5.864
+        },
+        {
+          "id": "s05-02",
+          "text": "and with it possibly the only way to solve our problems.",
+          "emotion": "warm",
+          "intensity": 1,
+          "start": 5.864,
+          "end": 9.742
+        }
+      ],
+      "actor_id": "02",
+      "actor_sequence": [
+        "02",
+        "02"
+      ],
+      "emotion": "warm",
+      "intensity": 1,
+      "c_mode_version": "v3-content-cast",
+      "artificial_pause_ms": 0,
+      "post_tempo": false,
+      "qa_status": "candidate"
+    }
+  },
+  "c_mode_version": "v3-content-cast",
+  "v3_missing_segments": [],
+  "v3_rejected": [],
+  "v3_status": "complete_candidate"
 }
