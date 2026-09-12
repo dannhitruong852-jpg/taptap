@@ -1,0 +1,16 @@
+{
+  "schema_version": "c-v4-audition-battery-1",
+  "language": "en-US",
+  "scenes": [
+    {"id":"01-explanation","category":"ordinary_explanation","intent":"neutral_explain","intensity":1,"text":"A compass does not tell you where to go; it simply shows which direction you are facing."},
+    {"id":"02-analysis","category":"rational_analysis","intent":"serious_analysis","intensity":1,"text":"The first explanation sounds plausible, but the evidence supports a narrower conclusion: cost matters only when time and access remain equal."},
+    {"id":"03-warm","category":"warm_conversation","intent":"warm_explain","intensity":1,"text":"If this part feels confusing, do not worry. Let us slow down just enough to see what the author is really saying."},
+    {"id":"04-story","category":"story_setup","intent":"narrative_build","intensity":1,"text":"Late one autumn evening, a young researcher found an unopened letter waiting beneath the laboratory door."},
+    {"id":"05-turn","category":"turn","intent":"contrast","intensity":2,"text":"That was the accepted view. Yet one small result turned the entire argument in the opposite direction."},
+    {"id":"06-emphasis","category":"information_emphasis","intent":"information_peak","intensity":2,"text":"The crucial point is not that the machine made fewer mistakes, but that it recognized which mistakes mattered."},
+    {"id":"07-humor","category":"restrained_humor","intent":"restrained_irony","intensity":1,"text":"The committee promised a simpler form; naturally, the new version was six pages longer."},
+    {"id":"08-commentary","category":"serious_commentary","intent":"serious_analysis","intensity":2,"text":"A policy that appears efficient on paper can still impose a profound and unequal burden on real people."},
+    {"id":"09-quotation","category":"quotation_role","intent":"quoted_character","intensity":1,"text":"She looked at the figures again and said, 'We may have answered the question we asked, but not the question that matters.'"},
+    {"id":"10-long-sentence","category":"long_complex_sentence","intent":"qualification","intensity":1,"text":"Although the proposal was initially welcomed as a practical compromise, researchers who had followed the issue for decades warned that, unless its hidden assumptions were tested across several communities, the apparent solution might merely postpone the harder decision."}
+  ]
+}
