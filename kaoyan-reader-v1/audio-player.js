@@ -1,4 +1,4 @@
-export function createAudioPlayer({ createAudio, onSegmentStart = () => {}, onSentenceEnd = () => {}, onError = () => {} }) {
+export function createAudioPlayer({ createAudio, onSegmentStart = () => {}, onTimeUpdate = () => {}, onSentenceEnd = () => {}, onError = () => {} }) {
   let active = null;
   let queue = [];
   let index = -1;
@@ -8,6 +8,7 @@ export function createAudioPlayer({ createAudio, onSegmentStart = () => {}, onSe
     if (!audio) return;
     audio.onended = null;
     audio.onerror = null;
+    audio.ontimeupdate = null;
   }
   function playAt(nextIndex, currentGeneration) {
     if (currentGeneration !== generation) return;
@@ -16,8 +17,14 @@ export function createAudioPlayer({ createAudio, onSegmentStart = () => {}, onSe
     const segment = queue[index];
     const audio = createAudio(segment.path);
     active = audio;audio.preload = 'auto';audio.playbackRate = speed;
+    audio.ontimeupdate = () => {
+      if (currentGeneration !== generation || active !== audio) return;
+      const duration = Number.isFinite(audio.duration) && audio.duration > 0 ? audio.duration : Number(segment.duration_seconds || 0);
+      onTimeUpdate({ segment, index, currentTime: audio.currentTime || 0, duration });
+    };
     audio.onended = () => {
       if (currentGeneration !== generation) return;
+      onTimeUpdate({ segment, index, currentTime: Number(segment.duration_seconds || audio.duration || 0), duration: Number(segment.duration_seconds || audio.duration || 0), ended: true });
       detach(audio);playAt(index + 1, currentGeneration);
     };
     audio.onerror = event => {
