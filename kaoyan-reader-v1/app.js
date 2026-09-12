@@ -156,7 +156,7 @@ async function openArticle(entry){
   listEl.setAttribute('aria-label',`${article.title} 双语精读`);
   const audioCount=sentences.filter(s=>manifest.sentences?.[s.id]?.path||s.segments.every(x=>manifest.segments?.[x.id]?.path)).length;
   const seamlessCount=sentences.filter(s=>manifest.sentences?.[s.id]?.path).length;
-  document.querySelector('#content-status').textContent=`${sentences.length} 句中英对照 · 音频 ${audioCount}/${sentences.length} 句可播放${seamlessCount?` · C v2无缝 ${seamlessCount}/${sentences.length}`:''}`;
+  document.querySelector('#content-status').textContent=`${sentences.length} 句中英对照 · 音频 ${audioCount}/${sentences.length} 句可播放${seamlessCount?` · C无缝 ${seamlessCount}/${sentences.length}`:''}`;
   statusEl.textContent=audioCount===sentences.length?'轻点查译文 · 点序号听本句':'正文已就绪 · 音频生成中';
   history.replaceState(null,'',`#${entry.id}`);renderSentences();updateActive(false);paintReadProgress(0,0);applyPlayerVisibility(false);
  }catch(error){if(selectionToken!==selectionGeneration)return;loading=false;statusEl.textContent='正文加载失败';showToast('请重新选择文章或刷新页面');}
