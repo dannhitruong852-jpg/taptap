@@ -75,7 +75,7 @@ def build_candidate_entry(segment_id: str, text: str, controls: dict, reference_
 
 def _load_article_profile(year: int, article: str) -> dict:
     data = load_json(ROOT / f"content-pipeline/voice_profiles/{year}.json")
-    profiles = data.get("articles", data)
+    profiles = data.get("profiles", data.get("articles", data))
     if article not in profiles:
         raise KeyError(f"missing Article Voice Profile: {year}/{article}")
     return {"article_id": article, **profiles[article]}
