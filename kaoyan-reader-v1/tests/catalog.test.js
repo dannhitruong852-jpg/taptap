@@ -1,11 +1,23 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {pickArticle,selectArticles,highlightVocabulary,createSelectionLoader} from '../catalog.js';
-const catalog={articles:[{id:'2002-cloze',year:2002,section_type:'cloze'},{id:'2002-text1',year:2002,section_type:'reading'}]};
+import {pickArticle,selectArticles,highlightVocabulary,createSelectionLoader,adjacentArticle} from '../catalog.js';
+const catalog={articles:[
+ {id:'2002-cloze',year:2002,section_type:'cloze'},
+ {id:'2002-text1',year:2002,section_type:'reading'},
+ {id:'2002-text2',year:2002,section_type:'reading'},
+ {id:'2002-translation',year:2002,section_type:'translation'}
+]};
 test('selection filters the real catalog, not fabricated sections',()=>{
- assert.deepEqual(selectArticles(catalog,2002,'reading').map(x=>x.id),['2002-text1']);
+ assert.deepEqual(selectArticles(catalog,2002,'reading').map(x=>x.id),['2002-text1','2002-text2']);
  assert.deepEqual(selectArticles(catalog,2002,'part_b'),[]);
  assert.equal(pickArticle(catalog,'missing').id,'2002-cloze');
+});
+test('player previous and next controls navigate whole articles in catalog order',()=>{
+ assert.equal(typeof adjacentArticle,'function');
+ assert.equal(adjacentArticle(catalog,'2002-text1',-1).id,'2002-cloze');
+ assert.equal(adjacentArticle(catalog,'2002-text1',1).id,'2002-text2');
+ assert.equal(adjacentArticle(catalog,'2002-cloze',-1),null);
+ assert.equal(adjacentArticle(catalog,'2002-translation',1),null);
 });
 test('vocabulary highlighting respects token boundaries and escapes source HTML',()=>{
  const value=highlightVocabulary('Her capacities match capacity < 9.',[{word:'capacity',level:6,meaning:'storage'}],true);
