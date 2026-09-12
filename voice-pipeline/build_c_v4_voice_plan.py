@@ -38,7 +38,7 @@ def build_voice_plan(content: dict, voice_profile: dict, director: dict, calibra
             rule = copy.deepcopy(base)
             override = _override_for(director, content['article_id'], sentence['id'], segment['id'])
             rule.update({k:v for k,v in override.items() if k not in ('article_id','sentence_id','segment_id')})
-            actor_id = str(rule.get('actor_id') or segment.get('actor_id') or out['primary_actor_id']).zfill(2)
+            actor_id = str(rule.get('actor_id') or out['primary_actor_id']).zfill(2)
             intent = rule['director_intent']
             intensity = int(rule.get('intensity', 1))
             controls = resolve_controls(actor_id, intent, intensity, calibration_dir)
