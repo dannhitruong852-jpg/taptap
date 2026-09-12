@@ -16,10 +16,11 @@ test('title and speed pill share the compact top row',()=>{
   assert.match(css,/\.player-position,\.player-status\{display:none\}/);
 });
 
-test('all four transport controls remain visible in a tighter centered row',()=>{
-  assert.match(css,/\.transport-row\{[^}]*display:grid;[^}]*grid-template-columns:44px 44px 58px 44px;[^}]*gap:10px;[^}]*justify-content:center/s);
+test('all four transport controls remain visible while play stays on the visual centerline',()=>{
+  assert.match(css,/\.transport-row\{[^}]*display:grid;[^}]*grid-template-columns:44px 44px 58px 44px 44px;[^}]*gap:10px;[^}]*justify-content:center/s);
   assert.match(css,/\.transport-row \.icon-button\{width:44px;height:44px;?\}/);
   assert.match(css,/\.transport-row \.play-button\{width:58px;height:58px;?\}/);
+  assert.match(css,/@media\(max-width:350px\)\{[^}]*\.transport-row\{grid-template-columns:44px 44px 56px 44px 44px;gap:7px\}/s);
 });
 
 test('speed slider remains fully functional inside the compact bottom row',()=>{
