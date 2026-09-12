@@ -1,23 +1,21 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-// The implementation does not exist at RED; assert the missing contract explicitly.
 const controls = await import('../reader-controls.js').catch(() => ({}));
 const text = await import('../bilingual-text.js').catch(() => ({}));
 
-test('speed control snaps to exactly five specified rates, including both endpoints', () => {
-  assert.equal(typeof controls.snapSpeed, 'function', 'five-stop speed controller is missing');
-  assert.deepEqual(controls.SPEED_STOPS, [0.7, 1, 1.25, 1.5, 2]);
-  for (const [input, expected] of [[-2,.7],[.83,.7],[.91,1],[1.18,1.25],[1.4,1.5],[1.8,2],[4,2]]) {
+test('speed menu exposes exactly the four approved rates', () => {
+  assert.equal(typeof controls.snapSpeed, 'function', 'four-stop speed controller is missing');
+  assert.deepEqual(controls.SPEED_STOPS, [0.7, 1, 1.3, 1.7]);
+  for (const [input, expected] of [[-2,.7],[.83,.7],[.91,1],[1.18,1.3],[1.49,1.3],[1.6,1.7],[4,1.7]]) {
     assert.equal(controls.snapSpeed(input), expected);
   }
+  assert.equal(controls.formatSpeed(.7),'0.7×');
+  assert.equal(controls.formatSpeed(1),'1.0×');
+  assert.equal(controls.formatSpeed(1.3),'1.3×');
+  assert.equal(controls.formatSpeed(1.7),'1.7×');
 });
-test('drag preview interpolates but release selects only a magnetic stop', () => {
-  assert.equal(typeof controls.rateAtPosition, 'function', 'drag interpolation is missing');
-  assert.equal(controls.rateAtPosition(1.5), 1.125);
-  assert.equal(controls.rateAtPosition(-1), .7);
-  assert.equal(controls.rateAtPosition(8), 2);
-});
+
 test('tap detection rejects long presses, selection, scrolling and cancelled pointers', () => {
   assert.equal(typeof controls.createTapGuard, 'function', 'native-selection-safe tap guard is missing');
   let now=0;
