@@ -178,20 +178,21 @@ class ReaderUX(unittest.TestCase):
         self.assertLessEqual(p.evaluate('document.documentElement.scrollWidth'),p.evaluate('window.innerWidth'))
         p.screenshot(path=str(REPORT/'english-only-mobile.png'),full_page=False)
 
-    def test_08_compact_player_is_full_width_bottom_dock_and_play_is_centered(self):
+    def test_08_ultra_compact_player_is_half_height_and_play_is_centered(self):
         p=self.page
         shell=p.locator('#player-shell').bounding_box()
         self.assertAlmostEqual(shell['width'],390,delta=1.5)
         self.assertAlmostEqual(shell['x'],0,delta=1.5)
         self.assertAlmostEqual(shell['y']+shell['height'],844,delta=1.5)
-        self.assertGreaterEqual(shell['height'],154)
-        self.assertLessEqual(shell['height'],170)
+        self.assertGreaterEqual(shell['height'],75)
+        self.assertLessEqual(shell['height'],78)
         buttons=[p.locator(sel).bounding_box() for sel in ['#previous','#replay','#play-toggle','#next']]
-        self.assertEqual([(round(b['width']),round(b['height'])) for b in buttons],[(44,44),(44,44),(58,58),(44,44)])
+        self.assertEqual([(round(b['width']),round(b['height'])) for b in buttons],[(44,44),(44,44),(50,50),(44,44)])
         play=buttons[2]
         self.assertAlmostEqual(play['x']+play['width']/2,195,delta=1.5)
         speed=p.locator('#speed-value').bounding_box()
-        self.assertLessEqual(abs((speed['x']+speed['width'])-(390-16)),1.5)
+        self.assertLessEqual(abs((speed['x']+speed['width'])-(390-8)),1.5)
+        self.assertGreater(p.locator('#speed-range').bounding_box()['width'],180)
         self.assertLessEqual(p.locator('#player-shell').evaluate('el=>el.scrollWidth'),p.locator('#player-shell').evaluate('el=>el.clientWidth')+1)
         p.screenshot(path=str(REPORT/'compact-player-mobile.png'),full_page=False)
 
@@ -213,11 +214,11 @@ class ReaderUX(unittest.TestCase):
                 self.assertAlmostEqual(shell['width'],width,delta=1.5,msg=str((width,height,shell)))
                 self.assertAlmostEqual(shell['x'],0,delta=1.5)
                 self.assertAlmostEqual(shell['y']+shell['height'],height,delta=1.5)
-                self.assertGreaterEqual(shell['height'],154)
-                self.assertLessEqual(shell['height'],170)
+                self.assertGreaterEqual(shell['height'],75)
+                self.assertLessEqual(shell['height'],78)
                 self.assertLessEqual(page.evaluate('document.documentElement.scrollWidth'),width)
-                self.assertGreater(page.locator('#speed-range').bounding_box()['width'],160)
-                expected=[44,44,58,44] if width>350 else [44,44,56,44]
+                self.assertGreater(page.locator('#speed-range').bounding_box()['width'],130)
+                expected=[44,44,50,44]
                 for selector,side in zip(['#previous','#replay','#play-toggle','#next'],expected):
                     box=page.locator(selector).bounding_box()
                     self.assertAlmostEqual(box['width'],side,delta=.6)
