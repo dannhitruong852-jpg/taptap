@@ -64,6 +64,9 @@ class ReaderUX(unittest.TestCase):
         self.assertTrue(card.locator('.zh').is_visible())
         self.assertEqual(p.locator('.zh:visible').count(),1)
         self.assertEqual(sum(p.evaluate('window.__audio.map(a=>a.__playCalls)')),0)
+        # Exercise two distinct single taps. Immediate back-to-back taps on selectable
+        # text may intentionally become a native double-tap selection gesture.
+        p.wait_for_timeout(600)
         card.locator('.en').tap()
         self.assertFalse(card.locator('.zh').is_visible())
         p.select_option('#article-select','2002-cloze')
