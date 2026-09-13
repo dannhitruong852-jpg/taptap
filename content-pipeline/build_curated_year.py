@@ -207,7 +207,7 @@ def build_year(source: dict) -> tuple[list[dict], list[dict]]:
             'section_type': item['section_type'],
             'title': item['title'],
             'content': f"./content/{year}/c/{item['id']}.json",
-            'manifest': f"./audio/{year}/c-{item['id']}/manifest.json",
+            'manifest': f"./audio/{year}/v4/c-{item['id']}/manifest.json",
             'sentences': len(doc['sentences']),
         })
     return docs, catalog_rows
