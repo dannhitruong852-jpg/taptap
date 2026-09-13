@@ -1,0 +1,24 @@
+name: C v4 15-actor article preview contract
+
+on:
+  pull_request:
+    branches: ['c-v4-actor15-r9']
+    paths:
+      - 'voice-pipeline/calibration/article_emotion_probe.json'
+      - 'voice-pipeline/calibration/article_preview.py'
+      - 'voice-pipeline/tests/test_article_preview.py'
+      - '.github/workflows/c-v4-article-preview-contract.yml'
+  workflow_dispatch:
+
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run article preview contract
+        env:
+          PYTHONPATH: voice-pipeline
+        run: python -m unittest voice-pipeline/tests/test_article_preview.py -v
