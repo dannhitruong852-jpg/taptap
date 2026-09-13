@@ -1,0 +1,172 @@
+name: C v4 seven-actor expansion
+
+on:
+  pull_request:
+    branches: [kaoyan-reader-v1]
+    paths:
+      - 'voice-pipeline/**'
+      - '.github/workflows/c-v4-actor-expansion.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: c-v4-actor-expansion-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify expansion contracts before expensive rendering
+        run: |
+          PYTHONPATH=voice-pipeline python -m unittest \
+            voice-pipeline/tests/test_actor_expansion_contract.py \
+            voice-pipeline/tests/test_actor_calibration.py \
+            voice-pipeline/tests/test_automatic_calibration.py -v
+
+  render-score:
+    needs: contracts
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    strategy:
+      fail-fast: false
+      max-parallel: 7
+      matrix:
+        actor: ['03', '06', '07', '10', '11', '14', '15']
+    env:
+      HF_HOME: /tmp/chatterbox-hf-cache
+      TORCH_HOME: /tmp/torch-cache
+      OMP_NUM_THREADS: '4'
+      MKL_NUM_THREADS: '4'
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - uses: actions/cache@v4
+        with:
+          path: |
+            /tmp/chatterbox-hf-cache
+            /tmp/torch-cache
+          key: c-v4-actor-expansion-models-v2
+      - name: Install original English Chatterbox and real-audio QA dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          python -m pip install --upgrade pip
+          python -m pip install chatterbox-tts==0.1.7 numpy==1.26.4 soundfile==0.13.1 torch==2.7.1 torchaudio==2.7.1
+      - name: Build all seven actor-local search profiles
+        run: python voice-pipeline/calibration/build_expansion_profiles.py --output /tmp/profiles
+      - name: Prepare licensed same-speaker references
+        run: |
+          python voice-pipeline/calibration/prepare_expansion_references.py \
+            --actor '${{ matrix.actor }}' \
+            --output '/tmp/references/actor${{ matrix.actor }}'
+      - name: Render ten intents times A/B/C with real Chatterbox audio
+        run: |
+          python voice-pipeline/calibration/render_auditions.py \
+            --actor '${{ matrix.actor }}' \
+            --profiles /tmp/profiles \
+            --references '/tmp/references/actor${{ matrix.actor }}' \
+            --output 'actor-expansion/audio/actor${{ matrix.actor }}' \
+            --device cpu
+      - name: Confirm this actor produced 30 real candidates and immutable rules
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          actor='${{ matrix.actor }}'
+          root=Path(f'actor-expansion/audio/actor{actor}')
+          manifest=json.loads((root/f'actor{actor}-auditions.json').read_text())
+          assert len(manifest['renders']) == 30
+          assert len(list(root.glob('*.wav'))) == 30
+          assert len(list(root.glob('*.opus'))) == 30
+          assert len(list(root.glob('*.mp3'))) == 30
+          assert all(r['artificial_pause_ms'] == 0 for r in manifest['renders'])
+          assert all(r['post_tempo'] is False for r in manifest['renders'])
+          PY
+      - name: Score real audio with ASR alignment and acoustic proxies
+        run: |
+          python voice-pipeline/calibration/score_auditions.py \
+            --manifest 'actor-expansion/audio/actor${{ matrix.actor }}/actor${{ matrix.actor }}-auditions.json' \
+            --profile '/tmp/profiles/${{ matrix.actor }}.json' \
+            --references '/tmp/references/actor${{ matrix.actor }}' \
+            --output 'actor-expansion/scored/actor${{ matrix.actor }}.json'
+      - name: Apply automated-c-v4-qa-1 without hiding rejection evidence
+        id: qa
+        shell: bash
+        run: |
+          set +e
+          PYTHONPATH=voice-pipeline python voice-pipeline/calibration/automatic_qa.py \
+            --actor '${{ matrix.actor }}' \
+            --manifest 'actor-expansion/scored/actor${{ matrix.actor }}.json' \
+            --output 'actor-expansion/results/actor${{ matrix.actor }}.json'
+          code=$?
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          exit 0
+      - name: Save generated profile and source provenance
+        run: |
+          mkdir -p 'actor-expansion/profiles' 'actor-expansion/references/actor${{ matrix.actor }}'
+          cp '/tmp/profiles/${{ matrix.actor }}.json' 'actor-expansion/profiles/${{ matrix.actor }}.json'
+          cp '/tmp/references/actor${{ matrix.actor }}/actor${{ matrix.actor }}.json' 'actor-expansion/references/actor${{ matrix.actor }}/provenance.json'
+      - name: Upload this actor's complete generation and QA evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: c-v4-expansion-actor-${{ matrix.actor }}
+          path: actor-expansion
+          if-no-files-found: error
+          retention-days: 14
+
+  aggregate:
+    needs: render-score
+    if: always() && needs.render-score.result == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: c-v4-expansion-actor-*
+          path: /tmp/actors
+          merge-multiple: true
+      - name: Verify all 210 generated candidates and summarize final pool candidates
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          actors=['03','06','07','10','11','14','15']
+          result_dir=Path('/tmp/actors/results')
+          audio_root=Path('/tmp/actors/audio')
+          results=[]
+          total=0
+          for actor in actors:
+              r=json.loads((result_dir/f'actor{actor}.json').read_text())
+              results.append(r)
+              manifest=json.loads((audio_root/f'actor{actor}'/f'actor{actor}-auditions.json').read_text())
+              total += len(manifest['renders'])
+          assert total == 210, total
+          summary={
+              'schema_version':'c-v4-actor-expansion-run-1',
+              'qa_policy':'automated-c-v4-qa-1',
+              'generated_candidates':total,
+              'accepted':[r['actor_id'] for r in results if r['status']=='accepted'],
+              'rejected':[r['actor_id'] for r in results if r['status']!='accepted'],
+              'results':results,
+              'immutable_rules':{'artificial_pause_ms':0,'post_tempo':False},
+          }
+          Path('actor-expansion-summary.json').write_text(json.dumps(summary,indent=2)+'\n')
+          print(json.dumps({k:summary[k] for k in ('generated_candidates','accepted','rejected')},indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: c-v4-seven-actor-expansion-summary
+          path: actor-expansion-summary.json
+          if-no-files-found: error
+          retention-days: 14
