@@ -20,8 +20,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Run Golden Set QA2 contract
-        run: PYTHONPATH=voice-pipeline python -m unittest voice-pipeline/tests/test_golden_set_qa2.py -v
+      - name: Run Golden Set QA2 contracts
+        run: |
+          PYTHONPATH=voice-pipeline python -m unittest \
+            voice-pipeline/tests/test_golden_set_qa2.py \
+            voice-pipeline/tests/test_golden_set_all_variants.py -v
 
   golden-score:
     needs: contract
