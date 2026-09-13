@@ -10,6 +10,15 @@
   <link rel="stylesheet" href="./catalog.css">
   <link rel="stylesheet" href="./readalong.css">
   <link rel="stylesheet" href="./reader-controls.css">
+  <style>
+    .transport-row{left:94px;right:10px;grid-template-columns:46px 56px 46px 68px;gap:12px;justify-content:end;align-items:center}
+    .article-nav{width:46px;height:46px}
+    .article-nav::after{width:38px;height:38px;background:#f1f0ec;box-shadow:inset 0 0 0 1px rgba(48,45,38,.035)}
+    .article-nav::before{display:none}
+    .transport-icon{position:absolute;z-index:2;left:50%;top:50%;width:20px;height:20px;transform:translate(-50%,-50%);fill:none;stroke:#55524c;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+    .play-button{width:56px;height:56px}.play-button::after{width:50px;height:50px}
+    @media(max-width:350px){.transport-row{left:76px;right:6px;grid-template-columns:42px 52px 42px 62px;gap:6px}.article-nav{width:42px;height:42px}.article-nav::after{width:36px;height:36px}.play-button{width:52px;height:52px}.play-button::after{width:46px;height:46px}.speed-control{width:62px}.speed-value{width:62px;min-width:62px}}
+  </style>
 </head>
 <body data-mood="warm" data-reader-ui="tap-translate-v1">
   <main class="page-shell">
@@ -47,15 +56,9 @@
       <div id="player-status" class="player-status" hidden>正在加载音频清单</div>
     </div>
     <div class="transport-row" aria-label="文章和播放控制">
-      <button id="previous" class="icon-button article-nav previous-article" type="button" aria-label="上一篇" title="上一篇">
-        <svg class="transport-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14.5 5.5 8 12l6.5 6.5"/></svg>
-        <span class="control-label">上一篇</span>
-      </button>
+      <button id="previous" class="icon-button article-nav previous-article" type="button" aria-label="上一篇" title="上一篇"><svg class="transport-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14.5 5.5 8 12l6.5 6.5"/></svg><span class="control-label">上一篇</span></button>
       <button id="play-toggle" class="play-button" type="button" aria-label="播放" title="播放暂停"><span class="control-label">播放</span></button>
-      <button id="next" class="icon-button article-nav next-article" type="button" aria-label="下一篇" title="下一篇">
-        <svg class="transport-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9.5 5.5 6.5 6.5-6.5 6.5"/></svg>
-        <span class="control-label">下一篇</span>
-      </button>
+      <button id="next" class="icon-button article-nav next-article" type="button" aria-label="下一篇" title="下一篇"><svg class="transport-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9.5 5.5 6.5 6.5-6.5 6.5"/></svg><span class="control-label">下一篇</span></button>
       <div id="speed-control" class="speed-control">
         <button id="speed-value" class="speed-value" type="button" aria-label="倍速 1.0×" aria-haspopup="menu" aria-expanded="false">1.0×</button>
         <div class="speed-menu" role="menu" aria-label="选择播放倍速" hidden>
