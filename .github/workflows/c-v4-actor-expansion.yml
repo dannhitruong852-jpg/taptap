@@ -56,13 +56,13 @@ jobs:
           path: |
             /tmp/chatterbox-hf-cache
             /tmp/torch-cache
-          key: c-v4-actor-expansion-models-v2
+          key: c-v4-actor-expansion-models-v3
       - name: Install original English Chatterbox and real-audio QA dependencies
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y ffmpeg
           python -m pip install --upgrade pip
-          python -m pip install chatterbox-tts==0.1.7 numpy==1.26.4 soundfile==0.13.1 torch==2.7.1 torchaudio==2.7.1
+          python -m pip install chatterbox-tts==0.1.7 numpy==1.26.4 soundfile==0.13.1 torch==2.6.0 torchaudio==2.6.0
       - name: Build all seven actor-local search profiles
         run: python voice-pipeline/calibration/build_expansion_profiles.py --output /tmp/profiles
       - name: Prepare licensed same-speaker references
