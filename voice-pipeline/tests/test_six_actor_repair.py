@@ -1,6 +1,7 @@
 import unittest
 
 from calibration.repair_search import REPAIR_ACTORS, REPAIR_TARGETS, build_repair_render_plan
+from calibration.render_repair_auditions import stable_repair_seed
 
 
 SCRIPT = {
@@ -83,6 +84,12 @@ class SixActorRepairTests(unittest.TestCase):
             by_intent.setdefault(item["intent"], []).append(item)
         for intent in ("information_peak", "restrained_irony", "qualification", "curious_probe"):
             self.assertIn("neutral", {item["reference_state"] for item in by_intent[intent]})
+
+    def test_repair_seed_is_deterministic_and_separate_from_original_audition_seed_space(self):
+        first = stable_repair_seed("03", "08-probe", "R1")
+        self.assertEqual(first, stable_repair_seed("03", "08-probe", "R1"))
+        self.assertNotEqual(first, stable_repair_seed("03", "08-probe", "R2"))
+        self.assertNotEqual(first, stable_repair_seed("07", "08-probe", "R1"))
 
 
 if __name__ == "__main__":
