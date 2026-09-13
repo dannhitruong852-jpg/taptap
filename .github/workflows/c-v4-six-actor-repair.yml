@@ -12,6 +12,10 @@ permissions:
   contents: read
   actions: read
 
+concurrency:
+  group: c-v4-six-actor-repair-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   contract:
     runs-on: ubuntu-latest
@@ -22,3 +26,223 @@ jobs:
           python-version: '3.11'
       - name: Run six-actor repair contract
         run: PYTHONPATH=voice-pipeline python -m unittest voice-pipeline/tests/test_six_actor_repair.py -v
+
+  repair-score:
+    needs: contract
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        actor: ['03', '07', '10', '11', '14', '15']
+    env:
+      HF_HOME: /tmp/chatterbox-hf-cache
+      TORCH_HOME: /tmp/torch-cache
+      OMP_NUM_THREADS: '4'
+      MKL_NUM_THREADS: '4'
+      PYTHONUNBUFFERED: '1'
+      PYTHONPATH: voice-pipeline
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - uses: actions/cache@v4
+        with:
+          path: |
+            /tmp/chatterbox-hf-cache
+            /tmp/torch-cache
+          key: c-v4-six-actor-repair-models-v1
+      - name: Install Chatterbox and real-audio QA dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          python -m pip install --upgrade pip
+          python -m pip install chatterbox-tts==0.1.7 numpy==1.26.4 soundfile==0.13.1 torch==2.6.0 torchaudio==2.6.0
+      - name: Download original actor evidence
+        uses: actions/download-artifact@v4
+        with:
+          name: c-v4-expansion-actor-${{ matrix.actor }}
+          path: /tmp/original
+          github-token: ${{ github.token }}
+          repository: dannhitruong852-jpg/taptap
+          run-id: 34740877351
+      - name: Download immutable Golden Set QA2 calibration
+        uses: actions/download-artifact@v4
+        with:
+          name: c-v4-golden-set-qa2-calibration
+          path: /tmp/calibration
+          github-token: ${{ github.token }}
+          repository: dannhitruong852-jpg/taptap
+          run-id: 34743370177
+      - name: Build actor-local repair profile
+        run: |
+          python voice-pipeline/calibration/build_expansion_profiles.py --output /tmp/base-profiles
+          mkdir -p /tmp/repair-profiles
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from calibration.repair_search import build_repair_profile
+          actor='${{ matrix.actor }}'
+          base=json.loads((Path('/tmp/base-profiles')/f'{actor}.json').read_text(encoding='utf-8'))
+          repaired=build_repair_profile(base)
+          (Path('/tmp/repair-profiles')/f'{actor}.json').write_text(json.dumps(repaired,indent=2)+'\n',encoding='utf-8')
+          PY
+      - name: Prepare licensed same-speaker references
+        run: |
+          python voice-pipeline/calibration/prepare_expansion_references.py \
+            --actor '${{ matrix.actor }}' \
+            --output '/tmp/references/actor${{ matrix.actor }}'
+      - name: Render only failed intents with actor-local repair controls
+        run: |
+          python voice-pipeline/calibration/render_repair_auditions.py \
+            --actor '${{ matrix.actor }}' \
+            --profiles /tmp/repair-profiles \
+            --references '/tmp/references/actor${{ matrix.actor }}' \
+            --output 'actor-repair/audio/actor${{ matrix.actor }}' \
+            --device cpu
+      - name: Verify bounded repair evidence and immutable rules
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from calibration.repair_search import REPAIR_SPECS, REPAIR_TARGETS
+          actor='${{ matrix.actor }}'
+          root=Path(f'actor-repair/audio/actor{actor}')
+          manifest=json.loads((root/f'actor{actor}-repair-r1.json').read_text())
+          expected=sum(REPAIR_SPECS[actor][intent][2] for intent in REPAIR_TARGETS[actor])
+          assert len(manifest['renders']) == expected, (actor, len(manifest['renders']), expected)
+          assert len(list(root.glob('*.wav'))) == expected
+          assert len(list(root.glob('*.opus'))) == expected
+          assert len(list(root.glob('*.mp3'))) == expected
+          assert all(r['artificial_pause_ms'] == 0 for r in manifest['renders'])
+          assert all(r['post_tempo'] is False for r in manifest['renders'])
+          assert {r['intent'] for r in manifest['renders']} == set(REPAIR_TARGETS[actor])
+          PY
+      - name: Score repair audio with current ASR/alignment/acoustic proxies
+        run: |
+          python voice-pipeline/calibration/score_auditions.py \
+            --manifest 'actor-repair/audio/actor${{ matrix.actor }}/actor${{ matrix.actor }}-repair-r1.json' \
+            --profile '/tmp/repair-profiles/${{ matrix.actor }}.json' \
+            --references '/tmp/references/actor${{ matrix.actor }}' \
+            --output 'actor-repair/scored/actor${{ matrix.actor }}.json'
+      - name: Rejudge this actor against unchanged QA2 Golden Set
+        run: |
+          mkdir -p actor-repair/results actor-repair/profiles
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from calibration.golden_set_qa import select_actor_calibration_qa2
+          from calibration.repair_search import REPAIR_TARGETS
+
+          actor='${{ matrix.actor }}'
+          calibration=json.loads(Path('/tmp/calibration/golden-calibration.json').read_text(encoding='utf-8'))
+          if calibration.get('qa_policy') != 'automated-c-v4-qa-2':
+              raise SystemExit('QA2 calibration policy mismatch')
+          if calibration.get('golden_set_digest') != '9abde471e724f153362c57f35583ed83e79dd6b904f6827d6d6227116b0ffdbd':
+              raise SystemExit('Golden Set digest mismatch')
+
+          original=json.loads((Path('/tmp/original/scored')/f'actor{actor}.json').read_text(encoding='utf-8'))
+          repaired=json.loads((Path('actor-repair/scored')/f'actor{actor}.json').read_text(encoding='utf-8'))
+          combined={intent:list(items) for intent,items in original['candidates'].items()}
+          for intent,items in repaired['candidates'].items():
+              if intent not in REPAIR_TARGETS[actor]:
+                  raise SystemExit(f'unexpected repaired intent {intent} for actor {actor}')
+              combined.setdefault(intent,[]).extend(items)
+
+          selected,rejected=select_actor_calibration_qa2(actor,combined,calibration)
+          profile=json.loads((Path('/tmp/repair-profiles')/f'{actor}.json').read_text(encoding='utf-8'))
+          if selected:
+              profile['selected_candidates']={intent:{
+                  'variant':item['variant'],
+                  'reference_state':item.get('reference_state'),
+                  'exaggeration':item['exaggeration'],
+                  'cfg_weight':item['cfg_weight'],
+                  'temperature':item['temperature'],
+                  'repetition_penalty':item['repetition_penalty'],
+              } for intent,item in selected.items()}
+              profile['eligible']=True
+              profile['eligible_for']=['production']
+          result={
+              'schema_version':'c-v4-six-actor-repair-result-1',
+              'actor_id':actor,
+              'repair_round':1,
+              'qa_policy':calibration['qa_policy'],
+              'golden_set_digest':calibration['golden_set_digest'],
+              'status':'accepted' if selected else 'failed',
+              'targeted_intents':list(REPAIR_TARGETS[actor]),
+              'repair_candidate_count':sum(len(v) for v in repaired['candidates'].values()),
+              'combined_candidate_count':sum(len(v) for v in combined.values()),
+              'selected_variants':{intent:item['variant'] for intent,item in selected.items()},
+              'selected':selected,
+              'failures':rejected,
+          }
+          (Path('actor-repair/results')/f'actor{actor}.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
+          (Path('actor-repair/profiles')/f'{actor}.json').write_text(json.dumps(profile,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps({
+              'actor_id':actor,
+              'status':result['status'],
+              'targeted_intents':result['targeted_intents'],
+              'selected_variants':result['selected_variants'],
+              'failed_intents':list(rejected),
+          },indent=2))
+          PY
+      - name: Save reference provenance
+        run: |
+          mkdir -p 'actor-repair/references/actor${{ matrix.actor }}'
+          cp '/tmp/references/actor${{ matrix.actor }}/actor${{ matrix.actor }}.json' 'actor-repair/references/actor${{ matrix.actor }}/provenance.json'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: c-v4-six-repair-${{ matrix.actor }}
+          path: actor-repair
+          if-no-files-found: error
+          retention-days: 14
+
+  aggregate:
+    needs: repair-score
+    if: always() && needs.repair-score.result == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: c-v4-six-repair-*
+          path: /tmp/repairs
+          merge-multiple: true
+      - name: Summarize six-actor QA2 repair round
+        env:
+          PYTHONPATH: voice-pipeline
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from calibration.repair_search import REPAIR_ACTORS, total_repair_renders
+          results=[]
+          for actor in REPAIR_ACTORS:
+              path=Path('/tmp/repairs/results')/f'actor{actor}.json'
+              if not path.exists():
+                  raise SystemExit(f'missing repair result for actor {actor}')
+              results.append(json.loads(path.read_text(encoding='utf-8')))
+          total=sum(r['repair_candidate_count'] for r in results)
+          assert total == total_repair_renders() == 57, total
+          summary={
+              'schema_version':'c-v4-six-actor-repair-round-1',
+              'qa_policy':'automated-c-v4-qa-2',
+              'golden_set_digest':'9abde471e724f153362c57f35583ed83e79dd6b904f6827d6d6227116b0ffdbd',
+              'repair_candidate_count':total,
+              'accepted':[r['actor_id'] for r in results if r['status']=='accepted'],
+              'still_failed':[r['actor_id'] for r in results if r['status']!='accepted'],
+              'results':results,
+              'immutable_rules':{'artificial_pause_ms':0,'post_tempo':False,'qa_thresholds_lowered':False},
+          }
+          Path('six-actor-repair-summary.json').write_text(json.dumps(summary,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps({k:summary[k] for k in ('repair_candidate_count','accepted','still_failed')},indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: c-v4-six-actor-repair-summary
+          path: six-actor-repair-summary.json
+          if-no-files-found: error
+          retention-days: 30
