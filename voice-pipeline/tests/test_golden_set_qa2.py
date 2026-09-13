@@ -11,7 +11,31 @@ from calibration.golden_set_qa import (
 from calibration.automatic_qa import REQUIRED_INTENTS
 
 
-def scored(actor_id, intent, variant="B", naturalness=0.84, intent_score=0.86, speaker=0.82, **overrides):
+SCENE_BY_INTENT = {
+    "neutral_explain": "01-explanation",
+    "serious_analysis": "02-analysis",
+    "warm_explain": "03-warm",
+    "narrative_build": "04-story",
+    "contrast": "05-turn",
+    "information_peak": "06-emphasis",
+    "restrained_irony": "07-humor",
+    # Historical human board predates curious_probe; 08-commentary is its traceable predecessor.
+    "curious_probe": "08-commentary",
+    "quoted_character": "09-quotation",
+    "qualification": "10-long-sentence",
+}
+
+
+def scored(
+    actor_id,
+    intent,
+    variant="B",
+    naturalness=0.84,
+    intent_score=0.86,
+    speaker=0.82,
+    scene_id=None,
+    **overrides,
+):
     item = {
         "variant": variant,
         "actor_id": actor_id,
@@ -20,9 +44,9 @@ def scored(actor_id, intent, variant="B", naturalness=0.84, intent_score=0.86, s
         "audio_sha256": "a" * 64,
         "generation_fingerprint": "f" * 64,
         "expected_fingerprint": "f" * 64,
-        "transcript": "A reliable calibration sentence.",
-        "aligned_transcript": "A reliable calibration sentence.",
-        "duration_seconds": 2.0,
+        "transcript": "one two three four five six seven eight nine ten",
+        "aligned_transcript": "one two three four five six seven eight nine ten",
+        "duration_seconds": 5.0,
         "wpm": 130.0,
         "clipping_ratio": 0.0,
         "leading_silence_seconds": 0.1,
@@ -30,8 +54,8 @@ def scored(actor_id, intent, variant="B", naturalness=0.84, intent_score=0.86, s
         "max_internal_silence_seconds": 0.4,
         "alignment_status": "passed",
         "words": [
-            {"word": "A", "start": 0.1, "end": 0.2},
-            {"word": "reliable", "start": 0.25, "end": 0.7},
+            {"word": "one", "start": 0.1, "end": 0.2},
+            {"word": "two", "start": 0.25, "end": 0.7},
         ],
         "speaker_similarity": speaker,
         "naturalness_score": naturalness,
@@ -45,6 +69,7 @@ def scored(actor_id, intent, variant="B", naturalness=0.84, intent_score=0.86, s
             "repetition_penalty": 1.18,
         },
         "intent": intent,
+        "scene_id": scene_id or SCENE_BY_INTENT[intent],
     }
     item.update(overrides)
     return item
@@ -55,12 +80,16 @@ def golden_scored():
     for index, actor_id in enumerate(GOLDEN_ACTORS):
         by_intent = {}
         for intent in REQUIRED_INTENTS:
+            # The historical board used 08-commentary/serious_analysis rather than curious_probe.
+            historical_intent = "serious_analysis" if intent == "curious_probe" else intent
+            scene_id = SCENE_BY_INTENT[intent]
             base = 0.78 + index * 0.01
-            by_intent[intent] = [
-                scored(actor_id, intent, "A", naturalness=0.76, intent_score=0.77, speaker=0.75),
-                scored(actor_id, intent, "B", naturalness=base, intent_score=base + 0.01, speaker=base + 0.02),
-                scored(actor_id, intent, "C", naturalness=0.77, intent_score=0.78, speaker=0.76),
+            candidates = [
+                scored(actor_id, historical_intent, "A", naturalness=0.76, intent_score=0.77, speaker=0.75, scene_id=scene_id),
+                scored(actor_id, historical_intent, "B", naturalness=base, intent_score=base + 0.01, speaker=base + 0.02, scene_id=scene_id),
+                scored(actor_id, historical_intent, "C", naturalness=0.77, intent_score=0.78, speaker=0.76, scene_id=scene_id),
             ]
+            by_intent.setdefault(historical_intent, []).extend(candidates)
         result[actor_id] = {"actor_id": actor_id, "candidates": by_intent}
     return result
 
@@ -80,17 +109,41 @@ class GoldenSetQa2Tests(unittest.TestCase):
         self.assertEqual(tuple(GOLDEN_ACTORS), ("01", "02", "04", "05", "08", "09", "12", "13"))
         self.assertEqual(BENCHMARK_ANCHOR, "05")
 
-    def test_calibration_uses_human_approved_b_variants_and_weakest_accepted_floor(self):
+    def test_calibration_uses_human_approved_b_variants_and_weakest_accepted_envelope(self):
         data = golden_scored()
-        # A is intentionally lower than B and must not lower the benchmark floor.
+        # Historical accepted baselines can legitimately sit outside QA1's provisional pace/silence bands.
+        data["01"]["candidates"]["neutral_explain"][1]["wpm"] = 222.7
+        warm_b = next(
+            item for item in data["13"]["candidates"]["warm_explain"]
+            if item["variant"] == "B" and item["scene_id"] == "03-warm"
+        )
+        warm_b["max_internal_silence_seconds"] = 2.30
+        quote_b = next(
+            item for item in data["02"]["candidates"]["quoted_character"]
+            if item["variant"] == "B"
+        )
+        quote_b["aligned_transcript"] = "one two three four five WRONG seven eight nine ten"  # WER 0.10 > QA1 0.08.
+
         calibration = build_golden_calibration(data, approvals())
-        first = REQUIRED_INTENTS[0]
-        self.assertAlmostEqual(calibration["intents"][first]["naturalness_floor"], 0.78)
-        self.assertAlmostEqual(calibration["intents"][first]["intent_fidelity_floor"], 0.79)
-        self.assertAlmostEqual(calibration["intents"][first]["speaker_similarity_floor"], 0.80)
+        neutral = calibration["intents"]["neutral_explain"]
+        warm = calibration["intents"]["warm_explain"]
+        quote = calibration["intents"]["quoted_character"]
+        self.assertEqual(neutral["pace_max_wpm"], 222.7)
+        self.assertEqual(warm["max_internal_silence_seconds"], 2.30)
+        self.assertGreaterEqual(quote["max_wer"], 0.10)
+        self.assertAlmostEqual(neutral["naturalness_floor"], 0.78)
+        self.assertAlmostEqual(neutral["intent_fidelity_floor"], 0.79)
+        self.assertAlmostEqual(neutral["speaker_similarity_floor"], 0.80)
         self.assertEqual(calibration["benchmark_anchor"], "05")
         self.assertEqual(calibration["golden_set"], list(GOLDEN_ACTORS))
         self.assertTrue(calibration["golden_set_digest"])
+
+    def test_legacy_commentary_is_explicit_proxy_for_historical_missing_curious_probe(self):
+        calibration = build_golden_calibration(golden_scored(), approvals())
+        curious = calibration["intents"]["curious_probe"]
+        self.assertEqual(curious["calibration_source"], "legacy_scene_proxy")
+        self.assertEqual(curious["source_scene_id"], "08-commentary")
+        self.assertEqual(curious["historical_intent"], "serious_analysis")
 
     def test_missing_human_approved_golden_actor_fails_closed(self):
         data = golden_scored()
@@ -98,14 +151,33 @@ class GoldenSetQa2Tests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "golden actor 13"):
             build_golden_calibration(data, approvals())
 
-    def test_candidate_is_judged_against_intent_specific_golden_floor_not_fixed_point_75(self):
-        calibration = build_golden_calibration(golden_scored(), approvals())
-        intent = REQUIRED_INTENTS[0]
-        below = scored("03", intent, naturalness=0.779, intent_score=0.90, speaker=0.90)
+    def test_candidate_is_judged_against_golden_envelope_not_fixed_qa1_pace_or_point_75(self):
+        data = golden_scored()
+        for actor_id in GOLDEN_ACTORS:
+            neutral_b = next(
+                item for item in data[actor_id]["candidates"]["neutral_explain"] if item["variant"] == "B"
+            )
+            neutral_b["wpm"] = 200.0 + int(actor_id)
+        calibration = build_golden_calibration(data, approvals())
+
+        # 205 WPM violates QA1's 190 cap, but is inside the human-approved Golden Set envelope.
+        inside = scored("03", "neutral_explain", wpm=205.0, naturalness=0.90, intent_score=0.90, speaker=0.90)
+        self.assertEqual([], evaluate_candidate_qa2(inside, calibration))
+
+        outside = scored("03", "neutral_explain", wpm=260.0, naturalness=0.90, intent_score=0.90, speaker=0.90)
+        errors = evaluate_candidate_qa2(outside, calibration)
+        self.assertTrue(any("golden-set pace envelope" in error for error in errors))
+
+        below = scored("03", "neutral_explain", wpm=205.0, naturalness=0.779, intent_score=0.90, speaker=0.90)
         errors = evaluate_candidate_qa2(below, calibration)
         self.assertTrue(any("golden-set naturalness floor" in error for error in errors))
-        above = scored("03", intent, naturalness=0.781, intent_score=0.90, speaker=0.90)
-        self.assertEqual([], evaluate_candidate_qa2(above, calibration))
+
+    def test_absolute_integrity_gates_remain_fail_closed(self):
+        calibration = build_golden_calibration(golden_scored(), approvals())
+        bad = scored("03", "neutral_explain", clipping_ratio=0.01, post_tempo=True)
+        errors = evaluate_candidate_qa2(bad, calibration)
+        self.assertTrue(any("clipping" in error for error in errors))
+        self.assertTrue(any("post tempo" in error for error in errors))
 
     def test_all_intents_required_and_best_passing_candidate_selected(self):
         calibration = build_golden_calibration(golden_scored(), approvals())
