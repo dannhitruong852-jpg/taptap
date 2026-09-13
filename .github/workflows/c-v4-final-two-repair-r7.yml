@@ -1,0 +1,30 @@
+name: C v4 final two actors repair round 7
+
+on:
+  pull_request:
+    branches: ['c-v4-six-actor-repair']
+    paths:
+      - 'voice-pipeline/calibration/repair_search_r7.py'
+      - 'voice-pipeline/calibration/render_repair_auditions_r7.py'
+      - 'voice-pipeline/tests/test_final_two_repair_r7.py'
+      - '.github/workflows/c-v4-final-two-repair-r7.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: c-v4-final-two-r7-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run final-two round-seven contracts
+        run: PYTHONPATH=voice-pipeline python -m unittest voice-pipeline/tests/test_final_two_repair_r7.py -v
