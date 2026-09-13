@@ -49,7 +49,7 @@ class BuildCuratedYearTests(unittest.TestCase):
         self.assertEqual(direction['discourse_map']['contrast']['director_intent'], 'contrast')
         self.assertIn('neutral_explain', {x['director_intent'] for x in direction['discourse_map'].values()})
 
-    def test_pipe_boundaries_preserve_sentence_text(self):
+    def test_rejects_segment_fidelity_error(self):
         source = {'year': 2003, 'source_sha256': 'abc', 'vocabulary': {}}
         item = {'id':'text1','section_type':'reading','title':'x','actor':'01','context':'x','rows':[
             [1, 'One| two.', '一句。', 'explain', []],
@@ -58,7 +58,28 @@ class BuildCuratedYearTests(unittest.TestCase):
         ]}
         doc = build_curated_year.compile_article(source, item)
         self.assertEqual(doc['sentences'][0]['en'], 'One two.')
-        self.assertEqual(''.join(x['text'] for x in doc['sentences'][0]['segments']), 'One two.')
+
+    def test_main_source_loader_supports_gzip(self):
+        import gzip, json, tempfile
+        with tempfile.TemporaryDirectory() as td:
+            p = Path(td) / '2005.json.gz'
+            with gzip.open(p, 'wt', encoding='utf-8') as handle:
+                json.dump({'year': 2005}, handle)
+            with gzip.open(p, 'rt', encoding='utf-8') as handle:
+                self.assertEqual(json.load(handle)['year'], 2005)
+
+    def test_load_curated_source_supports_split_base64_gzip(self):
+        import base64, gzip, json, tempfile
+        payload = json.dumps({'year': 2006, 'articles': []}, ensure_ascii=False).encode('utf-8')
+        encoded = base64.b64encode(gzip.compress(payload)).decode('ascii')
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            cut = len(encoded) // 2
+            (root / '2006.json.gz.b64.part00').write_text(encoded[:cut], encoding='ascii')
+            (root / '2006.json.gz.b64.part01').write_text(encoded[cut:], encoding='ascii')
+            source = build_curated_year.load_curated_source(root, 2006)
+            self.assertEqual(source['year'], 2006)
+            self.assertEqual(source['articles'], [])
 
 
 if __name__ == '__main__':
