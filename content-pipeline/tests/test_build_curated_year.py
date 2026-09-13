@@ -35,6 +35,20 @@ class BuildCuratedYearTests(unittest.TestCase):
         self.assertEqual(''.join(x['text'] for x in doc['sentences'][0]['segments']), doc['sentences'][0]['en'])
         self.assertEqual(validate_article(doc), [])
 
+    def test_builds_year_voice_profiles_and_direction_map(self):
+        source = {
+            'year': 2006, 'source_sha256': 'abc', 'vocabulary': {},
+            'articles': [{'id':'text1','section_type':'reading','title':'x','actor':'08','context':'科技报道',
+                          'rows': [[1,'One.','一。','explain',[]],[1,'Two.','二。','contrast',[]],[1,'Three.','三。','conclude',[]]]}]
+        }
+        profiles = build_curated_year.build_voice_profiles(source)
+        direction = build_curated_year.build_direction(source)
+        self.assertEqual(profiles['year'], 2006)
+        self.assertEqual(profiles['profiles']['text1']['primary_actor_id'], '08')
+        self.assertEqual(direction['year'], 2006)
+        self.assertEqual(direction['discourse_map']['contrast']['director_intent'], 'contrast')
+        self.assertIn('neutral_explain', {x['director_intent'] for x in direction['discourse_map'].values()})
+
     def test_pipe_boundaries_preserve_sentence_text(self):
         source = {'year': 2003, 'source_sha256': 'abc', 'vocabulary': {}}
         item = {'id':'text1','section_type':'reading','title':'x','actor':'01','context':'x','rows':[
