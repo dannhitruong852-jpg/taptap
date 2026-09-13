@@ -13,7 +13,7 @@ permissions:
 
 concurrency:
   group: c-v4-actor-expansion-${{ github.ref }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   contracts:
