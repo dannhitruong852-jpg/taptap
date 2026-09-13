@@ -7,6 +7,9 @@ on:
         description: 'Canary batch (currently fixed to 2003-2006)'
         required: false
         default: '2003,2004,2005,2006'
+  push:
+    branches: ['c-v4-article-preview-actual']
+    paths: ['batch-canary.trigger']
 
 permissions:
   contents: read
@@ -37,6 +40,7 @@ jobs:
             voice-pipeline/tests/test_batching.py \
             voice-pipeline/tests/test_generate_batch.py \
             voice-pipeline/tests/test_merge_c_v4_generic.py \
+            voice-pipeline/tests/test_chatterbox_actor_adapter.py \
             content-pipeline/tests/test_extract_exam.py \
             content-pipeline/tests/test_extract_exam_real_part_b.py \
             content-pipeline/tests/test_build_curated_year.py -v
@@ -75,8 +79,10 @@ jobs:
           python-version: '3.11'
       - name: Install reference preparation dependencies
         run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
           python -m pip install numpy==1.26.4 soundfile==0.13.1 requests
-      - name: Build baseline profiles
+      - name: Build baseline profiles and production approvals
         run: |
           mkdir -p /tmp/voicepack/profiles /tmp/voicepack/references /tmp/expansion-profiles
           python voice-pipeline/calibration/build_expansion_profiles.py --output /tmp/expansion-profiles
@@ -87,6 +93,34 @@ jobs:
               cp "/tmp/expansion-profiles/${n}.json" "/tmp/voicepack/profiles/${n}.json"
             fi
           done
+          cp voice-pipeline/calibration/actors/production_approvals.json /tmp/voicepack/profiles/production_approvals.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          path=Path('/tmp/voicepack/profiles/production_approvals.json')
+          data=json.loads(path.read_text())
+          data['actors']['06']={
+              'status':'accepted',
+              'eligible_for':['production'],
+              'approval_method':'automated_c_v4_qa',
+              'qa_policy':'automated-c-v4-qa-2',
+              'qa2_golden_run_id':34743370177,
+              'qa2_expansion_run_id':34740877351,
+              'intent_variants':{
+                  'neutral_explain':'B',
+                  'serious_analysis':'A',
+                  'warm_explain':'A',
+                  'narrative_build':'A',
+                  'contrast':'B',
+                  'information_peak':'B',
+                  'restrained_irony':'A',
+                  'quoted_character':'C',
+                  'qualification':'A',
+                  'curious_probe':'A'
+              }
+          }
+          path.write_text(json.dumps(data,indent=2)+'\n')
+          PY
       - name: Download actor03 final profile
         uses: actions/download-artifact@v4
         with: {name: c-v4-final-two-r7-03, path: /tmp/final03, github-token: '${{ github.token }}', repository: dannhitruong852-jpg/taptap, run-id: '34757803286'}
@@ -112,24 +146,42 @@ jobs:
             test -s "$src"
             cp "$src" "/tmp/voicepack/profiles/${n}.json"
           done
-      - name: Prepare all actor references
+      - name: Prepare all actor references at the profile-visible root
         run: |
           for n in $(seq -w 1 15); do
-            mkdir -p "/tmp/voicepack/references/actor${n}"
             case "$n" in
               01|02|04|05|08|09|12|13)
-                python voice-pipeline/prepare_2002_cast_references.py --actor "$n" --output "/tmp/voicepack/references/actor${n}" ;;
+                python voice-pipeline/prepare_2002_cast_references.py --actor "$n" --output /tmp/voicepack/references ;;
               03|14)
-                python voice-pipeline/calibration/prepare_repair_references_r4.py --actor "$n" --output "/tmp/voicepack/references/actor${n}" ;;
+                python voice-pipeline/calibration/prepare_repair_references_r4.py --actor "$n" --output /tmp/voicepack/references ;;
               *)
-                python voice-pipeline/calibration/prepare_expansion_references.py --actor "$n" --output "/tmp/voicepack/references/actor${n}" ;;
+                python voice-pipeline/calibration/prepare_expansion_references.py --actor "$n" --output /tmp/voicepack/references ;;
             esac
           done
       - name: Download actor15 X11 prompt
         uses: actions/download-artifact@v4
         with: {name: c-v4-final-two-r6-15, path: /tmp/r6, github-token: '${{ github.token }}', repository: dannhitruong852-jpg/taptap, run-id: '34754229039'}
       - name: Install actor15 X11 prompt
-        run: cp /tmp/r6/audio/actor15/actor15-08-probe-X11.wav /tmp/voicepack/references/actor15/actor15-08-probe-X11.wav
+        run: cp /tmp/r6/audio/actor15/actor15-08-probe-X11.wav /tmp/voicepack/references/actor15-08-probe-X11.wav
+      - name: Preflight every actor intent and reference
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from adapters.chatterbox_actor_adapter import resolve_controls
+          from calibration.automatic_qa import REQUIRED_INTENTS
+          profiles=Path('/tmp/voicepack/profiles')
+          references=Path('/tmp/voicepack/references')
+          checked=0
+          for number in range(1,16):
+              actor=f'{number:02d}'
+              for intent in REQUIRED_INTENTS:
+                  for intensity in (0,1,2):
+                      controls=resolve_controls(actor,intent,intensity,profiles)
+                      target=references/controls['reference_path']
+                      assert target.is_file(),(actor,intent,intensity,target)
+                      checked += 1
+          print({'actor_intent_intensity_checks':checked})
+          PY
       - uses: actions/upload-artifact@v4
         with:
           name: kaoyan-c-v4-production-voicepack
@@ -194,11 +246,20 @@ jobs:
           python -m pip install chatterbox-tts==0.1.7 numpy==1.26.4 soundfile==0.13.1
       - name: Build canonical content and direction
         run: python content-pipeline/build_curated_year.py --year '${{ matrix.unit.year }}'
+      - name: Compute render cache digest
+        id: render-cache
+        run: |
+          digest=$({
+            sha256sum content-pipeline/curated/${{ matrix.unit.year }}.json* 2>/dev/null || true
+            sha256sum voice-pipeline/generate_c_v4.py voice-pipeline/generate_batch.py voice-pipeline/adapters/chatterbox_actor_adapter.py
+            find /tmp/voicepack/profiles /tmp/voicepack/references -type f -print0 | sort -z | xargs -0 sha256sum
+          } | sha256sum | cut -d' ' -f1)
+          echo "digest=$digest" >> "$GITHUB_OUTPUT"
       - name: Restore previous shard cache when available
         uses: actions/cache@v4
         with:
           path: batch-out/${{ matrix.unit.year }}/${{ matrix.unit.article }}
-          key: kaoyan-v4-${{ matrix.unit.year }}-${{ matrix.unit.article }}-${{ matrix.shard }}-${{ hashFiles(format('content-pipeline/curated/{0}.json', matrix.unit.year), 'voice-pipeline/generate_c_v4.py', 'voice-pipeline/generate_batch.py', 'voice-pipeline/adapters/chatterbox_actor_adapter.py') }}
+          key: kaoyan-v4-${{ matrix.unit.year }}-${{ matrix.unit.article }}-${{ matrix.shard }}-${{ steps.render-cache.outputs.digest }}
       - name: Render shard
         run: |
           python voice-pipeline/generate_c_v4.py \
