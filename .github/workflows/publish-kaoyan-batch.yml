@@ -7,6 +7,9 @@ on:
         description: 'Successful Generate kaoyan C-mode batch run ID'
         required: true
         type: string
+  push:
+    branches: ['c-v4-article-preview-actual']
+    paths: ['publish-batch.trigger']
 
 permissions:
   contents: write
@@ -17,18 +20,33 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GH_TOKEN: ${{ github.token }}
-      SOURCE_RUN_ID: ${{ inputs.source_run_id }}
     steps:
       - uses: actions/checkout@v4
         with:
           ref: c-v4-article-preview-actual
           fetch-depth: 0
 
+      - name: Resolve validated source run
+        id: source
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            run_id='${{ inputs.source_run_id }}'
+          else
+            run_id=$(tr -d '[:space:]' < publish-batch.trigger)
+          fi
+          case "$run_id" in
+            ''|*[!0-9]*) echo "invalid source run id: $run_id" >&2; exit 2 ;;
+          esac
+          echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
       - name: Download merged candidates
+        env:
+          SOURCE_RUN_ID: ${{ steps.source.outputs.run_id }}
         run: |
           rm -rf /tmp/kaoyan-publish
           mkdir -p /tmp/kaoyan-publish
@@ -110,6 +128,8 @@ jobs:
           PY
 
       - name: Commit validated batch and publish Pages branch
+        env:
+          SOURCE_RUN_ID: ${{ steps.source.outputs.run_id }}
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
