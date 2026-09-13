@@ -43,12 +43,15 @@
     <div class="progress-track"><div id="progress-fill" class="progress-fill"></div></div>
     <div class="player-meta"><div><div id="player-position" class="player-position">01 / 21</div><div id="director-mood" class="director-mood">温暖讲解 · 1</div></div><div id="player-status" class="player-status">正在加载音频清单</div></div>
     <div class="transport-row">
-      <button id="previous" class="icon-button" type="button" aria-label="上一句">‹</button>
-      <button id="replay" class="icon-button" type="button" aria-label="重播本句">↺</button>
+      <button id="previous" class="icon-button" type="button" aria-label="上一句">
+        <svg class="transport-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14.5 5.5 8 12l6.5 6.5"/></svg>
+      </button>
       <button id="play-toggle" class="play-button" type="button" aria-label="播放">▶</button>
-      <button id="next" class="icon-button" type="button" aria-label="下一句">›</button>
-
+      <button id="next" class="icon-button" type="button" aria-label="下一句">
+        <svg class="transport-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9.5 5.5 6.5 6.5-6.5 6.5"/></svg>
+      </button>
     </div>
+    <button id="replay" class="icon-button" type="button" aria-label="重播本句" hidden>↺</button>
     <div id="speed-control" class="magnetic-speed" style="--speed-position:25%">
       <label class="speed-label" for="speed-range">倍速</label>
       <div class="speed-track">
