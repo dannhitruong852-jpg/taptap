@@ -1,0 +1,32 @@
+name: C v4 actor15 repair round 9
+
+on:
+  pull_request:
+    branches: ['c-v4-actor15-r8']
+    paths:
+      - 'voice-pipeline/calibration/repair_search_r9_15.py'
+      - 'voice-pipeline/calibration/render_repair_auditions_r9_15.py'
+      - 'voice-pipeline/tests/test_actor15_repair_r9.py'
+      - '.github/workflows/c-v4-actor15-repair-r9.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: c-v4-actor15-r9-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run actor15 round-nine contract
+        run: |
+          PYTHONPATH=voice-pipeline python -m unittest voice-pipeline/tests/test_actor15_repair_r9.py -v
+          python -m py_compile voice-pipeline/calibration/repair_search_r9_15.py voice-pipeline/calibration/render_repair_auditions_r9_15.py
