@@ -14,6 +14,34 @@ def select_shard(items, shard_index: int, shard_count: int):
     return _select_shard(items, shard_count, shard_index)
 
 
+def validate_render_request(year: int, article: str) -> None:
+    if not isinstance(year, int) or year < 1900 or year > 2100:
+        raise ValueError('year must be a four-digit exam year')
+    if not article or not all(ch.isalnum() or ch in ('-', '_') for ch in article):
+        raise ValueError('article must be a safe article id')
+
+
+def resolve_render_paths(
+    root: Path,
+    year: int,
+    article: str,
+    *,
+    output: Path | None = None,
+    calibration_dir: Path | None = None,
+    reference_dir: Path | None = None,
+) -> dict[str, Path]:
+    validate_render_request(year, article)
+    root = Path(root)
+    return {
+        'content': root / f'kaoyan-reader-v1/content/{year}/c/{article}.json',
+        'voice_profiles': root / f'content-pipeline/voice_profiles/{year}.json',
+        'direction': root / f'content-pipeline/direction/{year}.json',
+        'calibration_dir': Path(calibration_dir) if calibration_dir else root / 'voice-pipeline/calibration/actors',
+        'reference_dir': Path(reference_dir) if reference_dir else root / 'voice-pipeline/references/2002-cast',
+        'output': Path(output) if output else root / f'kaoyan-reader-v1/audio/{year}/v4/c-{article}',
+    }
+
+
 def sha256_file(path: Path) -> str:
     digest = hashlib.sha256()
     with Path(path).open('rb') as handle:
