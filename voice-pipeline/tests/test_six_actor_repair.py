@@ -2,6 +2,14 @@ import unittest
 
 from calibration.repair_search import REPAIR_ACTORS, REPAIR_TARGETS, build_repair_render_plan
 from calibration.render_repair_auditions import stable_repair_seed
+from calibration.repair_search_r2 import (
+    REPAIR_R2_ACTORS,
+    REPAIR_R2_TARGETS,
+    REPAIR_R2_SPECS,
+    build_repair_r2_profile,
+    build_repair_r2_render_plan,
+    total_repair_r2_renders,
+)
 
 
 SCRIPT = {
@@ -20,10 +28,25 @@ def profile(actor_id):
     refs = {state: f"actor{actor_id}-{state}.wav" for state in (
         "neutral", "warm", "lively", "serious", "curious", "ironic", "tense", "emotional"
     )}
+    intents = {}
+    for scene in SCRIPT["scenes"]:
+        intents[scene["intent"]] = {
+            "reference_state": "neutral",
+            "center": {
+                "exaggeration": 0.5,
+                "cfg_weight": 0.5,
+                "temperature": 0.75,
+                "repetition_penalty": 1.18,
+            },
+        }
     return {
         "actor_id": actor_id,
         "calibration_id": f"actor-{actor_id}-audition-v1",
         "references": refs,
+        "intent_profiles": intents,
+        "eligible": False,
+        "eligible_for": [],
+        "selected_candidates": {},
     }
 
 
@@ -90,6 +113,63 @@ class SixActorRepairTests(unittest.TestCase):
         self.assertEqual(first, stable_repair_seed("03", "08-probe", "R1"))
         self.assertNotEqual(first, stable_repair_seed("03", "08-probe", "R2"))
         self.assertNotEqual(first, stable_repair_seed("07", "08-probe", "R1"))
+
+
+class SixActorRepairRoundTwoTests(unittest.TestCase):
+    def test_round_two_targets_only_remaining_failed_cells(self):
+        self.assertEqual(REPAIR_R2_ACTORS, ("03", "07", "14", "15"))
+        self.assertEqual(
+            REPAIR_R2_TARGETS,
+            {
+                "03": ("curious_probe",),
+                "07": ("curious_probe",),
+                "14": ("information_peak", "restrained_irony"),
+                "15": ("narrative_build", "curious_probe"),
+            },
+        )
+        self.assertEqual(6, sum(len(v) for v in REPAIR_R2_TARGETS.values()))
+        self.assertEqual(50, total_repair_r2_renders())
+
+    def test_round_two_keeps_the_same_immutable_rules(self):
+        for actor_id in REPAIR_R2_ACTORS:
+            repaired_profile = build_repair_r2_profile(profile(actor_id))
+            renders = build_repair_r2_render_plan(repaired_profile, SCRIPT)
+            self.assertEqual(set(REPAIR_R2_TARGETS[actor_id]), {item["intent"] for item in renders})
+            for item in renders:
+                self.assertEqual(0, item["artificial_pause_ms"])
+                self.assertIs(False, item["post_tempo"])
+                self.assertEqual(1.18, item["repetition_penalty"])
+                self.assertTrue(item["variant"].startswith("S"))
+                local = repaired_profile["intent_profiles"][item["intent"]]
+                self.assertEqual(local["reference_state"], item["reference_state"])
+                self.assertEqual(repaired_profile["references"][item["reference_state"]], item["reference"])
+
+    def test_round_two_uses_actor_specific_reference_diagnosis(self):
+        expected = {
+            ("03", "curious_probe"): "ironic",
+            ("07", "curious_probe"): "lively",
+            ("14", "information_peak"): "emotional",
+            ("14", "restrained_irony"): "emotional",
+            ("15", "narrative_build"): "neutral",
+            ("15", "curious_probe"): "curious",
+        }
+        for (actor, intent), reference in expected.items():
+            self.assertEqual(reference, REPAIR_R2_SPECS[actor][intent]["reference_state"])
+
+    def test_actor15_round_two_is_seed_dense_near_the_best_round_one_regions(self):
+        repaired = build_repair_r2_profile(profile("15"))
+        renders = build_repair_r2_render_plan(repaired, SCRIPT)
+        by_intent = {}
+        for item in renders:
+            by_intent.setdefault(item["intent"], []).append(item)
+        narrative = by_intent["narrative_build"]
+        probe = by_intent["curious_probe"]
+        self.assertEqual(10, len(narrative))
+        self.assertEqual(8, len(probe))
+        self.assertTrue(all(item["temperature"] <= 0.72 for item in narrative))
+        self.assertTrue(all(item["temperature"] <= 0.70 for item in probe))
+        self.assertTrue(all(item["cfg_weight"] >= 0.57 for item in probe))
+        self.assertTrue(all(item["exaggeration"] <= 0.40 for item in probe))
 
 
 if __name__ == "__main__":
