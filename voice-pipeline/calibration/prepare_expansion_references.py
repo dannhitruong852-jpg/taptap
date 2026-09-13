@@ -17,8 +17,7 @@ ROOT = Path(__file__).resolve().parents[2]
 SOURCES = ROOT / "voice-pipeline/config/actor_sources.json"
 EARS_RAW = "https://raw.githubusercontent.com/facebookresearch/ears_dataset/main/"
 EARS_RELEASE = "https://github.com/facebookresearch/ears_dataset/releases/download/dataset/"
-VCTK_P225_SAMPLE = "https://raw.githubusercontent.com/quickvc/QuickVC-VoiceConversion/main/test_data/p225_001.wav"
-VCTK_P225_MIRROR_LICENSE = "https://raw.githubusercontent.com/quickvc/QuickVC-VoiceConversion/main/LICENSE"
+VCTK_P225_SAMPLE = "https://huggingface.co/voices/VCTK_British_English_Females/resolve/main/samples/VCTK_p225.wav"
 STATES = ("neutral", "warm", "lively", "serious", "curious", "ironic", "tense", "emotional")
 EARS_TASKS = {
     "neutral": "rainbow_01_regular",
@@ -140,10 +139,8 @@ def _prepare_vctk(actor_id: str, cfg: dict, output: Path) -> dict:
     if cfg["source_speaker"] != "p225":
         raise ValueError("Only traceable VCTK p225 is configured for this expansion")
     with tempfile.TemporaryDirectory() as td_raw:
-        source = Path(td_raw) / "p225_001.wav"
-        mirror_license = Path(td_raw) / "MIRROR_LICENSE"
+        source = Path(td_raw) / "VCTK_p225.wav"
         fetch(VCTK_P225_SAMPLE, source)
-        fetch(VCTK_P225_MIRROR_LICENSE, mirror_license)
         raw = source.read_bytes()
         report = {
             "actor_id": actor_id,
@@ -152,22 +149,21 @@ def _prepare_vctk(actor_id: str, cfg: dict, output: Path) -> dict:
             "license": cfg["source_license"],
             "source_url": cfg["source_url"],
             "mirror_url": VCTK_P225_SAMPLE,
-            "mirror_repository_license": "MIT",
+            "mirror_repository_license": "CC BY 4.0",
             "source_sha256": sha256_bytes(raw),
             "variants": {},
         }
         for state in STATES:
             target = output / f"actor{actor_id}-{state}.wav"
             metrics = _write_reference(raw, target)
-            report["variants"][state] = {"path": target.name, "task": "p225_001", **metrics}
+            report["variants"][state] = {"path": target.name, "task": "VCTK_p225", **metrics}
         (output / "NOTICE.VCTK.txt").write_text(
             "CSTR VCTK Corpus v0.92, University of Edinburgh, CC BY 4.0.\n"
             "Configured speaker: p225, female, English accent, Southern England.\n"
-            "The CI reference is a p225_001 mirror in QuickVC-VoiceConversion; the mirror repository is MIT licensed.\n"
+            "The CI reference is the VCTK_p225 sample mirrored by voices/VCTK_British_English_Females on Hugging Face under CC BY 4.0.\n"
             "Official VCTK provenance remains the University of Edinburgh DataShare source recorded in actor_sources.json.\n",
             encoding="utf-8",
         )
-        (output / "LICENSE.VCTK-MIRROR.txt").write_text(mirror_license.read_text(encoding="utf-8"), encoding="utf-8")
         return report
 
 
