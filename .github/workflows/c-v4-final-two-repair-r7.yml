@@ -1,0 +1,287 @@
+name: C v4 final two actors repair round 7
+
+on:
+  pull_request:
+    branches: ['c-v4-six-actor-repair']
+    paths:
+      - 'voice-pipeline/calibration/repair_search_r7.py'
+      - 'voice-pipeline/calibration/render_repair_auditions_r7.py'
+      - 'voice-pipeline/tests/test_final_two_repair_r7.py'
+      - '.github/workflows/c-v4-final-two-repair-r7.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: c-v4-final-two-r7-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run final-two round-seven contracts
+        run: |
+          PYTHONPATH=voice-pipeline python -m unittest voice-pipeline/tests/test_final_two_repair_r7.py -v
+          python -m py_compile voice-pipeline/calibration/repair_search_r7.py voice-pipeline/calibration/render_repair_auditions_r7.py
+
+  repair-score-r7:
+    needs: contract
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        actor: ['03', '15']
+    env:
+      HF_HOME: /tmp/chatterbox-hf-cache
+      TORCH_HOME: /tmp/torch-cache
+      OMP_NUM_THREADS: '4'
+      MKL_NUM_THREADS: '4'
+      PYTHONUNBUFFERED: '1'
+      PYTHONPATH: voice-pipeline
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - uses: actions/cache@v4
+        with:
+          path: |
+            /tmp/chatterbox-hf-cache
+            /tmp/torch-cache
+          key: c-v4-six-actor-repair-models-v1
+      - name: Install Chatterbox and QA dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          python -m pip install --upgrade pip
+          python -m pip install chatterbox-tts==0.1.7 numpy==1.26.4 soundfile==0.13.1 torch==2.6.0 torchaudio==2.6.0
+      - name: Download original actor evidence
+        uses: actions/download-artifact@v4
+        with:
+          name: c-v4-expansion-actor-${{ matrix.actor }}
+          path: /tmp/original
+          github-token: ${{ github.token }}
+          repository: dannhitruong852-jpg/taptap
+          run-id: 34740877351
+      - name: Download round-one evidence
+        uses: actions/download-artifact@v4
+        with:
+          name: c-v4-six-repair-${{ matrix.actor }}
+          path: /tmp/r1
+          github-token: ${{ github.token }}
+          repository: dannhitruong852-jpg/taptap
+          run-id: 34744873122
+      - name: Download round-two evidence
+        uses: actions/download-artifact@v4
+        with:
+          name: c-v4-six-repair-r2-${{ matrix.actor }}
+          path: /tmp/r2
+          github-token: ${{ github.token }}
+          repository: dannhitruong852-jpg/taptap
+          run-id: 34746310492
+      - name: Download actor03 round-three evidence
+        if: matrix.actor == '03'
+        uses: actions/download-artifact@v4
+        with:
+          name: c-v4-six-repair-r3-03
+          path: /tmp/r3
+          github-token: ${{ github.token }}
+          repository: dannhitruong852-jpg/taptap
+          run-id: 34747938087
+      - name: Download actor15 round-three evidence
+        if: matrix.actor == '15'
+        uses: actions/download-artifact@v4
+        with:
+          name: c-v4-six-repair-r3-15
+          path: /tmp/r3
+          github-token: ${{ github.token }}
+          repository: dannhitruong852-jpg/taptap
+          run-id: 34748972267
+      - name: Download actor03 round-four evidence
+        if: matrix.actor == '03'
+        uses: actions/download-artifact@v4
+        with:
+          name: c-v4-six-repair-r4-03
+          path: /tmp/r4
+          github-token: ${{ github.token }}
+          repository: dannhitruong852-jpg/taptap
+          run-id: 34749959122
+      - name: Download actor15 round-four evidence
+        if: matrix.actor == '15'
+        uses: actions/download-artifact@v4
+        with:
+          name: c-v4-actor15-repair-r4
+          path: /tmp/r4
+          github-token: ${{ github.token }}
+          repository: dannhitruong852-jpg/taptap
+          run-id: 34749959142
+      - name: Download round-five evidence
+        uses: actions/download-artifact@v4
+        with:
+          name: c-v4-final-two-r5-${{ matrix.actor }}
+          path: /tmp/r5
+          github-token: ${{ github.token }}
+          repository: dannhitruong852-jpg/taptap
+          run-id: 34751950572
+      - name: Download round-six evidence
+        uses: actions/download-artifact@v4
+        with:
+          name: c-v4-final-two-r6-${{ matrix.actor }}
+          path: /tmp/r6
+          github-token: ${{ github.token }}
+          repository: dannhitruong852-jpg/taptap
+          run-id: 34754229039
+      - name: Download immutable Golden Set QA2 calibration
+        uses: actions/download-artifact@v4
+        with:
+          name: c-v4-golden-set-qa2-calibration
+          path: /tmp/calibration
+          github-token: ${{ github.token }}
+          repository: dannhitruong852-jpg/taptap
+          run-id: 34743370177
+      - name: Build round-seven actor profile
+        run: |
+          python voice-pipeline/calibration/build_expansion_profiles.py --output /tmp/base-profiles
+          mkdir -p /tmp/r7-profiles
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from calibration.repair_search_r7 import build_repair_r7_profile
+          actor='${{ matrix.actor }}'
+          base=json.loads((Path('/tmp/base-profiles')/f'{actor}.json').read_text(encoding='utf-8'))
+          if actor == '03':
+              base['references']['r4_lowpitch2']='actor03-r4_lowpitch2.wav'
+          repaired=build_repair_r7_profile(base)
+          (Path('/tmp/r7-profiles')/f'{actor}.json').write_text(json.dumps(repaired,indent=2)+'\n',encoding='utf-8')
+          PY
+      - name: Prepare actor03 lowpitch reference
+        if: matrix.actor == '03'
+        run: python voice-pipeline/calibration/prepare_repair_references_r4.py --actor 03 --output /tmp/references/actor03
+      - name: Prepare actor15 reference
+        if: matrix.actor == '15'
+        run: python voice-pipeline/calibration/prepare_expansion_references.py --actor 15 --output /tmp/references/actor15
+      - name: Render final-two round-seven candidates
+        run: |
+          python voice-pipeline/calibration/render_repair_auditions_r7.py \
+            --profile '/tmp/r7-profiles/${{ matrix.actor }}.json' \
+            --references '/tmp/references/actor${{ matrix.actor }}' \
+            --output 'actor-repair-r7/audio/actor${{ matrix.actor }}' \
+            --device cpu
+      - name: Verify bounded evidence and immutable rules
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from calibration.repair_search_r7 import REPAIR_R7_TARGETS
+          actor='${{ matrix.actor }}'
+          root=Path(f'actor-repair-r7/audio/actor{actor}')
+          manifest=json.loads((root/f'actor{actor}-repair-r7.json').read_text())
+          assert manifest['repair_round'] == 7
+          assert len(manifest['renders']) == 16
+          assert len(list(root.glob('*.wav'))) == 16
+          assert all(r['artificial_pause_ms'] == 0 for r in manifest['renders'])
+          assert all(r['post_tempo'] is False for r in manifest['renders'])
+          assert {r['intent'] for r in manifest['renders']} == set(REPAIR_R7_TARGETS[actor])
+          PY
+      - name: Score round-seven audio with unchanged scorer
+        run: |
+          mkdir -p actor-repair-r7/scored
+          python voice-pipeline/calibration/score_auditions.py \
+            --manifest 'actor-repair-r7/audio/actor${{ matrix.actor }}/actor${{ matrix.actor }}-repair-r7.json' \
+            --profile '/tmp/r7-profiles/${{ matrix.actor }}.json' \
+            --references '/tmp/references/actor${{ matrix.actor }}' \
+            --output 'actor-repair-r7/scored/actor${{ matrix.actor }}.json'
+      - name: Rejudge all evidence against unchanged QA2
+        run: |
+          mkdir -p actor-repair-r7/results actor-repair-r7/profiles
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from calibration.golden_set_qa import select_actor_calibration_qa2
+          actor='${{ matrix.actor }}'
+          calibration=json.loads(Path('/tmp/calibration/golden-calibration.json').read_text(encoding='utf-8'))
+          assert calibration['qa_policy'] == 'automated-c-v4-qa-2'
+          assert calibration['golden_set_digest'] == '9abde471e724f153362c57f35583ed83e79dd6b904f6827d6d6227116b0ffdbd'
+          sources=[]
+          for root in ('/tmp/original','/tmp/r1','/tmp/r2','/tmp/r3','/tmp/r4','/tmp/r5','/tmp/r6'):
+              sources.append(json.loads((Path(root)/'scored'/f'actor{actor}.json').read_text(encoding='utf-8')))
+          sources.append(json.loads((Path('actor-repair-r7/scored')/f'actor{actor}.json').read_text(encoding='utf-8')))
+          combined={}
+          for source in sources:
+              for intent,items in source['candidates'].items():
+                  combined.setdefault(intent,[]).extend(items)
+          selected,rejected=select_actor_calibration_qa2(actor,combined,calibration)
+          profile=json.loads((Path('/tmp/r7-profiles')/f'{actor}.json').read_text(encoding='utf-8'))
+          if selected:
+              profile['selected_candidates']={intent:{
+                  'variant':item['variant'], 'reference_state':item.get('reference_state'),
+                  'exaggeration':item['exaggeration'], 'cfg_weight':item['cfg_weight'],
+                  'temperature':item['temperature'], 'repetition_penalty':item['repetition_penalty'],
+              } for intent,item in selected.items()}
+              profile['eligible']=True
+              profile['eligible_for']=['production']
+          result={
+              'schema_version':'c-v4-final-two-repair-result-7',
+              'actor_id':actor,
+              'repair_round':7,
+              'qa_policy':calibration['qa_policy'],
+              'golden_set_digest':calibration['golden_set_digest'],
+              'status':'accepted' if selected else 'failed',
+              'selected_variants':{intent:item['variant'] for intent,item in selected.items()},
+              'selected':selected,
+              'failures':rejected,
+          }
+          (Path('actor-repair-r7/results')/f'actor{actor}.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
+          (Path('actor-repair-r7/profiles')/f'{actor}.json').write_text(json.dumps(profile,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps({'actor_id':actor,'status':result['status'],'failed_intents':list(rejected)},indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: c-v4-final-two-r7-${{ matrix.actor }}
+          path: actor-repair-r7
+          if-no-files-found: error
+          retention-days: 14
+
+  aggregate-r7:
+    needs: repair-score-r7
+    if: always() && needs.repair-score-r7.result == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: c-v4-final-two-r7-*
+          path: /tmp/r7
+          merge-multiple: true
+      - name: Summarize final-two round seven
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          results=[json.loads((Path('/tmp/r7/results')/f'actor{a}.json').read_text()) for a in ('03','15')]
+          summary={
+              'schema_version':'c-v4-final-two-repair-round-7',
+              'qa_policy':'automated-c-v4-qa-2',
+              'accepted':[r['actor_id'] for r in results if r['status']=='accepted'],
+              'still_failed':[r['actor_id'] for r in results if r['status']!='accepted'],
+              'results':results,
+              'immutable_rules':{'artificial_pause_ms':0,'post_tempo':False,'qa_thresholds_lowered':False},
+          }
+          Path('final-two-r7-summary.json').write_text(json.dumps(summary,indent=2)+'\n')
+          print(json.dumps({k:summary[k] for k in ('accepted','still_failed')},indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: c-v4-final-two-r7-summary
+          path: final-two-r7-summary.json
+          if-no-files-found: error
+          retention-days: 30
