@@ -49,6 +49,15 @@ class BuildCuratedYearTests(unittest.TestCase):
         self.assertEqual(direction['discourse_map']['contrast']['director_intent'], 'contrast')
         self.assertIn('neutral_explain', {x['director_intent'] for x in direction['discourse_map'].values()})
 
+    def test_catalog_rows_point_to_v4_manifest_for_batch_years(self):
+        source = {
+            'year': 2005, 'source_sha256': 'abc', 'vocabulary': {},
+            'articles': [{'id':'text1','section_type':'reading','title':'x','actor':'08','context':'科技报道',
+                          'rows': [[1,'One.','一。','explain',[]],[1,'Two.','二。','contrast',[]],[1,'Three.','三。','conclude',[]]]}]
+        }
+        _, rows = build_curated_year.build_year(source)
+        self.assertEqual(rows[0]['manifest'], './audio/2005/v4/c-text1/manifest.json')
+
     def test_rejects_segment_fidelity_error(self):
         source = {'year': 2003, 'source_sha256': 'abc', 'vocabulary': {}}
         item = {'id':'text1','section_type':'reading','title':'x','actor':'01','context':'x','rows':[
