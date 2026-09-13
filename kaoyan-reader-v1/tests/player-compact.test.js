@@ -11,11 +11,14 @@ test('mobile player becomes a full-width bottom dock with safe-area spacing',()=
 });
 
 test('primary transport is a symmetric previous-play-next group',()=>{
+  const transport=html.match(/<div class="transport-row">([\s\S]*?)<\/div>/)?.[1]||'';
   assert.match(css,/\.transport-row\{[^}]*display:grid;[^}]*grid-template-columns:46px 64px 46px;[^}]*justify-content:center/s);
   assert.match(css,/\.transport-row \.icon-button\{width:46px;height:46px;?\}/);
   assert.match(css,/\.transport-row \.play-button\{width:64px;height:64px;?\}/);
   assert.match(css,/gap:18px/);
-  assert.doesNotMatch(html,/<button id="replay"/);
+  assert.match(transport,/id="previous"[\s\S]*id="play-toggle"[\s\S]*id="next"/);
+  assert.doesNotMatch(transport,/id="replay"/);
+  assert.match(html,/<button id="replay"[^>]*hidden[^>]*>/);
 });
 
 test('previous and next use balanced inline SVG chevrons',()=>{
