@@ -1,0 +1,118 @@
+name: C v4 final actor pool QA2
+
+on:
+  pull_request:
+    branches: ['codex/-c-v4']
+    paths:
+      - '.github/workflows/c-v4-final-actor-pool.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  final-qa2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download final Golden Set QA2 calibration
+        uses: actions/download-artifact@v4
+        with:
+          name: c-v4-golden-set-qa2-calibration
+          path: /tmp/calibration
+          github-token: ${{ github.token }}
+          repository: dannhitruong852-jpg/taptap
+          run-id: 34743370177
+      - name: Download all seven scored expansion artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: c-v4-expansion-actor-*
+          path: /tmp/expansion
+          merge-multiple: true
+          github-token: ${{ github.token }}
+          repository: dannhitruong852-jpg/taptap
+          run-id: 34740877351
+      - name: Apply automated-c-v4-qa-2 to all 210 candidates
+        env:
+          PYTHONPATH: voice-pipeline
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from calibration.automatic_qa import REQUIRED_INTENTS
+          from calibration.golden_set_qa import select_actor_calibration_qa2
+
+          actors = ('03', '06', '07', '10', '11', '14', '15')
+          calibration_path = Path('/tmp/calibration/golden-calibration.json')
+          calibration = json.loads(calibration_path.read_text(encoding='utf-8'))
+          if calibration.get('qa_policy') != 'automated-c-v4-qa-2':
+              raise SystemExit('wrong QA policy in calibration artifact')
+          if calibration.get('schema_version') != 'c-v4-golden-calibration-3':
+              raise SystemExit('unexpected Golden Set calibration schema')
+          if calibration.get('golden_set') != ['01', '02', '04', '05', '08', '09', '12', '13']:
+              raise SystemExit('unexpected Golden Set membership')
+          if calibration.get('benchmark_anchor') != '05':
+              raise SystemExit('unexpected benchmark anchor')
+          if calibration.get('human_reviewed_variants') != ['A', 'B', 'C']:
+              raise SystemExit('Golden Set must use the complete human-reviewed A/B/C board')
+
+          results = {}
+          total_candidates = 0
+          for actor in actors:
+              scored_path = Path('/tmp/expansion/scored') / f'actor{actor}.json'
+              if not scored_path.exists():
+                  raise SystemExit(f'missing scored evidence for actor {actor}: {scored_path}')
+              scored = json.loads(scored_path.read_text(encoding='utf-8'))
+              if scored.get('actor_id') != actor:
+                  raise SystemExit(f'actor identity mismatch for {actor}')
+              count = sum(len(items) for items in scored.get('candidates', {}).values())
+              if count != 30:
+                  raise SystemExit(f'actor {actor}: expected 30 candidates, got {count}')
+              total_candidates += count
+              selected, rejected = select_actor_calibration_qa2(actor, scored.get('candidates', {}), calibration)
+              status = 'accepted' if selected else 'failed'
+              results[actor] = {
+                  'status': status,
+                  'qa_policy': calibration['qa_policy'],
+                  'golden_set_digest': calibration['golden_set_digest'],
+                  'selected_variants': {intent: item['variant'] for intent, item in selected.items()},
+                  'selected': selected,
+                  'failures': rejected,
+              }
+
+          if total_candidates != 210:
+              raise SystemExit(f'expected exactly 210 candidates, got {total_candidates}')
+          if set(results) != set(actors):
+              raise SystemExit('final result does not cover all seven actors')
+
+          report = {
+              'schema_version': 'c-v4-final-actor-pool-qa2-1',
+              'qa_policy': calibration['qa_policy'],
+              'golden_set': calibration['golden_set'],
+              'benchmark_anchor': calibration['benchmark_anchor'],
+              'human_reviewed_variants': calibration['human_reviewed_variants'],
+              'golden_set_digest': calibration['golden_set_digest'],
+              'candidate_count': total_candidates,
+              'actors': results,
+              'accepted_actors': [actor for actor in actors if results[actor]['status'] == 'accepted'],
+              'rejected_actors': [actor for actor in actors if results[actor]['status'] == 'failed'],
+          }
+          Path('final-actor-pool-qa2.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
+          print(json.dumps({
+              'candidate_count': report['candidate_count'],
+              'accepted_actors': report['accepted_actors'],
+              'rejected_actors': report['rejected_actors'],
+              'golden_set_digest': report['golden_set_digest'],
+          }, indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: c-v4-final-actor-pool-qa2
+          path: final-actor-pool-qa2.json
+          if-no-files-found: error
+          retention-days: 30
