@@ -27,4 +27,180 @@ jobs:
         with:
           python-version: '3.11'
       - name: Run actor15 round-four contracts
-        run: PYTHONPATH=voice-pipeline python -m unittest voice-pipeline/tests/test_actor15_repair_r4.py -v
+        run: |
+          PYTHONPATH=voice-pipeline python -m unittest voice-pipeline/tests/test_actor15_repair_r4.py -v
+          python -m py_compile voice-pipeline/calibration/repair_search_r4_15.py voice-pipeline/calibration/render_repair_auditions_r4_15.py
+
+  repair-score-r4-15:
+    needs: contract
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    env:
+      HF_HOME: /tmp/chatterbox-hf-cache
+      TORCH_HOME: /tmp/torch-cache
+      OMP_NUM_THREADS: '4'
+      MKL_NUM_THREADS: '4'
+      PYTHONUNBUFFERED: '1'
+      PYTHONPATH: voice-pipeline
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - uses: actions/cache@v4
+        with:
+          path: |
+            /tmp/chatterbox-hf-cache
+            /tmp/torch-cache
+          key: c-v4-six-actor-repair-models-v1
+      - name: Install Chatterbox and QA dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          python -m pip install --upgrade pip
+          python -m pip install chatterbox-tts==0.1.7 numpy==1.26.4 soundfile==0.13.1 torch==2.6.0 torchaudio==2.6.0
+      - name: Download original actor15 evidence
+        uses: actions/download-artifact@v4
+        with:
+          name: c-v4-expansion-actor-15
+          path: /tmp/original
+          github-token: ${{ github.token }}
+          repository: dannhitruong852-jpg/taptap
+          run-id: 34740877351
+      - name: Download actor15 repair round-one evidence
+        uses: actions/download-artifact@v4
+        with:
+          name: c-v4-six-repair-15
+          path: /tmp/r1
+          github-token: ${{ github.token }}
+          repository: dannhitruong852-jpg/taptap
+          run-id: 34744873122
+      - name: Download actor15 repair round-two evidence
+        uses: actions/download-artifact@v4
+        with:
+          name: c-v4-six-repair-r2-15
+          path: /tmp/r2
+          github-token: ${{ github.token }}
+          repository: dannhitruong852-jpg/taptap
+          run-id: 34746310492
+      - name: Download actor15 repair round-three evidence
+        uses: actions/download-artifact@v4
+        with:
+          name: c-v4-six-repair-r3-15
+          path: /tmp/r3
+          github-token: ${{ github.token }}
+          repository: dannhitruong852-jpg/taptap
+          run-id: 34748972267
+      - name: Download immutable Golden Set QA2 calibration
+        uses: actions/download-artifact@v4
+        with:
+          name: c-v4-golden-set-qa2-calibration
+          path: /tmp/calibration
+          github-token: ${{ github.token }}
+          repository: dannhitruong852-jpg/taptap
+          run-id: 34743370177
+      - name: Build actor15 round-four profile
+        run: |
+          python voice-pipeline/calibration/build_expansion_profiles.py --output /tmp/base-profiles
+          mkdir -p /tmp/r4-profile
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from calibration.repair_search_r4_15 import build_actor15_r4_profile
+          base=json.loads((Path('/tmp/base-profiles')/'15.json').read_text(encoding='utf-8'))
+          repaired=build_actor15_r4_profile(base)
+          Path('/tmp/r4-profile/15.json').write_text(json.dumps(repaired,indent=2)+'\n',encoding='utf-8')
+          PY
+      - name: Prepare licensed actor15 same-speaker references
+        run: python voice-pipeline/calibration/prepare_expansion_references.py --actor 15 --output /tmp/references/actor15
+      - name: Render actor15 round-four candidates
+        run: |
+          python voice-pipeline/calibration/render_repair_auditions_r4_15.py \
+            --profile /tmp/r4-profile/15.json \
+            --references /tmp/references/actor15 \
+            --output actor15-repair-r4/audio/actor15 \
+            --device cpu
+      - name: Verify bounded evidence and immutable rules
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from calibration.repair_search_r4_15 import total_actor15_r4_renders, REPAIR_R4_15_TARGETS
+          root=Path('actor15-repair-r4/audio/actor15')
+          manifest=json.loads((root/'actor15-repair-r4.json').read_text())
+          assert len(manifest['renders']) == total_actor15_r4_renders() == 32
+          assert len(list(root.glob('*.wav'))) == 32
+          assert len(list(root.glob('*.opus'))) == 32
+          assert len(list(root.glob('*.mp3'))) == 32
+          assert {r['intent'] for r in manifest['renders']} == set(REPAIR_R4_15_TARGETS)
+          assert all(r['artificial_pause_ms'] == 0 for r in manifest['renders'])
+          assert all(r['post_tempo'] is False for r in manifest['renders'])
+          PY
+      - name: Score actor15 round-four audio with unchanged scorer
+        run: |
+          mkdir -p actor15-repair-r4/scored
+          python voice-pipeline/calibration/score_auditions.py \
+            --manifest actor15-repair-r4/audio/actor15/actor15-repair-r4.json \
+            --profile /tmp/r4-profile/15.json \
+            --references /tmp/references/actor15 \
+            --output actor15-repair-r4/scored/actor15.json
+      - name: Rejudge all actor15 evidence against unchanged QA2
+        run: |
+          mkdir -p actor15-repair-r4/results actor15-repair-r4/profiles
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from calibration.golden_set_qa import select_actor_calibration_qa2
+          calibration=json.loads(Path('/tmp/calibration/golden-calibration.json').read_text(encoding='utf-8'))
+          assert calibration['qa_policy'] == 'automated-c-v4-qa-2'
+          assert calibration['golden_set_digest'] == '9abde471e724f153362c57f35583ed83e79dd6b904f6827d6d6227116b0ffdbd'
+          sources=[]
+          for path in (
+              Path('/tmp/original/scored/actor15.json'),
+              Path('/tmp/r1/scored/actor15.json'),
+              Path('/tmp/r2/scored/actor15.json'),
+              Path('/tmp/r3/scored/actor15.json'),
+              Path('actor15-repair-r4/scored/actor15.json'),
+          ):
+              sources.append(json.loads(path.read_text(encoding='utf-8')))
+          combined={}
+          for source in sources:
+              for intent,items in source['candidates'].items():
+                  combined.setdefault(intent,[]).extend(items)
+          selected,rejected=select_actor_calibration_qa2('15',combined,calibration)
+          profile=json.loads(Path('/tmp/r4-profile/15.json').read_text(encoding='utf-8'))
+          if selected:
+              profile['selected_candidates']={intent:{
+                  'variant':item['variant'],
+                  'reference_state':item.get('reference_state'),
+                  'exaggeration':item['exaggeration'],
+                  'cfg_weight':item['cfg_weight'],
+                  'temperature':item['temperature'],
+                  'repetition_penalty':item['repetition_penalty'],
+              } for intent,item in selected.items()}
+              profile['eligible']=True
+              profile['eligible_for']=['production']
+          result={
+              'schema_version':'c-v4-actor15-repair-result-4',
+              'actor_id':'15',
+              'repair_round':4,
+              'qa_policy':calibration['qa_policy'],
+              'golden_set_digest':calibration['golden_set_digest'],
+              'status':'accepted' if selected else 'failed',
+              'repair_candidate_count':sum(len(v) for v in sources[-1]['candidates'].values()),
+              'combined_candidate_count':sum(len(v) for v in combined.values()),
+              'selected_variants':{intent:item['variant'] for intent,item in selected.items()},
+              'selected':selected,
+              'failures':rejected,
+          }
+          Path('actor15-repair-r4/results/actor15.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
+          Path('actor15-repair-r4/profiles/15.json').write_text(json.dumps(profile,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps({'status':result['status'],'selected_variants':result['selected_variants'],'failed_intents':list(rejected)},indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: c-v4-actor15-repair-r4
+          path: actor15-repair-r4
+          if-no-files-found: error
+          retention-days: 14
