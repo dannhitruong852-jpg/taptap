@@ -109,7 +109,7 @@ class GoldenSetQa2Tests(unittest.TestCase):
         self.assertEqual(tuple(GOLDEN_ACTORS), ("01", "02", "04", "05", "08", "09", "12", "13"))
         self.assertEqual(BENCHMARK_ANCHOR, "05")
 
-    def test_calibration_uses_human_approved_b_variants_and_weakest_accepted_envelope(self):
+    def test_calibration_uses_all_human_reviewed_variants_and_keeps_b_as_default(self):
         data = golden_scored()
         # Historical accepted baselines can legitimately sit outside QA1's provisional pace/silence bands.
         data["01"]["candidates"]["neutral_explain"][1]["wpm"] = 222.7
@@ -131,9 +131,11 @@ class GoldenSetQa2Tests(unittest.TestCase):
         self.assertEqual(neutral["pace_max_wpm"], 222.7)
         self.assertEqual(warm["max_internal_silence_seconds"], 2.30)
         self.assertGreaterEqual(quote["max_wer"], 0.10)
-        self.assertAlmostEqual(neutral["naturalness_floor"], 0.78)
-        self.assertAlmostEqual(neutral["intent_fidelity_floor"], 0.79)
-        self.assertAlmostEqual(neutral["speaker_similarity_floor"], 0.80)
+        self.assertAlmostEqual(neutral["naturalness_floor"], 0.76)
+        self.assertAlmostEqual(neutral["intent_fidelity_floor"], 0.77)
+        self.assertAlmostEqual(neutral["speaker_similarity_floor"], 0.75)
+        self.assertEqual(calibration["default_variant"], "B")
+        self.assertEqual(calibration["human_reviewed_variants"], ["A", "B", "C"])
         self.assertEqual(calibration["benchmark_anchor"], "05")
         self.assertEqual(calibration["golden_set"], list(GOLDEN_ACTORS))
         self.assertTrue(calibration["golden_set_digest"])
@@ -160,7 +162,7 @@ class GoldenSetQa2Tests(unittest.TestCase):
             neutral_b["wpm"] = 200.0 + int(actor_id)
         calibration = build_golden_calibration(data, approvals())
 
-        # 205 WPM violates QA1's 190 cap, but is inside the human-approved Golden Set envelope.
+        # 205 WPM violates QA1's 190 cap, but is inside the human-reviewed Golden Set envelope.
         inside = scored("03", "neutral_explain", wpm=205.0, naturalness=0.90, intent_score=0.90, speaker=0.90)
         self.assertEqual([], evaluate_candidate_qa2(inside, calibration))
 
@@ -168,7 +170,7 @@ class GoldenSetQa2Tests(unittest.TestCase):
         errors = evaluate_candidate_qa2(outside, calibration)
         self.assertTrue(any("golden-set pace envelope" in error for error in errors))
 
-        below = scored("03", "neutral_explain", wpm=205.0, naturalness=0.779, intent_score=0.90, speaker=0.90)
+        below = scored("03", "neutral_explain", wpm=205.0, naturalness=0.759, intent_score=0.90, speaker=0.90)
         errors = evaluate_candidate_qa2(below, calibration)
         self.assertTrue(any("golden-set naturalness floor" in error for error in errors))
 
