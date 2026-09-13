@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f1e8">
+  <meta name="description" content="2002 考研英语播放器 A 方案测试页。">
+  <title>2002 · 播放台 A 方案测试</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./catalog.css">
+  <link rel="stylesheet" href="./readalong.css">
+  <link rel="stylesheet" href="./reader-controls.css">
+  <style>
+    .transport-row{
+      left:94px;right:10px;
+      grid-template-columns:46px 56px 46px 68px;
+      gap:12px;
+      justify-content:end;
+      align-items:center;
+    }
+    .article-nav{width:46px;height:46px}
+    .article-nav::after{width:38px;height:38px;background:#f1f0ec;box-shadow:inset 0 0 0 1px rgba(48,45,38,.035)}
+    .article-nav::before{display:none}
+    .transport-icon{position:absolute;z-index:2;left:50%;top:50%;width:20px;height:20px;transform:translate(-50%,-50%);fill:none;stroke:#55524c;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+    .play-button{width:56px;height:56px}
+    .play-button::after{width:50px;height:50px}
+    .speed-control{width:68px;height:44px}
+    @media(max-width:350px){
+      .transport-row{left:76px;right:6px;grid-template-columns:42px 52px 42px 62px;gap:6px}
+      .article-nav{width:42px;height:42px}
+      .article-nav::after{width:36px;height:36px}
+      .play-button{width:52px;height:52px}
+      .play-button::after{width:46px;height:46px}
+      .speed-control{width:62px}
+      .speed-value{width:62px;min-width:62px}
+    }
+  </style>
+</head>
+<body data-mood="warm" data-reader-ui="tap-translate-v1">
+  <main class="page-shell">
+    <header class="hero">
+      <div class="topline">
+        <span class="year-chip">2002 · Text 1</span>
+        <span class="free-chip">A 方案测试页</span>
+      </div>
+      <h1 id="article-title">把真题读懂，也听懂</h1>
+      <p class="subtitle">逐句中英对照 · 理解导向的美式日常交流式朗读</p>
+      <nav class="catalog-controls" aria-label="试卷文章目录">
+        <label>年份<select id="year-select"><option>2002</option></select></label>
+        <label>题型<select id="section-select"><option value="">全部</option><option value="cloze">完型</option><option value="reading">阅读</option><option value="translation">翻译</option></select></label>
+        <label class="article-control">文章<select id="article-select" aria-label="选择文章"></select></label>
+      </nav>
+      <p id="content-status" class="content-status" aria-live="polite">正在加载2002年目录</p>
+      <div class="director-card">
+        <div class="director-icon">🎬</div>
+        <div><div class="director-title">这篇文章怎么读</div><p id="article-background"></p></div>
+      </div>
+      <div class="reader-settings">
+        <span>先读英文，轻点查译文</span>
+        <button id="toggle-vocab" class="vocab-toggle" type="button" role="switch" aria-checked="true" aria-label="6级及以上难词双语标注"><span>难词 6+</span><i aria-hidden="true"></i></button>
+      </div>
+    </header>
+    <section class="howto" aria-label="使用方法"><span>轻点句框查译文</span><b>·</b><span>长按文字复制</span><b>·</b><span>点序号播放</span></section>
+    <section id="sentence-list" class="sentence-list" aria-label="2002 Text 1 双语精读"></section>
+    <footer class="footer-note">只读真题正文，不含题目选项和作文。词汇使用本项目1—9级学习标尺，6级及以上突出显示，并非官方词汇分级。音频为预生成候选版，播放时不调用TTS。<a href="./THIRD_PARTY_AUDIO_NOTICE.txt" target="_blank" rel="noopener">音频来源与许可</a></footer>
+  </main>
+  <aside id="player-shell" class="player-shell" aria-label="朗读播放器">
+    <div class="player-grabber" aria-hidden="true"></div>
+    <div class="player-meta">
+      <div id="director-mood" class="director-mood">自然讲述 · 1</div>
+      <div id="player-position" class="player-position" hidden>01 / 21</div>
+      <div id="player-status" class="player-status" hidden>正在加载音频清单</div>
+    </div>
+    <div class="transport-row" aria-label="文章和播放控制">
+      <button id="previous" class="icon-button article-nav previous-article" type="button" aria-label="上一篇" title="上一篇">
+        <svg class="transport-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14.5 5.5 8 12l6.5 6.5"/></svg>
+        <span class="control-label">上一篇</span>
+      </button>
+      <button id="play-toggle" class="play-button" type="button" aria-label="播放" title="播放暂停"><span class="control-label">播放</span></button>
+      <button id="next" class="icon-button article-nav next-article" type="button" aria-label="下一篇" title="下一篇">
+        <svg class="transport-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9.5 5.5 6.5 6.5-6.5 6.5"/></svg>
+        <span class="control-label">下一篇</span>
+      </button>
+      <div id="speed-control" class="speed-control">
+        <button id="speed-value" class="speed-value" type="button" aria-label="倍速 1.0×" aria-haspopup="menu" aria-expanded="false">1.0×</button>
+        <div class="speed-menu" role="menu" aria-label="选择播放倍速" hidden>
+          <button type="button" role="menuitemradio" aria-checked="false" data-speed="1.7">1.7×</button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-speed="1.3">1.3×</button>
+          <button type="button" role="menuitemradio" aria-checked="true" data-speed="1">1.0×</button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-speed="0.7">0.7×</button>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="./app.js?v=x-player-v1"></script>
+</body>
+</html>
