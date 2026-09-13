@@ -17,6 +17,7 @@ from qa import normalized_wer
 POLICY_ID = "automated-c-v4-qa-2"
 GOLDEN_ACTORS = ("01", "02", "04", "05", "08", "09", "12", "13")
 BENCHMARK_ANCHOR = "05"
+HUMAN_REVIEWED_VARIANTS = ("A", "B", "C")
 
 # The historical audition board was rendered before curious_probe replaced the
 # second serious-analysis scene. Preserve that provenance explicitly instead of
@@ -53,34 +54,16 @@ def _absolute_gate_errors(item: dict) -> list[str]:
     return [error for error in evaluate_candidate(item) if error not in _CALIBRATED_QA1_ERRORS]
 
 
-def _find_selected_candidate(
-    actor_id: str,
-    target_intent: str,
-    candidates: Iterable[dict],
-    variant: str,
-    scene_id: str,
-) -> dict:
-    matches = [
-        item for item in candidates
-        if item.get("variant") == variant and item.get("scene_id") == scene_id
-    ]
-    if len(matches) != 1:
-        raise ValueError(
-            f"golden actor {actor_id} intent {target_intent}: expected one human-approved "
-            f"{variant} candidate for {scene_id}, got {len(matches)}"
-        )
-    candidate = matches[0]
-    errors = _absolute_gate_errors(candidate)
-    if errors:
-        raise ValueError(
-            f"golden actor {actor_id} intent {target_intent}: approved candidate fails absolute gate: {errors}"
-        )
-    return candidate
+def _scene_candidates(candidates: Iterable[dict], scene_id: str) -> list[dict]:
+    return [item for item in candidates if item.get("scene_id") == scene_id]
 
 
 def build_golden_calibration(scored_by_actor: dict, production_approvals: dict) -> dict:
     approvals = production_approvals.get("actors", {})
-    selected: dict[str, dict[str, dict]] = {}
+    accepted_by_actor: dict[str, dict[str, list[dict]]] = {}
+    excluded_by_actor: dict[str, dict[str, dict[str, list[str]]]] = {}
+    default_variants: set[str] = set()
+
     for actor_id in GOLDEN_ACTORS:
         approval = approvals.get(actor_id)
         if not approval or approval.get("status") != "accepted" or approval.get("approval_method") != "human_listening":
@@ -88,19 +71,60 @@ def build_golden_calibration(scored_by_actor: dict, production_approvals: dict) 
         actor = scored_by_actor.get(actor_id)
         if not actor:
             raise ValueError(f"golden actor {actor_id}: missing scored evidence")
-        variant = approval.get("default_variant", "B")
-        selected[actor_id] = {}
+        default_variant = approval.get("default_variant", "B")
+        default_variants.add(default_variant)
+        accepted_by_actor[actor_id] = {}
+        excluded_by_actor[actor_id] = {}
+
         for target_intent in REQUIRED_INTENTS:
             historical_intent, scene_id, _ = _HISTORICAL_SCENES[target_intent]
-            candidates = actor.get("candidates", {}).get(historical_intent, [])
-            selected[actor_id][target_intent] = _find_selected_candidate(
-                actor_id, target_intent, candidates, variant, scene_id
-            )
+            scene_items = _scene_candidates(actor.get("candidates", {}).get(historical_intent, []), scene_id)
+            by_variant = {item.get("variant"): item for item in scene_items}
+            missing = [variant for variant in HUMAN_REVIEWED_VARIANTS if variant not in by_variant]
+            if missing:
+                raise ValueError(
+                    f"golden actor {actor_id} intent {target_intent}: missing historical human-reviewed variants {missing}"
+                )
+
+            default_item = by_variant.get(default_variant)
+            default_errors = _absolute_gate_errors(default_item)
+            if default_errors:
+                raise ValueError(
+                    f"golden actor {actor_id} intent {target_intent}: default {default_variant} candidate fails absolute gate: {default_errors}"
+                )
+
+            passing = []
+            excluded = {}
+            for variant in HUMAN_REVIEWED_VARIANTS:
+                item = by_variant[variant]
+                errors = _absolute_gate_errors(item)
+                if errors:
+                    excluded[variant] = errors
+                else:
+                    passing.append(item)
+            if not passing:
+                raise ValueError(f"golden actor {actor_id} intent {target_intent}: no human-reviewed variant passes absolute gate")
+            accepted_by_actor[actor_id][target_intent] = passing
+            if excluded:
+                excluded_by_actor[actor_id][target_intent] = excluded
+
+    if len(default_variants) != 1:
+        raise ValueError(f"golden set has inconsistent default variants: {sorted(default_variants)}")
+    default_variant = next(iter(default_variants))
 
     intent_floors = {}
     for intent in REQUIRED_INTENTS:
         historical_intent, scene_id, source_kind = _HISTORICAL_SCENES[intent]
-        accepted = [selected[actor_id][intent] for actor_id in GOLDEN_ACTORS]
+        accepted = [
+            item
+            for actor_id in GOLDEN_ACTORS
+            for item in accepted_by_actor[actor_id][intent]
+        ]
+        excluded_variants = {
+            actor_id: excluded_by_actor[actor_id][intent]
+            for actor_id in GOLDEN_ACTORS
+            if intent in excluded_by_actor[actor_id]
+        }
         intent_floors[intent] = {
             "calibration_source": source_kind,
             "source_scene_id": scene_id,
@@ -112,18 +136,18 @@ def build_golden_calibration(scored_by_actor: dict, production_approvals: dict) 
             "naturalness_floor": min(float(item["naturalness_score"]) for item in accepted),
             "intent_fidelity_floor": min(float(item["intent_fidelity_score"]) for item in accepted),
             "speaker_similarity_floor": min(float(item["speaker_similarity"]) for item in accepted),
+            "excluded_variants": excluded_variants,
             "golden_values": {
                 actor_id: {
-                    "variant": selected[actor_id][intent]["variant"],
-                    "wpm": float(selected[actor_id][intent]["wpm"]),
-                    "wer": normalized_wer(
-                        selected[actor_id][intent]["transcript"],
-                        selected[actor_id][intent]["aligned_transcript"],
-                    ),
-                    "max_internal_silence_seconds": float(selected[actor_id][intent]["max_internal_silence_seconds"]),
-                    "naturalness_score": float(selected[actor_id][intent]["naturalness_score"]),
-                    "intent_fidelity_score": float(selected[actor_id][intent]["intent_fidelity_score"]),
-                    "speaker_similarity": float(selected[actor_id][intent]["speaker_similarity"]),
+                    item["variant"]: {
+                        "wpm": float(item["wpm"]),
+                        "wer": normalized_wer(item["transcript"], item["aligned_transcript"]),
+                        "max_internal_silence_seconds": float(item["max_internal_silence_seconds"]),
+                        "naturalness_score": float(item["naturalness_score"]),
+                        "intent_fidelity_score": float(item["intent_fidelity_score"]),
+                        "speaker_similarity": float(item["speaker_similarity"]),
+                    }
+                    for item in accepted_by_actor[actor_id][intent]
                 }
                 for actor_id in GOLDEN_ACTORS
             },
@@ -133,19 +157,23 @@ def build_golden_calibration(scored_by_actor: dict, production_approvals: dict) 
         "policy": POLICY_ID,
         "golden_set": list(GOLDEN_ACTORS),
         "benchmark_anchor": BENCHMARK_ANCHOR,
+        "default_variant": default_variant,
+        "human_reviewed_variants": list(HUMAN_REVIEWED_VARIANTS),
         "intents": intent_floors,
     }
     digest = hashlib.sha256(
         json.dumps(digest_payload, sort_keys=True, separators=(",", ":")).encode("utf-8")
     ).hexdigest()
     return {
-        "schema_version": "c-v4-golden-calibration-2",
+        "schema_version": "c-v4-golden-calibration-3",
         "qa_policy": POLICY_ID,
         "golden_set": list(GOLDEN_ACTORS),
         "benchmark_anchor": BENCHMARK_ANCHOR,
+        "default_variant": default_variant,
+        "human_reviewed_variants": list(HUMAN_REVIEWED_VARIANTS),
         "calibration_semantics": (
-            "intent-specific envelope from historical human-approved B baselines; "
-            "absolute integrity failures remain fail-closed"
+            "intent-specific envelope from all historical human-reviewed A/B/C variants that pass absolute integrity gates; "
+            "B remains the first-production default rather than the sole quality envelope"
         ),
         "intents": intent_floors,
         "golden_set_digest": digest,
