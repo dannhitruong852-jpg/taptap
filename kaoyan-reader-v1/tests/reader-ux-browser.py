@@ -108,7 +108,7 @@ class ReaderUX(unittest.TestCase):
 
     def test_08_approved_x_style_player_geometry_and_upward_speed_menu(self):
         p=self.page;shell=p.locator('#player-shell').bounding_box();self.assertAlmostEqual(shell['width'],390,delta=1.5);self.assertAlmostEqual(shell['y']+shell['height'],844,delta=1.5);self.assertGreaterEqual(shell['height'],75);self.assertLessEqual(shell['height'],78)
-        selectors=['#previous','#next','#play-toggle','#speed-value'];expected=[(44,44),(44,44),(52,52),(68,38)]
+        selectors=['#previous','#play-toggle','#next','#speed-value'];expected=[(46,46),(56,56),(46,46),(68,38)]
         boxes=[]
         for selector,size in zip(selectors,expected):
             box=p.locator(selector).bounding_box();boxes.append(box);self.assertEqual((round(box['width']),round(box['height'])),size)
@@ -124,8 +124,8 @@ class ReaderUX(unittest.TestCase):
             context=self.browser.new_context(viewport={'width':width,'height':height},has_touch=True,is_mobile=True)
             try:
                 page=context.new_page();page.goto(reader_url('x-player-size'));page.wait_for_selector('#player-shell');shell=page.locator('#player-shell').bounding_box();self.assertAlmostEqual(shell['width'],width,delta=1.5);self.assertAlmostEqual(shell['y']+shell['height'],height,delta=1.5);self.assertGreaterEqual(shell['height'],75);self.assertLessEqual(shell['height'],78);self.assertLessEqual(page.evaluate('document.documentElement.scrollWidth'),width)
-                expected=[42,42,50,62] if width<=350 else [44,44,52,68]
-                for selector,side in zip(['#previous','#next','#play-toggle','#speed-value'],expected):self.assertAlmostEqual(page.locator(selector).bounding_box()['width'],side,delta=.6)
+                expected=[42,52,42,62] if width<=350 else [46,56,46,68]
+                for selector,side in zip(['#previous','#play-toggle','#next','#speed-value'],expected):self.assertAlmostEqual(page.locator(selector).bounding_box()['width'],side,delta=.6)
             finally:context.close()
 
 if __name__=='__main__':
