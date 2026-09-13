@@ -9,8 +9,12 @@ import argparse
 import hashlib
 import json
 import math
-import wave
+import sys
 from pathlib import Path
+
+VOICE_PIPELINE = Path(__file__).resolve().parents[1]
+if str(VOICE_PIPELINE) not in sys.path:
+    sys.path.insert(0, str(VOICE_PIPELINE))
 
 from alignment.ctc_align import align_tokens
 from alignment.normalize_transcript import normalize_transcript, ctc_text
@@ -35,7 +39,6 @@ def _decode_ctc(emission, labels) -> str:
 
 
 def _silence_metrics(waveform, sample_rate: int, threshold: float = 0.012) -> dict:
-    import torch
     mono = waveform.mean(dim=0).abs()
     silent = mono < threshold
     n = mono.numel()
@@ -65,17 +68,20 @@ def _clipping_ratio(waveform) -> float:
 
 
 def _mfcc_embedding(waveform, sample_rate: int):
-    import torch
     import torchaudio
     mono = waveform.mean(dim=0, keepdim=True)
     if sample_rate != 16000:
         mono = torchaudio.functional.resample(mono, sample_rate, 16000)
-    mfcc = torchaudio.transforms.MFCC(sample_rate=16000, n_mfcc=30, melkwargs={"n_fft": 400, "hop_length": 160, "n_mels": 40})(mono)
+    mfcc = torchaudio.transforms.MFCC(
+        sample_rate=16000,
+        n_mfcc=30,
+        melkwargs={"n_fft": 400, "hop_length": 160, "n_mels": 40},
+    )(mono)
     emb = mfcc.mean(dim=-1).squeeze(0)
     return emb / emb.norm().clamp_min(1e-9)
 
 
-def _speaker_similarity(reference, audio, sample_rate: int) -> float:
+def _speaker_similarity(reference, audio) -> float:
     import torch
     ref_wave, ref_sr = reference
     aud_wave, aud_sr = audio
@@ -95,13 +101,9 @@ def _naturalness_proxy(wpm: float, clipping: float, silence: dict, mean_alignmen
 
 def _intent_fidelity_proxy(item: dict, profile: dict) -> float:
     local = profile["intent_profiles"][item["intent"]]
-    controls = item
     center = local["center"]
     spans = {"exaggeration": 0.30, "cfg_weight": 0.25, "temperature": 0.20}
-    distance = 0.0
-    for field, span in spans.items():
-        distance += abs(float(controls[field]) - float(center[field])) / span
-    distance /= len(spans)
+    distance = sum(abs(float(item[field]) - float(center[field])) / span for field, span in spans.items()) / len(spans)
     expected_reference = profile["references"][local["reference_state"]]
     reference_match = 1.0 if Path(item["reference"]).name == Path(expected_reference).name else 0.0
     return round(max(0.0, min(1.0, 0.92 - 0.12 * distance + 0.08 * reference_match)), 4)
@@ -159,15 +161,18 @@ def score_manifest(manifest_path: Path, profile_path: Path, references: Path, ou
         waveform, sr, asr_text, words, mean_alignment = engine.analyze(wav_path, render["text"])
         silence = _silence_metrics(waveform, sr)
         clipping = _clipping_ratio(waveform)
-        duration = float(render["duration_seconds"])
         wpm = float(render["wpm"])
         ref_name = Path(render["reference"]).name
         if ref_name not in reference_cache:
             reference_cache[ref_name] = torchaudio.load(str(references / ref_name))
-        similarity = _speaker_similarity(reference_cache[ref_name], (waveform, sr), sr)
+        similarity = _speaker_similarity(reference_cache[ref_name], (waveform, sr))
         fingerprint_payload = {
-            "actor_id": render["actor_id"], "scene_id": render["scene_id"], "variant": render["variant"],
-            "model": render["model"], "text": render["text"], "reference_sha256": render["reference_sha256"],
+            "actor_id": render["actor_id"],
+            "scene_id": render["scene_id"],
+            "variant": render["variant"],
+            "model": render["model"],
+            "text": render["text"],
+            "reference_sha256": render["reference_sha256"],
             "controls": {k: render[k] for k in ("exaggeration", "cfg_weight", "temperature", "repetition_penalty")},
             "seed": render["seed"],
         }
@@ -180,8 +185,6 @@ def score_manifest(manifest_path: Path, profile_path: Path, references: Path, ou
             "expected_fingerprint": fingerprint,
             "transcript": render["text"],
             "aligned_transcript": asr_text,
-            "duration_seconds": duration,
-            "wpm": wpm,
             "clipping_ratio": clipping,
             **{k: silence[k] for k in ("leading_silence_seconds", "trailing_silence_seconds", "max_internal_silence_seconds")},
             "alignment_status": "passed",
