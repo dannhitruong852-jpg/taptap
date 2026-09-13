@@ -17,6 +17,16 @@ class ArticlePreviewTest(unittest.TestCase):
         self.assertTrue(all(item["artificial_pause_ms"] == 0 for items in plans.values() for item in items))
         self.assertTrue(all(item["post_tempo"] is False for items in plans.values() for item in items))
 
+    def test_preview_workflow_reuses_the_correct_reference_family_and_runs_all_actors_in_parallel(self):
+        root = Path(__file__).resolve().parents[2]
+        workflow = (root / ".github/workflows/c-v4-article-preview-full.yml").read_text(encoding="utf-8")
+
+        self.assertIn("max-parallel: 15", workflow)
+        self.assertIn("01|02|04|05|08|09|12|13", workflow)
+        self.assertIn("prepare_2002_cast_references.py", workflow)
+        self.assertIn("prepare_expansion_references.py", workflow)
+        self.assertIn("prepare_repair_references_r4.py", workflow)
+
 
 if __name__ == "__main__":
     unittest.main()
