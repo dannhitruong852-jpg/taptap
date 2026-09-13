@@ -1,0 +1,30 @@
+name: C v4 actor15 parallel repair round 4
+
+on:
+  pull_request:
+    branches: ['c-v4-golden-set-qa2']
+    paths:
+      - 'voice-pipeline/calibration/repair_search_r4_15.py'
+      - 'voice-pipeline/calibration/render_repair_auditions_r4_15.py'
+      - 'voice-pipeline/tests/test_actor15_repair_r4.py'
+      - '.github/workflows/c-v4-actor15-repair-r4.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: c-v4-actor15-repair-r4-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run actor15 round-four contracts
+        run: PYTHONPATH=voice-pipeline python -m unittest voice-pipeline/tests/test_actor15_repair_r4.py -v
