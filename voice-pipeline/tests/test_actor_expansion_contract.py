@@ -4,6 +4,7 @@ from pathlib import Path
 
 from c_v4_schema import REQUIRED_CALIBRATION_INTENTS, validate_actor_calibration
 from calibration.build_expansion_profiles import build_profile
+from calibration.prepare_expansion_references import VCTK_P225_SAMPLE
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -25,6 +26,12 @@ class ActorExpansionContractTests(unittest.TestCase):
             self.assertIn(item["gender"], {"male", "female"})
             self.assertTrue(item["age_group"])
             self.assertTrue(item["native_language"])
+
+    def test_vctk_p225_reference_uses_verified_prefixed_sample(self):
+        self.assertEqual(
+            "https://huggingface.co/voices/VCTK_British_English_Females/resolve/main/samples/VCTK_p225.wav",
+            VCTK_P225_SAMPLE,
+        )
 
     def test_all_seven_profiles_build_and_cover_ten_director_intents(self):
         sources = json.loads((CONFIG / "actor_sources.json").read_text(encoding="utf-8"))["actors"]
