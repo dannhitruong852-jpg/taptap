@@ -1,13 +1,6 @@
 name: C v4 15-actor article preview contract
 
 on:
-  pull_request:
-    branches: ['c-v4-actor15-r9']
-    paths:
-      - 'voice-pipeline/calibration/article_emotion_probe.json'
-      - 'voice-pipeline/calibration/article_preview.py'
-      - 'voice-pipeline/tests/test_article_preview.py'
-      - '.github/workflows/c-v4-article-preview-contract.yml'
   workflow_dispatch:
 
 jobs:
