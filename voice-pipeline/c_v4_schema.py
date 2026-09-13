@@ -1,9 +1,16 @@
 """Validation contracts for the universal C v4 editorial layer."""
 from __future__ import annotations
 
+import json
+
 MODEL_FIELDS = {
     "exaggeration", "cfg_weight", "temperature", "repetition_penalty",
     "rate", "pause_before_ms", "pause_after_ms", "artificial_pause_ms"
+}
+REQUIRED_CALIBRATION_INTENTS = {
+    "neutral_explain", "serious_analysis", "warm_explain", "narrative_build",
+    "contrast", "information_peak", "restrained_irony", "quoted_character",
+    "qualification", "curious_probe",
 }
 REQUIRED_PROFILE_FIELDS = {
     "article_id", "domain", "author_stance", "formality", "narrativity",
@@ -58,6 +65,29 @@ def validate_actor_calibration(profile: dict, *, require_eligible: bool = False)
         errors.append("actor_id is required")
     if not profile.get("intent_profiles"):
         errors.append("intent_profiles are required")
+    else:
+        missing = sorted(REQUIRED_CALIBRATION_INTENTS - set(profile["intent_profiles"]))
+        if missing:
+            errors.append("missing required intents: " + ", ".join(missing))
+        signatures = {
+            json.dumps(value.get("center", {}), sort_keys=True)
+            for value in profile["intent_profiles"].values()
+        }
+        if len(signatures) < 2:
+            errors.append("director intents must have distinct actor-local controls")
     if require_eligible and not profile.get("eligible", False):
         errors.append("actor is not eligible")
+    return errors
+
+
+def validate_production_approval(approval: dict) -> list[str]:
+    """Require truthful provenance for every production admission."""
+    errors = []
+    method = approval.get("approval_method")
+    if approval.get("status") == "accepted" and method not in {
+        "human_listening", "automated_c_v4_qa"
+    }:
+        errors.append("accepted approval requires a supported approval_method")
+    if method == "automated_c_v4_qa" and not approval.get("qa_policy"):
+        errors.append("automated approval requires qa_policy provenance")
     return errors

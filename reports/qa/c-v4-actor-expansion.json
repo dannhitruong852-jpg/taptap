@@ -1,0 +1,64 @@
+{
+  "schema_version": "c-v4-actor-expansion-report-1",
+  "evaluated_at": "2026-09-13",
+  "qa_policy": "automated-c-v4-qa-1",
+  "requested_actors": [
+    "03",
+    "06",
+    "07",
+    "10",
+    "11",
+    "14",
+    "15"
+  ],
+  "accepted": [],
+  "rejected": {
+    "03": [
+      "missing actor-specific calibration profile",
+      "missing licensed same-speaker reference provenance",
+      "no generated A/B/C audio evidence for ten required director intents"
+    ],
+    "06": [
+      "missing actor-specific calibration profile",
+      "missing licensed same-speaker reference provenance",
+      "no generated A/B/C audio evidence for ten required director intents"
+    ],
+    "07": [
+      "missing actor-specific calibration profile",
+      "missing licensed same-speaker reference provenance",
+      "no generated A/B/C audio evidence for ten required director intents"
+    ],
+    "10": [
+      "missing actor-specific calibration profile",
+      "missing licensed same-speaker reference provenance",
+      "no generated A/B/C audio evidence for ten required director intents"
+    ],
+    "11": [
+      "missing actor-specific calibration profile",
+      "missing licensed same-speaker reference provenance",
+      "no generated A/B/C audio evidence for ten required director intents"
+    ],
+    "14": [
+      "missing actor-specific calibration profile",
+      "missing licensed same-speaker reference provenance",
+      "no generated A/B/C audio evidence for ten required director intents"
+    ],
+    "15": [
+      "missing actor-specific calibration profile",
+      "missing licensed same-speaker reference provenance",
+      "no generated A/B/C audio evidence for ten required director intents"
+    ]
+  },
+  "production_pool": [
+    "01",
+    "02",
+    "04",
+    "05",
+    "08",
+    "09",
+    "12",
+    "13"
+  ],
+  "production_pool_count": 8,
+  "note": "Fail-closed result. No actor is approved without generated audio and complete deterministic QA evidence; no threshold was lowered."
+}

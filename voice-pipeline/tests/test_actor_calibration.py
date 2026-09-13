@@ -39,6 +39,15 @@ class ActorCalibrationTests(unittest.TestCase):
             },
         )
         self.assertTrue(all(scene["text"].strip() for scene in script["scenes"]))
+        self.assertEqual(
+            {scene["intent"] for scene in script["scenes"]},
+            {
+                "neutral_explain", "serious_analysis", "warm_explain",
+                "narrative_build", "contrast", "information_peak",
+                "restrained_irony", "quoted_character", "qualification",
+                "curious_probe",
+            },
+        )
 
     def test_eight_profiles_are_independent_and_ineligible(self):
         profiles = []

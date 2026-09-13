@@ -5,6 +5,8 @@ import hashlib
 import json
 from pathlib import Path
 
+from c_v4_schema import validate_production_approval
+
 _VARIANTS = {"A": -1, "B": 0, "C": 1}
 
 
@@ -22,7 +24,12 @@ def _approval(profile_dir: Path, actor_id: str) -> dict | None:
     if not path.is_file():
         return None
     data = json.loads(path.read_text(encoding="utf-8"))
-    return data.get("actors", {}).get(actor_id)
+    approval = data.get("actors", {}).get(actor_id)
+    if approval:
+        errors = validate_production_approval(approval)
+        if errors:
+            raise ValueError(f"invalid production approval for actor {actor_id}: {'; '.join(errors)}")
+    return approval
 
 
 def resolve_controls(actor_id: str, director_intent: str, intensity: int, profile_dir: Path, *, require_eligible: bool = True) -> dict:
@@ -80,4 +87,5 @@ def resolve_controls(actor_id: str, director_intent: str, intensity: int, profil
         "calibration_id": profile["calibration_id"],
         "profile_hash": _profile_hash(profile),
         "approval_status": approval.get("status") if approval else profile.get("human_listening_qa", {}).get("status", "pending"),
+        "approval_method": approval.get("approval_method") if approval else None,
     }

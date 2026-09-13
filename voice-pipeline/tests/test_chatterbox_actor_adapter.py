@@ -81,6 +81,7 @@ class ActorAdapterTests(unittest.TestCase):
             'actors': {
                 '04': {
                     'status': 'accepted',
+                    'approval_method': 'human_listening',
                     'eligible_for': ['2002', 'production'],
                     'default_variant': 'B'
                 }
