@@ -71,6 +71,27 @@ class GenerateBatchTests(unittest.TestCase):
             self.assertEqual(result['items']['bad']['status'], 'failed')
             self.assertEqual(len(result['failures']), 1)
 
+    def test_resolve_render_paths_supports_multi_year_overrides(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            custom_profiles = root / 'profiles'
+            custom_refs = root / 'refs'
+            paths = generate_batch.resolve_render_paths(
+                root, 2005, 'partb', calibration_dir=custom_profiles, reference_dir=custom_refs
+            )
+            self.assertEqual(paths['content'], root / 'kaoyan-reader-v1/content/2005/c/partb.json')
+            self.assertEqual(paths['voice_profiles'], root / 'content-pipeline/voice_profiles/2005.json')
+            self.assertEqual(paths['direction'], root / 'content-pipeline/direction/2005.json')
+            self.assertEqual(paths['calibration_dir'], custom_profiles)
+            self.assertEqual(paths['reference_dir'], custom_refs)
+            self.assertEqual(paths['output'], root / 'kaoyan-reader-v1/audio/2005/v4/c-partb')
+
+    def test_validate_render_request_is_not_hardcoded_to_2002(self):
+        for year in (2003, 2004, 2005, 2006):
+            generate_batch.validate_render_request(year, 'text1')
+        with self.assertRaises(ValueError):
+            generate_batch.validate_render_request(2005, '../escape')
+
     def test_merge_manifests_rejects_conflicting_successes(self):
         a = {'items': {'s1': {'status': 'ok', 'fingerprint': 'a'}}, 'failures': []}
         b = {'items': {'s1': {'status': 'ok', 'fingerprint': 'b'}}, 'failures': []}
