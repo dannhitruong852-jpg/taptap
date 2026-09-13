@@ -3,11 +3,11 @@ import unittest
 from pathlib import Path
 
 from c_v4_schema import REQUIRED_CALIBRATION_INTENTS, validate_actor_calibration
+from calibration.build_expansion_profiles import build_profile
 
 
 ROOT = Path(__file__).resolve().parents[2]
 CONFIG = ROOT / "voice-pipeline" / "config"
-PROFILES = ROOT / "voice-pipeline" / "calibration" / "actors"
 EXPANSION = {"03", "06", "07", "10", "11", "14", "15"}
 
 
@@ -26,12 +26,11 @@ class ActorExpansionContractTests(unittest.TestCase):
             self.assertTrue(item["age_group"])
             self.assertTrue(item["native_language"])
 
-    def test_all_seven_profiles_exist_and_cover_ten_director_intents(self):
+    def test_all_seven_profiles_build_and_cover_ten_director_intents(self):
         sources = json.loads((CONFIG / "actor_sources.json").read_text(encoding="utf-8"))["actors"]
+        seen_centers = set()
         for actor_id in sorted(EXPANSION):
-            profile_path = PROFILES / f"{actor_id}.json"
-            self.assertTrue(profile_path.is_file(), actor_id)
-            profile = json.loads(profile_path.read_text(encoding="utf-8"))
+            profile = build_profile(actor_id)
             self.assertEqual(actor_id, profile["actor_id"])
             self.assertEqual(sources[actor_id]["source_speaker"], profile["source_speaker"])
             self.assertEqual(sources[actor_id]["source_corpus"], profile["source_corpus"])
@@ -39,6 +38,12 @@ class ActorExpansionContractTests(unittest.TestCase):
             self.assertEqual([], validate_actor_calibration(profile))
             self.assertFalse(profile["eligible"])
             self.assertEqual({}, profile["selected_candidates"])
+            centers = tuple(
+                (name, tuple(sorted(item["center"].items())))
+                for name, item in sorted(profile["intent_profiles"].items())
+            )
+            self.assertNotIn(centers, seen_centers)
+            seen_centers.add(centers)
 
     def test_expansion_workflow_is_real_generation_not_manifest_only(self):
         workflow = (ROOT / ".github" / "workflows" / "c-v4-actor-expansion.yml").read_text(encoding="utf-8")
