@@ -12,43 +12,6 @@
     "15"
   ],
   "accepted": [],
-  "rejected": {
-    "03": [
-      "missing actor-specific calibration profile",
-      "missing licensed same-speaker reference provenance",
-      "no generated A/B/C audio evidence for ten required director intents"
-    ],
-    "06": [
-      "missing actor-specific calibration profile",
-      "missing licensed same-speaker reference provenance",
-      "no generated A/B/C audio evidence for ten required director intents"
-    ],
-    "07": [
-      "missing actor-specific calibration profile",
-      "missing licensed same-speaker reference provenance",
-      "no generated A/B/C audio evidence for ten required director intents"
-    ],
-    "10": [
-      "missing actor-specific calibration profile",
-      "missing licensed same-speaker reference provenance",
-      "no generated A/B/C audio evidence for ten required director intents"
-    ],
-    "11": [
-      "missing actor-specific calibration profile",
-      "missing licensed same-speaker reference provenance",
-      "no generated A/B/C audio evidence for ten required director intents"
-    ],
-    "14": [
-      "missing actor-specific calibration profile",
-      "missing licensed same-speaker reference provenance",
-      "no generated A/B/C audio evidence for ten required director intents"
-    ],
-    "15": [
-      "missing actor-specific calibration profile",
-      "missing licensed same-speaker reference provenance",
-      "no generated A/B/C audio evidence for ten required director intents"
-    ]
-  },
   "production_pool": [
     "01",
     "02",
@@ -60,5 +23,43 @@
     "13"
   ],
   "production_pool_count": 8,
-  "note": "Fail-closed result. No actor is approved without generated audio and complete deterministic QA evidence; no threshold was lowered."
+  "note": "Incomplete environment-blocked run. These actors are not rejected: no real generation or QA was possible, and no production decision has been recorded.",
+  "status": "blocked_environment",
+  "not_evaluated": {
+    "03": [
+      "source speaker mapping is unavailable in the checked-out baseline",
+      "EARS references could not be downloaded because outbound HTTPS is blocked",
+      "chatterbox-tts==0.1.7, torch, torchaudio, ffmpeg, and model weights are unavailable"
+    ],
+    "06": [
+      "source speaker mapping is unavailable in the checked-out baseline",
+      "EARS references could not be downloaded because outbound HTTPS is blocked",
+      "chatterbox-tts==0.1.7, torch, torchaudio, ffmpeg, and model weights are unavailable"
+    ],
+    "07": [
+      "source speaker mapping is unavailable in the checked-out baseline",
+      "EARS references could not be downloaded because outbound HTTPS is blocked",
+      "chatterbox-tts==0.1.7, torch, torchaudio, ffmpeg, and model weights are unavailable"
+    ],
+    "10": [
+      "source speaker mapping is unavailable in the checked-out baseline",
+      "EARS references could not be downloaded because outbound HTTPS is blocked",
+      "chatterbox-tts==0.1.7, torch, torchaudio, ffmpeg, and model weights are unavailable"
+    ],
+    "11": [
+      "source speaker mapping is unavailable in the checked-out baseline",
+      "EARS references could not be downloaded because outbound HTTPS is blocked",
+      "chatterbox-tts==0.1.7, torch, torchaudio, ffmpeg, and model weights are unavailable"
+    ],
+    "14": [
+      "source speaker mapping is unavailable in the checked-out baseline",
+      "EARS references could not be downloaded because outbound HTTPS is blocked",
+      "chatterbox-tts==0.1.7, torch, torchaudio, ffmpeg, and model weights are unavailable"
+    ],
+    "15": [
+      "source speaker mapping is unavailable in the checked-out baseline",
+      "EARS references could not be downloaded because outbound HTTPS is blocked",
+      "chatterbox-tts==0.1.7, torch, torchaudio, ffmpeg, and model weights are unavailable"
+    ]
+  }
 }

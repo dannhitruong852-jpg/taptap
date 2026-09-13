@@ -10,8 +10,8 @@ Inherited numeric limits come from the existing B2 voice design (WER 0.08, clipp
 
 Automated admissions must record `approval_method: automated_c_v4_qa` and `qa_policy`. Existing approvals truthfully retain `approval_method: human_listening`.
 
-## 2026-09-13 result
+## 2026-09-13 environment-blocked run
 
-Actors 03, 06, 07, 10, 11, 14, and 15 fail closed. The baseline does not contain their actor calibration profiles, licensed same-speaker reference provenance, or generated A/B/C evidence. Consequently none can cover all ten intents and none enters production. Their rejected records are explicit in `production_approvals.json`; the production pool remains 01, 02, 04, 05, 08, 09, 12, and 13 (eight actors).
+Actors 03, 06, 07, 10, 11, 14, and 15 were **not evaluated and are not rejected**. The checked-out baseline does not contain their source-speaker mapping or profiles. This container also has no FFmpeg, Chatterbox, Torch, Torchaudio, model weights, or EARS audio, and its outbound HTTPS proxy rejects GitHub, PyPI, and EARS downloads with HTTP 403. Consequently a genuine render and QA run cannot be performed here.
 
-This is not `human_qa: pending` or `complete_candidate`: it is a final automated rejection on missing mandatory evidence. A later retry must add genuine source provenance and generated evidence, then pass the same policy. No 2003 production work was started, and no reader UI/player file was changed.
+No result from missing evidence is written into `production_approvals.json`. Production remains the historical eight actors until a capable runner generates real evidence. This work is incomplete rather than `human_qa: pending`, `complete_candidate`, or a fabricated automated rejection. No 2003 production work was started, and no reader UI/player file was changed.
