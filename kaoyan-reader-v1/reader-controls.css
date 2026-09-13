@@ -40,16 +40,14 @@ body.hide-vocab .sentence-card .vocab,body.hide-vocab .sentence-card .vocab.read
 .player-meta{min-height:64px;padding:16px 110px 0 20px;align-items:flex-start}
 .player-position,.player-status{display:none}
 .director-mood{margin:0;min-height:48px;display:flex;align-items:center;font-size:15px;font-weight:800;color:#24231f}
-.transport-row{display:grid;grid-template-columns:52px 52px 68px 52px 52px;gap:clamp(8px,3vw,12px);justify-content:center;align-items:center;padding:0 0 4px}
+.transport-row{display:grid;grid-template-columns:46px 64px 46px;gap:18px;justify-content:center;align-items:center;padding:0 0 4px}
 .transport-row .icon-button,.transport-row .play-button{position:relative;padding:0;line-height:0;flex:0 0 auto;align-items:center;justify-content:center;font-size:0}
-.transport-row .icon-button{width:52px;height:52px}
-.transport-row .play-button{width:68px;height:68px}
-.transport-row .icon-button::before,.transport-row .play-button::before,.transport-row .play-button::after{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);box-sizing:border-box;pointer-events:none}
-#previous::before,#next::before{width:11px;height:11px;border-top:2px solid currentColor;border-right:2px solid currentColor}
-#previous::before{transform:translate(-42%,-50%) rotate(-135deg)}
-#next::before{transform:translate(-58%,-50%) rotate(45deg)}
-#replay::before{width:18px;height:18px;border:2px solid currentColor;border-left-color:transparent;border-radius:50%;transform:translate(-50%,-50%) rotate(-28deg)}
-#replay::after{content:"";position:absolute;left:15px;top:15px;width:7px;height:7px;border-left:2px solid currentColor;border-top:2px solid currentColor;transform:rotate(-8deg)}
+.transport-row .icon-button{width:46px;height:46px;background:transparent;color:#55524c}
+.transport-row .play-button{width:64px;height:64px}
+.transport-row .icon-button::after{content:"";position:absolute;inset:3px;border-radius:50%;background:#f1f0ec;box-shadow:inset 0 0 0 1px rgba(48,45,38,.035);pointer-events:none;transition:background .12s ease,transform .12s ease}
+.transport-row .icon-button:active::after{background:#e8e6e0;transform:scale(.96)}
+.transport-icon{position:relative;z-index:1;width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+.transport-row .play-button::before,.transport-row .play-button::after{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);box-sizing:border-box;pointer-events:none}
 #play-toggle::before{width:0;height:0;border-top:10px solid transparent;border-bottom:10px solid transparent;border-left:16px solid currentColor;transform:translate(-42%,-50%)}
 #play-toggle[aria-label="暂停"]::before{width:4px;height:20px;border:0;background:currentColor;transform:translate(-165%,-50%)}
 #play-toggle[aria-label="暂停"]::after{width:4px;height:20px;background:currentColor;transform:translate(65%,-50%)}
@@ -62,9 +60,9 @@ body.hide-vocab .sentence-card .vocab,body.hide-vocab .sentence-card .vocab.read
 @media(max-width:350px){
   .reader-settings{font-size:11px}
   .howto{font-size:10px}
-  .transport-row{grid-template-columns:48px 48px 64px 48px 48px;gap:8px}
-  .transport-row .icon-button{width:48px;height:48px}
-  .transport-row .play-button{width:64px;height:64px}
+  .transport-row{grid-template-columns:44px 60px 44px;gap:14px}
+  .transport-row .icon-button{width:44px;height:44px}
+  .transport-row .play-button{width:60px;height:60px}
   .magnetic-speed{grid-template-columns:50px minmax(0,1fr);gap:8px;padding-left:16px;padding-right:20px}
   .player-meta{padding-left:16px}
   .speed-value{right:16px}
@@ -78,4 +76,4 @@ body.hide-vocab .sentence-card .vocab,body.hide-vocab .sentence-card .vocab.read
   .page-shell{padding-bottom:250px}
 }
 
-@media(prefers-reduced-motion:reduce){.speed-bubble,.speed-value,.vocab-toggle i,.vocab-toggle i::after,#speed-range::-webkit-slider-thumb{transition:none}}
+@media(prefers-reduced-motion:reduce){.speed-bubble,.speed-value,.vocab-toggle i,.vocab-toggle i::after,#speed-range::-webkit-slider-thumb,.transport-row .icon-button::after{transition:none}}
