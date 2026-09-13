@@ -37,7 +37,9 @@ def resolve_controls(actor_id: str, director_intent: str, intensity: int, profil
 
     V4 deliberately has no fallback to legacy global emotion/PERFORMANCE tables.
     A separate production approval layer may promote an audition profile without
-    mutating the immutable audition JSON.
+    mutating the immutable audition JSON. Repaired profiles may carry named
+    variants outside A/B/C; when they provide explicit controls, those controls
+    are authoritative and only the standard intensity shift is layered on top.
     """
     if intensity not in (0, 1, 2):
         raise ValueError("intensity must be 0, 1, or 2")
@@ -58,15 +60,46 @@ def resolve_controls(actor_id: str, director_intent: str, intensity: int, profil
         selected = approval.get("intent_variants", {}).get(director_intent) or approval.get("default_variant")
     if not selected:
         raise ValueError(f"actor {actor_id} has no selected calibration for {director_intent}")
+
     variant = selected.get("variant") if isinstance(selected, dict) else selected
-    if variant not in _VARIANTS:
-        raise ValueError(f"invalid selected calibration variant for actor {actor_id}: {variant}")
     local = intents[director_intent]
     center, bounds = local["center"], local["bounds"]
-    direction = _VARIANTS[variant]
     intensity_scale = intensity - 1
     step, shift = local.get("step", {}), local.get("intensity_shift", {})
-    reference_state = local["reference_state"]
+    explicit = isinstance(selected, dict) and all(
+        key in selected for key in ("exaggeration", "cfg_weight", "temperature", "repetition_penalty")
+    )
+    if explicit:
+        reference_state = selected.get("reference_state", local["reference_state"])
+        exaggeration = _bounded(
+            selected["exaggeration"] + intensity_scale * shift.get("exaggeration", 0),
+            bounds["exaggeration"],
+        )
+        cfg_weight = _bounded(
+            selected["cfg_weight"] + intensity_scale * shift.get("cfg_weight", 0),
+            bounds["cfg_weight"],
+        )
+        temperature = _bounded(selected["temperature"], bounds["temperature"])
+        repetition_penalty = _bounded(selected["repetition_penalty"], bounds["repetition_penalty"])
+    else:
+        if variant not in _VARIANTS:
+            raise ValueError(f"invalid selected calibration variant for actor {actor_id}: {variant}")
+        direction = _VARIANTS[variant]
+        reference_state = local["reference_state"]
+        exaggeration = _bounded(
+            center["exaggeration"] + direction * step.get("exaggeration", 0) + intensity_scale * shift.get("exaggeration", 0),
+            bounds["exaggeration"],
+        )
+        cfg_weight = _bounded(
+            center["cfg_weight"] + direction * step.get("cfg_weight", 0) + intensity_scale * shift.get("cfg_weight", 0),
+            bounds["cfg_weight"],
+        )
+        temperature = _bounded(
+            center["temperature"] + direction * step.get("temperature", 0),
+            bounds["temperature"],
+        )
+        repetition_penalty = _bounded(center["repetition_penalty"], bounds["repetition_penalty"])
+
     try:
         reference_path = profile["references"][reference_state]
     except KeyError as exc:
@@ -78,10 +111,10 @@ def resolve_controls(actor_id: str, director_intent: str, intensity: int, profil
         "selected_variant": variant,
         "reference_state": reference_state,
         "reference_path": reference_path,
-        "exaggeration": _bounded(center["exaggeration"] + direction * step.get("exaggeration", 0) + intensity_scale * shift.get("exaggeration", 0), bounds["exaggeration"]),
-        "cfg_weight": _bounded(center["cfg_weight"] + direction * step.get("cfg_weight", 0) + intensity_scale * shift.get("cfg_weight", 0), bounds["cfg_weight"]),
-        "temperature": _bounded(center["temperature"] + direction * step.get("temperature", 0), bounds["temperature"]),
-        "repetition_penalty": _bounded(center["repetition_penalty"], bounds["repetition_penalty"]),
+        "exaggeration": exaggeration,
+        "cfg_weight": cfg_weight,
+        "temperature": temperature,
+        "repetition_penalty": repetition_penalty,
         "artificial_pause_ms": 0,
         "post_tempo": False,
         "calibration_id": profile["calibration_id"],
