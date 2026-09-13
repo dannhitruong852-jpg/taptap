@@ -1,0 +1,82 @@
+{
+  "schema_version": "c-v4-actor-source-map-1",
+  "actors": {
+    "03": {
+      "actor_id": "03",
+      "source_speaker": "p054",
+      "source_corpus": "EARS",
+      "source_license": "CC BY-NC 4.0",
+      "source_url": "https://github.com/facebookresearch/ears_dataset",
+      "gender": "male",
+      "age_group": "46-55",
+      "native_language": "american english",
+      "selection_basis": "unused mature American-English male source for documentary search; final suitability is determined by real generated-audio QA"
+    },
+    "06": {
+      "actor_id": "06",
+      "source_speaker": "p011",
+      "source_corpus": "EARS",
+      "source_license": "CC BY-NC 4.0",
+      "source_url": "https://github.com/facebookresearch/ears_dataset",
+      "gender": "female",
+      "age_group": "18-25",
+      "native_language": "american english",
+      "selection_basis": "unused young American-English female source for contemporary-natural search; final suitability is determined by real generated-audio QA"
+    },
+    "07": {
+      "actor_id": "07",
+      "source_speaker": "p058",
+      "source_corpus": "EARS",
+      "source_license": "CC BY-NC 4.0",
+      "source_url": "https://github.com/facebookresearch/ears_dataset",
+      "gender": "female",
+      "age_group": "26-35",
+      "native_language": "american english",
+      "selection_basis": "unused adult American-English female source for warm-story search; final suitability is determined by real generated-audio QA"
+    },
+    "10": {
+      "actor_id": "10",
+      "source_speaker": "p092",
+      "source_corpus": "EARS",
+      "source_license": "CC BY-NC 4.0",
+      "source_url": "https://github.com/facebookresearch/ears_dataset",
+      "gender": "female",
+      "age_group": "36-45",
+      "native_language": "american english",
+      "selection_basis": "unused mature American-English female source for sharp-commentary search; final suitability is determined by real generated-audio QA"
+    },
+    "11": {
+      "actor_id": "11",
+      "source_speaker": "p056",
+      "source_corpus": "EARS",
+      "source_license": "CC BY-NC 4.0",
+      "source_url": "https://github.com/facebookresearch/ears_dataset",
+      "gender": "female",
+      "age_group": "18-25",
+      "native_language": "american english",
+      "selection_basis": "unused young American-English female source for playful-character search; final suitability is determined by real generated-audio QA"
+    },
+    "14": {
+      "actor_id": "14",
+      "source_speaker": "p008",
+      "source_corpus": "EARS",
+      "source_license": "CC BY-NC 4.0",
+      "source_url": "https://github.com/facebookresearch/ears_dataset",
+      "gender": "male",
+      "age_group": "56-65",
+      "native_language": "british english",
+      "selection_basis": "traceable mature male British-English EARS source matching the established actor persona"
+    },
+    "15": {
+      "actor_id": "15",
+      "source_speaker": "p225",
+      "source_corpus": "VCTK",
+      "source_license": "CC BY 4.0",
+      "source_url": "https://datashare.ed.ac.uk/handle/10283/3443",
+      "gender": "female",
+      "age_group": "18-25",
+      "native_language": "british english",
+      "selection_basis": "VCTK p225 is a 23-year-old female with an English accent from Southern England; final suitability is determined by real generated-audio QA"
+    }
+  }
+}
