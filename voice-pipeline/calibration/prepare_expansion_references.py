@@ -7,6 +7,8 @@ import io
 import json
 import subprocess
 import tempfile
+import time
+import urllib.error
 import urllib.request
 import zipfile
 from pathlib import Path
@@ -15,7 +17,8 @@ ROOT = Path(__file__).resolve().parents[2]
 SOURCES = ROOT / "voice-pipeline/config/actor_sources.json"
 EARS_RAW = "https://raw.githubusercontent.com/facebookresearch/ears_dataset/main/"
 EARS_RELEASE = "https://github.com/facebookresearch/ears_dataset/releases/download/dataset/"
-VCTK_P225_SAMPLE = "https://huggingface.co/voices/VCTK_British_English_Females/resolve/main/samples/p225.wav"
+VCTK_P225_SAMPLE = "https://raw.githubusercontent.com/quickvc/QuickVC-VoiceConversion/main/test_data/p225_001.wav"
+VCTK_P225_MIRROR_LICENSE = "https://raw.githubusercontent.com/quickvc/QuickVC-VoiceConversion/main/LICENSE"
 STATES = ("neutral", "warm", "lively", "serious", "curious", "ironic", "tense", "emotional")
 EARS_TASKS = {
     "neutral": "rainbow_01_regular",
@@ -41,14 +44,28 @@ def sha256_file(path: Path) -> str:
     return h.hexdigest()
 
 
-def fetch(url: str, target: Path) -> None:
-    req = urllib.request.Request(url, headers={"User-Agent": "kaoyan-c-v4-reference-builder/2.0"})
-    with urllib.request.urlopen(req, timeout=180) as response, target.open("wb") as sink:
-        while True:
-            chunk = response.read(1024 * 1024)
-            if not chunk:
+def fetch(url: str, target: Path, attempts: int = 5) -> None:
+    """Download with bounded retry for transient release/CDN resets."""
+    last_error: BaseException | None = None
+    for attempt in range(1, attempts + 1):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "kaoyan-c-v4-reference-builder/2.1"})
+            with urllib.request.urlopen(req, timeout=180) as response, target.open("wb") as sink:
+                while True:
+                    chunk = response.read(1024 * 1024)
+                    if not chunk:
+                        break
+                    sink.write(chunk)
+            if target.stat().st_size <= 0:
+                raise OSError("download produced an empty file")
+            return
+        except (urllib.error.URLError, urllib.error.HTTPError, ConnectionResetError, TimeoutError, OSError) as exc:
+            last_error = exc
+            target.unlink(missing_ok=True)
+            if attempt == attempts:
                 break
-            sink.write(chunk)
+            time.sleep(min(12, 2 ** (attempt - 1)))
+    raise RuntimeError(f"download failed after {attempts} attempts: {url}: {last_error}") from last_error
 
 
 def _find_ears_member(names: list[str], speaker: str, stem: str) -> str:
@@ -123,20 +140,34 @@ def _prepare_vctk(actor_id: str, cfg: dict, output: Path) -> dict:
     if cfg["source_speaker"] != "p225":
         raise ValueError("Only traceable VCTK p225 is configured for this expansion")
     with tempfile.TemporaryDirectory() as td_raw:
-        source = Path(td_raw) / "p225.wav"
+        source = Path(td_raw) / "p225_001.wav"
+        mirror_license = Path(td_raw) / "MIRROR_LICENSE"
         fetch(VCTK_P225_SAMPLE, source)
+        fetch(VCTK_P225_MIRROR_LICENSE, mirror_license)
         raw = source.read_bytes()
-        report = {"actor_id": actor_id, "speaker": "p225", "corpus": "VCTK", "license": cfg["source_license"], "source_url": cfg["source_url"], "source_sha256": sha256_bytes(raw), "variants": {}}
+        report = {
+            "actor_id": actor_id,
+            "speaker": "p225",
+            "corpus": "VCTK",
+            "license": cfg["source_license"],
+            "source_url": cfg["source_url"],
+            "mirror_url": VCTK_P225_SAMPLE,
+            "mirror_repository_license": "MIT",
+            "source_sha256": sha256_bytes(raw),
+            "variants": {},
+        }
         for state in STATES:
             target = output / f"actor{actor_id}-{state}.wav"
             metrics = _write_reference(raw, target)
-            report["variants"][state] = {"path": target.name, "task": "p225-reference-sample", **metrics}
+            report["variants"][state] = {"path": target.name, "task": "p225_001", **metrics}
         (output / "NOTICE.VCTK.txt").write_text(
             "CSTR VCTK Corpus v0.92, University of Edinburgh, CC BY 4.0.\n"
             "Configured speaker: p225, female, English accent, Southern England.\n"
-            "Reference sample mirror is used only to avoid downloading the 10.94 GB full corpus in CI.\n",
+            "The CI reference is a p225_001 mirror in QuickVC-VoiceConversion; the mirror repository is MIT licensed.\n"
+            "Official VCTK provenance remains the University of Edinburgh DataShare source recorded in actor_sources.json.\n",
             encoding="utf-8",
         )
+        (output / "LICENSE.VCTK-MIRROR.txt").write_text(mirror_license.read_text(encoding="utf-8"), encoding="utf-8")
         return report
 
 
