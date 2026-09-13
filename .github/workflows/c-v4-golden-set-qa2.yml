@@ -1,0 +1,23 @@
+name: C v4 Golden Set QA2
+
+on:
+  pull_request:
+    branches: ['codex/-c-v4']
+    paths:
+      - 'voice-pipeline/**'
+      - '.github/workflows/c-v4-golden-set-qa2.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run Golden Set QA2 contract
+        run: PYTHONPATH=voice-pipeline python -m unittest voice-pipeline/tests/test_golden_set_qa2.py -v
