@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import base64
 import gzip
 import json
 import re
@@ -51,8 +52,10 @@ def vocabulary_for(text: str, lexicon: dict) -> list[dict]:
         level, meaning, *variants = entry
         for surface in [lemma, *variants]:
             for match in re.finditer(r'(?<![\w-])' + re.escape(surface) + r'(?![\w-])', text, flags=re.I):
-                found.append({'word': match.group(), 'lemma': lemma, 'level': int(level), 'meaning': meaning,
-                              'start': match.start(), 'end': match.end()})
+                found.append({
+                    'word': match.group(), 'lemma': lemma, 'level': int(level),
+                    'meaning': meaning, 'start': match.start(), 'end': match.end(),
+                })
     return sorted(found, key=lambda x: (x['start'], -(x['end'] - x['start'])))
 
 
@@ -61,13 +64,24 @@ def compile_article(source: dict, item: dict) -> dict:
     article_id = item['id']
     actor = str(item['actor']).zfill(2)
     result = {
-        'year': year, 'section_type': item['section_type'], 'article_id': article_id,
-        'source_sha256': source['source_sha256'], 'source_pages': item.get('pages', []),
-        'accent': item.get('accent', 'en-US'), 'primary_actor_id': actor,
+        'year': year,
+        'section_type': item['section_type'],
+        'article_id': article_id,
+        'source_sha256': source['source_sha256'],
+        'source_pages': item.get('pages', []),
+        'accent': item.get('accent', 'en-US'),
+        'primary_actor_id': actor,
         'article_context': item['context'],
-        'article': {'year': year, 'section': article_id, 'title': item['title'], 'background': item['context']},
+        'article': {
+            'year': year,
+            'section': article_id,
+            'title': item['title'],
+            'background': item['context'],
+        },
         'editorial_status': item.get('editorial_status', 'reviewed_candidate'),
-        'audio_status': 'not_rendered', 'vocabulary_scale': 'project-curated-1-9-v1', 'sentences': [],
+        'audio_status': 'not_rendered',
+        'vocabulary_scale': 'project-curated-1-9-v1',
+        'sentences': [],
     }
     lexicon = source.get('vocabulary', {})
     overrides = item.get('segment_overrides', {})
@@ -78,23 +92,37 @@ def compile_article(source: dict, item: dict) -> dict:
         en = marked.replace('|', '')
         emotion, contrast, rate, pause = PROFILES[discourse]
         sentence = {
-            'id': f's{number:02d}', 'paragraph': paragraph, 'en': en, 'zh': zh,
-            'vocab': vocabulary_for(en, lexicon), 'discourse_function': discourse,
-            'prosody_focus': focus, 'contrast_level': contrast, 'strong_evidence': None, 'segments': [],
+            'id': f's{number:02d}',
+            'paragraph': paragraph,
+            'en': en,
+            'zh': zh,
+            'vocab': vocabulary_for(en, lexicon),
+            'discourse_function': discourse,
+            'prosody_focus': focus,
+            'contrast_level': contrast,
+            'strong_evidence': None,
+            'segments': [],
         }
-        parts = marked.split('|')
-        for part_index, text in enumerate(parts, 1):
+        for part_index, text in enumerate(marked.split('|'), 1):
             sid = f's{number:02d}-{part_index:02d}'
             override = overrides.get(sid, {})
             seg_actor = str(override.get('actor_id', actor)).zfill(2)
+            seg_emotion = override.get('emotion', emotion)
+            seg_intensity = int(override.get('intensity', 2 if contrast == 'strong' else 1))
+            seg_rate = float(override.get('rate', rate))
             sentence['segments'].append({
-                'id': sid, 'text': text, 'speaker_role': override.get('speaker_role', 'narrator'),
-                'actor_id': seg_actor, 'emotion': override.get('emotion', emotion),
-                'intensity': int(override.get('intensity', 2 if contrast == 'strong' else 1)),
-                'rate': round(float(override.get('rate', rate)), 3), 'pause_before_ms': 0,
-                'pause_after_ms': int(override.get('pause_after_ms', pause if part_index < len(parts) else 0)),
+                'id': sid,
+                'text': text,
+                'speaker_role': override.get('speaker_role', 'narrator'),
+                'actor_id': seg_actor,
+                'emotion': seg_emotion,
+                'intensity': seg_intensity,
+                'rate': round(seg_rate, 3),
+                'pause_before_ms': 0,
+                'pause_after_ms': int(override.get('pause_after_ms', pause if part_index < len(marked.split('|')) else 0)),
                 'audio_path': f'./audio/{year}/c-{article_id}/{sid}.opus',
-                'generation_fingerprint': 'pending-render', 'qa_status': 'not_generated',
+                'generation_fingerprint': 'pending-render',
+                'qa_status': 'not_generated',
             })
         if ''.join(seg['text'] for seg in sentence['segments']) != en:
             raise ValueError(f'{article_id}/s{number:02d}: segment fidelity failure')
@@ -167,30 +195,45 @@ def build_direction(source: dict) -> dict:
 
 
 def build_year(source: dict) -> tuple[list[dict], list[dict]]:
-    docs, catalog_rows = [], []
+    docs = []
+    catalog_rows = []
     year = int(source['year'])
     for item in source['articles']:
         doc = compile_article(source, item)
         docs.append(doc)
         catalog_rows.append({
-            'id': f"{year}-{item['id']}", 'year': year, 'section_type': item['section_type'],
-            'title': item['title'], 'content': f"./content/{year}/c/{item['id']}.json",
-            'manifest': f"./audio/{year}/c-{item['id']}/manifest.json", 'sentences': len(doc['sentences']),
+            'id': f"{year}-{item['id']}",
+            'year': year,
+            'section_type': item['section_type'],
+            'title': item['title'],
+            'content': f"./content/{year}/c/{item['id']}.json",
+            'manifest': f"./audio/{year}/c-{item['id']}/manifest.json",
+            'sentences': len(doc['sentences']),
         })
     return docs, catalog_rows
+
+
+def load_curated_source(curated_dir: Path, year: int) -> dict:
+    curated_dir = Path(curated_dir)
+    source_path = curated_dir / f'{year}.json'
+    if source_path.is_file():
+        return json.loads(source_path.read_text(encoding='utf-8'))
+    gzip_path = curated_dir / f'{year}.json.gz'
+    if gzip_path.is_file():
+        with gzip.open(gzip_path, 'rt', encoding='utf-8') as handle:
+            return json.load(handle)
+    parts = sorted(curated_dir.glob(f'{year}.json.gz.b64.part*'))
+    if not parts:
+        raise FileNotFoundError(f'no curated source for {year}')
+    encoded = ''.join(p.read_text(encoding='ascii').strip() for p in parts)
+    return json.loads(gzip.decompress(base64.b64decode(encoded)).decode('utf-8'))
 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument('--year', type=int, required=True)
     args = parser.parse_args()
-    source_path = ROOT / f'content-pipeline/curated/{args.year}.json'
-    if source_path.is_file():
-        source = json.loads(source_path.read_text(encoding='utf-8'))
-    else:
-        gzip_path = source_path.with_suffix('.json.gz')
-        with gzip.open(gzip_path, 'rt', encoding='utf-8') as handle:
-            source = json.load(handle)
+    source = load_curated_source(ROOT / 'content-pipeline/curated', args.year)
     if int(source['year']) != args.year:
         raise ValueError('curated source year disagrees with --year')
     docs, rows = build_year(source)
@@ -206,10 +249,13 @@ def main() -> None:
     catalog.setdefault('default_article', f'{args.year}-text1')
     write_json(catalog_path, catalog)
     write_json(ROOT / f'reports/extraction/{args.year}.json', {
-        'year': args.year, 'source_filename': source.get('source_filename'), 'source_sha256': source['source_sha256'],
+        'year': args.year,
+        'source_filename': source.get('source_filename'),
+        'source_sha256': source['source_sha256'],
         'method': source.get('method', 'visual PDF review plus curated manuscript'),
         'articles': [{'id': d['article_id'], 'sentences': len(d['sentences'])} for d in docs],
-        'suspected_contamination': [], 'unresolved_sections': source.get('unresolved_sections', []),
+        'suspected_contamination': [],
+        'unresolved_sections': source.get('unresolved_sections', []),
     })
     print(json.dumps({'year': args.year, 'articles': len(docs)}, ensure_ascii=False))
 
