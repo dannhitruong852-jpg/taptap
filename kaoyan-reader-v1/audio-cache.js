@@ -12,10 +12,10 @@ export function audioCacheKey(item={}){
 
 export function createAudioCache({
   cacheStorage=typeof caches!=='undefined'?caches:null,
+  storageManager=typeof navigator!=='undefined'?navigator.storage:null,
   fetcher=typeof fetch!=='undefined'?fetch.bind(globalThis):null,
   createObjectURL=blob=>URL.createObjectURL(blob),
   revokeObjectURL=url=>URL.revokeObjectURL(url),
-  maxBlobEntries=18,
   warmConcurrency=3,
   namespace=CACHE_NAMESPACE
 }={}){
@@ -23,6 +23,7 @@ export function createAudioCache({
   const blobs=new Map();
   const pinned=new Set();
   let persistentPromise=null;
+  let durableStoragePromise=null;
   let persistenceDisabled=!cacheStorage;
 
   async function persistent(){
@@ -33,6 +34,16 @@ export function createAudioCache({
     return persistentPromise;
   }
 
+  function requestPersistentStorage(){
+    if(durableStoragePromise)return durableStoragePromise;
+    if(!storageManager?.persist){
+      durableStoragePromise=Promise.resolve(false);
+      return durableStoragePromise;
+    }
+    durableStoragePromise=Promise.resolve(storageManager.persist()).then(Boolean).catch(()=>false);
+    return durableStoragePromise;
+  }
+
   function pin(key){if(key)pinned.add(key);}
   function unpin(key){if(key)pinned.delete(key);}
   function localEntry(src,key){return {src,local:true,key,pin:()=>pin(key),unpin:()=>unpin(key)};}
@@ -40,15 +51,6 @@ export function createAudioCache({
   function touch(key,entry){
     if(blobs.has(key))blobs.delete(key);
     blobs.set(key,entry);
-    let guard=0;
-    while(blobs.size>maxBlobEntries&&guard++<blobs.size+2){
-      const [oldestKey,oldest]=blobs.entries().next().value;
-      if(pinned.has(oldestKey)){
-        blobs.delete(oldestKey);blobs.set(oldestKey,oldest);continue;
-      }
-      blobs.delete(oldestKey);
-      try{revokeObjectURL(oldest.src);}catch{}
-    }
   }
 
   async function resolvePersistent(item,key){
@@ -98,12 +100,11 @@ export function createAudioCache({
       blobs.delete(key);
     }
   }
-  async function pruneOldGenerations(){
-    if(!cacheStorage?.keys)return;
-    try{
-      const names=await cacheStorage.keys();
-      await Promise.all(names.filter(name=>/^kaoyan-audio-v/.test(name)&&name!==namespace).map(name=>cacheStorage.delete(name)));
-    }catch{}
-  }
-  return {resolve,warm,pin,unpin,clearMemory,pruneOldGenerations,getState:()=>({memory:blobs.size,inflight:inflight.size,persistenceDisabled})};
+
+  // Kept only for backward compatibility with older app.js builds.
+  // The permanent-retention policy intentionally performs no persistent-cache deletion.
+  function pruneOldGenerations(){return Promise.resolve();}
+
+  requestPersistentStorage();
+  return {resolve,warm,pin,unpin,clearMemory,requestPersistentStorage,pruneOldGenerations,getState:()=>({memory:blobs.size,inflight:inflight.size,persistenceDisabled})};
 }
