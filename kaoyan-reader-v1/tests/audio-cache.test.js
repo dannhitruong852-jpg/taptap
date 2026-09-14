@@ -98,6 +98,49 @@ test('concurrent resolves deduplicate network fetch and fingerprint changes cach
   assert.notEqual(r3.key,r1.key);
 });
 
+test('ensurePersistent stores bytes without creating Blob URLs',async()=>{
+  const storage=fakeCacheStorage();let fetchCalls=0;let objectUrls=0;
+  const cache=audioCacheModule.createAudioCache({
+    cacheStorage:storage,
+    storageManager:null,
+    fetcher:async()=>{fetchCalls+=1;return new FakeResponse('audio-bytes');},
+    createObjectURL:()=>{objectUrls+=1;return 'blob:unexpected';},
+    revokeObjectURL:()=>{}
+  });
+  const item={path:'./audio/a.opus',generation_fingerprint:'v1'};
+  const first=await cache.ensurePersistent(item);
+  const second=await cache.ensurePersistent(item);
+  assert.equal(fetchCalls,1);
+  assert.equal(objectUrls,0);
+  assert.equal(first.key,second.key);
+  assert.equal(first.cached,false);
+  assert.equal(second.cached,true);
+});
+
+test('ensurePersistentMany persists unique assets with bounded workers and reports failures',async()=>{
+  const storage=fakeCacheStorage();let active=0,maxActive=0;
+  const cache=audioCacheModule.createAudioCache({
+    cacheStorage:storage,
+    storageManager:null,
+    fetcher:async path=>{
+      active+=1;maxActive=Math.max(maxActive,active);
+      await new Promise(resolve=>setTimeout(resolve,5));
+      active-=1;
+      if(path.includes('bad'))return new FakeResponse('x',{ok:false});
+      return new FakeResponse(`audio:${path}`);
+    }
+  });
+  const items=[
+    {path:'./a.opus',generation_fingerprint:'1'},
+    {path:'./a.opus',generation_fingerprint:'1'},
+    {path:'./b.opus',generation_fingerprint:'2'},
+    {path:'./bad.opus',generation_fingerprint:'3'}
+  ];
+  const result=await cache.ensurePersistentMany(items,{concurrency:2});
+  assert.deepEqual(result,{total:3,completed:2,failed:1});
+  assert.ok(maxActive<=2);
+});
+
 test('persistent cache failure degrades to remote playback URL',async()=>{
   const cache=audioCacheModule.createAudioCache({
     cacheStorage:{async open(){throw new Error('storage denied');}},
