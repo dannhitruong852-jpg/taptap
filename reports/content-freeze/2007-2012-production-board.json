@@ -5,9 +5,9 @@
   "voice_started": false,
   "totals": {
     "units": 42,
-    "candidate_materialized": 8,
+    "candidate_materialized": 13,
     "candidate_partial": 1,
-    "candidate_missing": 33
+    "candidate_missing": 28
   },
   "years": {
     "2007": {
@@ -16,9 +16,9 @@
       "candidate_missing": []
     },
     "2008": {
-      "candidate_materialized": ["cloze", "translation"],
+      "candidate_materialized": ["cloze", "text1", "text2", "text3", "text4", "partb", "translation"],
       "candidate_partial": [],
-      "candidate_missing": ["text1", "text2", "text3", "text4", "partb"]
+      "candidate_missing": []
     },
     "2009": {
       "candidate_materialized": [],
@@ -61,6 +61,7 @@
   "notes": [
     "The previous 42/42 candidate_ready state was metadata-only and did not match concrete candidate files in the branch.",
     "Do not start voice generation for 2007-2012 until content_frozen is true.",
-    "Content freeze CI is armed and derives readiness from concrete candidate files."
+    "Content freeze CI is armed and derives readiness from concrete candidate files.",
+    "2008 is fully materialized at candidate level; content freeze still requires QA/enrichment gates."
   ]
 }
