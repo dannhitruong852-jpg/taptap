@@ -21,6 +21,7 @@ export function createAudioCache({
 }={}){
   const inflight=new Map();
   const responseInflight=new Map();
+  const persistentEnsureInflight=new Map();
   const blobs=new Map();
   const pinned=new Set();
   let persistentPromise=null;
@@ -105,6 +106,47 @@ export function createAudioCache({
     return {buffer:await blob.arrayBuffer(),key,local:true};
   }
 
+  async function ensurePersistent(item){
+    if(!item?.path)throw new Error('audio-path-required');
+    const key=audioCacheKey(item);
+    const store=await persistent();
+    if(!store)throw new Error('persistent-cache-unavailable');
+    let hit;
+    try{hit=await store.match(key);}catch{throw new Error('persistent-cache-unavailable');}
+    if(hit)return {key,cached:true};
+    if(!persistentEnsureInflight.has(key)){
+      const task=(async()=>{
+        if(!fetcher)throw new Error('audio-fetch-unavailable');
+        const network=await fetcher(item.path);
+        if(!network?.ok)throw new Error('audio-fetch-failed');
+        await store.put(key,network.clone());
+        return {key,cached:false};
+      })().finally(()=>persistentEnsureInflight.delete(key));
+      persistentEnsureInflight.set(key,task);
+    }
+    return persistentEnsureInflight.get(key);
+  }
+
+  async function ensurePersistentMany(items=[],{concurrency=4}={}){
+    const unique=[];const seen=new Set();
+    for(const item of items){
+      if(!item?.path)continue;
+      const key=audioCacheKey(item);
+      if(seen.has(key))continue;
+      seen.add(key);unique.push(item);
+    }
+    let cursor=0,completed=0,failed=0;
+    const worker=async()=>{
+      while(cursor<unique.length){
+        const item=unique[cursor++];
+        try{await ensurePersistent(item);completed+=1;}catch{failed+=1;}
+      }
+    };
+    const count=Math.min(Math.max(1,Number(concurrency)||1),unique.length||1);
+    await Promise.all(Array.from({length:count},()=>worker()));
+    return {total:unique.length,completed,failed};
+  }
+
   async function warm(items=[]){
     const unique=[];const seen=new Set();
     for(const item of items){
@@ -129,5 +171,5 @@ export function createAudioCache({
   function pruneOldGenerations(){return Promise.resolve();}
 
   requestPersistentStorage();
-  return {resolve,getArrayBuffer,warm,pin,unpin,clearMemory,requestPersistentStorage,pruneOldGenerations,getState:()=>({memory:blobs.size,inflight:inflight.size,responseInflight:responseInflight.size,persistenceDisabled})};
+  return {resolve,getArrayBuffer,ensurePersistent,ensurePersistentMany,warm,pin,unpin,clearMemory,requestPersistentStorage,pruneOldGenerations,getState:()=>({memory:blobs.size,inflight:inflight.size,responseInflight:responseInflight.size,persistentEnsureInflight:persistentEnsureInflight.size,persistenceDisabled})};
 }
