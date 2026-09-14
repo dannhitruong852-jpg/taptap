@@ -33,6 +33,10 @@ export function createAudioCache({
     return persistentPromise;
   }
 
+  function pin(key){if(key)pinned.add(key);}
+  function unpin(key){if(key)pinned.delete(key);}
+  function localEntry(src,key){return {src,local:true,key,pin:()=>pin(key),unpin:()=>unpin(key)};}
+
   function touch(key,entry){
     if(blobs.has(key))blobs.delete(key);
     blobs.set(key,entry);
@@ -60,8 +64,7 @@ export function createAudioCache({
       try{await store.put(key,network.clone());}catch{}
     }
     const blob=await response.blob();
-    const src=createObjectURL(blob);
-    const entry={src,local:true,key};
+    const entry=localEntry(createObjectURL(blob),key);
     touch(key,entry);
     return entry;
   }
@@ -88,8 +91,6 @@ export function createAudioCache({
     await Promise.all(workers);
   }
 
-  function pin(key){if(key)pinned.add(key);}
-  function unpin(key){if(key)pinned.delete(key);}
   function clearMemory(){
     for(const [key,entry] of blobs){
       if(pinned.has(key))continue;
