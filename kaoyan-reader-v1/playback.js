@@ -2,10 +2,15 @@ const clamp = (v, min, max) => Math.min(max, Math.max(min, v));
 
 export function buildSentenceQueue(sentence, manifest) {
   const seamless = manifest?.sentences?.[sentence.id];
-  if (seamless?.path) return [{ ...seamless, id: sentence.id }];
+  if (seamless?.path) return [{
+    ...seamless,
+    id: sentence.id,
+    generation_fingerprint: seamless.generation_fingerprint || manifest?.generation_fingerprint
+  }];
   return sentence.segments.map(segment => ({
     ...segment,
-    ...manifest.segments[segment.id]
+    ...manifest.segments[segment.id],
+    generation_fingerprint: manifest.segments[segment.id]?.generation_fingerprint || manifest?.generation_fingerprint
   }));
 }
 
