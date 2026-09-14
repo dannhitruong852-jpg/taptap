@@ -4,6 +4,7 @@ import { createAudioCache } from './audio-cache.js';
 import { createDecodedAudioStore } from './decoded-audio-store.js';
 import { createWebAudioPlayer } from './web-audio-player.js';
 import { createHybridAudioPlayer } from './hybrid-audio-player.js';
+import { measureLatency } from './latency-metrics.js';
 import { sentenceProgress, isExplicitLegacyTimingVersion } from './progress.js';
 import { readStateAtTime, activeChineseGroups } from './time-index.js';
 import { renderEnglish, renderChinese } from './bilingual-text.js';
@@ -37,7 +38,7 @@ const statusEl=document.querySelector('#player-status');
 const playerShell=document.querySelector('#player-shell');
 const vocabButton=document.querySelector('#toggle-vocab');
 const toast=document.querySelector('#toast');
-const state={current:0,speed:1,playing:false,paused:false,showVocab:true,timer:null,playerHidden:false,programmaticScrollUntil:0,scrollAnchorY:Math.max(0,window.scrollY||0),scrollFrame:null};
+const state={current:0,speed:1,playing:false,paused:false,showVocab:true,timer:null,playerHidden:false,programmaticScrollUntil:0,scrollAnchorY:Math.max(0,window.scrollY||0),scrollFrame:null,playRequestedAt:null};
 const emotionLabels={neutral:'自然讲述',warm:'温暖讲解',lively:'轻快生动',serious:'严肃克制',curious:'好奇追问',ironic:'冷幽默',tense:'紧张转折',emotional:'情绪加强'};
 function hasSelectedText(){return Boolean(window.getSelection()?.toString());}
 const tapGuard=createTapGuard();
@@ -118,7 +119,17 @@ function progressFromUpdate(segment,currentTime,duration){
  return duration>0?Math.max(0,Math.min(1,currentTime/duration)):0;
 }
 function queueForSentence(index){const sentence=sentences[index];if(!sentence)return[];return buildSentenceQueue(sentence,manifest).map(item=>({...item,path:!supportsOpus&&item.mp3_path?item.mp3_path:item.path}));}
-function onPlayerSegmentStart(segment){setPlaying(true,false);statusEl.textContent=`演员 ${segment.actor_id||primarySegment(sentences[state.current]).actor_id} · ${emotionLabels[segment.emotion||primarySegment(sentences[state.current]).emotion]||segment.emotion||'自然讲述'}`;}
+function queueForBundle(bundle){
+ const warm=[];
+ for(const sentence of bundle?.content?.sentences||[]){
+  warm.push(...buildSentenceQueue(sentence,bundle.manifest||{segments:{}}).map(item=>({...item,path:!supportsOpus&&item.mp3_path?item.mp3_path:item.path})));
+ }
+ return warm;
+}
+function onPlayerSegmentStart(segment){
+ if(state.playRequestedAt!==null){measureLatency('audio-start',state.playRequestedAt);state.playRequestedAt=null;}
+ setPlaying(true,false);statusEl.textContent=`演员 ${segment.actor_id||primarySegment(sentences[state.current]).actor_id} · ${emotionLabels[segment.emotion||primarySegment(sentences[state.current]).emotion]||segment.emotion||'自然讲述'}`;
+}
 function onPlayerTimeUpdate({segment,currentTime,duration,ended}){paintPlaybackProgress(state.current,segment,currentTime,duration,Boolean(ended));}
 function onPlayerSentenceEnd(){markSentenceComplete(state.current);if(state.current<sentences.length-1){speak(state.current+1);}else{setPlaying(false,false);statusEl.textContent='这一篇读完了 ✓';}}
 function onPlayerError(){setPlaying(false,false);statusEl.textContent='音频暂时不可用';showToast('这句音频尚未生成或加载失败');}
@@ -141,10 +152,10 @@ function ensureWebAudio(){
  }catch{return null;}
 }
 const hybridAudioPlayer=createHybridAudioPlayer({getWebPlayer:ensureWebAudio,fallbackPlayer:fallbackAudioPlayer});
-function prepareAudio(warm){
+function prepareAudio(warm,articleId=currentEntry?.id||'unknown'){
  if(!warm.length)return;
  const web=ensureWebAudio();
- if(web&&decodedAudioStore){void decodedAudioStore.preload(warm,{articleId:currentEntry?.id||'unknown'});}
+ if(web&&decodedAudioStore){void decodedAudioStore.preload(warm,{articleId});}
  else audioCache.warm(warm);
 }
 function warmRange(startIndex,count=4){
@@ -162,15 +173,30 @@ function warmArticleRemainder(){
  const work=()=>{const warm=[];for(let i=4;i<sentences.length;i++)warm.push(...queueForSentence(i));prepareAudio(warm);};
  if('requestIdleCallback' in window)window.requestIdleCallback(work,{timeout:1200});else window.setTimeout(work,0);
 }
+async function warmAdjacentArticles(entry,selectionToken){
+ if(!catalog||!decodedAudioStore||selectionToken!==selectionGeneration)return;
+ const neighbors=[adjacentArticle(catalog,entry.id,-1),adjacentArticle(catalog,entry.id,1)].filter(Boolean);
+ for(const neighbor of neighbors){
+  if(selectionToken!==selectionGeneration)return;
+  try{
+   const bundle=await articleBundleStore.get(neighbor);if(selectionToken!==selectionGeneration)return;
+   prepareAudio(queueForBundle(bundle),neighbor.id);
+  }catch{}
+ }
+}
+function scheduleAdjacentWarm(entry,selectionToken){
+ const work=()=>{void warmAdjacentArticles(entry,selectionToken);};
+ if('requestIdleCallback' in window)window.requestIdleCallback(work,{timeout:1800});else window.setTimeout(work,120);
+}
 function speak(index,{scroll=true}={}){
  if(loading||!sentences.length)return;clearTimer();hybridAudioPlayer.stop();state.current=nextSentenceIndex(index,0,sentences.length);resetOtherProgress(state.current);resetSentenceProgress(state.current);updateActive(scroll);
  const queue=queueForSentence(state.current);if(queue.length===0||queue.some(item=>!item.path)){setPlaying(false,false);statusEl.textContent='音频尚未生成';showToast('这句音频尚未生成');return;}
- void hybridAudioPlayer.playSentence(queue,state.speed);warmRange(state.current+1,3);
+ state.playRequestedAt=performance.now();void hybridAudioPlayer.playSentence(queue,state.speed);warmRange(state.current+1,3);
 }
 function togglePlay(){
  if(loading||!sentences.length)return;clearTimer();const playerState=hybridAudioPlayer.getState();
  if(playerState.playing||state.playing){hybridAudioPlayer.pause();setPlaying(false,true);statusEl.textContent='已暂停';return;}
- if(state.paused&&playerState.paused){Promise.resolve(hybridAudioPlayer.resume()).catch(()=>{setPlaying(false,false);statusEl.textContent='音频暂时不可用';});setPlaying(true,false);statusEl.textContent='继续朗读';return;}
+ if(state.paused&&playerState.paused){state.playRequestedAt=performance.now();Promise.resolve(hybridAudioPlayer.resume()).catch(()=>{setPlaying(false,false);statusEl.textContent='音频暂时不可用';});setPlaying(true,false);statusEl.textContent='继续朗读';return;}
  speak(state.current,{scroll:false});
 }
 function showToast(message){toast.textContent=message;toast.classList.add('show');window.clearTimeout(showToast.timer);showToast.timer=window.setTimeout(()=>toast.classList.remove('show'),1900);}
@@ -213,7 +239,7 @@ window.addEventListener('scroll',queueViewportScroll,{passive:true});
 window.addEventListener('beforeunload',()=>{hybridAudioPlayer.stop();audioCache.clearMemory();decodedAudioStore?.clearDecoded();});
 
 async function openArticle(entry){
- if(!entry)return;const selectionToken=++selectionGeneration;tapGuard.cancel();loading=true;clearTimer();hybridAudioPlayer.stop();fallbackAudioPlayer.clearPreload();audioCache.clearMemory();setPlaying(false,false);playButton.disabled=true;statusEl.textContent='正在加载正文';
+ if(!entry)return;const switchStarted=performance.now();const selectionToken=++selectionGeneration;tapGuard.cancel();loading=true;clearTimer();hybridAudioPlayer.stop();fallbackAudioPlayer.clearPreload();audioCache.clearMemory();setPlaying(false,false);playButton.disabled=true;statusEl.textContent='正在加载正文';
  articleBundleStore.cancelLowPriorityWork();
  try{
   const [loaded,semantic]=await Promise.all([articleBundleStore.get(entry),semanticMapPromise]);if(!loaded||selectionToken!==selectionGeneration)return;
@@ -222,7 +248,7 @@ async function openArticle(entry){
   const audioCount=sentences.filter(s=>manifest.sentences?.[s.id]?.path||s.segments.every(x=>manifest.segments?.[x.id]?.path)).length;const seamlessCount=sentences.filter(s=>manifest.sentences?.[s.id]?.path).length;
   document.querySelector('#content-status').textContent=`${sentences.length} 句中英对照 · 音频 ${audioCount}/${sentences.length} 句可播放${seamlessCount?` · C无缝 ${seamlessCount}/${sentences.length}`:''}`;
   statusEl.textContent=audioCount===sentences.length?'轻点查译文 · 点序号听本句':'正文已就绪 · 音频生成中';
-  history.replaceState(null,'',`#${entry.id}`);renderSentences();updateActive(false);resetSentenceProgress(0);updateArticleNavState();applyPlayerVisibility(false);warmRange(0,4);warmArticleRemainder();
+  history.replaceState(null,'',`#${entry.id}`);renderSentences();updateActive(false);resetSentenceProgress(0);updateArticleNavState();applyPlayerVisibility(false);measureLatency('article-switch',switchStarted);warmRange(0,4);warmArticleRemainder();scheduleAdjacentWarm(entry,selectionToken);
   if(!globalArticlePreloadStarted&&catalog){globalArticlePreloadStarted=true;void articleBundleStore.preload(catalog.articles.filter(item=>item.id!==entry.id));}
  }catch(error){if(selectionToken!==selectionGeneration)return;loading=false;statusEl.textContent='正文加载失败';showToast('请重新选择文章或刷新页面');}
 }
