@@ -60,6 +60,7 @@
   },
   "notes": [
     "The previous 42/42 candidate_ready state was metadata-only and did not match concrete candidate files in the branch.",
-    "Do not start voice generation for 2007-2012 until content_frozen is true."
+    "Do not start voice generation for 2007-2012 until content_frozen is true.",
+    "Content freeze CI is armed and derives readiness from concrete candidate files."
   ]
 }
