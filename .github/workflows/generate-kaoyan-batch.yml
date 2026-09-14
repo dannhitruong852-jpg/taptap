@@ -65,7 +65,7 @@ jobs:
                   assert not errors,(path,errors)
                   for sentence in doc['sentences']:
                       assert ''.join(s['text'] for s in sentence['segments'])==sentence['en']
-                      assert not re.search(r'ANSWER SHEET|Directions:|\\[[A-G]\\]|Section III\\s+Writing',sentence['en'],re.I)
+                      assert not re.search(r'ANSWER SHEET|Directions:|\[[A-G]\]|Section III\s+Writing',sentence['en'],re.I)
           PY
 
   voicepack:
@@ -301,7 +301,7 @@ jobs:
         with:
           pattern: kaoyan-c-${{ matrix.year }}-*
           path: /tmp/incoming
-          merge-multiple: true
+          merge-multiple: false
       - name: Merge sentence assets and verify completeness
         run: python voice-pipeline/merge_c_v4.py --year '${{ matrix.year }}' --incoming /tmp/incoming
       - name: Verify every browser manifest is technically complete
