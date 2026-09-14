@@ -1,5 +1,6 @@
-export function createAudioPlayer({ createAudio, resolveAudio = null, onSegmentStart = () => {}, onTimeUpdate = () => {}, onSentenceEnd = () => {}, onError = () => {}, maxPreloadEntries = 12 }) {
+export function createAudioPlayer({ createAudio, resolveAudio = null, pinAudio = () => {}, unpinAudio = () => {}, onSegmentStart = () => {}, onTimeUpdate = () => {}, onSentenceEnd = () => {}, onError = () => {}, maxPreloadEntries = 12 }) {
   let active = null;
+  let activeKey = null;
   let queue = [];
   let index = -1;
   let speed = 1;
@@ -11,6 +12,11 @@ export function createAudioPlayer({ createAudio, resolveAudio = null, onSegmentS
     audio.onended = null;
     audio.onerror = null;
     audio.ontimeupdate = null;
+  }
+
+  function releaseActiveKey() {
+    if (!activeKey) return;
+    try { unpinAudio(activeKey); } finally { activeKey = null; }
   }
 
   function touch(path, audio) {
@@ -46,10 +52,14 @@ export function createAudioPlayer({ createAudio, resolveAudio = null, onSegmentS
     return audio;
   }
 
-  function attachAndPlay(audio, segment, nextIndex, currentGeneration) {
+  function attachAndPlay(audio, segment, nextIndex, currentGeneration, resolved = null) {
     if (currentGeneration !== generation) return;
     index = nextIndex;
     active = audio;
+    if (resolved?.local && resolved.key) {
+      activeKey = resolved.key;
+      pinAudio(activeKey);
+    }
     audio.playbackRate = speed;
     try { audio.currentTime = 0; } catch {}
     audio.ontimeupdate = () => {
@@ -60,20 +70,24 @@ export function createAudioPlayer({ createAudio, resolveAudio = null, onSegmentS
     audio.onended = () => {
       if (currentGeneration !== generation) return;
       onTimeUpdate({ segment, index, currentTime: Number(segment.duration_seconds || audio.duration || 0), duration: Number(segment.duration_seconds || audio.duration || 0), ended: true });
-      detach(audio);playAt(index + 1, currentGeneration);
+      detach(audio);releaseActiveKey();playAt(index + 1, currentGeneration);
     };
     audio.onerror = event => {
       if (currentGeneration !== generation) return;
-      detach(audio);active=null;cache.delete(segment.path);onError(event, segment);
+      detach(audio);active=null;releaseActiveKey();cache.delete(segment.path);onError(event, segment);
     };
     onSegmentStart(segment, index);
     const playResult = audio.play();
-    if (playResult?.catch) playResult.catch(error => { if (currentGeneration === generation && active === audio) onError(error, segment); });
+    if (playResult?.catch) playResult.catch(error => {
+      if (currentGeneration === generation && active === audio) {
+        releaseActiveKey();onError(error, segment);
+      }
+    });
   }
 
   function playAt(nextIndex, currentGeneration) {
     if (currentGeneration !== generation) return;
-    if (nextIndex >= queue.length) {active = null;onSentenceEnd();return;}
+    if (nextIndex >= queue.length) {active = null;releaseActiveKey();onSentenceEnd();return;}
     const segment = queue[nextIndex];
     if (!resolveAudio) {
       attachAndPlay(prepare(segment.path), segment, nextIndex, currentGeneration);
@@ -84,7 +98,7 @@ export function createAudioPlayer({ createAudio, resolveAudio = null, onSegmentS
       const src = resolved?.src || segment.path;
       const audio = createAudio(src);
       audio.preload = 'auto';
-      attachAndPlay(audio, segment, nextIndex, currentGeneration);
+      attachAndPlay(audio, segment, nextIndex, currentGeneration, resolved);
     }).catch(error => {
       if (currentGeneration === generation) onError(error, segment);
     });
@@ -93,6 +107,7 @@ export function createAudioPlayer({ createAudio, resolveAudio = null, onSegmentS
   function stop() {
     generation += 1;
     if (active) {active.pause();detach(active);}
+    releaseActiveKey();
     active = null;queue=[];index=-1;
   }
 
