@@ -28,3 +28,9 @@ test('reader prefers decoded Web Audio while retaining the existing HTMLAudio fa
   assert.match(app,/createAudioPlayer/);
   assert.match(app,/hybridAudioPlayer\.playSentence/);
 });
+
+test('reader prepares adjacent article audio after the active article and records latency metrics',()=>{
+  assert.match(app,/warmAdjacentArticles/);
+  assert.match(app,/measureLatency\('article-switch'/);
+  assert.match(app,/measureLatency\('audio-start'/);
+});
