@@ -6,6 +6,7 @@ on:
     branches: ['c-v4-article-preview-actual']
     paths:
       - 'kaoyan-reader-v1/**'
+      - 'content-pipeline/**'
       - 'docs/standards/PLAYBACK_LATENCY_STANDARD.md'
       - '.github/workflows/reader-tests.yml'
 
@@ -20,6 +21,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
       - name: Run reader unit and contract tests
         working-directory: kaoyan-reader-v1
         run: npm test
+      - name: Run bilingual highlight contracts
+        env:
+          PYTHONPATH: voice-pipeline:content-pipeline
+        run: python -m unittest content-pipeline/tests/test_bilingual_highlights.py -v
