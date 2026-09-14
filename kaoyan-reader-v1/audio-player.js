@@ -1,6 +1,7 @@
 export function createAudioPlayer({ createAudio, resolveAudio = null, pinAudio = () => {}, unpinAudio = () => {}, onSegmentStart = () => {}, onTimeUpdate = () => {}, onSentenceEnd = () => {}, onError = () => {}, maxPreloadEntries = 12 }) {
   let active = null;
   let activeKey = null;
+  let activeResolvedUnpin = null;
   let queue = [];
   let index = -1;
   let speed = 1;
@@ -15,6 +16,9 @@ export function createAudioPlayer({ createAudio, resolveAudio = null, pinAudio =
   }
 
   function releaseActiveKey() {
+    if (activeResolvedUnpin) {
+      try { activeResolvedUnpin(); } finally { activeResolvedUnpin = null; }
+    }
     if (!activeKey) return;
     try { unpinAudio(activeKey); } finally { activeKey = null; }
   }
@@ -56,9 +60,13 @@ export function createAudioPlayer({ createAudio, resolveAudio = null, pinAudio =
     if (currentGeneration !== generation) return;
     index = nextIndex;
     active = audio;
-    if (resolved?.local && resolved.key) {
-      activeKey = resolved.key;
-      pinAudio(activeKey);
+    if (resolved?.local) {
+      resolved.pin?.();
+      activeResolvedUnpin = typeof resolved.unpin === 'function' ? resolved.unpin : null;
+      if (resolved.key) {
+        activeKey = resolved.key;
+        pinAudio(activeKey);
+      }
     }
     audio.playbackRate = speed;
     try { audio.currentTime = 0; } catch {}
