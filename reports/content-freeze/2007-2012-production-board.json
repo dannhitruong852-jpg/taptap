@@ -3,16 +3,53 @@
   "strategy": "six_years_parallel",
   "content_frozen": false,
   "voice_started": false,
-  "totals": {"units": 42, "candidate_ready": 42, "english_ready_for_translation": 0},
-  "years": {
-    "2007": {"candidate_ready": ["cloze","text1","text2","text3","text4","partb","translation"], "english_ready_for_translation": []},
-    "2008": {"candidate_ready": ["cloze","text1","text2","text3","text4","partb","translation"], "english_ready_for_translation": []},
-    "2009": {"candidate_ready": ["cloze","text1","text2","text3","text4","partb","translation"], "english_ready_for_translation": []},
-    "2010": {"candidate_ready": ["cloze","text1","text2","text3","text4","partb","translation"], "english_ready_for_translation": []},
-    "2011": {"candidate_ready": ["cloze","text1","text2","text3","text4","partb","translation"], "english_ready_for_translation": []},
-    "2012": {"candidate_ready": ["cloze","text1","text2","text3","text4","partb","translation"], "english_ready_for_translation": []}
+  "totals": {
+    "units": 42,
+    "candidate_materialized": 7,
+    "candidate_partial": 1,
+    "candidate_missing": 34
   },
-  "freeze_gate_remaining": ["full_candidate_qa","vocabulary_1_9","bilingual_highlights","canonical_merge","schema_and_c_mode_validation"],
+  "years": {
+    "2007": {
+      "candidate_materialized": ["cloze", "text2", "text3", "text4", "partb", "translation"],
+      "candidate_partial": ["text1"],
+      "candidate_missing": []
+    },
+    "2008": {
+      "candidate_materialized": ["cloze"],
+      "candidate_partial": [],
+      "candidate_missing": ["text1", "text2", "text3", "text4", "partb", "translation"]
+    },
+    "2009": {
+      "candidate_materialized": [],
+      "candidate_partial": [],
+      "candidate_missing": ["cloze", "text1", "text2", "text3", "text4", "partb", "translation"]
+    },
+    "2010": {
+      "candidate_materialized": [],
+      "candidate_partial": [],
+      "candidate_missing": ["cloze", "text1", "text2", "text3", "text4", "partb", "translation"]
+    },
+    "2011": {
+      "candidate_materialized": [],
+      "candidate_partial": [],
+      "candidate_missing": ["cloze", "text1", "text2", "text3", "text4", "partb", "translation"]
+    },
+    "2012": {
+      "candidate_materialized": [],
+      "candidate_partial": [],
+      "candidate_missing": ["cloze", "text1", "text2", "text3", "text4", "partb", "translation"]
+    }
+  },
+  "freeze_gate_remaining": [
+    "materialize_all_candidates",
+    "merge_2007_text1_parts",
+    "full_candidate_qa",
+    "vocabulary_1_9",
+    "bilingual_highlights",
+    "canonical_merge",
+    "schema_and_c_mode_validation"
+  ],
   "actor_plan": {
     "2007": {"cloze":"03","text1":"02","text2":"02","text3":"01","text4":"09","partb":"06","translation":"09"},
     "2008": {"cloze":"02","text1":"02","text2":"02","text3":"02","text4":"03","partb":"02","translation":"13"},
@@ -20,5 +57,9 @@
     "2010": {"cloze":"02","text1":"01","text2":"06","text3":"05","text4":"09","partb":"05","translation":"07"},
     "2011": {"cloze":"05","text1":"01","text2":"10","text3":"03","text4":"09","partb":"10","translation":"05"},
     "2012": {"cloze":"03","text1":"10","text2":"10","text3":"05","text4":"10","partb":"03","translation":"01"}
-  }
+  },
+  "notes": [
+    "The previous 42/42 candidate_ready state was metadata-only and did not match concrete candidate files in the branch.",
+    "Do not start voice generation for 2007-2012 until content_frozen is true."
+  ]
 }
