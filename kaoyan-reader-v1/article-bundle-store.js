@@ -1,23 +1,33 @@
 import {manifestForVersion,bilingualHighlightsPath} from './catalog.js';
 
-export function createArticleBundleStore({fetcher=fetch,audioVersion='',concurrency=4}={}){
+export function createArticleBundleStore({fetcher=fetch,audioVersion='',concurrency=4,resourceCache=null}={}){
   const bundles=new Map();
   const inflight=new Map();
   const yearMappings=new Map();
 
+  async function fetchJson(url,options={}){
+    try{
+      if(resourceCache)return await resourceCache.json(url,{refresh:true});
+      const response=await fetcher(url);
+      if(!response?.ok)throw new Error('resource-load-failed');
+      return response.json();
+    }catch(error){
+      if(Object.prototype.hasOwnProperty.call(options,'fallback'))return options.fallback;
+      throw error;
+    }
+  }
+
   async function loadYearMapping(entry){
     if(yearMappings.has(entry.year))return yearMappings.get(entry.year);
-    const promise=fetcher(bilingualHighlightsPath(entry))
-      .then(r=>r.ok?r.json():{version:1,articles:{}})
-      .catch(()=>({version:1,articles:{}}));
+    const promise=fetchJson(bilingualHighlightsPath(entry),{fallback:{version:1,articles:{}}});
     yearMappings.set(entry.year,promise);
     return promise;
   }
 
   async function load(entry){
     const [content,manifest,bilingual]=await Promise.all([
-      fetcher(entry.content).then(r=>{if(!r.ok)throw new Error('content-load-failed');return r.json();}),
-      fetcher(manifestForVersion(entry,audioVersion)).then(r=>r.ok?r.json():{segments:{}}).catch(()=>({segments:{}})),
+      fetchJson(entry.content),
+      fetchJson(manifestForVersion(entry,audioVersion),{fallback:{segments:{}}}),
       entry.year===undefined||entry.year===null?Promise.resolve({version:1,articles:{}}):loadYearMapping(entry)
     ]);
     return {content,manifest,bilingual};
