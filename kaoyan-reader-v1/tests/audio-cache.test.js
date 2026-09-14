@@ -47,6 +47,38 @@ test('first resolve fetches once and second resolve reuses persistent bytes',asy
   assert.equal(first.key,second.key);
 });
 
+test('getArrayBuffer stores cold bytes and reuses persistent bytes',async()=>{
+  const storage=fakeCacheStorage();let fetchCalls=0;
+  const cache=audioCacheModule.createAudioCache({
+    cacheStorage:storage,
+    storageManager:null,
+    fetcher:async()=>{fetchCalls+=1;return new FakeResponse('bytes-v1');},
+    createObjectURL:()=> 'blob:unused',
+    revokeObjectURL:()=>{}
+  });
+  const item={path:'./audio/x.opus',generation_fingerprint:'fp1'};
+  const first=await cache.getArrayBuffer(item);
+  cache.clearMemory();
+  const second=await cache.getArrayBuffer(item);
+  assert.equal(fetchCalls,1);
+  assert.equal(new TextDecoder().decode(first.buffer),'bytes-v1');
+  assert.equal(new TextDecoder().decode(second.buffer),'bytes-v1');
+  assert.equal(first.key,second.key);
+});
+
+test('getArrayBuffer identity changes when generation fingerprint changes',async()=>{
+  const storage=fakeCacheStorage();let fetchCalls=0;
+  const cache=audioCacheModule.createAudioCache({
+    cacheStorage:storage,
+    storageManager:null,
+    fetcher:async()=>{fetchCalls+=1;return new FakeResponse(`bytes-${fetchCalls}`);}
+  });
+  const a=await cache.getArrayBuffer({path:'./audio/x.opus',generation_fingerprint:'v1'});
+  const b=await cache.getArrayBuffer({path:'./audio/x.opus',generation_fingerprint:'v2'});
+  assert.notEqual(a.key,b.key);
+  assert.equal(fetchCalls,2);
+});
+
 test('concurrent resolves deduplicate network fetch and fingerprint changes cache identity',async()=>{
   const storage=fakeCacheStorage();let fetchCalls=0;let release;
   const gate=new Promise(resolve=>{release=resolve;});
