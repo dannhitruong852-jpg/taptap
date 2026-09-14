@@ -127,7 +127,7 @@ export function createAudioCache({
     return persistentEnsureInflight.get(key);
   }
 
-  async function ensurePersistentMany(items=[],{concurrency=4}={}){
+  async function ensurePersistentMany(items=[],{concurrency=4,onProgress=()=>{}}={}){
     const unique=[];const seen=new Set();
     for(const item of items){
       if(!item?.path)continue;
@@ -140,6 +140,7 @@ export function createAudioCache({
       while(cursor<unique.length){
         const item=unique[cursor++];
         try{await ensurePersistent(item);completed+=1;}catch{failed+=1;}
+        onProgress({total:unique.length,completed,failed});
       }
     };
     const count=Math.min(Math.max(1,Number(concurrency)||1),unique.length||1);
