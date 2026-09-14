@@ -1,6 +1,8 @@
 import {manifestForVersion,bilingualHighlightsPath} from './catalog.js';
+import {createStaticResourceCache} from './static-resource-cache.js';
 
-export function createArticleBundleStore({fetcher=fetch,audioVersion='',concurrency=4,resourceCache=null}={}){
+export function createArticleBundleStore({fetcher=fetch,audioVersion='',concurrency=4,resourceCache}={}){
+  resourceCache=resourceCache===undefined?createStaticResourceCache({fetcher}):resourceCache;
   const bundles=new Map();
   const inflight=new Map();
   const yearMappings=new Map();
