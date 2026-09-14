@@ -11,13 +11,19 @@ class FakeResponse {
 }
 
 function fakeCacheStorage(){
-  const store=new Map();
+  const store=new Map();let deleteCalls=0;
   const cache={
     async match(key){return store.get(String(key))||undefined;},
     async put(key,response){store.set(String(key),response.clone());},
     async keys(){return [...store.keys()];}
   };
-  return {store,cache,async open(){return cache;},async keys(){return ['kaoyan-audio-v1'];},async delete(){return true;}};
+  return {
+    store,cache,
+    async open(){return cache;},
+    async keys(){return ['kaoyan-audio-v1','kaoyan-audio-v0'];},
+    async delete(){deleteCalls+=1;return true;},
+    get deleteCalls(){return deleteCalls;}
+  };
 }
 
 test('persistent audio cache exports createAudioCache',()=>{
@@ -28,6 +34,7 @@ test('first resolve fetches once and second resolve reuses persistent bytes',asy
   const storage=fakeCacheStorage();let fetchCalls=0;let objectId=0;
   const cache=audioCacheModule.createAudioCache({
     cacheStorage:storage,
+    storageManager:null,
     fetcher:async()=>{fetchCalls+=1;return new FakeResponse('audio-bytes');},
     createObjectURL:()=>`blob:test/${++objectId}`,
     revokeObjectURL:()=>{}
@@ -45,6 +52,7 @@ test('concurrent resolves deduplicate network fetch and fingerprint changes cach
   const gate=new Promise(resolve=>{release=resolve;});
   const cache=audioCacheModule.createAudioCache({
     cacheStorage:storage,
+    storageManager:null,
     fetcher:async()=>{fetchCalls+=1;await gate;return new FakeResponse('audio');},
     createObjectURL:()=>`blob:${Math.random()}`,
     revokeObjectURL:()=>{}
@@ -61,6 +69,7 @@ test('concurrent resolves deduplicate network fetch and fingerprint changes cach
 test('persistent cache failure degrades to remote playback URL',async()=>{
   const cache=audioCacheModule.createAudioCache({
     cacheStorage:{async open(){throw new Error('storage denied');}},
+    storageManager:null,
     fetcher:async()=>{throw new Error('should not fetch in degraded direct-url mode');},
     createObjectURL:()=>{throw new Error('should not create blob');},
     revokeObjectURL:()=>{}
@@ -70,20 +79,33 @@ test('persistent cache failure degrades to remote playback URL',async()=>{
   assert.deepEqual(resolved,{src:item.path,local:false,key:resolved.key});
 });
 
-test('normal browsing requests durable storage and never exposes an automatic persistent-cache pruning API',async()=>{
+test('normal browsing requests durable storage once',async()=>{
   let persistCalls=0;
-  const storage=fakeCacheStorage();
   const cache=audioCacheModule.createAudioCache({
-    cacheStorage:storage,
+    cacheStorage:fakeCacheStorage(),
     storageManager:{async persist(){persistCalls+=1;return true;}},
     fetcher:async()=>new FakeResponse('audio'),
     createObjectURL:()=>`blob:test/${Math.random()}`,
     revokeObjectURL:()=>{}
   });
-  assert.equal(typeof cache.requestPersistentStorage,'function');
+  assert.equal(await cache.requestPersistentStorage(),true);
   assert.equal(await cache.requestPersistentStorage(),true);
   assert.equal(persistCalls,1);
-  assert.equal(cache.pruneOldGenerations,undefined);
+});
+
+test('persistent cache is never automatically deleted or capacity-evicted',async()=>{
+  const storage=fakeCacheStorage();let objectId=0;
+  const cache=audioCacheModule.createAudioCache({
+    cacheStorage:storage,
+    storageManager:null,
+    fetcher:async path=>new FakeResponse(`audio:${path}`),
+    createObjectURL:()=>`blob:test/${++objectId}`,
+    revokeObjectURL:()=>{}
+  });
+  for(let i=0;i<40;i++)await cache.resolve({path:`./audio/s${i}.opus`,generation_fingerprint:`v${i}`});
+  await cache.pruneOldGenerations();
+  assert.equal(storage.store.size,40);
+  assert.equal(storage.deleteCalls,0);
 });
 
 test('durable-storage request degrades safely when browser refuses or does not support it',async()=>{
