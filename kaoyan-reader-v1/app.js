@@ -1,5 +1,6 @@
 import { buildSentenceQueue, nextSentenceIndex } from './playback.js';
 import { createAudioPlayer } from './audio-player.js';
+import { createAudioCache } from './audio-cache.js';
 import { sentenceProgress, isExplicitLegacyTimingVersion } from './progress.js';
 import { readStateAtTime, activeChineseGroups } from './time-index.js';
 import { renderEnglish, renderChinese } from './bilingual-text.js';
@@ -10,9 +11,10 @@ import { pickArticle, selectArticles, createSelectionLoader, adjacentArticle } f
 let article={}, sentences=[], manifest={segments:{}};
 let catalog=null, loading=true, selectionGeneration=0, bilingualMappings={}, semanticMappings={};
 let currentEntry=null;
-const bilingualMapPromise=fetch('./content/2002/bilingual-highlights.json', {cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
 const semanticMapPromise=fetch('./content/2002/semantic-spans.json', {cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
 const loadSelection=createSelectionLoader();
+const audioCache=createAudioCache();
+audioCache.pruneOldGenerations();
 const articleSelect=document.querySelector('#article-select');
 const sectionSelect=document.querySelector('#section-select');
 const yearSelect=document.querySelector('#year-select');
@@ -110,19 +112,24 @@ function progressFromUpdate(segment,currentTime,duration){
  return duration>0?Math.max(0,Math.min(1,currentTime/duration)):0;
 }
 function queueForSentence(index){const sentence=sentences[index];if(!sentence)return[];return buildSentenceQueue(sentence,manifest).map(item=>({...item,path:!supportsOpus&&item.mp3_path?item.mp3_path:item.path}));}
-function preloadWindow(startIndex,count=4){
+function warmRange(startIndex,count=4){
  const warm=[];const start=Math.max(0,startIndex);const end=Math.min(sentences.length,start+count);
  for(let i=start;i<end;i++)warm.push(...queueForSentence(i));
- audioPlayer.preload(warm);
+ audioCache.warm(warm);
 }
 function warmVisibleSentences(){
  if(loading||!sentences.length)return;const cards=[...listEl.querySelectorAll('.sentence-card')];const viewportHeight=window.innerHeight||document.documentElement.clientHeight||0;
  const visible=cards.filter(card=>{const rect=card.getBoundingClientRect();return rect.bottom>=0&&rect.top<=viewportHeight;}).map(card=>Number(card.dataset.index)).filter(Number.isFinite);
  if(!visible.length)return;const start=Math.max(0,Math.min(...visible)-1);const end=Math.min(sentences.length-1,Math.max(...visible)+2);const warm=[];
- for(let i=start;i<=end;i++)warm.push(...queueForSentence(i));audioPlayer.preload(warm);
+ for(let i=start;i<=end;i++)warm.push(...queueForSentence(i));audioCache.warm(warm);
+}
+function warmArticleRemainder(){
+ const work=()=>{const warm=[];for(let i=4;i<sentences.length;i++)warm.push(...queueForSentence(i));audioCache.warm(warm);};
+ if('requestIdleCallback' in window)window.requestIdleCallback(work,{timeout:1200});else window.setTimeout(work,0);
 }
 const audioPlayer=createAudioPlayer({
  createAudio:src=>new Audio(src),
+ resolveAudio:item=>audioCache.resolve(item),
  onSegmentStart:segment=>{setPlaying(true,false);statusEl.textContent=`演员 ${segment.actor_id||primarySegment(sentences[state.current]).actor_id} · ${emotionLabels[segment.emotion||primarySegment(sentences[state.current]).emotion]||segment.emotion||'自然讲述'}`;},
  onTimeUpdate:({segment,currentTime,duration,ended})=>paintPlaybackProgress(state.current,segment,currentTime,duration,Boolean(ended)),
  onSentenceEnd:()=>{markSentenceComplete(state.current);if(state.current<sentences.length-1){speak(state.current+1);}else{setPlaying(false,false);statusEl.textContent='这一篇读完了 ✓';}},
@@ -131,7 +138,7 @@ const audioPlayer=createAudioPlayer({
 function speak(index,{scroll=true}={}){
  if(loading||!sentences.length)return;clearTimer();audioPlayer.stop();state.current=nextSentenceIndex(index,0,sentences.length);resetOtherProgress(state.current);resetSentenceProgress(state.current);updateActive(scroll);
  const queue=queueForSentence(state.current);if(queue.length===0||queue.some(item=>!item.path)){setPlaying(false,false);statusEl.textContent='音频尚未生成';showToast('这句音频尚未生成');return;}
- audioPlayer.playSentence(queue,state.speed);preloadWindow(state.current+1,3);
+ audioPlayer.playSentence(queue,state.speed);warmRange(state.current+1,3);
 }
 function togglePlay(){
  if(loading||!sentences.length)return;clearTimer();const playerState=audioPlayer.getState();
@@ -176,18 +183,18 @@ window.addEventListener('wheel',()=>{state.programmaticScrollUntil=0;},{passive:
 window.addEventListener('touchmove',()=>{state.programmaticScrollUntil=0;},{passive:true});
 window.addEventListener('scrollend',()=>{state.programmaticScrollUntil=0;state.scrollAnchorY=Math.max(0,window.scrollY||0);},{passive:true});
 window.addEventListener('scroll',queueViewportScroll,{passive:true});
-window.addEventListener('beforeunload',()=>audioPlayer.stop());
+window.addEventListener('beforeunload',()=>{audioPlayer.stop();audioCache.clearMemory();});
 
 async function openArticle(entry){
- if(!entry)return;const selectionToken=++selectionGeneration;tapGuard.cancel();loading=true;clearTimer();audioPlayer.stop();audioPlayer.clearPreload();setPlaying(false,false);playButton.disabled=true;statusEl.textContent='正在加载正文';
+ if(!entry)return;const selectionToken=++selectionGeneration;tapGuard.cancel();loading=true;clearTimer();audioPlayer.stop();audioPlayer.clearPreload();audioCache.clearMemory();setPlaying(false,false);playButton.disabled=true;statusEl.textContent='正在加载正文';
  try{
-  const [loaded,mappings,semantic]=await Promise.all([loadSelection(entry),bilingualMapPromise,semanticMapPromise]);if(!loaded||selectionToken!==selectionGeneration)return;
-  currentEntry=entry;bilingualMappings=mappings?.articles?.[entry.id]||{};semanticMappings=semantic?.articles?.[loaded.content.article_id]||{};({article,sentences}=loaded.content);manifest=loaded.manifest;
-  state.current=0;loading=false;playButton.disabled=false;backgroundEl.textContent=article.background;document.querySelector('#article-title').textContent=article.title;document.querySelector('.year-chip').textContent=`2002 · ${article.title.split(' · ')[0]}`;document.title=`${article.title} · 2002 英语精读`;listEl.setAttribute('aria-label',`${article.title} 双语精读`);
+  const [loaded,semantic]=await Promise.all([loadSelection(entry),semanticMapPromise]);if(!loaded||selectionToken!==selectionGeneration)return;
+  currentEntry=entry;const mapArticles=loaded.bilingual?.articles||{};bilingualMappings=mapArticles[loaded.content.article_id]||mapArticles[entry.id]||{};semanticMappings=semantic?.articles?.[loaded.content.article_id]||{};({article,sentences}=loaded.content);manifest=loaded.manifest;
+  state.current=0;loading=false;playButton.disabled=false;backgroundEl.textContent=article.background;document.querySelector('#article-title').textContent=article.title;document.querySelector('.year-chip').textContent=`${entry.year} · ${article.title.split(' · ')[0]}`;document.title=`${article.title} · ${entry.year} 英语精读`;listEl.setAttribute('aria-label',`${article.title} 双语精读`);
   const audioCount=sentences.filter(s=>manifest.sentences?.[s.id]?.path||s.segments.every(x=>manifest.segments?.[x.id]?.path)).length;const seamlessCount=sentences.filter(s=>manifest.sentences?.[s.id]?.path).length;
   document.querySelector('#content-status').textContent=`${sentences.length} 句中英对照 · 音频 ${audioCount}/${sentences.length} 句可播放${seamlessCount?` · C无缝 ${seamlessCount}/${sentences.length}`:''}`;
   statusEl.textContent=audioCount===sentences.length?'轻点查译文 · 点序号听本句':'正文已就绪 · 音频生成中';
-  history.replaceState(null,'',`#${entry.id}`);renderSentences();updateActive(false);resetSentenceProgress(0);updateArticleNavState();applyPlayerVisibility(false);preloadWindow(0,4);
+  history.replaceState(null,'',`#${entry.id}`);renderSentences();updateActive(false);resetSentenceProgress(0);updateArticleNavState();applyPlayerVisibility(false);warmRange(0,4);warmArticleRemainder();
  }catch(error){if(selectionToken!==selectionGeneration)return;loading=false;statusEl.textContent='正文加载失败';showToast('请重新选择文章或刷新页面');}
 }
 function fillArticleOptions(preferred){
