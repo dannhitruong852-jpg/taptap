@@ -19,3 +19,12 @@ test('reader routes article selection through resident RAM bundles and starts gl
   assert.match(app,/articleBundleStore\.preload\(/);
   assert.doesNotMatch(app,/const loadSelection=createSelectionLoader\(\)/);
 });
+
+test('reader prefers decoded Web Audio while retaining the existing HTMLAudio fallback',()=>{
+  assert.match(app,/createDecodedAudioStore/);
+  assert.match(app,/createWebAudioPlayer/);
+  assert.match(app,/createHybridAudioPlayer/);
+  assert.match(app,/decodedAudioStore\.preload/);
+  assert.match(app,/createAudioPlayer/);
+  assert.match(app,/hybridAudioPlayer\.playSentence/);
+});
