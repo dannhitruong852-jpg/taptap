@@ -26,6 +26,7 @@ These are product/SLO targets. Automated tests verify deterministic memory/cache
 4. Year-level bilingual mappings should be shared/deduplicated rather than fetched once per article.
 5. Stale article-selection completions must never replace the current selection.
 6. Global article preload must never block first render.
+7. Article content, manifests, and bilingual mappings also use a persistent static CacheStorage layer so a new page session can recover locally before background refresh.
 
 ## Mandatory playback architecture
 
@@ -44,6 +45,19 @@ These are product/SLO targets. Automated tests verify deterministic memory/cache
 13. Web Audio playback must preserve pause/resume, logical progress timing, automatic queue continuation, and speed controls 0.85 / 1.0 / 1.15.
 14. No added `setTimeout`/sleep is permitted between sentences. Rhetorical pauses belong inside produced audio/direction, never transport code.
 15. Stale async decode/cache/playback completions from an old article/selection must never start playback or surface errors into the new selection.
+
+## Full-library background persistence
+
+1. After the initial selected article renders, the reader automatically enumerates every article in the current catalog and persists the complete library without requiring manual year/article navigation.
+2. Full-library persistence includes required article JSON, manifests, year-level bilingual mappings, and the preferred-codec audio assets for every sentence/segment.
+3. Background audio persistence stores compressed bytes only. It must not call `blob()`, create Blob/Object URLs, call `decodeAudioData()`, or retain the entire audio library as decoded `AudioBuffer` objects.
+4. Opus is persisted when supported by the device; MP3 is used as the background-cache fallback when Opus is unsupported. Both encodings are not downloaded solely for offline caching.
+5. Full-library audio download concurrency is globally bounded to 4 tasks by default.
+6. Reopening the reader scans the catalog again and uses version-aware CacheStorage hits as the durable completion record. Already-cached unchanged assets are skipped; only missing/new-version assets are downloaded.
+7. If the browser/tab is killed before completion, completed CacheStorage writes remain valid. The next page session automatically resumes by cache-hit skipping; a separate checkpoint database is not required for correctness.
+8. Full-library persistence never blocks first article rendering or explicit user playback. The visible/current article and user-requested audio remain the interactive path.
+9. Individual resource failures do not abort the whole library job. Failed items are retried naturally on a later page session.
+10. A passive progress indicator may report article/audio completion, but no confirmation dialog or download button is required.
 
 ## Persistent retention policy
 
@@ -74,6 +88,10 @@ A latency change is acceptable only when:
 - unit tests prove resident article bundles return without a second fetch;
 - unit tests prove year-level mapping reuse and progressive bundle preload;
 - unit tests prove first audio fetch stores bytes and later resolution can hit persistent cache without a second network fetch;
+- unit tests prove persistent-only full-library audio caching creates no Blob/Object URLs;
+- unit tests prove a warm restart skips already completed versioned audio and downloads only missing assets;
+- unit tests prove the full-library coordinator traverses all catalog articles without user navigation;
+- unit tests prove background audio progress is reported incrementally;
 - unit tests prove concurrent byte/decode requests deduplicate;
 - unit tests prove fingerprint/version changes change persistent and decoded identity;
 - unit tests prove normal browsing requests persistent-storage protection at most once per cache instance;
@@ -84,7 +102,7 @@ A latency change is acceptable only when:
 - stale playback callbacks/resolutions remain suppressed after article/selection changes;
 - the full `kaoyan-reader-v1` Node test suite passes;
 - existing bilingual validation/rebuild gates pass;
-- deployed browser/mobile smoke checks cover cold first play, decoded warm replay, reload replay, arbitrary sentence tap, automatic handoff, pause/resume, speed switching, and repeated A -> B -> A article switching.
+- deployed browser/mobile smoke checks cover cold first play, decoded warm replay, reload replay, automatic full-library fill/resume, arbitrary sentence tap, automatic handoff, pause/resume, speed switching, and repeated A -> B -> A article switching.
 
 The reader records passive `article-switch` and `audio-start` performance measurements to support real-device diagnosis. CI must not be used to claim acoustic <= 50 ms; that requires device measurement.
 
