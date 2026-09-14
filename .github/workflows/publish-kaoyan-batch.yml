@@ -108,6 +108,26 @@ jobs:
             python content-pipeline/build_curated_year.py --year "$year"
           done
 
+      - name: Validate bilingual highlight coverage before publishing
+        env:
+          PYTHONPATH: voice-pipeline:content-pipeline
+        run: |
+          for year in 2003 2004 2005 2006; do
+            python content-pipeline/build_bilingual_highlights.py --year "$year"
+          done
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          expected={2003:71,2004:85,2005:24,2006:28}
+          for year,count in expected.items():
+              report=json.loads(Path(f'reports/bilingual-highlights/{year}.json').read_text())
+              assert report['errors']==[],report
+              assert report['required_occurrences']==count,(year,report)
+              assert report['required_occurrences']==report['mapped_occurrences']+report['reviewed_exceptions'],report
+              assert report['reviewed_exceptions']==0,report
+          print('validated complete bilingual highlight coverage')
+          PY
+
       - name: Validate static reader contract
         run: |
           python - <<'PY'
@@ -121,6 +141,7 @@ jobs:
               assert len(rows) == count, (year, len(rows))
               if year >= 2003:
                   assert all(x['manifest'].startswith(f'./audio/{year}/v4/') for x in rows), year
+                  assert Path(f'kaoyan-reader-v1/content/{year}/bilingual-highlights.json').is_file(), year
                   for row in rows:
                       assert Path('kaoyan-reader-v1', row['content'].removeprefix('./')).is_file(), row['content']
                       assert Path('kaoyan-reader-v1', row['manifest'].removeprefix('./')).is_file(), row['manifest']
@@ -133,7 +154,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add kaoyan-reader-v1 reports/extraction content-pipeline/voice_profiles content-pipeline/direction
+          git add kaoyan-reader-v1 reports/extraction reports/bilingual-highlights content-pipeline/voice_profiles content-pipeline/direction
           if ! git diff --cached --quiet; then
             git commit -m "feat: publish 2003-2006 C v4 batch from run $SOURCE_RUN_ID"
           fi
