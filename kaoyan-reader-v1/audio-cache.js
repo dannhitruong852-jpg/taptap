@@ -20,6 +20,7 @@ export function createAudioCache({
   namespace=CACHE_NAMESPACE
 }={}){
   const inflight=new Map();
+  const responseInflight=new Map();
   const blobs=new Map();
   const pinned=new Set();
   let persistentPromise=null;
@@ -53,18 +54,31 @@ export function createAudioCache({
     blobs.set(key,entry);
   }
 
-  async function resolvePersistent(item,key){
+  async function responseFor(item,key){
     const store=await persistent();
-    if(!store)return {src:item.path,local:false,key};
-    let response;
-    try{response=await store.match(key);}catch{return {src:item.path,local:false,key};}
-    if(!response){
-      if(!fetcher)return {src:item.path,local:false,key};
-      const network=await fetcher(item.path);
-      if(!network?.ok)throw new Error('audio-fetch-failed');
-      response=network;
-      try{await store.put(key,network.clone());}catch{}
+    if(!store)return null;
+    if(!responseInflight.has(key)){
+      const task=(async()=>{
+        let response;
+        try{response=await store.match(key);}catch{return null;}
+        if(!response){
+          if(!fetcher)return null;
+          const network=await fetcher(item.path);
+          if(!network?.ok)throw new Error('audio-fetch-failed');
+          response=network;
+          try{await store.put(key,network.clone());}catch{}
+        }
+        return response;
+      })().finally(()=>responseInflight.delete(key));
+      responseInflight.set(key,task);
     }
+    const response=await responseInflight.get(key);
+    return response?.clone?response.clone():response;
+  }
+
+  async function resolvePersistent(item,key){
+    const response=await responseFor(item,key);
+    if(!response)return {src:item.path,local:false,key};
     const blob=await response.blob();
     const entry=localEntry(createObjectURL(blob),key);
     touch(key,entry);
@@ -80,6 +94,15 @@ export function createAudioCache({
     const task=resolvePersistent(item,key).finally(()=>inflight.delete(key));
     inflight.set(key,task);
     return task;
+  }
+
+  async function getArrayBuffer(item){
+    if(!item?.path)throw new Error('audio-path-required');
+    const key=audioCacheKey(item);
+    const response=await responseFor(item,key);
+    if(!response)throw new Error('audio-bytes-unavailable');
+    const blob=await response.blob();
+    return {buffer:await blob.arrayBuffer(),key,local:true};
   }
 
   async function warm(items=[]){
@@ -106,5 +129,5 @@ export function createAudioCache({
   function pruneOldGenerations(){return Promise.resolve();}
 
   requestPersistentStorage();
-  return {resolve,warm,pin,unpin,clearMemory,requestPersistentStorage,pruneOldGenerations,getState:()=>({memory:blobs.size,inflight:inflight.size,persistenceDisabled})};
+  return {resolve,getArrayBuffer,warm,pin,unpin,clearMemory,requestPersistentStorage,pruneOldGenerations,getState:()=>({memory:blobs.size,inflight:inflight.size,responseInflight:responseInflight.size,persistenceDisabled})};
 }
