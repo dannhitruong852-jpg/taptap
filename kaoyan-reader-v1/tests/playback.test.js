@@ -92,3 +92,19 @@ test('sequencer plays the asynchronously resolved local source instead of the re
   assert.equal(created.length,1);
   assert.equal(created[0].src,'blob:local/s10');
 });
+
+test('active local blob source stays pinned until playback ends', async () => {
+  const created=[]; const events=[];
+  const player=createAudioPlayer({
+    resolveAudio: async item => ({src:`blob:local/${item.id}`,key:`k:${item.id}`,local:true}),
+    pinAudio:key=>events.push(`pin:${key}`),
+    unpinAudio:key=>events.push(`unpin:${key}`),
+    createAudio:src=>{const audio=new FakeAudio(src);created.push(audio);return audio;}
+  });
+  player.playSentence([{id:'s10',path:'./audio/remote-s10.opus'}],1);
+  await Promise.resolve();await Promise.resolve();
+  assert.deepEqual(events,['pin:k:s10']);
+  created[0].finish();
+  await Promise.resolve();
+  assert.deepEqual(events,['pin:k:s10','unpin:k:s10']);
+});
