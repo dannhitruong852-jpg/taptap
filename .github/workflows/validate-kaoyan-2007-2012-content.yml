@@ -1,0 +1,29 @@
+name: Validate kaoyan 2007-2012 content
+
+on:
+  push:
+    branches: ['c-v4-article-preview-actual']
+    paths:
+      - 'reports/content-freeze/2007/**'
+      - 'reports/content-freeze/2008/**'
+      - 'reports/content-freeze/2009/**'
+      - 'reports/content-freeze/2010/**'
+      - 'reports/content-freeze/2011/**'
+      - 'reports/content-freeze/2012/**'
+      - 'reports/content-freeze/2007-2012-production-board.json'
+      - 'scripts/check_2007_2012_content_freeze.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  freeze-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify materialized candidates against freeze state
+        run: python scripts/check_2007_2012_content_freeze.py
