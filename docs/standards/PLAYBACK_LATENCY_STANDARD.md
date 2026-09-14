@@ -27,12 +27,15 @@ These are product/SLO targets. Unit tests verify the deterministic cache and seq
 7. Opening an article immediately warms the current sentence and the next 3 sentences, then warms the remainder of the article during idle time.
 8. Viewport-near sentences are raised in warm priority while the reader scrolls.
 9. Legacy multi-segment sentences warm every segment required for the sentence, not only the first segment.
-10. The persistent byte cache survives article changes and page reloads. Only the bounded Blob/Object-URL memory layer is cleared/evicted.
-11. Blob URLs are bounded by LRU-style memory management; a source currently in playback is pinned and must not be revoked until playback ends/stops/errors.
-12. If Cache Storage is unavailable or denied, playback degrades to the remote media path rather than failing the reader.
-13. No added `setTimeout`/sleep is permitted between sentences. Rhetorical pauses belong inside produced audio/direction, never transport code.
-14. Playback speed controls 0.85 / 1.0 / 1.15 must continue to work with local cached sources.
-15. Stale async cache resolutions from an old article/selection must never start playback or surface errors into the new selection.
+10. Persistent audio retention is cumulative by default. The application must not impose a storage quota, LRU policy, age limit, or automatic deletion of previously cached audio.
+11. Normal browsing should request browser persistent-storage protection when `navigator.storage.persist()` is available. Refusal or lack of support must not break playback.
+12. Closing an article, reloading the page, or closing the browser must not intentionally delete Cache Storage audio. The browser/OS may still reclaim site data under its own platform policies; the application does not control that external behavior.
+13. Private/incognito browsing is storage-isolated from normal browsing and may discard its site data when the private session ends. This is expected platform behavior, not an application cleanup policy.
+14. The in-page Blob/Object-URL layer may be released when the page/article lifecycle ends because the persistent Cache Storage bytes remain intact. Releasing Blob URLs is not persistent-cache eviction.
+15. If Cache Storage is unavailable or denied, playback degrades to the remote media path rather than failing the reader.
+16. No added `setTimeout`/sleep is permitted between sentences. Rhetorical pauses belong inside produced audio/direction, never transport code.
+17. Playback speed controls 0.85 / 1.0 / 1.15 must continue to work with local cached sources.
+18. Stale async cache resolutions from an old article/selection must never start playback or surface errors into the new selection.
 
 ## Audio-asset edge-silence standard
 
@@ -44,6 +47,7 @@ For newly generated or regenerated production assets, unintended leading silence
 - Do not change C-mode direction, casting, emotion, sentence segmentation, translation, vocabulary, or content.
 - Do not regenerate 2002-2006 audio solely for this transport fix when the asset itself has no abnormal leading silence.
 - Do not merge each article into one monolithic audio file just to hide transport latency.
+- Do not automatically evict old persistent audio merely to enforce an application-defined capacity budget.
 
 ## Verification
 
@@ -52,6 +56,8 @@ A playback change is acceptable only when:
 - unit tests prove first fetch stores bytes and later resolution can hit persistent cache without a second network fetch;
 - unit tests prove concurrent resolves deduplicate;
 - unit tests prove fingerprint/version changes change cache identity;
+- unit tests prove normal browsing requests persistent-storage protection at most once per cache instance;
+- unit tests prove application cache-maintenance code performs no persistent Cache Storage deletion or capacity eviction;
 - unit tests prove active local Blob sources remain pinned through playback and are unpinned afterward;
 - stale playback callbacks/resolutions remain suppressed after article/selection changes;
 - persistent-cache failure falls back to remote playback;
