@@ -1,4 +1,4 @@
-export function createAudioPlayer({ createAudio, onSegmentStart = () => {}, onTimeUpdate = () => {}, onSentenceEnd = () => {}, onError = () => {}, maxPreloadEntries = 12 }) {
+export function createAudioPlayer({ createAudio, resolveAudio = null, onSegmentStart = () => {}, onTimeUpdate = () => {}, onSentenceEnd = () => {}, onError = () => {}, maxPreloadEntries = 12 }) {
   let active = null;
   let queue = [];
   let index = -1;
@@ -46,12 +46,9 @@ export function createAudioPlayer({ createAudio, onSegmentStart = () => {}, onTi
     return audio;
   }
 
-  function playAt(nextIndex, currentGeneration) {
+  function attachAndPlay(audio, segment, nextIndex, currentGeneration) {
     if (currentGeneration !== generation) return;
-    if (nextIndex >= queue.length) {active = null;onSentenceEnd();return;}
     index = nextIndex;
-    const segment = queue[index];
-    const audio = prepare(segment.path);
     active = audio;
     audio.playbackRate = speed;
     try { audio.currentTime = 0; } catch {}
@@ -72,6 +69,25 @@ export function createAudioPlayer({ createAudio, onSegmentStart = () => {}, onTi
     onSegmentStart(segment, index);
     const playResult = audio.play();
     if (playResult?.catch) playResult.catch(error => { if (currentGeneration === generation && active === audio) onError(error, segment); });
+  }
+
+  function playAt(nextIndex, currentGeneration) {
+    if (currentGeneration !== generation) return;
+    if (nextIndex >= queue.length) {active = null;onSentenceEnd();return;}
+    const segment = queue[nextIndex];
+    if (!resolveAudio) {
+      attachAndPlay(prepare(segment.path), segment, nextIndex, currentGeneration);
+      return;
+    }
+    Promise.resolve(resolveAudio(segment)).then(resolved => {
+      if (currentGeneration !== generation) return;
+      const src = resolved?.src || segment.path;
+      const audio = createAudio(src);
+      audio.preload = 'auto';
+      attachAndPlay(audio, segment, nextIndex, currentGeneration);
+    }).catch(error => {
+      if (currentGeneration === generation) onError(error, segment);
+    });
   }
 
   function stop() {
