@@ -59,9 +59,13 @@ export function createFullLibraryCacheCoordinator({
       seen.add(key);unique.push(item);
     }
     state={...state,audioTotal:unique.length};emit();
-    const result=await audioCache.ensurePersistentMany(unique,{concurrency:audioConcurrency});
+    const articleFailures=state.failed;
+    const result=await audioCache.ensurePersistentMany(unique,{concurrency:audioConcurrency,onProgress:progress=>{
+      state={...state,audioTotal:progress.total,audioDone:progress.completed,failed:articleFailures+progress.failed};
+      emit();
+    }});
     if(stopped)return getState();
-    state={...state,status:'complete',audioDone:result.completed,failed:state.failed+result.failed};
+    state={...state,status:'complete',audioTotal:result.total,audioDone:result.completed,failed:articleFailures+result.failed};
     emit();
     return getState();
   }
