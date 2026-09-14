@@ -3,14 +3,14 @@
   "strategy": "six_years_parallel",
   "content_frozen": false,
   "voice_started": false,
-  "totals": {"units": 42, "candidate_ready": 6, "english_ready_for_translation": 36},
+  "totals": {"units": 42, "candidate_ready": 12, "english_ready_for_translation": 30},
   "years": {
-    "2007": {"candidate_ready": ["cloze"], "english_ready_for_translation": ["text1","text2","text3","text4","partb","translation"]},
-    "2008": {"candidate_ready": ["cloze"], "english_ready_for_translation": ["text1","text2","text3","text4","partb","translation"]},
-    "2009": {"candidate_ready": ["cloze"], "english_ready_for_translation": ["text1","text2","text3","text4","partb","translation"]},
-    "2010": {"candidate_ready": ["cloze"], "english_ready_for_translation": ["text1","text2","text3","text4","partb","translation"]},
-    "2011": {"candidate_ready": ["cloze"], "english_ready_for_translation": ["text1","text2","text3","text4","partb","translation"]},
-    "2012": {"candidate_ready": ["cloze"], "english_ready_for_translation": ["text1","text2","text3","text4","partb","translation"]}
+    "2007": {"candidate_ready": ["cloze","text1"], "english_ready_for_translation": ["text2","text3","text4","partb","translation"]},
+    "2008": {"candidate_ready": ["cloze","text1"], "english_ready_for_translation": ["text2","text3","text4","partb","translation"]},
+    "2009": {"candidate_ready": ["cloze","text1"], "english_ready_for_translation": ["text2","text3","text4","partb","translation"]},
+    "2010": {"candidate_ready": ["cloze","text1"], "english_ready_for_translation": ["text2","text3","text4","partb","translation"]},
+    "2011": {"candidate_ready": ["cloze","text1"], "english_ready_for_translation": ["text2","text3","text4","partb","translation"]},
+    "2012": {"candidate_ready": ["cloze","text1"], "english_ready_for_translation": ["text2","text3","text4","partb","translation"]}
   },
   "actor_plan": {
     "2007": {"cloze":"03","text1":"02","text2":"02","text3":"01","text4":"09","partb":"06","translation":"09"},
