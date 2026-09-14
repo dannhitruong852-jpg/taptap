@@ -5,9 +5,9 @@
   "voice_started": false,
   "totals": {
     "units": 42,
-    "candidate_materialized": 7,
+    "candidate_materialized": 8,
     "candidate_partial": 1,
-    "candidate_missing": 34
+    "candidate_missing": 33
   },
   "years": {
     "2007": {
@@ -16,9 +16,9 @@
       "candidate_missing": []
     },
     "2008": {
-      "candidate_materialized": ["cloze"],
+      "candidate_materialized": ["cloze", "translation"],
       "candidate_partial": [],
-      "candidate_missing": ["text1", "text2", "text3", "text4", "partb", "translation"]
+      "candidate_missing": ["text1", "text2", "text3", "text4", "partb"]
     },
     "2009": {
       "candidate_materialized": [],
