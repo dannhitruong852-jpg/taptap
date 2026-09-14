@@ -69,3 +69,26 @@ test('persistent cache failure degrades to remote playback URL',async()=>{
   const resolved=await cache.resolve(item);
   assert.deepEqual(resolved,{src:item.path,local:false,key:resolved.key});
 });
+
+test('normal browsing requests durable storage and never exposes an automatic persistent-cache pruning API',async()=>{
+  let persistCalls=0;
+  const storage=fakeCacheStorage();
+  const cache=audioCacheModule.createAudioCache({
+    cacheStorage:storage,
+    storageManager:{async persist(){persistCalls+=1;return true;}},
+    fetcher:async()=>new FakeResponse('audio'),
+    createObjectURL:()=>`blob:test/${Math.random()}`,
+    revokeObjectURL:()=>{}
+  });
+  assert.equal(typeof cache.requestPersistentStorage,'function');
+  assert.equal(await cache.requestPersistentStorage(),true);
+  assert.equal(persistCalls,1);
+  assert.equal(cache.pruneOldGenerations,undefined);
+});
+
+test('durable-storage request degrades safely when browser refuses or does not support it',async()=>{
+  const denied=audioCacheModule.createAudioCache({cacheStorage:fakeCacheStorage(),storageManager:{async persist(){return false;}}});
+  assert.equal(await denied.requestPersistentStorage(),false);
+  const unsupported=audioCacheModule.createAudioCache({cacheStorage:fakeCacheStorage(),storageManager:null});
+  assert.equal(await unsupported.requestPersistentStorage(),false);
+});
