@@ -6,13 +6,15 @@ import { readStateAtTime, activeChineseGroups } from './time-index.js';
 import { renderEnglish, renderChinese } from './bilingual-text.js';
 import { createTapGuard, attachSpeedControl } from './reader-controls.js';
 import { resolvePlayerScroll } from './scroll-behavior.js';
-import { pickArticle, selectArticles, createSelectionLoader, adjacentArticle } from './catalog.js';
+import { pickArticle, selectArticles, adjacentArticle } from './catalog.js';
+import { createArticleBundleStore } from './article-bundle-store.js';
 
 let article={}, sentences=[], manifest={segments:{}};
 let catalog=null, loading=true, selectionGeneration=0, bilingualMappings={}, semanticMappings={};
 let currentEntry=null;
 const semanticMapPromise=fetch('./content/2002/semantic-spans.json', {cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
-const loadSelection=createSelectionLoader();
+const articleBundleStore=createArticleBundleStore();
+let globalArticlePreloadStarted=false;
 const audioCache=createAudioCache();
 audioCache.pruneOldGenerations();
 const articleSelect=document.querySelector('#article-select');
@@ -187,14 +189,16 @@ window.addEventListener('beforeunload',()=>{audioPlayer.stop();audioCache.clearM
 
 async function openArticle(entry){
  if(!entry)return;const selectionToken=++selectionGeneration;tapGuard.cancel();loading=true;clearTimer();audioPlayer.stop();audioPlayer.clearPreload();audioCache.clearMemory();setPlaying(false,false);playButton.disabled=true;statusEl.textContent='正在加载正文';
+ articleBundleStore.cancelLowPriorityWork();
  try{
-  const [loaded,semantic]=await Promise.all([loadSelection(entry),semanticMapPromise]);if(!loaded||selectionToken!==selectionGeneration)return;
+  const [loaded,semantic]=await Promise.all([articleBundleStore.get(entry),semanticMapPromise]);if(!loaded||selectionToken!==selectionGeneration)return;
   currentEntry=entry;const mapArticles=loaded.bilingual?.articles||{};bilingualMappings=mapArticles[loaded.content.article_id]||mapArticles[entry.id]||{};semanticMappings=semantic?.articles?.[loaded.content.article_id]||{};({article,sentences}=loaded.content);manifest=loaded.manifest;
   state.current=0;loading=false;playButton.disabled=false;backgroundEl.textContent=article.background;document.querySelector('#article-title').textContent=article.title;document.querySelector('.year-chip').textContent=`${entry.year} · ${article.title.split(' · ')[0]}`;document.title=`${article.title} · ${entry.year} 英语精读`;listEl.setAttribute('aria-label',`${article.title} 双语精读`);
   const audioCount=sentences.filter(s=>manifest.sentences?.[s.id]?.path||s.segments.every(x=>manifest.segments?.[x.id]?.path)).length;const seamlessCount=sentences.filter(s=>manifest.sentences?.[s.id]?.path).length;
   document.querySelector('#content-status').textContent=`${sentences.length} 句中英对照 · 音频 ${audioCount}/${sentences.length} 句可播放${seamlessCount?` · C无缝 ${seamlessCount}/${sentences.length}`:''}`;
   statusEl.textContent=audioCount===sentences.length?'轻点查译文 · 点序号听本句':'正文已就绪 · 音频生成中';
   history.replaceState(null,'',`#${entry.id}`);renderSentences();updateActive(false);resetSentenceProgress(0);updateArticleNavState();applyPlayerVisibility(false);warmRange(0,4);warmArticleRemainder();
+  if(!globalArticlePreloadStarted&&catalog){globalArticlePreloadStarted=true;void articleBundleStore.preload(catalog.articles.filter(item=>item.id!==entry.id));}
  }catch(error){if(selectionToken!==selectionGeneration)return;loading=false;statusEl.textContent='正文加载失败';showToast('请重新选择文章或刷新页面');}
 }
 function fillArticleOptions(preferred){
