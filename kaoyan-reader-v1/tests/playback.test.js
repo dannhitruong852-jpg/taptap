@@ -24,6 +24,20 @@ test('buildSentenceQueue prefers one seamless sentence asset when v2 manifest pr
   assert.equal(queue[0].cues.length, 2);
 });
 
+test('buildSentenceQueue propagates root manifest generation fingerprint to seamless audio',()=>{
+  const sentence={id:'s01',segments:[{id:'s01-a'}]};
+  const v={generation_fingerprint:'root-v9',sentences:{s01:{path:'./audio/s01.opus'}},segments:{}};
+  const [item]=buildSentenceQueue(sentence,v);
+  assert.equal(item.generation_fingerprint,'root-v9');
+});
+
+test('legacy segment queue inherits root generation fingerprint',()=>{
+  const sentence={id:'s02',segments:[{id:'s02-a'}]};
+  const v={generation_fingerprint:'root-v10',segments:{'s02-a':{path:'./audio/s02-a.opus'}}};
+  const [item]=buildSentenceQueue(sentence,v);
+  assert.equal(item.generation_fingerprint,'root-v10');
+});
+
 test('user playback speed multiplies generated segment rate without leaving safe browser range', () => {
   assert.equal(applySpeed(1, 0.85), 0.85);
   assert.equal(applySpeed(1, 1.15), 1.15);
