@@ -5,9 +5,9 @@
   "voice_started": false,
   "totals": {
     "units": 42,
-    "candidate_materialized": 15,
-    "candidate_partial": 1,
-    "candidate_missing": 26
+    "candidate_materialized": 19,
+    "candidate_partial": 2,
+    "candidate_missing": 21
   },
   "years": {
     "2007": {
@@ -21,9 +21,9 @@
       "candidate_missing": []
     },
     "2009": {
-      "candidate_materialized": ["cloze", "translation"],
-      "candidate_partial": [],
-      "candidate_missing": ["text1", "text2", "text3", "text4", "partb"]
+      "candidate_materialized": ["cloze", "text2", "text3", "text4", "partb", "translation"],
+      "candidate_partial": ["text1"],
+      "candidate_missing": []
     },
     "2010": {
       "candidate_materialized": [],
@@ -44,6 +44,7 @@
   "freeze_gate_remaining": [
     "materialize_all_candidates",
     "merge_2007_text1_parts",
+    "merge_2009_text1_parts",
     "full_candidate_qa",
     "vocabulary_1_9",
     "bilingual_highlights",
@@ -63,6 +64,6 @@
     "Do not start voice generation for 2007-2012 until content_frozen is true.",
     "Content freeze CI is armed and derives readiness from concrete candidate files.",
     "2008 is fully materialized at candidate level; content freeze still requires QA/enrichment gates.",
-    "2009 cloze and translation are materialized; remaining 2009 Part A/Part B units are in progress."
+    "2009 has six complete candidates plus a partial Text1 shard set; the remaining gap is isolated and does not block other years."
   ]
 }
