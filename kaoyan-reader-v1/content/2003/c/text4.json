@@ -1,0 +1,1116 @@
+{
+  "year": 2003,
+  "section_type": "reading",
+  "article_id": "text4",
+  "source_sha256": "77149d8faa8b6d539e2e8a6bf6a1f2801af640e7a49f248f059e5483cbe22443",
+  "source_pages": [
+    9,
+    10
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "09",
+  "article_context": "第一人称医生讨论死亡、医疗技术和公共资源边界。语气成熟、严肃而有人情味：先承认医学进步，再转向成本与死亡现实，最后落在“资源应如何分配”的政策判断。",
+  "article": {
+    "year": 2003,
+    "section": "text4",
+    "title": "阅读四 · 医疗进步、死亡与资源边界",
+    "background": "第一人称医生讨论死亡、医疗技术和公共资源边界。语气成熟、严肃而有人情味：先承认医学进步，再转向成本与死亡现实，最后落在“资源应如何分配”的政策判断。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "It is said that in England death is pressing, in Canada inevitable and in California optional.",
+      "zh": "有人说，在英国，死亡迫在眉睫；在加拿大，死亡不可避免；而在加利福尼亚，死亡仿佛成了可以选择的事。",
+      "vocab": [
+        {
+          "word": "inevitable",
+          "lemma": "inevitable",
+          "level": 6,
+          "meaning": "不可避免的",
+          "start": 56,
+          "end": 66
+        }
+      ],
+      "discourse_function": "irony",
+      "prosody_focus": [
+        "pressing",
+        "inevitable",
+        "optional"
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "It is said that in England death is pressing, in Canada inevitable and in California optional.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "ironic",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text4/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Small wonder.",
+      "zh": "这也难怪。",
+      "vocab": [],
+      "discourse_function": "settle",
+      "prosody_focus": [
+        "Small wonder"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Small wonder.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text4/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "Americans’ life expectancy has nearly doubled over the past century.",
+      "zh": "过去一个世纪里，美国人的预期寿命几乎翻了一番。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [
+        "nearly doubled"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Americans’ life expectancy has nearly doubled over the past century.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text4/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 1,
+      "en": "Failing hips can be replaced, clinical depression controlled, cataracts removed in a 30-minute surgical procedure.",
+      "zh": "坏掉的髋关节可以置换，临床抑郁症可以控制，白内障也能在30分钟的手术中摘除。",
+      "vocab": [
+        {
+          "word": "cataracts",
+          "lemma": "cataract",
+          "level": 8,
+          "meaning": "白内障",
+          "start": 62,
+          "end": 71
+        }
+      ],
+      "discourse_function": "sequence",
+      "prosody_focus": [
+        "replaced",
+        "controlled",
+        "removed"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Failing hips can be replaced, clinical depression controlled, cataracts removed in a 30-minute surgical procedure.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text4/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 1,
+      "en": "Such advances offer the aging population a quality of life that was unimaginable when I entered medicine 50 years ago.",
+      "zh": "这些进步给老龄人口带来的生活质量，是我50年前进入医学界时无法想象的。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "unimaginable",
+        "50 years ago"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Such advances offer the aging population a quality of life that was unimaginable when I entered medicine 50 years ago.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text4/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 1,
+      "en": "But not even a great health-care system can cure death — and our failure to confront that reality now threatens this greatness of ours.",
+      "zh": "但再伟大的医疗体系也治不好死亡；而我们拒绝正视这一现实，如今反过来正威胁着这个体系本身的卓越。",
+      "vocab": [
+        {
+          "word": "confront",
+          "lemma": "confront",
+          "level": 6,
+          "meaning": "正视；面对",
+          "start": 76,
+          "end": 84
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "But",
+        "cannot cure death",
+        "failure to confront"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "But not even a great health-care system can cure death —",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2003/c-text4/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s06-02",
+          "text": " and our failure to confront that reality now threatens this greatness of ours.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text4/s06-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "Death is normal; we are genetically programmed to disintegrate and perish, even under ideal conditions.",
+      "zh": "死亡本就是正常现象；即使在理想条件下，我们的基因也注定身体终将衰败、生命终将消逝。",
+      "vocab": [
+        {
+          "word": "disintegrate",
+          "lemma": "disintegrate",
+          "level": 8,
+          "meaning": "解体；衰败",
+          "start": 50,
+          "end": 62
+        },
+        {
+          "word": "perish",
+          "lemma": "perish",
+          "level": 7,
+          "meaning": "死亡；消亡",
+          "start": 67,
+          "end": 73
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "Death is normal",
+        "disintegrate and perish"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "Death is normal;",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 90,
+          "audio_path": "./audio/2003/c-text4/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s07-02",
+          "text": " we are genetically programmed to disintegrate and perish, even under ideal conditions.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text4/s07-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 2,
+      "en": "We all understand that at some level, yet as medical consumers we treat death as a problem to be solved.",
+      "zh": "某种程度上，我们都明白这一点；可作为医疗消费者，我们却把死亡当成一道必须解决的问题。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "understand",
+        "yet",
+        "problem to be solved"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "We all understand that at some level,",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2003/c-text4/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s08-02",
+          "text": " yet as medical consumers we treat death as a problem to be solved.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text4/s08-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 2,
+      "en": "Shielded by third-party payers from the cost of our care, we demand everything that can possibly be done for us, even if it’s useless.",
+      "zh": "由于第三方付费让我们感受不到医疗的真实成本，我们会要求把一切可能的手段都用上，即便这些手段毫无用处。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "Shielded",
+        "demand everything",
+        "useless"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "Shielded by third-party payers from the cost of our care,",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2003/c-text4/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s09-02",
+          "text": " we demand everything that can possibly be done for us, even if it’s useless.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text4/s09-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 2,
+      "en": "The most obvious example is late-stage cancer care.",
+      "zh": "最明显的例子就是晚期癌症治疗。",
+      "vocab": [],
+      "discourse_function": "example",
+      "prosody_focus": [
+        "late-stage cancer care"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "The most obvious example is late-stage cancer care.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text4/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 2,
+      "en": "Physicians — frustrated by their inability to cure the disease and fearing loss of hope in the patient — too often offer aggressive treatment far beyond what is scientifically justified.",
+      "zh": "医生因为无法治愈疾病而沮丧，又担心病人失去希望，于是常常采用过于激进的治疗，其程度远远超出科学证据所能支持的范围。",
+      "vocab": [],
+      "discourse_function": "warning",
+      "prosody_focus": [
+        "aggressive treatment",
+        "far beyond",
+        "scientifically justified"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "Physicians — frustrated by their inability to cure the disease and fearing loss of hope in the patient —",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 105,
+          "audio_path": "./audio/2003/c-text4/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s11-02",
+          "text": " too often offer aggressive treatment far beyond what is scientifically justified.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text4/s11-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 3,
+      "en": "In 1950, the U.S. spent $12.7 billion on health care.",
+      "zh": "1950年，美国的医疗支出为127亿美元。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [
+        "1950",
+        "$12.7 billion"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "In 1950, the U.S. spent $12.7 billion on health care.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text4/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 3,
+      "en": "In 2002, the cost will be $1,540 billion.",
+      "zh": "到2002年，这一费用将达到1.54万亿美元。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [
+        "2002",
+        "$1,540 billion"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "In 2002, the cost will be $1,540 billion.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text4/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 3,
+      "en": "Anyone can see this trend is unsustainable.",
+      "zh": "谁都看得出，这种趋势不可持续。",
+      "vocab": [
+        {
+          "word": "unsustainable",
+          "lemma": "unsustainable",
+          "level": 7,
+          "meaning": "不可持续的",
+          "start": 29,
+          "end": 42
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "unsustainable"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "Anyone can see this trend is unsustainable.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text4/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 3,
+      "en": "Yet few seem willing to try to reverse it.",
+      "zh": "然而，似乎很少有人愿意尝试扭转它。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "Yet",
+        "few"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "Yet few seem willing to try to reverse it.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text4/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 4,
+      "en": "Some scholars conclude that a government with finite resources should simply stop paying for medical care that sustains life beyond a certain age — say 83 or so.",
+      "zh": "一些学者因此得出结论：资源有限的政府，到了某个年龄之后——比如83岁左右——就应停止为延续生命的医疗服务买单。",
+      "vocab": [
+        {
+          "word": "finite",
+          "lemma": "finite",
+          "level": 7,
+          "meaning": "有限的",
+          "start": 46,
+          "end": 52
+        }
+      ],
+      "discourse_function": "warning",
+      "prosody_focus": [
+        "finite resources",
+        "stop paying",
+        "83"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "Some scholars conclude that a government with finite resources should simply stop paying for medical care that sustains life beyond a certain age —",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 105,
+          "audio_path": "./audio/2003/c-text4/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s16-02",
+          "text": " say 83 or so.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text4/s16-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 4,
+      "en": "Former Colorado governor Richard Lamm has been quoted as saying that the old and infirm “have a duty to die and get out of the way” so that younger, healthier people can realize their potential.",
+      "zh": "据称，科罗拉多州前州长理查德·拉姆曾说，年老体弱者“有义务死去并让开道路”，好让更年轻、更健康的人实现自己的潜能。",
+      "vocab": [
+        {
+          "word": "infirm",
+          "lemma": "infirm",
+          "level": 8,
+          "meaning": "虚弱的；体弱的",
+          "start": 81,
+          "end": 87
+        }
+      ],
+      "discourse_function": "evaluation_quote",
+      "prosody_focus": [
+        "duty to die",
+        "younger, healthier people"
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "Former Colorado governor Richard Lamm has been quoted as saying that the old and infirm “have a duty to die and get out of the way”",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "serious",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 115,
+          "audio_path": "./audio/2003/c-text4/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s17-02",
+          "text": " so that younger, healthier people can realize their potential.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "serious",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text4/s17-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 4,
+      "en": "I would not go that far.",
+      "zh": "我不会走到那么极端。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "not go that far"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "I would not go that far.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text4/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 5,
+      "en": "Energetic people now routinely work through their 60s and beyond, and remain dazzlingly productive.",
+      "zh": "如今，精力充沛的人到了六十多岁乃至更高龄仍常常继续工作，而且生产力依然惊人。",
+      "vocab": [
+        {
+          "word": "routinely",
+          "lemma": "routinely",
+          "level": 6,
+          "meaning": "通常；惯常地",
+          "start": 21,
+          "end": 30
+        },
+        {
+          "word": "dazzlingly",
+          "lemma": "dazzlingly",
+          "level": 8,
+          "meaning": "极其耀眼地",
+          "start": 77,
+          "end": 87
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "through their 60s and beyond",
+        "productive"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "Energetic people now routinely work through their 60s and beyond,",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2003/c-text4/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s19-02",
+          "text": " and remain dazzlingly productive.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text4/s19-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "paragraph": 5,
+      "en": "At 78, Viacom chairman Sumner Redstone jokingly claims to be 53.",
+      "zh": "维亚康姆董事长萨姆纳·雷石东78岁时还开玩笑说自己只有53岁。",
+      "vocab": [],
+      "discourse_function": "playful",
+      "prosody_focus": [
+        "78",
+        "53"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s20-01",
+          "text": "At 78, Viacom chairman Sumner Redstone jokingly claims to be 53.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text4/s20-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "paragraph": 5,
+      "en": "Supreme Court Justice Sandra Day O’Connor is in her 70s, and former surgeon general C. Everett Koop chairs an Internet start-up in his 80s.",
+      "zh": "最高法院大法官桑德拉·戴·奥康纳已年过七十，而前卫生局局长 C. 埃弗里特·库普八十多岁时还担任一家互联网初创公司的董事长。",
+      "vocab": [],
+      "discourse_function": "example",
+      "prosody_focus": [
+        "70s",
+        "80s"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s21-01",
+          "text": "Supreme Court Justice Sandra Day O’Connor is in her 70s,",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2003/c-text4/s21-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s21-02",
+          "text": " and former surgeon general C. Everett Koop chairs an Internet start-up in his 80s.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text4/s21-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "paragraph": 5,
+      "en": "These leaders are living proof that prevention works and that we can manage the health problems that come naturally with age.",
+      "zh": "这些领袖人物就是活生生的证明：预防有效，而且伴随年龄自然出现的健康问题是可以管理的。",
+      "vocab": [
+        {
+          "word": "prevention",
+          "lemma": "prevention",
+          "level": 6,
+          "meaning": "预防",
+          "start": 36,
+          "end": 46
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "living proof",
+        "prevention works"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s22-01",
+          "text": "These leaders are living proof that prevention works and that we can manage the health problems that come naturally with age.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text4/s22-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "paragraph": 5,
+      "en": "As a mere 68-year-old, I wish to age as productively as they have.",
+      "zh": "而我不过68岁，也希望自己能像他们一样富有成效地老去。",
+      "vocab": [],
+      "discourse_function": "playful",
+      "prosody_focus": [
+        "mere 68-year-old"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s23-01",
+          "text": "As a mere 68-year-old, I wish to age as productively as they have.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text4/s23-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "paragraph": 6,
+      "en": "Yet there are limits to what a society can spend in this pursuit.",
+      "zh": "然而，一个社会能为这种追求花多少钱，终究是有边界的。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "Yet",
+        "limits"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s24-01",
+          "text": "Yet there are limits to what a society can spend in this pursuit.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text4/s24-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "paragraph": 6,
+      "en": "As a physician, I know the most costly and dramatic measures may be ineffective and painful.",
+      "zh": "作为医生，我知道，最昂贵、最激烈的措施有时既无效又痛苦。",
+      "vocab": [
+        {
+          "word": "ineffective",
+          "lemma": "ineffective",
+          "level": 6,
+          "meaning": "无效的",
+          "start": 68,
+          "end": 79
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "costly",
+        "dramatic",
+        "ineffective",
+        "painful"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s25-01",
+          "text": "As a physician, I know the most costly and dramatic measures may be ineffective and painful.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text4/s25-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "paragraph": 6,
+      "en": "I also know that people in Japan and Sweden, countries that spend far less on medical care, have achieved longer, healthier lives than we have.",
+      "zh": "我也知道，日本和瑞典的医疗支出远低于美国，但那里的人却活得更长、更健康。",
+      "vocab": [],
+      "discourse_function": "compare",
+      "prosody_focus": [
+        "far less",
+        "longer, healthier lives"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s26-01",
+          "text": "I also know that people in Japan and Sweden, countries that spend far less on medical care,",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 95,
+          "audio_path": "./audio/2003/c-text4/s26-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s26-02",
+          "text": " have achieved longer, healthier lives than we have.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text4/s26-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "paragraph": 6,
+      "en": "As a nation, we may be overfunding the quest for unlikely cures while underfunding research on humbler therapies that could improve people’s lives.",
+      "zh": "作为一个国家，我们也许在那些希望渺茫的治愈方案上投入过多，却在真正可能改善人们生活的、更朴素的疗法研究上投入不足。",
+      "vocab": [
+        {
+          "word": "quest",
+          "lemma": "quest",
+          "level": 7,
+          "meaning": "追求",
+          "start": 39,
+          "end": 44
+        },
+        {
+          "word": "therapies",
+          "lemma": "therapy",
+          "level": 6,
+          "meaning": "疗法",
+          "start": 103,
+          "end": 112
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "overfunding",
+        "unlikely cures",
+        "underfunding",
+        "humbler therapies"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s27-01",
+          "text": "As a nation, we may be overfunding the quest for unlikely cures",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 95,
+          "audio_path": "./audio/2003/c-text4/s27-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s27-02",
+          "text": " while underfunding research on humbler therapies that could improve people’s lives.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text4/s27-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

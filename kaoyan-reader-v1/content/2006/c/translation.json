@@ -1,0 +1,211 @@
+{
+  "year": 2006,
+  "section_type": "translation",
+  "article_id": "translation",
+  "source_sha256": "db9af95d0cd6e041df36d57e0b64a323fb18b3dd01007c52d458dff0729dcda3",
+  "source_pages": [],
+  "accent": "en-US",
+  "primary_actor_id": "13",
+  "article_context": "人文思想论证。围绕知识分子的道德思考职责、法官类比、科学家与教师的边界展开，语气庄重、理性。",
+  "article": {
+    "year": 2006,
+    "section": "translation",
+    "title": "翻译 · 知识分子的定义与责任",
+    "background": "人文思想论证。围绕知识分子的道德思考职责、法官类比、科学家与教师的边界展开，语气庄重、理性。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "I shall define him as an individual who has elected as his primary duty and pleasure in life the activity of thinking in a Socratic way about moral problems.",
+      "zh": "我把知识分子定义为这样一种人：他选择把以苏格拉底式方式思考道德问题，作为自己人生最主要的责任和乐趣。",
+      "vocab": [
+        {
+          "word": "moral",
+          "lemma": "moral",
+          "level": 6,
+          "meaning": "道德的",
+          "start": 142,
+          "end": 147
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "I shall define him as an individual who has elected as his primary duty and plea"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "I shall define him as an individual who has elected as his primary duty and pleasure in life the activity of thinking in a Socratic way about moral problems.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-translation/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "His function is analogous to that of a judge, who must accept the obligation of revealing in as obvious a manner as possible the course of reasoning which led him to his decision.",
+      "zh": "他的作用类似于法官；法官必须承担一种责任，即尽可能清楚地说明自己作出裁决所依据的推理过程。",
+      "vocab": [
+        {
+          "word": "analogous",
+          "lemma": "analogous",
+          "level": 7,
+          "meaning": "类似的",
+          "start": 16,
+          "end": 25
+        }
+      ],
+      "discourse_function": "compare",
+      "prosody_focus": [
+        "His function is analogous to that of a judge, who must accept the obligation of "
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "His function is analogous to that of a judge, who must accept the obligation of revealing in as obvious a manner as possible the course of reasoning which led him to his decision.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-translation/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "I have excluded him because, while his accomplishments may contribute to the solution of moral problems, he has not been charged with the task of approaching any but the factual aspects of those problems.",
+      "zh": "我之所以把一般科学家排除在外，是因为尽管他的成果可能有助于解决道德问题，但他的职责并不要求他处理这些问题中事实层面以外的方面。",
+      "vocab": [
+        {
+          "word": "moral",
+          "lemma": "moral",
+          "level": 6,
+          "meaning": "道德的",
+          "start": 89,
+          "end": 94
+        }
+      ],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "I have excluded him because, while his accomplishments may contribute to the sol"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "I have excluded him because, while his accomplishments may contribute to the solution of moral problems, he has not been charged with the task of approaching any but the factual aspects of those problems.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-translation/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 1,
+      "en": "But his primary task is not to think about the moral code which governs his activity, any more than a businessman is expected to dedicate his energies to an exploration of rules of conduct in business.",
+      "zh": "但是，他的首要任务并不是思考支配自己活动的道德准则，正如人们也不会要求商人把主要精力用于探究商业行为规范一样。",
+      "vocab": [
+        {
+          "word": "moral",
+          "lemma": "moral",
+          "level": 6,
+          "meaning": "道德的",
+          "start": 47,
+          "end": 52
+        }
+      ],
+      "discourse_function": "compare",
+      "prosody_focus": [
+        "But his primary task is not to think about the moral code which governs his acti"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "But his primary task is not to think about the moral code which governs his activity, any more than a businessman is expected to dedicate his energies to an exploration of rules of conduct in business.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-translation/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 1,
+      "en": "They may teach very well, and more than earn their salaries, but most of them make little or no independent reflections on human problems which involve moral judgment.",
+      "zh": "他们也许教得很好，甚至完全对得起自己的薪水；但对于那些涉及道德判断的人类问题，他们中的大多数几乎不作、甚至完全不作独立思考。",
+      "vocab": [
+        {
+          "word": "moral",
+          "lemma": "moral",
+          "level": 6,
+          "meaning": "道德的",
+          "start": 152,
+          "end": 157
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "They may teach very well, and more than earn their salaries, but most of them ma"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "They may teach very well, and more than earn their salaries, but most of them make little or no independent reflections on human problems which involve moral judgment.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-translation/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

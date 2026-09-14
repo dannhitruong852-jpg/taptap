@@ -1,0 +1,911 @@
+{
+  "year": 2004,
+  "section_type": "reading",
+  "article_id": "text2",
+  "source_sha256": "f051c55c207511d8b1888faf55cfb3af726c8470ed5732d28f07d4c4994ae2c2",
+  "source_pages": [
+    5,
+    6
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "08",
+  "article_context": "一篇用统计表象和荒诞推演制造幽默的社会观察。不能把“字母歧视”当严肃科学结论；要用自然、克制的干幽默把夸张逻辑讲明白，笑点来自文本本身。",
+  "article": {
+    "year": 2004,
+    "section": "text2",
+    "title": "阅读二 · “字母歧视”的讽刺观察",
+    "background": "一篇用统计表象和荒诞推演制造幽默的社会观察。不能把“字母歧视”当严肃科学结论；要用自然、克制的干幽默把夸张逻辑讲明白，笑点来自文本本身。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "Over the past century, all kinds of unfairness and discrimination have been condemned or made illegal.",
+      "zh": "过去一个世纪，各种不公平和歧视都受到谴责，或者被法律禁止。",
+      "vocab": [
+        {
+          "word": "discrimination",
+          "lemma": "discrimination",
+          "level": 6,
+          "meaning": "歧视",
+          "start": 51,
+          "end": 65
+        }
+      ],
+      "discourse_function": "settle",
+      "prosody_focus": [
+        "unfairness",
+        "discrimination"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "Over the past century, all kinds of unfairness and discrimination have been condemned or made illegal.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text2/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "But one insidious form continues to thrive: alphabetism.",
+      "zh": "但有一种隐蔽的歧视仍然十分兴盛——“字母歧视”。",
+      "vocab": [
+        {
+          "word": "insidious",
+          "lemma": "insidious",
+          "level": 8,
+          "meaning": "隐蔽而有害的",
+          "start": 8,
+          "end": 17
+        }
+      ],
+      "discourse_function": "irony",
+      "prosody_focus": [
+        "insidious",
+        "alphabetism"
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "But one insidious form continues to thrive:",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "ironic",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 180,
+          "audio_path": "./audio/2004/c-text2/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s02-02",
+          "text": " alphabetism.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "ironic",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text2/s02-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "This, for those as yet unaware of such a disadvantage, refers to discrimination against those whose surnames begin with a letter in the lower half of the alphabet.",
+      "zh": "对还不知道这种“不利处境”的人来说，它指的是对姓氏首字母位于字母表后半段者的歧视。",
+      "vocab": [
+        {
+          "word": "discrimination",
+          "lemma": "discrimination",
+          "level": 6,
+          "meaning": "歧视",
+          "start": 65,
+          "end": 79
+        },
+        {
+          "word": "surnames",
+          "lemma": "surname",
+          "level": 6,
+          "meaning": "姓氏",
+          "start": 100,
+          "end": 108
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "discrimination",
+        "surnames",
+        "lower half"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "This, for those as yet unaware of such a disadvantage,",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2004/c-text2/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s03-02",
+          "text": " refers to discrimination against those whose surnames begin with a letter in the lower half of the alphabet.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text2/s03-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "It has long been known that a taxi firm called AAAA Cars has a big advantage over Zodiac Cars when customers thumb through their phone directories.",
+      "zh": "人们早就知道，顾客翻电话簿找出租车公司时，名叫 AAAA Cars 的公司比 Zodiac Cars 占大便宜。",
+      "vocab": [],
+      "discourse_function": "example",
+      "prosody_focus": [
+        "AAAA",
+        "Zodiac",
+        "advantage"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "It has long been known that a taxi firm called AAAA Cars has a big advantage over Zodiac Cars",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2004/c-text2/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s04-02",
+          "text": " when customers thumb through their phone directories.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text2/s04-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "Less well known is the advantage that Adam Abbott has in life over Zoe Zysman.",
+      "zh": "不那么广为人知的是，Adam Abbott 在人生中似乎也比 Zoe Zysman 占便宜。",
+      "vocab": [],
+      "discourse_function": "irony",
+      "prosody_focus": [
+        "Less well known",
+        "advantage"
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Less well known is the advantage that Adam Abbott has in life over Zoe Zysman.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "ironic",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text2/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "English names are fairly evenly spread between the halves of the alphabet.",
+      "zh": "英语姓氏在字母表前后两半中的分布其实相当均匀。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [
+        "fairly evenly spread"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "English names are fairly evenly spread between the halves of the alphabet.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text2/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "Yet a suspiciously large number of top people have surnames beginning with letters between A and K.",
+      "zh": "然而，可疑的是，许多身居高位的人，其姓氏首字母都在 A 到 K 之间。",
+      "vocab": [
+        {
+          "word": "suspiciously",
+          "lemma": "suspiciously",
+          "level": 7,
+          "meaning": "可疑地",
+          "start": 6,
+          "end": 18
+        },
+        {
+          "word": "surnames",
+          "lemma": "surname",
+          "level": 6,
+          "meaning": "姓氏",
+          "start": 51,
+          "end": 59
+        }
+      ],
+      "discourse_function": "irony",
+      "prosody_focus": [
+        "Yet",
+        "suspiciously large number",
+        "A and K"
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "Yet a suspiciously large number of top people have surnames beginning with letters between A and K.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "ironic",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text2/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 3,
+      "en": "Thus the American president and vice-president have surnames starting with B and C respectively; and 26 of George Bush’s predecessors, including his father, had surnames in the first half of the alphabet against just 16 in the second half.",
+      "zh": "于是，美国总统和副总统的姓氏分别以 B 和 C 开头；而乔治·布什的前任中，包括他的父亲在内，有26人的姓氏位于字母表前半段，后半段只有16人。",
+      "vocab": [
+        {
+          "word": "surnames",
+          "lemma": "surname",
+          "level": 6,
+          "meaning": "姓氏",
+          "start": 52,
+          "end": 60
+        },
+        {
+          "word": "predecessors",
+          "lemma": "predecessor",
+          "level": 7,
+          "meaning": "前任",
+          "start": 121,
+          "end": 133
+        },
+        {
+          "word": "surnames",
+          "lemma": "surname",
+          "level": 6,
+          "meaning": "姓氏",
+          "start": 161,
+          "end": 169
+        }
+      ],
+      "discourse_function": "statistic",
+      "prosody_focus": [
+        "26",
+        "16",
+        "respectively"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "Thus the American president and vice-president have surnames starting with B and C respectively;",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 90,
+          "audio_path": "./audio/2004/c-text2/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s08-02",
+          "text": " and 26 of George Bush’s predecessors, including his father, had surnames in the first half of the alphabet against just 16 in the second half.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text2/s08-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 3,
+      "en": "Even more striking, six of the seven heads of government of the G7 rich countries are alphabetically advantaged — Berlusconi, Blair, Bush, Chirac, Chretien and Koizumi.",
+      "zh": "更“惊人”的是，七国集团七位政府首脑中有六位在字母排序上占优势：贝卢斯科尼、布莱尔、布什、希拉克、克雷蒂安和小泉。",
+      "vocab": [],
+      "discourse_function": "irony",
+      "prosody_focus": [
+        "six of the seven",
+        "alphabetically advantaged"
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "Even more striking, six of the seven heads of government of the G7 rich countries are alphabetically advantaged — Berlusconi, Blair, Bush, Chirac, Chretien and Koizumi.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "ironic",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text2/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 3,
+      "en": "The world’s three top central bankers — Greenspan, Duisenberg and Hayami — are all close to the top of the alphabet, even if one of them really uses Japanese characters.",
+      "zh": "世界三大央行行长——格林斯潘、杜森贝赫和速水优——也都靠近字母表前端，尽管其中一人的名字实际上使用的是日文字符。",
+      "vocab": [],
+      "discourse_function": "irony",
+      "prosody_focus": [
+        "top central bankers",
+        "even if"
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "The world’s three top central bankers — Greenspan, Duisenberg and Hayami — are all close to the top of the alphabet,",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "ironic",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 180,
+          "audio_path": "./audio/2004/c-text2/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s10-02",
+          "text": " even if one of them really uses Japanese characters.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "ironic",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text2/s10-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 3,
+      "en": "As are the world’s five richest men — Gates, Buffett, Allen, Ellison and Albrecht.",
+      "zh": "世界上最富有的五个人——盖茨、巴菲特、艾伦、埃里森和阿尔布雷希特——也同样如此。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [
+        "five richest men"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "As are the world’s five richest men — Gates, Buffett, Allen, Ellison and Albrecht.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text2/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 3,
+      "en": "Can this merely be coincidence?",
+      "zh": "这难道仅仅是巧合吗？",
+      "vocab": [
+        {
+          "word": "coincidence",
+          "lemma": "coincidence",
+          "level": 6,
+          "meaning": "巧合",
+          "start": 19,
+          "end": 30
+        }
+      ],
+      "discourse_function": "ask",
+      "prosody_focus": [
+        "merely",
+        "coincidence"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "Can this merely be coincidence?",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text2/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 4,
+      "en": "One theory, dreamt up in all the spare time enjoyed by the alphabetically disadvantaged, is that the rot sets in early.",
+      "zh": "有一种理论——大概是那些在字母排序上吃亏的人利用大把“空闲时间”想出来的——认为，问题从很小的时候就开始了。",
+      "vocab": [
+        {
+          "word": "disadvantaged",
+          "lemma": "disadvantaged",
+          "level": 6,
+          "meaning": "处境不利的",
+          "start": 74,
+          "end": 87
+        }
+      ],
+      "discourse_function": "irony",
+      "prosody_focus": [
+        "dreamt up",
+        "spare time",
+        "rot sets in early"
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "One theory, dreamt up in all the spare time enjoyed by the alphabetically disadvantaged,",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "ironic",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 180,
+          "audio_path": "./audio/2004/c-text2/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s13-02",
+          "text": " is that the rot sets in early.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "ironic",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text2/s13-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 4,
+      "en": "At the start of the first year in infant school, teachers seat pupils alphabetically from the front, to make it easier to remember their names.",
+      "zh": "幼儿学校第一年开始时，老师按字母顺序从前往后安排座位，以便更容易记住学生的名字。",
+      "vocab": [],
+      "discourse_function": "story",
+      "prosody_focus": [
+        "alphabetically from the front"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "At the start of the first year in infant school, teachers seat pupils alphabetically from the front,",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 75,
+          "audio_path": "./audio/2004/c-text2/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s14-02",
+          "text": " to make it easier to remember their names.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text2/s14-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 4,
+      "en": "So short-sighted Zysman junior gets stuck in the back row, and is rarely asked the improving questions posed by those insensitive teachers.",
+      "zh": "于是，近视的小 Zysman 被卡在后排，也很少被那些“缺乏体贴”的老师点名回答有助提高的问题。",
+      "vocab": [],
+      "discourse_function": "irony",
+      "prosody_focus": [
+        "gets stuck",
+        "rarely asked",
+        "insensitive"
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "So short-sighted Zysman junior gets stuck in the back row,",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "ironic",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 180,
+          "audio_path": "./audio/2004/c-text2/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s15-02",
+          "text": " and is rarely asked the improving questions posed by those insensitive teachers.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "ironic",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text2/s15-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 4,
+      "en": "At the time the alphabetically disadvantaged may think they have had a lucky escape.",
+      "zh": "当时，这些在字母排序上吃亏的孩子也许还以为自己侥幸逃过一劫。",
+      "vocab": [
+        {
+          "word": "disadvantaged",
+          "lemma": "disadvantaged",
+          "level": 6,
+          "meaning": "处境不利的",
+          "start": 31,
+          "end": 44
+        }
+      ],
+      "discourse_function": "playful",
+      "prosody_focus": [
+        "lucky escape"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "At the time the alphabetically disadvantaged may think they have had a lucky escape.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text2/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 4,
+      "en": "Yet the result may be worse qualifications, because they get less individual attention, as well as less confidence in speaking publicly.",
+      "zh": "然而结果可能是资历更差，因为他们得到的个别关注更少，也更缺乏公开发言的自信。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "Yet",
+        "worse qualifications",
+        "less confidence"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "Yet the result may be worse qualifications,",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2004/c-text2/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s17-02",
+          "text": " because they get less individual attention, as well as less confidence in speaking publicly.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text2/s17-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 5,
+      "en": "The humiliation continues.",
+      "zh": "这种“羞辱”还在继续。",
+      "vocab": [
+        {
+          "word": "humiliation",
+          "lemma": "humiliation",
+          "level": 7,
+          "meaning": "羞辱",
+          "start": 4,
+          "end": 15
+        }
+      ],
+      "discourse_function": "irony",
+      "prosody_focus": [
+        "humiliation"
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "The humiliation continues.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "ironic",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text2/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 5,
+      "en": "At university graduation ceremonies, the ABCs proudly get their awards first; by the time they reach the Zysmans most people are literally having a ZZZ.",
+      "zh": "大学毕业典礼上，姓氏属于 A、B、C 的人得意地最先领奖；等轮到 Zysman 们时，大多数人简直已经“ZZZ”睡着了。",
+      "vocab": [],
+      "discourse_function": "irony",
+      "prosody_focus": [
+        "ABCs",
+        "ZZZ"
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "At university graduation ceremonies, the ABCs proudly get their awards first;",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "ironic",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 180,
+          "audio_path": "./audio/2004/c-text2/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s19-02",
+          "text": " by the time they reach the Zysmans most people are literally having a ZZZ.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "ironic",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text2/s19-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "paragraph": 5,
+      "en": "Shortlists for job interviews, election ballot papers, lists of conference speakers and attendees: all tend to be drawn up alphabetically, and their recipients lose interest as they plough through them.",
+      "zh": "求职面试候选名单、选举选票、会议发言人与参会者名单——这些往往都按字母顺序排列，人们一路费力看下去时，兴趣也就逐渐消失了。",
+      "vocab": [
+        {
+          "word": "recipients",
+          "lemma": "recipient",
+          "level": 6,
+          "meaning": "接收者",
+          "start": 149,
+          "end": 159
+        },
+        {
+          "word": "plough through",
+          "lemma": "plough through",
+          "level": 7,
+          "meaning": "费力地逐一处理",
+          "start": 182,
+          "end": 196
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "drawn up alphabetically",
+        "lose interest",
+        "plough through"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s20-01",
+          "text": "Shortlists for job interviews, election ballot papers, lists of conference speakers and attendees:",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 95,
+          "audio_path": "./audio/2004/c-text2/s20-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s20-02",
+          "text": " all tend to be drawn up alphabetically, and their recipients lose interest as they plough through them.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text2/s20-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

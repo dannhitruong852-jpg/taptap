@@ -1,0 +1,741 @@
+{
+  "year": 2006,
+  "section_type": "reading",
+  "article_id": "text1",
+  "source_sha256": "db9af95d0cd6e041df36d57e0b64a323fb18b3dd01007c52d458dff0729dcda3",
+  "source_pages": [],
+  "accent": "en-US",
+  "primary_actor_id": "01",
+  "article_context": "社会科学分析。用语言、住房和通婚数据反驳“当代移民无法融入”的担忧，整体理性、数据导向。",
+  "article": {
+    "year": 2006,
+    "section": "text1",
+    "title": "阅读一 · 美国社会的同化力量",
+    "background": "社会科学分析。用语言、住房和通婚数据反驳“当代移民无法融入”的担忧，整体理性、数据导向。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "In spite of “endless talk of difference,” American society is an amazing machine for homogenizing people.",
+      "zh": "尽管人们没完没了地谈论“差异”，美国社会实际上是一台惊人的同化机器。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "In spite of “endless talk of difference,” American society is an amazing machine"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "In spite of “endless talk of difference,” American society is an amazing machine for homogenizing people.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text1/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "There is “the democratizing uniformity of dress and discourse, and the casualness and absence of deference” characteristic of popular culture.",
+      "zh": "大众文化有其典型特征：服饰与言谈趋于一致，这种一致具有民主化作用；人们举止随意，也少有敬畏与恭顺。",
+      "vocab": [
+        {
+          "word": "deference",
+          "lemma": "deference",
+          "level": 7,
+          "meaning": "敬意；顺从",
+          "start": 97,
+          "end": 106
+        }
+      ],
+      "discourse_function": "explain_quote",
+      "prosody_focus": [
+        "There is “the democratizing uniformity of dress and discourse, and the casualnes"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "There is “the democratizing uniformity of dress and discourse, and the casualness and absence of deference” characteristic of popular culture.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text1/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "People are absorbed into “a culture of consumption” launched by the 19th-century department stores that offered “vast arrays of goods in an elegant atmosphere.”",
+      "zh": "人们被吸纳进一种“消费文化”；这种文化由19世纪的百货商店开启，它们在优雅环境中陈列“琳琅满目的商品”。",
+      "vocab": [],
+      "discourse_function": "explain_quote",
+      "prosody_focus": [
+        "People are absorbed into “a culture of consumption” launched by the 19th-century"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "People are absorbed into “a culture of consumption” launched by the 19th-century department stores that offered “vast arrays of goods in an elegant atmosphere.”",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text1/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 1,
+      "en": "Instead of intimate shops catering to a knowledgeable elite, these were stores “anyone could enter, regardless of class or background.”",
+      "zh": "与只服务于懂行精英的小店不同，这些商店“任何人都可以进入，不论阶层或出身”。",
+      "vocab": [],
+      "discourse_function": "explain_quote",
+      "prosody_focus": [
+        "Instead of intimate shops catering to a knowledgeable elite, these were stores “"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Instead of intimate shops catering to a knowledgeable elite, these were stores “anyone could enter, regardless of class or background.”",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text1/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 1,
+      "en": "This turned shopping into a public and democratic act.",
+      "zh": "这使购物变成一种公共而民主的活动。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "This turned shopping into a public and democratic act."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "This turned shopping into a public and democratic act.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text1/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "The mass media, advertising and sports are other forces for homogenization.",
+      "zh": "大众媒体、广告和体育也是推动同质化的力量。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [
+        "The mass media, advertising and sports are other forces for homogenization."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "The mass media, advertising and sports are other forces for homogenization.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text1/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "Immigrants are quickly fitting into this common culture, which may not be altogether elevating but is hardly poisonous.",
+      "zh": "移民正迅速融入这种共同文化；它或许谈不上处处高雅，却绝非有害。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "Immigrants are quickly fitting into this common culture, which may not be altoge"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "Immigrants are quickly fitting into this common culture, which may not be altogether elevating but is hardly poisonous.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text1/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 2,
+      "en": "Writing for the National Immigration Forum, Gregory Rodriguez reports that today’s immigration is neither at unprecedented levels nor resistant to assimilation.",
+      "zh": "格雷戈里·罗德里格斯为全国移民论坛撰文指出，今天的移民规模既非史无前例，也并不抗拒同化。",
+      "vocab": [
+        {
+          "word": "assimilation",
+          "lemma": "assimilation",
+          "level": 7,
+          "meaning": "同化",
+          "start": 147,
+          "end": 159
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "Writing for the National Immigration Forum, Gregory Rodriguez reports that today"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "Writing for the National Immigration Forum, Gregory Rodriguez reports that today’s immigration is neither at unprecedented levels nor resistant to assimilation.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text1/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 2,
+      "en": "In 1998 immigrants were 9.8 percent of the population; in 1900, 13.6 percent.",
+      "zh": "1998年，移民占总人口的9.8%；1900年这一比例则为13.6%。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [
+        "In 1998 immigrants were 9.8 percent of the population; in 1900, 13.6 percent."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "In 1998 immigrants were 9.8 percent of the population; in 1900, 13.6 percent.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text1/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 2,
+      "en": "In the 10 years prior to 1990, 3.1 immigrants arrived for every 1,000 residents; in the 10 years prior to 1890, 9.2 for every 1,000.",
+      "zh": "1990年前十年，每一千名居民对应新增3.1名移民；而1890年前十年，这一数字是9.2名。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [
+        "In the 10 years prior to 1990, 3.1 immigrants arrived for every 1,000 residents;"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "In the 10 years prior to 1990, 3.1 immigrants arrived for every 1,000 residents; in the 10 years prior to 1890, 9.2 for every 1,000.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text1/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 3,
+      "en": "Now, consider three indices of assimilation — language, home ownership and intermarriage.",
+      "zh": "现在来看衡量同化的三个指标：语言、住房拥有率和跨族通婚。",
+      "vocab": [
+        {
+          "word": "assimilation",
+          "lemma": "assimilation",
+          "level": 7,
+          "meaning": "同化",
+          "start": 31,
+          "end": 43
+        },
+        {
+          "word": "intermarriage",
+          "lemma": "intermarriage",
+          "level": 7,
+          "meaning": "跨族通婚",
+          "start": 75,
+          "end": 88
+        }
+      ],
+      "discourse_function": "sequence",
+      "prosody_focus": [
+        "Now, consider three indices of assimilation — language, home ownership and inter"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "Now, consider three indices of assimilation — language, home ownership and intermarriage.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text1/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 3,
+      "en": "The 1990 Census revealed that “a majority of immigrants from each of the fifteen most common countries of origin spoke English ‘well’ or ‘very well’ after ten years of residence.”",
+      "zh": "1990年人口普查显示，来自十五个最主要来源国的移民中，每一类都有多数人在居住十年后能把英语说得“好”或“很好”。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [
+        "The 1990 Census revealed that “a majority of immigrants from each of the fifteen"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "The 1990 Census revealed that “a majority of immigrants from each of the fifteen most common countries of origin spoke English ‘well’ or ‘very well’ after ten years of residence.”",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text1/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 3,
+      "en": "The children of immigrants tend to be bilingual and proficient in English.",
+      "zh": "移民子女往往能说两种语言，而且英语熟练。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "The children of immigrants tend to be bilingual and proficient in English."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "The children of immigrants tend to be bilingual and proficient in English.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text1/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 3,
+      "en": "“By the third generation, the original language is lost in the majority of immigrant families.”",
+      "zh": "“到了第三代，大多数移民家庭已经失去了原来的语言。”",
+      "vocab": [],
+      "discourse_function": "explain_quote",
+      "prosody_focus": [
+        "“By the third generation, the original language is lost in the majority of immig"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "“By the third generation, the original language is lost in the majority of immigrant families.”",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text1/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 3,
+      "en": "Hence the description of America as a “graveyard” for languages.",
+      "zh": "因此，美国被称作语言的“墓地”。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "Hence the description of America as a “graveyard” for languages."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "Hence the description of America as a “graveyard” for languages.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text1/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 4,
+      "en": "By 1996 foreign-born immigrants who had arrived before 1970 had a home ownership rate of 75.6 percent, higher than the 69.8 percent rate among native-born Americans.",
+      "zh": "到1996年，1970年前抵美的外国出生移民住房拥有率达到75.6%，高于美国本土出生人口的69.8%。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [
+        "By 1996 foreign-born immigrants who had arrived before 1970 had a home ownership"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "By 1996 foreign-born immigrants who had arrived before 1970 had a home ownership rate of 75.6 percent, higher than the 69.8 percent rate among native-born Americans.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text1/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 4,
+      "en": "Foreign-born Asians and Hispanics “have higher rates of intermarriage than do U.S.-born whites and blacks.”",
+      "zh": "外国出生的亚裔和西班牙裔“跨族通婚率高于美国出生的白人和黑人”。",
+      "vocab": [
+        {
+          "word": "intermarriage",
+          "lemma": "intermarriage",
+          "level": 7,
+          "meaning": "跨族通婚",
+          "start": 56,
+          "end": 69
+        }
+      ],
+      "discourse_function": "explain_quote",
+      "prosody_focus": [
+        "Foreign-born Asians and Hispanics “have higher rates of intermarriage than do U."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "Foreign-born Asians and Hispanics “have higher rates of intermarriage than do U.S.-born whites and blacks.”",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text1/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 4,
+      "en": "By the third generation, one third of Hispanic women are married to non-Hispanics, and 41 percent of Asian-American women are married to non-Asians.",
+      "zh": "到第三代，三分之一的西班牙裔女性嫁给非西班牙裔，41%的亚裔美国女性嫁给非亚裔。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [
+        "By the third generation, one third of Hispanic women are married to non-Hispanic"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "By the third generation, one third of Hispanic women are married to non-Hispanics, and 41 percent of Asian-American women are married to non-Asians.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text1/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 4,
+      "en": "Rodriguez notes that children in remote villages around the world are fans of superstars like Arnold Schwarzenegger and Garth Brooks, yet “some Americans fear that immigrants living within the United States remain somehow immune to the nation’s assimilative power.”",
+      "zh": "罗德里格斯指出，世界偏远村庄里的孩子都可能是阿诺德·施瓦辛格和加思·布鲁克斯等明星的粉丝，可“有些美国人却担心，生活在美国境内的移民仿佛不受这个国家同化力量的影响”。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "Rodriguez notes that children in remote villages around the world are fans of su"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "Rodriguez notes that children in remote villages around the world are fans of superstars like Arnold Schwarzenegger and Garth Brooks, yet “some Americans fear that immigrants living within the United States remain somehow immune to the nation’s assimilative power.”",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text1/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "paragraph": 4,
+      "en": "Are there divisive issues and pockets of seething anger in America?",
+      "zh": "美国是否存在造成分裂的问题，以及局部沸腾的愤怒？",
+      "vocab": [],
+      "discourse_function": "ask",
+      "prosody_focus": [
+        "Are there divisive issues and pockets of seething anger in America?"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s20-01",
+          "text": "Are there divisive issues and pockets of seething anger in America?",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text1/s20-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "paragraph": 5,
+      "en": "Indeed.",
+      "zh": "当然有。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "Indeed."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s21-01",
+          "text": "Indeed.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text1/s21-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "paragraph": 5,
+      "en": "It is big enough to have a bit of everything.",
+      "zh": "美国足够大，自然什么现象都会有一点。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "It is big enough to have a bit of everything."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s22-01",
+          "text": "It is big enough to have a bit of everything.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text1/s22-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "paragraph": 5,
+      "en": "But particularly when viewed against America’s turbulent past, today’s social indices hardly suggest a dark and deteriorating social environment.",
+      "zh": "但尤其与美国动荡的过去相比，今天的社会指标几乎无法证明社会环境正在走向黑暗和恶化。",
+      "vocab": [
+        {
+          "word": "turbulent",
+          "lemma": "turbulent",
+          "level": 6,
+          "meaning": "动荡的",
+          "start": 47,
+          "end": 56
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "But particularly when viewed against America’s turbulent past, today’s social in"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s23-01",
+          "text": "But particularly when viewed against America’s turbulent past, today’s social indices hardly suggest a dark and deteriorating social environment.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text1/s23-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

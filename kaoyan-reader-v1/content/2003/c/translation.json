@@ -1,0 +1,324 @@
+{
+  "year": 2003,
+  "section_type": "translation",
+  "article_id": "translation",
+  "source_sha256": "77149d8faa8b6d539e2e8a6bf6a1f2801af640e7a49f248f059e5483cbe22443",
+  "source_pages": [
+    11
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "02",
+  "article_context": "只保留原卷要求翻译的五个划线句。学术解释型朗读，核心是把抽象概念讲清楚；不朗读题目说明和周边未划线语境。",
+  "article": {
+    "year": 2003,
+    "section": "translation",
+    "title": "翻译 · 人类学与社会科学方法",
+    "background": "只保留原卷要求翻译的五个划线句。学术解释型朗读，核心是把抽象概念讲清楚；不朗读题目说明和周边未划线语境。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "Furthermore, humans have the ability to modify the environment in which they live, thus subjecting all other life forms to their own peculiar ideas and fancies.",
+      "zh": "此外，人类能够改造自己所处的环境，从而使其他一切生命形式都受制于人类自身独特的观念和设想。",
+      "vocab": [
+        {
+          "word": "peculiar",
+          "lemma": "peculiar",
+          "level": 6,
+          "meaning": "独特的；特有的",
+          "start": 133,
+          "end": 141
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "modify the environment",
+        "subjecting",
+        "peculiar ideas"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "Furthermore, humans have the ability to modify the environment in which they live,",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2003/c-translation/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s01-02",
+          "text": " thus subjecting all other life forms to their own peculiar ideas and fancies.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-translation/s01-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 2,
+      "en": "Social science is that branch of intellectual enquiry which seeks to study humans and their endeavors in the same reasoned, orderly, systematic, and dispassioned manner that natural scientists use for the study of natural phenomena.",
+      "zh": "社会科学是知识探索的一个分支，它力图采用自然科学家研究自然现象时所使用的那种理性、有序、系统而客观冷静的方法，来研究人类及其各种活动。",
+      "vocab": [
+        {
+          "word": "endeavors",
+          "lemma": "endeavor",
+          "level": 7,
+          "meaning": "努力；活动",
+          "start": 92,
+          "end": 101
+        },
+        {
+          "word": "dispassioned",
+          "lemma": "dispassioned",
+          "level": 8,
+          "meaning": "冷静客观的",
+          "start": 149,
+          "end": 161
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "intellectual enquiry",
+        "reasoned",
+        "systematic",
+        "dispassioned"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Social science is that branch of intellectual enquiry",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2003/c-translation/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s02-02",
+          "text": " which seeks to study humans and their endeavors in the same reasoned, orderly, systematic, and dispassioned manner that natural scientists use for the study of natural phenomena.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-translation/s02-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 3,
+      "en": "The emphasis on data gathered first-hand, combined with a cross-cultural perspective brought to the analysis of cultures past and present, makes this study a unique and distinctly important social science.",
+      "zh": "对第一手资料的重视，再加上以跨文化视角分析古今文化，使人类学成为一门独特而又格外重要的社会科学。",
+      "vocab": [
+        {
+          "word": "perspective",
+          "lemma": "perspective",
+          "level": 6,
+          "meaning": "视角",
+          "start": 73,
+          "end": 84
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "first-hand",
+        "cross-cultural perspective",
+        "unique"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "The emphasis on data gathered first-hand,",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 90,
+          "audio_path": "./audio/2003/c-translation/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s03-02",
+          "text": " combined with a cross-cultural perspective brought to the analysis of cultures past and present,",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 90,
+          "audio_path": "./audio/2003/c-translation/s03-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s03-03",
+          "text": " makes this study a unique and distinctly important social science.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-translation/s03-03.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 4,
+      "en": "Tylor defined culture as “that complex whole which includes belief, art, morals, law, custom, and any other capabilities and habits acquired by man as a member of society.”",
+      "zh": "泰勒把文化定义为“一个复杂的整体，它包括信仰、艺术、道德、法律、习俗，以及人作为社会成员所获得的其他一切能力和习惯”。",
+      "vocab": [
+        {
+          "word": "capabilities",
+          "lemma": "capability",
+          "level": 6,
+          "meaning": "能力",
+          "start": 108,
+          "end": 120
+        }
+      ],
+      "discourse_function": "explain_quote",
+      "prosody_focus": [
+        "defined culture",
+        "complex whole",
+        "acquired"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Tylor defined culture as “that complex whole",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 95,
+          "audio_path": "./audio/2003/c-translation/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s04-02",
+          "text": " which includes belief, art, morals, law, custom, and any other capabilities and habits acquired by man as a member of society.”",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-translation/s04-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 5,
+      "en": "Thus, the anthropological concept of “culture,” like the concept of “set” in mathematics, is an abstract concept which makes possible immense amounts of concrete research and understanding.",
+      "zh": "因此，人类学中的“文化”概念，就像数学中的“集合”概念一样，是一个抽象概念；正是借助它，大量具体的研究与理解才成为可能。",
+      "vocab": [
+        {
+          "word": "abstract",
+          "lemma": "abstract",
+          "level": 6,
+          "meaning": "抽象的",
+          "start": 96,
+          "end": 104
+        },
+        {
+          "word": "immense",
+          "lemma": "immense",
+          "level": 6,
+          "meaning": "巨大的",
+          "start": 134,
+          "end": 141
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "abstract concept",
+        "immense amounts",
+        "concrete research"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Thus, the anthropological concept of “culture,” like the concept of “set” in mathematics,",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 95,
+          "audio_path": "./audio/2003/c-translation/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s05-02",
+          "text": " is an abstract concept which makes possible immense amounts of concrete research and understanding.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-translation/s05-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}
