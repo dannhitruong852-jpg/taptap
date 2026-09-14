@@ -1,0 +1,21 @@
+{
+  "batch": "2007-2012",
+  "mode": "parallel_by_year_and_article_type",
+  "english_source_units": {
+    "years": 6,
+    "articles": 42,
+    "structural_contamination_errors": 0,
+    "status": "ready_for_editorial_enrichment"
+  },
+  "cloze_candidates": {
+    "2007": {"sentence_count": 13, "actor": "03", "sha256": "6df312304895e839a29edd8777a5432f536884ab3aba9385bbe1ddf141cbd07c", "status": "article_candidate_ready"},
+    "2008": {"sentence_count": 15, "actor": "02", "sha256": "64fb6074b5e255113d89e713e1948f896e3f306b4c728434225e66b405778349", "status": "article_candidate_ready"},
+    "2009": {"sentence_count": 17, "actor": "02", "sha256": "d27e8f809e0fe3f9d0461f4dc6c65e79de72fcdd04c34c4020bb275fb1e83561", "status": "article_candidate_ready"},
+    "2010": {"sentence_count": 13, "actor": "02", "sha256": "d893ad8ced944e94e321de25ec6cefd118db61ee59a491f8503235197c0083f9", "status": "article_candidate_ready"},
+    "2011": {"sentence_count": 16, "actor": "05", "sha256": "4d49a35b7900f2d84af2c331da5367065dcfc2fa15f08774e57a00f05423cbeb", "status": "article_candidate_ready"},
+    "2012": {"sentence_count": 16, "actor": "03", "sha256": "0c28a962e2c7e84eca03e66c9f579dac24eb2f39482a89bbe93bcf33b2b3270c", "status": "article_candidate_ready"}
+  },
+  "next_parallel_lanes": ["text1_2007", "text1_2008", "text1_2009", "text1_2010", "text1_2011", "text1_2012"],
+  "content_frozen": false,
+  "voice_matrix_started": false
+}
