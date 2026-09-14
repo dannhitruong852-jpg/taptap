@@ -90,6 +90,28 @@ class BuildCuratedYearTests(unittest.TestCase):
             self.assertEqual(source['year'], 2006)
             self.assertEqual(source['articles'], [])
 
+    def test_compile_bilingual_highlights_returns_validated_canonical_data_and_report(self):
+        docs = [{
+            'article_id': 'text1',
+            'sentences': [{
+                'id': 's01', 'en': 'A difficult term.', 'zh': '这是一个难词。',
+                'vocab': [{'word': 'difficult', 'level': 6, 'start': 2, 'end': 11}],
+            }],
+        }]
+        mapping = {
+            'version': 1, 'year': 2003,
+            'articles': {'text1': {'s01': [{
+                'en_start': 2, 'en_end': 11, 'en_text': 'difficult',
+                'zh_spans': [{'start': 4, 'end': 6, 'text': '难词'}],
+            }]}},
+            'exceptions': [],
+        }
+        canonical, report = build_curated_year.compile_bilingual_highlights(mapping, docs)
+        self.assertEqual(canonical, mapping)
+        self.assertEqual(report['errors'], [])
+        self.assertEqual(report['required_occurrences'], 1)
+        self.assertEqual(report['mapped_occurrences'], 1)
+
 
 if __name__ == '__main__':
     unittest.main()
