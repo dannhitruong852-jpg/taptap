@@ -25,6 +25,17 @@ def require_frozen(root: Path):
                 missing.append(f'{year}/{unit}')
     if missing:
         raise SystemExit('production blocked: missing candidates: ' + ', '.join(missing))
+    for year in YEARS:
+        mapping_path = root / 'content-pipeline/curated/bilingual-highlights' / f'{year}.json'
+        if not mapping_path.is_file():
+            raise SystemExit(
+                f'production blocked: bilingual-highlights/{year}.json is missing'
+            )
+        mapping = load_json(mapping_path)
+        if int(mapping.get('year', -1)) != year or not mapping.get('articles'):
+            raise SystemExit(
+                f'production blocked: bilingual-highlights/{year}.json is invalid'
+            )
     return board
 
 
@@ -67,7 +78,6 @@ def compile_year(root: Path, output_dir: Path, inventory: dict, board: dict, yea
             'rows': article['rows'],
             'editorial_status': 'reviewed_candidate',
         })
-
     vocabulary_path = root / 'reports/content-freeze' / y / 'vocabulary-1-9.json'
     if not vocabulary_path.is_file():
         raise SystemExit(f'{year}/vocabulary-1-9.json: reviewed vocabulary is missing')
@@ -82,12 +92,7 @@ def compile_year(root: Path, output_dir: Path, inventory: dict, board: dict, yea
     if not vocabulary:
         raise SystemExit(f'{year}/vocabulary-1-9.json: vocabulary is empty')
     for lemma, entry in vocabulary.items():
-        if (
-            not isinstance(entry, list)
-            or len(entry) < 2
-            or not isinstance(entry[0], int)
-            or not 1 <= entry[0] <= 9
-        ):
+        if not isinstance(entry, list) or len(entry) < 2 or not isinstance(entry[0], int) or not 1 <= entry[0] <= 9:
             raise SystemExit(f'{year}/vocabulary-1-9.json: invalid entry for {lemma}')
 
     source = {
@@ -115,11 +120,7 @@ def main():
     board = require_frozen(root)
     inventory = load_json(root / 'reports/extraction/2007-2012-article-inventory.json')
     written = [compile_year(root, output_dir, inventory, board, year) for year in YEARS]
-    print(json.dumps({
-        'years': list(YEARS),
-        'articles': 42,
-        'written': [str(path) for path in written],
-    }, ensure_ascii=False))
+    print(json.dumps({'years': list(YEARS), 'articles': 42, 'written': [str(p) for p in written]}, ensure_ascii=False))
 
 
 if __name__ == '__main__':
