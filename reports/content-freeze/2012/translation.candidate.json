@@ -1,0 +1,35 @@
+{
+  "year": 2012,
+  "article": {
+    "id": "translation",
+    "section_type": "translation",
+    "title": "翻译 · 原文候选（待双语QA）",
+    "pages": [
+      13
+    ],
+    "actor": "01",
+    "context": "已从项目真题 PDF 完整物化英文原文；当前仅作为原始候选，等待句级切分、中文对齐、词汇等级和双语高亮 QA。",
+    "rows": [
+      [
+        1,
+        "When people in developing countries worry about migration, they are usually concerned at the prospect of their best and brightest departure to Silicon Valley or to hospitals and universities in the developed world. These are the kind of workers that countries like Britain, Canada and Australia try to attract by using immigration rules that privilege college graduates. Lots of studies have found that well-educated people from developing countries are particularly likely to emigrate. A big survey of Indian households in 2004 found that nearly 40% of emigrants had more than a high-school education, compared with around 3.3% of all Indians over the age 25. This “brain drain” has long bothered policymakers in poor countries. They fear that it hurts their economies, depriving them of much-needed skilled workers who could have taught at their universities, worked in their hospitals and come up with clever new products for their factories to make.",
+        "",
+        "draft_source",
+        []
+      ]
+    ]
+  },
+  "qa": {
+    "source_pdf": "2012年考研英语二真题（可复制搜索查词）.pdf",
+    "source_sha256": "9c5ee5128fddddbab78d62e4577a414aea51b5f021ceb7846216ba644bbe2e79",
+    "source_scope_verified": true,
+    "directions_excluded": true,
+    "question_stems_removed": true,
+    "options_removed": true,
+    "writing_excluded": true,
+    "translation_alignment_reviewed": false,
+    "sentence_count": 0,
+    "raw_text_materialized": true,
+    "status": "raw_candidate_pending_qa"
+  }
+}
