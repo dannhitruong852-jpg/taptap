@@ -67,13 +67,36 @@ def compile_year(root: Path, output_dir: Path, inventory: dict, board: dict, yea
             'rows': article['rows'],
             'editorial_status': 'reviewed_candidate',
         })
+
+    vocabulary_path = root / 'reports/content-freeze' / y / 'vocabulary-1-9.json'
+    if not vocabulary_path.is_file():
+        raise SystemExit(f'{year}/vocabulary-1-9.json: reviewed vocabulary is missing')
+    vocabulary_doc = load_json(vocabulary_path)
+    if int(vocabulary_doc.get('year', -1)) != year:
+        raise SystemExit(f'{year}/vocabulary-1-9.json: year mismatch')
+    if vocabulary_doc.get('scale') != 'project-curated-1-9-v1':
+        raise SystemExit(f'{year}/vocabulary-1-9.json: unsupported vocabulary scale')
+    if (vocabulary_doc.get('qa') or {}).get('status') != 'reviewed':
+        raise SystemExit(f'{year}/vocabulary-1-9.json: vocabulary QA is not reviewed')
+    vocabulary = vocabulary_doc.get('vocabulary') or {}
+    if not vocabulary:
+        raise SystemExit(f'{year}/vocabulary-1-9.json: vocabulary is empty')
+    for lemma, entry in vocabulary.items():
+        if (
+            not isinstance(entry, list)
+            or len(entry) < 2
+            or not isinstance(entry[0], int)
+            or not 1 <= entry[0] <= 9
+        ):
+            raise SystemExit(f'{year}/vocabulary-1-9.json: invalid entry for {lemma}')
+
     source = {
         'year': year,
         'source_filename': source_meta['source_filename'],
         'source_sha256': source_meta['source_sha256'],
         'method': 'compiled verbatim from frozen reviewed candidates',
         'unresolved_sections': [],
-        'vocabulary': {},
+        'vocabulary': vocabulary,
         'articles': articles,
     }
     output_dir.mkdir(parents=True, exist_ok=True)
