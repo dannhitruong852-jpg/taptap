@@ -26,6 +26,12 @@ class CuratedCompilerTests(unittest.TestCase):
             years[y] = {'source_filename': f'{year}.pdf', 'source_sha256': f'sha-{year}'}
             directory = freeze / y
             directory.mkdir(parents=True)
+            (directory / 'vocabulary-1-9.json').write_text(json.dumps({
+                'year': year,
+                'scale': 'project-curated-1-9-v1',
+                'vocabulary': {'body': [6, '正文']},
+                'qa': {'status': 'reviewed'},
+            }, ensure_ascii=False))
             for unit in UNITS:
                 if omit == (year, unit):
                     continue
@@ -72,6 +78,14 @@ class CuratedCompilerTests(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertIn('2011/text3', result.stderr + result.stdout)
 
+    def test_refuses_missing_vocabulary(self):
+        td, root = self.fixture(frozen=True)
+        self.addCleanup(td.cleanup)
+        (root / 'reports/content-freeze/2010/vocabulary-1-9.json').unlink()
+        result = self.run_compiler(root)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('2010/vocabulary-1-9.json', result.stderr + result.stdout)
+
     def test_compiles_six_years_without_inventing_text(self):
         td, root = self.fixture(frozen=True)
         self.addCleanup(td.cleanup)
@@ -82,6 +96,7 @@ class CuratedCompilerTests(unittest.TestCase):
             self.assertEqual(doc['year'], year)
             self.assertEqual(doc['source_sha256'], f'sha-{year}')
             self.assertEqual(len(doc['articles']), 7)
+            self.assertEqual(doc['vocabulary']['body'], [6, '正文'])
             self.assertEqual(doc['articles'][0]['rows'][0][1], f'{year} cloze body.')
 
 
