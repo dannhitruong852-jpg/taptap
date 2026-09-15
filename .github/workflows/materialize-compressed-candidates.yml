@@ -2,7 +2,10 @@ name: Materialize compressed content candidates
 on:
   push:
     branches: [c-v4-article-preview-actual]
-    paths: ['reports/content-freeze/**/*.candidate.json.gz']
+    paths:
+      - 'reports/content-freeze/**/*.candidate.json.gz'
+      - 'reports/content-freeze/**/*.candidate.json.gz.b64.*'
+      - '.github/workflows/materialize-compressed-candidates.yml'
 permissions:
   contents: write
 jobs:
@@ -10,9 +13,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Reassemble chunked gzip payloads
+        run: |
+          shopt -s nullglob
+          for first in reports/content-freeze/**/*.candidate.json.gz.b64.00; do
+            prefix="${first%.00}"
+            cat "${prefix}".* | base64 -d > "${prefix%.b64}"
+            rm -f "${prefix}".*
+          done
       - name: Decompress and validate candidates
         run: |
           find reports/content-freeze -name '*.candidate.json.gz' -print0 | while IFS= read -r -d '' f; do
+            gzip -t "$f"
             gzip -dc "$f" > "${f%.gz}"
             python -m json.tool "${f%.gz}" >/dev/null
           done
@@ -20,6 +32,6 @@ jobs:
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add reports/content-freeze
+          git add -A reports/content-freeze
           git diff --cached --quiet || git commit -m 'content: materialize compressed candidates'
           git push
