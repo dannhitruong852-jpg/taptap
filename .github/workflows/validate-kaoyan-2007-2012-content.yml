@@ -12,6 +12,8 @@ on:
       - 'reports/content-freeze/2012/**'
       - 'reports/content-freeze/2007-2012-production-board.json'
       - 'scripts/check_2007_2012_content_freeze.py'
+      - 'scripts/tests/test_check_2007_2012_content_freeze.py'
+      - '.github/workflows/validate-kaoyan-2007-2012-content.yml'
   workflow_dispatch:
 
 permissions:
@@ -25,5 +27,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Run freeze-gate unit tests
+        run: python -m unittest scripts/tests/test_check_2007_2012_content_freeze.py -v
       - name: Verify materialized candidates against freeze state
         run: python scripts/check_2007_2012_content_freeze.py
