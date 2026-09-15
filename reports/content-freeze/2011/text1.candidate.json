@@ -3,19 +3,19 @@
   "article": {
     "id": "text1",
     "section_type": "reading",
-    "title": "阅读一 · 原文候选（待双语QA）",
+    "title": "阅读一 · 外部董事为何提前离场",
     "pages": [
       3,
       4
     ],
     "actor": "01",
-    "context": "已从项目真题 PDF 完整物化英文原文；当前仅作为原始候选，等待句级切分、中文对齐、词汇等级和双语高亮 QA。",
+    "context": "公司治理与外部董事的声誉激励。朗读保持分析感，数据处清晰克制。",
     "rows": [
       [
         1,
-        "Ruth Simmons joined Goldman Sachs’s board as an outside director in January 2000; a year later she became president of Brown University. For the rest of the decade she apparently managed both roles without attracting much criticism. But by the end of 2009 Ms. Simmons was under fire for having sat on Goldman’s compensation committee; how could she have let those enormous bonus payouts pass unremarked? By February the next year Ms. Simmons had left the board. The position was just taking up too much time, she said. Outside directors are supposed to serve as helpful, yet less biased, advisers on a firm’s board. Having made their wealth and their reputations elsewhere, they presumably have enough independence to disagree with the chief executive’s proposals. If the sky, and the share price is falling, outside directors should be able to give advice based on having weathered their own crises. The researchers from Ohio University used a database that covered more than 10,000 firms and more than 64,000 different directors between 1989 and 2004. Then they simply checked which directors stayed from one proxy statement to the next. The most likely reason for departing a board was age, so the researchers concentrated on those “surprise” disappearances by directors under the age of 70. They found that after a surprise departure, the probability that the company will subsequently have to restate earnings increases by nearly 20%. The likelihood of being named in a federal class-action lawsuit also increases, and the stock is likely to perform worse. The effect tended to be larger for larger firms. Although a correlation between them leaving and subsequent bad performance at the firm is suggestive, it does not mean that such directors are always jumping off a sinking ship. Often they “trade up,” leaving riskier, smaller firms for larger and more stable firms. But the researchers believe that outside directors have an easier time of avoiding a blow to their reputations if they leave a firm before bad news breaks, even if a review of history shows they were on the board at the time any wrongdoing occurred. Firms who want to keep their outside directors through tough times may have to create incentives. Otherwise outside directors will follow the example of Ms. Simmons, once again very popular on campus.",
-        "",
-        "draft_source",
+        "Ruth Simmons joined Goldman Sachs’s board as an outside director in January 2000; a year later she became president of Brown University.|For the rest of the decade she apparently managed both roles without attracting much criticism.|But by the end of 2009 Ms. Simmons was under fire for having sat on Goldman’s compensation committee; how could she have let those enormous bonus payouts pass unremarked?|By February the next year Ms. Simmons had left the board.|The position was just taking up too much time, she said.|Outside directors are supposed to serve as helpful, yet less biased, advisers on a firm’s board.|Having made their wealth and their reputations elsewhere, they presumably have enough independence to disagree with the chief executive’s proposals.|If the sky, and the share price is falling, outside directors should be able to give advice based on having weathered their own crises.|The researchers from Ohio University used a database that covered more than 10,000 firms and more than 64,000 different directors between 1989 and 2004.|Then they simply checked which directors stayed from one proxy statement to the next.|The most likely reason for departing a board was age, so the researchers concentrated on those “surprise” disappearances by directors under the age of 70.|They found that after a surprise departure, the probability that the company will subsequently have to restate earnings increases by nearly 20%.|The likelihood of being named in a federal class-action lawsuit also increases, and the stock is likely to perform worse.|The effect tended to be larger for larger firms.|Although a correlation between them leaving and subsequent bad performance at the firm is suggestive, it does not mean that such directors are always jumping off a sinking ship.|Often they “trade up,” leaving riskier, smaller firms for larger and more stable firms.|But the researchers believe that outside directors have an easier time of avoiding a blow to their reputations if they leave a firm before bad news breaks, even if a review of history shows they were on the board at the time any wrongdoing occurred.|Firms who want to keep their outside directors through tough times may have to create incentives.|Otherwise outside directors will follow the example of Ms. Simmons, once again very popular on campus.",
+        "露丝·西蒙斯2000年1月以外部董事身份加入高盛董事会，一年后出任布朗大学校长。在此后的大部分时间里，她似乎同时兼顾两个职位，并未招致多少批评。但到2009年底，她因曾担任高盛薪酬委员会成员而受到抨击：那些巨额奖金发放，她怎么会听之任之、毫无异议？第二年2月，她离开了董事会，并称这个职位占用了太多时间。外部董事本应在公司董事会中充当有帮助、同时相对不偏不倚的顾问。他们的财富和声誉通常来自别处，理论上应有足够独立性去反对首席执行官的提议。当形势恶化、股价下跌时，他们也应凭借自己曾渡过危机的经验提出建议。俄亥俄大学的研究人员利用一个数据库，研究了1989至2004年间一万多家公司、六万四千多名董事，并简单核查哪些董事会成员会从一份委托书持续留任到下一份。离开董事会最常见的原因是年龄，因此研究人员把注意力集中在70岁以下董事“意外”离任的情况上。他们发现，董事意外离任后，公司随后重述财务收益的概率上升近20%；公司被列入联邦集体诉讼的可能性也会上升，股票表现也往往更差，而且大型公司中的这种效应更明显。虽然董事离任与公司之后表现不佳之间存在相关性，但这并不意味着他们总是在“跳离沉船”。很多时候，他们是在“向上换位”：离开风险较高的小公司，转去规模更大、更稳定的公司。不过研究人员认为，如果外部董事能在坏消息爆发之前离开公司，就更容易避免自己的声誉受损，即使事后回顾发现，他们在违规行为发生时其实已经身处董事会。那些希望外部董事在困难时期仍留下来的公司，也许必须设计相应激励；否则，外部董事就可能效仿西蒙斯——重新成为校园里颇受欢迎的人物。",
+        "explain",
         []
       ]
     ]
@@ -28,9 +28,9 @@
     "question_stems_removed": true,
     "options_removed": true,
     "writing_excluded": true,
-    "translation_alignment_reviewed": false,
-    "sentence_count": 0,
+    "translation_alignment_reviewed": true,
+    "sentence_count": 19,
     "raw_text_materialized": true,
-    "status": "raw_candidate_pending_qa"
+    "status": "reviewed_candidate"
   }
 }

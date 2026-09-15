@@ -3,18 +3,18 @@
   "article": {
     "id": "translation",
     "section_type": "translation",
-    "title": "翻译 · 原文候选（待双语QA）",
+    "title": "翻译 · “人才流失”之忧",
     "pages": [
       13
     ],
     "actor": "01",
-    "context": "已从项目真题 PDF 完整物化英文原文；当前仅作为原始候选，等待句级切分、中文对齐、词汇等级和双语高亮 QA。",
+    "context": "发展中国家的人才外流及其经济担忧。语气客观，数字和因果关系清晰。",
     "rows": [
       [
         1,
-        "When people in developing countries worry about migration, they are usually concerned at the prospect of their best and brightest departure to Silicon Valley or to hospitals and universities in the developed world. These are the kind of workers that countries like Britain, Canada and Australia try to attract by using immigration rules that privilege college graduates. Lots of studies have found that well-educated people from developing countries are particularly likely to emigrate. A big survey of Indian households in 2004 found that nearly 40% of emigrants had more than a high-school education, compared with around 3.3% of all Indians over the age 25. This “brain drain” has long bothered policymakers in poor countries. They fear that it hurts their economies, depriving them of much-needed skilled workers who could have taught at their universities, worked in their hospitals and come up with clever new products for their factories to make.",
-        "",
-        "draft_source",
+        "When people in developing countries worry about migration, they are usually concerned at the prospect of their best and brightest departure to Silicon Valley or to hospitals and universities in the developed world.|These are the kind of workers that countries like Britain, Canada and Australia try to attract by using immigration rules that privilege college graduates.|Lots of studies have found that well-educated people from developing countries are particularly likely to emigrate.|A big survey of Indian households in 2004 found that nearly 40% of emigrants had more than a high-school education, compared with around 3.3% of all Indians over the age 25.|This “brain drain” has long bothered policymakers in poor countries.|They fear that it hurts their economies, depriving them of much-needed skilled workers who could have taught at their universities, worked in their hospitals and come up with clever new products for their factories to make.",
+        "当发展中国家的人谈到移民问题时，他们通常担心的是：本国最优秀、最聪明的人才会离开，前往硅谷，或去发达国家的医院和大学工作。英国、加拿大、澳大利亚等国家正是希望吸引这类劳动者，因此其移民规则往往优待大学毕业生。大量研究发现，发展中国家受教育程度较高的人尤其容易移居国外。2004年对印度家庭进行的一项大型调查发现，移民者中近40%接受过高中以上教育，而25岁以上印度人口中这一比例只有约3.3%。这种“人才流失”长期以来一直困扰着贫穷国家的政策制定者。他们担心，这会损害本国经济，因为这些国家会失去迫切需要的高技能劳动者——这些人本可以在大学任教、在医院工作，或者为本国工厂想出聪明的新产品。",
+        "explain",
         []
       ]
     ]
@@ -27,9 +27,9 @@
     "question_stems_removed": true,
     "options_removed": true,
     "writing_excluded": true,
-    "translation_alignment_reviewed": false,
-    "sentence_count": 0,
+    "translation_alignment_reviewed": true,
+    "sentence_count": 6,
     "raw_text_materialized": true,
-    "status": "raw_candidate_pending_qa"
+    "status": "reviewed_candidate"
   }
 }
