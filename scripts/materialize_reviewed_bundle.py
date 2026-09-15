@@ -16,11 +16,18 @@ def safe_member(name:str):
         return None
     return year,unit,filename
 
+def safe_directory(name:str):
+    p=PurePosixPath(name)
+    return not p.is_absolute() and '..' not in p.parts and len(p.parts)==1 and p.parts[0] in ALLOWED_YEARS
+
 def materialize(bundle:Path, root:Path):
     written=[]
     with tarfile.open(bundle,'r:gz') as tf:
         members=tf.getmembers(); seen=set()
         for m in members:
+            if m.isdir():
+                if not safe_directory(m.name): raise ValueError(f'unsafe/unexpected member: {m.name}')
+                continue
             info=safe_member(m.name)
             if not info or not m.isfile(): raise ValueError(f'unsafe/unexpected member: {m.name}')
             year,unit,filename=info; key=(year,unit)
