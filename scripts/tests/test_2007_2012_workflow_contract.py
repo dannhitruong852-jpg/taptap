@@ -25,7 +25,7 @@ class WorkflowContractTests(unittest.TestCase):
         self.assertTrue(PUBLISH.is_file(), f'missing {PUBLISH.relative_to(ROOT)}')
         text = PUBLISH.read_text()
         self.assertIn('generate_run_id:', text)
-        self.assertIn('actions/download-artifact@v4', text)
+        self.assertIn('gh run download', text)
         self.assertIn('Reader tests', text)
         self.assertIn('Publish generated batch', text)
         for year in YEARS:
