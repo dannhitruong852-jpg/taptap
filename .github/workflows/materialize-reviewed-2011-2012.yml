@@ -1,0 +1,37 @@
+name: Materialize reviewed 2011-2012 candidates
+on:
+  push:
+    branches: [c-v4-article-preview-actual]
+    paths:
+      - 'reports/content-freeze/reviewed-2011-2012.tar.gz.b64.*'
+      - 'scripts/materialize_reviewed_bundle.py'
+      - 'scripts/tests/test_materialize_reviewed_bundle.py'
+      - '.github/workflows/materialize-reviewed-2011-2012.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - name: Run materializer tests
+        run: python -m unittest scripts/tests/test_materialize_reviewed_bundle.py -v
+      - name: Reassemble bundle
+        shell: bash
+        run: cat reports/content-freeze/reviewed-2011-2012.tar.gz.b64.* | base64 -d > /tmp/reviewed.tar.gz && gzip -t /tmp/reviewed.tar.gz
+      - name: Materialize reviewed candidates
+        run: python scripts/materialize_reviewed_bundle.py /tmp/reviewed.tar.gz reports/content-freeze
+      - name: Commit reviewed candidates
+        shell: bash
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add reports/content-freeze/2011/*.candidate.json reports/content-freeze/2012/*.candidate.json
+          git rm -f reports/content-freeze/reviewed-2011-2012.tar.gz.b64.*
+          git diff --cached --check
+          git diff --cached --quiet || git commit -m 'content: review 2011-2012 bilingual candidates'
+          git push
