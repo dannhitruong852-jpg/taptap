@@ -1,0 +1,44 @@
+name: Validate kaoyan 2007-2012 content
+
+on:
+  push:
+    branches: ['c-v4-article-preview-actual']
+    paths:
+      - 'reports/content-freeze/2007/**'
+      - 'reports/content-freeze/2008/**'
+      - 'reports/content-freeze/2009/**'
+      - 'reports/content-freeze/2010/**'
+      - 'reports/content-freeze/2011/**'
+      - 'reports/content-freeze/2012/**'
+      - 'reports/content-freeze/2007-2012-production-board.json'
+      - 'reports/extraction/2007-2012-article-inventory.json'
+      - 'scripts/check_2007_2012_content_freeze.py'
+      - 'scripts/build_2007_2012_curated.py'
+      - 'scripts/tests/test_check_2007_2012_content_freeze.py'
+      - 'scripts/tests/test_build_2007_2012_curated.py'
+      - 'scripts/tests/test_2007_2012_workflow_contract.py'
+      - '.github/workflows/generate-kaoyan-2007-2012-batch.yml'
+      - '.github/workflows/publish-kaoyan-2007-2012-batch.yml'
+      - '.github/workflows/validate-kaoyan-2007-2012-content.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  freeze-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run freeze and production workflow unit tests
+        run: |
+          python -m unittest \
+            scripts/tests/test_check_2007_2012_content_freeze.py \
+            scripts/tests/test_build_2007_2012_curated.py \
+            scripts/tests/test_2007_2012_workflow_contract.py -v
+      - name: Verify materialized candidates against freeze state
+        run: python scripts/check_2007_2012_content_freeze.py

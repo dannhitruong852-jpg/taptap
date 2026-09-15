@@ -1,0 +1,169 @@
+name: C v4 15-actor article emotion preview full
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 15
+      matrix:
+        actor: ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15']
+    env:
+      HF_HOME: /tmp/chatterbox-hf-cache
+      PYTHONPATH: voice-pipeline
+      OMP_NUM_THREADS: '4'
+      MKL_NUM_THREADS: '4'
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - uses: actions/cache@v4
+        with:
+          path: /tmp/chatterbox-hf-cache
+          key: chatterbox-original-en-017-v1
+      - name: Contract
+        run: python -m unittest voice-pipeline/tests/test_article_preview.py -v
+      - name: Install preview dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          python -m pip install chatterbox-tts==0.1.7 numpy==1.26.4 soundfile==0.13.1
+      - name: Build baseline profiles
+        run: |
+          mkdir -p /tmp/profiles
+          python voice-pipeline/calibration/build_expansion_profiles.py --output /tmp/expansion-profiles
+          actor='${{ matrix.actor }}'
+          if [ -f "voice-pipeline/calibration/actors/${actor}.json" ]; then
+            cp "voice-pipeline/calibration/actors/${actor}.json" "/tmp/profiles/${actor}.json"
+          else
+            cp "/tmp/expansion-profiles/${actor}.json" "/tmp/profiles/${actor}.json"
+          fi
+      - name: Download actor03 final profile
+        if: matrix.actor == '03'
+        uses: actions/download-artifact@v4
+        with:
+          name: c-v4-final-two-r7-03
+          path: /tmp/final
+          github-token: ${{ github.token }}
+          repository: dannhitruong852-jpg/taptap
+          run-id: 34757803286
+      - name: Download actor07 final profile
+        if: matrix.actor == '07'
+        uses: actions/download-artifact@v4
+        with:
+          name: c-v4-six-repair-r2-07
+          path: /tmp/final
+          github-token: ${{ github.token }}
+          repository: dannhitruong852-jpg/taptap
+          run-id: 34746310492
+      - name: Download actor10 final profile
+        if: matrix.actor == '10'
+        uses: actions/download-artifact@v4
+        with:
+          name: c-v4-six-repair-10
+          path: /tmp/final
+          github-token: ${{ github.token }}
+          repository: dannhitruong852-jpg/taptap
+          run-id: 34744873122
+      - name: Download actor11 final profile
+        if: matrix.actor == '11'
+        uses: actions/download-artifact@v4
+        with:
+          name: c-v4-six-repair-11
+          path: /tmp/final
+          github-token: ${{ github.token }}
+          repository: dannhitruong852-jpg/taptap
+          run-id: 34744873122
+      - name: Download actor14 final profile
+        if: matrix.actor == '14'
+        uses: actions/download-artifact@v4
+        with:
+          name: c-v4-six-repair-r4-14
+          path: /tmp/final
+          github-token: ${{ github.token }}
+          repository: dannhitruong852-jpg/taptap
+          run-id: 34749959122
+      - name: Download actor15 final profile
+        if: matrix.actor == '15'
+        uses: actions/download-artifact@v4
+        with:
+          name: c-v4-actor15-repair-r9
+          path: /tmp/final
+          github-token: ${{ github.token }}
+          repository: dannhitruong852-jpg/taptap
+          run-id: 34765501954
+      - name: Install final repaired profile when present
+        run: |
+          actor='${{ matrix.actor }}'
+          if [ -f "/tmp/final/profiles/${actor}.json" ]; then
+            cp "/tmp/final/profiles/${actor}.json" "/tmp/profiles/${actor}.json"
+          fi
+      - name: Prepare references from the already-approved actor source family
+        run: |
+          actor='${{ matrix.actor }}'
+          mkdir -p "/tmp/references/actor${actor}"
+          case "$actor" in
+            01|02|04|05|08|09|12|13)
+              python voice-pipeline/prepare_2002_cast_references.py --actor "$actor" --output "/tmp/references/actor${actor}"
+              ;;
+            03|14)
+              python voice-pipeline/calibration/prepare_repair_references_r4.py --actor "$actor" --output "/tmp/references/actor${actor}"
+              ;;
+            *)
+              python voice-pipeline/calibration/prepare_expansion_references.py --actor "$actor" --output "/tmp/references/actor${actor}"
+              ;;
+          esac
+      - name: Download actor15 X11 prompt
+        if: matrix.actor == '15'
+        uses: actions/download-artifact@v4
+        with:
+          name: c-v4-final-two-r6-15
+          path: /tmp/r6
+          github-token: ${{ github.token }}
+          repository: dannhitruong852-jpg/taptap
+          run-id: 34754229039
+      - name: Install actor15 X11 prompt
+        if: matrix.actor == '15'
+        run: cp /tmp/r6/audio/actor15/actor15-08-probe-X11.wav /tmp/references/actor15/actor15-08-probe-X11.wav
+      - name: Render article
+        run: |
+          actor='${{ matrix.actor }}'
+          python voice-pipeline/calibration/article_preview.py \
+            --actor "$actor" \
+            --profile "/tmp/profiles/${actor}.json" \
+            --references "/tmp/references/actor${actor}" \
+            --output "article-preview/actor${actor}" \
+            --device cpu
+      - name: Verify output
+        run: |
+          actor='${{ matrix.actor }}'
+          test -s "article-preview/actor${actor}/actor${actor}-article.wav"
+          test -s "article-preview/actor${actor}/actor${actor}-article.mp3"
+          test -s "article-preview/actor${actor}/actor${actor}-article.json"
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          actor='${{ matrix.actor }}'
+          p=Path(f'article-preview/actor{actor}/actor{actor}-article.json')
+          data=json.loads(p.read_text())
+          assert len(data['segments']) == 5
+          assert data['artificial_pause_ms'] == 0
+          assert data['post_tempo'] is False
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: c-v4-article-preview-actor-${{ matrix.actor }}
+          path: article-preview/actor${{ matrix.actor }}
+          if-no-files-found: error
+          retention-days: 14

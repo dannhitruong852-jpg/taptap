@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {pickArticle,selectArticles,highlightVocabulary,createSelectionLoader,adjacentArticle} from '../catalog.js';
+import {pickArticle,selectArticles,highlightVocabulary,createSelectionLoader,adjacentArticle,bilingualHighlightsPath} from '../catalog.js';
 const catalog={articles:[
  {id:'2002-cloze',year:2002,section_type:'cloze'},
  {id:'2002-text1',year:2002,section_type:'reading'},
@@ -43,9 +43,24 @@ test('v4 candidate manifest is opt-in and default remains accepted v3',async()=>
  const entry={id:'2002-text1',year:2002,content:'./content/2002/c/text1.json',manifest:'./audio/2002/c-text1/manifest.json'};
  const normal=createSelectionLoader(fetcher,{audioVersion:''});
  await normal(entry);
- assert.equal(requests.at(-1),'./audio/2002/c-text1/manifest.json');
+ assert.ok(requests.includes('./audio/2002/c-text1/manifest.json'));
  requests.length=0;
  const candidate=createSelectionLoader(fetcher,{audioVersion:'v4'});
  await candidate(entry);
- assert.equal(requests.at(-1),'./audio/2002/v4/c-text1/manifest.json');
+ assert.ok(requests.includes('./audio/2002/v4/c-text1/manifest.json'));
+});
+
+test('bilingual mapping path is year-neutral and selection loader returns the selected year mapping',async()=>{
+ const entry={id:'2003-text1',year:2003,content:'./content/2003/c/text1.json',manifest:'./audio/2003/v4/c-text1/manifest.json'};
+ assert.equal(bilingualHighlightsPath(entry),'./content/2003/bilingual-highlights.json');
+ const requests=[];
+ const fetcher=async path=>{
+  requests.push(path);
+  if(path.endsWith('bilingual-highlights.json'))return {ok:true,json:async()=>({version:1,year:2003,articles:{text1:{s01:[]}}})};
+  if(path.includes('/audio/'))return {ok:true,json:async()=>({sentences:{},segments:{}})};
+  return {ok:true,json:async()=>({article_id:'text1',sentences:[]})};
+ };
+ const loaded=await createSelectionLoader(fetcher,{audioVersion:'v4'})(entry);
+ assert.ok(requests.includes('./content/2003/bilingual-highlights.json'));
+ assert.deepEqual(loaded.bilingual.articles.text1.s01,[]);
 });

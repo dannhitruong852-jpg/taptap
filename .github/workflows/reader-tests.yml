@@ -1,0 +1,56 @@
+name: Reader tests
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ['c-v4-article-preview-actual']
+    paths:
+      - 'kaoyan-reader-v1/**'
+      - 'content-pipeline/**'
+      - 'reports/bilingual-highlights/**'
+      - 'docs/standards/PLAYBACK_LATENCY_STANDARD.md'
+      - '.github/workflows/reader-tests.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run reader unit and contract tests
+        working-directory: kaoyan-reader-v1
+        run: npm test
+      - name: Run bilingual highlight unit and build contracts
+        env:
+          PYTHONPATH: voice-pipeline:content-pipeline
+        run: |
+          python -m unittest \
+            content-pipeline/tests/test_bilingual_highlights.py \
+            content-pipeline/tests/test_build_bilingual_highlights.py \
+            content-pipeline/tests/test_build_curated_year.py -v
+      - name: Rebuild and validate reviewed bilingual mappings
+        env:
+          PYTHONPATH: voice-pipeline:content-pipeline
+        run: |
+          for year in 2003 2004 2005 2006; do
+            python content-pipeline/build_curated_year.py --year "$year"
+            python content-pipeline/build_bilingual_highlights.py --year "$year"
+          done
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          expected={2003:71,2004:85,2005:24,2006:28}
+          for year,count in expected.items():
+              report=json.loads(Path(f'reports/bilingual-highlights/{year}.json').read_text())
+              assert report['errors']==[],report
+              assert report['required_occurrences']==count,(year,report)
+              assert report['required_occurrences']==report['mapped_occurrences']+report['reviewed_exceptions'],report
+          PY

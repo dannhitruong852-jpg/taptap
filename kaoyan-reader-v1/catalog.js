@@ -39,6 +39,9 @@ export function manifestForVersion(entry, audioVersion = '') {
   }
   return entry.manifest;
 }
+export function bilingualHighlightsPath(entry){
+  return `./content/${entry.year}/bilingual-highlights.json`;
+}
 export function createSelectionLoader(fetcher = fetch, options = {}) {
   let generation=0;
   const explicit = options?.audioVersion;
@@ -49,10 +52,14 @@ export function createSelectionLoader(fetcher = fetch, options = {}) {
   return async function load(entry) {
     const token=++generation;
     const manifestPath=manifestForVersion(entry,audioVersion);
-    const [content, manifest] = await Promise.all([
+    const tasks=[
       fetcher(entry.content).then(r => { if(!r.ok) throw new Error('content-load-failed'); return r.json(); }),
       fetcher(manifestPath, {cache:'no-cache'}).then(r => r.ok ? r.json() : {segments:{}}).catch(()=>({segments:{}}))
-    ]);
-    return token === generation ? {content,manifest} : null;
+    ];
+    if(entry.year!==undefined&&entry.year!==null){
+      tasks.push(fetcher(bilingualHighlightsPath(entry),{cache:'no-cache'}).then(r=>r.ok?r.json():{version:1,articles:{}}).catch(()=>({version:1,articles:{}})));
+    }
+    const [content,manifest,bilingual={version:1,articles:{}}]=await Promise.all(tasks);
+    return token === generation ? {content,manifest,bilingual} : null;
   };
 }

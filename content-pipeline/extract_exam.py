@@ -22,6 +22,9 @@ TEXT_HEADING = re.compile(r'(?im)^\s*T\s*e\s*x\s*t\s*(?:[1lI]|[2-9])\s*$')
 QUESTION_LINE = re.compile(r'(?im)^\s*(?:1[1-9]|2[0-9]|3[0-9]|40)\s*\.')
 OPTION_LINE = re.compile(r'(?im)^\s*\[?[A-D]\]\s+')
 DIRECTIONS_START = re.compile(r'(?im)^\s*(?:\d+\.\s*)?Directions:\s*$')
+PART_B_BLANK_LINE = re.compile(
+    r'(?im)^\s*(?:\(\s*4\s*[1-5]\s*\)|4\s*[1-5])\s*[\.]?\s*(?:[-_—–]+\s*)?$'
+)
 
 
 def _canonicalize_for_matching(text):
@@ -85,6 +88,11 @@ def _strip_leading_part_b_choices(block):
     a_idx = next((i for i, line in enumerate(lines) if re.match(r'^\s*\[A\]\s*', line)), None)
     if a_idx is None:
         return block
+    # In real 2005-2009 papers the candidate list can trail the article and
+    # contain wrapped continuation lines. Once an article blank has appeared,
+    # everything from [A] onward is the candidate list, not study prose.
+    if any(PART_B_BLANK_LINE.match(line) for line in lines[:a_idx]):
+        return '\n'.join(lines[:a_idx])
     g_idx = next((i for i in range(a_idx, len(lines)) if re.match(r'^\s*\[G\]\s*', lines[i])), None)
     if g_idx is not None:
         end = g_idx + 1
@@ -100,8 +108,7 @@ def _strip_leading_part_b_choices(block):
 def _clean_part_b(block):
     block = _drop_directions(block)
     block = _strip_leading_part_b_choices(block)
-    marker = re.compile(r'(?im)^\s*(?:4\s*[1IlL]|4[2-5])\s*[\.]?\s*(?:[-_—–]+\s*)?$')
-    block = marker.sub('', block)
+    block = PART_B_BLANK_LINE.sub('', block)
     return normalize_prose(block)
 
 

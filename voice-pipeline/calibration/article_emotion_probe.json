@@ -1,0 +1,37 @@
+{
+  "schema_version": "c-v4-article-emotion-probe-1",
+  "language": "en-US",
+  "title": "Actor Emotional Range Test",
+  "segments": [
+    {
+      "id": "01-calm",
+      "intent": "narrative_build",
+      "intensity": 1,
+      "text": "At six in the morning, the city was still quiet. Daniel stood by the river, watching the first light spread across the water. Nothing seemed unusual, and for a few minutes he felt completely at peace."
+    },
+    {
+      "id": "02-probe",
+      "intent": "curious_probe",
+      "intensity": 2,
+      "text": "Then he noticed a small wooden box beneath the bench. Who had left it there? Why was his name written on the lid? He looked around, suddenly alert. No one was nearby."
+    },
+    {
+      "id": "03-peak",
+      "intent": "information_peak",
+      "intensity": 2,
+      "text": "He opened the box. Inside was a photograph he had never seen before—and yet he recognized every face. \"That's impossible,\" he whispered. His heart raced. For one wild second, he wanted to laugh, to run, to call everyone he knew."
+    },
+    {
+      "id": "04-serious",
+      "intent": "serious_analysis",
+      "intensity": 2,
+      "text": "But the excitement faded when he turned the photograph over. There was only one sentence: \"You still have time.\" Time for what? Daniel sat down. A cold uneasiness settled over him. He thought about his father, the argument they had never resolved, and the phone call he had kept postponing. Regret rose sharply, then softened into sadness."
+    },
+    {
+      "id": "05-resolve",
+      "intent": "warm_explain",
+      "intensity": 1,
+      "text": "He took out his phone and hesitated. Finally, he smiled. Maybe the message was meaningless. Maybe it was a mistake. But some mistakes arrive at exactly the right moment. He pressed call."
+    }
+  ]
+}

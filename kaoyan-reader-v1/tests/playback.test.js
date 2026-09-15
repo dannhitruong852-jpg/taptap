@@ -24,6 +24,20 @@ test('buildSentenceQueue prefers one seamless sentence asset when v2 manifest pr
   assert.equal(queue[0].cues.length, 2);
 });
 
+test('buildSentenceQueue propagates root manifest generation fingerprint to seamless audio',()=>{
+  const sentence={id:'s01',segments:[{id:'s01-a'}]};
+  const v={generation_fingerprint:'root-v9',sentences:{s01:{path:'./audio/s01.opus'}},segments:{}};
+  const [item]=buildSentenceQueue(sentence,v);
+  assert.equal(item.generation_fingerprint,'root-v9');
+});
+
+test('legacy segment queue inherits root generation fingerprint',()=>{
+  const sentence={id:'s02',segments:[{id:'s02-a'}]};
+  const v={generation_fingerprint:'root-v10',segments:{'s02-a':{path:'./audio/s02-a.opus'}}};
+  const [item]=buildSentenceQueue(sentence,v);
+  assert.equal(item.generation_fingerprint,'root-v10');
+});
+
 test('user playback speed multiplies generated segment rate without leaving safe browser range', () => {
   assert.equal(applySpeed(1, 0.85), 0.85);
   assert.equal(applySpeed(1, 1.15), 1.15);
@@ -54,23 +68,57 @@ test('sequencer advances through all segments before ending a sentence', async (
     {id:'s10-b', path:'b.opus'},
     {id:'s10-c', path:'c.opus'}
   ], 1);
+  await Promise.resolve();
   assert.equal(created[0].src, 'a.opus');
   created[0].finish();
+  await Promise.resolve();
   assert.equal(created[1].src, 'b.opus');
   created[1].finish();
+  await Promise.resolve();
   assert.equal(created[2].src, 'c.opus');
   created[2].finish();
+  await Promise.resolve();
   assert.equal(ended.length, 1);
 });
 
-test('audio player exposes live timing without changing playback order', () => {
+test('audio player exposes live timing without changing playback order', async () => {
   const created=[]; const updates=[];
   const player=createAudioPlayer({
     createAudio:src=>{const a=new FakeAudio(src);created.push(a);return a;},
     onTimeUpdate:update=>updates.push(update)
   });
   player.playSentence([{id:'s10',path:'s10.opus',duration_seconds:4}],1);
+  await Promise.resolve();
   created[0].duration=4;created[0].tick(1.5);
   assert.equal(updates.at(-1).currentTime,1.5);
   assert.equal(updates.at(-1).duration,4);
+});
+
+test('sequencer plays the asynchronously resolved local source instead of the remote manifest path', async () => {
+  const created=[];
+  const player=createAudioPlayer({
+    resolveAudio: async item => ({src:`blob:local/${item.id}`,key:`k:${item.id}`,local:true}),
+    createAudio:src=>{const audio=new FakeAudio(src);created.push(audio);return audio;}
+  });
+  player.playSentence([{id:'s10',path:'./audio/remote-s10.opus'}],1);
+  await Promise.resolve();
+  await Promise.resolve();
+  assert.equal(created.length,1);
+  assert.equal(created[0].src,'blob:local/s10');
+});
+
+test('active local blob source stays pinned until playback ends', async () => {
+  const created=[]; const events=[];
+  const player=createAudioPlayer({
+    resolveAudio: async item => ({src:`blob:local/${item.id}`,key:`k:${item.id}`,local:true}),
+    pinAudio:key=>events.push(`pin:${key}`),
+    unpinAudio:key=>events.push(`unpin:${key}`),
+    createAudio:src=>{const audio=new FakeAudio(src);created.push(audio);return audio;}
+  });
+  player.playSentence([{id:'s10',path:'./audio/remote-s10.opus'}],1);
+  await Promise.resolve();await Promise.resolve();
+  assert.deepEqual(events,['pin:k:s10']);
+  created[0].finish();
+  await Promise.resolve();
+  assert.deepEqual(events,['pin:k:s10','unpin:k:s10']);
 });

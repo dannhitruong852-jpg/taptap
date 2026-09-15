@@ -1,0 +1,67 @@
+{
+  "schema_version": "kaoyan-article-inventory-1",
+  "batch": "2007-2012",
+  "status": "source_inventory_verified_content_not_frozen",
+  "rules": {
+    "cloze": "restore the keyed correct choices into continuous prose; exclude question numbers, options, directions, and answer labels",
+    "reading": "article prose only; exclude question stems and A/B/C/D options",
+    "part_b": "retain the continuous article prose only; exclude directions, headings/matching columns and distractors; for insertion-gap years restore the keyed correct A-G segments into the article so the canonical prose is complete",
+    "translation_2007_2009": "retain only the five numbered target segments 46-50 that the paper actually asks the candidate to translate",
+    "translation_2010_2012": "retain the complete Section III English text that the paper asks the candidate to translate",
+    "writing": "exclude all writing tasks"
+  },
+  "years": {
+    "2007": {
+      "source_filename": "2007年考研英语真题（可复制、可搜索）.pdf",
+      "source_sha256": "b265c5fdf5ca4b165967cf096072624c6e118e40139e6a942fcf84ce9670a99a",
+      "articles": ["cloze", "text1", "text2", "text3", "text4", "partb", "translation"],
+      "article_count": 7,
+      "part_b_form": "heading_matching",
+      "translation_scope": "target_segments_46_50"
+    },
+    "2008": {
+      "source_filename": "2008年考研英语真题（可复制、可搜索）.pdf",
+      "source_sha256": "418a6a8a9c7396977fe3e3baaf6d292b786d51a1acccc2e66df5e4b029f1f9de",
+      "articles": ["cloze", "text1", "text2", "text3", "text4", "partb", "translation"],
+      "article_count": 7,
+      "part_b_form": "sentence_insertion_A_G",
+      "part_b_canonicalization": "restore_correct_segments_and_drop_distractors",
+      "translation_scope": "target_segments_46_50"
+    },
+    "2009": {
+      "source_filename": "2009年考研英语真题（可复制、可搜索）.pdf",
+      "source_sha256": "fcd4b7f273ad0b5310fcbcf434777663198d5dc07c6ffaac91043735e14e8cc4",
+      "articles": ["cloze", "text1", "text2", "text3", "text4", "partb", "translation"],
+      "article_count": 7,
+      "part_b_form": "sentence_insertion_A_G",
+      "part_b_canonicalization": "restore_correct_segments_and_drop_distractors",
+      "translation_scope": "target_segments_46_50"
+    },
+    "2010": {
+      "source_filename": "2010年考研英语二真题（可复制搜索查词）.pdf",
+      "source_sha256": "55d401ca0ba03ceedaf32e9387eb0c07fbf354c467ff6eef0dc6a936c288ff6e",
+      "articles": ["cloze", "text1", "text2", "text3", "text4", "partb", "translation"],
+      "article_count": 7,
+      "part_b_form": "true_false_article",
+      "translation_scope": "full_section_III_text"
+    },
+    "2011": {
+      "source_filename": "2011年考研英语二真题（可复制搜索查词）.pdf",
+      "source_sha256": "d756fdd06e9ae7c3ed6af30be23d1ec696b835ad006aa28d7d95795de75fc431",
+      "articles": ["cloze", "text1", "text2", "text3", "text4", "partb", "translation"],
+      "article_count": 7,
+      "part_b_form": "information_matching_article",
+      "translation_scope": "full_section_III_text"
+    },
+    "2012": {
+      "source_filename": "2012年考研英语二真题（可复制搜索查词）.pdf",
+      "source_sha256": "9c5ee5128fddddbab78d62e4577a414aea51b5f021ceb7846216ba644bbe2e79",
+      "articles": ["cloze", "text1", "text2", "text3", "text4", "partb", "translation"],
+      "article_count": 7,
+      "part_b_form": "information_matching_article",
+      "translation_scope": "full_section_III_text"
+    }
+  },
+  "batch_article_count": 42,
+  "gate": "Do not extend or trigger the voice production matrix until all 42 canonical articles, sentence-aligned translations, vocab, bilingual mappings, actor assignments, C-mode directions, and content QA have passed and the batch is marked CONTENT_FROZEN."
+}

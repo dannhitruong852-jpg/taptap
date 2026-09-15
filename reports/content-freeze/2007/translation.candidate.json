@@ -1,0 +1,29 @@
+{
+  "year": 2007,
+  "article": {
+    "id": "translation",
+    "section_type": "translation",
+    "title": "翻译 · 法律教育与新闻专业素养",
+    "pages": [13],
+    "actor": "09",
+    "context": "法律教育与新闻专业责任。这里只保留试卷要求翻译的 46-50 五个目标译段，不扩展到整篇背景文。语气清晰、理性、正式，法律与新闻术语优先保证准确。",
+    "rows": [
+      [1, "Traditionally, legal learning has been viewed in such institutions as the special preserve of lawyers, rather than a necessary part of the intellectual equipment of an educated person.", "传统上，在这些院校中，法律学习一直被视为律师这一职业群体的专属领域，而不是一个受过教育的人知识素养中必不可少的一部分。", "contrast", ["special preserve of lawyers", "rather than"]],
+      [2, "On the other, it links these concepts to everyday realities in a manner which is parallel to the links journalists forge on a daily basis as they cover and comment on the news.", "另一方面，法律又把这些概念同日常现实联系起来；这种联系方式，与记者每天在报道和评论新闻时所建立的概念与现实之间的联系是相似的。", "analogy", ["links these concepts", "parallel to the links journalists forge"]],
+      [3, "But the idea that the journalist must understand the law more profoundly than an ordinary citizen rests on an understanding of the established conventions and special responsibilities of the news media.", "但是，记者必须比普通公民更深刻地理解法律这一观点，是建立在对新闻媒体既有惯例和特殊责任的认识之上的。", "qualify", ["more profoundly", "rests on an understanding"]],
+      [4, "In fact, it is difficult to see how journalists who do not have a clear grasp of the basic features of the Canadian Constitution can do a competent job on political stories.", "事实上，很难想象，一个不能清楚掌握加拿大宪法基本特征的记者，如何能够胜任政治新闻报道。", "emphasize", ["do not have a clear grasp", "competent job"]],
+      [5, "While comment and reaction from lawyers may enhance stories, it is preferable for journalists to rely on their own notions of significance and make their own judgments.", "尽管律师的评论和反应可能会使报道更加充实，但记者最好还是依靠自己对事件重要性的理解，并作出自己的判断。", "contrast", ["While", "preferable for journalists"]]
+    ]
+  },
+  "qa": {
+    "expected_sentences": 5,
+    "actual_sentences": 5,
+    "only_numbered_targets_46_50": true,
+    "surrounding_context_excluded": true,
+    "directions_excluded": true,
+    "writing_excluded": true,
+    "translation_alignment_reviewed": true,
+    "source_scope_verified": true,
+    "status": "article_candidate_ready"
+  }
+}

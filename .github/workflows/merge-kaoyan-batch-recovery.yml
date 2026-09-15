@@ -1,0 +1,121 @@
+name: Recover kaoyan C-mode merge
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ['c-v4-article-preview-actual']
+    paths: ['merge-recovery.trigger']
+
+permissions:
+  contents: write
+  actions: read
+
+env:
+  PYTHONPATH: voice-pipeline:content-pipeline
+  SOURCE_RUN_ID: '34781044098'
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        year: [2003, 2004, 2005, 2006]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install merge dependency
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+      - name: Build canonical content
+        run: python content-pipeline/build_curated_year.py --year '${{ matrix.year }}'
+      - name: Download rendered shards without flattening artifact directories
+        uses: actions/download-artifact@v4
+        with:
+          pattern: kaoyan-c-${{ matrix.year }}-*
+          path: /tmp/incoming
+          merge-multiple: false
+          github-token: '${{ github.token }}'
+          repository: dannhitruong852-jpg/taptap
+          run-id: '${{ env.SOURCE_RUN_ID }}'
+      - name: Validate isolated shard layout
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          year = int('${{ matrix.year }}')
+          expected = {2003: 18, 2004: 18, 2005: 21, 2006: 21}[year]
+          root = Path('/tmp/incoming')
+          dirs = sorted(p for p in root.iterdir() if p.is_dir() and p.name.startswith(f'kaoyan-c-{year}-') and '-shard-' in p.name)
+          assert len(dirs) == expected, (year, len(dirs), expected, [p.name for p in dirs])
+          manifests = []
+          for directory in dirs:
+              found = list(directory.glob('v4-shard-*.json'))
+              assert len(found) == 1, (directory, found)
+              manifests.extend(found)
+          assert len(manifests) == expected, (year, len(manifests), expected)
+          print({'year': year, 'isolated_shard_artifacts': len(dirs), 'manifests': len(manifests)})
+          PY
+      - name: Merge sentence assets and verify completeness
+        run: python voice-pipeline/merge_c_v4.py --year '${{ matrix.year }}' --incoming /tmp/incoming
+      - name: Verify every browser manifest is technically complete
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          year='${{ matrix.year }}'
+          report=json.loads(Path(f'kaoyan-reader-v1/reports/c-v4-{year}-merge.json').read_text())
+          assert report['status']=='complete_candidate', report
+          assert report['qa']['technical']=='passed', report
+          for article,data in report['articles'].items():
+              assert not data['missing'], (article,data['missing'])
+              manifest=json.loads(Path(f'kaoyan-reader-v1/audio/{year}/v4/c-{article}/manifest.json').read_text())
+              assert manifest['qa']['technical']=='passed', article
+              assert not manifest['missing_segments'], article
+              for sentence in manifest['sentences'].values():
+                  opus=Path('kaoyan-reader-v1') / sentence['path'].removeprefix('./')
+                  mp3=Path('kaoyan-reader-v1') / sentence['mp3_path'].removeprefix('./')
+                  assert opus.is_file(), opus
+                  assert mp3.is_file(), mp3
+          print({'year': year, 'status': report['status'], 'technical': report['qa']['technical']})
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kaoyan-c-${{ matrix.year }}-merged-candidate
+          path: |
+            kaoyan-reader-v1/content/${{ matrix.year }}/c
+            kaoyan-reader-v1/audio/${{ matrix.year }}/v4
+            kaoyan-reader-v1/reports/c-v4-${{ matrix.year }}-merge.json
+            reports/extraction/${{ matrix.year }}.json
+          if-no-files-found: error
+          retention-days: 14
+
+  patch-production-workflow:
+    needs: recover
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: c-v4-article-preview-actual
+      - name: Permanently preserve artifact directories during merge
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path=Path('.github/workflows/generate-kaoyan-batch.yml')
+          text=path.read_text()
+          old='          merge-multiple: true\n'
+          new='          merge-multiple: false\n'
+          assert text.count(old) == 1, text.count(old)
+          path.write_text(text.replace(old,new))
+          PY
+          git diff --check
+          grep -A4 -B3 'merge-multiple: false' .github/workflows/generate-kaoyan-batch.yml
+      - name: Commit production merge fix
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add .github/workflows/generate-kaoyan-batch.yml
+          git commit -m 'ci: preserve shard artifact directories during merge'
+          git push origin HEAD:c-v4-article-preview-actual

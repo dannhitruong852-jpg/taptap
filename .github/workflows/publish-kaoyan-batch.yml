@@ -1,0 +1,162 @@
+name: Publish kaoyan C-mode batch
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_run_id:
+        description: 'Successful Generate kaoyan C-mode batch run ID'
+        required: true
+        type: string
+  push:
+    branches: ['c-v4-article-preview-actual']
+    paths: ['publish-batch.trigger']
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: c-v4-article-preview-actual
+          fetch-depth: 0
+
+      - name: Resolve validated source run
+        id: source
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            run_id='${{ inputs.source_run_id }}'
+          else
+            run_id=$(tr -d '[:space:]' < publish-batch.trigger)
+          fi
+          case "$run_id" in
+            ''|*[!0-9]*) echo "invalid source run id: $run_id" >&2; exit 2 ;;
+          esac
+          echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Download merged candidates
+        env:
+          SOURCE_RUN_ID: ${{ steps.source.outputs.run_id }}
+        run: |
+          rm -rf /tmp/kaoyan-publish
+          mkdir -p /tmp/kaoyan-publish
+          for year in 2003 2004 2005 2006; do
+            mkdir -p "/tmp/kaoyan-publish/$year"
+            gh run download "$SOURCE_RUN_ID" -R "$GITHUB_REPOSITORY" \
+              -n "kaoyan-c-${year}-merged-candidate" \
+              -D "/tmp/kaoyan-publish/$year"
+          done
+
+      - name: Validate merged candidates before publishing
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path('/tmp/kaoyan-publish')
+          expected = {2003: 6, 2004: 6, 2005: 7, 2006: 7}
+          for year, article_count in expected.items():
+              base = root / str(year)
+              report = json.loads((base / f'kaoyan-reader-v1/reports/c-v4-{year}-merge.json').read_text())
+              assert report['status'] == 'complete_candidate', (year, report['status'])
+              assert report['qa']['technical'] == 'passed', (year, report['qa'])
+              assert len(report['articles']) == article_count, (year, len(report['articles']))
+              for article, data in report['articles'].items():
+                  assert not data['missing'], (year, article, data['missing'])
+                  manifest_path = base / f'kaoyan-reader-v1/audio/{year}/v4/c-{article}/manifest.json'
+                  manifest = json.loads(manifest_path.read_text())
+                  assert manifest['qa']['technical'] == 'passed', (year, article)
+                  assert not manifest['missing_segments'], (year, article, manifest['missing_segments'])
+                  assert len(manifest['sentences']) == data['sentences'], (year, article)
+                  for sentence_id, sentence in manifest['sentences'].items():
+                      opus = base / 'kaoyan-reader-v1' / sentence['path'].removeprefix('./')
+                      mp3 = base / 'kaoyan-reader-v1' / sentence['mp3_path'].removeprefix('./')
+                      assert opus.is_file(), opus
+                      assert mp3.is_file(), mp3
+              extraction = json.loads((base / f'reports/extraction/{year}.json').read_text())
+              assert not extraction.get('suspected_contamination'), year
+          print('validated four complete merged candidates')
+          PY
+
+      - name: Install validated candidates into reader tree
+        run: |
+          for year in 2003 2004 2005 2006; do
+            src="/tmp/kaoyan-publish/$year"
+            rm -rf "kaoyan-reader-v1/content/$year/c" "kaoyan-reader-v1/audio/$year/v4"
+            mkdir -p "kaoyan-reader-v1/content/$year" "kaoyan-reader-v1/audio/$year" "kaoyan-reader-v1/reports" "reports/extraction"
+            cp -a "$src/kaoyan-reader-v1/content/$year/c" "kaoyan-reader-v1/content/$year/c"
+            cp -a "$src/kaoyan-reader-v1/audio/$year/v4" "kaoyan-reader-v1/audio/$year/v4"
+            cp "$src/kaoyan-reader-v1/reports/c-v4-$year-merge.json" "kaoyan-reader-v1/reports/c-v4-$year-merge.json"
+            cp "$src/reports/extraction/$year.json" "reports/extraction/$year.json"
+          done
+
+      - name: Rebuild catalog from reviewed sources
+        env:
+          PYTHONPATH: voice-pipeline:content-pipeline
+        run: |
+          for year in 2003 2004 2005 2006; do
+            python content-pipeline/build_curated_year.py --year "$year"
+          done
+
+      - name: Validate bilingual highlight coverage before publishing
+        env:
+          PYTHONPATH: voice-pipeline:content-pipeline
+        run: |
+          for year in 2003 2004 2005 2006; do
+            python content-pipeline/build_bilingual_highlights.py --year "$year"
+          done
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          expected={2003:71,2004:85,2005:24,2006:28}
+          for year,count in expected.items():
+              report=json.loads(Path(f'reports/bilingual-highlights/{year}.json').read_text())
+              assert report['errors']==[],report
+              assert report['required_occurrences']==count,(year,report)
+              assert report['required_occurrences']==report['mapped_occurrences']+report['reviewed_exceptions'],report
+              assert report['reviewed_exceptions']==0,report
+          print('validated complete bilingual highlight coverage')
+          PY
+
+      - name: Validate static reader contract
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          catalog = json.loads(Path('kaoyan-reader-v1/content/catalog.json').read_text())
+          expected = {2002: 6, 2003: 6, 2004: 6, 2005: 7, 2006: 7}
+          for year, count in expected.items():
+              rows = [x for x in catalog['articles'] if x['year'] == year]
+              assert len(rows) == count, (year, len(rows))
+              if year >= 2003:
+                  assert all(x['manifest'].startswith(f'./audio/{year}/v4/') for x in rows), year
+                  assert Path(f'kaoyan-reader-v1/content/{year}/bilingual-highlights.json').is_file(), year
+                  for row in rows:
+                      assert Path('kaoyan-reader-v1', row['content'].removeprefix('./')).is_file(), row['content']
+                      assert Path('kaoyan-reader-v1', row['manifest'].removeprefix('./')).is_file(), row['manifest']
+          print({'years': catalog['years'], 'articles': len(catalog['articles'])})
+          PY
+
+      - name: Commit validated batch and publish Pages branch
+        env:
+          SOURCE_RUN_ID: ${{ steps.source.outputs.run_id }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add kaoyan-reader-v1 reports/extraction reports/bilingual-highlights content-pipeline/voice_profiles content-pipeline/direction
+          if ! git diff --cached --quiet; then
+            git commit -m "feat: publish 2003-2006 C v4 batch from run $SOURCE_RUN_ID"
+          fi
+          git push --force origin HEAD:kaoyan-reader-v1
+          git push --force origin HEAD:gh-pages
