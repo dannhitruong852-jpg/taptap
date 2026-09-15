@@ -18,12 +18,17 @@ class CuratedCompilerTests(unittest.TestCase):
         inventory = root / 'reports/extraction/2007-2012-article-inventory.json'
         board = freeze / '2007-2012-production-board.json'
         inventory.parent.mkdir(parents=True)
+        highlights = root / 'content-pipeline/curated/bilingual-highlights'
+        highlights.mkdir(parents=True)
         actors = {}
         years = {}
         for year in YEARS:
             y = str(year)
             actors[y] = {unit: '01' for unit in UNITS}
             years[y] = {'source_filename': f'{year}.pdf', 'source_sha256': f'sha-{year}'}
+            (highlights / f'{year}.json').write_text(json.dumps({
+                'version': 1, 'year': year, 'articles': {'cloze': {'s01': []}}
+            }))
             directory = freeze / y
             directory.mkdir(parents=True)
             (directory / 'vocabulary-1-9.json').write_text(json.dumps({
@@ -77,6 +82,14 @@ class CuratedCompilerTests(unittest.TestCase):
         result = self.run_compiler(root)
         self.assertNotEqual(result.returncode, 0)
         self.assertIn('2011/text3', result.stderr + result.stdout)
+
+    def test_refuses_missing_bilingual_mapping(self):
+        td, root = self.fixture(frozen=True)
+        self.addCleanup(td.cleanup)
+        (root / 'content-pipeline/curated/bilingual-highlights/2012.json').unlink()
+        result = self.run_compiler(root)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('bilingual-highlights/2012.json', result.stderr + result.stdout)
 
     def test_refuses_missing_vocabulary(self):
         td, root = self.fixture(frozen=True)
