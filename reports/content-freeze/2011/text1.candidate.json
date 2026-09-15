@@ -1,0 +1,36 @@
+{
+  "year": 2011,
+  "article": {
+    "id": "text1",
+    "section_type": "reading",
+    "title": "阅读一 · 原文候选（待双语QA）",
+    "pages": [
+      3,
+      4
+    ],
+    "actor": "01",
+    "context": "已从项目真题 PDF 完整物化英文原文；当前仅作为原始候选，等待句级切分、中文对齐、词汇等级和双语高亮 QA。",
+    "rows": [
+      [
+        1,
+        "Ruth Simmons joined Goldman Sachs’s board as an outside director in January 2000; a year later she became president of Brown University. For the rest of the decade she apparently managed both roles without attracting much criticism. But by the end of 2009 Ms. Simmons was under fire for having sat on Goldman’s compensation committee; how could she have let those enormous bonus payouts pass unremarked? By February the next year Ms. Simmons had left the board. The position was just taking up too much time, she said. Outside directors are supposed to serve as helpful, yet less biased, advisers on a firm’s board. Having made their wealth and their reputations elsewhere, they presumably have enough independence to disagree with the chief executive’s proposals. If the sky, and the share price is falling, outside directors should be able to give advice based on having weathered their own crises. The researchers from Ohio University used a database that covered more than 10,000 firms and more than 64,000 different directors between 1989 and 2004. Then they simply checked which directors stayed from one proxy statement to the next. The most likely reason for departing a board was age, so the researchers concentrated on those “surprise” disappearances by directors under the age of 70. They found that after a surprise departure, the probability that the company will subsequently have to restate earnings increases by nearly 20%. The likelihood of being named in a federal class-action lawsuit also increases, and the stock is likely to perform worse. The effect tended to be larger for larger firms. Although a correlation between them leaving and subsequent bad performance at the firm is suggestive, it does not mean that such directors are always jumping off a sinking ship. Often they “trade up,” leaving riskier, smaller firms for larger and more stable firms. But the researchers believe that outside directors have an easier time of avoiding a blow to their reputations if they leave a firm before bad news breaks, even if a review of history shows they were on the board at the time any wrongdoing occurred. Firms who want to keep their outside directors through tough times may have to create incentives. Otherwise outside directors will follow the example of Ms. Simmons, once again very popular on campus.",
+        "",
+        "draft_source",
+        []
+      ]
+    ]
+  },
+  "qa": {
+    "source_pdf": "2011年考研英语二真题（可复制搜索查词）.pdf",
+    "source_sha256": "d756fdd06e9ae7c3ed6af30be23d1ec696b835ad006aa28d7d95795de75fc431",
+    "source_scope_verified": true,
+    "directions_excluded": true,
+    "question_stems_removed": true,
+    "options_removed": true,
+    "writing_excluded": true,
+    "translation_alignment_reviewed": false,
+    "sentence_count": 0,
+    "raw_text_materialized": true,
+    "status": "raw_candidate_pending_qa"
+  }
+}

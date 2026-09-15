@@ -1,0 +1,36 @@
+{
+  "year": 2011,
+  "article": {
+    "id": "text2",
+    "section_type": "reading",
+    "title": "阅读二 · 原文候选（待双语QA）",
+    "pages": [
+      5,
+      6
+    ],
+    "actor": "10",
+    "context": "已从项目真题 PDF 完整物化英文原文；当前仅作为原始候选，等待句级切分、中文对齐、词汇等级和双语高亮 QA。",
+    "rows": [
+      [
+        1,
+        "Whatever happened to the death of newspapers? A year ago the end seemed near. The recession threatened to remove the advertising and readers that had not already fled to the internet. Newspapers like the San Francisco Chronicle were chronicling their own doom. America’s Federal Trade Commission launched a round of talks about how to save newspapers. Should they become charitable corporations? Should the state subsidize them? It will hold another meeting soon. But the discussions now seem out of date. In much of the world there is little sign of crisis. German and Brazilian papers have shrugged off the recession. Even American newspapers, which inhabit the most troubled corner of the global industry, have not only survived but often returned to profit. Not the 20% profit margins that were routine a few years ago, but profit all the same. It has not been much fun. Many papers stayed afloat by pushing journalists overboard. The American Society of News Editors reckons that 13,500 newsroom jobs have gone since 2007. Readers are paying more for slimmer products. Some papers even had the nerve to refuse delivery to distant suburbs. Yet these desperate measures have proved the right ones and, sadly for many journalists, they can be pushed further. Newspapers are becoming more balanced businesses, with a healthier mix of revenues from readers and advertisers. American papers have long been highly unusual in their reliance on ads. Fully 87% of their revenues came from advertising in 2008, according to the Organization for Economic Cooperation & Development (OECD). In Japan the proportion is 35%. Not surprisingly, Japanese newspapers are much more stable. The whirlwind that swept through newsrooms harmed everybody, but much of the damage has been concentrated in areas where newspapers are least distinctive. Car and film reviewers have gone. So have science and general business reporters. Foreign bureaus have been savagely cut off. Newspapers are less complete as a result. But completeness is no longer a virtue in the newspaper business.",
+        "",
+        "draft_source",
+        []
+      ]
+    ]
+  },
+  "qa": {
+    "source_pdf": "2011年考研英语二真题（可复制搜索查词）.pdf",
+    "source_sha256": "d756fdd06e9ae7c3ed6af30be23d1ec696b835ad006aa28d7d95795de75fc431",
+    "source_scope_verified": true,
+    "directions_excluded": true,
+    "question_stems_removed": true,
+    "options_removed": true,
+    "writing_excluded": true,
+    "translation_alignment_reviewed": false,
+    "sentence_count": 0,
+    "raw_text_materialized": true,
+    "status": "raw_candidate_pending_qa"
+  }
+}

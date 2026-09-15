@@ -1,0 +1,35 @@
+{
+  "year": 2011,
+  "article": {
+    "id": "translation",
+    "section_type": "translation",
+    "title": "翻译 · 原文候选（待双语QA）",
+    "pages": [
+      13
+    ],
+    "actor": "05",
+    "context": "已从项目真题 PDF 完整物化英文原文；当前仅作为原始候选，等待句级切分、中文对齐、词汇等级和双语高亮 QA。",
+    "rows": [
+      [
+        1,
+        "Who would have thought that, globally, the IT industry produces about the same volume of greenhouse gases as the world’s airlines do – roughly 2 percent of all CO2 emissions? Many everyday tasks take a surprising toll on the environment. A Google search can leak between 0.2 and 7.0 grams of CO2, depending on how many attempts are needed to get the “right” answer. To deliver results to its users quickly, then, Google has to maintain vast data centres around the world, packed with powerful computers. While producing large quantities of CO2, these computers emit a great deal of heat, so the centres need to be well air-conditioned, which uses even more energy. However, Google and other big tech providers monitor their efficiency closely and make improvements. Monitoring is the first step on the road to reduction, but there is much more to be done, and not just by big companies.",
+        "",
+        "draft_source",
+        []
+      ]
+    ]
+  },
+  "qa": {
+    "source_pdf": "2011年考研英语二真题（可复制搜索查词）.pdf",
+    "source_sha256": "d756fdd06e9ae7c3ed6af30be23d1ec696b835ad006aa28d7d95795de75fc431",
+    "source_scope_verified": true,
+    "directions_excluded": true,
+    "question_stems_removed": true,
+    "options_removed": true,
+    "writing_excluded": true,
+    "translation_alignment_reviewed": false,
+    "sentence_count": 0,
+    "raw_text_materialized": true,
+    "status": "raw_candidate_pending_qa"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "year": 2011,
+  "article": {
+    "id": "cloze",
+    "section_type": "cloze",
+    "title": "完型 · 原文候选（待双语QA）",
+    "pages": [
+      1,
+      2
+    ],
+    "actor": "05",
+    "context": "已从项目真题 PDF 完整物化英文原文；当前仅作为原始候选，等待句级切分、中文对齐、词汇等级和双语高亮 QA。",
+    "rows": [
+      [
+        1,
+        "The Internet affords anonymity to its users, a blessing to privacy and freedom of speech. But that very anonymity is also behind the explosion of cyber-crime that has 1 across the Web. Can privacy be preserved 2 bringing safety and security to a world that seems increasingly 3 ? Last month, Howard Schmidt, the nation’s cyber-czar, offered the federal government a 4 to make the Web a safer place – a “voluntary trusted identity” system that would be the high-tech 5 of a physical key, a fingerprint and a photo ID card, all rolled 6 one. The system might use a smart identity card, or a digital credential 7 to a specific computer, and would authenticate users at a range of online services. The idea is to 8 a federation of private online identity systems. Users could 9 which system to join, and only registered users whose identities have been authenticated could navigate those systems. The approach contrasts with one that would require an Internet driver’s license 10 by the government. Google and Microsoft are among companies that already have these “single sign-on” systems that make it possible for users to 11 just once but use many different services. 12 , the approach would create a “walled garden” in cyberspace, with safe “neighborhoods” and bright “streetlights” to establish a sense of a 13 community. Mr. Schmidt described it as a “voluntary ecosystem” in which “individuals and organizations can complete online transactions with 14 , trusting the identities of each other and the identities of the infrastructure 15 which the transaction runs.” Still, the administration’s plan has 16 privacy rights activists. Some applaud the approach; others are concerned. It seems clear that such a scheme is an initiative push toward what would 17 be a compulsory Internet “driver’s license” mentality. The plan has also been greeted with 18 by some computer security experts, who worry that the “voluntary ecosystem” envisioned by Mr. Schmidt would still leave much of the Internet 19 . They argue that all Internet users should be 20 to register and identify themselves, in the same way that drivers must be licensed to drive on public roads.",
+        "",
+        "draft_source",
+        []
+      ]
+    ]
+  },
+  "qa": {
+    "source_pdf": "2011年考研英语二真题（可复制搜索查词）.pdf",
+    "source_sha256": "d756fdd06e9ae7c3ed6af30be23d1ec696b835ad006aa28d7d95795de75fc431",
+    "source_scope_verified": true,
+    "directions_excluded": true,
+    "question_stems_removed": true,
+    "options_removed": true,
+    "writing_excluded": true,
+    "translation_alignment_reviewed": false,
+    "sentence_count": 0,
+    "raw_text_materialized": true,
+    "status": "raw_candidate_pending_qa",
+    "blanks_restored": false
+  }
+}
