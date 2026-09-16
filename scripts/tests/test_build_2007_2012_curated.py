@@ -91,6 +91,19 @@ class CuratedCompilerTests(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertIn('bilingual-highlights/2012.json', result.stderr + result.stdout)
 
+    def test_refuses_empty_bilingual_mapping_skeleton(self):
+        td, root = self.fixture(frozen=True)
+        self.addCleanup(td.cleanup)
+        mapping_path = root / 'content-pipeline/curated/bilingual-highlights/2012.json'
+        mapping_path.write_text(json.dumps({
+            'year': 2012,
+            'articles': {unit: {} for unit in UNITS},
+            'reviewed_exceptions': [],
+        }))
+        result = self.run_compiler(root)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('bilingual-highlights/2012.json', result.stderr + result.stdout)
+
     def test_refuses_missing_vocabulary(self):
         td, root = self.fixture(frozen=True)
         self.addCleanup(td.cleanup)
