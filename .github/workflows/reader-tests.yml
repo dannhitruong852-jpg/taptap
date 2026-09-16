@@ -26,6 +26,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Audit 2011-2012 sentence boundaries
+        run: python scripts/audit_2011_2012_sentence_boundaries.py
       - name: Run reader unit and contract tests
         working-directory: kaoyan-reader-v1
         run: npm test
