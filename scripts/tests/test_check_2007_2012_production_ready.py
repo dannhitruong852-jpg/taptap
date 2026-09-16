@@ -32,7 +32,7 @@ class ProductionReadyTests(unittest.TestCase):
                         'id': unit,
                         'rows': [[1, 'Body.', '正文。', 'report', []]],
                     },
-                    'qa': {'sentence_count': 1},
+                    'qa': {'sentence_count': 1, 'source_scope_verified': True},
                 }, ensure_ascii=False))
             (year_dir / 'vocabulary-1-9.json').write_text(json.dumps({
                 'year': year,
@@ -76,6 +76,18 @@ class ProductionReadyTests(unittest.TestCase):
         result = self.run_checker(root)
         report = json.loads(result.stdout)
         self.assertIn('2012/text1', report['candidate_errors'])
+        self.assertFalse(report['ready'])
+
+    def test_missing_source_scope_verified_is_reported_as_candidate_error(self):
+        td, root = self.fixture()
+        self.addCleanup(td.cleanup)
+        path = root / 'reports/content-freeze/2007/cloze.candidate.json'
+        doc = json.loads(path.read_text())
+        doc['qa'].pop('source_scope_verified')
+        path.write_text(json.dumps(doc, ensure_ascii=False))
+        result = self.run_checker(root)
+        report = json.loads(result.stdout)
+        self.assertIn('2007/cloze', report['candidate_errors'])
         self.assertFalse(report['ready'])
 
 
