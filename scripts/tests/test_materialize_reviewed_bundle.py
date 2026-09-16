@@ -38,6 +38,17 @@ class T(unittest.TestCase):
             self.assertEqual(''.join(r[1] for r in doc['article']['rows']),'Alpha.Beta?')
             self.assertEqual(''.join(r[2] for r in doc['article']['rows']),'甲。乙？')
 
+    def test_rejects_unaligned_chinese_sentence_boundaries(self):
+        with tempfile.TemporaryDirectory() as td:
+            td=Path(td); bundle=td/'x.tgz'; root=td/'out'
+            self._write_bundle(
+                bundle,
+                [[1,'Alpha.|Beta?','甲乙。','explain',[]]],
+                {'sentence_count':2},
+            )
+            with self.assertRaises(ValueError):
+                materialize(bundle,root)
+
     def test_rejects_path_traversal(self):
         with tempfile.TemporaryDirectory() as td:
             td=Path(td); bundle=td/'x.tgz'
