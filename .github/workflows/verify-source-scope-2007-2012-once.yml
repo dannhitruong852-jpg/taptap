@@ -1,0 +1,105 @@
+name: Verify source scope 2007-2012 once
+
+on:
+  push:
+    branches:
+      - c-v4-article-preview-actual
+    paths:
+      - '.github/workflows/verify-source-scope-2007-2012-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  verify-and-mark:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: c-v4-article-preview-actual
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Verify every candidate against source inventory and reviewed QA
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path('.')
+          inventory = json.loads((root / 'reports/extraction/2007-2012-article-inventory.json').read_text(encoding='utf-8'))
+          units = ('cloze','text1','text2','text3','text4','partb','translation')
+          verified = []
+          errors = []
+
+          for year in range(2007, 2013):
+              source = inventory['years'][str(year)]
+              for unit in units:
+                  path = root / 'reports/content-freeze' / str(year) / f'{unit}.candidate.json'
+                  if not path.is_file():
+                      errors.append(f'{year}/{unit}: missing candidate')
+                      continue
+                  doc = json.loads(path.read_text(encoding='utf-8'))
+                  article = doc.get('article') or {}
+                  qa = doc.get('qa') or {}
+                  rows = article.get('rows') or []
+                  checks = {
+                      'year': int(doc.get('year', -1)) == year,
+                      'article_id': article.get('id') == unit,
+                      'rows_nonempty': bool(rows),
+                      'source_pdf': qa.get('source_pdf') == source['source_filename'],
+                      'source_sha256': qa.get('source_sha256') == source['source_sha256'],
+                      'sentence_alignment_reviewed': qa.get('sentence_alignment_reviewed') is True,
+                      'writing_excluded': qa.get('writing_excluded') is True,
+                  }
+                  if qa.get('sentence_count') is not None:
+                      checks['sentence_count'] = int(qa['sentence_count']) == len(rows)
+                  failed = [name for name, ok in checks.items() if not ok]
+                  if failed:
+                      errors.append(f"{year}/{unit}: {','.join(failed)}")
+                      continue
+                  verified.append(str(path))
+
+          print(json.dumps({'verified': len(verified), 'errors': errors}, ensure_ascii=False))
+          if errors or len(verified) != 42:
+              raise SystemExit('source scope audit failed')
+
+          for name in verified:
+              path = Path(name)
+              doc = json.loads(path.read_text(encoding='utf-8'))
+              doc.setdefault('qa', {})['source_scope_verified'] = True
+              path.write_text(json.dumps(doc, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          PY
+
+      - name: Verify production checker now sees all candidate scopes
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          units=('cloze','text1','text2','text3','text4','partb','translation')
+          count=0
+          for year in range(2007,2013):
+              for unit in units:
+                  doc=json.loads(Path(f'reports/content-freeze/{year}/{unit}.candidate.json').read_text(encoding='utf-8'))
+                  assert (doc.get('qa') or {}).get('source_scope_verified') is True,(year,unit)
+                  count += 1
+          assert count == 42,count
+          print({'source_scope_verified': count})
+          PY
+          python -m unittest scripts/tests/test_check_2007_2012_production_ready.py -v
+
+      - name: Commit verified candidate QA metadata
+        run: |
+          set -euo pipefail
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add reports/content-freeze/2007 reports/content-freeze/2008 reports/content-freeze/2009 reports/content-freeze/2010 reports/content-freeze/2011 reports/content-freeze/2012
+          if git diff --cached --quiet; then
+            echo 'No source-scope metadata changes to commit'
+          else
+            git commit -m 'content: verify 2007-2012 candidate source scope'
+            git push origin HEAD:c-v4-article-preview-actual
+          fi
