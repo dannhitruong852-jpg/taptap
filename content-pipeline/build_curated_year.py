@@ -40,6 +40,28 @@ PROFILES = {
     'evaluation_quote': ('serious', 'strong', .97, 115),
 }
 
+# Reviewed candidates created before the canonical C-mode discourse vocabulary
+# used a small set of equivalent legacy labels. Normalize them at compile time
+# instead of rewriting already-reviewed English/Chinese candidate content.
+LEGACY_DISCOURSE_ALIASES = {
+    'analogy': 'compare',
+    'evidence': 'explain',
+    'turn': 'contrast',
+    'opening': 'advance',
+    'quote': 'dialogue',
+    'consequence': 'conclude',
+    'correct': 'contrast',
+    'history': 'sequence',
+    'detail': 'explain',
+    'comparison': 'compare',
+    'define': 'explain',
+    'transition': 'advance',
+}
+
+
+def canonical_discourse(label: str) -> str:
+    return LEGACY_DISCOURSE_ALIASES.get(label, label)
+
 
 def write_json(path: Path, value) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -86,9 +108,10 @@ def compile_article(source: dict, item: dict) -> dict:
     lexicon = source.get('vocabulary', {})
     overrides = item.get('segment_overrides', {})
     for number, row in enumerate(item['rows'], 1):
-        paragraph, marked, zh, discourse, focus = row
+        paragraph, marked, zh, raw_discourse, focus = row
+        discourse = canonical_discourse(raw_discourse)
         if discourse not in PROFILES:
-            raise ValueError(f'{article_id}/s{number:02d}: unknown discourse function {discourse}')
+            raise ValueError(f'{article_id}/s{number:02d}: unknown discourse function {raw_discourse}')
         en = marked.replace('|', '')
         emotion, contrast, rate, pause = PROFILES[discourse]
         sentence = {
@@ -176,7 +199,7 @@ def build_voice_profiles(source: dict) -> dict:
         profile.setdefault('speaker_persona', item['context'])
         profile.setdefault('preferred_age_impression', item.get('preferred_age_impression', 'adult'))
         profile['primary_actor_id'] = str(item['actor']).zfill(2)
-        profile.setdefault('article_arc', item.get('article_arc', [row[3] for row in item['rows']]))
+        profile.setdefault('article_arc', item.get('article_arc', [canonical_discourse(row[3]) for row in item['rows']]))
         profiles[item['id']] = profile
     return {'schema_version':'c-v4-article-voice-profiles-1','year':int(source['year']),'profiles':profiles}
 
