@@ -6,6 +6,7 @@ on:
       - c-v4-article-preview-actual
     paths:
       - '.github/workflows/apply-2007-2012-semantic-overrides-once.yml'
+      - 'reports/2007-2012-staging/semantic-overrides/**'
 
 permissions:
   contents: write
