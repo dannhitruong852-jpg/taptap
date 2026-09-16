@@ -22,14 +22,27 @@ jobs:
         with: {python-version: '3.11'}
       - name: Run materializer tests
         run: python -m unittest scripts/tests/test_materialize_reviewed_bundle.py scripts/tests/test_repair_base64_bundle.py -v
+      - name: Detect reviewed bundle
+        id: bundle
+        shell: bash
+        run: |
+          if compgen -G 'reports/content-freeze/reviewed-2011-2012.tar.gz.b64.*' > /dev/null; then
+            echo 'present=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'present=false' >> "$GITHUB_OUTPUT"
+            echo 'No reviewed bundle parts present; validation-only run.'
+          fi
       - name: Reassemble and verify bundle
+        if: steps.bundle.outputs.present == 'true'
         shell: bash
         run: |
           python scripts/repair_base64_bundle.py 'reports/content-freeze/reviewed-2011-2012.tar.gz.b64.*' /tmp/reviewed.tar.gz
           gzip -t /tmp/reviewed.tar.gz
       - name: Materialize reviewed candidates
+        if: steps.bundle.outputs.present == 'true'
         run: python scripts/materialize_reviewed_bundle.py /tmp/reviewed.tar.gz reports/content-freeze
       - name: Commit reviewed candidates
+        if: steps.bundle.outputs.present == 'true'
         shell: bash
         run: |
           git config user.name github-actions[bot]
