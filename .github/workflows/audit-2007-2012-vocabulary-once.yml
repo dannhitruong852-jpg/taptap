@@ -1,0 +1,62 @@
+name: Audit 2007-2012 vocabulary once
+
+on:
+  push:
+    branches: [c-v4-article-preview-actual]
+    paths:
+      - '.github/workflows/audit-2007-2012-vocabulary-once.yml'
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Audit vocabulary inventories
+        run: |
+          python - <<'PY'
+          import json, re
+          from pathlib import Path
+          import sys
+          sys.path.insert(0, 'content-pipeline')
+          from build_curated_year import load_curated_source
+
+          root=Path('.')
+          print('=== CURATED 2002-2006 ===')
+          for year in range(2002,2007):
+              src=load_curated_source(root/'content-pipeline/curated', year)
+              vocab=src.get('vocabulary') or {}
+              levels={i:0 for i in range(1,10)}
+              for entry in vocab.values():
+                  if isinstance(entry,list) and entry and isinstance(entry[0],int):
+                      levels[entry[0]]=levels.get(entry[0],0)+1
+              print(year, 'lexicon=',len(vocab),'level6plus=',sum(v for k,v in levels.items() if k>=6),'levels=',levels)
+
+          print('=== FREEZE 2007-2012 ===')
+          units=('cloze','text1','text2','text3','text4','partb','translation')
+          for year in range(2007,2013):
+              raw=json.loads((root/f'reports/content-freeze/{year}/vocabulary-1-9.json').read_text(encoding='utf-8'))
+              vocab=raw.get('vocabulary',raw)
+              levels={i:0 for i in range(1,10)}
+              for entry in vocab.values():
+                  if isinstance(entry,list) and entry and isinstance(entry[0],int):
+                      levels[entry[0]]=levels.get(entry[0],0)+1
+              occ=0; occ6=0
+              seen=[]
+              for unit in units:
+                  doc=json.loads((root/f'reports/content-freeze/{year}/{unit}.candidate.json').read_text(encoding='utf-8'))
+                  for row in doc['article']['rows']:
+                      en=row[1].replace('|','')
+                      for lemma,entry in vocab.items():
+                          level=entry[0]
+                          variants=[lemma,*entry[2:]]
+                          for surface in variants:
+                              hits=list(re.finditer(r'(?<![\\w-])'+re.escape(surface)+r'(?![\\w-])',en,flags=re.I))
+                              if hits:
+                                  occ+=len(hits)
+                                  if level>=6: occ6+=len(hits)
+                                  seen.append((unit,lemma,len(hits),level))
+              print(year,'lexicon=',len(vocab),'level6plus=',sum(v for k,v in levels.items() if k>=6),'occurrences=',occ,'occ6plus=',occ6,'levels=',levels,'seen=',seen[:20])
+          PY
