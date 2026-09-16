@@ -6,9 +6,10 @@ def merge_catalogs(existing, batch):
     old = {row['id']: row for row in result.get('articles', [])}
     additions = {row['id']: row for row in batch.get('articles', [])}
 
-    overlap = sorted(set(old) & set(additions))
-    if overlap:
-        raise ValueError(f'batch attempts to overwrite existing article ids: {overlap}')
+    for article_id in sorted(set(old) & set(additions)):
+        if old[article_id] != additions[article_id]:
+            raise ValueError(f'batch attempts to overwrite existing article id: {article_id}')
+        additions.pop(article_id)
 
     merged = list(old.values()) + list(additions.values())
     merged.sort(key=lambda row: (row.get('year', 0), row.get('id', '')))
