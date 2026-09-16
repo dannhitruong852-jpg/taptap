@@ -1,5 +1,6 @@
 name: Promote and freeze 2007-2012 once
 
+# Manual retrigger after actor-plan consistency repair.
 on:
   push:
     branches:
