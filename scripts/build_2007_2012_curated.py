@@ -32,7 +32,12 @@ def require_frozen(root: Path):
                 f'production blocked: bilingual-highlights/{year}.json is missing'
             )
         mapping = load_json(mapping_path)
-        if int(mapping.get('year', -1)) != year or not mapping.get('articles'):
+        articles = mapping.get('articles')
+        has_sentence_mapping = (
+            isinstance(articles, dict)
+            and any(isinstance(sentence_map, dict) and bool(sentence_map) for sentence_map in articles.values())
+        )
+        if int(mapping.get('year', -1)) != year or not has_sentence_mapping:
             raise SystemExit(
                 f'production blocked: bilingual-highlights/{year}.json is invalid'
             )
