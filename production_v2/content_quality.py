@@ -1,12 +1,13 @@
 import json
 from pathlib import Path
 
-REQUIRED_REVIEW_FLAGS = (
+LEGACY_REVIEW_MAX_YEAR = 2012
+V2_REVIEW_SCHEMA = 'c-mode-v2-1'
+V2_REQUIRED_REVIEW_FLAGS = (
     'source_scope_verified',
-    'question_stems_removed',
-    'options_removed',
-    'ocr_corrections_reviewed',
-    'negation_and_comparison_reviewed',
+    'scope_exclusions_reviewed',
+    'text_fidelity_reviewed',
+    'translation_alignment_reviewed',
     'sentence_alignment_reviewed',
 )
 
@@ -40,6 +41,27 @@ def _article_slug(entry):
     prefix=f'{year}-'
     article_id=entry['id']
     return article_id[len(prefix):] if article_id.startswith(prefix) else article_id
+
+
+def _validate_review_evidence(year, full_id, qa, errors):
+    # Historical 2002-2012 candidates predate a normalized QA schema. Do not
+    # invent evidence retroactively: require the external scope verification
+    # that was actually recorded, then rely on the structural/text checks below.
+    if qa.get('source_scope_verified') is not True:
+        errors.append(f'{full_id}: review evidence source_scope_verified must be true')
+
+    if int(year) <= LEGACY_REVIEW_MAX_YEAR:
+        return
+
+    # Every new V2 batch must use one explicit, stable review schema so future
+    # production never falls back to the heterogeneous legacy evidence model.
+    if qa.get('review_schema_version') != V2_REVIEW_SCHEMA:
+        errors.append(
+            f'{full_id}: review_schema_version must be {V2_REVIEW_SCHEMA}'
+        )
+    for flag in V2_REQUIRED_REVIEW_FLAGS:
+        if qa.get(flag) is not True:
+            errors.append(f'{full_id}: review evidence {flag} must be true')
 
 
 def _validate_mapping(article_id, sentences, article_mapping, errors):
@@ -134,9 +156,7 @@ def validate_content_quality(manifest, catalog, root):
             continue
 
         qa=candidate.get('qa') or {}
-        for flag in REQUIRED_REVIEW_FLAGS:
-            if qa.get(flag) is not True:
-                errors.append(f'{full_id}: review evidence {flag} must be true')
+        _validate_review_evidence(year, full_id, qa, errors)
         carticle=candidate.get('article') or {}
         rows=carticle.get('rows') or []
         if int(candidate.get('year',-1)) != year or carticle.get('id') != article:
@@ -145,6 +165,10 @@ def validate_content_quality(manifest, catalog, root):
             errors.append(f'{full_id}: reviewed candidate has no rows')
         if qa.get('sentence_count') is not None and int(qa['sentence_count']) != len(rows):
             errors.append(f'{full_id}: candidate sentence_count mismatch')
+        if qa.get('expected_sentences') is not None and int(qa['expected_sentences']) != len(rows):
+            errors.append(f'{full_id}: candidate expected_sentences mismatch')
+        if qa.get('actual_sentences') is not None and int(qa['actual_sentences']) != len(rows):
+            errors.append(f'{full_id}: candidate actual_sentences mismatch')
 
         sentences=compiled.get('sentences') or []
         if len(rows) != len(sentences):
