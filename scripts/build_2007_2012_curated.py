@@ -57,9 +57,16 @@ def compile_year(root: Path, output_dir: Path, inventory: dict, board: dict, yea
         article = candidate.get('article') or {}
         if article.get('id') != unit:
             raise SystemExit(f'{year}/{unit}: candidate article id mismatch')
-        if not article.get('rows'):
+        rows = article.get('rows') or []
+        if not rows:
             raise SystemExit(f'{year}/{unit}: candidate rows missing')
-        if not (candidate.get('qa') or {}).get('source_scope_verified'):
+        qa = candidate.get('qa') or {}
+        sentence_count = qa.get('sentence_count')
+        if sentence_count is not None and int(sentence_count) != len(rows):
+            raise SystemExit(
+                f'{year}/{unit}: sentence_count={sentence_count} rows={len(rows)}'
+            )
+        if not qa.get('source_scope_verified'):
             raise SystemExit(f'{year}/{unit}: source_scope_verified is not true')
         planned_actor = str(actor_plan[unit]).zfill(2)
         candidate_actor = str(article.get('actor', planned_actor)).zfill(2)
@@ -67,10 +74,10 @@ def compile_year(root: Path, output_dir: Path, inventory: dict, board: dict, yea
             raise SystemExit(
                 f'{year}/{unit}: actor mismatch candidate={candidate_actor} plan={planned_actor}'
             )
-        candidate_sha = (candidate.get('qa') or {}).get('source_sha256')
+        candidate_sha = qa.get('source_sha256')
         if candidate_sha and candidate_sha != source_meta['source_sha256']:
             raise SystemExit(f'{year}/{unit}: source_sha256 mismatch')
-        candidate_pdf = (candidate.get('qa') or {}).get('source_pdf')
+        candidate_pdf = qa.get('source_pdf')
         if candidate_pdf and candidate_pdf != source_meta['source_filename']:
             raise SystemExit(f'{year}/{unit}: source_filename mismatch')
         articles.append({
@@ -80,7 +87,7 @@ def compile_year(root: Path, output_dir: Path, inventory: dict, board: dict, yea
             'pages': article.get('pages', []),
             'actor': planned_actor,
             'context': article['context'],
-            'rows': article['rows'],
+            'rows': rows,
             'editorial_status': 'reviewed_candidate',
         })
     vocabulary_path = root / 'reports/content-freeze' / y / 'vocabulary-1-9.json'
