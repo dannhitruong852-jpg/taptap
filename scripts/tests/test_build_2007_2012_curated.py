@@ -83,6 +83,18 @@ class CuratedCompilerTests(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertIn('2011/text3', result.stderr + result.stdout)
 
+    def test_refuses_sentence_count_that_does_not_match_rows(self):
+        td, root = self.fixture(frozen=True)
+        self.addCleanup(td.cleanup)
+        path = root / 'reports/content-freeze/2012/text1.candidate.json'
+        doc = json.loads(path.read_text())
+        doc['article']['rows'] = [[1, 'One.|Two.', '第一句。第二句。', 'report', []]]
+        doc['qa']['sentence_count'] = 2
+        path.write_text(json.dumps(doc, ensure_ascii=False))
+        result = self.run_compiler(root)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('2012/text1: sentence_count=2 rows=1', result.stderr + result.stdout)
+
     def test_refuses_missing_bilingual_mapping(self):
         td, root = self.fixture(frozen=True)
         self.addCleanup(td.cleanup)
