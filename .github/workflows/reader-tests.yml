@@ -39,6 +39,8 @@ jobs:
             content-pipeline/tests/test_build_curated_year.py \
             scripts/tests/test_build_2007_2012_curated.py \
             scripts/tests/test_check_2007_2012_production_ready.py -v
+      - name: Report 2007-2012 production readiness
+        run: python scripts/check_2007_2012_production_ready.py
       - name: Rebuild and validate reviewed bilingual mappings
         env:
           PYTHONPATH: voice-pipeline:content-pipeline
