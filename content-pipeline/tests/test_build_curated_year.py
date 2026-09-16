@@ -68,6 +68,24 @@ class BuildCuratedYearTests(unittest.TestCase):
         doc = build_curated_year.compile_article(source, item)
         self.assertEqual(doc['sentences'][0]['en'], 'One two.')
 
+    def test_legacy_discourse_labels_compile_through_canonical_aliases(self):
+        source = {'year': 2010, 'source_sha256': 'abc', 'vocabulary': {}}
+        labels = [
+            'analogy', 'evidence', 'turn', 'opening', 'quote', 'consequence',
+            'correct', 'history', 'detail', 'comparison', 'define', 'transition',
+        ]
+        expected = [
+            'compare', 'explain', 'contrast', 'advance', 'dialogue', 'conclude',
+            'contrast', 'sequence', 'explain', 'compare', 'explain', 'advance',
+        ]
+        item = {
+            'id': 'text1', 'section_type': 'reading', 'title': 'legacy', 'actor': '01', 'context': 'x',
+            'rows': [[1, f'Sentence {i}.', f'句子{i}。', label, []] for i, label in enumerate(labels, 1)],
+        }
+        doc = build_curated_year.compile_article(source, item)
+        self.assertEqual([s['discourse_function'] for s in doc['sentences']], expected)
+        self.assertEqual(validate_article(doc), [])
+
     def test_main_source_loader_supports_gzip(self):
         import gzip, json, tempfile
         with tempfile.TemporaryDirectory() as td:
