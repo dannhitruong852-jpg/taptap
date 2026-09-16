@@ -55,7 +55,7 @@ class BilingualOccurrenceAuthoringTest(unittest.TestCase):
         mapping, unresolved = build_bilingual.build_article_mapping(2007, candidate, vocabulary)
         entries = mapping['articles']['text1']['s01']
         self.assertEqual(entries[0]['en_text'], 'contradictory')
-        self.assertEqual(entries[0]['zh_spans'][0]['text'], '矛盾')
+        self.assertEqual(entries[0]['zh_spans'][0]['text'], '矛盾的')
         self.assertEqual(len(unresolved), 1)
         self.assertEqual(unresolved[0]['lemma'], 'regime')
         self.assertEqual(unresolved[0]['zh'], '旧制度发生了变化。')
