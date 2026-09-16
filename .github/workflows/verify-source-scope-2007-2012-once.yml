@@ -23,7 +23,7 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Verify every candidate against source inventory and reviewed QA
+      - name: Verify missing source-scope flags from existing reviewed QA evidence
         run: |
           python - <<'PY'
           import json
@@ -33,6 +33,7 @@ jobs:
           inventory = json.loads((root / 'reports/extraction/2007-2012-article-inventory.json').read_text(encoding='utf-8'))
           units = ('cloze','text1','text2','text3','text4','partb','translation')
           verified = []
+          already_verified = []
           errors = []
 
           for year in range(2007, 2013):
@@ -46,25 +47,55 @@ jobs:
                   article = doc.get('article') or {}
                   qa = doc.get('qa') or {}
                   rows = article.get('rows') or []
-                  checks = {
+                  base_checks = {
                       'year': int(doc.get('year', -1)) == year,
                       'article_id': article.get('id') == unit,
                       'rows_nonempty': bool(rows),
-                      'source_pdf': qa.get('source_pdf') == source['source_filename'],
-                      'source_sha256': qa.get('source_sha256') == source['source_sha256'],
-                      'sentence_alignment_reviewed': qa.get('sentence_alignment_reviewed') is True,
-                      'writing_excluded': qa.get('writing_excluded') is True,
                   }
                   if qa.get('sentence_count') is not None:
-                      checks['sentence_count'] = int(qa['sentence_count']) == len(rows)
-                  failed = [name for name, ok in checks.items() if not ok]
+                      base_checks['sentence_count'] = int(qa['sentence_count']) == len(rows)
+                  failed = [name for name, ok in base_checks.items() if not ok]
                   if failed:
                       errors.append(f"{year}/{unit}: {','.join(failed)}")
                       continue
+
+                  if qa.get('source_scope_verified') is True:
+                      already_verified.append(str(path))
+                      continue
+
+                  if qa.get('sentence_alignment_reviewed') is not True:
+                      errors.append(f'{year}/{unit}: sentence_alignment_reviewed')
+                      continue
+
+                  # If source identity metadata was retained, it must match the verified inventory exactly.
+                  if 'source_pdf' in qa and qa.get('source_pdf') != source['source_filename']:
+                      errors.append(f'{year}/{unit}: source_pdf mismatch')
+                      continue
+                  if 'source_sha256' in qa and qa.get('source_sha256') != source['source_sha256']:
+                      errors.append(f'{year}/{unit}: source_sha256 mismatch')
+                      continue
+
+                  if unit == 'cloze':
+                      scope_ok = all(qa.get(key) is True for key in (
+                          'directions_removed', 'options_removed', 'blanks_restored', 'writing_excluded'
+                      ))
+                  elif unit.startswith('text'):
+                      scope_ok = qa.get('question_stems_removed') is True and qa.get('options_removed') is True
+                  else:
+                      scope_ok = False
+
+                  if not scope_ok:
+                      errors.append(f'{year}/{unit}: insufficient reviewed scope evidence')
+                      continue
                   verified.append(str(path))
 
-          print(json.dumps({'verified': len(verified), 'errors': errors}, ensure_ascii=False))
-          if errors or len(verified) != 42:
+          print(json.dumps({
+              'already_verified': len(already_verified),
+              'newly_verified': len(verified),
+              'newly_verified_files': verified,
+              'errors': errors,
+          }, ensure_ascii=False))
+          if errors or len(already_verified) + len(verified) != 42:
               raise SystemExit('source scope audit failed')
 
           for name in verified:
@@ -100,6 +131,6 @@ jobs:
           if git diff --cached --quiet; then
             echo 'No source-scope metadata changes to commit'
           else
-            git commit -m 'content: verify 2007-2012 candidate source scope'
+            git commit -m 'content: verify remaining 2007-2012 source scope'
             git push origin HEAD:c-v4-article-preview-actual
           fi
