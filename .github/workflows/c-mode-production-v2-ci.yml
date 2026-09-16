@@ -1,0 +1,73 @@
+name: C Mode Production V2 CI
+
+on:
+  push:
+    branches:
+      - c-mode-production-v2
+      - c-v4-article-preview-actual
+    paths:
+      - 'production_v2/**'
+      - '.github/workflows/c-mode-production-v2.yml'
+      - '.github/workflows/c-mode-production-v2-ci.yml'
+      - 'PRODUCTION_RULES.md'
+      - 'docs/superpowers/specs/2026-09-17-c-mode-production-pipeline-v2-design.md'
+      - 'docs/production/**'
+      - 'batch-manifests/**'
+  pull_request:
+    paths:
+      - 'production_v2/**'
+      - '.github/workflows/c-mode-production-v2.yml'
+      - '.github/workflows/c-mode-production-v2-ci.yml'
+      - 'PRODUCTION_RULES.md'
+      - 'docs/superpowers/specs/2026-09-17-c-mode-production-pipeline-v2-design.md'
+      - 'docs/production/**'
+      - 'batch-manifests/**'
+
+permissions:
+  contents: read
+
+jobs:
+  v2-core:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run V2 regression suite
+        run: python -m unittest discover -s production_v2/tests -v
+      - name: Prove current production catalog is self-preserving
+        run: |
+          python -m production_v2.cli_release_guard \
+            --old kaoyan-reader-v1/content/catalog.json \
+            --new kaoyan-reader-v1/content/catalog.json \
+            --report /tmp/current-release-guard.json
+      - name: Prove destructive release is rejected
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          src=json.loads(Path('kaoyan-reader-v1/content/catalog.json').read_text())
+          bad=dict(src)
+          bad['articles']=[row for row in src['articles'] if row.get('year') != 2003]
+          bad['years']=sorted({row['year'] for row in bad['articles']})
+          Path('/tmp/destructive-catalog.json').write_text(json.dumps(bad,indent=2)+'\n')
+          PY
+          if python -m production_v2.cli_release_guard \
+            --old kaoyan-reader-v1/content/catalog.json \
+            --new /tmp/destructive-catalog.json \
+            --report /tmp/destructive-release-guard.json; then
+            echo 'release guard incorrectly accepted destructive candidate' >&2
+            exit 1
+          fi
+
+  reader-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run Reader regression tests
+        working-directory: kaoyan-reader-v1
+        run: npm test

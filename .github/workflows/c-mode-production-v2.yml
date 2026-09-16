@@ -1,0 +1,694 @@
+name: C Mode Production Pipeline V2
+
+on:
+  workflow_dispatch:
+    inputs:
+      batch_manifest:
+        description: Committed batch manifest path, for example batch-manifests/2013-2018.json
+        required: true
+        type: string
+      publish:
+        description: Publish validated release candidate to gh-pages
+        required: true
+        default: false
+        type: boolean
+      shards:
+        description: Audio render shards per article
+        required: true
+        default: '3'
+        type: string
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: c-mode-production-v2-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  PYTHONPATH: .:voice-pipeline:content-pipeline
+  HF_HOME: /tmp/chatterbox-hf-cache
+  OMP_NUM_THREADS: '4'
+  MKL_NUM_THREADS: '4'
+  PYTHONUNBUFFERED: '1'
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      canary_year: ${{ steps.meta.outputs.canary_year }}
+      batch_id: ${{ steps.meta.outputs.batch_id }}
+      year_matrix: ${{ steps.meta.outputs.year_matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Require repository production contract
+        run: |
+          test -s PRODUCTION_RULES.md
+          test -s docs/superpowers/specs/2026-09-17-c-mode-production-pipeline-v2-design.md
+      - name: Validate committed batch manifest
+        run: python -m production_v2.cli_manifest validate --manifest '${{ inputs.batch_manifest }}'
+      - name: Run V2 core regression suite
+        run: python -m unittest discover -s production_v2/tests -v
+      - name: Resolve batch metadata
+        id: meta
+        env:
+          BATCH_MANIFEST: ${{ inputs.batch_manifest }}
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          doc=json.loads(Path(os.environ['BATCH_MANIFEST']).read_text())
+          years=doc['years']
+          out=Path(os.environ['GITHUB_OUTPUT'])
+          with out.open('a') as f:
+              f.write(f"canary_year={years[0]}\n")
+              f.write(f"batch_id={doc['batch_id']}\n")
+              f.write('year_matrix='+json.dumps({'include':[{'year':y} for y in years]},separators=(',',':'))+'\n')
+          PY
+      - name: Job summary
+        env:
+          BATCH_MANIFEST: ${{ inputs.batch_manifest }}
+        run: |
+          echo '## C Mode V2 prepare' >> "$GITHUB_STEP_SUMMARY"
+          echo "Manifest: \`$BATCH_MANIFEST\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "Canary year: ${{ steps.meta.outputs.canary_year }}" >> "$GITHUB_STEP_SUMMARY"
+
+  canary:
+    needs: prepare
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build canary content only
+        env:
+          YEAR: ${{ needs.prepare.outputs.canary_year }}
+          BATCH_MANIFEST: ${{ inputs.batch_manifest }}
+        run: |
+          python content-pipeline/build_curated_year.py --year "$YEAR"
+          if [ -f content-pipeline/build_bilingual_highlights.py ]; then
+            python content-pipeline/build_bilingual_highlights.py --year "$YEAR"
+          fi
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          source=json.loads(Path(os.environ['BATCH_MANIFEST']).read_text())
+          year=int(os.environ['YEAR'])
+          source['years']=[year]
+          source['expected_articles']={str(year):source['expected_articles'][str(year)]}
+          Path('/tmp/canary-manifest.json').write_text(json.dumps(source,indent=2)+'\n')
+          PY
+          python -m production_v2.cli_validate_batch \
+            --manifest /tmp/canary-manifest.json \
+            --catalog kaoyan-reader-v1/content/catalog.json \
+            --reader-root kaoyan-reader-v1 \
+            --phase preflight \
+            --report /tmp/canary-report.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: c-mode-v2-canary-${{ needs.prepare.outputs.batch_id }}
+          path: /tmp/canary-report.json
+          if-no-files-found: error
+          retention-days: 14
+
+  validate:
+    needs: [prepare, canary]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build all batch content before freeze
+        env:
+          BATCH_MANIFEST: ${{ inputs.batch_manifest }}
+        run: |
+          python - <<'PY' > /tmp/years.txt
+          import json, os
+          from pathlib import Path
+          print(' '.join(map(str,json.loads(Path(os.environ['BATCH_MANIFEST']).read_text())['years'])))
+          PY
+          for year in $(cat /tmp/years.txt); do
+            python content-pipeline/build_curated_year.py --year "$year"
+            if [ -f content-pipeline/build_bilingual_highlights.py ]; then
+              python content-pipeline/build_bilingual_highlights.py --year "$year"
+            fi
+          done
+      - name: Run historical regression gates
+        run: |
+          python -m unittest discover -s production_v2/tests -v
+          if [ -f scripts/tests/test_2007_2012_workflow_contract.py ]; then
+            python -m unittest \
+              scripts/tests/test_check_2007_2012_content_freeze.py \
+              scripts/tests/test_build_2007_2012_curated.py \
+              scripts/tests/test_2007_2012_workflow_contract.py -v
+          fi
+          if [ -f content-pipeline/tests/test_bilingual_highlights.py ]; then
+            python -m unittest \
+              content-pipeline/tests/test_bilingual_highlights.py \
+              content-pipeline/tests/test_build_bilingual_highlights.py \
+              content-pipeline/tests/test_build_curated_year.py -v
+          fi
+      - name: Validate complete batch and advance to validated
+        env:
+          BATCH_MANIFEST: ${{ inputs.batch_manifest }}
+        run: |
+          python -m production_v2.cli_validate_batch \
+            --manifest "$BATCH_MANIFEST" \
+            --catalog kaoyan-reader-v1/content/catalog.json \
+            --reader-root kaoyan-reader-v1 \
+            --phase preflight \
+            --report /tmp/preflight-report.json
+          python -m production_v2.cli_manifest advance \
+            --manifest "$BATCH_MANIFEST" --to validated --output /tmp/batch-validated.json
+      - name: Stage validated content artifact
+        env:
+          BATCH_MANIFEST: ${{ inputs.batch_manifest }}
+        run: |
+          mkdir -p /tmp/frozen-input/kaoyan-reader-v1/content /tmp/frozen-input/content-pipeline /tmp/frozen-input/reports
+          cp /tmp/batch-validated.json /tmp/frozen-input/batch-manifest.json
+          cp /tmp/preflight-report.json /tmp/frozen-input/preflight-report.json
+          cp kaoyan-reader-v1/content/catalog.json /tmp/frozen-input/kaoyan-reader-v1/content/catalog.json
+          python - <<'PY'
+          import json, os, shutil
+          from pathlib import Path
+          doc=json.loads(Path(os.environ['BATCH_MANIFEST']).read_text())
+          dst=Path('/tmp/frozen-input')
+          for year in doc['years']:
+              for rel in [Path(f'kaoyan-reader-v1/content/{year}'),Path(f'content-pipeline/curated/{year}')]:
+                  if rel.exists():
+                      target=dst/rel
+                      target.parent.mkdir(parents=True,exist_ok=True)
+                      shutil.copytree(rel,target,dirs_exist_ok=True)
+              for rel in [Path(f'content-pipeline/voice_profiles/{year}.json'),Path(f'content-pipeline/direction/{year}.json')]:
+                  if rel.exists():
+                      target=dst/rel
+                      target.parent.mkdir(parents=True,exist_ok=True)
+                      shutil.copy2(rel,target)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: c-mode-v2-validated-${{ needs.prepare.outputs.batch_id }}
+          path: /tmp/frozen-input
+          if-no-files-found: error
+          retention-days: 14
+
+  freeze:
+    needs: [prepare, validate]
+    runs-on: ubuntu-latest
+    outputs:
+      render_matrix: ${{ steps.freeze.outputs.render_matrix }}
+      year_matrix: ${{ needs.prepare.outputs.year_matrix }}
+      freeze_id: ${{ steps.freeze.outputs.freeze_id }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/download-artifact@v4
+        with:
+          name: c-mode-v2-validated-${{ needs.prepare.outputs.batch_id }}
+          path: /tmp/frozen-input
+      - name: Install exact validated inputs
+        run: |
+          cp -a /tmp/frozen-input/kaoyan-reader-v1/. kaoyan-reader-v1/
+          cp -a /tmp/frozen-input/content-pipeline/. content-pipeline/ 2>/dev/null || true
+      - name: Freeze content fingerprints and derive matrix
+        id: freeze
+        env:
+          SHARDS: ${{ inputs.shards }}
+        run: |
+          python -m production_v2.cli_validate_batch \
+            --manifest /tmp/frozen-input/batch-manifest.json \
+            --catalog kaoyan-reader-v1/content/catalog.json \
+            --reader-root kaoyan-reader-v1 \
+            --phase freeze \
+            --report /tmp/freeze-validation.json
+          python -m production_v2.cli_freeze \
+            --manifest /tmp/frozen-input/batch-manifest.json \
+            --catalog kaoyan-reader-v1/content/catalog.json \
+            --reader-root kaoyan-reader-v1 \
+            --output /tmp/freeze-report.json
+          python -m production_v2.cli_manifest advance \
+            --manifest /tmp/frozen-input/batch-manifest.json --to frozen --output /tmp/batch-frozen.json
+          python -m production_v2.cli_matrix \
+            --manifest /tmp/batch-frozen.json \
+            --catalog kaoyan-reader-v1/content/catalog.json \
+            --shards "$SHARDS" --output /tmp/render-matrix.json
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          report=json.loads(Path('/tmp/freeze-report.json').read_text())
+          matrix=Path('/tmp/render-matrix.json').read_text().strip()
+          with Path(os.environ['GITHUB_OUTPUT']).open('a') as f:
+              f.write('freeze_id='+report['freeze_id']+'\n')
+              f.write('render_matrix='+matrix+'\n')
+          PY
+      - name: Build immutable frozen-input artifact
+        run: |
+          cp /tmp/batch-frozen.json /tmp/frozen-input/batch-manifest.json
+          cp /tmp/freeze-report.json /tmp/frozen-input/freeze-report.json
+          cp /tmp/render-matrix.json /tmp/frozen-input/render-matrix.json
+          cp /tmp/freeze-validation.json /tmp/frozen-input/freeze-validation.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: c-mode-v2-frozen-${{ needs.prepare.outputs.batch_id }}
+          path: /tmp/frozen-input
+          if-no-files-found: error
+          retention-days: 14
+
+  voicepack:
+    needs: [prepare, freeze]
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install reference preparation dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          python -m pip install numpy==1.26.4 soundfile==0.13.1 requests
+      - name: Build production actor profiles
+        run: |
+          mkdir -p /tmp/voicepack/profiles /tmp/voicepack/references /tmp/expansion-profiles
+          python voice-pipeline/calibration/build_expansion_profiles.py --output /tmp/expansion-profiles
+          for n in $(seq -w 1 15); do
+            if [ -f "voice-pipeline/calibration/actors/${n}.json" ]; then
+              cp "voice-pipeline/calibration/actors/${n}.json" "/tmp/voicepack/profiles/${n}.json"
+            else
+              cp "/tmp/expansion-profiles/${n}.json" "/tmp/voicepack/profiles/${n}.json"
+            fi
+          done
+          cp voice-pipeline/calibration/actors/production_approvals.json /tmp/voicepack/profiles/production_approvals.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          path=Path('/tmp/voicepack/profiles/production_approvals.json')
+          data=json.loads(path.read_text())
+          data['actors']['06']={
+              'status':'accepted','eligible_for':['production'],
+              'approval_method':'automated_c_v4_qa','qa_policy':'automated-c-v4-qa-2',
+              'qa2_golden_run_id':34743370177,'qa2_expansion_run_id':34740877351,
+              'intent_variants':{
+                  'neutral_explain':'B','serious_analysis':'A','warm_explain':'A',
+                  'narrative_build':'A','contrast':'B','information_peak':'B',
+                  'restrained_irony':'A','quoted_character':'C','qualification':'A',
+                  'curious_probe':'A'
+              }
+          }
+          path.write_text(json.dumps(data,indent=2)+'\n')
+          PY
+      - name: Download approved repaired actor profiles
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34757803286 -R "$GITHUB_REPOSITORY" -n c-v4-final-two-r7-03 -D /tmp/final03
+          gh run download 34746310492 -R "$GITHUB_REPOSITORY" -n c-v4-six-repair-r2-07 -D /tmp/final07
+          gh run download 34744873122 -R "$GITHUB_REPOSITORY" -n c-v4-six-repair-10 -D /tmp/final10
+          gh run download 34744873122 -R "$GITHUB_REPOSITORY" -n c-v4-six-repair-11 -D /tmp/final11
+          gh run download 34749959122 -R "$GITHUB_REPOSITORY" -n c-v4-six-repair-r4-14 -D /tmp/final14
+          gh run download 34765501954 -R "$GITHUB_REPOSITORY" -n c-v4-actor15-repair-r9 -D /tmp/final15
+          for n in 03 07 10 11 14 15; do
+            test -s "/tmp/final${n}/profiles/${n}.json"
+            cp "/tmp/final${n}/profiles/${n}.json" "/tmp/voicepack/profiles/${n}.json"
+          done
+      - name: Prepare approved references
+        run: |
+          for n in $(seq -w 1 15); do
+            case "$n" in
+              01|02|04|05|08|09|12|13)
+                python voice-pipeline/prepare_2002_cast_references.py --actor "$n" --output /tmp/voicepack/references ;;
+              03|14)
+                python voice-pipeline/calibration/prepare_repair_references_r4.py --actor "$n" --output /tmp/voicepack/references ;;
+              *)
+                python voice-pipeline/calibration/prepare_expansion_references.py --actor "$n" --output /tmp/voicepack/references ;;
+            esac
+          done
+      - name: Install actor15 X11 reference
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34754229039 -R "$GITHUB_REPOSITORY" -n c-v4-final-two-r6-15 -D /tmp/r6
+          cp /tmp/r6/audio/actor15/actor15-08-probe-X11.wav /tmp/voicepack/references/actor15-08-probe-X11.wav
+      - name: Verify actor/reference contract
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from adapters.chatterbox_actor_adapter import resolve_controls
+          from calibration.automatic_qa import REQUIRED_INTENTS
+          profiles=Path('/tmp/voicepack/profiles'); references=Path('/tmp/voicepack/references')
+          for number in range(1,16):
+              actor=f'{number:02d}'
+              for intent in REQUIRED_INTENTS:
+                  for intensity in (0,1,2):
+                      controls=resolve_controls(actor,intent,intensity,profiles)
+                      target=references/controls['reference_path']
+                      assert target.is_file(),(actor,intent,intensity,target)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: c-mode-v2-voicepack-${{ needs.prepare.outputs.batch_id }}
+          path: /tmp/voicepack
+          if-no-files-found: error
+          retention-days: 14
+
+  render:
+    needs: [prepare, freeze, voicepack]
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 8
+      matrix: ${{ fromJSON(needs.freeze.outputs.render_matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - uses: actions/cache@v4
+        with:
+          path: /tmp/chatterbox-hf-cache
+          key: chatterbox-original-en-017-v1
+      - uses: actions/download-artifact@v4
+        with:
+          name: c-mode-v2-frozen-${{ needs.prepare.outputs.batch_id }}
+          path: /tmp/frozen-input
+      - name: Install exact frozen content
+        run: |
+          cp -a /tmp/frozen-input/kaoyan-reader-v1/. kaoyan-reader-v1/
+          cp -a /tmp/frozen-input/content-pipeline/. content-pipeline/ 2>/dev/null || true
+      - uses: actions/download-artifact@v4
+        with:
+          name: c-mode-v2-voicepack-${{ needs.prepare.outputs.batch_id }}
+          path: /tmp/voicepack
+      - name: Restore deterministic render-unit cache
+        uses: actions/cache@v4
+        with:
+          path: batch-out/${{ matrix.year }}/${{ matrix.article }}
+          key: c-mode-v2-${{ needs.freeze.outputs.freeze_id }}-${{ matrix.year }}-${{ matrix.article }}-${{ matrix.shard }}
+      - name: Install renderer dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          python -m pip install chatterbox-tts==0.1.7 numpy==1.26.4 soundfile==0.13.1
+      - name: Render frozen shard only
+        run: |
+          python voice-pipeline/generate_c_v4.py \
+            --year '${{ matrix.year }}' \
+            --article '${{ matrix.article }}' \
+            --shard '${{ matrix.shard }}' \
+            --shards '${{ inputs.shards }}' \
+            --max-attempts 2 \
+            --calibration-dir /tmp/voicepack/profiles \
+            --references-dir /tmp/voicepack/references \
+            --output 'batch-out/${{ matrix.year }}/${{ matrix.article }}'
+          test -s 'batch-out/${{ matrix.year }}/${{ matrix.article }}/v4-shard-${{ matrix.shard }}.json'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: c-mode-v2-${{ needs.prepare.outputs.batch_id }}-${{ matrix.year }}-${{ matrix.article }}-shard-${{ matrix.shard }}
+          path: batch-out/${{ matrix.year }}/${{ matrix.article }}
+          if-no-files-found: error
+          retention-days: 14
+
+  merge:
+    needs: [prepare, freeze, render]
+    if: ${{ always() && needs.render.result == 'success' }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.freeze.outputs.year_matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/download-artifact@v4
+        with:
+          name: c-mode-v2-frozen-${{ needs.prepare.outputs.batch_id }}
+          path: /tmp/frozen-input
+      - name: Install exact frozen content
+        run: |
+          cp -a /tmp/frozen-input/kaoyan-reader-v1/. kaoyan-reader-v1/
+          cp -a /tmp/frozen-input/content-pipeline/. content-pipeline/ 2>/dev/null || true
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: c-mode-v2-${{ needs.prepare.outputs.batch_id }}-${{ matrix.year }}-*-shard-*
+          path: /tmp/incoming
+          merge-multiple: false
+      - name: Merge and verify one year
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          python voice-pipeline/merge_c_v4.py --year '${{ matrix.year }}' --incoming /tmp/incoming
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          year='${{ matrix.year }}'
+          report=json.loads(Path(f'kaoyan-reader-v1/reports/c-v4-{year}-merge.json').read_text())
+          assert report['status']=='complete_candidate',report
+          assert report['qa']['technical']=='passed',report
+          for article,data in report['articles'].items():
+              assert not data['missing'],(article,data['missing'])
+              manifest=json.loads(Path(f'kaoyan-reader-v1/audio/{year}/v4/c-{article}/manifest.json').read_text())
+              assert not manifest.get('missing_segments'),(year,article,manifest.get('missing_segments'))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: c-mode-v2-${{ needs.prepare.outputs.batch_id }}-${{ matrix.year }}-merged
+          path: |
+            kaoyan-reader-v1/audio/${{ matrix.year }}/v4
+            kaoyan-reader-v1/reports/c-v4-${{ matrix.year }}-merge.json
+          if-no-files-found: error
+          retention-days: 14
+
+  release_guard:
+    needs: [prepare, freeze, merge]
+    if: ${{ always() && needs.merge.result == 'success' }}
+    runs-on: ubuntu-latest
+    outputs:
+      baseline_sha: ${{ steps.baseline.outputs.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/download-artifact@v4
+        with:
+          name: c-mode-v2-frozen-${{ needs.prepare.outputs.batch_id }}
+          path: /tmp/frozen-input
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: c-mode-v2-${{ needs.prepare.outputs.batch_id }}-*-merged
+          path: /tmp/merged
+          merge-multiple: false
+      - name: Start release candidate from current production baseline
+        id: baseline
+        run: |
+          git fetch origin gh-pages
+          baseline=$(git rev-parse origin/gh-pages)
+          echo "sha=$baseline" >> "$GITHUB_OUTPUT"
+          git worktree add /tmp/production "$baseline"
+          cp /tmp/production/kaoyan-reader-v1/content/catalog.json /tmp/baseline-catalog.json
+      - name: Overlay validated batch without deleting production
+        run: |
+          cp -a /tmp/frozen-input/kaoyan-reader-v1/. /tmp/production/kaoyan-reader-v1/
+          python - <<'PY'
+          import json, shutil
+          from pathlib import Path
+          batch=json.loads(Path('/tmp/frozen-input/batch-manifest.json').read_text())
+          for year in batch['years']:
+              matches=list(Path('/tmp/merged').glob(f'**/kaoyan-reader-v1/audio/{year}/v4'))
+              assert len(matches)==1,(year,matches)
+              target=Path(f'/tmp/production/kaoyan-reader-v1/audio/{year}/v4')
+              target.parent.mkdir(parents=True,exist_ok=True)
+              shutil.copytree(matches[0],target,dirs_exist_ok=True)
+              reports=list(Path('/tmp/merged').glob(f'**/kaoyan-reader-v1/reports/c-v4-{year}-merge.json'))
+              assert len(reports)==1,(year,reports)
+              dst=Path(f'/tmp/production/kaoyan-reader-v1/reports/c-v4-{year}-merge.json')
+              dst.parent.mkdir(parents=True,exist_ok=True); shutil.copy2(reports[0],dst)
+          PY
+      - name: Rebuild catalog additively from baseline and batch entries
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from production_v2.catalog_merge import merge_catalogs
+          baseline=json.loads(Path('/tmp/baseline-catalog.json').read_text())
+          source=json.loads(Path('/tmp/frozen-input/kaoyan-reader-v1/content/catalog.json').read_text())
+          batch=json.loads(Path('/tmp/frozen-input/batch-manifest.json').read_text())
+          years=set(batch['years'])
+          batch_catalog={'version':source.get('version',1),'articles':[x for x in source['articles'] if x['year'] in years]}
+          candidate=merge_catalogs(baseline,batch_catalog)
+          Path('/tmp/production/kaoyan-reader-v1/content/catalog.json').write_text(json.dumps(candidate,ensure_ascii=False,indent=2)+'\n')
+          PY
+      - name: Release guard and full release validation
+        run: |
+          python -m production_v2.cli_release_guard \
+            --old /tmp/baseline-catalog.json \
+            --new /tmp/production/kaoyan-reader-v1/content/catalog.json \
+            --report /tmp/release-guard.json
+          python -m production_v2.cli_validate_batch \
+            --manifest /tmp/frozen-input/batch-manifest.json \
+            --catalog /tmp/production/kaoyan-reader-v1/content/catalog.json \
+            --reader-root /tmp/production/kaoyan-reader-v1 \
+            --phase release \
+            --report /tmp/release-validation.json
+          cd /tmp/production/kaoyan-reader-v1
+          npm test
+      - name: Record successful render/merge state progression
+        run: |
+          python -m production_v2.cli_manifest advance --manifest /tmp/frozen-input/batch-manifest.json --to rendering --output /tmp/batch-rendering.json
+          python -m production_v2.cli_manifest advance --manifest /tmp/batch-rendering.json --to merged --output /tmp/batch-merged.json
+          python -m production_v2.cli_manifest advance --manifest /tmp/batch-merged.json --to release_candidate --output /tmp/batch-release-candidate.json
+      - name: Build release candidate overlay and rollback metadata
+        env:
+          BASELINE_SHA: ${{ steps.baseline.outputs.sha }}
+          FREEZE_ID: ${{ needs.freeze.outputs.freeze_id }}
+        run: |
+          mkdir -p /tmp/release-overlay/kaoyan-reader-v1/content /tmp/release-overlay/kaoyan-reader-v1/audio /tmp/release-overlay/reports
+          cp /tmp/production/kaoyan-reader-v1/content/catalog.json /tmp/release-overlay/kaoyan-reader-v1/content/catalog.json
+          python - <<'PY'
+          import json, os, shutil
+          from pathlib import Path
+          batch=json.loads(Path('/tmp/batch-release-candidate.json').read_text())
+          overlay=Path('/tmp/release-overlay')
+          prod=Path('/tmp/production')
+          for year in batch['years']:
+              for rel in [Path(f'kaoyan-reader-v1/content/{year}'),Path(f'kaoyan-reader-v1/audio/{year}')]:
+                  src=prod/rel
+                  if src.exists():
+                      dst=overlay/rel; dst.parent.mkdir(parents=True,exist_ok=True); shutil.copytree(src,dst,dirs_exist_ok=True)
+              report=prod/Path(f'kaoyan-reader-v1/reports/c-v4-{year}-merge.json')
+              if report.exists():
+                  dst=overlay/Path(f'kaoyan-reader-v1/reports/c-v4-{year}-merge.json'); dst.parent.mkdir(parents=True,exist_ok=True); shutil.copy2(report,dst)
+          meta={
+              'batch_id':batch['batch_id'],
+              'pipeline_version':batch['pipeline_version'],
+              'source_ref':batch['source_ref'],
+              'freeze_id':os.environ['FREEZE_ID'],
+              'previous_production_sha':os.environ['BASELINE_SHA'],
+              'state':batch['state'],
+              'state_history':['draft','validated','frozen','rendering','merged','release_candidate'],
+          }
+          (overlay/'reports/production-v2-release.json').write_text(json.dumps(meta,indent=2)+'\n')
+          PY
+          cp /tmp/release-guard.json /tmp/release-overlay/reports/release-guard.json
+          cp /tmp/release-validation.json /tmp/release-overlay/reports/release-validation.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: c-mode-v2-release-candidate-${{ needs.prepare.outputs.batch_id }}
+          path: /tmp/release-overlay
+          if-no-files-found: error
+          retention-days: 30
+
+  publish:
+    needs: [prepare, freeze, release_guard]
+    outputs:
+      new_sha: ${{ steps.publish.outputs.new_sha }}
+    if: ${{ inputs.publish && needs.release_guard.result == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/download-artifact@v4
+        with:
+          name: c-mode-v2-release-candidate-${{ needs.prepare.outputs.batch_id }}
+          path: /tmp/release-overlay
+      - name: Refuse stale production baseline
+        env:
+          BASELINE_SHA: ${{ needs.release_guard.outputs.baseline_sha }}
+        run: |
+          git fetch origin gh-pages
+          current=$(git rev-parse origin/gh-pages)
+          test "$current" = "$BASELINE_SHA" || { echo "production changed since validation: $BASELINE_SHA -> $current" >&2; exit 3; }
+          git worktree add /tmp/production "$current"
+          cp /tmp/production/kaoyan-reader-v1/content/catalog.json /tmp/baseline-catalog.json
+      - name: Apply exact validated overlay
+        run: cp -a /tmp/release-overlay/. /tmp/production/
+      - name: Re-run release guard and Reader tests immediately before commit
+        run: |
+          python -m production_v2.cli_release_guard \
+            --old /tmp/baseline-catalog.json \
+            --new /tmp/production/kaoyan-reader-v1/content/catalog.json \
+            --report /tmp/final-release-guard.json
+          cd /tmp/production/kaoyan-reader-v1
+          npm test
+      - name: Fast-forward publish to gh-pages
+        id: publish
+        working-directory: /tmp/production
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add kaoyan-reader-v1 reports
+          git commit -m "feat: publish C Mode V2 batch ${{ needs.prepare.outputs.batch_id }} freeze ${{ needs.freeze.outputs.freeze_id }}"
+          content_sha=$(git rev-parse HEAD)
+          export CONTENT_SHA="$content_sha"
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          path=Path('reports/production-v2-release.json')
+          data=json.loads(path.read_text())
+          data['state']='published'
+          data['state_history']=['draft','validated','frozen','rendering','merged','release_candidate','published']
+          data['content_commit_sha']=os.environ['CONTENT_SHA']
+          path.write_text(json.dumps(data,indent=2)+'\n')
+          PY
+          git add reports/production-v2-release.json
+          git commit -m "chore: finalize C Mode V2 batch ${{ needs.prepare.outputs.batch_id }} state"
+          new_sha=$(git rev-parse HEAD)
+          git push origin HEAD:gh-pages
+          echo "new_sha=$new_sha" >> "$GITHUB_OUTPUT"
+          echo "## C Mode V2 published" >> "$GITHUB_STEP_SUMMARY"
+          echo "Batch: ${{ needs.prepare.outputs.batch_id }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "Previous production: ${{ needs.release_guard.outputs.baseline_sha }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "New production: $new_sha" >> "$GITHUB_STEP_SUMMARY"
+          echo "Freeze: ${{ needs.freeze.outputs.freeze_id }}" >> "$GITHUB_STEP_SUMMARY"
+
+  verify_pages:
+    needs: [publish]
+    if: ${{ inputs.publish && needs.publish.result == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for matching GitHub Pages deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARGET_SHA: ${{ needs.publish.outputs.new_sha }}
+        run: |
+          for attempt in $(seq 1 30); do
+            payload=$(gh api "/repos/$GITHUB_REPOSITORY/actions/runs?branch=gh-pages&per_page=30")
+            row=$(printf '%s' "$payload" | python -c 'import json,sys,os; d=json.load(sys.stdin); target=os.environ["TARGET_SHA"]; rows=[r for r in d.get("workflow_runs",[]) if r.get("head_sha")==target and r.get("name")=="pages build and deployment"]; print(json.dumps(rows[0]) if rows else "")')
+            if [ -n "$row" ]; then
+              status=$(printf '%s' "$row" | python -c 'import json,sys; print(json.load(sys.stdin).get("status",""))')
+              conclusion=$(printf '%s' "$row" | python -c 'import json,sys; print(json.load(sys.stdin).get("conclusion") or "")')
+              if [ "$status" = completed ]; then
+                test "$conclusion" = success
+                echo "Pages deployment succeeded for $TARGET_SHA"
+                exit 0
+              fi
+            fi
+            sleep 10
+          done
+          echo "timed out waiting for Pages deployment for $TARGET_SHA" >&2
+          exit 4
