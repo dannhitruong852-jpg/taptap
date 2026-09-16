@@ -8,6 +8,7 @@ on:
       - 'kaoyan-reader-v1/**'
       - 'content-pipeline/**'
       - 'scripts/**'
+      - 'reports/content-freeze/**'
       - 'reports/bilingual-highlights/**'
       - 'docs/standards/PLAYBACK_LATENCY_STANDARD.md'
       - '.github/workflows/reader-tests.yml'
