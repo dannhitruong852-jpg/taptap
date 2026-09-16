@@ -46,6 +46,7 @@ class ValidateBatchTests(unittest.TestCase):
             'batch_id': 'b',
             'pipeline_version': 2,
             'years': [2013],
+            'expected_articles': {'2013': ['text1']},
             'source_ref': 'abc',
             'state': 'validated',
             'created_at': 'x',
@@ -64,6 +65,35 @@ class ValidateBatchTests(unittest.TestCase):
             report = validate_batch(batch, catalog, Path(temp_dir), 'release')
             self.assertFalse(report['ok'])
             self.assertTrue(any('missing_segments' in error for error in report['errors']))
+
+    def test_preflight_rejects_missing_expected_article(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            content_path = root / 'content/2013/c/text1.json'
+            content_path.parent.mkdir(parents=True)
+            content_path.write_text(json.dumps({
+                'sentences': [{'id': 's01', 'en': 'x', 'segments': [{'text': 'x'}]}],
+            }))
+            batch = {
+                'batch_id': 'b',
+                'pipeline_version': 2,
+                'years': [2013],
+                'expected_articles': {'2013': ['text1', 'text2']},
+                'source_ref': 'abc',
+                'state': 'validated',
+                'created_at': 'x',
+            }
+            catalog = {'articles': [
+                {
+                    'id': '2013-text1',
+                    'year': 2013,
+                    'content': './content/2013/c/text1.json',
+                    'sentences': 1,
+                },
+            ]}
+            report = validate_batch(batch, catalog, root, 'preflight')
+            self.assertFalse(report['ok'])
+            self.assertTrue(any('article inventory mismatch' in error for error in report['errors']))
 
 
 if __name__ == '__main__':
