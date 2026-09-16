@@ -1,0 +1,33 @@
+name: Audit actor plan 2007-2012 once
+
+on:
+  push:
+    branches:
+      - c-v4-article-preview-actual
+    paths:
+      - '.github/workflows/audit-actor-plan-2007-2012-once.yml'
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: c-v4-article-preview-actual
+      - name: Compare all 42 candidate actors to production board
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          board=json.loads(Path('reports/content-freeze/2007-2012-production-board.json').read_text(encoding='utf-8'))
+          units=('cloze','text1','text2','text3','text4','partb','translation')
+          mismatches=[]
+          for year in range(2007,2013):
+              for unit in units:
+                  doc=json.loads(Path(f'reports/content-freeze/{year}/{unit}.candidate.json').read_text(encoding='utf-8'))
+                  candidate=str(doc['article']['actor']).zfill(2)
+                  planned=str(board['actor_plan'][str(year)][unit]).zfill(2)
+                  if candidate != planned:
+                      mismatches.append({'year':year,'unit':unit,'candidate':candidate,'plan':planned})
+          print(json.dumps({'mismatch_count':len(mismatches),'mismatches':mismatches},ensure_ascii=False))
+          PY
