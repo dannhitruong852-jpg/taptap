@@ -1,0 +1,454 @@
+{
+  "year": 2006,
+  "section_type": "cloze",
+  "article_id": "cloze",
+  "source_sha256": "db9af95d0cd6e041df36d57e0b64a323fb18b3dd01007c52d458dff0729dcda3",
+  "source_pages": [],
+  "accent": "en-US",
+  "primary_actor_id": "09",
+  "article_context": "社会政策解释。先呈现规模与增长，再转向收容、成瘾、精神健康和生活技能，结尾强调项目协调与一揽子支持。",
+  "article": {
+    "year": 2006,
+    "section": "cloze",
+    "title": "完型 · 美国无家可归问题",
+    "background": "社会政策解释。先呈现规模与增长，再转向收容、成瘾、精神健康和生活技能，结尾强调项目协调与一揽子支持。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "The homeless make up a growing percentage of America’s population.",
+      "zh": "无家可归者在美国人口中所占的比例正在上升。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "The homeless make up a growing percentage of America’s population."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "The homeless make up a growing percentage of America’s population.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-cloze/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Indeed, homelessness has reached such proportions that local governments can’t possibly cope.",
+      "zh": "事实上，无家可归问题已经严重到地方政府根本无力独自应对的程度。",
+      "vocab": [
+        {
+          "word": "homelessness",
+          "lemma": "homelessness",
+          "level": 6,
+          "meaning": "无家可归状态",
+          "start": 8,
+          "end": 20
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "Indeed, homelessness has reached such proportions that local governments can’t p"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Indeed, homelessness has reached such proportions that local governments can’t possibly cope.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-cloze/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "To help homeless people toward independence, the federal government must support job training programs, raise the minimum wage, and fund more low-cost housing.",
+      "zh": "要帮助无家可归者走向自立，联邦政府必须支持职业培训、提高最低工资，并为更多低价住房提供资金。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "To help homeless people toward independence, the federal government must support"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "To help homeless people toward independence, the federal government must support job training programs, raise the minimum wage, and fund more low-cost housing.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-cloze/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 1,
+      "en": "Not everyone agrees on the number of Americans who are homeless.",
+      "zh": "对于美国到底有多少无家可归者，人们并没有一致看法。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "Not everyone agrees on the number of Americans who are homeless."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Not everyone agrees on the number of Americans who are homeless.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-cloze/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 1,
+      "en": "Estimates range anywhere from 600,000 to 3 million.",
+      "zh": "各种估计从六十万到三百万不等。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [
+        "Estimates range anywhere from 600,000 to 3 million."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Estimates range anywhere from 600,000 to 3 million.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-cloze/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "Although the figure may vary, analysts do agree on another matter: that the number of the homeless is increasing.",
+      "zh": "尽管具体数字可能不同，分析人士在另一点上却有共识：无家可归者的人数正在增加。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "Although the figure may vary, analysts do agree on another matter: that the numb"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "Although the figure may vary, analysts do agree on another matter: that the number of the homeless is increasing.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-cloze/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "One of the federal government’s studies predicts that the number of the homeless will reach nearly 19 million by the end of this decade.",
+      "zh": "联邦政府的一项研究预测，到本十年末，无家可归者将接近一千九百万人。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [
+        "One of the federal government’s studies predicts that the number of the homeless"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "One of the federal government’s studies predicts that the number of the homeless will reach nearly 19 million by the end of this decade.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-cloze/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 2,
+      "en": "Finding ways to assist this growing homeless population has become increasingly difficult.",
+      "zh": "如何帮助这个不断扩大的无家可归群体，已经变得越来越困难。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "Finding ways to assist this growing homeless population has become increasingly "
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "Finding ways to assist this growing homeless population has become increasingly difficult.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-cloze/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 2,
+      "en": "Even when homeless individuals manage to find a shelter that will give them three meals a day and a place to sleep at night, a good number still spend the bulk of each day wandering the street.",
+      "zh": "即使有些无家可归者找到能提供一日三餐和夜间住宿的收容所，其中仍有相当一部分人每天大多数时间都在街头游荡。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "Even when homeless individuals manage to find a shelter that will give them thre"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "Even when homeless individuals manage to find a shelter that will give them three meals a day and a place to sleep at night, a good number still spend the bulk of each day wandering the street.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-cloze/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 2,
+      "en": "Part of the problem is that many homeless adults are addicted to alcohol or drugs.",
+      "zh": "问题的一部分在于，许多无家可归的成年人酗酒或吸毒成瘾。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "Part of the problem is that many homeless adults are addicted to alcohol or drug"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "Part of the problem is that many homeless adults are addicted to alcohol or drugs.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-cloze/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 3,
+      "en": "And a significant number of the homeless have serious mental disorders.",
+      "zh": "还有相当数量的人患有严重精神障碍。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "And a significant number of the homeless have serious mental disorders."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "And a significant number of the homeless have serious mental disorders.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-cloze/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 3,
+      "en": "Many others, while not addicted or mentally ill, simply lack the everyday survival skills needed to turn their lives around.",
+      "zh": "另有许多人虽没有成瘾或精神疾病，却只是缺少扭转生活所需的日常生存技能。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "Many others, while not addicted or mentally ill, simply lack the everyday surviv"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "Many others, while not addicted or mentally ill, simply lack the everyday survival skills needed to turn their lives around.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-cloze/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 3,
+      "en": "Boston Globe reporter Chris Reidy notes that the situation will improve only when there are comprehensive programs that address the many needs of the homeless.",
+      "zh": "《波士顿环球报》记者克里斯·赖迪指出，只有建立能够同时回应无家可归者多种需求的综合项目，情况才会改善。",
+      "vocab": [
+        {
+          "word": "comprehensive",
+          "lemma": "comprehensive",
+          "level": 6,
+          "meaning": "综合的",
+          "start": 92,
+          "end": 105
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "Boston Globe reporter Chris Reidy notes that the situation will improve only whe"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "Boston Globe reporter Chris Reidy notes that the situation will improve only when there are comprehensive programs that address the many needs of the homeless.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-cloze/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 3,
+      "en": "As Edward Zlotkowski, director of community service at Bentley College in Massachusetts, puts it, “There has to be coordination of programs. What’s needed is a package deal.”",
+      "zh": "正如马萨诸塞州本特利学院社区服务主任爱德华·兹洛特科夫斯基所说：“各项计划必须协调起来。我们需要的是一揽子方案。”",
+      "vocab": [
+        {
+          "word": "coordination",
+          "lemma": "coordination",
+          "level": 6,
+          "meaning": "协调",
+          "start": 115,
+          "end": 127
+        }
+      ],
+      "discourse_function": "explain_quote",
+      "prosody_focus": [
+        "As Edward Zlotkowski, director of community service at Bentley College in Massac"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "As Edward Zlotkowski, director of community service at Bentley College in Massachusetts, puts it, “There has to be coordination of programs. What’s needed is a package deal.”",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-cloze/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

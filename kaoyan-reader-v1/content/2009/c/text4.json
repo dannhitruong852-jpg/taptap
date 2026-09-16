@@ -1,0 +1,778 @@
+{
+  "year": 2009,
+  "section_type": "reading",
+  "article_id": "text4",
+  "source_sha256": "fcd4b7f273ad0b5310fcbcf434777663198d5dc07c6ffaac91043735e14e8cc4",
+  "source_pages": [
+    9,
+    10
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "03",
+  "article_context": "殖民时期思想史。文章先介绍新英格兰牧师和政治精英的知识传统，再提醒读者普通移民的教育与信仰背景更为多样，借约翰·戴恩和沿海移民说明民间迷信、宗教与现实动机并存。语气历史叙述、克制分析。",
+  "article": {
+    "year": 2009,
+    "section": "text4",
+    "title": "阅读四 · 新英格兰早期移民的不同思想背景",
+    "background": "殖民时期思想史。文章先介绍新英格兰牧师和政治精英的知识传统，再提醒读者普通移民的教育与信仰背景更为多样，借约翰·戴恩和沿海移民说明民间迷信、宗教与现实动机并存。语气历史叙述、克制分析。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "The most thoroughly studied intellectuals in the history of the New World are the ministers and political leaders of seventeenth-century New England.",
+      "zh": "在新大陆历史上，被研究得最为深入的知识分子，是17世纪新英格兰的牧师和政治领袖。",
+      "vocab": [
+        {
+          "word": "thoroughly",
+          "lemma": "thoroughly",
+          "level": 6,
+          "meaning": "彻底地；绝对地",
+          "start": 9,
+          "end": 19
+        },
+        {
+          "word": "intellectuals",
+          "lemma": "intellectual",
+          "level": 6,
+          "meaning": "有知识者；知识分子",
+          "start": 28,
+          "end": 41
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": [
+        "most thoroughly studied intellectuals",
+        "seventeenth-century New England"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "The most thoroughly studied intellectuals in the history of the New World are the ministers and political leaders of seventeenth-century New England.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text4/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "According to the standard history of American philosophy, nowhere else in colonial America was ‘so much importance attached to intellectual pursuits.’",
+      "zh": "按照美国哲学史的传统叙述，在殖民时期的美洲，没有其他地方像新英格兰这样“如此重视知识追求”。",
+      "vocab": [
+        {
+          "word": "colonial",
+          "lemma": "colonial",
+          "level": 6,
+          "meaning": "a. 殖民的；殖民地的",
+          "start": 74,
+          "end": 82
+        },
+        {
+          "word": "intellectual",
+          "lemma": "intellectual",
+          "level": 6,
+          "meaning": "有知识者；知识分子",
+          "start": 127,
+          "end": 139
+        }
+      ],
+      "discourse_function": "qualify_quote",
+      "prosody_focus": [
+        "so much importance",
+        "intellectual pursuits"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "According to the standard history of American philosophy, nowhere else in colonial America was ‘so much importance attached to intellectual pursuits.’",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text4/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "According to many books and articles, New England's leaders established the basic themes and preoccupations of an unfolding, dominant Puritan tradition in American intellectual life.",
+      "zh": "许多书籍和文章认为，新英格兰领袖确立了美国思想生活中逐渐展开并占据主导地位的清教传统的基本主题与核心关切。",
+      "vocab": [
+        {
+          "word": "preoccupations",
+          "lemma": "preoccupation",
+          "level": 7,
+          "meaning": "抢先占据；先人之见",
+          "start": 93,
+          "end": 107
+        },
+        {
+          "word": "unfolding",
+          "lemma": "unfold",
+          "level": 6,
+          "meaning": "t. 展开；打开",
+          "start": 114,
+          "end": 123
+        },
+        {
+          "word": "dominant",
+          "lemma": "dominant",
+          "level": 6,
+          "meaning": "a. 占优势的；支配的",
+          "start": 125,
+          "end": 133
+        },
+        {
+          "word": "intellectual",
+          "lemma": "intellectual",
+          "level": 6,
+          "meaning": "有知识者；知识分子",
+          "start": 164,
+          "end": 176
+        }
+      ],
+      "discourse_function": "report",
+      "prosody_focus": [
+        "basic themes",
+        "dominant Puritan tradition"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "According to many books and articles, New England's leaders established the basic themes and preoccupations of an unfolding, dominant Puritan tradition in American intellectual life.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text4/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "To take this approach to the New Englanders normally means to start with the Puritans' theological innovations and their distinctive ideas about the church—important subjects that we may not neglect.",
+      "zh": "按照这种方式研究新英格兰人，通常要从清教徒在神学上的创新以及他们对教会的独特看法谈起——这些当然都是不可忽视的重要主题。",
+      "vocab": [
+        {
+          "word": "theological",
+          "lemma": "theological",
+          "level": 6,
+          "meaning": "a. 神学上的",
+          "start": 87,
+          "end": 98
+        },
+        {
+          "word": "innovations",
+          "lemma": "innovation",
+          "level": 6,
+          "meaning": "改革；创新",
+          "start": 99,
+          "end": 110
+        },
+        {
+          "word": "distinctive",
+          "lemma": "distinctive",
+          "level": 6,
+          "meaning": "a. 有特色的；出众的",
+          "start": 121,
+          "end": 132
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "theological innovations",
+        "distinctive ideas about the church"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "To take this approach to the New Englanders normally means to start with the Puritans' theological innovations and their distinctive ideas about the church—important subjects that we may not neglect.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text4/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "But in keeping with our examination of southern intellectual life, we may consider the original Puritans as carriers of European culture, adjusting to New World circumstances.",
+      "zh": "但与我们考察南方思想生活的方式一致，我们也可以把最初的清教徒看作欧洲文化的携带者，他们正在适应新大陆的环境。",
+      "vocab": [
+        {
+          "word": "intellectual",
+          "lemma": "intellectual",
+          "level": 6,
+          "meaning": "有知识者；知识分子",
+          "start": 48,
+          "end": 60
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "carriers of European culture",
+        "adjusting to New World circumstances"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "But in keeping with our examination of southern intellectual life, we may consider the original Puritans as carriers of European culture, adjusting to New World circumstances.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text4/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "The New England colonies were the scenes of important episodes in the pursuit of widely understood ideals of civility and virtuosity.",
+      "zh": "新英格兰殖民地也见证了人们追求广泛认同的文明与才艺理想的重要历程。",
+      "vocab": [
+        {
+          "word": "colonies",
+          "lemma": "colony",
+          "level": 6,
+          "meaning": "殖民地；移民队",
+          "start": 16,
+          "end": 24
+        },
+        {
+          "word": "episodes",
+          "lemma": "episode",
+          "level": 6,
+          "meaning": "插曲；插话",
+          "start": 54,
+          "end": 62
+        },
+        {
+          "word": "civility",
+          "lemma": "civility",
+          "level": 8,
+          "meaning": "礼貌；礼仪",
+          "start": 109,
+          "end": 117
+        },
+        {
+          "word": "virtuosity",
+          "lemma": "virtuosity",
+          "level": 8,
+          "meaning": "精湛技巧；对古董等的爱好",
+          "start": 122,
+          "end": 132
+        }
+      ],
+      "discourse_function": "report",
+      "prosody_focus": [
+        "ideals of civility and virtuosity"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "The New England colonies were the scenes of important episodes in the pursuit of widely understood ideals of civility and virtuosity.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text4/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 3,
+      "en": "The early settlers of Massachusetts Bay included men of impressive education and influence in England.",
+      "zh": "马萨诸塞湾早期移民中，有一些人在英国就受过良好教育并具有相当影响力。",
+      "vocab": [
+        {
+          "word": "Massachusetts",
+          "lemma": "massachusetts",
+          "level": 7,
+          "meaning": "麻萨诸塞州",
+          "start": 22,
+          "end": 35
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": [
+        "impressive education and influence"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "The early settlers of Massachusetts Bay included men of impressive education and influence in England.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text4/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 3,
+      "en": "Besides the ninety or so learned ministers who came to Massachusetts churches in the decade after 1629, there were political leaders like John Winthrop, an educated gentleman, lawyer, and official of the Crown before he journeyed to Boston.",
+      "zh": "除了1629年后十年间来到马萨诸塞各教会的大约90名博学牧师外，还有约翰·温斯罗普这样的政治领袖；他在前往波士顿之前，是受过教育的绅士、律师和王室官员。",
+      "vocab": [
+        {
+          "word": "Massachusetts",
+          "lemma": "massachusetts",
+          "level": 7,
+          "meaning": "麻萨诸塞州",
+          "start": 55,
+          "end": 68
+        }
+      ],
+      "discourse_function": "example",
+      "prosody_focus": [
+        "ninety or so learned ministers",
+        "John Winthrop"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "Besides the ninety or so learned ministers who came to Massachusetts churches in the decade after 1629, there were political leaders like John Winthrop, an educated gentleman, lawyer, and official of the Crown before he journeyed to Boston.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text4/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 3,
+      "en": "These men wrote and published extensively, reaching both New World and Old World audiences, and giving New England an atmosphere of intellectual earnestness.",
+      "zh": "这些人大量写作并出版作品，读者遍及新旧大陆，也由此赋予新英格兰一种严肃求知的思想氛围。",
+      "vocab": [
+        {
+          "word": "intellectual",
+          "lemma": "intellectual",
+          "level": 6,
+          "meaning": "有知识者；知识分子",
+          "start": 132,
+          "end": 144
+        },
+        {
+          "word": "earnestness",
+          "lemma": "earnestness",
+          "level": 9,
+          "meaning": "认真；诚挚",
+          "start": 145,
+          "end": 156
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "wrote and published extensively",
+        "intellectual earnestness"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "These men wrote and published extensively, reaching both New World and Old World audiences, and giving New England an atmosphere of intellectual earnestness.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text4/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 4,
+      "en": "We should not forget, however, that most New Englanders were less well educated.",
+      "zh": "然而，我们不应忘记，大多数新英格兰人受教育程度并没有那么高。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "should not forget",
+        "less well educated"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "We should not forget, however, that most New Englanders were less well educated.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text4/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 4,
+      "en": "While few craftsmen or farmers, let alone dependents and servants, left literary compositions to be analyzed, it is obvious that their views were less fully intellectualized.",
+      "zh": "工匠和农民留下可供分析的文字作品本就不多，更不用说家属和仆人了；显然，他们的观念并没有被充分知识化。",
+      "vocab": [
+        {
+          "word": "dependents",
+          "lemma": "dependent",
+          "level": 6,
+          "meaning": "依赖他人者",
+          "start": 42,
+          "end": 52
+        },
+        {
+          "word": "compositions",
+          "lemma": "composition",
+          "level": 6,
+          "meaning": "作文；创作",
+          "start": 81,
+          "end": 93
+        },
+        {
+          "word": "intellectualized",
+          "lemma": "intellectualize",
+          "level": 9,
+          "meaning": "t. 赋于理智",
+          "start": 157,
+          "end": 173
+        }
+      ],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "few craftsmen or farmers",
+        "less fully intellectualized"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "While few craftsmen or farmers, let alone dependents and servants, left literary compositions to be analyzed, it is obvious that their views were less fully intellectualized.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text4/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 4,
+      "en": "Their thinking often had a traditional superstitious quality.",
+      "zh": "他们的思维往往带有传统迷信色彩。",
+      "vocab": [
+        {
+          "word": "superstitious",
+          "lemma": "superstitious",
+          "level": 8,
+          "meaning": "a. 迷信的",
+          "start": 39,
+          "end": 52
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "traditional superstitious quality"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "Their thinking often had a traditional superstitious quality.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text4/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 4,
+      "en": "A tailor named John Dane, who emigrated in the late 1630s, left an account of his reasons for leaving England that is filled with signs.",
+      "zh": "一名叫约翰·戴恩的裁缝在17世纪30年代末移民，他留下了自己离开英国原因的记录，其中充满了各种征兆式的解释。",
+      "vocab": [
+        {
+          "word": "emigrated",
+          "lemma": "emigrate",
+          "level": 7,
+          "meaning": "(使)移居；(使)移民",
+          "start": 30,
+          "end": 39
+        }
+      ],
+      "discourse_function": "story",
+      "prosody_focus": [
+        "John Dane",
+        "filled with signs"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "A tailor named John Dane, who emigrated in the late 1630s, left an account of his reasons for leaving England that is filled with signs.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text4/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 4,
+      "en": "Sexual confusion, economic frustrations, and religious hope—all came together in a decisive moment when he opened the Bible, told his father that the first line he saw would settle his fate, and read the magical words: ‘Come out from among them, touch no unclean thing, and I will be your God and you shall be my people.’",
+      "zh": "性方面的困惑、经济上的挫折和宗教希望，在一个决定性的时刻交织到了一起：他打开《圣经》，告诉父亲自己看到的第一句话将决定命运，随后读到那句带有神秘力量的话：“你们务要从他们中间出来，不要沾不洁净的物；我要作你们的神，你们要作我的子民。”",
+      "vocab": [
+        {
+          "word": "frustrations",
+          "lemma": "frustration",
+          "level": 6,
+          "meaning": "挫折；顿挫",
+          "start": 27,
+          "end": 39
+        },
+        {
+          "word": "decisive",
+          "lemma": "decisive",
+          "level": 6,
+          "meaning": "a. 决定性的；坚定的",
+          "start": 83,
+          "end": 91
+        }
+      ],
+      "discourse_function": "story",
+      "prosody_focus": [
+        "decisive moment",
+        "settle his fate",
+        "magical words"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "Sexual confusion, economic frustrations, and religious hope—all came together in a decisive moment when he opened the Bible, told his father that the first line he saw would settle his fate, and read the magical words: ‘Come out from among them, touch no unclean thing, and I will be your God and you shall be my people.’",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text4/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 4,
+      "en": "One wonders what Dane thought of the careful sermons explaining the Bible that he heard in Puritan churches.",
+      "zh": "这不禁让人想知道，戴恩对清教教堂里那些细致解释《圣经》的布道究竟作何感想。",
+      "vocab": [
+        {
+          "word": "sermons",
+          "lemma": "sermon",
+          "level": 7,
+          "meaning": "说教；启示",
+          "start": 45,
+          "end": 52
+        }
+      ],
+      "discourse_function": "irony",
+      "prosody_focus": [
+        "One wonders",
+        "careful sermons"
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "One wonders what Dane thought of the careful sermons explaining the Bible that he heard in Puritan churches.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "ironic",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text4/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 5,
+      "en": "Meanwhile, many settlers had slighter religious commitments than Dane's, as one clergyman learned in confronting folk along the coast who mocked that they had not come to the New World for religion.",
+      "zh": "与此同时，许多移民的宗教投入甚至还不如戴恩；一位牧师在面对沿海居民时就发现，有人嘲讽说他们来到新大陆并不是为了宗教。",
+      "vocab": [
+        {
+          "word": "mocked",
+          "lemma": "mock",
+          "level": 7,
+          "meaning": "嘲笑；戏弄",
+          "start": 138,
+          "end": 144
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "slighter religious commitments",
+        "not come to the New World for religion"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "Meanwhile, many settlers had slighter religious commitments than Dane's, as one clergyman learned in confronting folk along the coast who mocked that they had not come to the New World for religion.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text4/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 5,
+      "en": "‘Our main end was to catch fish.’",
+      "zh": "“我们主要是来捕鱼的。”",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "catch fish"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "‘Our main end was to catch fish.’",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text4/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

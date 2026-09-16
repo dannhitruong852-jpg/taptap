@@ -1,0 +1,25 @@
+{
+  "batch_id": "2013-2018",
+  "pipeline_version": 2,
+  "years": [
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018
+  ],
+  "expected_articles": {
+    "2013": ["cloze", "text1", "text2", "text3", "text4", "partb", "translation"],
+    "2014": ["cloze", "text1", "text2", "text3", "text4", "partb", "translation"],
+    "2015": ["cloze", "text1", "text2", "text3", "text4", "partb", "translation"],
+    "2016": ["cloze", "text1", "text2", "text3", "text4", "partb", "translation"],
+    "2017": ["cloze", "text1", "text2", "text3", "text4", "partb", "translation"],
+    "2018": ["cloze", "text1", "text2", "text3", "text4", "partb", "translation"]
+  },
+  "source_ref": "b9c5fde97cd854383164031455f43857154b3bda",
+  "state": "draft",
+  "created_at": "2026-09-17T01:33:00+08:00",
+  "freeze": null,
+  "artifacts": {}
+}

@@ -1,7 +1,17 @@
 {
   "version": 1,
   "years": [
-    2002
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012
   ],
   "default_article": "2002-text1",
   "articles": [
@@ -58,6 +68,618 @@
       "content": "./content/2002/c/translation.json",
       "manifest": "./audio/2002/c-translation/manifest.json",
       "sentences": 5
+    },
+    {
+      "id": "2003-cloze",
+      "year": 2003,
+      "section_type": "cloze",
+      "title": "完型 · 青少年成长与活动设计",
+      "content": "./content/2003/c/cloze.json",
+      "manifest": "./audio/2003/v4/c-cloze/manifest.json",
+      "sentences": 11
+    },
+    {
+      "id": "2003-text1",
+      "year": 2003,
+      "section_type": "reading",
+      "title": "阅读一 · 互联网重塑情报工作",
+      "content": "./content/2003/c/text1.json",
+      "manifest": "./audio/2003/v4/c-text1/manifest.json",
+      "sentences": 24
+    },
+    {
+      "id": "2003-text2",
+      "year": 2003,
+      "section_type": "reading",
+      "title": "阅读二 · 动物权利与生物医学研究",
+      "content": "./content/2003/c/text2.json",
+      "manifest": "./audio/2003/v4/c-text2/manifest.json",
+      "sentences": 19
+    },
+    {
+      "id": "2003-text3",
+      "year": 2003,
+      "section_type": "reading",
+      "title": "阅读三 · 铁路兼并与垄断风险",
+      "content": "./content/2003/c/text3.json",
+      "manifest": "./audio/2003/v4/c-text3/manifest.json",
+      "sentences": 20
+    },
+    {
+      "id": "2003-text4",
+      "year": 2003,
+      "section_type": "reading",
+      "title": "阅读四 · 医疗进步、死亡与资源边界",
+      "content": "./content/2003/c/text4.json",
+      "manifest": "./audio/2003/v4/c-text4/manifest.json",
+      "sentences": 27
+    },
+    {
+      "id": "2003-translation",
+      "year": 2003,
+      "section_type": "translation",
+      "title": "翻译 · 人类学与社会科学方法",
+      "content": "./content/2003/c/translation.json",
+      "manifest": "./audio/2003/v4/c-translation/manifest.json",
+      "sentences": 5
+    },
+    {
+      "id": "2004-cloze",
+      "year": 2004,
+      "section_type": "cloze",
+      "title": "完型 · 青少年犯罪成因",
+      "content": "./content/2004/c/cloze.json",
+      "manifest": "./audio/2004/v4/c-cloze/manifest.json",
+      "sentences": 14
+    },
+    {
+      "id": "2004-text1",
+      "year": 2004,
+      "section_type": "reading",
+      "title": "阅读一 · 求职网站的个人搜索代理",
+      "content": "./content/2004/c/text1.json",
+      "manifest": "./audio/2004/v4/c-text1/manifest.json",
+      "sentences": 24
+    },
+    {
+      "id": "2004-text2",
+      "year": 2004,
+      "section_type": "reading",
+      "title": "阅读二 · “字母歧视”的讽刺观察",
+      "content": "./content/2004/c/text2.json",
+      "manifest": "./audio/2004/v4/c-text2/manifest.json",
+      "sentences": 20
+    },
+    {
+      "id": "2004-text3",
+      "year": 2004,
+      "section_type": "reading",
+      "title": "阅读三 · 从美甲店看经济降温",
+      "content": "./content/2004/c/text3.json",
+      "manifest": "./audio/2004/v4/c-text3/manifest.json",
+      "sentences": 27
+    },
+    {
+      "id": "2004-text4",
+      "year": 2004,
+      "section_type": "reading",
+      "title": "阅读四 · 美国教育中的反智主义",
+      "content": "./content/2004/c/text4.json",
+      "manifest": "./audio/2004/v4/c-text4/manifest.json",
+      "sentences": 22
+    },
+    {
+      "id": "2004-translation",
+      "year": 2004,
+      "section_type": "translation",
+      "title": "翻译 · 语言结构与思维方式",
+      "content": "./content/2004/c/translation.json",
+      "manifest": "./audio/2004/v4/c-translation/manifest.json",
+      "sentences": 5
+    },
+    {
+      "id": "2005-cloze",
+      "year": 2005,
+      "section_type": "cloze",
+      "title": "完型 · 人类嗅觉并不迟钝",
+      "content": "./content/2005/c/cloze.json",
+      "manifest": "./audio/2005/v4/c-cloze/manifest.json",
+      "sentences": 13
+    },
+    {
+      "id": "2005-partb",
+      "year": 2005,
+      "section_type": "part_b",
+      "title": "新题型 · 加拿大全国药品机构",
+      "content": "./content/2005/c/partb.json",
+      "manifest": "./audio/2005/v4/c-partb/manifest.json",
+      "sentences": 20
+    },
+    {
+      "id": "2005-text1",
+      "year": 2005,
+      "section_type": "reading",
+      "title": "阅读一 · 卷尾猴也在乎公平",
+      "content": "./content/2005/c/text1.json",
+      "manifest": "./audio/2005/v4/c-text1/manifest.json",
+      "sentences": 23
+    },
+    {
+      "id": "2005-text2",
+      "year": 2005,
+      "section_type": "reading",
+      "title": "阅读二 · 全球变暖与“分析瘫痪”",
+      "content": "./content/2005/c/text2.json",
+      "manifest": "./audio/2005/v4/c-text2/manifest.json",
+      "sentences": 21
+    },
+    {
+      "id": "2005-text3",
+      "year": 2005,
+      "section_type": "reading",
+      "title": "阅读三 · 梦境与情绪调节",
+      "content": "./content/2005/c/text3.json",
+      "manifest": "./audio/2005/v4/c-text3/manifest.json",
+      "sentences": 23
+    },
+    {
+      "id": "2005-text4",
+      "year": 2005,
+      "section_type": "reading",
+      "title": "阅读四 · 正式英语的衰落",
+      "content": "./content/2005/c/text4.json",
+      "manifest": "./audio/2005/v4/c-text4/manifest.json",
+      "sentences": 17
+    },
+    {
+      "id": "2005-translation",
+      "year": 2005,
+      "section_type": "translation",
+      "title": "翻译 · 欧洲电视与多媒体整合",
+      "content": "./content/2005/c/translation.json",
+      "manifest": "./audio/2005/v4/c-translation/manifest.json",
+      "sentences": 5
+    },
+    {
+      "id": "2006-cloze",
+      "year": 2006,
+      "section_type": "cloze",
+      "title": "完型 · 美国无家可归问题",
+      "content": "./content/2006/c/cloze.json",
+      "manifest": "./audio/2006/v4/c-cloze/manifest.json",
+      "sentences": 14
+    },
+    {
+      "id": "2006-partb",
+      "year": 2006,
+      "section_type": "part_b",
+      "title": "新题型 · 赌博成瘾与赌场责任",
+      "content": "./content/2006/c/partb.json",
+      "manifest": "./audio/2006/v4/c-partb/manifest.json",
+      "sentences": 25
+    },
+    {
+      "id": "2006-text1",
+      "year": 2006,
+      "section_type": "reading",
+      "title": "阅读一 · 美国社会的同化力量",
+      "content": "./content/2006/c/text1.json",
+      "manifest": "./audio/2006/v4/c-text1/manifest.json",
+      "sentences": 23
+    },
+    {
+      "id": "2006-text2",
+      "year": 2006,
+      "section_type": "reading",
+      "title": "阅读二 · 莎士比亚小镇的剧院之争",
+      "content": "./content/2006/c/text2.json",
+      "manifest": "./audio/2006/v4/c-text2/manifest.json",
+      "sentences": 22
+    },
+    {
+      "id": "2006-text3",
+      "year": 2006,
+      "section_type": "reading",
+      "title": "阅读三 · 过度捕捞与基准线漂移",
+      "content": "./content/2006/c/text3.json",
+      "manifest": "./audio/2006/v4/c-text3/manifest.json",
+      "sentences": 23
+    },
+    {
+      "id": "2006-text4",
+      "year": 2006,
+      "section_type": "reading",
+      "title": "阅读四 · 为什么艺术总爱悲伤",
+      "content": "./content/2006/c/text4.json",
+      "manifest": "./audio/2006/v4/c-text4/manifest.json",
+      "sentences": 24
+    },
+    {
+      "id": "2006-translation",
+      "year": 2006,
+      "section_type": "translation",
+      "title": "翻译 · 知识分子的定义与责任",
+      "content": "./content/2006/c/translation.json",
+      "manifest": "./audio/2006/v4/c-translation/manifest.json",
+      "sentences": 5
+    },
+    {
+      "id": "2007-cloze",
+      "year": 2007,
+      "section_type": "cloze",
+      "title": "完型 · 拉丁美洲独立后的政治理想与现实",
+      "content": "./content/2007/c/cloze.json",
+      "manifest": "./audio/2007/v4/c-cloze/manifest.json",
+      "sentences": 13
+    },
+    {
+      "id": "2007-partb",
+      "year": 2007,
+      "section_type": "part_b",
+      "title": "新题型 · 父母如何帮助孩子走向成年",
+      "content": "./content/2007/c/partb.json",
+      "manifest": "./audio/2007/v4/c-partb/manifest.json",
+      "sentences": 27
+    },
+    {
+      "id": "2007-text1",
+      "year": 2007,
+      "section_type": "reading",
+      "title": "阅读一 · 顶尖表现是练出来的",
+      "content": "./content/2007/c/text1.json",
+      "manifest": "./audio/2007/v4/c-text1/manifest.json",
+      "sentences": 18
+    },
+    {
+      "id": "2007-text2",
+      "year": 2007,
+      "section_type": "reading",
+      "title": "阅读二 · IQ 测试能测出什么",
+      "content": "./content/2007/c/text2.json",
+      "manifest": "./audio/2007/v4/c-text2/manifest.json",
+      "sentences": 19
+    },
+    {
+      "id": "2007-text3",
+      "year": 2007,
+      "section_type": "reading",
+      "title": "阅读三 · 中产家庭承担的金融风险",
+      "content": "./content/2007/c/text3.json",
+      "manifest": "./audio/2007/v4/c-text3/manifest.json",
+      "sentences": 16
+    },
+    {
+      "id": "2007-text4",
+      "year": 2007,
+      "section_type": "reading",
+      "title": "阅读四 · 数据泄露与企业治理",
+      "content": "./content/2007/c/text4.json",
+      "manifest": "./audio/2007/v4/c-text4/manifest.json",
+      "sentences": 14
+    },
+    {
+      "id": "2007-translation",
+      "year": 2007,
+      "section_type": "translation",
+      "title": "翻译 · 法律教育与新闻专业素养",
+      "content": "./content/2007/c/translation.json",
+      "manifest": "./audio/2007/v4/c-translation/manifest.json",
+      "sentences": 5
+    },
+    {
+      "id": "2008-cloze",
+      "year": 2008,
+      "section_type": "cloze",
+      "title": "完型 · 智力差异、遗传疾病与自然选择",
+      "content": "./content/2008/c/cloze.json",
+      "manifest": "./audio/2008/v4/c-cloze/manifest.json",
+      "sentences": 15
+    },
+    {
+      "id": "2008-partb",
+      "year": 2008,
+      "section_type": "part_b",
+      "title": "新题型 · 如何完成论文初稿并反复修改",
+      "content": "./content/2008/c/partb.json",
+      "manifest": "./audio/2008/v4/c-partb/manifest.json",
+      "sentences": 32
+    },
+    {
+      "id": "2008-text1",
+      "year": 2008,
+      "section_type": "reading",
+      "title": "阅读一 · 女性为何更易受到长期压力影响",
+      "content": "./content/2008/c/text1.json",
+      "manifest": "./audio/2008/v4/c-text1/manifest.json",
+      "sentences": 23
+    },
+    {
+      "id": "2008-text2",
+      "year": 2008,
+      "section_type": "reading",
+      "title": "阅读二 · 科学出版从订阅制走向开放获取",
+      "content": "./content/2008/c/text2.json",
+      "manifest": "./audio/2008/v4/c-text2/manifest.json",
+      "sentences": 24
+    },
+    {
+      "id": "2008-text3",
+      "year": 2008,
+      "section_type": "reading",
+      "title": "阅读三 · 美国人的身高已接近遗传上限",
+      "content": "./content/2008/c/text3.json",
+      "manifest": "./audio/2008/v4/c-text3/manifest.json",
+      "sentences": 20
+    },
+    {
+      "id": "2008-text4",
+      "year": 2008,
+      "section_type": "reading",
+      "title": "阅读四 · 美国建国者与奴隶制的道德妥协",
+      "content": "./content/2008/c/text4.json",
+      "manifest": "./audio/2008/v4/c-text4/manifest.json",
+      "sentences": 19
+    },
+    {
+      "id": "2008-translation",
+      "year": 2008,
+      "section_type": "translation",
+      "title": "翻译 · 达尔文对自身智力与审美变化的反思",
+      "content": "./content/2008/c/translation.json",
+      "manifest": "./audio/2008/v4/c-translation/manifest.json",
+      "sentences": 5
+    },
+    {
+      "id": "2009-cloze",
+      "year": 2009,
+      "section_type": "cloze",
+      "title": "完型 · 高智力是否存在进化代价",
+      "content": "./content/2009/c/cloze.json",
+      "manifest": "./audio/2009/v4/c-cloze/manifest.json",
+      "sentences": 17
+    },
+    {
+      "id": "2009-partb",
+      "year": 2009,
+      "section_type": "part_b",
+      "title": "新题型 · 人类学文化理论从进化论到传播论与功能论",
+      "content": "./content/2009/c/partb.json",
+      "manifest": "./audio/2009/v4/c-partb/manifest.json",
+      "sentences": 21
+    },
+    {
+      "id": "2009-text1",
+      "year": 2009,
+      "section_type": "reading",
+      "title": "阅读一 · 用新习惯打开创新思维",
+      "content": "./content/2009/c/text1.json",
+      "manifest": "./audio/2009/v4/c-text1/manifest.json",
+      "sentences": 22
+    },
+    {
+      "id": "2009-text2",
+      "year": 2009,
+      "section_type": "reading",
+      "title": "阅读二 · 商业 DNA 检测的流行与局限",
+      "content": "./content/2009/c/text2.json",
+      "manifest": "./audio/2009/v4/c-text2/manifest.json",
+      "sentences": 17
+    },
+    {
+      "id": "2009-text3",
+      "year": 2009,
+      "section_type": "reading",
+      "title": "阅读三 · 教育、生产率与贫困国家的经济发展",
+      "content": "./content/2009/c/text3.json",
+      "manifest": "./audio/2009/v4/c-text3/manifest.json",
+      "sentences": 20
+    },
+    {
+      "id": "2009-text4",
+      "year": 2009,
+      "section_type": "reading",
+      "title": "阅读四 · 新英格兰早期移民的不同思想背景",
+      "content": "./content/2009/c/text4.json",
+      "manifest": "./audio/2009/v4/c-text4/manifest.json",
+      "sentences": 17
+    },
+    {
+      "id": "2009-translation",
+      "year": 2009,
+      "section_type": "translation",
+      "title": "翻译 · 社会制度的教育作用与正式教育的形成",
+      "content": "./content/2009/c/translation.json",
+      "manifest": "./audio/2009/v4/c-translation/manifest.json",
+      "sentences": 5
+    },
+    {
+      "id": "2010-cloze",
+      "year": 2010,
+      "section_type": "cloze",
+      "title": "完型 · 2009年猪流感全球疫情",
+      "content": "./content/2010/c/cloze.json",
+      "manifest": "./audio/2010/v4/c-cloze/manifest.json",
+      "sentences": 13
+    },
+    {
+      "id": "2010-partb",
+      "year": 2010,
+      "section_type": "part_b",
+      "title": "新题型 · 模仿鸟群编队节省航空燃料",
+      "content": "./content/2010/c/partb.json",
+      "manifest": "./audio/2010/v4/c-partb/manifest.json",
+      "sentences": 28
+    },
+    {
+      "id": "2010-text1",
+      "year": 2010,
+      "section_type": "reading",
+      "title": "阅读一 · 金融危机后的艺术市场下行",
+      "content": "./content/2010/c/text1.json",
+      "manifest": "./audio/2010/v4/c-text1/manifest.json",
+      "sentences": 19
+    },
+    {
+      "id": "2010-text2",
+      "year": 2010,
+      "section_type": "reading",
+      "title": "阅读二 · 夫妻之间不同的谈话期待",
+      "content": "./content/2010/c/text2.json",
+      "manifest": "./audio/2010/v4/c-text2/manifest.json",
+      "sentences": 18
+    },
+    {
+      "id": "2010-text3",
+      "year": 2010,
+      "section_type": "reading",
+      "title": "阅读三 · 商业如何塑造消费者习惯",
+      "content": "./content/2010/c/text3.json",
+      "manifest": "./audio/2010/v4/c-text3/manifest.json",
+      "sentences": 16
+    },
+    {
+      "id": "2010-text4",
+      "year": 2010,
+      "section_type": "reading",
+      "title": "阅读四 · 美国陪审团制度的民主化改革",
+      "content": "./content/2010/c/text4.json",
+      "manifest": "./audio/2010/v4/c-text4/manifest.json",
+      "sentences": 14
+    },
+    {
+      "id": "2010-translation",
+      "year": 2010,
+      "section_type": "translation",
+      "title": "翻译 · 可持续价值如何落实到日常选择",
+      "content": "./content/2010/c/translation.json",
+      "manifest": "./audio/2010/v4/c-translation/manifest.json",
+      "sentences": 10
+    },
+    {
+      "id": "2011-cloze",
+      "year": 2011,
+      "section_type": "cloze",
+      "title": "完型 · 网络匿名与可信身份",
+      "content": "./content/2011/c/cloze.json",
+      "manifest": "./audio/2011/v4/c-cloze/manifest.json",
+      "sentences": 15
+    },
+    {
+      "id": "2011-partb",
+      "year": 2011,
+      "section_type": "part_b",
+      "title": "新题型 · 公共健康与垃圾食品监管",
+      "content": "./content/2011/c/partb.json",
+      "manifest": "./audio/2011/v4/c-partb/manifest.json",
+      "sentences": 21
+    },
+    {
+      "id": "2011-text1",
+      "year": 2011,
+      "section_type": "reading",
+      "title": "阅读一 · 外部董事为何提前离场",
+      "content": "./content/2011/c/text1.json",
+      "manifest": "./audio/2011/v4/c-text1/manifest.json",
+      "sentences": 19
+    },
+    {
+      "id": "2011-text2",
+      "year": 2011,
+      "section_type": "reading",
+      "title": "阅读二 · 报纸真的会消亡吗",
+      "content": "./content/2011/c/text2.json",
+      "manifest": "./audio/2011/v4/c-text2/manifest.json",
+      "sentences": 30
+    },
+    {
+      "id": "2011-text3",
+      "year": 2011,
+      "section_type": "reading",
+      "title": "阅读三 · “少即是多”的住宅美学",
+      "content": "./content/2011/c/text3.json",
+      "manifest": "./audio/2011/v4/c-text3/manifest.json",
+      "sentences": 17
+    },
+    {
+      "id": "2011-text4",
+      "year": 2011,
+      "section_type": "reading",
+      "title": "阅读四 · 欧元危机与欧洲整合",
+      "content": "./content/2011/c/text4.json",
+      "manifest": "./audio/2011/v4/c-text4/manifest.json",
+      "sentences": 17
+    },
+    {
+      "id": "2011-translation",
+      "year": 2011,
+      "section_type": "translation",
+      "title": "翻译 · IT产业的碳排放",
+      "content": "./content/2011/c/translation.json",
+      "manifest": "./audio/2011/v4/c-translation/manifest.json",
+      "sentences": 7
+    },
+    {
+      "id": "2012-cloze",
+      "year": 2012,
+      "section_type": "cloze",
+      "title": "完型 · G.I. Joe与普通美国士兵",
+      "content": "./content/2012/c/cloze.json",
+      "manifest": "./audio/2012/v4/c-cloze/manifest.json",
+      "sentences": 14
+    },
+    {
+      "id": "2012-partb",
+      "year": 2012,
+      "section_type": "part_b",
+      "title": "新题型 · 从伟人史到大众史",
+      "content": "./content/2012/c/partb.json",
+      "manifest": "./audio/2012/v4/c-partb/manifest.json",
+      "sentences": 27
+    },
+    {
+      "id": "2012-text1",
+      "year": 2012,
+      "section_type": "reading",
+      "title": "阅读一 · 家庭作业该占多少分",
+      "content": "./content/2012/c/text1.json",
+      "manifest": "./audio/2012/v4/c-text1/manifest.json",
+      "sentences": 18
+    },
+    {
+      "id": "2012-text2",
+      "year": 2012,
+      "section_type": "reading",
+      "title": "阅读二 · 粉色如何被塑造成“女孩色”",
+      "content": "./content/2012/c/text2.json",
+      "manifest": "./audio/2012/v4/c-text2/manifest.json",
+      "sentences": 18
+    },
+    {
+      "id": "2012-text3",
+      "year": 2012,
+      "section_type": "reading",
+      "title": "阅读三 · 基因专利之争",
+      "content": "./content/2012/c/text3.json",
+      "manifest": "./audio/2012/v4/c-text3/manifest.json",
+      "sentences": 24
+    },
+    {
+      "id": "2012-text4",
+      "year": 2012,
+      "section_type": "reading",
+      "title": "阅读四 · 高失业时代如何改变社会",
+      "content": "./content/2012/c/text4.json",
+      "manifest": "./audio/2012/v4/c-text4/manifest.json",
+      "sentences": 18
+    },
+    {
+      "id": "2012-translation",
+      "year": 2012,
+      "section_type": "translation",
+      "title": "翻译 · “人才流失”之忧",
+      "content": "./content/2012/c/translation.json",
+      "manifest": "./audio/2012/v4/c-translation/manifest.json",
+      "sentences": 6
     }
   ]
 }

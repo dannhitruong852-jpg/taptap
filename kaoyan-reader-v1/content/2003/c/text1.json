@@ -1,0 +1,952 @@
+{
+  "year": 2003,
+  "section_type": "reading",
+  "article_id": "text1",
+  "source_sha256": "77149d8faa8b6d539e2e8a6bf6a1f2801af640e7a49f248f059e5483cbe22443",
+  "source_pages": [
+    3,
+    4
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "08",
+  "article_context": "从传统间谍工作转入互联网“开源情报”。整体是科技报道式的冷静叙述，带一点职业圈内的干幽默；公司案例与引语处自然加快，但不演成谍战片。",
+  "article": {
+    "year": 2003,
+    "section": "text1",
+    "title": "阅读一 · 互联网重塑情报工作",
+    "background": "从传统间谍工作转入互联网“开源情报”。整体是科技报道式的冷静叙述，带一点职业圈内的干幽默；公司案例与引语处自然加快，但不演成谍战片。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "Wild Bill Donovan would have loved the Internet.",
+      "zh": "“狂人比尔”·多诺万一定会爱上互联网。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "would have loved",
+        "Internet"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "Wild Bill Donovan would have loved the Internet.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text1/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "The American spymaster who built the Office of Strategic Services in World War II and later laid the roots for the CIA was fascinated with information.",
+      "zh": "这位在二战时期创建美国战略情报局、后来又为中央情报局奠定基础的美国情报大师，对信息痴迷不已。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "spymaster",
+        "laid the roots",
+        "information"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "The American spymaster who built the Office of Strategic Services in World War II and later laid the roots for the CIA",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2003/c-text1/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s02-02",
+          "text": " was fascinated with information.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text1/s02-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "Donovan believed in using whatever tools came to hand in the “great game” of espionage — spying as a “profession.”",
+      "zh": "多诺万主张，在间谍这一场“大游戏”——也就是把刺探情报当作一种“职业”——中，手边有什么工具就用什么。",
+      "vocab": [
+        {
+          "word": "espionage",
+          "lemma": "espionage",
+          "level": 8,
+          "meaning": "间谍活动",
+          "start": 77,
+          "end": 86
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "whatever tools",
+        "great game",
+        "espionage"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Donovan believed in using whatever tools came to hand in the “great game” of espionage — spying as a “profession.”",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text1/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 1,
+      "en": "These days the Net, which has already remade such everyday pastimes as buying books and sending mail, is reshaping Donovan’s vocation as well.",
+      "zh": "如今，互联网已经改变了买书、寄信这类日常活动，也正在重塑多诺万所从事的那门职业。",
+      "vocab": [
+        {
+          "word": "vocation",
+          "lemma": "vocation",
+          "level": 7,
+          "meaning": "职业；使命",
+          "start": 125,
+          "end": 133
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": [
+        "already remade",
+        "reshaping"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "These days the Net, which has already remade such everyday pastimes as buying books and sending mail,",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2003/c-text1/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s04-02",
+          "text": " is reshaping Donovan’s vocation as well.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text1/s04-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "The latest revolution isn’t simply a matter of gentlemen reading other gentlemen’s e-mail.",
+      "zh": "这场最新的革命，并不只是一些“绅士”偷看另一些“绅士”的电子邮件那么简单。",
+      "vocab": [],
+      "discourse_function": "irony",
+      "prosody_focus": [
+        "isn’t simply",
+        "gentlemen"
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "The latest revolution isn’t simply a matter of gentlemen reading other gentlemen’s e-mail.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "ironic",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text1/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "That kind of electronic spying has been going on for decades.",
+      "zh": "那种电子侦察早已持续了几十年。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [
+        "for decades"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "That kind of electronic spying has been going on for decades.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text1/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "In the past three or four years, the World Wide Web has given birth to a whole industry of point-and-click spying.",
+      "zh": "过去三四年里，万维网催生了一个完整的“点一点鼠标就能搞情报”的行业。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [
+        "given birth",
+        "whole industry",
+        "point-and-click spying"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "In the past three or four years, the World Wide Web has given birth to a whole industry of point-and-click spying.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text1/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 2,
+      "en": "The spooks call it “open-source intelligence,” and as the Net grows, it is becoming increasingly influential.",
+      "zh": "情报人员称之为“开源情报”；随着互联网不断扩张，它的影响也越来越大。",
+      "vocab": [
+        {
+          "word": "influential",
+          "lemma": "influential",
+          "level": 6,
+          "meaning": "有影响力的",
+          "start": 97,
+          "end": 108
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "open-source intelligence",
+        "increasingly influential"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "The spooks call it “open-source intelligence,”",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2003/c-text1/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s08-02",
+          "text": " and as the Net grows, it is becoming increasingly influential.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text1/s08-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 3,
+      "en": "In 1995 the CIA held a contest to see who could compile the most data about Burundi.",
+      "zh": "1995年，中央情报局举办了一场比赛，看谁能搜集整理出最多的布隆迪资料。",
+      "vocab": [
+        {
+          "word": "compile",
+          "lemma": "compile",
+          "level": 6,
+          "meaning": "汇编；搜集整理",
+          "start": 48,
+          "end": 55
+        }
+      ],
+      "discourse_function": "story",
+      "prosody_focus": [
+        "CIA",
+        "compile",
+        "Burundi"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "In 1995 the CIA held a contest to see who could compile the most data about Burundi.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text1/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 3,
+      "en": "The winner, by a large margin, was a tiny Virginia company called Open Source Solutions, whose clear advantage was its mastery of the electronic world.",
+      "zh": "结果，一家名叫“开源解决方案”的弗吉尼亚小公司以巨大优势胜出；它明显的长处，正是对电子信息世界的熟练驾驭。",
+      "vocab": [
+        {
+          "word": "mastery",
+          "lemma": "mastery",
+          "level": 7,
+          "meaning": "精通",
+          "start": 119,
+          "end": 126
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "by a large margin",
+        "tiny",
+        "mastery"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "The winner, by a large margin, was a tiny Virginia company called Open Source Solutions,",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2003/c-text1/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s10-02",
+          "text": " whose clear advantage was its mastery of the electronic world.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text1/s10-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 4,
+      "en": "Among the firms making the biggest splash in this new world is Stratfor, Inc., a private intelligence-analysis firm based in Austin, Texas.",
+      "zh": "在这个新世界里声势最盛的公司之一，是位于得克萨斯州奥斯汀的私人情报分析公司 Stratfor。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [
+        "biggest splash",
+        "private intelligence-analysis firm"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "Among the firms making the biggest splash in this new world is Stratfor, Inc.,",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 75,
+          "audio_path": "./audio/2003/c-text1/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s11-02",
+          "text": " a private intelligence-analysis firm based in Austin, Texas.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text1/s11-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 4,
+      "en": "Stratfor makes money by selling the results of spying — covering nations from Chile to Russia — to corporations like energy-services firm McDermott International.",
+      "zh": "Stratfor 靠出售情报分析成果赚钱，覆盖对象从智利到俄罗斯，客户包括麦克德莫特国际这样的能源服务公司。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "selling the results",
+        "Chile to Russia"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "Stratfor makes money by selling the results of spying — covering nations from Chile to Russia — to corporations like energy-services firm McDermott International.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text1/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 4,
+      "en": "Many of its predictions are available online at www.stratfor.com.",
+      "zh": "它的许多预测都可以在网上看到。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [
+        "predictions",
+        "online"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "Many of its predictions are available online at www.stratfor.com.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text1/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 5,
+      "en": "Stratfor president George Friedman says he sees the online world as a kind of mutually reinforcing tool for both information collection and distribution, a spymaster’s dream.",
+      "zh": "Stratfor 总裁乔治·弗里德曼说，在他看来，网络世界是一种能让信息收集和信息传播相互强化的工具——简直就是情报头子的梦想。",
+      "vocab": [
+        {
+          "word": "reinforcing",
+          "lemma": "reinforcing",
+          "level": 7,
+          "meaning": "相互强化的",
+          "start": 87,
+          "end": 98
+        }
+      ],
+      "discourse_function": "explain_quote",
+      "prosody_focus": [
+        "mutually reinforcing",
+        "collection and distribution",
+        "dream"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "Stratfor president George Friedman says he sees the online world as a kind of mutually reinforcing tool for both information collection and distribution,",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 95,
+          "audio_path": "./audio/2003/c-text1/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s14-02",
+          "text": " a spymaster’s dream.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text1/s14-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 5,
+      "en": "Last week his firm was busy vacuuming up data bits from the far corners of the world and predicting a crisis in Ukraine.",
+      "zh": "上周，他的公司正忙着从世界各个遥远角落大量搜集零散数据，并预测乌克兰将出现危机。",
+      "vocab": [
+        {
+          "word": "vacuuming",
+          "lemma": "vacuum",
+          "level": 7,
+          "meaning": "大量搜集",
+          "start": 28,
+          "end": 37
+        }
+      ],
+      "discourse_function": "sequence",
+      "prosody_focus": [
+        "vacuuming up",
+        "far corners",
+        "crisis"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "Last week his firm was busy vacuuming up data bits from the far corners of the world and predicting a crisis in Ukraine.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text1/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 5,
+      "en": "“As soon as that report runs, we’ll suddenly get 500 new Internet sign-ups from Ukraine,” says Friedman, a former political science professor.",
+      "zh": "“那份报告一发表，我们马上就会突然多出500个来自乌克兰的网络注册用户。”曾任政治学教授的弗里德曼说道。",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [
+        "500 new Internet sign-ups"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "“As soon as that report runs, we’ll suddenly get 500 new Internet sign-ups from Ukraine,”",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 85,
+          "audio_path": "./audio/2003/c-text1/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s16-02",
+          "text": " says Friedman, a former political science professor.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text1/s16-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 5,
+      "en": "“And we’ll hear back from some of them.”",
+      "zh": "“而且其中一些人还会给我们反馈。”",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [
+        "hear back"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "“And we’ll hear back from some of them.”",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text1/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 6,
+      "en": "Open-source spying does have its risks, of course, since it can be difficult to tell good information from bad.",
+      "zh": "当然，开源情报也确实有风险，因为优质信息和劣质信息有时很难分辨。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "does have its risks",
+        "tell good information from bad"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "Open-source spying does have its risks, of course,",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2003/c-text1/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s18-02",
+          "text": " since it can be difficult to tell good information from bad.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text1/s18-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 6,
+      "en": "That’s where Stratfor earns its keep.",
+      "zh": "这也正是 Stratfor 凭本事赚钱的地方。",
+      "vocab": [],
+      "discourse_function": "irony",
+      "prosody_focus": [
+        "earns its keep"
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "That’s where Stratfor earns its keep.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "ironic",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text1/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "paragraph": 6,
+      "en": "Friedman relies on a lean staff of 20 in Austin.",
+      "zh": "弗里德曼在奥斯汀只靠一支20人的精干团队。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [
+        "lean staff",
+        "20"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s20-01",
+          "text": "Friedman relies on a lean staff of 20 in Austin.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text1/s20-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "paragraph": 6,
+      "en": "Several of his staff members have military-intelligence backgrounds.",
+      "zh": "他的几名员工有军事情报工作背景。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [
+        "military-intelligence backgrounds"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s21-01",
+          "text": "Several of his staff members have military-intelligence backgrounds.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text1/s21-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "paragraph": 6,
+      "en": "He sees the firm’s outsider status as the key to its success.",
+      "zh": "他把公司的局外人身份视为成功的关键。",
+      "vocab": [
+        {
+          "word": "outsider",
+          "lemma": "outsider",
+          "level": 6,
+          "meaning": "局外人",
+          "start": 19,
+          "end": 27
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "outsider status",
+        "key"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s22-01",
+          "text": "He sees the firm’s outsider status as the key to its success.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text1/s22-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "paragraph": 6,
+      "en": "Stratfor’s briefs don’t sound like the usual Washington back-and-forthing, whereby agencies avoid dramatic declarations on the chance they might be wrong.",
+      "zh": "Stratfor 的简报不像华盛顿机构之间常见的那种来回周旋；那些机构往往怕判断出错，因此避免作出鲜明、强烈的断言。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "don’t sound like",
+        "avoid dramatic declarations"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s23-01",
+          "text": "Stratfor’s briefs don’t sound like the usual Washington back-and-forthing,",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2003/c-text1/s23-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s23-02",
+          "text": " whereby agencies avoid dramatic declarations on the chance they might be wrong.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text1/s23-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "paragraph": 6,
+      "en": "Stratfor, says Friedman, takes pride in its independent voice.",
+      "zh": "弗里德曼说，Stratfor 以自己独立的声音为傲。",
+      "vocab": [
+        {
+          "word": "independent",
+          "lemma": "independent",
+          "level": 5,
+          "meaning": "独立的",
+          "start": 44,
+          "end": 55
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "independent voice"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s24-01",
+          "text": "Stratfor, says Friedman, takes pride in its independent voice.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text1/s24-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

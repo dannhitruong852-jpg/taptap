@@ -1,0 +1,106 @@
+name: Backtest vocabulary selector once
+
+on:
+  push:
+    branches: [c-v4-article-preview-actual]
+    paths:
+      - '.github/workflows/backtest-vocab-selector-once.yml'
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install scikit-learn==1.7.2
+      - name: Download ECDICT
+        run: curl -L --retry 3 --fail -o /tmp/ecdict.csv https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv
+      - name: Leave-one-year-out backtest
+        run: |
+          python - <<'PY'
+          import csv,json,math,re,sys
+          from pathlib import Path
+          import numpy as np
+          from sklearn.linear_model import LogisticRegression
+          from sklearn.metrics import precision_recall_fscore_support
+          sys.path.insert(0,'content-pipeline')
+          from build_curated_year import load_curated_source, vocabulary_for
+
+          root=Path('.'); token_re=re.compile(r"[A-Za-z]+(?:[-'][A-Za-z]+)*")
+          old_years=range(2002,2007)
+          surfaces_by_year={}; positives_by_year={}; level_by_surface={}
+          all_needed=set()
+          for yr in old_years:
+              src=load_curated_source(root/'content-pipeline/curated',yr)
+              lexicon=src.get('vocabulary') or {}
+              surfaces=set(); positives=set()
+              for article in src['articles']:
+                  for row in article['rows']:
+                      en=row[1].replace('|','')
+                      surfaces.update(x.lower() for x in token_re.findall(en))
+                      for v in vocabulary_for(en,lexicon):
+                          w=v['word'].lower(); positives.add(w); level_by_surface[(yr,w)]=v['level']
+              surfaces_by_year[yr]=surfaces; positives_by_year[yr]=positives; all_needed |= surfaces
+          for yr in range(2007,2013):
+              surfaces=set()
+              for unit in ('cloze','text1','text2','text3','text4','partb','translation'):
+                  d=json.loads((root/f'reports/content-freeze/{yr}/{unit}.candidate.json').read_text(encoding='utf-8'))
+                  for row in d['article']['rows']: surfaces.update(x.lower() for x in token_re.findall(row[1].replace('|','')))
+              surfaces_by_year[yr]=surfaces; all_needed |= surfaces
+
+          records={}
+          with open('/tmp/ecdict.csv',encoding='utf-8',newline='') as f:
+              for r in csv.DictReader(f):
+                  w=(r.get('word') or '').lower()
+                  if w in all_needed: records[w]=r
+          def iv(x):
+              try:return int(x or 0)
+              except:return 0
+          tags=('gk','cet4','cet6','ky','toefl','ielts','gre')
+          def feat(w):
+              r=records.get(w,{})
+              b=iv(r.get('bnc')); q=iv(r.get('frq')); coll=iv(r.get('collins')); tg=set((r.get('tag') or '').split())
+              br=b if b>0 else 60000; qr=q if q>0 else 60000
+              return [math.log1p(br),math.log1p(qr),len(w),coll,1 if str(r.get('oxford') or '') not in ('','0') else 0,
+                      *[1 if t in tg else 0 for t in tags],1 if '-' in w else 0]
+          def eligible(w):
+              return len(w)>=4 and w in records and any(c.isalpha() for c in w)
+          def dataset(years):
+              X=[];Y=[];meta=[]
+              for yr in years:
+                  pos=positives_by_year[yr]
+                  for w in surfaces_by_year[yr]:
+                      if not eligible(w): continue
+                      X.append(feat(w));Y.append(1 if w in pos else 0);meta.append((yr,w))
+              return np.array(X),np.array(Y),meta
+          print('=== LOYO ===')
+          for hold in old_years:
+              train=[yr for yr in old_years if yr!=hold]
+              X,y,_=dataset(train); Xt,yt,meta=dataset([hold])
+              clf=LogisticRegression(max_iter=500,class_weight='balanced',C=.7).fit(X,y)
+              prob=clf.predict_proba(Xt)[:,1]
+              best=None
+              for th in np.arange(.35,.86,.05):
+                  pred=(prob>=th).astype(int)
+                  p,r,f,_=precision_recall_fscore_support(yt,pred,average='binary',zero_division=0)
+                  count=int(pred.sum()); target=int(yt.sum())
+                  score=f - abs(count-target)/max(1,target)*.08
+                  if best is None or score>best[0]: best=(score,th,p,r,f,count,target)
+              print('hold',hold,'best=',tuple(round(x,3) if isinstance(x,float) else x for x in best[1:]))
+          X,y,_=dataset(old_years)
+          clf=LogisticRegression(max_iter=500,class_weight='balanced',C=.7).fit(X,y)
+          print('positive_rate=',round(float(y.mean()),4),'n=',len(y),'pos=',int(y.sum()))
+          print('coef=',[round(float(x),3) for x in clf.coef_[0]],'intercept=',round(float(clf.intercept_[0]),3))
+          for th in (.45,.5,.55,.6,.65,.7,.75):
+              counts={}; samples={}
+              for yr in range(2007,2013):
+                  ws=[w for w in surfaces_by_year[yr] if eligible(w)]
+                  probs=clf.predict_proba(np.array([feat(w) for w in ws]))[:,1]
+                  picked=sorted([(float(p),w) for w,p in zip(ws,probs) if p>=th],reverse=True)
+                  counts[yr]=len(picked); samples[yr]=[w for _,w in picked[:15]]
+              print('TH',th,'counts=',counts)
+              if th in (.55,.65): print('samples=',samples)
+          PY

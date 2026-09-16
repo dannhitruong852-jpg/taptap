@@ -1,0 +1,607 @@
+{
+  "year": 2011,
+  "section_type": "cloze",
+  "article_id": "cloze",
+  "source_sha256": "d756fdd06e9ae7c3ed6af30be23d1ec696b835ad006aa28d7d95795de75fc431",
+  "source_pages": [
+    1,
+    2
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "05",
+  "article_context": "网络匿名、网络犯罪与可信身份体系。语气理性审慎，突出隐私与安全之间的张力。",
+  "article": {
+    "year": 2011,
+    "section": "cloze",
+    "title": "完型 · 网络匿名与可信身份",
+    "background": "网络匿名、网络犯罪与可信身份体系。语气理性审慎，突出隐私与安全之间的张力。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "The Internet affords anonymity to its users, a blessing to privacy and freedom of speech.",
+      "zh": "互联网让使用者可以匿名，这既保护隐私，也保障言论自由。",
+      "vocab": [
+        {
+          "word": "anonymity",
+          "lemma": "anonymity",
+          "level": 7,
+          "meaning": "匿名；姓氏不明",
+          "start": 21,
+          "end": 30
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "The Internet affords anonymity to its users, a blessing to privacy and freedom of speech.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2011/c-cloze/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 2,
+      "en": "But that very anonymity is also behind the explosion of cyber-crime that has swept across the Web.",
+      "zh": "然而，正是这种匿名性也助长了席卷网络的网络犯罪。",
+      "vocab": [
+        {
+          "word": "anonymity",
+          "lemma": "anonymity",
+          "level": 7,
+          "meaning": "匿名；姓氏不明",
+          "start": 14,
+          "end": 23
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "But that very anonymity is also behind the explosion of cyber-crime that has swept across the Web.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2011/c-cloze/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 3,
+      "en": "Can privacy be preserved while bringing safety and security to a world that seems increasingly lawless ?",
+      "zh": "问题在于：在一个似乎越来越缺乏规则约束的世界里，能否一边保住隐私，一边带来安全与保障？",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Can privacy be preserved while bringing safety and security to a world that seems increasingly lawless ?",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2011/c-cloze/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 4,
+      "en": "Last month, Howard Schmidt, the nation’s cyber-czar, offered the federal government a proposal to make the Web a safer place – a “voluntary trusted identity” system that would be the high-tech equivalent of a physical key, a fingerprint and a photo ID card, all rolled into one.",
+      "zh": "上个月，美国“网络事务主管”霍华德·施密特向联邦政府提出一项建议，希望让网络更安全——建立一种“自愿的可信身份”体系。它相当于把实体钥匙、指纹和带照片的身份证的功能合为一体的高科技版本。",
+      "vocab": [
+        {
+          "word": "equivalent",
+          "lemma": "equivalent",
+          "level": 6,
+          "meaning": "同等物；等价物",
+          "start": 193,
+          "end": 203
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Last month, Howard Schmidt, the nation’s cyber-czar, offered the federal government a proposal to make the Web a safer place – a “voluntary trusted identity” system that would be the high-tech equivalent of a physical key, a fingerprint and a photo ID card, all rolled into one.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2011/c-cloze/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 5,
+      "en": "The system might use a smart identity card, or a digital credential linked to a specific computer, and would authenticate users at a range of online services.",
+      "zh": "这个体系可以采用智能身份卡，或与特定电脑绑定的数字凭证，并能在多种在线服务中验证用户身份。",
+      "vocab": [
+        {
+          "word": "credential",
+          "lemma": "credential",
+          "level": 6,
+          "meaning": "国书；凭据",
+          "start": 57,
+          "end": 67
+        },
+        {
+          "word": "authenticate",
+          "lemma": "authenticate",
+          "level": 8,
+          "meaning": "t. 证明可信；证实为真",
+          "start": 109,
+          "end": 121
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "The system might use a smart identity card, or a digital credential linked to a specific computer, and would authenticate users at a range of online services.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2011/c-cloze/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 6,
+      "en": "The idea is to create a federation of private online identity systems.",
+      "zh": "其思路是创建一个由多个私人在线身份系统组成的联盟。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "The idea is to create a federation of private online identity systems.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2011/c-cloze/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 7,
+      "en": "Users could select which system to join, and only registered users whose identities have been authenticated could navigate those systems.",
+      "zh": "用户可以自行选择加入哪个系统，而只有身份得到认证的注册用户才能在这些系统中活动。",
+      "vocab": [
+        {
+          "word": "authenticated",
+          "lemma": "authenticate",
+          "level": 8,
+          "meaning": "t. 证明可信；证实为真",
+          "start": 94,
+          "end": 107
+        },
+        {
+          "word": "navigate",
+          "lemma": "navigate",
+          "level": 7,
+          "meaning": "i. 航行",
+          "start": 114,
+          "end": 122
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "Users could select which system to join, and only registered users whose identities have been authenticated could navigate those systems.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2011/c-cloze/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 8,
+      "en": "The approach contrasts with one that would require an Internet driver’s license issued by the government.",
+      "zh": "这与由政府签发“互联网驾照”的做法形成对照。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "The approach contrasts with one that would require an Internet driver’s license issued by the government.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2011/c-cloze/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 9,
+      "en": "Google and Microsoft are among companies that already have these “single sign-on” systems that make it possible for users to log in just once but use many different services.",
+      "zh": "谷歌、微软等公司已经拥有类似的“单点登录”系统，使用户只需登录一次，就能使用多项服务。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "Google and Microsoft are among companies that already have these “single sign-on” systems that make it possible for users to log in just once but use many different services.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2011/c-cloze/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 10,
+      "en": "In effect , the approach would create a “walled garden” in cyberspace, with safe “neighborhoods” and bright “streetlights” to establish a sense of a trusted community. Mr. Schmidt described it as a “voluntary ecosystem” in which “individuals and organizations can complete online transactions with confidence , trusting the identities of each other and the identities of the infrastructure on which the transaction runs.”",
+      "zh": "实际上，这种做法会在网络空间形成一个“有围墙的花园”：其中有安全的“社区”和明亮的“路灯”，从而建立可信社区的感觉。施密特把它称为一种“自愿生态系统”，在其中，个人和组织能够有把握地完成网上交易，因为彼此的身份以及承载交易的基础设施身份都是可信的。",
+      "vocab": [
+        {
+          "word": "cyberspace",
+          "lemma": "cyberspace",
+          "level": 7,
+          "meaning": "[计] 空间；网控空间",
+          "start": 59,
+          "end": 69
+        },
+        {
+          "word": "neighborhoods",
+          "lemma": "neighborhood",
+          "level": 9,
+          "meaning": "附近；邻近",
+          "start": 82,
+          "end": 95
+        },
+        {
+          "word": "streetlights",
+          "lemma": "streetlight",
+          "level": 9,
+          "meaning": "街灯；路灯",
+          "start": 109,
+          "end": 121
+        },
+        {
+          "word": "ecosystem",
+          "lemma": "ecosystem",
+          "level": 7,
+          "meaning": "生态系统",
+          "start": 209,
+          "end": 218
+        },
+        {
+          "word": "transactions",
+          "lemma": "transaction",
+          "level": 6,
+          "meaning": "交易；办理",
+          "start": 280,
+          "end": 292
+        },
+        {
+          "word": "infrastructure",
+          "lemma": "infrastructure",
+          "level": 6,
+          "meaning": "基础结构；基础设施",
+          "start": 375,
+          "end": 389
+        },
+        {
+          "word": "transaction",
+          "lemma": "transaction",
+          "level": 6,
+          "meaning": "交易；办理",
+          "start": 403,
+          "end": 414
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "In effect , the approach would create a “walled garden” in cyberspace, with safe “neighborhoods” and bright “streetlights” to establish a sense of a trusted community. Mr. Schmidt described it as a “voluntary ecosystem” in which “individuals and organizations can complete online transactions with confidence , trusting the identities of each other and the identities of the infrastructure on which the transaction runs.”",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2011/c-cloze/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 11,
+      "en": "Still, the administration’s plan has divided privacy rights activists.",
+      "zh": "尽管如此，政府的方案仍使隐私权活动人士意见分化：",
+      "vocab": [
+        {
+          "word": "administration",
+          "lemma": "administration",
+          "level": 6,
+          "meaning": "行政；管理",
+          "start": 11,
+          "end": 25
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "Still, the administration’s plan has divided privacy rights activists.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2011/c-cloze/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 12,
+      "en": "Some applaud the approach; others are concerned.",
+      "zh": "有人赞同，也有人担忧。",
+      "vocab": [
+        {
+          "word": "applaud",
+          "lemma": "applaud",
+          "level": 7,
+          "meaning": "拍手喝彩；称赞",
+          "start": 5,
+          "end": 12
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "Some applaud the approach; others are concerned.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2011/c-cloze/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 13,
+      "en": "It seems clear that such a scheme is an initiative push toward what would eventually be a compulsory Internet “driver’s license” mentality.",
+      "zh": "显然，这样的方案可能逐步把人们推向一种最终强制实行“互联网驾照”的思维。",
+      "vocab": [
+        {
+          "word": "compulsory",
+          "lemma": "compulsory",
+          "level": 7,
+          "meaning": "a. 被强制的；强迫的",
+          "start": 90,
+          "end": 100
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "It seems clear that such a scheme is an initiative push toward what would eventually be a compulsory Internet “driver’s license” mentality.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2011/c-cloze/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 14,
+      "en": "The plan has also been greeted with skepticism by some computer security experts, who worry that the “voluntary ecosystem” envisioned by Mr. Schmidt would still leave much of the Internet vulnerable .",
+      "zh": "部分计算机安全专家也以怀疑态度看待该计划，他们担心施密特设想的“自愿生态系统”仍会让互联网的大部分区域处于脆弱状态。",
+      "vocab": [
+        {
+          "word": "skepticism",
+          "lemma": "skepticism",
+          "level": 7,
+          "meaning": "怀疑论",
+          "start": 36,
+          "end": 46
+        },
+        {
+          "word": "ecosystem",
+          "lemma": "ecosystem",
+          "level": 7,
+          "meaning": "生态系统",
+          "start": 112,
+          "end": 121
+        },
+        {
+          "word": "envisioned",
+          "lemma": "envision",
+          "level": 8,
+          "meaning": "t. 想象；预想",
+          "start": 123,
+          "end": 133
+        },
+        {
+          "word": "vulnerable",
+          "lemma": "vulnerable",
+          "level": 6,
+          "meaning": "a. 易受伤害的；有弱点的",
+          "start": 188,
+          "end": 198
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "The plan has also been greeted with skepticism by some computer security experts, who worry that the “voluntary ecosystem” envisioned by Mr. Schmidt would still leave much of the Internet vulnerable .",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2011/c-cloze/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 15,
+      "en": "They argue that all Internet users should be forced to register and identify themselves, in the same way that drivers must be licensed to drive on public roads.",
+      "zh": "他们主张所有互联网用户都应被强制注册并表明身份，就像司机必须取得驾照才能在公共道路上驾驶一样。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "They argue that all Internet users should be forced to register and identify themselves, in the same way that drivers must be licensed to drive on public roads.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2011/c-cloze/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,305 @@
+name: Generate kaoyan C-mode batch 2007-2012
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: kaoyan-c-2007-2012-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  HF_HOME: /tmp/chatterbox-hf-cache
+  PYTHONPATH: voice-pipeline:content-pipeline
+  OMP_NUM_THREADS: '4'
+  MKL_NUM_THREADS: '4'
+  PYTHONUNBUFFERED: '1'
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Enforce 2007-2012 content freeze
+        run: |
+          python -m unittest \
+            scripts/tests/test_check_2007_2012_content_freeze.py \
+            scripts/tests/test_build_2007_2012_curated.py \
+            scripts/tests/test_2007_2012_workflow_contract.py -v
+          python scripts/check_2007_2012_content_freeze.py
+          python scripts/build_2007_2012_curated.py
+      - name: Build and validate canonical content
+        run: |
+          for year in 2007 2008 2009 2010 2011 2012; do
+            python content-pipeline/build_curated_year.py --year "$year"
+          done
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from batch_schema import validate_article
+          for year in range(2007, 2013):
+              files=sorted(Path(f'kaoyan-reader-v1/content/{year}/c').glob('*.json'))
+              assert len(files)==7,(year,len(files))
+              for path in files:
+                  doc=json.loads(path.read_text())
+                  errors=validate_article(doc)
+                  assert not errors,(path,errors)
+                  for sentence in doc['sentences']:
+                      assert ''.join(s['text'] for s in sentence['segments'])==sentence['en']
+          PY
+
+  voicepack:
+    needs: preflight
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install reference preparation dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          python -m pip install numpy==1.26.4 soundfile==0.13.1 requests
+      - name: Build baseline profiles and production approvals
+        run: |
+          mkdir -p /tmp/voicepack/profiles /tmp/voicepack/references /tmp/expansion-profiles
+          python voice-pipeline/calibration/build_expansion_profiles.py --output /tmp/expansion-profiles
+          for n in $(seq -w 1 15); do
+            if [ -f "voice-pipeline/calibration/actors/${n}.json" ]; then
+              cp "voice-pipeline/calibration/actors/${n}.json" "/tmp/voicepack/profiles/${n}.json"
+            else
+              cp "/tmp/expansion-profiles/${n}.json" "/tmp/voicepack/profiles/${n}.json"
+            fi
+          done
+          cp voice-pipeline/calibration/actors/production_approvals.json /tmp/voicepack/profiles/production_approvals.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          path=Path('/tmp/voicepack/profiles/production_approvals.json')
+          data=json.loads(path.read_text())
+          data['actors']['06']={
+              'status':'accepted','eligible_for':['production'],
+              'approval_method':'automated_c_v4_qa','qa_policy':'automated-c-v4-qa-2',
+              'qa2_golden_run_id':34743370177,'qa2_expansion_run_id':34740877351,
+              'intent_variants':{
+                  'neutral_explain':'B','serious_analysis':'A','warm_explain':'A',
+                  'narrative_build':'A','contrast':'B','information_peak':'B',
+                  'restrained_irony':'A','quoted_character':'C','qualification':'A',
+                  'curious_probe':'A'
+              }
+          }
+          path.write_text(json.dumps(data,indent=2)+'\n')
+          PY
+      - name: Download repaired actor profiles
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34757803286 -R "$GITHUB_REPOSITORY" -n c-v4-final-two-r7-03 -D /tmp/final03
+          gh run download 34746310492 -R "$GITHUB_REPOSITORY" -n c-v4-six-repair-r2-07 -D /tmp/final07
+          gh run download 34744873122 -R "$GITHUB_REPOSITORY" -n c-v4-six-repair-10 -D /tmp/final10
+          gh run download 34744873122 -R "$GITHUB_REPOSITORY" -n c-v4-six-repair-11 -D /tmp/final11
+          gh run download 34749959122 -R "$GITHUB_REPOSITORY" -n c-v4-six-repair-r4-14 -D /tmp/final14
+          gh run download 34765501954 -R "$GITHUB_REPOSITORY" -n c-v4-actor15-repair-r9 -D /tmp/final15
+          for n in 03 07 10 11 14 15; do
+            test -s "/tmp/final${n}/profiles/${n}.json"
+            cp "/tmp/final${n}/profiles/${n}.json" "/tmp/voicepack/profiles/${n}.json"
+          done
+      - name: Prepare all actor references
+        run: |
+          for n in $(seq -w 1 15); do
+            case "$n" in
+              01|02|04|05|08|09|12|13)
+                python voice-pipeline/prepare_2002_cast_references.py --actor "$n" --output /tmp/voicepack/references ;;
+              03|14)
+                python voice-pipeline/calibration/prepare_repair_references_r4.py --actor "$n" --output /tmp/voicepack/references ;;
+              *)
+                python voice-pipeline/calibration/prepare_expansion_references.py --actor "$n" --output /tmp/voicepack/references ;;
+            esac
+          done
+      - name: Install actor15 X11 prompt
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34754229039 -R "$GITHUB_REPOSITORY" -n c-v4-final-two-r6-15 -D /tmp/r6
+          cp /tmp/r6/audio/actor15/actor15-08-probe-X11.wav /tmp/voicepack/references/actor15-08-probe-X11.wav
+      - name: Preflight every actor intent and reference
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from adapters.chatterbox_actor_adapter import resolve_controls
+          from calibration.automatic_qa import REQUIRED_INTENTS
+          profiles=Path('/tmp/voicepack/profiles')
+          references=Path('/tmp/voicepack/references')
+          checked=0
+          for number in range(1,16):
+              actor=f'{number:02d}'
+              for intent in REQUIRED_INTENTS:
+                  for intensity in (0,1,2):
+                      controls=resolve_controls(actor,intent,intensity,profiles)
+                      target=references/controls['reference_path']
+                      assert target.is_file(),(actor,intent,intensity,target)
+                      checked += 1
+          print({'actor_intent_intensity_checks':checked})
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kaoyan-c-v4-production-voicepack-2007-2012
+          path: /tmp/voicepack
+          if-no-files-found: error
+          retention-days: 14
+
+  render:
+    needs: [preflight, voicepack]
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 8
+      matrix:
+        shard: [0, 1, 2]
+        unit:
+          - {year: 2007, article: cloze}
+          - {year: 2007, article: text1}
+          - {year: 2007, article: text2}
+          - {year: 2007, article: text3}
+          - {year: 2007, article: text4}
+          - {year: 2007, article: partb}
+          - {year: 2007, article: translation}
+          - {year: 2008, article: cloze}
+          - {year: 2008, article: text1}
+          - {year: 2008, article: text2}
+          - {year: 2008, article: text3}
+          - {year: 2008, article: text4}
+          - {year: 2008, article: partb}
+          - {year: 2008, article: translation}
+          - {year: 2009, article: cloze}
+          - {year: 2009, article: text1}
+          - {year: 2009, article: text2}
+          - {year: 2009, article: text3}
+          - {year: 2009, article: text4}
+          - {year: 2009, article: partb}
+          - {year: 2009, article: translation}
+          - {year: 2010, article: cloze}
+          - {year: 2010, article: text1}
+          - {year: 2010, article: text2}
+          - {year: 2010, article: text3}
+          - {year: 2010, article: text4}
+          - {year: 2010, article: partb}
+          - {year: 2010, article: translation}
+          - {year: 2011, article: cloze}
+          - {year: 2011, article: text1}
+          - {year: 2011, article: text2}
+          - {year: 2011, article: text3}
+          - {year: 2011, article: text4}
+          - {year: 2011, article: partb}
+          - {year: 2011, article: translation}
+          - {year: 2012, article: cloze}
+          - {year: 2012, article: text1}
+          - {year: 2012, article: text2}
+          - {year: 2012, article: text3}
+          - {year: 2012, article: text4}
+          - {year: 2012, article: partb}
+          - {year: 2012, article: translation}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - uses: actions/cache@v4
+        with:
+          path: /tmp/chatterbox-hf-cache
+          key: chatterbox-original-en-017-v1
+      - uses: actions/download-artifact@v4
+        with:
+          name: kaoyan-c-v4-production-voicepack-2007-2012
+          path: /tmp/voicepack
+      - name: Install renderer dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          python -m pip install chatterbox-tts==0.1.7 numpy==1.26.4 soundfile==0.13.1
+      - name: Build canonical content and direction
+        run: |
+          python scripts/build_2007_2012_curated.py
+          python content-pipeline/build_curated_year.py --year '${{ matrix.unit.year }}'
+      - name: Render shard
+        run: |
+          python voice-pipeline/generate_c_v4.py \
+            --year '${{ matrix.unit.year }}' \
+            --article '${{ matrix.unit.article }}' \
+            --shard '${{ matrix.shard }}' --shards 3 --max-attempts 2 \
+            --calibration-dir /tmp/voicepack/profiles \
+            --references-dir /tmp/voicepack/references \
+            --output 'batch-out/${{ matrix.unit.year }}/${{ matrix.unit.article }}'
+      - name: Require shard manifest
+        run: test -s 'batch-out/${{ matrix.unit.year }}/${{ matrix.unit.article }}/v4-shard-${{ matrix.shard }}.json'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: kaoyan-c-${{ matrix.unit.year }}-${{ matrix.unit.article }}-shard-${{ matrix.shard }}
+          path: batch-out/${{ matrix.unit.year }}/${{ matrix.unit.article }}
+          if-no-files-found: error
+          retention-days: 14
+
+  merge:
+    needs: render
+    if: always() && needs.render.result == 'success'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        year: [2007, 2008, 2009, 2010, 2011, 2012]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install merge dependency
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+      - name: Build canonical content
+        run: |
+          python scripts/build_2007_2012_curated.py
+          python content-pipeline/build_curated_year.py --year '${{ matrix.year }}'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: kaoyan-c-${{ matrix.year }}-*
+          path: /tmp/incoming
+          merge-multiple: false
+      - name: Merge sentence assets and verify completeness
+        run: python voice-pipeline/merge_c_v4.py --year '${{ matrix.year }}' --incoming /tmp/incoming
+      - name: Verify every browser manifest is technically complete
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          year='${{ matrix.year }}'
+          report=json.loads(Path(f'kaoyan-reader-v1/reports/c-v4-{year}-merge.json').read_text())
+          assert report['status']=='complete_candidate',report
+          assert report['qa']['technical']=='passed',report
+          assert len(report['articles'])==7,(year,len(report['articles']))
+          for article,data in report['articles'].items():
+              assert not data['missing'],(article,data['missing'])
+              manifest=json.loads(Path(f'kaoyan-reader-v1/audio/{year}/v4/c-{article}/manifest.json').read_text())
+              assert manifest['qa']['technical']=='passed',article
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kaoyan-c-${{ matrix.year }}-merged-candidate
+          path: |
+            kaoyan-reader-v1/content/${{ matrix.year }}/c
+            kaoyan-reader-v1/audio/${{ matrix.year }}/v4
+            kaoyan-reader-v1/reports/c-v4-${{ matrix.year }}-merge.json
+            reports/extraction/${{ matrix.year }}.json
+          if-no-files-found: error
+          retention-days: 14

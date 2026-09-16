@@ -1,0 +1,36 @@
+name: Trace vocabulary generator history once
+
+on:
+  push:
+    branches: [c-v4-article-preview-actual]
+    paths:
+      - '.github/workflows/audit-vocab-history-once.yml'
+
+jobs:
+  trace:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Trace vocabulary-related history
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo '=== COMMITS mentioning vocabulary/lexicon/glossary/1-9 ==='
+          git log --all --date=iso --pretty=format:'%H %ad %s' --regexp-ignore-case \
+            --grep='vocab\|lexicon\|glossary\|1-9\|word level\|wordlist' | head -n 200 || true
+          echo
+          echo '=== HISTORICAL FILE PATHS ==='
+          git log --all --name-only --pretty=format: | sort -u | \
+            grep -Ei 'vocab|lexicon|glossary|dictionary|word.?list|frequency|level' | head -n 300 || true
+          echo
+          echo '=== ADDED/DELETED PYTHON FILES AROUND CURATED 2002-2006 ==='
+          git log --all --diff-filter=AD --summary -- '*.py' | \
+            grep -Ei 'commit |create mode|delete mode|vocab|curat|2002|2003|2004|2005|2006' | head -n 500 || true
+          echo
+          echo '=== CODE HISTORY term project-curated-1-9-v1 ==='
+          git log --all -S'project-curated-1-9-v1' --oneline --all || true
+          echo
+          echo '=== CODE HISTORY likely vocab keys ==='
+          git log --all -S'"vocabulary"' --oneline -- '*.py' '*.json' | head -n 200 || true

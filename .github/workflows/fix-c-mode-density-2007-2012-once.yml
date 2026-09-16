@@ -1,0 +1,93 @@
+name: Fix C-mode density 2007-2012 once
+
+on:
+  push:
+    branches:
+      - c-v4-article-preview-actual
+    paths:
+      - '.github/workflows/fix-c-mode-density-2007-2012-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: c-v4-article-preview-actual
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply only the three reviewed discourse-density corrections
+        run: |
+          python - <<'PY'
+          import hashlib
+          import importlib.util
+          import json
+          from pathlib import Path
+
+          spec = importlib.util.spec_from_file_location('build_curated_year', 'content-pipeline/build_curated_year.py')
+          module = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(module)
+
+          fixes = {
+              (2007, 'text3', 12): ('settle', 'contrast'),
+              (2009, 'text4', 7): ('report', 'advance'),
+              (2010, 'text3', 10): ('example', 'sequence'),
+          }
+
+          def protected_digest(doc):
+              protected = []
+              for row in doc['article']['rows']:
+                  protected.append([row[0], row[1], row[2], row[4]])
+              return hashlib.sha256(json.dumps(protected, ensure_ascii=False, separators=(',', ':')).encode()).hexdigest()
+
+          before = {}
+          touched = set()
+          for (year, unit, sentence), (expected, replacement) in fixes.items():
+              path = Path(f'reports/content-freeze/{year}/{unit}.candidate.json')
+              doc = json.loads(path.read_text(encoding='utf-8'))
+              before[path] = protected_digest(doc)
+              row = doc['article']['rows'][sentence - 1]
+              if row[3] != expected:
+                  raise SystemExit(f'{year}/{unit}/s{sentence:02d}: expected {expected}, found {row[3]}')
+              if replacement not in module.PROFILES:
+                  raise SystemExit(f'invalid replacement profile: {replacement}')
+              row[3] = replacement
+              path.write_text(json.dumps(doc, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+              touched.add(path)
+
+          for path in touched:
+              doc = json.loads(path.read_text(encoding='utf-8'))
+              if protected_digest(doc) != before[path]:
+                  raise SystemExit(f'protected candidate content changed: {path}')
+
+          errors = []
+          unknown = []
+          for year in range(2007, 2013):
+              for unit in ('cloze','text1','text2','text3','text4','partb','translation'):
+                  doc = json.loads(Path(f'reports/content-freeze/{year}/{unit}.candidate.json').read_text(encoding='utf-8'))
+                  rows = doc['article']['rows']
+                  canonical = [module.canonical_discourse(row[3]) for row in rows]
+                  for index, label in enumerate(canonical, 1):
+                      if label not in module.PROFILES:
+                          unknown.append((year, unit, index, rows[index-1][3]))
+                  for i in range(len(canonical) - 2):
+                      if all(label in module.PROFILES for label in canonical[i:i+3]):
+                          levels = [module.PROFILES[label][1] for label in canonical[i:i+3]]
+                          if all(level == 'low' for level in levels):
+                              errors.append((year, unit, i+1, canonical[i:i+3]))
+          print(json.dumps({'unknown': unknown, 'density_errors': errors, 'touched': [str(p) for p in sorted(touched)]}, ensure_ascii=False))
+          if unknown or errors:
+              raise SystemExit('C-mode discourse audit still has blockers')
+          PY
+      - name: Commit discourse-only candidate metadata corrections
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add reports/content-freeze/2007/text3.candidate.json reports/content-freeze/2009/text4.candidate.json reports/content-freeze/2010/text3.candidate.json
+          git commit -m 'content: resolve final C-mode discourse density gates'
+          git push origin HEAD:c-v4-article-preview-actual

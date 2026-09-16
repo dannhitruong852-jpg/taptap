@@ -1,0 +1,812 @@
+{
+  "year": 2009,
+  "section_type": "reading",
+  "article_id": "text1",
+  "source_sha256": "fcd4b7f273ad0b5310fcbcf434777663198d5dc07c6ffaac91043735e14e8cc4",
+  "source_pages": [
+    3,
+    4
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "02",
+  "article_context": "习惯、创造力与创新主题。文章先打破“习惯与创新相悖”的直觉，再从脑科学和思维模式说明有意识培养新习惯能够开辟新的思考路径。",
+  "article": {
+    "year": 2009,
+    "section": "text1",
+    "title": "阅读一 · 用新习惯打开创新思维",
+    "background": "习惯、创造力与创新主题。文章先打破“习惯与创新相悖”的直觉，再从脑科学和思维模式说明有意识培养新习惯能够开辟新的思考路径。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "Habits are a funny thing.",
+      "zh": "习惯是一件很有意思的事情。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "Habits are a funny thing.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text1/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "We reach for them mindlessly, setting our brains on auto-pilot and relaxing into the unconscious comfort of familiar routine.",
+      "zh": "我们常常不假思索地依赖习惯，让大脑进入“自动驾驶”状态，安然沉入熟悉日常所带来的无意识舒适感中。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "We reach for them mindlessly, setting our brains on auto-pilot and relaxing into the unconscious comfort of familiar routine.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text1/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "\"Not choice, but habit rules the unreflecting herd,\" William Wordsworth said in the 19th century.",
+      "zh": "19世纪，威廉·华兹华斯曾说：“支配不加反思的人群的不是选择，而是习惯。”",
+      "vocab": [
+        {
+          "word": "unreflecting",
+          "lemma": "unreflecting",
+          "level": 9,
+          "meaning": "a. 缺乏考虑的；无思想的",
+          "start": 33,
+          "end": 45
+        }
+      ],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "\"Not choice, but habit rules the unreflecting herd,\" William Wordsworth said in the 19th century.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text1/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 1,
+      "en": "In the ever-changing 21st century, even the word “habit” carries a negative implication.",
+      "zh": "在不断变化的21世纪，甚至“习惯”这个词本身也带有负面意味。",
+      "vocab": [
+        {
+          "word": "implication",
+          "lemma": "implication",
+          "level": 6,
+          "meaning": "牵连；含义",
+          "start": 76,
+          "end": 87
+        }
+      ],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "In the ever-changing 21st century, even the word “habit” carries a negative implication.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text1/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "So it seems paradoxical to talk about habits in the same context as creativity and innovation.",
+      "zh": "因此，把习惯与创造力和创新放在同一语境中谈论，似乎有些自相矛盾。",
+      "vocab": [
+        {
+          "word": "paradoxical",
+          "lemma": "paradoxical",
+          "level": 7,
+          "meaning": "a. 似非而是的；矛盾的",
+          "start": 12,
+          "end": 23
+        },
+        {
+          "word": "innovation",
+          "lemma": "innovation",
+          "level": 6,
+          "meaning": "改革；创新",
+          "start": 83,
+          "end": 93
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "So it seems paradoxical to talk about habits in the same context as creativity and innovation.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text1/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "But brain researchers have discovered that when we consciously develop new habits, we create parallel paths, and even entirely new brain cells, that can jump our trains of thought onto new, innovative tracks.",
+      "zh": "但脑科学研究者发现，当我们有意识地培养新习惯时，会形成平行路径，甚至生成全新的脑细胞，从而让思维列车跃迁到新的、富有创新性的轨道上。",
+      "vocab": [
+        {
+          "word": "researchers",
+          "lemma": "researcher",
+          "level": 6,
+          "meaning": "研究人员",
+          "start": 10,
+          "end": 21
+        },
+        {
+          "word": "consciously",
+          "lemma": "consciously",
+          "level": 7,
+          "meaning": "自觉地；有意识地",
+          "start": 51,
+          "end": 62
+        },
+        {
+          "word": "innovative",
+          "lemma": "innovative",
+          "level": 6,
+          "meaning": "a. 革新的；创新的",
+          "start": 190,
+          "end": 200
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "But brain researchers have discovered that when we consciously develop new habits, we create parallel paths, and even entirely new brain cells, that can jump our trains of thought onto new, innovative tracks.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text1/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 3,
+      "en": "Rather than dismissing ourselves as unchangeable creatures of habit, we can instead direct our own change by consciously developing new habits.",
+      "zh": "与其认定自己是无法改变的习惯动物，不如通过有意识地培养新习惯，主动引导自身改变。",
+      "vocab": [
+        {
+          "word": "unchangeable",
+          "lemma": "unchangeable",
+          "level": 9,
+          "meaning": "a. 不变的；不能改变的",
+          "start": 36,
+          "end": 48
+        },
+        {
+          "word": "consciously",
+          "lemma": "consciously",
+          "level": 7,
+          "meaning": "自觉地；有意识地",
+          "start": 109,
+          "end": 120
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "Rather than dismissing ourselves as unchangeable creatures of habit, we can instead direct our own change by consciously developing new habits.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text1/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 3,
+      "en": "In fact, the more new things we try — the more we step outside our comfort zone — the more inherently creative we become, both in the workplace and in our personal lives.",
+      "zh": "事实上，我们尝试的新事物越多，越经常走出舒适区，无论在工作还是个人生活中，我们就越会自然而然地变得更有创造力。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "In fact, the more new things we try — the more we step outside our comfort zone — the more inherently creative we become, both in the workplace and in our personal lives.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text1/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 4,
+      "en": "But don't bother trying to kill off old habits; once those ruts of procedure are worn into the brain, they're there to stay.",
+      "zh": "但别费力试图消灭旧习惯；一旦那些固定程序在大脑里磨出了车辙，它们就会长久存在。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "But don't bother trying to kill off old habits; once those ruts of procedure are worn into the brain, they're there to stay.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text1/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 4,
+      "en": "Instead, the new habits we deliberately press into ourselves create parallel pathways that can bypass those old roads.",
+      "zh": "相反，我们有意识压入自身的新习惯会形成平行路径，从而绕开那些旧道路。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "Instead, the new habits we deliberately press into ourselves create parallel pathways that can bypass those old roads.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text1/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 5,
+      "en": "“The first thing needed for innovation is a fascination with wonder,” says Dawna Markova, author of The Open Mind.",
+      "zh": "“创新首先需要的是对惊奇保持着迷。”《开放的心智》作者多娜·马尔科娃说。",
+      "vocab": [
+        {
+          "word": "innovation",
+          "lemma": "innovation",
+          "level": 6,
+          "meaning": "改革；创新",
+          "start": 28,
+          "end": 38
+        },
+        {
+          "word": "fascination",
+          "lemma": "fascination",
+          "level": 7,
+          "meaning": "令人着迷的事物；入迷",
+          "start": 44,
+          "end": 55
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "“The first thing needed for innovation is a fascination with wonder,” says Dawna Markova, author of The Open Mind.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text1/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 5,
+      "en": "“But we are taught instead to ‘decide,’ just as our president calls himself ‘the Decider.’”",
+      "zh": "“但我们接受的教育却是要去‘做决定’，就像我们的总统把自己称作‘决断者’一样。”",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "“But we are taught instead to ‘decide,’ just as our president calls himself ‘the Decider.’”",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text1/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 5,
+      "en": "She adds, however, that “to decide is to kill off all possibilities but one.",
+      "zh": "不过她补充说：“做决定，就意味着除了一种可能性之外，把其他所有可能性都排除掉。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "She adds, however, that “to decide is to kill off all possibilities but one.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text1/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 5,
+      "en": "A good innovational thinker is always exploring the many other possibilities.”",
+      "zh": "优秀的创新思考者总是在探索许多其他的可能性。”",
+      "vocab": [
+        {
+          "word": "innovational",
+          "lemma": "innovational",
+          "level": 9,
+          "meaning": "a. 革新的；富有革新精神的",
+          "start": 7,
+          "end": 19
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "A good innovational thinker is always exploring the many other possibilities.”",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text1/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 6,
+      "en": "All of us work through problems in ways of which we're unaware, she says.",
+      "zh": "她说，我们每个人解决问题时都会采用一些自己并未意识到的方式。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "All of us work through problems in ways of which we're unaware, she says.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text1/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 6,
+      "en": "Researchers in the late 1960s discovered that humans are born with the capacity to approach challenges in four primary ways: analytically, procedurally, relationally (or collaboratively) and innovatively.",
+      "zh": "20世纪60年代末的研究者发现，人天生具有以四种基本方式应对挑战的能力：分析式、程序式、关系式（或协作式）和创新式。",
+      "vocab": [
+        {
+          "word": "Researchers",
+          "lemma": "researcher",
+          "level": 6,
+          "meaning": "研究人员",
+          "start": 0,
+          "end": 11
+        },
+        {
+          "word": "analytically",
+          "lemma": "analytically",
+          "level": 8,
+          "meaning": "[机] 分析上",
+          "start": 125,
+          "end": 137
+        },
+        {
+          "word": "procedurally",
+          "lemma": "procedurally",
+          "level": 9,
+          "meaning": "procedural（程序上的）的变形；程序上地",
+          "start": 139,
+          "end": 151
+        },
+        {
+          "word": "relationally",
+          "lemma": "relationally",
+          "level": 9,
+          "meaning": "relational（有关系的；有联系的",
+          "start": 153,
+          "end": 165
+        },
+        {
+          "word": "collaboratively",
+          "lemma": "collaboratively",
+          "level": 9,
+          "meaning": "合作地；协作地",
+          "start": 170,
+          "end": 185
+        },
+        {
+          "word": "innovatively",
+          "lemma": "innovatively",
+          "level": 9,
+          "meaning": "创新地",
+          "start": 191,
+          "end": 203
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "Researchers in the late 1960s discovered that humans are born with the capacity to approach challenges in four primary ways: analytically, procedurally, relationally (or collaboratively) and innovatively.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text1/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 6,
+      "en": "At the end of adolescence, however, the brain shuts down half of that capacity, preserving only those modes of thought that have seemed most valuable during the first decade or so of life.",
+      "zh": "然而到了青春期末期，大脑会关闭其中一半能力，只保留那些在人生最初十来年中显得最有价值的思维模式。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "At the end of adolescence, however, the brain shuts down half of that capacity, preserving only those modes of thought that have seemed most valuable during the first decade or so of life.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text1/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 7,
+      "en": "The current emphasis on standardized testing highlights analysis and procedure, meaning that few of us inherently use our innovative and collaborative modes of thought.",
+      "zh": "当前对标准化考试的强调突出的是分析和程序，这意味着我们当中很少有人会本能地运用创新式和协作式思维。",
+      "vocab": [
+        {
+          "word": "standardized",
+          "lemma": "standardized",
+          "level": 7,
+          "meaning": "a. 标准化的；标准的",
+          "start": 24,
+          "end": 36
+        },
+        {
+          "word": "innovative",
+          "lemma": "innovative",
+          "level": 6,
+          "meaning": "a. 革新的；创新的",
+          "start": 122,
+          "end": 132
+        },
+        {
+          "word": "collaborative",
+          "lemma": "collaborative",
+          "level": 7,
+          "meaning": "a. 合作的；协作的",
+          "start": 137,
+          "end": 150
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "The current emphasis on standardized testing highlights analysis and procedure, meaning that few of us inherently use our innovative and collaborative modes of thought.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text1/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 7,
+      "en": "“This breaks the major rule in the American belief system— that anyone can do anything,” explains M. J. Ryan, author of the 2006 book This Year I Will... and Ms. Markova's business partner.",
+      "zh": "“这打破了美国信念体系中的一条重要原则——任何人都可以做任何事。”2006年《今年我将……》一书作者、马尔科娃的商业伙伴M. J. Ryan解释道。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "“This breaks the major rule in the American belief system— that anyone can do anything,” explains M. J. Ryan, author of the 2006 book This Year I Will... and Ms. Markova's business partner.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text1/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "paragraph": 7,
+      "en": "“That’s a lie that we have perpetuated, and it fosters commonness.",
+      "zh": "“这是我们一直延续的一个谎言，它培养的是平庸。",
+      "vocab": [
+        {
+          "word": "perpetuated",
+          "lemma": "perpetuate",
+          "level": 7,
+          "meaning": "t. 使永存；使不朽",
+          "start": 27,
+          "end": 38
+        },
+        {
+          "word": "fosters",
+          "lemma": "foster",
+          "level": 6,
+          "meaning": "a. 收养的；养育的",
+          "start": 47,
+          "end": 54
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s20-01",
+          "text": "“That’s a lie that we have perpetuated, and it fosters commonness.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text1/s20-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "paragraph": 7,
+      "en": "Knowing what you're good at and doing even more of it creates excellence.”",
+      "zh": "知道自己擅长什么，并把它做得更多、更好，才会创造卓越。”",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s21-01",
+          "text": "Knowing what you're good at and doing even more of it creates excellence.”",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text1/s21-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "paragraph": 7,
+      "en": "This is where developing new habits comes in.",
+      "zh": "这正是培养新习惯发挥作用的地方。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s22-01",
+          "text": "This is where developing new habits comes in.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-text1/s22-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

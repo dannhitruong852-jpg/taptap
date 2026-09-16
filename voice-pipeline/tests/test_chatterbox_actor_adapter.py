@@ -92,6 +92,26 @@ class ActorAdapterTests(unittest.TestCase):
         self.assertEqual(resolved['selected_variant'], 'B')
         self.assertEqual(resolved['approval_status'], 'accepted')
 
+    def test_repaired_candidate_can_use_named_variant_and_explicit_controls(self):
+        p = profile('15', 0.51, 0.45)
+        p['references']['curious'] = 'actor15-08-probe-X11.wav'
+        p['selected_candidates']['curious_probe'] = {
+            'variant': 'AA5',
+            'reference_state': 'curious',
+            'exaggeration': 0.31,
+            'cfg_weight': 0.61,
+            'temperature': 0.72,
+            'repetition_penalty': 1.21,
+        }
+        (self.dir / '15.json').write_text(json.dumps(p), encoding='utf-8')
+        resolved = resolve_controls('15', 'curious_probe', 2, self.dir)
+        self.assertEqual(resolved['selected_variant'], 'AA5')
+        self.assertEqual(resolved['reference_path'], 'actor15-08-probe-X11.wav')
+        self.assertEqual(resolved['exaggeration'], 0.335)
+        self.assertEqual(resolved['cfg_weight'], 0.595)
+        self.assertEqual(resolved['temperature'], 0.72)
+        self.assertEqual(resolved['repetition_penalty'], 1.21)
+
 
 if __name__ == '__main__':
     unittest.main()

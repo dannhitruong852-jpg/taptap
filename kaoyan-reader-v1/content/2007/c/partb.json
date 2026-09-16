@@ -1,0 +1,987 @@
+{
+  "year": 2007,
+  "section_type": "part_b",
+  "article_id": "partb",
+  "source_sha256": "b265c5fdf5ca4b165967cf096072624c6e118e40139e6a942fcf84ce9670a99a",
+  "source_pages": [
+    11,
+    12
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "06",
+  "article_context": "面向父母的实用建议文。语气成熟、温和、有经验感；每组建议都像面对面解释，不朗诵标题。A-G 标题、41-45 编号和Directions全部排除，只保留文章真实正文。",
+  "article": {
+    "year": 2007,
+    "section": "partb",
+    "title": "新题型 · 父母如何帮助孩子走向成年",
+    "background": "面向父母的实用建议文。语气成熟、温和、有经验感；每组建议都像面对面解释，不朗诵标题。A-G 标题、41-45 编号和Directions全部排除，只保留文章真实正文。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "Mothers and fathers can do a lot to ensure a safe landing in early adulthood for their kids.",
+      "zh": "父母可以做很多事情，帮助孩子平稳地进入成年早期。",
+      "vocab": [],
+      "discourse_function": "encourage",
+      "prosody_focus": [
+        "can do a lot",
+        "safe landing"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "Mothers and fathers can do a lot to ensure a safe landing in early adulthood for their kids.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-partb/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Even if a job's starting salary seems too small to satisfy an emerging adult's need for rapid content, the transition from school to work can be less of a setback if the start-up adult is ready for the move.",
+      "zh": "即使一份工作的起薪看起来不足以满足一个初入成年的年轻人对迅速获得满足的期待，只要这个刚起步的成年人为转变做好了准备，从学校走向职场就不会那么像一次挫折。",
+      "vocab": [
+        {
+          "word": "transition",
+          "lemma": "transition",
+          "level": 6,
+          "meaning": "转变；转换",
+          "start": 107,
+          "end": 117
+        },
+        {
+          "word": "setback",
+          "lemma": "setback",
+          "level": 7,
+          "meaning": "挫折；退步",
+          "start": 155,
+          "end": 162
+        }
+      ],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "Even if",
+        "ready for the move"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Even if a job's starting salary seems too small to satisfy an emerging adult's need for rapid content, the transition from school to work can be less of a setback if the start-up adult is ready for the move.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-partb/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "Here are a few measures, drawn from my book Ready or Not? Here Life Comes, that parents can take to prevent what I call “work-life unreadiness”:",
+      "zh": "下面这些做法摘自我的书《准备好了吗？生活来了》，父母可以借此预防我所说的“工作与生活准备不足”。",
+      "vocab": [
+        {
+          "word": "unreadiness",
+          "lemma": "unreadiness",
+          "level": 9,
+          "meaning": "没预备；不敏捷",
+          "start": 131,
+          "end": 142
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": [
+        "a few measures",
+        "work-life unreadiness"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Here are a few measures, drawn from my book Ready or Not? Here Life Comes, that parents can take to prevent what I call “work-life unreadiness”:",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-partb/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "You can start this process when they are 11 or 12.",
+      "zh": "孩子十一二岁时，你就可以开始这个过程。",
+      "vocab": [],
+      "discourse_function": "action_turn",
+      "prosody_focus": [
+        "start this process",
+        "11 or 12"
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "You can start this process when they are 11 or 12.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "lively",
+          "intensity": 2,
+          "rate": 1.04,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-partb/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "Periodically review their emerging strengths and weaknesses with them and work together on any shortcomings, like difficulty in communicating well or collaborating.",
+      "zh": "定期和孩子一起审视逐渐显现出来的优势与弱点，并共同改善不足之处，例如不善沟通或协作。",
+      "vocab": [
+        {
+          "word": "shortcomings",
+          "lemma": "shortcoming",
+          "level": 7,
+          "meaning": "缺点；短处",
+          "start": 95,
+          "end": 107
+        },
+        {
+          "word": "communicating",
+          "lemma": "communicate",
+          "level": 6,
+          "meaning": "t. 显露；传达",
+          "start": 128,
+          "end": 141
+        },
+        {
+          "word": "collaborating",
+          "lemma": "collaborate",
+          "level": 7,
+          "meaning": "i. 合作；勾结",
+          "start": 150,
+          "end": 163
+        }
+      ],
+      "discourse_function": "action_turn",
+      "prosody_focus": [
+        "strengths and weaknesses",
+        "work together"
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Periodically review their emerging strengths and weaknesses with them and work together on any shortcomings, like difficulty in communicating well or collaborating.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "lively",
+          "intensity": 2,
+          "rate": 1.04,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-partb/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "Also, identify the kinds of interests they keep coming back to, as these offer clues to the careers that will fit them best.",
+      "zh": "同时，留意那些他们总会反复回到的兴趣，因为这些兴趣会为最适合他们的职业提供线索。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "keep coming back to",
+        "clues to the careers"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "Also, identify the kinds of interests they keep coming back to, as these offer clues to the careers that will fit them best.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-partb/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 3,
+      "en": "Kids need a range of authentic role models—as opposed to members of their clique, pop stars and vaunted athletes.",
+      "zh": "孩子需要一系列真实可信的榜样，而不是只盯着朋友圈里的同伴、流行明星或被吹捧的运动员。",
+      "vocab": [
+        {
+          "word": "authentic",
+          "lemma": "authentic",
+          "level": 6,
+          "meaning": "a. 可靠的；可信的",
+          "start": 21,
+          "end": 30
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "authentic role models",
+        "as opposed to"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "Kids need a range of authentic role models—as opposed to members of their clique, pop stars and vaunted athletes.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-partb/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 3,
+      "en": "Have regular dinner-table discussions about people the family knows and how they got where they are.",
+      "zh": "经常在餐桌上谈谈家里认识的人，以及他们是怎样走到今天这一步的。",
+      "vocab": [],
+      "discourse_function": "action_turn",
+      "prosody_focus": [
+        "regular dinner-table discussions",
+        "how they got where they are"
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "Have regular dinner-table discussions about people the family knows and how they got where they are.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "lively",
+          "intensity": 2,
+          "rate": 1.04,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-partb/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 3,
+      "en": "Discuss the joys and downsides of your own career and encourage your kids to form some ideas about their own future.",
+      "zh": "谈谈你自己职业中的乐趣和不如意，也鼓励孩子对自己的未来形成一些想法。",
+      "vocab": [],
+      "discourse_function": "action_turn",
+      "prosody_focus": [
+        "joys and downsides",
+        "their own future"
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "Discuss the joys and downsides of your own career and encourage your kids to form some ideas about their own future.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "lively",
+          "intensity": 2,
+          "rate": 1.04,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-partb/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 3,
+      "en": "When asked what they want to do, they should be discouraged from saying, “I have no idea.”",
+      "zh": "当被问到以后想做什么时，不应让孩子习惯用“我不知道”来作答。",
+      "vocab": [
+        {
+          "word": "discouraged",
+          "lemma": "discourage",
+          "level": 6,
+          "meaning": "t. 使气馁；阻碍",
+          "start": 48,
+          "end": 59
+        }
+      ],
+      "discourse_function": "warning",
+      "prosody_focus": [
+        "discouraged",
+        "I have no idea"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "When asked what they want to do, they should be discouraged from saying, “I have no idea.”",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-partb/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 3,
+      "en": "They can change their minds 200 times, but having only a foggy view of the future is of little good.",
+      "zh": "他们当然可以把想法改上两百次，但如果对未来始终只有一片模糊的印象，也没有什么好处。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "change their minds 200 times",
+        "foggy view"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "They can change their minds 200 times, but having only a foggy view of the future is of little good.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-partb/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 4,
+      "en": "Teachers are responsible for teaching kids how to learn; parents should be responsible for teaching them how to work.",
+      "zh": "教师负责教孩子怎样学习；父母则应该负责教他们怎样工作。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "Teachers",
+        "parents"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "Teachers are responsible for teaching kids how to learn; parents should be responsible for teaching them how to work.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-partb/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 4,
+      "en": "Assign responsibilities around the house and make sure homework deadlines are met.",
+      "zh": "给孩子分配家务责任，并确保他们按时完成作业。",
+      "vocab": [],
+      "discourse_function": "action_turn",
+      "prosody_focus": [
+        "Assign responsibilities",
+        "deadlines are met"
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "Assign responsibilities around the house and make sure homework deadlines are met.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "lively",
+          "intensity": 2,
+          "rate": 1.04,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-partb/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 4,
+      "en": "Encourage teenagers to take a part-time job.",
+      "zh": "鼓励青少年去做一份兼职。",
+      "vocab": [],
+      "discourse_function": "action_turn",
+      "prosody_focus": [
+        "part-time job"
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "Encourage teenagers to take a part-time job.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "lively",
+          "intensity": 2,
+          "rate": 1.04,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-partb/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 4,
+      "en": "Kids need plenty of practice delaying gratification and deploying effective organizational skills, such as managing time and setting priorities.",
+      "zh": "孩子需要大量练习延迟满足，并运用有效的组织能力，比如管理时间和确定事情的优先次序。",
+      "vocab": [
+        {
+          "word": "gratification",
+          "lemma": "gratification",
+          "level": 8,
+          "meaning": "令人满足的事(或物)；满足",
+          "start": 38,
+          "end": 51
+        },
+        {
+          "word": "organizational",
+          "lemma": "organizational",
+          "level": 6,
+          "meaning": "a. 组织的",
+          "start": 76,
+          "end": 90
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "delaying gratification",
+        "setting priorities"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "Kids need plenty of practice delaying gratification and deploying effective organizational skills, such as managing time and setting priorities.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-partb/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 5,
+      "en": "Playing video games encourages immediate content.",
+      "zh": "玩电子游戏会强化即时满足。",
+      "vocab": [],
+      "discourse_function": "warning",
+      "prosody_focus": [
+        "immediate content"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "Playing video games encourages immediate content.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-partb/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 5,
+      "en": "And hours of watching TV shows with canned laughter only teaches kids to process information in a passive way.",
+      "zh": "长时间观看配有罐头笑声的电视节目，也只会让孩子以被动方式处理信息。",
+      "vocab": [
+        {
+          "word": "passive",
+          "lemma": "passive",
+          "level": 6,
+          "meaning": "a. 消极的；被动的",
+          "start": 98,
+          "end": 105
+        }
+      ],
+      "discourse_function": "warning",
+      "prosody_focus": [
+        "hours of watching TV",
+        "passive way"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "And hours of watching TV shows with canned laughter only teaches kids to process information in a passive way.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-partb/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 5,
+      "en": "At the same time, listening through earphones to the same monotonous beats for long stretches encourages kids to stay inside their bubble instead of pursuing other endeavors.",
+      "zh": "与此同时，长时间戴着耳机反复听同样单调的节拍，也会让孩子更愿意躲在自己的小世界里，而不是去尝试其他事情。",
+      "vocab": [
+        {
+          "word": "monotonous",
+          "lemma": "monotonous",
+          "level": 8,
+          "meaning": "a. 单调的；无变化的",
+          "start": 58,
+          "end": 68
+        },
+        {
+          "word": "endeavors",
+          "lemma": "endeavor",
+          "level": 6,
+          "meaning": "努力；尽力",
+          "start": 164,
+          "end": 173
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "stay inside their bubble",
+        "instead of pursuing"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "At the same time, listening through earphones to the same monotonous beats for long stretches encourages kids to stay inside their bubble instead of pursuing other endeavors.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-partb/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 5,
+      "en": "All these activities can prevent the growth of important communication and thinking skills and make it difficult for kids to develop the kind of sustained concentration they will need for most jobs.",
+      "zh": "这些活动都可能妨碍重要沟通能力和思考能力的发展，也会让孩子难以培养大多数工作所需要的那种持久专注力。",
+      "vocab": [
+        {
+          "word": "sustained",
+          "lemma": "sustain",
+          "level": 6,
+          "meaning": "t. 承受；支持",
+          "start": 145,
+          "end": 154
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "prevent the growth",
+        "sustained concentration"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "All these activities can prevent the growth of important communication and thinking skills and make it difficult for kids to develop the kind of sustained concentration they will need for most jobs.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-partb/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "paragraph": 6,
+      "en": "They should know how to deal with setbacks, stresses and feelings of inadequacy.",
+      "zh": "他们应该懂得怎样应对挫折、压力和能力不足感。",
+      "vocab": [
+        {
+          "word": "setbacks",
+          "lemma": "setback",
+          "level": 7,
+          "meaning": "挫折；退步",
+          "start": 34,
+          "end": 42
+        }
+      ],
+      "discourse_function": "action_turn",
+      "prosody_focus": [
+        "deal with setbacks",
+        "feelings of inadequacy"
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s20-01",
+          "text": "They should know how to deal with setbacks, stresses and feelings of inadequacy.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "lively",
+          "intensity": 2,
+          "rate": 1.04,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-partb/s20-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "paragraph": 6,
+      "en": "They should also learn how to solve problems and resolve conflicts, ways to brainstorm and think critically.",
+      "zh": "他们还应该学会解决问题、化解冲突，以及进行头脑风暴和批判性思考的方法。",
+      "vocab": [],
+      "discourse_function": "sequence",
+      "prosody_focus": [
+        "solve problems",
+        "think critically"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s21-01",
+          "text": "They should also learn how to solve problems and resolve conflicts, ways to brainstorm and think critically.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-partb/s21-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "paragraph": 6,
+      "en": "Discussions at home can help kids practice doing these things and help them apply these skills to everyday life situations.",
+      "zh": "家庭中的讨论能够帮助孩子练习这些能力，并把它们运用到日常生活情境中。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "practice",
+        "apply these skills"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s22-01",
+          "text": "Discussions at home can help kids practice doing these things and help them apply these skills to everyday life situations.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-partb/s22-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "paragraph": 7,
+      "en": "What about the son or daughter who is grown but seems to be struggling and wandering aimlessly through early adulthood?",
+      "zh": "那么，如果儿女已经长大，却似乎仍在成年早期苦苦挣扎、漫无目的地徘徊，又该怎么办呢？",
+      "vocab": [],
+      "discourse_function": "ask",
+      "prosody_focus": [
+        "struggling",
+        "wandering aimlessly"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s23-01",
+          "text": "What about the son or daughter who is grown but seems to be struggling and wandering aimlessly through early adulthood?",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-partb/s23-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "paragraph": 7,
+      "en": "Parents still have a major role to play, but now it is more delicate.",
+      "zh": "父母仍然扮演着重要角色，只是此时需要处理得更加谨慎。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "major role",
+        "more delicate"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s24-01",
+          "text": "Parents still have a major role to play, but now it is more delicate.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-partb/s24-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "paragraph": 7,
+      "en": "They have to be careful not to come across as disappointed in their child.",
+      "zh": "他们必须注意，不要让孩子觉得父母对自己很失望。",
+      "vocab": [],
+      "discourse_function": "warning",
+      "prosody_focus": [
+        "be careful",
+        "disappointed"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s25-01",
+          "text": "They have to be careful not to come across as disappointed in their child.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-partb/s25-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "paragraph": 7,
+      "en": "They should exhibit strong interest and respect for whatever currently interests their fledgling adult, as naive or ill conceived as it may seem, while becoming a partner in exploring options for the future.",
+      "zh": "无论这个初入成年的孩子眼下感兴趣的事情看起来多么幼稚或考虑不周，父母都应表现出真切的兴趣和尊重，同时成为孩子探索未来选择的伙伴。",
+      "vocab": [
+        {
+          "word": "fledgling",
+          "lemma": "fledgling",
+          "level": 8,
+          "meaning": "羽毛初长的雏鸟；刚会飞的幼鸟",
+          "start": 87,
+          "end": 96
+        },
+        {
+          "word": "naive",
+          "lemma": "naive",
+          "level": 6,
+          "meaning": "a. 天真的；纯真的",
+          "start": 107,
+          "end": 112
+        },
+        {
+          "word": "conceived",
+          "lemma": "conceive",
+          "level": 6,
+          "meaning": "t. 构思；认为",
+          "start": 120,
+          "end": 129
+        }
+      ],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "interest and respect",
+        "partner in exploring options"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s26-01",
+          "text": "They should exhibit strong interest and respect for whatever currently interests their fledgling adult, as naive or ill conceived as it may seem, while becoming a partner in exploring options for the future.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-partb/s26-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "paragraph": 7,
+      "en": "Most of all, these new adults must feel that they are respected and supported by a family that appreciates them.",
+      "zh": "最重要的是，这些刚步入成年的年轻人必须感受到：家人欣赏他们，也尊重并支持他们。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "Most of all",
+        "respected and supported"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s27-01",
+          "text": "Most of all, these new adults must feel that they are respected and supported by a family that appreciates them.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-partb/s27-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

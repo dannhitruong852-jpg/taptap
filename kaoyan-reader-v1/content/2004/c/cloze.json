@@ -1,0 +1,692 @@
+{
+  "year": 2004,
+  "section_type": "cloze",
+  "article_id": "cloze",
+  "source_sha256": "f051c55c207511d8b1888faf55cfb3af726c8470ed5732d28f07d4c4994ae2c2",
+  "source_pages": [
+    1,
+    2
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "01",
+  "article_context": "用社会科学的分析方式解释青少年犯罪的几类理论及其局限。重点是个体因素、社会结构、家庭监管与相关性之间的关系；语气冷静，不把犯罪议题读得煽情。",
+  "article": {
+    "year": 2004,
+    "section": "cloze",
+    "title": "完型 · 青少年犯罪成因",
+    "background": "用社会科学的分析方式解释青少年犯罪的几类理论及其局限。重点是个体因素、社会结构、家庭监管与相关性之间的关系；语气冷静，不把犯罪议题读得煽情。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "Many theories concerning the causes of juvenile delinquency — crimes committed by young people — focus either on the individual or on society as the major contributing influence.",
+      "zh": "许多关于青少年犯罪成因的理论——也就是研究年轻人所实施的犯罪——要么把个人，要么把社会，视为主要的影响因素。",
+      "vocab": [
+        {
+          "word": "juvenile delinquency",
+          "lemma": "juvenile delinquency",
+          "level": 8,
+          "meaning": "青少年犯罪",
+          "start": 39,
+          "end": 59
+        },
+        {
+          "word": "contributing",
+          "lemma": "contributing",
+          "level": 6,
+          "meaning": "促成的；构成原因的",
+          "start": 155,
+          "end": 167
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "juvenile delinquency",
+        "individual",
+        "society"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "Many theories concerning the causes of juvenile delinquency — crimes committed by young people —",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2004/c-cloze/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s01-02",
+          "text": " focus either on the individual or on society as the major contributing influence.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-cloze/s01-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Theories centering on the individual suggest that children engage in criminal behavior because they were not sufficiently penalized for previous misdeeds or that they have learned criminal behavior through interaction with others.",
+      "zh": "以个人为中心的理论认为，儿童之所以实施犯罪行为，是因为他们过去的过错没有受到足够惩罚，或者因为他们在与他人的交往中学会了犯罪行为。",
+      "vocab": [
+        {
+          "word": "penalized",
+          "lemma": "penalize",
+          "level": 7,
+          "meaning": "惩罚",
+          "start": 122,
+          "end": 131
+        },
+        {
+          "word": "misdeeds",
+          "lemma": "misdeed",
+          "level": 8,
+          "meaning": "不端行为",
+          "start": 145,
+          "end": 153
+        }
+      ],
+      "discourse_function": "compare",
+      "prosody_focus": [
+        "not sufficiently penalized",
+        "interaction with others"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Theories centering on the individual suggest that children engage in criminal behavior because they were not sufficiently penalized for previous misdeeds",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 95,
+          "audio_path": "./audio/2004/c-cloze/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s02-02",
+          "text": " or that they have learned criminal behavior through interaction with others.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-cloze/s02-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "Theories focusing on the role of society suggest that children commit crimes in response to their failure to rise above their socioeconomic status, or as a rejection of middle-class values.",
+      "zh": "强调社会作用的理论则认为，儿童犯罪是对无法摆脱自身社会经济地位的一种反应，或是对中产阶级价值观的一种拒斥。",
+      "vocab": [
+        {
+          "word": "socioeconomic",
+          "lemma": "socioeconomic",
+          "level": 7,
+          "meaning": "社会经济的",
+          "start": 126,
+          "end": 139
+        }
+      ],
+      "discourse_function": "compare",
+      "prosody_focus": [
+        "socioeconomic status",
+        "rejection of middle-class values"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Theories focusing on the role of society suggest that children commit crimes in response to their failure to rise above their socioeconomic status,",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 95,
+          "audio_path": "./audio/2004/c-cloze/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s03-02",
+          "text": " or as a rejection of middle-class values.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-cloze/s03-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "Most theories of juvenile delinquency have focused on children from disadvantaged families, ignoring the fact that children from wealthy homes also commit crimes.",
+      "zh": "大多数青少年犯罪理论都把注意力放在弱势家庭的孩子身上，却忽视了富裕家庭的孩子同样会犯罪这一事实。",
+      "vocab": [
+        {
+          "word": "juvenile delinquency",
+          "lemma": "juvenile delinquency",
+          "level": 8,
+          "meaning": "青少年犯罪",
+          "start": 17,
+          "end": 37
+        },
+        {
+          "word": "disadvantaged",
+          "lemma": "disadvantaged",
+          "level": 6,
+          "meaning": "处境不利的",
+          "start": 68,
+          "end": 81
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "disadvantaged families",
+        "ignoring",
+        "wealthy homes"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Most theories of juvenile delinquency have focused on children from disadvantaged families,",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2004/c-cloze/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s04-02",
+          "text": " ignoring the fact that children from wealthy homes also commit crimes.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-cloze/s04-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "The latter may commit crimes for lack of adequate parental control.",
+      "zh": "后者可能因为缺乏充分的家长管束而犯罪。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "lack of adequate parental control"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "The latter may commit crimes for lack of adequate parental control.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-cloze/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "All theories, however, are tentative and are subject to criticism.",
+      "zh": "不过，所有这些理论都只是暂时性的解释，也都可能受到批评。",
+      "vocab": [
+        {
+          "word": "tentative",
+          "lemma": "tentative",
+          "level": 7,
+          "meaning": "暂定的；尚未定论的",
+          "start": 27,
+          "end": 36
+        }
+      ],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "however",
+        "tentative",
+        "subject to criticism"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "All theories, however, are tentative and are subject to criticism.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-cloze/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 3,
+      "en": "Changes in the social structure may indirectly affect juvenile crime rates.",
+      "zh": "社会结构的变化可能会间接影响青少年犯罪率。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [
+        "social structure",
+        "indirectly affect"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "Changes in the social structure may indirectly affect juvenile crime rates.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-cloze/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 3,
+      "en": "For example, changes in the economy that lead to fewer job opportunities for youth and rising unemployment in general make gainful employment increasingly difficult to obtain.",
+      "zh": "例如，经济变化会减少年轻人的就业机会，并使整体失业率上升，从而让获得有报酬的工作越来越困难。",
+      "vocab": [
+        {
+          "word": "gainful",
+          "lemma": "gainful",
+          "level": 7,
+          "meaning": "有报酬的",
+          "start": 123,
+          "end": 130
+        }
+      ],
+      "discourse_function": "example",
+      "prosody_focus": [
+        "fewer job opportunities",
+        "rising unemployment",
+        "gainful employment"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "For example, changes in the economy that lead to fewer job opportunities for youth and rising unemployment in general",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2004/c-cloze/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s08-02",
+          "text": " make gainful employment increasingly difficult to obtain.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-cloze/s08-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 3,
+      "en": "The resulting discontent may in turn lead more youths into criminal behavior.",
+      "zh": "由此产生的不满，又可能进一步把更多年轻人推向犯罪行为。",
+      "vocab": [
+        {
+          "word": "discontent",
+          "lemma": "discontent",
+          "level": 6,
+          "meaning": "不满",
+          "start": 14,
+          "end": 24
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "resulting discontent",
+        "in turn"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "The resulting discontent may in turn lead more youths into criminal behavior.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-cloze/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 4,
+      "en": "Families have also experienced changes these years.",
+      "zh": "近年来，家庭结构本身也发生了变化。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [
+        "Families",
+        "changes"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "Families have also experienced changes these years.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-cloze/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 4,
+      "en": "More families consist of one-parent households or two working parents; consequently, children are likely to have less supervision at home than was common in the traditional family structure.",
+      "zh": "越来越多的家庭由单亲家长组成，或父母双方都在工作；因此，与传统家庭结构相比，孩子在家得到的监管往往更少。",
+      "vocab": [
+        {
+          "word": "supervision",
+          "lemma": "supervision",
+          "level": 6,
+          "meaning": "监管；照看",
+          "start": 118,
+          "end": 129
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "one-parent households",
+        "consequently",
+        "less supervision"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "More families consist of one-parent households or two working parents;",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2004/c-cloze/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s11-02",
+          "text": " consequently, children are likely to have less supervision at home than was common in the traditional family structure.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-cloze/s11-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 4,
+      "en": "This lack of parental supervision is thought to be an influence on juvenile crime rates.",
+      "zh": "这种家长监管的缺失被认为会影响青少年犯罪率。",
+      "vocab": [
+        {
+          "word": "supervision",
+          "lemma": "supervision",
+          "level": 6,
+          "meaning": "监管；照看",
+          "start": 22,
+          "end": 33
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "lack of parental supervision"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "This lack of parental supervision is thought to be an influence on juvenile crime rates.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-cloze/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 5,
+      "en": "Other identifiable causes of offensive acts include frustration or failure in school, the increased availability of drugs and alcohol, and the growing incidence of child abuse and child neglect.",
+      "zh": "其他可以识别的犯罪诱因还包括：在学校遭遇挫折或失败，毒品与酒精更容易获得，以及虐待儿童和忽视儿童现象日益增多。",
+      "vocab": [
+        {
+          "word": "identifiable",
+          "lemma": "identifiable",
+          "level": 6,
+          "meaning": "可识别的",
+          "start": 6,
+          "end": 18
+        },
+        {
+          "word": "incidence",
+          "lemma": "incidence",
+          "level": 7,
+          "meaning": "发生率",
+          "start": 151,
+          "end": 160
+        }
+      ],
+      "discourse_function": "sequence",
+      "prosody_focus": [
+        "frustration or failure",
+        "availability",
+        "incidence"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "Other identifiable causes of offensive acts include frustration or failure in school, the increased availability of drugs and alcohol,",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2004/c-cloze/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s13-02",
+          "text": " and the growing incidence of child abuse and child neglect.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-cloze/s13-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 5,
+      "en": "All these conditions tend to increase the probability of a child committing a criminal act, although a direct causal relationship has not yet been established.",
+      "zh": "所有这些情况都会增加儿童实施犯罪行为的可能性，尽管目前尚未证实其中存在直接的因果关系。",
+      "vocab": [
+        {
+          "word": "causal",
+          "lemma": "causal",
+          "level": 7,
+          "meaning": "因果的",
+          "start": 110,
+          "end": 116
+        }
+      ],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "increase the probability",
+        "although",
+        "direct causal relationship"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "All these conditions tend to increase the probability of a child committing a criminal act,",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 85,
+          "audio_path": "./audio/2004/c-cloze/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s14-02",
+          "text": " although a direct causal relationship has not yet been established.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-cloze/s14-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

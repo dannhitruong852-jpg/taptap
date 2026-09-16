@@ -1,0 +1,658 @@
+{
+  "year": 2012,
+  "section_type": "reading",
+  "article_id": "text4",
+  "source_sha256": "9c5ee5128fddddbab78d62e4577a414aea51b5f021ceb7846216ba644bbe2e79",
+  "source_pages": [
+    9,
+    10
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "10",
+  "article_context": "长期高失业对青年、阶层与社会性格的影响。语气沉稳，结尾保留不确定性与警示感。",
+  "article": {
+    "year": 2012,
+    "section": "text4",
+    "title": "阅读四 · 高失业时代如何改变社会",
+    "background": "长期高失业对青年、阶层与社会性格的影响。语气沉稳，结尾保留不确定性与警示感。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "The great recession may be over, but this era of high joblessness is probably beginning.",
+      "zh": "大衰退也许已经结束，但高失业率的时代很可能才刚刚开始。",
+      "vocab": [
+        {
+          "word": "recession",
+          "lemma": "recession",
+          "level": 6,
+          "meaning": "后退；凹处",
+          "start": 10,
+          "end": 19
+        },
+        {
+          "word": "joblessness",
+          "lemma": "joblessness",
+          "level": 9,
+          "meaning": "失业；无活可干（jobless的名词形式）",
+          "start": 54,
+          "end": 65
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "The great recession may be over, but this era of high joblessness is probably beginning.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text4/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 2,
+      "en": "Before it ends, it will likely change the life course and character of a generation of young adults.",
+      "zh": "在它结束之前，很可能会改变一代年轻人的人生轨迹和性格；",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Before it ends, it will likely change the life course and character of a generation of young adults.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text4/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 3,
+      "en": "And ultimately, it is likely to reshape our politics, our culture, and the character of our society for years.",
+      "zh": "最终，它还可能在多年里重塑我们的政治、文化以及整个社会的性格。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "And ultimately, it is likely to reshape our politics, our culture, and the character of our society for years.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text4/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 4,
+      "en": "No one tries harder than the jobless to find silver linings in this national economic disaster.",
+      "zh": "没有人比失业者更努力地从这场全国性的经济灾难中寻找一点“乌云背后的亮边”。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "No one tries harder than the jobless to find silver linings in this national economic disaster.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text4/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 5,
+      "en": "Many said that unemployment, while extremely painful, had improved them in some ways: they had become less materialistic and more financially prudent; they were more aware of the struggles of others.",
+      "zh": "许多人说，失业虽然极其痛苦，却也在某些方面让自己变得更好：他们不再那么物质主义，理财更加谨慎，也更能意识到他人的艰难。",
+      "vocab": [
+        {
+          "word": "materialistic",
+          "lemma": "materialistic",
+          "level": 8,
+          "meaning": "a. 唯物论的；唯物主义的",
+          "start": 107,
+          "end": 120
+        },
+        {
+          "word": "prudent",
+          "lemma": "prudent",
+          "level": 7,
+          "meaning": "a. 审慎的；三思而后行的",
+          "start": 142,
+          "end": 149
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Many said that unemployment, while extremely painful, had improved them in some ways: they had become less materialistic and more financially prudent; they were more aware of the struggles of others.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text4/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 6,
+      "en": "In limited respects, perhaps the recession will leave society better off.",
+      "zh": "从有限角度看，这场衰退也许会让社会在某些方面有所改善。",
+      "vocab": [
+        {
+          "word": "recession",
+          "lemma": "recession",
+          "level": 6,
+          "meaning": "后退；凹处",
+          "start": 33,
+          "end": 42
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "In limited respects, perhaps the recession will leave society better off.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text4/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 7,
+      "en": "At the very least, it has awoken us from our national fever dream of easy riches and bigger houses, and put a necessary end to an era of reckless personal spending.",
+      "zh": "至少，它让我们从“轻松致富、房子越大越好”的全国性狂热梦中惊醒，并给一个个人肆意消费的时代画上了必要的句号。",
+      "vocab": [
+        {
+          "word": "reckless",
+          "lemma": "reckless",
+          "level": 7,
+          "meaning": "a. 不介意的；大意的",
+          "start": 137,
+          "end": 145
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "At the very least, it has awoken us from our national fever dream of easy riches and bigger houses, and put a necessary end to an era of reckless personal spending.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text4/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 8,
+      "en": "But for the most part, these benefits seem thin, uncertain, and far off.",
+      "zh": "但总体而言，这些好处看上去很微薄、不确定，而且遥远。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "But for the most part, these benefits seem thin, uncertain, and far off.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text4/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 9,
+      "en": "In The Moral Consequences of Economic Growth, the economic historian Benjamin Friedman argues that both inside and outside the U.S., lengthy periods of economic stagnation or decline have almost always left society more mean-spirited and less inclusive, and have usually stopped or reversed the advance of rights and freedoms.",
+      "zh": "经济史学家本杰明·弗里德曼在《经济增长的道德后果》中指出，无论在美国国内还是国外，长期的经济停滞或衰退几乎总会使社会变得更刻薄、更排外，也往往会阻止甚至逆转权利与自由的发展。",
+      "vocab": [
+        {
+          "word": "historian",
+          "lemma": "historian",
+          "level": 6,
+          "meaning": "历史学家；记事者",
+          "start": 59,
+          "end": 68
+        },
+        {
+          "word": "inclusive",
+          "lemma": "inclusive",
+          "level": 7,
+          "meaning": "a. 包含的；包括的",
+          "start": 243,
+          "end": 252
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "In The Moral Consequences of Economic Growth, the economic historian Benjamin Friedman argues that both inside and outside the U.S., lengthy periods of economic stagnation or decline have almost always left society more mean-spirited and less inclusive, and have usually stopped or reversed the advance of rights and freedoms.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text4/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 10,
+      "en": "Anti-immigrant sentiment typically increases, as does conflict between races and classes.",
+      "zh": "反移民情绪通常会上升，种族和阶层之间的冲突也会加剧。",
+      "vocab": [
+        {
+          "word": "sentiment",
+          "lemma": "sentiment",
+          "level": 6,
+          "meaning": "感情；感伤",
+          "start": 15,
+          "end": 24
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "Anti-immigrant sentiment typically increases, as does conflict between races and classes.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text4/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 11,
+      "en": "Income inequality usually falls during a recession, but it has not shrunk in this one.",
+      "zh": "经济衰退期间，收入不平等通常会下降，但这一次并没有缩小。",
+      "vocab": [
+        {
+          "word": "recession",
+          "lemma": "recession",
+          "level": 6,
+          "meaning": "后退；凹处",
+          "start": 41,
+          "end": 50
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "Income inequality usually falls during a recession, but it has not shrunk in this one.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text4/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 12,
+      "en": "Indeed, this period of economic weakness may reinforce class divides, and decrease opportunities to cross them – especially for young people.",
+      "zh": "事实上，这段经济疲弱时期可能进一步强化阶层分化，并减少跨越阶层的机会，尤其对年轻人如此。",
+      "vocab": [
+        {
+          "word": "reinforce",
+          "lemma": "reinforce",
+          "level": 6,
+          "meaning": "t. 加强；增援",
+          "start": 45,
+          "end": 54
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "Indeed, this period of economic weakness may reinforce class divides, and decrease opportunities to cross them – especially for young people.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text4/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 13,
+      "en": "The research of Till Von Wachter, the economist at Columbia University, suggests that not all people graduating into a recession see their life chances dimmed: those with degrees from elite universities catch up fairly quickly to where they otherwise would have been if they had graduated in better times; it is the masses beneath them that are left behind.",
+      "zh": "哥伦比亚大学经济学家蒂尔·冯·瓦赫特的研究表明，并不是所有在经济衰退期毕业的人都会长期失去机会。名校毕业生能够比较快地追上他们在景气时期毕业本应达到的位置；真正被甩在后面的，是他们之下的大多数人。",
+      "vocab": [
+        {
+          "word": "recession",
+          "lemma": "recession",
+          "level": 6,
+          "meaning": "后退；凹处",
+          "start": 119,
+          "end": 128
+        },
+        {
+          "word": "elite",
+          "lemma": "elite",
+          "level": 6,
+          "meaning": "精华；精锐",
+          "start": 184,
+          "end": 189
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "The research of Till Von Wachter, the economist at Columbia University, suggests that not all people graduating into a recession see their life chances dimmed: those with degrees from elite universities catch up fairly quickly to where they otherwise would have been if they had graduated in better times; it is the masses beneath them that are left behind.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text4/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 14,
+      "en": "In the Internet age, it is particularly easy to see the resentment that has always been hidden within American society.",
+      "zh": "互联网时代尤其容易让人看见美国社会内部一直存在、过去较为隐蔽的怨恨。",
+      "vocab": [
+        {
+          "word": "resentment",
+          "lemma": "resentment",
+          "level": 6,
+          "meaning": "怨恨；愤恨",
+          "start": 56,
+          "end": 66
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "In the Internet age, it is particularly easy to see the resentment that has always been hidden within American society.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text4/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 15,
+      "en": "More difficult, in the moment, is discerning precisely how these lean times are affecting society’s character.",
+      "zh": "更困难的是，在当下准确判断这些艰难岁月究竟如何改变社会性格。",
+      "vocab": [
+        {
+          "word": "discerning",
+          "lemma": "discern",
+          "level": 7,
+          "meaning": "辨别；看清楚",
+          "start": 34,
+          "end": 44
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "More difficult, in the moment, is discerning precisely how these lean times are affecting society’s character.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text4/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 16,
+      "en": "In many respects, the U.S. was more socially tolerant entering this recession than at any time in its history, and a variety of national polls on social conflict since then have shown mixed results.",
+      "zh": "在很多方面，美国进入这次衰退时，比历史上任何时期都更加社会宽容；此后围绕社会冲突的多项全国民调也呈现混合结果。",
+      "vocab": [
+        {
+          "word": "tolerant",
+          "lemma": "tolerant",
+          "level": 7,
+          "meaning": "a. 宽容的；容忍的",
+          "start": 45,
+          "end": 53
+        },
+        {
+          "word": "recession",
+          "lemma": "recession",
+          "level": 6,
+          "meaning": "后退；凹处",
+          "start": 68,
+          "end": 77
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "In many respects, the U.S. was more socially tolerant entering this recession than at any time in its history, and a variety of national polls on social conflict since then have shown mixed results.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text4/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 17,
+      "en": "We will have to wait and see exactly how these hard times will reshape our social fabric.",
+      "zh": "我们还需要等待，才能看清这些困难时期究竟会怎样重塑社会肌理。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "We will have to wait and see exactly how these hard times will reshape our social fabric.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text4/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 18,
+      "en": "But they certainly will reshape it, and all the more so the longer they extend.",
+      "zh": "但可以肯定，它们一定会重塑社会，而且持续得越久，影响越深。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "But they certainly will reshape it, and all the more so the longer they extend.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text4/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

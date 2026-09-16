@@ -1,0 +1,657 @@
+{
+  "year": 2005,
+  "section_type": "reading",
+  "article_id": "text2",
+  "source_sha256": "6d1b28f9d8ce9e5c5c8632e1752e793f93458bc2f6b1d99fcef1892ac0a2c210",
+  "source_pages": [],
+  "accent": "en-US",
+  "primary_actor_id": "10",
+  "article_context": "批判性公共议题评论。用吸烟史作类比，强调不确定性不能成为拖延行动的借口；语气坚定但不煽情。",
+  "article": {
+    "year": 2005,
+    "section": "text2",
+    "title": "阅读二 · 全球变暖与“分析瘫痪”",
+    "background": "批判性公共议题评论。用吸烟史作类比，强调不确定性不能成为拖延行动的借口；语气坚定但不煽情。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "Do you remember all those years when scientists argued that smoking would kill us but the doubters insisted that we didn’t know for sure?",
+      "zh": "还记得那些年吗？科学家一再指出吸烟会致命，怀疑者却坚持说我们还无法确定。",
+      "vocab": [],
+      "discourse_function": "ask",
+      "prosody_focus": [
+        "Do you remember all those years when scientists argued that smoking would kill u"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "Do you remember all those years when scientists argued that smoking would kill us but the doubters insisted that we didn’t know for sure?",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text2/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "That the evidence was inconclusive, the science uncertain?",
+      "zh": "他们说，证据尚无定论，科学结论也不可靠。",
+      "vocab": [
+        {
+          "word": "inconclusive",
+          "lemma": "inconclusive",
+          "level": 7,
+          "meaning": "无定论的",
+          "start": 22,
+          "end": 34
+        }
+      ],
+      "discourse_function": "ask",
+      "prosody_focus": [
+        "That the evidence was inconclusive, the science uncertain?"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "That the evidence was inconclusive, the science uncertain?",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text2/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "That the antismoking lobby was out to destroy our way of life and the government should stay out of the way?",
+      "zh": "他们还说，反吸烟团体意在摧毁我们的生活方式，政府不该插手。",
+      "vocab": [],
+      "discourse_function": "ask",
+      "prosody_focus": [
+        "That the antismoking lobby was out to destroy our way of life and the government"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "That the antismoking lobby was out to destroy our way of life and the government should stay out of the way?",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text2/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 1,
+      "en": "Lots of Americans bought that nonsense, and over three decades, some 10 million smokers went to early graves.",
+      "zh": "许多美国人信了这套荒唐说辞；三十多年间，大约一千万吸烟者因此过早离世。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "Lots of Americans bought that nonsense, and over three decades, some 10 million "
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Lots of Americans bought that nonsense, and over three decades, some 10 million smokers went to early graves.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text2/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 1,
+      "en": "There are upsetting parallels today, as scientists in one wave after another try to awaken us to the growing threat of global warming.",
+      "zh": "今天又出现了令人不安的相似情形：一批又一批科学家试图唤醒我们，正视日益加剧的全球变暖威胁。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "There are upsetting parallels today, as scientists in one wave after another try"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "There are upsetting parallels today, as scientists in one wave after another try to awaken us to the growing threat of global warming.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text2/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "The latest was a panel from the National Academy of Sciences, enlisted by the White House, to tell us that the Earth’s atmosphere is definitely warming and that the problem is largely man-made.",
+      "zh": "最近一次，是白宫请来的美国国家科学院专家组告诉我们：地球大气确实正在变暖，而且这一问题主要由人类造成。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "The latest was a panel from the National Academy of Sciences, enlisted by the Wh"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "The latest was a panel from the National Academy of Sciences, enlisted by the White House, to tell us that the Earth’s atmosphere is definitely warming and that the problem is largely man-made.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text2/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "The clear message is that we should get moving to protect ourselves.",
+      "zh": "信息再明确不过：我们该行动起来保护自己了。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "The clear message is that we should get moving to protect ourselves."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "The clear message is that we should get moving to protect ourselves.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text2/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 2,
+      "en": "The president of the National Academy, Bruce Alberts, added this key point in the preface to the panel’s report: “Science never has all the answers.”",
+      "zh": "国家科学院院长布鲁斯·艾伯茨在报告序言中补充了一个关键观点：“科学从来不可能拥有所有答案。”",
+      "vocab": [],
+      "discourse_function": "explain_quote",
+      "prosody_focus": [
+        "The president of the National Academy, Bruce Alberts, added this key point in th"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "The president of the National Academy, Bruce Alberts, added this key point in the preface to the panel’s report: “Science never has all the answers.”",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text2/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 2,
+      "en": "But science does provide us with the best available guide to the future, and it is critical that our nation and the world base important policies on the best judgments that science can provide concerning the future consequences of present actions.",
+      "zh": "但科学确实为我们提供了目前所能得到的最佳未来指南；无论美国还是整个世界，都必须依据科学对当下行为未来后果所能作出的最佳判断来制定重大政策。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "But science does provide us with the best available guide to the future, and it "
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "But science does provide us with the best available guide to the future, and it is critical that our nation and the world base important policies on the best judgments that science can provide concerning the future consequences of present actions.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text2/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 2,
+      "en": "Just as on smoking, voices now come from many quarters insisting that the science about global warming is incomplete, that it’s OK to keep pouring fumes into the air until we know for sure.",
+      "zh": "正如当年围绕吸烟问题一样，如今各方又有人声称全球变暖的科学证据还不完整，在彻底弄清之前继续向空气排放废气也无妨。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "Just as on smoking, voices now come from many quarters insisting that the scienc"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "Just as on smoking, voices now come from many quarters insisting that the science about global warming is incomplete, that it’s OK to keep pouring fumes into the air until we know for sure.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text2/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 3,
+      "en": "This is a dangerous game: by the time 100 percent of the evidence is in, it may be too late.",
+      "zh": "这是一场危险的赌博：等到百分之百的证据都到齐时，也许一切已经太迟。",
+      "vocab": [],
+      "discourse_function": "warning",
+      "prosody_focus": [
+        "This is a dangerous game: by the time 100 percent of the evidence is in, it may "
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "This is a dangerous game: by the time 100 percent of the evidence is in, it may be too late.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text2/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 3,
+      "en": "With the risks obvious and growing, a prudent people would take out an insurance policy now.",
+      "zh": "既然风险已经显而易见并仍在上升，谨慎的社会理应现在就为自己买一份“保险”。",
+      "vocab": [
+        {
+          "word": "prudent",
+          "lemma": "prudent",
+          "level": 6,
+          "meaning": "审慎的",
+          "start": 38,
+          "end": 45
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "With the risks obvious and growing, a prudent people would take out an insurance"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "With the risks obvious and growing, a prudent people would take out an insurance policy now.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text2/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 3,
+      "en": "Fortunately, the White House is starting to pay attention.",
+      "zh": "好在白宫已经开始重视。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "Fortunately, the White House is starting to pay attention."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "Fortunately, the White House is starting to pay attention.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text2/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 3,
+      "en": "But it’s obvious that a majority of the president’s advisers still don’t take global warming seriously.",
+      "zh": "但显然，总统的大多数顾问仍没有真正严肃看待全球变暖。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "But it’s obvious that a majority of the president’s advisers still don’t take gl"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "But it’s obvious that a majority of the president’s advisers still don’t take global warming seriously.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text2/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 3,
+      "en": "Instead of a plan of action, they continue to press for more research — a classic case of “paralysis by analysis”.",
+      "zh": "他们没有提出行动方案，反而不断要求更多研究——这正是典型的“分析瘫痪”。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "Instead of a plan of action, they continue to press for more research — a classi"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "Instead of a plan of action, they continue to press for more research — a classic case of “paralysis by analysis”.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text2/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 4,
+      "en": "To serve as responsible stewards of the planet, we must press forward on deeper atmospheric and oceanic research.",
+      "zh": "作为负责任的地球守护者，我们当然必须继续深入开展大气和海洋研究。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "To serve as responsible stewards of the planet, we must press forward on deeper "
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "To serve as responsible stewards of the planet, we must press forward on deeper atmospheric and oceanic research.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text2/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 4,
+      "en": "But research alone is inadequate.",
+      "zh": "但仅有研究远远不够。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "But research alone is inadequate."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "But research alone is inadequate.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text2/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 4,
+      "en": "If the Administration won’t take the legislative initiative, Congress should help to begin fashioning conservation measures.",
+      "zh": "如果政府不愿主动推动立法，国会就应着手帮助制定环境保护措施。",
+      "vocab": [
+        {
+          "word": "legislative",
+          "lemma": "legislative",
+          "level": 6,
+          "meaning": "立法的",
+          "start": 37,
+          "end": 48
+        }
+      ],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "If the Administration won’t take the legislative initiative, Congress should hel"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "If the Administration won’t take the legislative initiative, Congress should help to begin fashioning conservation measures.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text2/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 4,
+      "en": "A bill by Democratic Senator Robert Byrd of West Virginia, which would offer financial incentives for private industry, is a promising start.",
+      "zh": "西弗吉尼亚州民主党参议员罗伯特·伯德提出的一项法案，拟向私营企业提供经济激励，这是一个颇有希望的开端。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "A bill by Democratic Senator Robert Byrd of West Virginia, which would offer fin"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "A bill by Democratic Senator Robert Byrd of West Virginia, which would offer financial incentives for private industry, is a promising start.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text2/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "paragraph": 4,
+      "en": "Many see that the country is getting ready to build lots of new power plants to meet our energy needs.",
+      "zh": "许多人都看到，为满足能源需求，美国正准备兴建大量新电厂。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "Many see that the country is getting ready to build lots of new power plants to "
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s20-01",
+          "text": "Many see that the country is getting ready to build lots of new power plants to meet our energy needs.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text2/s20-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "paragraph": 5,
+      "en": "If we are ever going to protect the atmosphere, it is crucial that those new plants be environmentally sound.",
+      "zh": "如果我们真想保护大气，确保这些新电厂符合环保要求就至关重要。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "If we are ever going to protect the atmosphere, it is crucial that those new pla"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s21-01",
+          "text": "If we are ever going to protect the atmosphere, it is crucial that those new plants be environmentally sound.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text2/s21-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

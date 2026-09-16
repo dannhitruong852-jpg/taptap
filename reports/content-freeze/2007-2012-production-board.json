@@ -1,0 +1,158 @@
+{
+  "batch": "2007-2012",
+  "strategy": "six_years_parallel",
+  "content_frozen": true,
+  "voice_started": false,
+  "totals": {
+    "units": 42,
+    "candidate_materialized": 42,
+    "candidate_partial": 0,
+    "candidate_missing": 0
+  },
+  "years": {
+    "2007": {
+      "candidate_materialized": [
+        "cloze",
+        "text1",
+        "text2",
+        "text3",
+        "text4",
+        "partb",
+        "translation"
+      ],
+      "candidate_partial": [],
+      "candidate_missing": []
+    },
+    "2008": {
+      "candidate_materialized": [
+        "cloze",
+        "text1",
+        "text2",
+        "text3",
+        "text4",
+        "partb",
+        "translation"
+      ],
+      "candidate_partial": [],
+      "candidate_missing": []
+    },
+    "2009": {
+      "candidate_materialized": [
+        "cloze",
+        "text1",
+        "text2",
+        "text3",
+        "text4",
+        "partb",
+        "translation"
+      ],
+      "candidate_partial": [],
+      "candidate_missing": []
+    },
+    "2010": {
+      "candidate_materialized": [
+        "cloze",
+        "text1",
+        "text2",
+        "text3",
+        "text4",
+        "partb",
+        "translation"
+      ],
+      "candidate_partial": [],
+      "candidate_missing": []
+    },
+    "2011": {
+      "candidate_materialized": [
+        "cloze",
+        "text1",
+        "text2",
+        "text3",
+        "text4",
+        "partb",
+        "translation"
+      ],
+      "candidate_partial": [],
+      "candidate_missing": []
+    },
+    "2012": {
+      "candidate_materialized": [
+        "cloze",
+        "text1",
+        "text2",
+        "text3",
+        "text4",
+        "partb",
+        "translation"
+      ],
+      "candidate_partial": [],
+      "candidate_missing": []
+    }
+  },
+  "freeze_gate_remaining": [],
+  "actor_plan": {
+    "2007": {
+      "cloze": "03",
+      "text1": "02",
+      "text2": "02",
+      "text3": "01",
+      "text4": "09",
+      "partb": "06",
+      "translation": "09"
+    },
+    "2008": {
+      "cloze": "02",
+      "text1": "02",
+      "text2": "02",
+      "text3": "02",
+      "text4": "03",
+      "partb": "02",
+      "translation": "13"
+    },
+    "2009": {
+      "cloze": "02",
+      "text1": "02",
+      "text2": "02",
+      "text3": "01",
+      "text4": "03",
+      "partb": "02",
+      "translation": "02"
+    },
+    "2010": {
+      "cloze": "02",
+      "text1": "01",
+      "text2": "06",
+      "text3": "05",
+      "text4": "09",
+      "partb": "05",
+      "translation": "07"
+    },
+    "2011": {
+      "cloze": "05",
+      "text1": "01",
+      "text2": "10",
+      "text3": "03",
+      "text4": "09",
+      "partb": "10",
+      "translation": "05"
+    },
+    "2012": {
+      "cloze": "03",
+      "text1": "10",
+      "text2": "10",
+      "text3": "05",
+      "text4": "10",
+      "partb": "03",
+      "translation": "01"
+    }
+  },
+  "notes": [
+    "The previous 42/42 candidate_ready state was metadata-only and did not match concrete candidate files in the branch.",
+    "Do not start voice generation for 2007-2012 until content_frozen is true.",
+    "Content freeze CI is armed and derives readiness from concrete candidate files.",
+    "2008 is fully materialized at candidate level; content freeze still requires QA/enrichment gates.",
+    "2009 has six complete candidates plus a partial Text1 shard set; the remaining gap is isolated and does not block other years.",
+    "2010 now has verified Text1, Text2, and Translation candidate files committed; Cloze, Text3, Text4, and Part B remain to be materialized.",
+    "2026-09-16: frozen after 42/42 candidate validation, reviewed vocabulary promotion, and exact bilingual occurrence mapping validation with zero unresolved occurrences."
+  ]
+}

@@ -1,0 +1,43 @@
+name: Split unresolved bilingual inventory once
+
+on:
+  push:
+    branches: [c-v4-article-preview-actual]
+    paths:
+      - '.github/workflows/split-2007-2012-unresolved-jsonl-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  split:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Write JSONL review files
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          src=Path('reports/2007-2012-staging/unresolved')
+          dst=Path('reports/2007-2012-staging/unresolved-jsonl')
+          dst.mkdir(parents=True,exist_ok=True)
+          for year in range(2007,2013):
+              doc=json.loads((src/f'{year}.json').read_text(encoding='utf-8'))
+              lines=[]
+              for i,row in enumerate(doc['occurrences'],1):
+                  item={'index':i,**row}
+                  lines.append(json.dumps(item,ensure_ascii=False,separators=(',',':')))
+              (dst/f'{year}.jsonl').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+              print(year,len(lines))
+          PY
+      - name: Commit JSONL inventory
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/2007-2012-staging/unresolved-jsonl
+          git commit -m 'content: split bilingual unresolved inventory for review'
+          git push

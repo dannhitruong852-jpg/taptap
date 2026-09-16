@@ -1,0 +1,839 @@
+{
+  "year": 2008,
+  "section_type": "reading",
+  "article_id": "text2",
+  "source_sha256": "418a6a8a9c7396977fe3e3baaf6d292b786d51a1acccc2e66df5e4b029f1f9de",
+  "source_pages": [
+    5,
+    6
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "02",
+  "article_context": "科学传播与出版制度变化。先回顾传统同行评议和订阅模式，再解释互联网、资助机构压力与开放获取商业模式如何改变科学成果传播。语气理性、清楚，制度变化和三种新模式处加强信息重音。",
+  "article": {
+    "year": 2008,
+    "section": "text2",
+    "title": "阅读二 · 科学出版从订阅制走向开放获取",
+    "background": "科学传播与出版制度变化。先回顾传统同行评议和订阅模式，再解释互联网、资助机构压力与开放获取商业模式如何改变科学成果传播。语气理性、清楚，制度变化和三种新模式处加强信息重音。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "It used to be so straightforward.",
+      "zh": "过去，这件事的流程一直非常简单直接。",
+      "vocab": [
+        {
+          "word": "straightforward",
+          "lemma": "straightforward",
+          "level": 6,
+          "meaning": "a. 笔直的；率直的",
+          "start": 17,
+          "end": 32
+        }
+      ],
+      "discourse_function": "report",
+      "prosody_focus": [
+        "so straightforward"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "It used to be so straightforward.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text2/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "A team of researchers working together in the laboratory would submit the results of their research to a journal.",
+      "zh": "一组在实验室共同工作的研究人员会把研究结果投稿给一家学术期刊。",
+      "vocab": [
+        {
+          "word": "researchers",
+          "lemma": "researcher",
+          "level": 6,
+          "meaning": "研究人员",
+          "start": 10,
+          "end": 21
+        }
+      ],
+      "discourse_function": "sequence",
+      "prosody_focus": [
+        "submit the results",
+        "to a journal"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "A team of researchers working together in the laboratory would submit the results of their research to a journal.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text2/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "A journal editor would then remove the authors' names and affiliations from the paper and send it to their peers for review.",
+      "zh": "随后，期刊编辑会从论文中删去作者姓名和所属机构，再把论文送交同行评审。",
+      "vocab": [
+        {
+          "word": "affiliations",
+          "lemma": "affiliation",
+          "level": 7,
+          "meaning": "联系；从属关系",
+          "start": 58,
+          "end": 70
+        }
+      ],
+      "discourse_function": "sequence",
+      "prosody_focus": [
+        "remove the authors' names",
+        "peers for review"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "A journal editor would then remove the authors' names and affiliations from the paper and send it to their peers for review.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text2/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 1,
+      "en": "Depending on the comments received, the editor would accept the paper for publication or decline it.",
+      "zh": "编辑会根据收到的评审意见决定接受论文发表，或予以拒绝。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "Depending on the comments",
+        "accept",
+        "decline"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Depending on the comments received, the editor would accept the paper for publication or decline it.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text2/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 1,
+      "en": "Copyright rested with the journal publisher, and researchers seeking knowledge of the results would have to subscribe to the journal.",
+      "zh": "论文版权归期刊出版商所有，而想了解研究结果的研究人员则必须订阅该期刊。",
+      "vocab": [
+        {
+          "word": "researchers",
+          "lemma": "researcher",
+          "level": 6,
+          "meaning": "研究人员",
+          "start": 49,
+          "end": 60
+        },
+        {
+          "word": "subscribe",
+          "lemma": "subscribe",
+          "level": 7,
+          "meaning": "t. 捐献；签署",
+          "start": 108,
+          "end": 117
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "Copyright rested with",
+        "subscribe to the journal"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Copyright rested with the journal publisher, and researchers seeking knowledge of the results would have to subscribe to the journal.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text2/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "No longer.",
+      "zh": "如今，情况已经不再如此。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "No longer"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "No longer.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text2/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "The Internet—and pressure from funding agencies, who are questioning why commercial publishers are making money from government-funded research by restricting access to it—is making access to scientific results a reality.",
+      "zh": "互联网的发展，加上资助机构施加的压力，正在使科研成果真正变得可获取；这些资助机构质疑，商业出版商为何能够通过限制访问由政府资助的研究来牟利。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "The Internet",
+        "funding agencies",
+        "access to scientific results"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "The Internet—and pressure from funding agencies, who are questioning why commercial publishers are making money from government-funded research by restricting access to it—is making access to scientific results a reality.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text2/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 2,
+      "en": "The Organization for Economic Co-operation and Development (OECD) has just issued a report describing the far-reaching consequences of this.",
+      "zh": "经济合作与发展组织（OECD）刚刚发布了一份报告，说明这一变化将带来的深远影响。",
+      "vocab": [
+        {
+          "word": "far-reaching",
+          "lemma": "far-reaching",
+          "level": 9,
+          "meaning": "a. 深远的；广泛的",
+          "start": 106,
+          "end": 118
+        }
+      ],
+      "discourse_function": "report",
+      "prosody_focus": [
+        "OECD",
+        "far-reaching consequences"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "The Organization for Economic Co-operation and Development (OECD) has just issued a report describing the far-reaching consequences of this.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text2/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 2,
+      "en": "The report, by John Houghton of Victoria University in Australia and Graham Vickery of the OECD, makes heavy reading for publishers who have, so far, made handsome profits.",
+      "zh": "这份由澳大利亚维多利亚大学的约翰·霍顿和 OECD 的格雷厄姆·维克里撰写的报告，对那些迄今利润丰厚的出版商来说并不好受。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "makes heavy reading",
+        "handsome profits"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "The report, by John Houghton of Victoria University in Australia and Graham Vickery of the OECD, makes heavy reading for publishers who have, so far, made handsome profits.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text2/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 2,
+      "en": "But it goes further than that.",
+      "zh": "但它所涉及的意义远不止于此。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [
+        "goes further than that"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "But it goes further than that.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text2/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 2,
+      "en": "It signals a change in what has, until now, been a key element of scientific endeavor.",
+      "zh": "它预示着科学事业中一个长期以来的关键环节正在发生变化。",
+      "vocab": [
+        {
+          "word": "endeavor",
+          "lemma": "endeavor",
+          "level": 6,
+          "meaning": "努力；尽力",
+          "start": 77,
+          "end": 85
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "signals a change",
+        "key element of scientific endeavor"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "It signals a change in what has, until now, been a key element of scientific endeavor.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text2/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 3,
+      "en": "The value of knowledge and the return on the public investment in research depends, in part, upon wide distribution and ready access.",
+      "zh": "知识的价值以及公共科研投入所获得的回报，在一定程度上取决于科研成果能否被广泛传播并方便获取。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "wide distribution",
+        "ready access"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "The value of knowledge and the return on the public investment in research depends, in part, upon wide distribution and ready access.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text2/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 3,
+      "en": "It is big business.",
+      "zh": "这同时也是一门大生意。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "big business"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "It is big business.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text2/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 3,
+      "en": "In America, the core scientific publishing market is estimated at between $7 billion and $11 billion.",
+      "zh": "据估计，美国核心科学出版市场的规模在70亿至110亿美元之间。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [
+        "$7 billion",
+        "$11 billion"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "In America, the core scientific publishing market is estimated at between $7 billion and $11 billion.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text2/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 3,
+      "en": "The International Association of Scientific, Technical and Medical Publishers says that there are more than 2,000 publishers worldwide specializing in these subjects.",
+      "zh": "国际科学、技术与医学出版商协会称，全球有两千多家出版机构专门从事这些领域的出版。",
+      "vocab": [
+        {
+          "word": "specializing",
+          "lemma": "specialize",
+          "level": 6,
+          "meaning": "t. 使特殊化；列举",
+          "start": 135,
+          "end": 147
+        }
+      ],
+      "discourse_function": "statistic",
+      "prosody_focus": [
+        "more than 2,000 publishers"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "The International Association of Scientific, Technical and Medical Publishers says that there are more than 2,000 publishers worldwide specializing in these subjects.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text2/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 3,
+      "en": "They publish more than 1.2 million articles each year in some 16,000 journals.",
+      "zh": "这些出版机构每年在大约1.6万种期刊上发表超过120万篇文章。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [
+        "1.2 million articles",
+        "16,000 journals"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "They publish more than 1.2 million articles each year in some 16,000 journals.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text2/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 4,
+      "en": "This is now changing.",
+      "zh": "而现在，这一格局正在改变。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "now changing"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "This is now changing.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text2/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 4,
+      "en": "According to the OECD report, some 75% of scholarly journals are now online.",
+      "zh": "根据 OECD 的报告，目前大约75%的学术期刊已经上线。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [
+        "75%",
+        "now online"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "According to the OECD report, some 75% of scholarly journals are now online.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text2/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 4,
+      "en": "Entirely new business models are emerging; three main ones were identified by the report's authors.",
+      "zh": "全新的商业模式正在出现；报告作者归纳出了其中三种主要模式。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [
+        "new business models",
+        "three main ones"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "Entirely new business models are emerging; three main ones were identified by the report's authors.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text2/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "paragraph": 4,
+      "en": "There is the so-called big deal, where institutional subscribers pay for access to a collection of online journal titles through site-licensing agreements.",
+      "zh": "第一种是所谓的“大宗协议”：机构订阅者通过网站许可协议付费，获得一批在线期刊的访问权。",
+      "vocab": [
+        {
+          "word": "institutional",
+          "lemma": "institutional",
+          "level": 6,
+          "meaning": "a. 制度的；公共机构的",
+          "start": 39,
+          "end": 52
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "big deal",
+        "site-licensing agreements"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s20-01",
+          "text": "There is the so-called big deal, where institutional subscribers pay for access to a collection of online journal titles through site-licensing agreements.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text2/s20-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "paragraph": 4,
+      "en": "There is open-access publishing, typically supported by asking the author (or his employer) to pay for the paper to be published.",
+      "zh": "第二种是开放获取出版，通常由作者或其雇主支付论文发表费用来维持。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "open-access publishing",
+        "author",
+        "pay"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s21-01",
+          "text": "There is open-access publishing, typically supported by asking the author (or his employer) to pay for the paper to be published.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text2/s21-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "paragraph": 4,
+      "en": "Finally, there are open-access archives, where organizations such as universities or international laboratories support institutional repositories.",
+      "zh": "最后一种是开放获取档案库，由大学或国际实验室等机构支持建设机构知识库。",
+      "vocab": [
+        {
+          "word": "institutional",
+          "lemma": "institutional",
+          "level": 6,
+          "meaning": "a. 制度的；公共机构的",
+          "start": 120,
+          "end": 133
+        },
+        {
+          "word": "repositories",
+          "lemma": "repository",
+          "level": 7,
+          "meaning": "贮藏所；贮物器",
+          "start": 134,
+          "end": 146
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "open-access archives",
+        "institutional repositories"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s22-01",
+          "text": "Finally, there are open-access archives, where organizations such as universities or international laboratories support institutional repositories.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text2/s22-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "paragraph": 4,
+      "en": "Other models exist that are hybrids of these three, such as delayed open-access, where journals allow only subscribers to read a paper for the first six months, before making it freely available to everyone who wishes to see it.",
+      "zh": "此外还存在这三种模式的混合形式，例如延迟开放获取：论文发表后的前六个月只允许订阅者阅读，之后再向所有希望阅读的人免费开放。",
+      "vocab": [],
+      "discourse_function": "example",
+      "prosody_focus": [
+        "hybrids",
+        "delayed open-access",
+        "first six months"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s23-01",
+          "text": "Other models exist that are hybrids of these three, such as delayed open-access, where journals allow only subscribers to read a paper for the first six months, before making it freely available to everyone who wishes to see it.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text2/s23-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "paragraph": 4,
+      "en": "All this could change the traditional form of the peer-review process, at least for the publication of papers.",
+      "zh": "所有这些变化都可能改变传统同行评议流程的形式，至少会改变论文发表这一环节。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "change the traditional form",
+        "peer-review process"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s24-01",
+          "text": "All this could change the traditional form of the peer-review process, at least for the publication of papers.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text2/s24-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

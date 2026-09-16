@@ -1,0 +1,75 @@
+name: Materialize 2007-2012 staging assets once
+
+on:
+  push:
+    branches: [c-v4-article-preview-actual]
+    paths:
+      - '.github/workflows/materialize-2007-2012-staging-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download ECDICT
+        run: curl -L --retry 3 --fail -o /tmp/ecdict.csv https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv
+      - name: Build staging vocabulary
+        run: |
+          rm -rf reports/2007-2012-staging
+          python scripts/build_2007_2012_vocabulary.py \
+            --root . \
+            --ecdict /tmp/ecdict.csv \
+            --output-dir reports/2007-2012-staging/vocabulary \
+            --threshold 0.75
+      - name: Build exact mappings and unresolved inventories
+        run: |
+          mkdir -p reports/2007-2012-staging/bilingual-highlights reports/2007-2012-staging/unresolved
+          for year in 2007 2008 2009 2010 2011 2012; do
+            python scripts/build_2007_2012_bilingual_highlights.py \
+              --root . \
+              --year "$year" \
+              --vocabulary "reports/2007-2012-staging/vocabulary/$year/vocabulary-1-9.json" \
+              --mapping-output "reports/2007-2012-staging/bilingual-highlights/$year.json" \
+              --unresolved-output "reports/2007-2012-staging/unresolved/$year.json"
+          done
+      - name: Validate staging invariants
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('reports/2007-2012-staging')
+          summary={}
+          for year in range(2007,2013):
+              vocab=json.loads((root/f'vocabulary/{year}/vocabulary-1-9.json').read_text())
+              mapping=json.loads((root/f'bilingual-highlights/{year}.json').read_text())
+              unresolved=json.loads((root/f'unresolved/{year}.json').read_text())
+              assert vocab['year']==year and vocab['qa']['status']=='reviewed'
+              assert vocab['scale']=='project-curated-1-9-v1'
+              assert vocab['vocabulary']
+              assert all(6 <= int(v[0]) <= 9 for v in vocab['vocabulary'].values())
+              assert mapping['year']==year
+              mapped=sum(len(entries) for sm in mapping['articles'].values() for entries in sm.values())
+              total=mapped+int(unresolved['count'])
+              assert total > 0
+              summary[str(year)]={'vocabulary':len(vocab['vocabulary']),'mapped_literal':mapped,'unresolved':unresolved['count'],'total_occurrences':total}
+          (root/'summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps(summary,ensure_ascii=False))
+          PY
+      - name: Commit staging assets
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/2007-2012-staging
+          if git diff --cached --quiet; then
+            echo 'No staging changes to commit'
+            exit 0
+          fi
+          git commit -m 'content: materialize 2007-2012 staging vocabulary and highlight inventory'
+          git push

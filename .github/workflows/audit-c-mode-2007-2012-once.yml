@@ -1,0 +1,54 @@
+name: Audit C-mode 2007-2012 once
+
+on:
+  push:
+    branches:
+      - c-v4-article-preview-actual
+    paths:
+      - '.github/workflows/audit-c-mode-2007-2012-once.yml'
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: c-v4-article-preview-actual
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit all 42 candidate discourse profiles against compiler
+        run: |
+          python - <<'PY'
+          import importlib.util
+          import json
+          from pathlib import Path
+
+          spec = importlib.util.spec_from_file_location('build_curated_year', 'content-pipeline/build_curated_year.py')
+          module = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(module)
+          profiles = module.PROFILES
+
+          unknown = []
+          density = []
+          for year in range(2007, 2013):
+              for unit in ('cloze','text1','text2','text3','text4','partb','translation'):
+                  doc = json.loads(Path(f'reports/content-freeze/{year}/{unit}.candidate.json').read_text(encoding='utf-8'))
+                  rows = doc['article']['rows']
+                  for index, row in enumerate(rows, 1):
+                      if row[3] not in profiles:
+                          unknown.append({'year': year, 'unit': unit, 'sentence': index, 'discourse': row[3], 'en': row[1].replace('|','')})
+                  for i in range(len(rows) - 2):
+                      labels = [rows[j][3] for j in range(i, i + 3)]
+                      if all(label in profiles for label in labels):
+                          levels = [profiles[label][1] for label in labels]
+                          if all(level == 'low' for level in levels):
+                              density.append({'year': year, 'unit': unit, 'sentences': f'{i+1}-{i+3}', 'discourse': labels})
+
+          print(json.dumps({
+              'unknown_count': len(unknown),
+              'unknown': unknown,
+              'density_error_count': len(density),
+              'density_errors': density,
+          }, ensure_ascii=False))
+          PY

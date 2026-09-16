@@ -1,0 +1,659 @@
+{
+  "year": 2010,
+  "section_type": "reading",
+  "article_id": "text2",
+  "source_sha256": "55d401ca0ba03ceedaf32e9387eb0c07fbf354c467ff6eef0dc6a936c288ff6e",
+  "source_pages": [
+    5,
+    6
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "06",
+  "article_context": "婚姻沟通与性别谈话模式。文章以一次家庭聚会中的反差场景开篇，转向研究数据，说明男性在公共场合往往说得更多、回家后却更沉默，而许多妻子首先期待丈夫成为谈话伙伴。语气自然、观察性强，笑点、反差和核心结论处加强重音。",
+  "article": {
+    "year": 2010,
+    "section": "text2",
+    "title": "阅读二 · 夫妻之间不同的谈话期待",
+    "background": "婚姻沟通与性别谈话模式。文章以一次家庭聚会中的反差场景开篇，转向研究数据，说明男性在公共场合往往说得更多、回家后却更沉默，而许多妻子首先期待丈夫成为谈话伙伴。语气自然、观察性强，笑点、反差和核心结论处加强重音。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "I was addressing a small gathering in a suburban Virginia living room – a women's group that had invited men to join them.",
+      "zh": "我当时正在弗吉尼亚郊区一间客厅里的小型聚会上讲话；这是一个女性团体举办的活动，也邀请了男性参加。",
+      "vocab": [],
+      "discourse_function": "story",
+      "prosody_focus": [
+        "small gathering",
+        "invited men"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "I was addressing a small gathering in a suburban Virginia living room – a women's group that had invited men to join them.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-text2/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Throughout the evening, one man had been particularly talkative, frequently offering ideas and anecdotes, while his wife sat silently beside him on the couch.",
+      "zh": "整个晚上，一名男子格外健谈，不断发表观点、讲述轶事，而他的妻子则一直安静地坐在沙发上他的身旁。",
+      "vocab": [
+        {
+          "word": "anecdotes",
+          "lemma": "anecdote",
+          "level": 7,
+          "meaning": "轶事；奇闻",
+          "start": 95,
+          "end": 104
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "particularly talkative",
+        "wife sat silently"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Throughout the evening, one man had been particularly talkative, frequently offering ideas and anecdotes, while his wife sat silently beside him on the couch.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-text2/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "Toward the end of the evening, I commented that women frequently complain that their husbands don't talk to them.",
+      "zh": "临近聚会结束时，我提到女性经常抱怨丈夫不愿和自己说话。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [
+        "frequently complain",
+        "don't talk to them"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Toward the end of the evening, I commented that women frequently complain that their husbands don't talk to them.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-text2/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 1,
+      "en": "This man quickly nodded in agreement.",
+      "zh": "这名男子立刻点头表示赞同。",
+      "vocab": [],
+      "discourse_function": "story",
+      "prosody_focus": [
+        "nodded in agreement"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "This man quickly nodded in agreement.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-text2/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 1,
+      "en": "He gestured toward his wife and said, ‘She's the talker in our family.’",
+      "zh": "他指着妻子说：“在我们家，她才是那个爱说话的人。”",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [
+        "She's the talker"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "He gestured toward his wife and said, ‘She's the talker in our family.’",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-text2/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 1,
+      "en": "The room burst into laughter; the man looked puzzled and hurt.",
+      "zh": "全屋的人顿时笑了起来；那个男人却显得既困惑又受伤。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "burst into laughter",
+        "puzzled and hurt"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "The room burst into laughter; the man looked puzzled and hurt.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-text2/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 1,
+      "en": "‘It's true,’ he explained.",
+      "zh": "“这是真的。”他解释道。",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [
+        "It's true"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "‘It's true,’ he explained.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-text2/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 1,
+      "en": "‘When I come home from work I have nothing to say.",
+      "zh": "“我下班回家以后根本没什么可说的。",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [
+        "nothing to say"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "‘When I come home from work I have nothing to say.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-text2/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 1,
+      "en": "If she didn't keep the conversation going, we'd spend the whole evening in silence.’",
+      "zh": "如果她不主动维持谈话，我们整个晚上都会一言不发。”",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [
+        "whole evening in silence"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "If she didn't keep the conversation going, we'd spend the whole evening in silence.’",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-text2/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 2,
+      "en": "This episode crystallizes the irony that although American men tend to talk more than women in public situations, they often talk less at home.",
+      "zh": "这一幕鲜明体现了一个讽刺现象：美国男性在公共场合往往比女性说得更多，但在家里却常常说得更少。",
+      "vocab": [
+        {
+          "word": "episode",
+          "lemma": "episode",
+          "level": 6,
+          "meaning": "插曲；插话",
+          "start": 5,
+          "end": 12
+        },
+        {
+          "word": "crystallizes",
+          "lemma": "crystallize",
+          "level": 8,
+          "meaning": "t. 使结晶；使具体化",
+          "start": 13,
+          "end": 25
+        },
+        {
+          "word": "irony",
+          "lemma": "irony",
+          "level": 6,
+          "meaning": "反语；讽刺",
+          "start": 30,
+          "end": 35
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "talk more than women in public",
+        "talk less at home"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "This episode crystallizes the irony that although American men tend to talk more than women in public situations, they often talk less at home.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-text2/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 2,
+      "en": "And this pattern is wreaking havoc with marriage.",
+      "zh": "而这种模式正在给婚姻造成严重破坏。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "wreaking havoc with marriage"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "And this pattern is wreaking havoc with marriage.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-text2/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 3,
+      "en": "The pattern was observed by political scientist Andrew Hacker in the late 1970s.",
+      "zh": "政治学家安德鲁·哈克早在20世纪70年代末就观察到了这种模式。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [
+        "Andrew Hacker",
+        "late 1970s"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "The pattern was observed by political scientist Andrew Hacker in the late 1970s.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-text2/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 3,
+      "en": "Sociologist Catherine Kohler Riessman reports in her new book Divorce Talk that most of the women she interviewed – but only a few of the men – gave lack of communication as the reason for their divorces.",
+      "zh": "社会学家凯瑟琳·科勒·里斯曼在新书《离婚之谈》中指出，她采访的大多数女性——但只有少数男性——都把缺乏沟通列为离婚原因。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "most of the women",
+        "only a few of the men",
+        "lack of communication"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "Sociologist Catherine Kohler Riessman reports in her new book Divorce Talk that most of the women she interviewed – but only a few of the men – gave lack of communication as the reason for their divorces.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-text2/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 3,
+      "en": "Given the current divorce rate of nearly 50 percent, that amounts to millions of cases in the United States every year – a virtual epidemic of failed conversation.",
+      "zh": "考虑到目前接近50%的离婚率，这意味着美国每年有数百万起这样的案例，几乎形成了一场“谈话失败”的流行病。",
+      "vocab": [
+        {
+          "word": "virtual",
+          "lemma": "virtual",
+          "level": 6,
+          "meaning": "a. 实际上起作用的；虚的",
+          "start": 123,
+          "end": 130
+        },
+        {
+          "word": "epidemic",
+          "lemma": "epidemic",
+          "level": 6,
+          "meaning": "传染病；流行病",
+          "start": 131,
+          "end": 139
+        }
+      ],
+      "discourse_function": "statistic",
+      "prosody_focus": [
+        "nearly 50 percent",
+        "millions of cases",
+        "epidemic of failed conversation"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "Given the current divorce rate of nearly 50 percent, that amounts to millions of cases in the United States every year – a virtual epidemic of failed conversation.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-text2/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 4,
+      "en": "In my own research, complaints from women about their husbands most often focused not on tangible inequities such as having given up the chance for a career to accompany a husband to his, or doing far more than their share of daily life-support work like cleaning, cooking and social arrangements.",
+      "zh": "在我自己的研究中，女性对丈夫的抱怨通常并不集中在有形的不平等上，例如为了追随丈夫的事业而放弃自己的职业机会，或承担了远超自己份额的清洁、做饭和社交安排等日常维持性工作。",
+      "vocab": [
+        {
+          "word": "inequities",
+          "lemma": "inequity",
+          "level": 8,
+          "meaning": "不公平；不公正",
+          "start": 98,
+          "end": 108
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "not on tangible inequities",
+        "given up the chance for a career",
+        "daily life-support work"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "In my own research, complaints from women about their husbands most often focused not on tangible inequities such as having given up the chance for a career to accompany a husband to his, or doing far more than their share of daily life-support work like cleaning, cooking and social arrangements.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-text2/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 4,
+      "en": "Instead, they focused on communication: ‘He doesn't listen to me.’ ‘He doesn't talk to me.’",
+      "zh": "相反，她们关注的是沟通：“他不听我说话。”“他不和我说话。”",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "Instead",
+        "communication",
+        "doesn't listen",
+        "doesn't talk"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "Instead, they focused on communication: ‘He doesn't listen to me.’ ‘He doesn't talk to me.’",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-text2/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 4,
+      "en": "I found, as Hacker observed years before, that most wives want their husbands to be, first and foremost, conversational partners, but few husbands share this expectation of their wives.",
+      "zh": "我发现，正如哈克多年前观察到的那样，大多数妻子首先希望丈夫成为自己的谈话伙伴，但很少有丈夫对妻子抱有同样的期待。",
+      "vocab": [
+        {
+          "word": "foremost",
+          "lemma": "foremost",
+          "level": 7,
+          "meaning": "a. 最初的；最重要的",
+          "start": 95,
+          "end": 103
+        },
+        {
+          "word": "conversational",
+          "lemma": "conversational",
+          "level": 7,
+          "meaning": "a. 会话的；对话的",
+          "start": 105,
+          "end": 119
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "first and foremost",
+        "conversational partners",
+        "few husbands share"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "I found, as Hacker observed years before, that most wives want their husbands to be, first and foremost, conversational partners, but few husbands share this expectation of their wives.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-text2/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 5,
+      "en": "In short, the image that best represents the current crisis is the stereotypical cartoon scene of a man sitting at the breakfast table with a newspaper held up in front of his face, while a woman glares at the back of it, wanting to talk.",
+      "zh": "简而言之，最能代表这场现实危机的画面，就是那幅典型漫画：一个男人坐在早餐桌旁，把报纸举在脸前，而女人则盯着报纸背面，想和他说话。",
+      "vocab": [
+        {
+          "word": "stereotypical",
+          "lemma": "stereotypical",
+          "level": 8,
+          "meaning": "a. 典型的；带有成见的",
+          "start": 67,
+          "end": 80
+        },
+        {
+          "word": "cartoon",
+          "lemma": "cartoon",
+          "level": 6,
+          "meaning": "卡通画；漫画",
+          "start": 81,
+          "end": 88
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "current crisis",
+        "newspaper",
+        "wanting to talk"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "In short, the image that best represents the current crisis is the stereotypical cartoon scene of a man sitting at the breakfast table with a newspaper held up in front of his face, while a woman glares at the back of it, wanting to talk.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-text2/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,977 @@
+{
+  "year": 2012,
+  "section_type": "reading",
+  "article_id": "text3",
+  "source_sha256": "9c5ee5128fddddbab78d62e4577a414aea51b5f021ceb7846216ba644bbe2e79",
+  "source_pages": [
+    7,
+    8
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "05",
+  "article_context": "DNA与基因专利法律争议。语气理性，法院判决、产业立场与反对理由层次分明。",
+  "article": {
+    "year": 2012,
+    "section": "text3",
+    "title": "阅读三 · 基因专利之争",
+    "background": "DNA与基因专利法律争议。语气理性，法院判决、产业立场与反对理由层次分明。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "In 2010, a federal judge shook America’s biotech industry to its core.",
+      "zh": "2010年，一名联邦法官的判决震动了美国生物技术产业。",
+      "vocab": [
+        {
+          "word": "biotech",
+          "lemma": "biotech",
+          "level": 7,
+          "meaning": "生物技术",
+          "start": 41,
+          "end": 48
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "In 2010, a federal judge shook America’s biotech industry to its core.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text3/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 2,
+      "en": "Companies had won patents for isolated DNA for decades – by 2005 some 20% of human genes were patented.",
+      "zh": "几十年来，企业一直能够为分离出来的DNA取得专利；到2005年，大约20%的人类基因已经被申请专利。",
+      "vocab": [
+        {
+          "word": "patents",
+          "lemma": "patent",
+          "level": 6,
+          "meaning": "专利权；许可证",
+          "start": 18,
+          "end": 25
+        },
+        {
+          "word": "isolated",
+          "lemma": "isolate",
+          "level": 6,
+          "meaning": "t. 使隔离；使孤立",
+          "start": 30,
+          "end": 38
+        },
+        {
+          "word": "patented",
+          "lemma": "patent",
+          "level": 6,
+          "meaning": "专利权；许可证",
+          "start": 94,
+          "end": 102
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Companies had won patents for isolated DNA for decades – by 2005 some 20% of human genes were patented.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text3/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 3,
+      "en": "But in March 2010 a judge ruled that genes were unpatentable.",
+      "zh": "但2010年3月，一名法官裁定基因本身不可申请专利，",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "But in March 2010 a judge ruled that genes were unpatentable.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text3/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 4,
+      "en": "Executives were violently agitated.",
+      "zh": "企业高管顿时高度紧张。",
+      "vocab": [
+        {
+          "word": "agitated",
+          "lemma": "agitate",
+          "level": 8,
+          "meaning": "t. 使摇动；搅动",
+          "start": 26,
+          "end": 34
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Executives were violently agitated.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text3/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 5,
+      "en": "The Biotechnology Industry Organisation (BIO), a trade group, assured members that this was just a “preliminary step” in a longer battle.",
+      "zh": "行业组织美国生物技术产业组织安抚会员说，这只是漫长法律斗争中的“初步一步”。",
+      "vocab": [
+        {
+          "word": "Biotechnology",
+          "lemma": "biotechnology",
+          "level": 7,
+          "meaning": "生物工艺学；生物技术",
+          "start": 4,
+          "end": 17
+        },
+        {
+          "word": "preliminary",
+          "lemma": "preliminary",
+          "level": 6,
+          "meaning": "初步做法；初步措施",
+          "start": 100,
+          "end": 111
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "The Biotechnology Industry Organisation (BIO), a trade group, assured members that this was just a “preliminary step” in a longer battle.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text3/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 6,
+      "en": "On July 29th they were relieved, at least temporarily.",
+      "zh": "7月29日，他们至少暂时松了一口气：",
+      "vocab": [
+        {
+          "word": "relieved",
+          "lemma": "relieve",
+          "level": 6,
+          "meaning": "t. 减轻；救济",
+          "start": 23,
+          "end": 31
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "On July 29th they were relieved, at least temporarily.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text3/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 7,
+      "en": "A federal appeals court overturned the prior decision, ruling that Myriad Genetics could indeed hold patents to two genes that help forecast a woman’s risk of breast cancer.",
+      "zh": "一家联邦上诉法院推翻此前裁决，认定Myriad Genetics确实可以持有两个基因的专利，而这两个基因可帮助预测女性乳腺癌风险。",
+      "vocab": [
+        {
+          "word": "overturned",
+          "lemma": "overturn",
+          "level": 7,
+          "meaning": "倾覆；破灭",
+          "start": 24,
+          "end": 34
+        },
+        {
+          "word": "Genetics",
+          "lemma": "genetics",
+          "level": 7,
+          "meaning": "遗传学",
+          "start": 74,
+          "end": 82
+        },
+        {
+          "word": "patents",
+          "lemma": "patent",
+          "level": 6,
+          "meaning": "专利权；许可证",
+          "start": 101,
+          "end": 108
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "A federal appeals court overturned the prior decision, ruling that Myriad Genetics could indeed hold patents to two genes that help forecast a woman’s risk of breast cancer.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text3/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 8,
+      "en": "The chief executive of Myriad, a company in Utah, said the ruling was a blessing to firms and patients alike.",
+      "zh": "位于犹他州的Myriad公司首席执行官称，这项判决对企业和患者双方都是福音。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "The chief executive of Myriad, a company in Utah, said the ruling was a blessing to firms and patients alike.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text3/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 9,
+      "en": "But as companies continue their attempts at personalised medicine, the courts will remain rather busy.",
+      "zh": "但随着企业继续推进个体化医疗，法院恐怕仍会十分忙碌，",
+      "vocab": [
+        {
+          "word": "personalised",
+          "lemma": "personalised",
+          "level": 8,
+          "meaning": "a. （英）个人化的（等于personalized）",
+          "start": 44,
+          "end": 56
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "But as companies continue their attempts at personalised medicine, the courts will remain rather busy.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text3/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 10,
+      "en": "The Myriad case itself is probably not over.",
+      "zh": "Myriad案本身也很可能尚未结束。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "The Myriad case itself is probably not over.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text3/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 11,
+      "en": "Critics make three main arguments against gene patents: a gene is a product of nature, so it may not be patented; gene patents suppress innovation rather than reward it; and patents’ monopolies restrict access to genetic tests such as Myriad’s.",
+      "zh": "反对基因专利的人主要提出三点理由：第一，基因是自然产物，因此不应获得专利；第二，基因专利并非奖励创新，反而会压制创新；第三，专利形成的垄断会限制人们获得基因检测的机会，例如Myriad提供的检测。",
+      "vocab": [
+        {
+          "word": "Critics",
+          "lemma": "critic",
+          "level": 6,
+          "meaning": "批评家；鉴定家",
+          "start": 0,
+          "end": 7
+        },
+        {
+          "word": "patents",
+          "lemma": "patent",
+          "level": 6,
+          "meaning": "专利权；许可证",
+          "start": 47,
+          "end": 54
+        },
+        {
+          "word": "patented",
+          "lemma": "patent",
+          "level": 6,
+          "meaning": "专利权；许可证",
+          "start": 104,
+          "end": 112
+        },
+        {
+          "word": "patents",
+          "lemma": "patent",
+          "level": 6,
+          "meaning": "专利权；许可证",
+          "start": 119,
+          "end": 126
+        },
+        {
+          "word": "suppress",
+          "lemma": "suppress",
+          "level": 6,
+          "meaning": "t. 镇压；使止住",
+          "start": 127,
+          "end": 135
+        },
+        {
+          "word": "innovation",
+          "lemma": "innovation",
+          "level": 6,
+          "meaning": "改革；创新",
+          "start": 136,
+          "end": 146
+        },
+        {
+          "word": "patents",
+          "lemma": "patent",
+          "level": 6,
+          "meaning": "专利权；许可证",
+          "start": 174,
+          "end": 181
+        },
+        {
+          "word": "monopolies",
+          "lemma": "monopoly",
+          "level": 6,
+          "meaning": "垄断；专卖权",
+          "start": 183,
+          "end": 193
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "Critics make three main arguments against gene patents: a gene is a product of nature, so it may not be patented; gene patents suppress innovation rather than reward it; and patents’ monopolies restrict access to genetic tests such as Myriad’s.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text3/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 12,
+      "en": "A growing number seem to agree.",
+      "zh": "越来越多人似乎赞同这些观点。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "A growing number seem to agree.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text3/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 13,
+      "en": "Last year a federal task-force urged reform for patents related to genetic tests.",
+      "zh": "去年，一个联邦工作组敦促改革与基因检测相关的专利制度。",
+      "vocab": [
+        {
+          "word": "patents",
+          "lemma": "patent",
+          "level": 6,
+          "meaning": "专利权；许可证",
+          "start": 48,
+          "end": 55
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "Last year a federal task-force urged reform for patents related to genetic tests.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text3/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 14,
+      "en": "In October the Department of Justice filed a brief in the Myriad case, arguing that an isolated DNA molecule “is no less a product of nature…than are cotton fibres that have been separated from cotton seeds.”",
+      "zh": "10月，美国司法部在Myriad案中提交意见书，指出一段被分离出来的DNA分子“并不比从棉籽中分离出来的棉纤维更不像自然产物”。",
+      "vocab": [
+        {
+          "word": "isolated",
+          "lemma": "isolate",
+          "level": 6,
+          "meaning": "t. 使隔离；使孤立",
+          "start": 87,
+          "end": 95
+        },
+        {
+          "word": "molecule",
+          "lemma": "molecule",
+          "level": 6,
+          "meaning": "分子；些微",
+          "start": 100,
+          "end": 108
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "In October the Department of Justice filed a brief in the Myriad case, arguing that an isolated DNA molecule “is no less a product of nature…than are cotton fibres that have been separated from cotton seeds.”",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text3/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 15,
+      "en": "Despite the appeals court’s decision, big questions remain unanswered.",
+      "zh": "尽管上诉法院已经作出判决，很多重大问题仍没有答案。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "Despite the appeals court’s decision, big questions remain unanswered.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text3/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 16,
+      "en": "For example, it is unclear whether the sequencing of a whole genome violates the patents of individual genes within it.",
+      "zh": "例如，对完整基因组进行测序，是否会侵犯其中单个基因的专利，目前仍不清楚。",
+      "vocab": [
+        {
+          "word": "violates",
+          "lemma": "violate",
+          "level": 6,
+          "meaning": "t. 违犯；亵渎",
+          "start": 68,
+          "end": 76
+        },
+        {
+          "word": "patents",
+          "lemma": "patent",
+          "level": 6,
+          "meaning": "专利权；许可证",
+          "start": 81,
+          "end": 88
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "For example, it is unclear whether the sequencing of a whole genome violates the patents of individual genes within it.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text3/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 17,
+      "en": "The case may yet reach the Supreme Court.",
+      "zh": "这个案子最终仍可能进入最高法院。",
+      "vocab": [
+        {
+          "word": "Supreme",
+          "lemma": "supreme",
+          "level": 6,
+          "meaning": "至高；霸权",
+          "start": 27,
+          "end": 34
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "The case may yet reach the Supreme Court.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text3/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 18,
+      "en": "As the industry advances, however, other suits may have an even greater impact.",
+      "zh": "不过，随着产业发展，其他诉讼也许会产生更大影响。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "As the industry advances, however, other suits may have an even greater impact.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text3/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 19,
+      "en": "Companies are unlikely to file many more patents for human DNA molecules – most are already patented or in the public domain.",
+      "zh": "企业不太可能再大量申请人类DNA分子的专利——大多数早已被专利覆盖，或者已经进入公有领域。",
+      "vocab": [
+        {
+          "word": "patents",
+          "lemma": "patent",
+          "level": 6,
+          "meaning": "专利权；许可证",
+          "start": 41,
+          "end": 48
+        },
+        {
+          "word": "molecules",
+          "lemma": "molecule",
+          "level": 6,
+          "meaning": "分子；些微",
+          "start": 63,
+          "end": 72
+        },
+        {
+          "word": "patented",
+          "lemma": "patent",
+          "level": 6,
+          "meaning": "专利权；许可证",
+          "start": 92,
+          "end": 100
+        },
+        {
+          "word": "domain",
+          "lemma": "domain",
+          "level": 6,
+          "meaning": "领域；领土",
+          "start": 118,
+          "end": 124
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "Companies are unlikely to file many more patents for human DNA molecules – most are already patented or in the public domain.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text3/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "paragraph": 20,
+      "en": "Firms are now studying how genes interact, looking for correlations that might be used to determine the causes of disease or predict a drug’s efficacy.",
+      "zh": "如今，企业开始研究基因如何相互作用，寻找能够用于判定疾病原因或预测药物疗效的相关关系。",
+      "vocab": [
+        {
+          "word": "interact",
+          "lemma": "interact",
+          "level": 6,
+          "meaning": "i. 互相影响；交互作用",
+          "start": 33,
+          "end": 41
+        },
+        {
+          "word": "correlations",
+          "lemma": "correlation",
+          "level": 6,
+          "meaning": "相互关系；相关",
+          "start": 55,
+          "end": 67
+        },
+        {
+          "word": "efficacy",
+          "lemma": "efficacy",
+          "level": 7,
+          "meaning": "功效；效力",
+          "start": 142,
+          "end": 150
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s20-01",
+          "text": "Firms are now studying how genes interact, looking for correlations that might be used to determine the causes of disease or predict a drug’s efficacy.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text3/s20-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "paragraph": 21,
+      "en": "Companies are eager to win patents for “connecting the dots,” explains Hans Sauer, a lawyer for the BIO.",
+      "zh": "BIO律师汉斯·绍尔解释说，企业非常希望为这种“把点连起来”的发现赢得专利。",
+      "vocab": [
+        {
+          "word": "patents",
+          "lemma": "patent",
+          "level": 6,
+          "meaning": "专利权；许可证",
+          "start": 27,
+          "end": 34
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s21-01",
+          "text": "Companies are eager to win patents for “connecting the dots,” explains Hans Sauer, a lawyer for the BIO.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text3/s21-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "paragraph": 22,
+      "en": "Their success may be determined by a suit related to this issue, brought by the Mayo Clinic, which the Supreme Court will hear in its next term.",
+      "zh": "而它们能否成功，可能取决于与这一问题有关的一桩诉讼；该案由梅奥诊所提起，最高法院将在下一个审期审理。",
+      "vocab": [
+        {
+          "word": "Supreme",
+          "lemma": "supreme",
+          "level": 6,
+          "meaning": "至高；霸权",
+          "start": 103,
+          "end": 110
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s22-01",
+          "text": "Their success may be determined by a suit related to this issue, brought by the Mayo Clinic, which the Supreme Court will hear in its next term.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text3/s22-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "paragraph": 23,
+      "en": "The BIO recently held a convention which included sessions to coach lawyers on the shifting landscape for patents.",
+      "zh": "BIO最近召开的一次大会还专门设置了课程，指导律师应对不断变化的专利法律环境，",
+      "vocab": [
+        {
+          "word": "patents",
+          "lemma": "patent",
+          "level": 6,
+          "meaning": "专利权；许可证",
+          "start": 106,
+          "end": 113
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s23-01",
+          "text": "The BIO recently held a convention which included sessions to coach lawyers on the shifting landscape for patents.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text3/s23-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "paragraph": 24,
+      "en": "Each meeting was packed.",
+      "zh": "而且场场爆满。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s24-01",
+          "text": "Each meeting was packed.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2012/c-text3/s24-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

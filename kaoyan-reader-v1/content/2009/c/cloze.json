@@ -1,0 +1,569 @@
+{
+  "year": 2009,
+  "section_type": "cloze",
+  "article_id": "cloze",
+  "source_sha256": "fcd4b7f273ad0b5310fcbcf434777663198d5dc07c6ffaac91043735e14e8cc4",
+  "source_pages": [
+    1,
+    2
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "02",
+  "article_context": "动物智力、进化成本与反向观察人类。文章从果蝇实验切入，讨论智力的能量与学习成本，再设想动物研究人类会问什么。语气理性、略带幽默，在反直觉结论和结尾问题处加强重音。",
+  "article": {
+    "year": 2009,
+    "section": "cloze",
+    "title": "完型 · 高智力是否存在进化代价",
+    "background": "动物智力、进化成本与反向观察人类。文章从果蝇实验切入，讨论智力的能量与学习成本，再设想动物研究人类会问什么。语气理性、略带幽默，在反直觉结论和结尾问题处加强重音。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "Research on animal intelligence always makes us wonder just how smart humans are.",
+      "zh": "关于动物智力的研究总会让我们反过来思考：人类究竟有多聪明。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [
+        "just how smart humans are"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "Research on animal intelligence always makes us wonder just how smart humans are.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-cloze/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Consider the fruit-fly experiments described by Carl Zimmer in the Science Times.",
+      "zh": "想想卡尔·齐默在《科学时报》中介绍的果蝇实验。",
+      "vocab": [],
+      "discourse_function": "example",
+      "prosody_focus": [
+        "fruit-fly experiments"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Consider the fruit-fly experiments described by Carl Zimmer in the Science Times.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-cloze/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "Fruit flies who were taught to be smarter than the average fruit fly tended to live shorter lives.",
+      "zh": "那些被训练得比普通果蝇更聪明的果蝇，往往活得更短。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "smarter",
+        "shorter lives"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Fruit flies who were taught to be smarter than the average fruit fly tended to live shorter lives.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-cloze/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 1,
+      "en": "This suggests that dimmer bulbs burn longer, that there is an advantage in not being too bright.",
+      "zh": "这似乎表明：灯泡越暗反而烧得越久，也就是说，不那么聪明可能具有某种优势。",
+      "vocab": [],
+      "discourse_function": "compare",
+      "prosody_focus": [
+        "dimmer bulbs burn longer",
+        "advantage",
+        "not being too bright"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "This suggests that dimmer bulbs burn longer, that there is an advantage in not being too bright.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-cloze/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "Intelligence, it turns out, is a high-priced option.",
+      "zh": "事实证明，智力是一种代价高昂的选择。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "high-priced option"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Intelligence, it turns out, is a high-priced option.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-cloze/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "It takes more upkeep, burns more fuel and is slow off the starting line because it depends on learning—a gradual process—instead of instinct.",
+      "zh": "智力需要更多维护、消耗更多能量，而且起步较慢，因为它依赖的是学习——一个渐进的过程——而不是本能。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "more upkeep",
+        "burns more fuel",
+        "gradual process"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "It takes more upkeep, burns more fuel and is slow off the starting line because it depends on learning—a gradual process—instead of instinct.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-cloze/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "Plenty of other species are able to learn, and one of the things they've apparently learned is when to stop.",
+      "zh": "许多其他物种也能够学习，而它们显然学会的事情之一，就是知道什么时候该停止继续学习。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "when to stop"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "Plenty of other species are able to learn, and one of the things they've apparently learned is when to stop.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-cloze/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 3,
+      "en": "Is there an adaptive value to limited intelligence?",
+      "zh": "有限的智力是否具有适应价值？",
+      "vocab": [],
+      "discourse_function": "ask",
+      "prosody_focus": [
+        "adaptive value",
+        "limited intelligence"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "Is there an adaptive value to limited intelligence?",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-cloze/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 3,
+      "en": "That's the question behind this new research.",
+      "zh": "这正是这项新研究背后的问题。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "question behind this new research"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "That's the question behind this new research.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-cloze/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 3,
+      "en": "Instead of casting a wistful glance backward at all the species we've left in the dust IQ-wise, it implicitly asks what the real costs of our own intelligence might be.",
+      "zh": "这项研究不再带着自得回望那些在智力上被我们远远甩在身后的物种，而是含蓄地追问：人类自身的智力究竟付出了什么真实代价。",
+      "vocab": [
+        {
+          "word": "wistful",
+          "lemma": "wistful",
+          "level": 8,
+          "meaning": "a. 渴望的；想望的",
+          "start": 21,
+          "end": 28
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "wistful glance backward",
+        "real costs",
+        "our own intelligence"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "Instead of casting a wistful glance backward at all the species we've left in the dust IQ-wise, it implicitly asks what the real costs of our own intelligence might be.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-cloze/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 3,
+      "en": "This is on the mind of every animal we've ever met.",
+      "zh": "这大概也是我们遇到过的每一种动物都想知道的问题。",
+      "vocab": [],
+      "discourse_function": "playful",
+      "prosody_focus": [
+        "every animal"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "This is on the mind of every animal we've ever met.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-cloze/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 4,
+      "en": "Research on animal intelligence also makes us wonder what experiments animals would perform on humans if they had the chance.",
+      "zh": "动物智力研究还会让我们设想：如果动物有机会，它们会在人类身上做什么实验。",
+      "vocab": [],
+      "discourse_function": "ask",
+      "prosody_focus": [
+        "what experiments animals would perform"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "Research on animal intelligence also makes us wonder what experiments animals would perform on humans if they had the chance.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-cloze/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 4,
+      "en": "Every cat with an owner, for instance, is running a small-scale study in operant conditioning.",
+      "zh": "比如，每一只有主人的猫，其实都像是在进行一项小规模的操作性条件反射研究。",
+      "vocab": [
+        {
+          "word": "conditioning",
+          "lemma": "conditioning",
+          "level": 7,
+          "meaning": "调节；条件作用",
+          "start": 81,
+          "end": 93
+        }
+      ],
+      "discourse_function": "example",
+      "prosody_focus": [
+        "for instance",
+        "operant conditioning"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "Every cat with an owner, for instance, is running a small-scale study in operant conditioning.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-cloze/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 4,
+      "en": "We believe that if animals ran the labs, they would test us to determine the limits of our patience, our faithfulness, our memory for locations.",
+      "zh": "我们相信，如果实验室由动物掌管，它们会测试我们，以确定人类在耐心、忠诚以及地点记忆方面的极限。",
+      "vocab": [
+        {
+          "word": "faithfulness",
+          "lemma": "faithfulness",
+          "level": 8,
+          "meaning": "忠诚；诚实",
+          "start": 105,
+          "end": 117
+        }
+      ],
+      "discourse_function": "sequence",
+      "prosody_focus": [
+        "determine the limits",
+        "patience",
+        "faithfulness",
+        "memory for locations"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "We believe that if animals ran the labs, they would test us to determine the limits of our patience, our faithfulness, our memory for locations.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-cloze/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 4,
+      "en": "They would try to decide what intelligence in humans is really for, not merely how much of it there is.",
+      "zh": "它们会试图判断，人类智力究竟是用来做什么的，而不只是测量我们拥有多少智力。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "really for",
+        "not merely how much"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "They would try to decide what intelligence in humans is really for, not merely how much of it there is.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-cloze/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 4,
+      "en": "Above all, they would hope to study a fundamental question: Are humans actually aware of the world they live in?",
+      "zh": "最重要的是，它们会希望研究一个根本问题：人类是否真的意识到自己生活在怎样的世界里？",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "Above all",
+        "fundamental question",
+        "actually aware"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "Above all, they would hope to study a fundamental question: Are humans actually aware of the world they live in?",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-cloze/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 4,
+      "en": "So far the results are inconclusive.",
+      "zh": "到目前为止，结果仍然没有定论。",
+      "vocab": [
+        {
+          "word": "inconclusive",
+          "lemma": "inconclusive",
+          "level": 8,
+          "meaning": "a. 非决定性的；无效果的",
+          "start": 23,
+          "end": 35
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "So far",
+        "inconclusive"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "So far the results are inconclusive.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2009/c-cloze/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

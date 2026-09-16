@@ -1,0 +1,53 @@
+name: Bilingual occurrence report
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ['c-v4-article-preview-actual']
+    paths: ['bilingual-report.trigger']
+
+permissions:
+  contents: read
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile reviewed article content
+        env:
+          PYTHONPATH: voice-pipeline:content-pipeline
+        run: |
+          for year in 2003 2004 2005 2006; do
+            python content-pipeline/build_curated_year.py --year "$year"
+          done
+      - name: Emit all level-6-plus occurrences with exact bilingual sentence context
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          rows=[]
+          for year in (2003,2004,2005,2006):
+              for path in sorted(Path(f'kaoyan-reader-v1/content/{year}/c').glob('*.json')):
+                  doc=json.loads(path.read_text())
+                  for sentence in doc['sentences']:
+                      for vocab in sentence.get('vocab',[]):
+                          if int(vocab.get('level',0))<6: continue
+                          rows.append({
+                              'year':year,'article_id':doc['article_id'],'sentence_id':sentence['id'],
+                              'en_start':vocab['start'],'en_end':vocab['end'],'en_text':sentence['en'][vocab['start']:vocab['end']],
+                              'level':vocab['level'],'meaning':vocab.get('meaning',''),
+                              'en':sentence['en'],'zh':sentence['zh']
+                          })
+          Path('bilingual-occurrences.json').write_text(json.dumps(rows,ensure_ascii=False,indent=2)+'\n')
+          print(json.dumps({'occurrences':len(rows),'years':{y:sum(1 for r in rows if r['year']==y) for y in (2003,2004,2005,2006)}},ensure_ascii=False))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bilingual-occurrences-2003-2006
+          path: bilingual-occurrences.json
+          if-no-files-found: error
+          retention-days: 7

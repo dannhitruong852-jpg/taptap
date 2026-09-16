@@ -1,0 +1,67 @@
+name: Fix 2007 PartB actor once
+
+on:
+  push:
+    branches:
+      - c-v4-article-preview-actual
+    paths:
+      - '.github/workflows/fix-2007-partb-actor-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: c-v4-article-preview-actual
+          fetch-depth: 0
+      - name: Require isolated mismatch and align candidate to approved actor plan
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          board=json.loads(Path('reports/content-freeze/2007-2012-production-board.json').read_text(encoding='utf-8'))
+          units=('cloze','text1','text2','text3','text4','partb','translation')
+          mismatches=[]
+          for year in range(2007,2013):
+              for unit in units:
+                  path=Path(f'reports/content-freeze/{year}/{unit}.candidate.json')
+                  doc=json.loads(path.read_text(encoding='utf-8'))
+                  candidate=str(doc['article']['actor']).zfill(2)
+                  planned=str(board['actor_plan'][str(year)][unit]).zfill(2)
+                  if candidate != planned:
+                      mismatches.append((year,unit,candidate,planned))
+          expected=[(2007,'partb','13','06')]
+          if mismatches != expected:
+              raise SystemExit(f'unexpected actor mismatch set: {mismatches}')
+          path=Path('reports/content-freeze/2007/partb.candidate.json')
+          doc=json.loads(path.read_text(encoding='utf-8'))
+          doc['article']['actor']='06'
+          path.write_text(json.dumps(doc,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          PY
+      - name: Verify all 42 actors match plan
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          board=json.loads(Path('reports/content-freeze/2007-2012-production-board.json').read_text(encoding='utf-8'))
+          units=('cloze','text1','text2','text3','text4','partb','translation')
+          count=0
+          for year in range(2007,2013):
+              for unit in units:
+                  doc=json.loads(Path(f'reports/content-freeze/{year}/{unit}.candidate.json').read_text(encoding='utf-8'))
+                  assert str(doc['article']['actor']).zfill(2)==str(board['actor_plan'][str(year)][unit]).zfill(2),(year,unit)
+                  count+=1
+          assert count==42
+          print({'actor_plan_matches':42})
+          PY
+      - name: Commit isolated actor metadata correction
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add reports/content-freeze/2007/partb.candidate.json
+          git commit -m 'content: align 2007 partb actor with approved plan'
+          git push origin HEAD:c-v4-article-preview-actual

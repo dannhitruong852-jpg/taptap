@@ -1,0 +1,686 @@
+{
+  "year": 2006,
+  "section_type": "reading",
+  "article_id": "text2",
+  "source_sha256": "db9af95d0cd6e041df36d57e0b64a323fb18b3dd01007c52d458dff0729dcda3",
+  "source_pages": [],
+  "accent": "en-US",
+  "primary_actor_id": "14",
+  "article_context": "英国地方文化与制度冲突，带明显英式讽刺。主讲人成熟克制，涉及当地居民、剧团、游客与补贴的利益张力。",
+  "article": {
+    "year": 2006,
+    "section": "text2",
+    "title": "阅读二 · 莎士比亚小镇的剧院之争",
+    "background": "英国地方文化与制度冲突，带明显英式讽刺。主讲人成熟克制，涉及当地居民、剧团、游客与补贴的利益张力。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "Stratford-on-Avon, as we all know, has only one industry — William Shakespeare — but there are two distinctly separate and increasingly hostile branches.",
+      "zh": "众所周知，埃文河畔斯特拉特福只有一个产业——威廉·莎士比亚——但这个产业却分成泾渭分明、日益敌对的两派。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "Stratford-on-Avon, as we all know, has only one industry — William Shakespeare —"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "Stratford-on-Avon, as we all know, has only one industry — William Shakespeare — but there are two distinctly separate and increasingly hostile branches.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text2/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "There is the Royal Shakespeare Company, which presents superb productions of the plays at the Shakespeare Memorial Theatre on the Avon.",
+      "zh": "一派是皇家莎士比亚剧团，它在埃文河畔的莎士比亚纪念剧院上演精彩剧目。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "There is the Royal Shakespeare Company, which presents superb productions of the"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "There is the Royal Shakespeare Company, which presents superb productions of the plays at the Shakespeare Memorial Theatre on the Avon.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text2/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "And there are the townsfolk who largely live off the tourists who come, not to see the plays, but to look at Anne Hathaway’s Cottage, Shakespeare’s birthplace and the other sights.",
+      "zh": "另一派是当地居民，他们主要靠游客为生；这些游客来这里不是看戏，而是参观安妮·海瑟薇故居、莎士比亚出生地等景点。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "And there are the townsfolk who largely live off the tourists who come, not to s"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "And there are the townsfolk who largely live off the tourists who come, not to see the plays, but to look at Anne Hathaway’s Cottage, Shakespeare’s birthplace and the other sights.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text2/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 1,
+      "en": "The worthy residents of Stratford doubt that the theater adds a penny to their revenue.",
+      "zh": "斯特拉特福那些体面的居民怀疑，剧院是否给他们的收入增加过哪怕一分钱。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "The worthy residents of Stratford doubt that the theater adds a penny to their r"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "The worthy residents of Stratford doubt that the theater adds a penny to their revenue.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text2/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 1,
+      "en": "They frankly dislike the RSC’s actors, with their long hair and beards and sandals and noisiness.",
+      "zh": "他们坦率地不喜欢皇家莎士比亚剧团的演员——长发、胡须、凉鞋，还吵吵闹闹。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [
+        "They frankly dislike the RSC’s actors, with their long hair and beards and sanda"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "They frankly dislike the RSC’s actors, with their long hair and beards and sandals and noisiness.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text2/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "It’s all deliciously ironic when you consider that Shakespeare, who earns their living, was himself an actor, with a beard, and did his share of noise-making.",
+      "zh": "想到养活他们的莎士比亚本人就是个留胡子的演员，而且当年也没少制造喧闹，这一切便显得格外讽刺。",
+      "vocab": [],
+      "discourse_function": "irony",
+      "prosody_focus": [
+        "It’s all deliciously ironic when you consider that Shakespeare, who earns their "
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "It’s all deliciously ironic when you consider that Shakespeare, who earns their living, was himself an actor, with a beard, and did his share of noise-making.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "ironic",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text2/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "The tourist streams are not entirely separate.",
+      "zh": "不过，两股游客并非完全分开。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "The tourist streams are not entirely separate."
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "The tourist streams are not entirely separate.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text2/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 2,
+      "en": "The sightseers who come by bus — and often take in Warwick Castle and Blenheim Palace on the side — don’t usually see the plays, and some of them are even surprised to find a theatre in Stratford.",
+      "zh": "乘大巴来的观光客往往顺道游览沃里克城堡和布伦海姆宫，他们通常不看戏，有些人甚至惊讶于斯特拉特福竟然还有一座剧院。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "The sightseers who come by bus — and often take in Warwick Castle and Blenheim P"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "The sightseers who come by bus — and often take in Warwick Castle and Blenheim Palace on the side — don’t usually see the plays, and some of them are even surprised to find a theatre in Stratford.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text2/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 2,
+      "en": "However, the playgoers do manage a little sight-seeing along with their playgoing.",
+      "zh": "不过，看戏的人倒会在观剧之余抽空游览一下。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "However, the playgoers do manage a little sight-seeing along with their playgoin"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "However, the playgoers do manage a little sight-seeing along with their playgoing.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text2/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 2,
+      "en": "It is the playgoers, the RSC contends, who bring in much of the town’s revenue because they spend the night, some of them four or five nights, pouring cash into the hotels and restaurants.",
+      "zh": "皇家莎士比亚剧团认为，给镇上带来大量收入的其实是观众，因为他们会在这里过夜，有些甚至住四五晚，把钱花在酒店和餐馆。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "It is the playgoers, the RSC contends, who bring in much of the town’s revenue b"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "It is the playgoers, the RSC contends, who bring in much of the town’s revenue because they spend the night, some of them four or five nights, pouring cash into the hotels and restaurants.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text2/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 3,
+      "en": "The sightseers can take in everything and get out of town by nightfall.",
+      "zh": "而普通观光客一天就能看完一切，天黑前便离开小镇。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "The sightseers can take in everything and get out of town by nightfall."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "The sightseers can take in everything and get out of town by nightfall.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text2/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 3,
+      "en": "The townsfolk don’t see it this way and the local council does not contribute directly to the subsidy of the Royal Shakespeare Company.",
+      "zh": "当地居民并不这么看，地方议会也不直接为皇家莎士比亚剧团提供补贴。",
+      "vocab": [
+        {
+          "word": "subsidy",
+          "lemma": "subsidy",
+          "level": 6,
+          "meaning": "补贴",
+          "start": 94,
+          "end": 101
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "The townsfolk don’t see it this way and the local council does not contribute di"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "The townsfolk don’t see it this way and the local council does not contribute directly to the subsidy of the Royal Shakespeare Company.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text2/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 3,
+      "en": "Stratford cries poor traditionally.",
+      "zh": "斯特拉特福向来爱喊穷。",
+      "vocab": [],
+      "discourse_function": "irony",
+      "prosody_focus": [
+        "Stratford cries poor traditionally."
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "Stratford cries poor traditionally.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "ironic",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text2/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 3,
+      "en": "Nevertheless every hotel in town seems to be adding a new wing or cocktail lounge.",
+      "zh": "可镇上的每家酒店似乎都在加盖新楼或鸡尾酒廊。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "Nevertheless every hotel in town seems to be adding a new wing or cocktail loung"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "Nevertheless every hotel in town seems to be adding a new wing or cocktail lounge.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text2/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 3,
+      "en": "Hilton is building its own hotel there, which you may be sure will be decorated with Hamlet Hamburger Bars, the Lear Lounge, the Banquo Banqueting Room, and so forth, and will be very expensive.",
+      "zh": "希尔顿也在那里建自己的酒店；可以想见，里面少不了“哈姆雷特汉堡吧”“李尔王酒廊”“班柯宴会厅”之类的装饰，而且价格一定不菲。",
+      "vocab": [],
+      "discourse_function": "playful",
+      "prosody_focus": [
+        "Hilton is building its own hotel there, which you may be sure will be decorated "
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "Hilton is building its own hotel there, which you may be sure will be decorated with Hamlet Hamburger Bars, the Lear Lounge, the Banquo Banqueting Room, and so forth, and will be very expensive.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text2/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 4,
+      "en": "Anyway, the townsfolk can’t understand why the Royal Shakespeare Company needs a subsidy.",
+      "zh": "总之，当地人就是不明白皇家莎士比亚剧团为什么还需要补贴。",
+      "vocab": [
+        {
+          "word": "subsidy",
+          "lemma": "subsidy",
+          "level": 6,
+          "meaning": "补贴",
+          "start": 81,
+          "end": 88
+        }
+      ],
+      "discourse_function": "irony",
+      "prosody_focus": [
+        "Anyway, the townsfolk can’t understand why the Royal Shakespeare Company needs a"
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "Anyway, the townsfolk can’t understand why the Royal Shakespeare Company needs a subsidy.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "ironic",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text2/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 4,
+      "en": "The theatre has broken attendance records for three years in a row.",
+      "zh": "毕竟，剧院已经连续三年打破上座纪录。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "The theatre has broken attendance records for three years in a row."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "The theatre has broken attendance records for three years in a row.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text2/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 4,
+      "en": "Last year its 1,431 seats were 94 per cent occupied all year long and this year they’ll do better.",
+      "zh": "去年剧院1431个座位全年平均上座率高达94%，今年还会更好。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [
+        "Last year its 1,431 seats were 94 per cent occupied all year long and this year "
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "Last year its 1,431 seats were 94 per cent occupied all year long and this year they’ll do better.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text2/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 4,
+      "en": "The reason, of course, is that costs have rocketed and ticket prices have stayed low.",
+      "zh": "原因当然在于，成本已经猛涨，而票价一直维持在低位。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "The reason, of course, is that costs have rocketed and ticket prices have stayed"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "The reason, of course, is that costs have rocketed and ticket prices have stayed low.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text2/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "paragraph": 4,
+      "en": "It would be a shame to raise prices too much because it would drive away the young people who are Stratford’s most attractive clientele.",
+      "zh": "票价涨得太多会很可惜，因为那会赶走年轻人，而他们正是斯特拉特福最有吸引力的观众群。",
+      "vocab": [
+        {
+          "word": "clientele",
+          "lemma": "clientele",
+          "level": 7,
+          "meaning": "顾客群；观众群",
+          "start": 126,
+          "end": 135
+        }
+      ],
+      "discourse_function": "warning",
+      "prosody_focus": [
+        "It would be a shame to raise prices too much because it would drive away the you"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s20-01",
+          "text": "It would be a shame to raise prices too much because it would drive away the young people who are Stratford’s most attractive clientele.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text2/s20-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "paragraph": 5,
+      "en": "They come entirely for the plays, not the sights.",
+      "zh": "他们完全是为戏剧而来，不是为景点。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "They come entirely for the plays, not the sights."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s21-01",
+          "text": "They come entirely for the plays, not the sights.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text2/s21-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "paragraph": 5,
+      "en": "They all seem to look alike, though they come from all over — lean, pointed, dedicated faces, wearing jeans and sandals, eating their buns and bedding down for the night on the flagstones outside the theatre to buy the 20 seats and 80 standing-room tickets held for the sleepers and sold to them when the box office opens at 10:30 a.m.",
+      "zh": "他们来自四面八方，看起来却仿佛一个模样：清瘦而专注的脸，穿牛仔裤和凉鞋，啃着面包，在剧院外石板地上过夜，只为等上午10点半售票处开门时买到专为露宿者预留的20个座位票和80张站票。",
+      "vocab": [],
+      "discourse_function": "story",
+      "prosody_focus": [
+        "They all seem to look alike, though they come from all over — lean, pointed, ded"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s22-01",
+          "text": "They all seem to look alike, though they come from all over — lean, pointed, dedicated faces, wearing jeans and sandals, eating their buns and bedding down for the night on the flagstones outside the theatre to buy the 20 seats and 80 standing-room tickets held for the sleepers and sold to them when the box office opens at 10:30 a.m.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text2/s22-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

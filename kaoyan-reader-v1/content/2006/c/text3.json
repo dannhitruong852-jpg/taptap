@@ -1,0 +1,748 @@
+{
+  "year": 2006,
+  "section_type": "reading",
+  "article_id": "text3",
+  "source_sha256": "db9af95d0cd6e041df36d57e0b64a323fb18b3dd01007c52d458dff0729dcda3",
+  "source_pages": [],
+  "accent": "en-US",
+  "primary_actor_id": "03",
+  "article_context": "自然与环境纪录片式解释。以史前大型动物灭绝作类比，推进到全球渔业数据、技术偏差与“基准线漂移”。",
+  "article": {
+    "year": 2006,
+    "section": "text3",
+    "title": "阅读三 · 过度捕捞与基准线漂移",
+    "background": "自然与环境纪录片式解释。以史前大型动物灭绝作类比，推进到全球渔业数据、技术偏差与“基准线漂移”。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "When prehistoric man arrived in new parts of the world, something strange happened to the large animals: they suddenly became extinct.",
+      "zh": "史前人类抵达世界新的地区后，大型动物身上发生了一件怪事：它们突然灭绝了。",
+      "vocab": [],
+      "discourse_function": "story",
+      "prosody_focus": [
+        "When prehistoric man arrived in new parts of the world, something strange happen"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "When prehistoric man arrived in new parts of the world, something strange happened to the large animals: they suddenly became extinct.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text3/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Smaller species survived.",
+      "zh": "较小的物种却存活下来。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "Smaller species survived."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Smaller species survived.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text3/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "The large, slow-growing animals were easy game, and were quickly hunted to extinction.",
+      "zh": "大型、繁殖缓慢的动物容易成为猎物，很快便被捕杀至灭绝。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "The large, slow-growing animals were easy game, and were quickly hunted to extin"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "The large, slow-growing animals were easy game, and were quickly hunted to extinction.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text3/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 1,
+      "en": "Now something similar could be happening in the oceans.",
+      "zh": "如今，海洋里也可能正在发生类似的事情。",
+      "vocab": [],
+      "discourse_function": "compare",
+      "prosody_focus": [
+        "Now something similar could be happening in the oceans."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Now something similar could be happening in the oceans.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text3/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 1,
+      "en": "That the seas are being overfished has been known for years.",
+      "zh": "海洋正遭受过度捕捞，这一点人们早已知道。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [
+        "That the seas are being overfished has been known for years."
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "That the seas are being overfished has been known for years.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text3/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "What researchers such as Ransom Myers and Boris Worm have shown is just how fast things are changing.",
+      "zh": "兰塞姆·迈尔斯和鲍里斯·沃姆等研究者揭示的，是这种变化究竟快到了什么程度。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "What researchers such as Ransom Myers and Boris Worm have shown is just how fast"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "What researchers such as Ransom Myers and Boris Worm have shown is just how fast things are changing.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text3/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "They have looked at half a century of data from fisheries around the world.",
+      "zh": "他们研究了世界各地渔场半个世纪的数据。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "They have looked at half a century of data from fisheries around the world."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "They have looked at half a century of data from fisheries around the world.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text3/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 2,
+      "en": "Their methods do not attempt to estimate the actual biomass, the amount of living biological matter, of fish species in particular parts of the ocean, but rather changes in that biomass over time.",
+      "zh": "他们的方法并不试图估算特定海域鱼类的实际生物量，而是考察这种生物量随时间发生的变化。",
+      "vocab": [
+        {
+          "word": "biomass",
+          "lemma": "biomass",
+          "level": 7,
+          "meaning": "生物量",
+          "start": 52,
+          "end": 59
+        },
+        {
+          "word": "biomass",
+          "lemma": "biomass",
+          "level": 7,
+          "meaning": "生物量",
+          "start": 178,
+          "end": 185
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "Their methods do not attempt to estimate the actual biomass, the amount of livin"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "Their methods do not attempt to estimate the actual biomass, the amount of living biological matter, of fish species in particular parts of the ocean, but rather changes in that biomass over time.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text3/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 2,
+      "en": "According to their latest paper published in Nature, the biomass of large predators in a new fishery is reduced on average by 80% within 15 years of the start of exploitation.",
+      "zh": "根据他们最新发表于《自然》的论文，一个新渔场开始开发后的15年内，大型捕食者的生物量平均会减少80%。",
+      "vocab": [
+        {
+          "word": "biomass",
+          "lemma": "biomass",
+          "level": 7,
+          "meaning": "生物量",
+          "start": 57,
+          "end": 64
+        },
+        {
+          "word": "exploitation",
+          "lemma": "exploitation",
+          "level": 6,
+          "meaning": "开发；利用",
+          "start": 162,
+          "end": 174
+        }
+      ],
+      "discourse_function": "statistic",
+      "prosody_focus": [
+        "According to their latest paper published in Nature, the biomass of large predat"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "According to their latest paper published in Nature, the biomass of large predators in a new fishery is reduced on average by 80% within 15 years of the start of exploitation.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text3/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 2,
+      "en": "In some long-fished areas, it has halved again since then.",
+      "zh": "在一些长期捕捞地区，此后这一数值又减半。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [
+        "In some long-fished areas, it has halved again since then."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "In some long-fished areas, it has halved again since then.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text3/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 3,
+      "en": "Dr. Worm acknowledges that these figures are conservative.",
+      "zh": "沃姆博士承认，这些数字还是保守估计。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "Dr. Worm acknowledges that these figures are conservative."
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "Dr. Worm acknowledges that these figures are conservative.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text3/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 3,
+      "en": "One reason for this is that fishing technology has improved.",
+      "zh": "原因之一是捕捞技术已经进步。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "One reason for this is that fishing technology has improved."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "One reason for this is that fishing technology has improved.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text3/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 3,
+      "en": "Today’s vessels can find their prey using satellites and sonar, which were not available 50 years ago.",
+      "zh": "今天的渔船可以借助卫星和声呐寻找猎物，而五十年前并没有这些技术。",
+      "vocab": [
+        {
+          "word": "sonar",
+          "lemma": "sonar",
+          "level": 7,
+          "meaning": "声呐",
+          "start": 57,
+          "end": 62
+        }
+      ],
+      "discourse_function": "statistic",
+      "prosody_focus": [
+        "Today’s vessels can find their prey using satellites and sonar, which were not a"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "Today’s vessels can find their prey using satellites and sonar, which were not available 50 years ago.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text3/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 3,
+      "en": "That means a higher proportion of what is in the sea is being caught, so the real difference between present and past is likely to be worse than the one recorded by changes in catch sizes.",
+      "zh": "这意味着海里的鱼有更高比例会被捕获，因此今昔真实差距很可能比捕捞量变化所记录的还要严重。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "That means a higher proportion of what is in the sea is being caught, so the rea"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "That means a higher proportion of what is in the sea is being caught, so the real difference between present and past is likely to be worse than the one recorded by changes in catch sizes.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text3/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 3,
+      "en": "In the early days, too, longlines would have been more saturated with fish.",
+      "zh": "早期延绳钓的鱼钩也更容易挂满鱼。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "In the early days, too, longlines would have been more saturated with fish."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "In the early days, too, longlines would have been more saturated with fish.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text3/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 4,
+      "en": "Some individuals would therefore not have been caught, since no baited hooks would have been available to trap them, leading to an underestimate of fish stocks in the past.",
+      "zh": "因此，一些鱼会因为没有空余的带饵鱼钩而逃过捕捞，这会导致过去鱼类存量被低估。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "Some individuals would therefore not have been caught, since no baited hooks wou"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "Some individuals would therefore not have been caught, since no baited hooks would have been available to trap them, leading to an underestimate of fish stocks in the past.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text3/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 4,
+      "en": "Furthermore, in the early days of longline fishing, a lot of fish were lost to sharks after they had been hooked.",
+      "zh": "此外，早期使用延绳钓时，许多已经上钩的鱼还会被鲨鱼吃掉。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "Furthermore, in the early days of longline fishing, a lot of fish were lost to s"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "Furthermore, in the early days of longline fishing, a lot of fish were lost to sharks after they had been hooked.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text3/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 4,
+      "en": "That is no longer a problem, because there are fewer sharks around now.",
+      "zh": "如今这已不再是大问题，因为鲨鱼少了。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "That is no longer a problem, because there are fewer sharks around now."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "That is no longer a problem, because there are fewer sharks around now.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text3/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 4,
+      "en": "Dr. Myers and Dr. Worm argue that their work gives a correct baseline, which future management efforts must take into account.",
+      "zh": "迈尔斯博士和沃姆博士认为，他们的研究提供了正确的基准线，未来的管理必须把它考虑进去。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [
+        "Dr. Myers and Dr. Worm argue that their work gives a correct baseline, which fut"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "Dr. Myers and Dr. Worm argue that their work gives a correct baseline, which future management efforts must take into account.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text3/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "paragraph": 4,
+      "en": "They believe the data support an idea current among marine biologists, that of the “shifting baseline”.",
+      "zh": "他们认为，这些数据支持海洋生物学界流行的“基准线漂移”观点。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "They believe the data support an idea current among marine biologists, that of t"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s20-01",
+          "text": "They believe the data support an idea current among marine biologists, that of the “shifting baseline”.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text3/s20-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "paragraph": 5,
+      "en": "The notion is that people have failed to detect the massive changes which have happened in the ocean because they have been looking back only a relatively short time into the past.",
+      "zh": "这一观点认为，人们之所以没有察觉海洋发生的巨大变化，是因为回顾过去时只看了相对很短的一段时间。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "The notion is that people have failed to detect the massive changes which have h"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s21-01",
+          "text": "The notion is that people have failed to detect the massive changes which have happened in the ocean because they have been looking back only a relatively short time into the past.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text3/s21-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "paragraph": 5,
+      "en": "That matters because theory suggests that the maximum sustainable yield that can be cropped from a fishery comes when the biomass of a target species is about 50% of its original levels.",
+      "zh": "这很重要，因为理论表明，当目标物种的生物量约为原始水平的50%时，渔场才能获得最大可持续产量。",
+      "vocab": [
+        {
+          "word": "sustainable",
+          "lemma": "sustainable",
+          "level": 6,
+          "meaning": "可持续的",
+          "start": 54,
+          "end": 65
+        },
+        {
+          "word": "biomass",
+          "lemma": "biomass",
+          "level": 7,
+          "meaning": "生物量",
+          "start": 122,
+          "end": 129
+        }
+      ],
+      "discourse_function": "statistic",
+      "prosody_focus": [
+        "That matters because theory suggests that the maximum sustainable yield that can"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s22-01",
+          "text": "That matters because theory suggests that the maximum sustainable yield that can be cropped from a fishery comes when the biomass of a target species is about 50% of its original levels.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text3/s22-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "paragraph": 5,
+      "en": "Most fisheries are well below that, which is a bad way to do business.",
+      "zh": "而大多数渔场都远低于这个水平，这绝不是可持续经营之道。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "Most fisheries are well below that, which is a bad way to do business."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s23-01",
+          "text": "Most fisheries are well below that, which is a bad way to do business.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2006/c-text3/s23-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

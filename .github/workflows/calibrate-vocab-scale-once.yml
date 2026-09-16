@@ -1,0 +1,87 @@
+name: Calibrate vocabulary scale once
+
+on:
+  push:
+    branches: [c-v4-article-preview-actual]
+    paths:
+      - '.github/workflows/calibrate-vocab-scale-once.yml'
+
+jobs:
+  calibrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download ECDICT
+        run: |
+          curl -L --retry 3 --fail -o /tmp/ecdict.csv https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv
+          ls -lh /tmp/ecdict.csv
+      - name: Calibrate shipped vocabulary against ECDICT
+        run: |
+          python - <<'PY'
+          import csv, json, re, statistics, sys
+          from collections import Counter, defaultdict
+          from pathlib import Path
+          sys.path.insert(0,'content-pipeline')
+          from build_curated_year import load_curated_source
+
+          root=Path('.')
+          old={}
+          for y in range(2002,2007):
+              src=load_curated_source(root/'content-pipeline/curated',y)
+              old.update({w.lower():(y,entry) for w,entry in (src.get('vocabulary') or {}).items()})
+
+          wanted=set(old)
+          rows={}
+          with open('/tmp/ecdict.csv',encoding='utf-8',newline='') as f:
+              for r in csv.DictReader(f):
+                  w=(r.get('word') or '').lower()
+                  if w in wanted:
+                      rows[w]=r
+          print('old vocab unique=',len(old),'ecdict matched=',len(rows),'coverage=',round(len(rows)/max(1,len(old)),4))
+
+          def intval(v):
+              try: return int(v or 0)
+              except: return 0
+          for level in range(1,10):
+              words=[w for w,(y,e) in old.items() if int(e[0])==level]
+              rs=[rows[w] for w in words if w in rows]
+              if not words: continue
+              bncs=[intval(r.get('bnc')) for r in rs if intval(r.get('bnc'))>0]
+              frqs=[intval(r.get('frq')) for r in rs if intval(r.get('frq'))>0]
+              tags=Counter(t for r in rs for t in (r.get('tag') or '').split())
+              coll=Counter(intval(r.get('collins')) for r in rs)
+              ox=sum(1 for r in rs if str(r.get('oxford') or '') not in ('','0'))
+              print('LEVEL',level,'n=',len(words),'matched=',len(rs),
+                    'bnc_med=',statistics.median(bncs) if bncs else None,
+                    'frq_med=',statistics.median(frqs) if frqs else None,
+                    'oxford=',ox,'tags=',dict(tags),'collins=',dict(coll))
+
+          print('=== SAMPLE BY LEVEL ===')
+          for level in range(6,10):
+              words=sorted([w for w,(y,e) in old.items() if int(e[0])==level])[:80]
+              print('L',level,words)
+
+          print('=== 2007-2012 token coverage in ECDICT ===')
+          token_re=re.compile(r"[A-Za-z]+(?:[-'][A-Za-z]+)*")
+          # second pass only for observed surface words; keep base dictionary records in memory
+          observed_by_year={}
+          observed=set()
+          for y in range(2007,2013):
+              s=set()
+              for unit in ('cloze','text1','text2','text3','text4','partb','translation'):
+                  d=json.loads((root/f'reports/content-freeze/{y}/{unit}.candidate.json').read_text(encoding='utf-8'))
+                  for row in d['article']['rows']:
+                      s.update(x.lower() for x in token_re.findall(row[1].replace('|','')))
+              observed_by_year[y]=s; observed |= s
+          hit={}
+          with open('/tmp/ecdict.csv',encoding='utf-8',newline='') as f:
+              for r in csv.DictReader(f):
+                  w=(r.get('word') or '').lower()
+                  if w in observed: hit[w]=r
+          for y,s in observed_by_year.items():
+              print(y,'surface_unique=',len(s),'direct_ecdict=',sum(1 for w in s if w in hit))
+          PY

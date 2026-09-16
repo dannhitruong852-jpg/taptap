@@ -1,0 +1,940 @@
+{
+  "year": 2003,
+  "section_type": "reading",
+  "article_id": "text2",
+  "source_sha256": "77149d8faa8b6d539e2e8a6bf6a1f2801af640e7a49f248f059e5483cbe22443",
+  "source_pages": [
+    5,
+    6
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "02",
+  "article_context": "一篇立场鲜明的科学公共沟通文章。专业、克制，但作者明显主张科研界主动回应动物权利论述；案例与反问要让逻辑清楚，不能把观点冲突演成愤怒。",
+  "article": {
+    "year": 2003,
+    "section": "text2",
+    "title": "阅读二 · 动物权利与生物医学研究",
+    "background": "一篇立场鲜明的科学公共沟通文章。专业、克制，但作者明显主张科研界主动回应动物权利论述；案例与反问要让逻辑清楚，不能把观点冲突演成愤怒。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "To paraphrase 18th-century statesman Edmund Burke, “all that is needed for the triumph of a misguided cause is that good people do nothing.”",
+      "zh": "借用18世纪政治家埃德蒙·伯克的话来说：“一个被误导的事业要取得胜利，只需要好人袖手旁观。”",
+      "vocab": [],
+      "discourse_function": "explain_quote",
+      "prosody_focus": [
+        "paraphrase",
+        "triumph",
+        "do nothing"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "To paraphrase 18th-century statesman Edmund Burke,",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 95,
+          "audio_path": "./audio/2003/c-text2/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s01-02",
+          "text": " “all that is needed for the triumph of a misguided cause is that good people do nothing.”",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text2/s01-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "One such cause now seeks to end biomedical research because of the theory that animals have rights ruling out their use in research.",
+      "zh": "如今就有这样一种主张：它以动物拥有权利、因而不应被用于研究为理论依据，试图终止生物医学研究。",
+      "vocab": [
+        {
+          "word": "biomedical",
+          "lemma": "biomedical",
+          "level": 7,
+          "meaning": "生物医学的",
+          "start": 32,
+          "end": 42
+        }
+      ],
+      "discourse_function": "warning",
+      "prosody_focus": [
+        "end biomedical research",
+        "animals have rights"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "One such cause now seeks to end biomedical research because of the theory that animals have rights ruling out their use in research.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text2/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "Scientists need to respond forcefully to animal-rights advocates, whose arguments are confusing the public and thereby threatening advances in health knowledge and care.",
+      "zh": "科学家需要有力回应动物权利倡导者，因为后者的论点正在使公众困惑，并由此威胁医学知识与医疗服务的进步。",
+      "vocab": [
+        {
+          "word": "advocates",
+          "lemma": "advocate",
+          "level": 6,
+          "meaning": "倡导者",
+          "start": 55,
+          "end": 64
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "respond forcefully",
+        "confusing the public",
+        "threatening advances"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Scientists need to respond forcefully to animal-rights advocates,",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 90,
+          "audio_path": "./audio/2003/c-text2/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s03-02",
+          "text": " whose arguments are confusing the public and thereby threatening advances in health knowledge and care.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text2/s03-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "Leaders of the animal-rights movement target biomedical research because it depends on public funding, and few people understand the process of health-care research.",
+      "zh": "动物权利运动的领导者把矛头对准生物医学研究，是因为这类研究依赖公共资金，而且很少有人真正理解医疗研究的过程。",
+      "vocab": [
+        {
+          "word": "biomedical",
+          "lemma": "biomedical",
+          "level": 7,
+          "meaning": "生物医学的",
+          "start": 45,
+          "end": 55
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "public funding",
+        "few people understand"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Leaders of the animal-rights movement target biomedical research because it depends on public funding,",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2003/c-text2/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s04-02",
+          "text": " and few people understand the process of health-care research.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text2/s04-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "Hearing allegations of cruelty to animals in research settings, many are perplexed that anyone would deliberately harm an animal.",
+      "zh": "听到有关研究中虐待动物的指控，许多人都会困惑：怎么会有人故意伤害动物？",
+      "vocab": [
+        {
+          "word": "allegations",
+          "lemma": "allegation",
+          "level": 7,
+          "meaning": "指控",
+          "start": 8,
+          "end": 19
+        },
+        {
+          "word": "perplexed",
+          "lemma": "perplexed",
+          "level": 7,
+          "meaning": "困惑的",
+          "start": 73,
+          "end": 82
+        },
+        {
+          "word": "deliberately",
+          "lemma": "deliberately",
+          "level": 6,
+          "meaning": "故意地",
+          "start": 101,
+          "end": 113
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "allegations of cruelty",
+        "perplexed",
+        "deliberately harm"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Hearing allegations of cruelty to animals in research settings,",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2003/c-text2/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s05-02",
+          "text": " many are perplexed that anyone would deliberately harm an animal.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text2/s05-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 3,
+      "en": "For example, a grandmotherly woman staffing an animal-rights booth at a recent street fair was distributing a brochure that encouraged readers not to use anything that comes from or is tested in animals — no meat, no fur, no medicines.",
+      "zh": "例如，最近一次街头集会上，一位慈祥如祖母般的女士在动物权利宣传摊位值守，向路人散发小册子，劝人不要使用任何来自动物或经动物试验的东西——不要肉、不要皮毛，也不要药品。",
+      "vocab": [],
+      "discourse_function": "example",
+      "prosody_focus": [
+        "grandmotherly woman",
+        "no meat, no fur, no medicines"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "For example, a grandmotherly woman staffing an animal-rights booth at a recent street fair was distributing a brochure",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2003/c-text2/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s06-02",
+          "text": " that encouraged readers not to use anything that comes from or is tested in animals — no meat, no fur, no medicines.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text2/s06-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 3,
+      "en": "Asked if she opposed immunizations, she wanted to know if vaccines come from animal research.",
+      "zh": "有人问她是否反对免疫接种，她反问疫苗是不是来自动物研究。",
+      "vocab": [
+        {
+          "word": "immunizations",
+          "lemma": "immunization",
+          "level": 8,
+          "meaning": "免疫接种",
+          "start": 21,
+          "end": 34
+        }
+      ],
+      "discourse_function": "dialogue",
+      "prosody_focus": [
+        "opposed immunizations",
+        "vaccines"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "Asked if she opposed immunizations,",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 85,
+          "audio_path": "./audio/2003/c-text2/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s07-02",
+          "text": " she wanted to know if vaccines come from animal research.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text2/s07-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 3,
+      "en": "When assured that they do, she replied, “Then I would have to say yes.”",
+      "zh": "得知确实如此后，她回答：“那我就只能说，是的，我反对。”",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [
+        "have to say yes"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "When assured that they do, she replied, “Then I would have to say yes.”",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text2/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 3,
+      "en": "Asked what will happen when epidemics return, she said, “Don’t worry, scientists will find some way of using computers.”",
+      "zh": "又有人问，如果传染病卷土重来怎么办，她说：“别担心，科学家总会找到用电脑解决的办法。”",
+      "vocab": [
+        {
+          "word": "epidemics",
+          "lemma": "epidemic",
+          "level": 7,
+          "meaning": "流行病",
+          "start": 28,
+          "end": 37
+        }
+      ],
+      "discourse_function": "dialogue",
+      "prosody_focus": [
+        "epidemics return",
+        "Don’t worry"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "Asked what will happen when epidemics return,",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 85,
+          "audio_path": "./audio/2003/c-text2/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s09-02",
+          "text": " she said, “Don’t worry, scientists will find some way of using computers.”",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text2/s09-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 3,
+      "en": "Such well-meaning people just don’t understand.",
+      "zh": "这类善意的人，只是并不了解其中的事实。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "well-meaning",
+        "don’t understand"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "Such well-meaning people just don’t understand.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text2/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 4,
+      "en": "Scientists must communicate their message to the public in a compassionate, understandable way — in human terms, not in the language of molecular biology.",
+      "zh": "科学家必须用富有同理心、公众听得懂的方式传递信息——用人的语言，而不是分子生物学的术语。",
+      "vocab": [
+        {
+          "word": "compassionate",
+          "lemma": "compassionate",
+          "level": 7,
+          "meaning": "富有同情心的",
+          "start": 61,
+          "end": 74
+        },
+        {
+          "word": "molecular",
+          "lemma": "molecular",
+          "level": 7,
+          "meaning": "分子的",
+          "start": 136,
+          "end": 145
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "compassionate",
+        "understandable",
+        "human terms"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "Scientists must communicate their message to the public in a compassionate, understandable way —",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 90,
+          "audio_path": "./audio/2003/c-text2/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s11-02",
+          "text": " in human terms, not in the language of molecular biology.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text2/s11-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 4,
+      "en": "We need to make clear the connection between animal research and a grandmother’s hip replacement, a father’s bypass operation, a baby’s vaccinations, and even a pet’s shots.",
+      "zh": "我们需要把动物研究与现实医疗之间的联系讲清楚：祖母的髋关节置换、父亲的心脏搭桥、婴儿的疫苗，甚至宠物的注射，都与它有关。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "connection",
+        "hip replacement",
+        "bypass operation",
+        "vaccinations"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "We need to make clear the connection between animal research and a grandmother’s hip replacement, a father’s bypass operation, a baby’s vaccinations, and even a pet’s shots.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text2/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 4,
+      "en": "To those who are unaware that animal research was needed to produce these treatments, as well as new treatments and vaccines, animal research seems wasteful at best and cruel at worst.",
+      "zh": "对于不知道这些治疗手段以及新的疗法和疫苗都离不开动物研究的人来说，动物研究往好里说像是浪费，往坏里说则显得残酷。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "unaware",
+        "wasteful at best",
+        "cruel at worst"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "To those who are unaware that animal research was needed to produce these treatments, as well as new treatments and vaccines,",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2003/c-text2/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s13-02",
+          "text": " animal research seems wasteful at best and cruel at worst.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text2/s13-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 5,
+      "en": "Much can be done.",
+      "zh": "可以做的事情其实很多。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [
+        "Much"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "Much can be done.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text2/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 5,
+      "en": "Scientists could “adopt” middle-school classes and present their own research.",
+      "zh": "科学家可以与中学班级建立长期联系，亲自向学生介绍自己的研究。",
+      "vocab": [],
+      "discourse_function": "example",
+      "prosody_focus": [
+        "adopt",
+        "present their own research"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "Scientists could “adopt” middle-school classes and present their own research.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text2/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 5,
+      "en": "They should be quick to respond to letters to the editor, lest animal-rights misinformation go unchallenged and acquire a deceptive appearance of truth.",
+      "zh": "他们还应迅速回应报刊读者来信，以免有关动物权利的错误信息无人反驳，久而久之披上一层貌似真实的外衣。",
+      "vocab": [
+        {
+          "word": "misinformation",
+          "lemma": "misinformation",
+          "level": 7,
+          "meaning": "错误信息",
+          "start": 77,
+          "end": 91
+        },
+        {
+          "word": "acquire",
+          "lemma": "acquire",
+          "level": 6,
+          "meaning": "收购；获得",
+          "start": 112,
+          "end": 119
+        },
+        {
+          "word": "deceptive",
+          "lemma": "deceptive",
+          "level": 7,
+          "meaning": "具有欺骗性的",
+          "start": 122,
+          "end": 131
+        }
+      ],
+      "discourse_function": "warning",
+      "prosody_focus": [
+        "respond",
+        "misinformation",
+        "deceptive appearance of truth"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "They should be quick to respond to letters to the editor,",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 105,
+          "audio_path": "./audio/2003/c-text2/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s16-02",
+          "text": " lest animal-rights misinformation go unchallenged and acquire a deceptive appearance of truth.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text2/s16-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 5,
+      "en": "Research institutions could be opened to tours, to show that laboratory animals receive humane care.",
+      "zh": "科研机构也可以向公众开放参观，让人们看到实验动物得到的是人道照护。",
+      "vocab": [
+        {
+          "word": "humane",
+          "lemma": "humane",
+          "level": 6,
+          "meaning": "人道的",
+          "start": 88,
+          "end": 94
+        }
+      ],
+      "discourse_function": "example",
+      "prosody_focus": [
+        "opened to tours",
+        "humane care"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "Research institutions could be opened to tours,",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2003/c-text2/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s17-02",
+          "text": " to show that laboratory animals receive humane care.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text2/s17-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 6,
+      "en": "Finally, because the ultimate stakeholders are patients, the health-research community should actively recruit to its cause not only well-known personalities such as Stephen Cooper, who has made courageous statements about the value of animal research, but all who receive medical treatment.",
+      "zh": "最后，既然最终的利益相关者是患者，医学研究界就应主动争取支持：不仅要争取像斯蒂芬·库珀这样敢于公开肯定动物研究价值的知名人士，也要争取所有接受医疗的人。",
+      "vocab": [
+        {
+          "word": "stakeholders",
+          "lemma": "stakeholder",
+          "level": 7,
+          "meaning": "利益相关者",
+          "start": 30,
+          "end": 42
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "ultimate stakeholders",
+        "actively recruit",
+        "all who receive medical treatment"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "Finally, because the ultimate stakeholders are patients,",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 95,
+          "audio_path": "./audio/2003/c-text2/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s18-02",
+          "text": " the health-research community should actively recruit to its cause not only well-known personalities such as Stephen Cooper, who has made courageous statements about the value of animal research, but all who receive medical treatment.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text2/s18-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 6,
+      "en": "If good people do nothing, there is a real possibility that an uninformed citizenry will extinguish the precious embers of medical progress.",
+      "zh": "如果好人无所作为，那么一个不了解事实的公众群体确有可能熄灭医学进步珍贵的火种。",
+      "vocab": [
+        {
+          "word": "citizenry",
+          "lemma": "citizenry",
+          "level": 8,
+          "meaning": "全体公民",
+          "start": 74,
+          "end": 83
+        },
+        {
+          "word": "extinguish",
+          "lemma": "extinguish",
+          "level": 8,
+          "meaning": "扑灭；使消失",
+          "start": 89,
+          "end": 99
+        },
+        {
+          "word": "embers",
+          "lemma": "ember",
+          "level": 8,
+          "meaning": "余烬",
+          "start": 113,
+          "end": 119
+        }
+      ],
+      "discourse_function": "warning",
+      "prosody_focus": [
+        "do nothing",
+        "uninformed citizenry",
+        "extinguish",
+        "medical progress"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "If good people do nothing,",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 105,
+          "audio_path": "./audio/2003/c-text2/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s19-02",
+          "text": " there is a real possibility that an uninformed citizenry will extinguish the precious embers of medical progress.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text2/s19-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

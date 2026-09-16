@@ -1,0 +1,384 @@
+{
+  "year": 2010,
+  "section_type": "translation",
+  "article_id": "translation",
+  "source_sha256": "55d401ca0ba03ceedaf32e9387eb0c07fbf354c467ff6eef0dc6a936c288ff6e",
+  "source_pages": [
+    13
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "07",
+  "article_context": "英语二整段翻译。文章借 Ted Ning 的职业挫折解释‘可持续性’为何成为个人价值选择，不使用46-50五句式结构，而按原卷整段切句对齐。语气真诚、克制，个人经历和价值转折处有自然重音。",
+  "article": {
+    "year": 2010,
+    "section": "translation",
+    "title": "翻译 · 可持续价值如何落实到日常选择",
+    "background": "英语二整段翻译。文章借 Ted Ning 的职业挫折解释‘可持续性’为何成为个人价值选择，不使用46-50五句式结构，而按原卷整段切句对齐。语气真诚、克制，个人经历和价值转折处有自然重音。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "‘Sustainability’ has become a popular word these days, but to Ted Ning, the concept will always have personal meaning.",
+      "zh": "如今，“可持续性”已经成了一个流行词，但对特德·宁而言，这个概念始终带有切身的个人意义。",
+      "vocab": [
+        {
+          "word": "Sustainability",
+          "lemma": "sustainability",
+          "level": 8,
+          "meaning": "持续性；能维持性",
+          "start": 1,
+          "end": 15
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "popular word",
+        "personal meaning"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "‘Sustainability’ has become a popular word these days, but to Ted Ning, the concept will always have personal meaning.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-translation/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Having endured a painful period of unsustainability in his own life made it clear to him that sustainability-oriented values must be expressed through everyday action and choice.",
+      "zh": "亲身经历过一段痛苦的、不可持续的生活后，他清楚地认识到，以可持续性为导向的价值观必须落实到日常的行动和选择中。",
+      "vocab": [
+        {
+          "word": "endured",
+          "lemma": "endure",
+          "level": 6,
+          "meaning": "t. 忍受；忍耐",
+          "start": 7,
+          "end": 14
+        },
+        {
+          "word": "unsustainability",
+          "lemma": "unsustainability",
+          "level": 9,
+          "meaning": "不可持续性",
+          "start": 35,
+          "end": 51
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "painful period of unsustainability",
+        "everyday action and choice"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Having endured a painful period of unsustainability in his own life made it clear to him that sustainability-oriented values must be expressed through everyday action and choice.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-translation/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 2,
+      "en": "Ning recalls spending a confusing year in the late 1990s selling insurance.",
+      "zh": "宁回忆说，20世纪90年代末，他曾有一年时间在迷茫中从事保险销售。",
+      "vocab": [],
+      "discourse_function": "story",
+      "prosody_focus": [
+        "confusing year",
+        "selling insurance"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Ning recalls spending a confusing year in the late 1990s selling insurance.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-translation/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "He'd been through the dot-com boom and burst and, desperate for a job, signed on with a Boulder agency.",
+      "zh": "他经历了互联网泡沫的兴起与破裂，急于找到一份工作的他随后加入了博尔德的一家机构。",
+      "vocab": [
+        {
+          "word": "Boulder",
+          "lemma": "boulder",
+          "level": 7,
+          "meaning": "大圆石",
+          "start": 88,
+          "end": 95
+        }
+      ],
+      "discourse_function": "story",
+      "prosody_focus": [
+        "dot-com boom and burst",
+        "desperate for a job"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "He'd been through the dot-com boom and burst and, desperate for a job, signed on with a Boulder agency.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-translation/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 3,
+      "en": "It didn't go well.",
+      "zh": "事情进展得并不顺利。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "didn't go well"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "It didn't go well.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-translation/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 3,
+      "en": "‘It was a really bad move because that's not my passion,’ says Ning, whose dilemma about the job translated, predictably, into a lack of sales.",
+      "zh": "宁说：“那真是一个糟糕的选择，因为那并不是我真正热爱的事情。”可以预见，他对这份工作的矛盾与挣扎最终也反映在了低迷的销售业绩上。",
+      "vocab": [
+        {
+          "word": "dilemma",
+          "lemma": "dilemma",
+          "level": 6,
+          "meaning": "困境；(进退两难的)窘境",
+          "start": 75,
+          "end": 82
+        },
+        {
+          "word": "predictably",
+          "lemma": "predictably",
+          "level": 7,
+          "meaning": "可预言地",
+          "start": 109,
+          "end": 120
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "really bad move",
+        "not my passion",
+        "lack of sales"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "‘It was a really bad move because that's not my passion,’ says Ning, whose dilemma about the job translated, predictably, into a lack of sales.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-translation/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 3,
+      "en": "‘I was miserable.",
+      "zh": "“我当时非常痛苦。",
+      "vocab": [
+        {
+          "word": "miserable",
+          "lemma": "miserable",
+          "level": 6,
+          "meaning": "a. 悲惨的；痛苦的",
+          "start": 7,
+          "end": 16
+        }
+      ],
+      "discourse_function": "dialogue",
+      "prosody_focus": [
+        "miserable"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "‘I was miserable.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-translation/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 3,
+      "en": "I had so much anxiety that I would wake up in the middle of the night and stare at the ceiling.",
+      "zh": "我焦虑得厉害，常常半夜醒来，盯着天花板发呆。",
+      "vocab": [],
+      "discourse_function": "story",
+      "prosody_focus": [
+        "so much anxiety",
+        "middle of the night"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "I had so much anxiety that I would wake up in the middle of the night and stare at the ceiling.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-translation/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 3,
+      "en": "I had no money and needed the job.",
+      "zh": "我没有钱，又需要这份工作。",
+      "vocab": [],
+      "discourse_function": "story",
+      "prosody_focus": [
+        "no money",
+        "needed the job"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "I had no money and needed the job.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-translation/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 3,
+      "en": "Everyone said, ‘Just wait, you'll turn the corner, give it some time.’’",
+      "zh": "所有人都对我说：‘再等等吧，情况会好转的，给它一点时间。’”",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [
+        "Just wait",
+        "turn the corner",
+        "give it some time"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "Everyone said, ‘Just wait, you'll turn the corner, give it some time.’’",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-translation/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}
