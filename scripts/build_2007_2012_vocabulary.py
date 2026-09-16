@@ -31,7 +31,7 @@ TAGS = ('gk', 'cet4', 'cet6', 'ky', 'toefl', 'ielts', 'gre')
 DEFAULT_THRESHOLD = 0.75
 
 POS_PREFIX_RE = re.compile(
-    r"^(?:(?:n|v|vt|vi|adj|adv|prep|pron|conj|num|art|aux|int|abbr|phr)\.?\s*)+",
+    r"^(?:(?:n|v|vt|vi|adj|adv|prep|pron|conj|num|art|aux|int|abbr|phr|pl)\.?\s*)+",
     re.IGNORECASE,
 )
 
@@ -41,6 +41,14 @@ def _int(value) -> int:
         return int(value or 0)
     except (TypeError, ValueError):
         return 0
+
+
+def exchange_lemma(record: dict) -> str | None:
+    for item in (record.get('exchange') or '').split('/'):
+        key, sep, value = item.partition(':')
+        if sep and key == '0' and value.strip():
+            return value.strip().lower()
+    return None
 
 
 def feature_vector(word: str, record: dict) -> list[float]:
@@ -86,7 +94,8 @@ def assign_level(record: dict) -> int:
 
 def clean_translation(raw: str) -> str:
     """Return a compact Chinese gloss suitable for the reader vocabulary popover."""
-    for line in (raw or '').splitlines():
+    raw = (raw or '').replace('\\n', '\n')
+    for line in raw.splitlines():
         value = line.strip()
         if not value:
             continue
@@ -94,13 +103,19 @@ def clean_translation(raw: str) -> str:
         value = re.sub(r'\s+', ' ', value)
         if not value:
             continue
-        # A single ECDICT line can become very long. Keep the first compact semantic group,
-        # matching the concise style of the already-shipped 2002-2006 lexicons.
-        groups = [part.strip() for part in re.split(r'[；;]', value) if part.strip()]
+        groups = [part.strip() for part in re.split(r'[；;，,]', value) if part.strip()]
         if groups:
             return '；'.join(groups[:2])
         return value
     return ''
+
+
+def canonical_record(word: str, records: dict[str, dict]) -> tuple[str, dict]:
+    surface_record = records[word]
+    lemma = exchange_lemma(surface_record)
+    if lemma and lemma in records:
+        return lemma, records[lemma]
+    return word, surface_record
 
 
 def build_document(
@@ -109,22 +124,31 @@ def build_document(
     records: dict[str, dict],
     threshold: float = DEFAULT_THRESHOLD,
 ) -> dict:
-    vocabulary = {}
+    grouped: dict[str, dict] = {}
     for surface in sorted(surfaces):
         word = surface.lower()
-        record = records.get(word)
-        if not record or len(word) < 4:
+        if word not in records or len(word) < 4:
             continue
-        probability = selection_probability(word, record)
+        lemma, record = canonical_record(word, records)
+        if len(lemma) < 4:
+            continue
+        probability = selection_probability(lemma, record)
         if probability < threshold:
             continue
         meaning = clean_translation(record.get('translation') or '')
         if not meaning:
             continue
         level = assign_level(record)
-        if level < 6 or level > 9:
+        if not 6 <= level <= 9:
             continue
-        vocabulary[word] = [level, meaning]
+        item = grouped.setdefault(lemma, {'level': level, 'meaning': meaning, 'variants': set()})
+        if word != lemma:
+            item['variants'].add(word)
+
+    vocabulary = {}
+    for lemma in sorted(grouped):
+        item = grouped[lemma]
+        vocabulary[lemma] = [item['level'], item['meaning'], *sorted(item['variants'])]
 
     return {
         'year': int(year),
@@ -134,6 +158,7 @@ def build_document(
             'review_method': 'calibrated_against_shipped_2002_2006',
             'selector_threshold': threshold,
             'dictionary_source': 'ECDICT offline snapshot',
+            'lemmatization': 'ECDICT exchange 0:lemma when available',
             'human_review_claimed': False,
         },
         'vocabulary': vocabulary,
@@ -152,12 +177,24 @@ def collect_surfaces(root: Path, year: int) -> set[str]:
 
 
 def load_records(ecdict: Path, wanted: set[str]) -> dict[str, dict]:
+    """Load corpus surfaces and, in a second pass, any lemmas they point to."""
     records: dict[str, dict] = {}
+    lemmas: set[str] = set()
     with ecdict.open(encoding='utf-8', newline='') as handle:
         for row in csv.DictReader(handle):
             word = (row.get('word') or '').lower()
             if word in wanted:
                 records[word] = row
+                lemma = exchange_lemma(row)
+                if lemma:
+                    lemmas.add(lemma)
+    missing_lemmas = lemmas - records.keys()
+    if missing_lemmas:
+        with ecdict.open(encoding='utf-8', newline='') as handle:
+            for row in csv.DictReader(handle):
+                word = (row.get('word') or '').lower()
+                if word in missing_lemmas:
+                    records[word] = row
     return records
 
 
@@ -168,7 +205,6 @@ def build_all(root: Path, ecdict: Path, output_dir: Path, threshold: float) -> l
     written = []
     for year in YEARS:
         document = build_document(year, surfaces_by_year[year], records, threshold)
-        output_dir.mkdir(parents=True, exist_ok=True)
         target = output_dir / str(year) / 'vocabulary-1-9.json'
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(json.dumps(document, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
@@ -181,6 +217,7 @@ def build_all(root: Path, ecdict: Path, output_dir: Path, threshold: float) -> l
             'surface_words': len(surfaces_by_year[year]),
             'dictionary_matches': sum(1 for word in surfaces_by_year[year] if word in records),
             'selected': len(document['vocabulary']),
+            'variants': sum(max(0, len(entry) - 2) for entry in document['vocabulary'].values()),
             'levels': levels,
             'output': str(target),
         }, ensure_ascii=False))
