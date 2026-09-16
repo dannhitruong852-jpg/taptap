@@ -10,7 +10,7 @@ class WorkflowContractTests(unittest.TestCase):
         text = WORKFLOW.read_text()
         for token in [
             'batch_manifest:', 'prepare:', 'canary:', 'validate:', 'freeze:',
-            'render:', 'merge:', 'release_guard:', 'publish:',
+            'render:', 'merge:', 'release_guard:', 'publish:', 'verify_pages:',
         ]:
             self.assertIn(token, text)
         self.assertIn('needs: [prepare, freeze, voicepack]', text)
@@ -20,6 +20,8 @@ class WorkflowContractTests(unittest.TestCase):
         self.assertIn('production_v2.cli_release_guard', text)
         self.assertIn('production_v2.cli_freeze', text)
         self.assertIn('production_v2.cli_matrix', text)
+        self.assertIn('pages build and deployment', text)
+        self.assertIn("data['state']='published'", text)
 
 
 if __name__ == '__main__':
