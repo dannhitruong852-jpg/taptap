@@ -27,12 +27,16 @@ def candidate(actor='02', discourse=('example','contrast','conclude'), scope=Tru
         'year':2013,
         'article':{'id':'text1','actor':actor,'rows':rows},
         'qa':{
+            'review_schema_version':'c-mode-v2-1',
             'source_scope_verified':scope,
+            'scope_exclusions_reviewed':True,
+            'text_fidelity_reviewed':True,
+            'translation_alignment_reviewed':True,
+            'sentence_alignment_reviewed':True,
             'question_stems_removed':True,
             'options_removed':True,
             'ocr_corrections_reviewed':True,
             'negation_and_comparison_reviewed':True,
-            'sentence_alignment_reviewed':True,
             'sentence_count':len(rows),
         },
     }
@@ -77,6 +81,24 @@ class ContentQualityTests(unittest.TestCase):
             report=validate_content_quality(batch,catalog,Path(td))
             self.assertFalse(report['ok'])
             self.assertTrue(any('source_scope_verified' in e for e in report['errors']))
+
+    def test_future_batches_require_v2_review_schema(self):
+        with tempfile.TemporaryDirectory() as td:
+            cand=candidate()
+            cand['qa'].pop('review_schema_version')
+            batch,catalog=self._write(td,cand=cand)
+            report=validate_content_quality(batch,catalog,Path(td))
+            self.assertFalse(report['ok'])
+            self.assertTrue(any('review_schema_version' in e for e in report['errors']))
+
+    def test_future_batches_require_normalized_review_evidence(self):
+        with tempfile.TemporaryDirectory() as td:
+            cand=candidate()
+            cand['qa']['text_fidelity_reviewed']=False
+            batch,catalog=self._write(td,cand=cand)
+            report=validate_content_quality(batch,catalog,Path(td))
+            self.assertFalse(report['ok'])
+            self.assertTrue(any('text_fidelity_reviewed' in e for e in report['errors']))
 
     def test_candidate_and_compiled_text_must_match_exactly(self):
         with tempfile.TemporaryDirectory() as td:
