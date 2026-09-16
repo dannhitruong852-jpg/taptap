@@ -1,0 +1,173 @@
+name: Restore 2003-2006 alongside 2007-2012 once
+
+on:
+  push:
+    branches:
+      - c-v4-article-preview-actual
+    paths:
+      - .github/workflows/restore-2003-2006-and-republish-once.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: kaoyan-c-restore-2003-2012
+  cancel-in-progress: false
+
+jobs:
+  restore-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout current combined branch
+        uses: actions/checkout@v4
+        with:
+          ref: c-v4-article-preview-actual
+          fetch-depth: 0
+
+      - name: Checkout last known good 2003-2006 release
+        uses: actions/checkout@v4
+        with:
+          ref: b1407cc73f3f8c81bb08697b18dab256c0a2a2a1
+          path: old-2003-2006-release
+          fetch-depth: 1
+
+      - name: Prove source releases before mutation
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          current = json.loads(Path('kaoyan-reader-v1/content/catalog.json').read_text())
+          old = json.loads(Path('old-2003-2006-release/kaoyan-reader-v1/content/catalog.json').read_text())
+          assert current['years'] == [2002, 2007, 2008, 2009, 2010, 2011, 2012], current['years']
+          assert old['years'] == [2002, 2003, 2004, 2005, 2006], old['years']
+          for year in range(2003, 2007):
+              assert any(a['year'] == year for a in old['articles']), year
+          for year in range(2007, 2013):
+              assert any(a['year'] == year for a in current['articles']), year
+          print('source catalogs prove the two releases are complementary')
+          PY
+
+      - name: Restore exact 2003-2006 published assets
+        run: |
+          for year in 2003 2004 2005 2006; do
+            rm -rf "kaoyan-reader-v1/content/$year" "kaoyan-reader-v1/audio/$year"
+            cp -a "old-2003-2006-release/kaoyan-reader-v1/content/$year" "kaoyan-reader-v1/content/$year"
+            cp -a "old-2003-2006-release/kaoyan-reader-v1/audio/$year" "kaoyan-reader-v1/audio/$year"
+
+            if [ -f "old-2003-2006-release/kaoyan-reader-v1/reports/c-v4-$year-merge.json" ]; then
+              mkdir -p kaoyan-reader-v1/reports
+              cp "old-2003-2006-release/kaoyan-reader-v1/reports/c-v4-$year-merge.json" "kaoyan-reader-v1/reports/c-v4-$year-merge.json"
+            fi
+            if [ -f "old-2003-2006-release/reports/bilingual-highlights/$year.json" ]; then
+              mkdir -p reports/bilingual-highlights
+              cp "old-2003-2006-release/reports/bilingual-highlights/$year.json" "reports/bilingual-highlights/$year.json"
+            fi
+            if [ -f "old-2003-2006-release/content-pipeline/curated/$year.json" ]; then
+              mkdir -p content-pipeline/curated
+              cp "old-2003-2006-release/content-pipeline/curated/$year.json" "content-pipeline/curated/$year.json"
+            fi
+            if [ -f "old-2003-2006-release/content-pipeline/curated/bilingual-highlights/$year.json" ]; then
+              mkdir -p content-pipeline/curated/bilingual-highlights
+              cp "old-2003-2006-release/content-pipeline/curated/bilingual-highlights/$year.json" "content-pipeline/curated/bilingual-highlights/$year.json"
+            fi
+            if [ -f "old-2003-2006-release/content-pipeline/direction/$year.json" ]; then
+              mkdir -p content-pipeline/direction
+              cp "old-2003-2006-release/content-pipeline/direction/$year.json" "content-pipeline/direction/$year.json"
+            fi
+            if [ -f "old-2003-2006-release/content-pipeline/voice_profiles/$year.json" ]; then
+              mkdir -p content-pipeline/voice_profiles
+              cp "old-2003-2006-release/content-pipeline/voice_profiles/$year.json" "content-pipeline/voice_profiles/$year.json"
+            fi
+          done
+
+      - name: Merge production catalogs without dropping either release
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          target = Path('kaoyan-reader-v1/content/catalog.json')
+          current = json.loads(target.read_text())
+          old = json.loads(Path('old-2003-2006-release/kaoyan-reader-v1/content/catalog.json').read_text())
+
+          old_by_year = {year: [a for a in old['articles'] if a['year'] == year] for year in range(2003, 2007)}
+          current_by_year = {year: [a for a in current['articles'] if a['year'] == year] for year in [2002, *range(2007, 2013)]}
+
+          articles = []
+          for year in range(2002, 2013):
+              rows = old_by_year[year] if 2003 <= year <= 2006 else current_by_year[year]
+              articles.extend(rows)
+
+          merged = dict(current)
+          merged['years'] = list(range(2002, 2013))
+          merged['articles'] = articles
+          target.write_text(json.dumps(merged, ensure_ascii=False, indent=2) + '\n')
+          print('merged catalog years:', merged['years'])
+          PY
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Validate the full 2002-2012 production tree
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path('kaoyan-reader-v1')
+          catalog = json.loads((root / 'content/catalog.json').read_text())
+          expected_counts = {
+              2002: 6,
+              2003: 6,
+              2004: 6,
+              2005: 7,
+              2006: 7,
+              2007: 7,
+              2008: 7,
+              2009: 7,
+              2010: 7,
+              2011: 7,
+              2012: 7,
+          }
+          assert catalog['years'] == list(range(2002, 2013)), catalog['years']
+          assert len(catalog['articles']) == sum(expected_counts.values()), len(catalog['articles'])
+
+          for year, expected in expected_counts.items():
+              rows = [a for a in catalog['articles'] if a['year'] == year]
+              assert len(rows) == expected, (year, len(rows), expected)
+              if year >= 2003:
+                  highlights = root / f'content/{year}/bilingual-highlights.json'
+                  assert highlights.is_file(), highlights
+              for row in rows:
+                  content = root / row['content'].removeprefix('./')
+                  manifest_path = root / row['manifest'].removeprefix('./')
+                  assert content.is_file(), content
+                  assert manifest_path.is_file(), manifest_path
+                  manifest = json.loads(manifest_path.read_text())
+                  sentences = manifest.get('sentences', {})
+                  assert len(sentences) == row['sentences'], (row['id'], len(sentences), row['sentences'])
+                  assert not manifest.get('missing_segments', []), (row['id'], manifest.get('missing_segments'))
+                  for sentence in sentences.values():
+                      opus = root / sentence['path'].removeprefix('./')
+                      mp3 = root / sentence['mp3_path'].removeprefix('./')
+                      assert opus.is_file(), opus
+                      assert mp3.is_file(), mp3
+          print('validated 2002-2012 catalog, content, bilingual files, manifests, opus and mp3 assets')
+          PY
+
+      - name: Reader regression tests
+        working-directory: kaoyan-reader-v1
+        run: npm test
+
+      - name: Commit restored combined production tree
+        run: |
+          rm -rf old-2003-2006-release
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add kaoyan-reader-v1 reports/bilingual-highlights content-pipeline/curated content-pipeline/direction content-pipeline/voice_profiles
+          git commit -m 'fix: restore 2003-2006 alongside 2007-2012'
+          git push origin HEAD:c-v4-article-preview-actual
+          git push --force origin HEAD:kaoyan-reader-v1
+          git push --force origin HEAD:gh-pages
