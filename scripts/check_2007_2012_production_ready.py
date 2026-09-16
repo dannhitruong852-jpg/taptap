@@ -72,7 +72,12 @@ def inspect(root: Path):
         else:
             try:
                 doc = load_json(mapping)
-                if int(doc.get('year', -1)) != year or not doc.get('articles'):
+                articles = doc.get('articles')
+                has_sentence_mapping = (
+                    isinstance(articles, dict)
+                    and any(isinstance(sentence_map, dict) and bool(sentence_map) for sentence_map in articles.values())
+                )
+                if int(doc.get('year', -1)) != year or not has_sentence_mapping:
                     bilingual_errors.append(f'{year}.json')
             except Exception:
                 bilingual_errors.append(f'{year}.json')
