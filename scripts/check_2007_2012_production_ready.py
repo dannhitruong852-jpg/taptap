@@ -42,6 +42,7 @@ def inspect(root: Path):
                         or article.get('id') != unit
                         or not rows
                         or invalid_sentence_count
+                        or qa.get('source_scope_verified') is not True
                     ):
                         candidate_errors.append(f'{year}/{unit}')
                     else:
