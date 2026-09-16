@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - c-mode-production-v2
+      - c-v4-article-preview-actual
     paths:
       - 'production_v2/**'
       - '.github/workflows/c-mode-production-v2.yml'
