@@ -23,33 +23,33 @@ jobs:
           python - <<'PY'
           import csv,json,math,re,sys
           from pathlib import Path
-          from collections import Counter,defaultdict
           import numpy as np
           from sklearn.linear_model import LogisticRegression
           from sklearn.metrics import precision_recall_fscore_support
           sys.path.insert(0,'content-pipeline')
-          from build_curated_year import load_curated_source, build_year
+          from build_curated_year import load_curated_source, vocabulary_for
 
           root=Path('.'); token_re=re.compile(r"[A-Za-z]+(?:[-'][A-Za-z]+)*")
           old_years=range(2002,2007)
           surfaces_by_year={}; positives_by_year={}; level_by_surface={}
           all_needed=set()
-          for y in old_years:
-              src=load_curated_source(root/'content-pipeline/curated',y)
-              docs,_=build_year(src)
+          for yr in old_years:
+              src=load_curated_source(root/'content-pipeline/curated',yr)
+              lexicon=src.get('vocabulary') or {}
               surfaces=set(); positives=set()
-              for d in docs:
-                  for s in d['sentences']:
-                      surfaces.update(x.lower() for x in token_re.findall(s['en']))
-                      for v in s.get('vocab',[]):
-                          w=v['word'].lower(); positives.add(w); level_by_surface[(y,w)]=v['level']
-              surfaces_by_year[y]=surfaces; positives_by_year[y]=positives; all_needed |= surfaces
-          for y in range(2007,2013):
+              for article in src['articles']:
+                  for row in article['rows']:
+                      en=row[1].replace('|','')
+                      surfaces.update(x.lower() for x in token_re.findall(en))
+                      for v in vocabulary_for(en,lexicon):
+                          w=v['word'].lower(); positives.add(w); level_by_surface[(yr,w)]=v['level']
+              surfaces_by_year[yr]=surfaces; positives_by_year[yr]=positives; all_needed |= surfaces
+          for yr in range(2007,2013):
               surfaces=set()
               for unit in ('cloze','text1','text2','text3','text4','partb','translation'):
-                  d=json.loads((root/f'reports/content-freeze/{y}/{unit}.candidate.json').read_text(encoding='utf-8'))
+                  d=json.loads((root/f'reports/content-freeze/{yr}/{unit}.candidate.json').read_text(encoding='utf-8'))
                   for row in d['article']['rows']: surfaces.update(x.lower() for x in token_re.findall(row[1].replace('|','')))
-              surfaces_by_year[y]=surfaces; all_needed |= surfaces
+              surfaces_by_year[yr]=surfaces; all_needed |= surfaces
 
           records={}
           with open('/tmp/ecdict.csv',encoding='utf-8',newline='') as f:
@@ -70,15 +70,15 @@ jobs:
               return len(w)>=4 and w in records and any(c.isalpha() for c in w)
           def dataset(years):
               X=[];Y=[];meta=[]
-              for y in years:
-                  pos=positives_by_year[y]
-                  for w in surfaces_by_year[y]:
+              for yr in years:
+                  pos=positives_by_year[yr]
+                  for w in surfaces_by_year[yr]:
                       if not eligible(w): continue
-                      X.append(feat(w));Y.append(1 if w in pos else 0);meta.append((y,w))
+                      X.append(feat(w));Y.append(1 if w in pos else 0);meta.append((yr,w))
               return np.array(X),np.array(Y),meta
           print('=== LOYO ===')
           for hold in old_years:
-              train=[y for y in old_years if y!=hold]
+              train=[yr for yr in old_years if yr!=hold]
               X,y,_=dataset(train); Xt,yt,meta=dataset([hold])
               clf=LogisticRegression(max_iter=500,class_weight='balanced',C=.7).fit(X,y)
               prob=clf.predict_proba(Xt)[:,1]
@@ -95,8 +95,7 @@ jobs:
           print('positive_rate=',round(float(y.mean()),4),'n=',len(y),'pos=',int(y.sum()))
           print('coef=',[round(float(x),3) for x in clf.coef_[0]],'intercept=',round(float(clf.intercept_[0]),3))
           for th in (.45,.5,.55,.6,.65,.7,.75):
-              counts={}
-              samples={}
+              counts={}; samples={}
               for yr in range(2007,2013):
                   ws=[w for w in surfaces_by_year[yr] if eligible(w)]
                   probs=clf.predict_proba(np.array([feat(w) for w in ws]))[:,1]
