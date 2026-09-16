@@ -38,6 +38,12 @@ def materialize(bundle:Path, root:Path):
             if art.get('id')!=unit or not art.get('rows'): raise ValueError(f'bad article: {m.name}')
             if qa.get('source_scope_verified') is not True or qa.get('translation_alignment_reviewed') is not True: raise ValueError(f'candidate not reviewed: {m.name}')
             if not all(len(r)>=3 and r[1] and r[2] for r in art['rows']): raise ValueError(f'empty bilingual row: {m.name}')
+            sentence_count=qa.get('sentence_count')
+            if sentence_count is not None:
+                if not isinstance(sentence_count,int) or isinstance(sentence_count,bool) or sentence_count < 1:
+                    raise ValueError(f'bad sentence_count: {m.name}')
+                if sentence_count != len(art['rows']):
+                    raise ValueError(f'unaligned reviewed rows: {m.name}: sentence_count={sentence_count} rows={len(art["rows"])}')
             dst=root/year/filename; dst.parent.mkdir(parents=True,exist_ok=True); dst.write_text(data,encoding='utf-8'); written.append(dst)
     expected={(y,u) for y in ALLOWED_YEARS for u in ALLOWED_UNITS}
     if seen!=expected: raise ValueError(f'bundle coverage mismatch: missing={sorted(expected-seen)} extra={sorted(seen-expected)}')
