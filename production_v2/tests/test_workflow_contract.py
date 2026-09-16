@@ -2,7 +2,9 @@ import unittest
 from pathlib import Path
 
 
-WORKFLOW = Path(__file__).resolve().parents[2] / '.github/workflows/c-mode-production-v2.yml'
+ROOT = Path(__file__).resolve().parents[2]
+WORKFLOW = ROOT / '.github/workflows/c-mode-production-v2.yml'
+CI_WORKFLOW = ROOT / '.github/workflows/c-mode-production-v2-ci.yml'
 
 
 class WorkflowContractTests(unittest.TestCase):
@@ -22,6 +24,11 @@ class WorkflowContractTests(unittest.TestCase):
         self.assertIn('production_v2.cli_matrix', text)
         self.assertIn('pages build and deployment', text)
         self.assertIn("data['state']='published'", text)
+
+    def test_ci_runs_after_merge_to_canonical_branch(self):
+        text = CI_WORKFLOW.read_text()
+        self.assertIn('- c-mode-production-v2', text)
+        self.assertIn('- c-v4-article-preview-actual', text)
 
 
 if __name__ == '__main__':
