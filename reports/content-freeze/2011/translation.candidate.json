@@ -4,19 +4,17 @@
     "id": "translation",
     "section_type": "translation",
     "title": "翻译 · IT产业的碳排放",
-    "pages": [
-      13
-    ],
+    "pages": [13],
     "actor": "05",
     "context": "IT行业碳排放与节能。语气清楚、简洁，数据和因果关系处加强逻辑重音。",
     "rows": [
-      [
-        1,
-        "Who would have thought that, globally, the IT industry produces about the same volume of greenhouse gases as the world’s airlines do – roughly 2 percent of all CO2 emissions?|Many everyday tasks take a surprising toll on the environment.|A Google search can leak between 0.2 and 7.0 grams of CO2, depending on how many attempts are needed to get the “right” answer.|To deliver results to its users quickly, then, Google has to maintain vast data centres around the world, packed with powerful computers.|While producing large quantities of CO2, these computers emit a great deal of heat, so the centres need to be well air-conditioned, which uses even more energy.|However, Google and other big tech providers monitor their efficiency closely and make improvements.|Monitoring is the first step on the road to reduction, but there is much more to be done, and not just by big companies.",
-        "谁能想到，从全球范围看，信息技术产业产生的温室气体总量，竟与全球航空业大体相当——约占全部二氧化碳排放量的2%？许多日常活动对环境造成的负担远超人们想象。一次谷歌搜索可能排放0.2至7.0克二氧化碳，具体取决于要尝试多少次才能得到“正确”答案。为了迅速向用户返回结果，谷歌必须在世界各地维持规模庞大的数据中心，里面布满高性能计算机。这些计算机在产生大量二氧化碳的同时，也释放大量热量，因此数据中心必须保持良好空调，而这又会消耗更多能源。不过，谷歌和其他大型科技服务商会密切监控自身效率，并不断改进。监测是走向减排的第一步，但仍有大量工作要做，而且责任并不只在大公司。",
-        "explain",
-        []
-      ]
+      [1, "Who would have thought that, globally, the IT industry produces about the same volume of greenhouse gases as the world’s airlines do – roughly 2 percent of all CO2 emissions?", "谁能想到，从全球范围看，信息技术产业产生的温室气体总量，竟与全球航空业大体相当——约占全部二氧化碳排放量的2%？", "explain", []],
+      [2, "Many everyday tasks take a surprising toll on the environment.", "许多日常活动对环境造成的负担远超人们想象。", "explain", []],
+      [3, "A Google search can leak between 0.2 and 7.0 grams of CO2, depending on how many attempts are needed to get the “right” answer.", "一次谷歌搜索可能排放0.2至7.0克二氧化碳，具体取决于要尝试多少次才能得到“正确”答案。", "explain", []],
+      [4, "To deliver results to its users quickly, then, Google has to maintain vast data centres around the world, packed with powerful computers.", "为了迅速向用户返回结果，谷歌必须在世界各地维持规模庞大的数据中心，里面布满高性能计算机。", "explain", []],
+      [5, "While producing large quantities of CO2, these computers emit a great deal of heat, so the centres need to be well air-conditioned, which uses even more energy.", "这些计算机在产生大量二氧化碳的同时，也释放大量热量，因此数据中心必须保持良好空调，而这又会消耗更多能源。", "explain", []],
+      [6, "However, Google and other big tech providers monitor their efficiency closely and make improvements.", "不过，谷歌和其他大型科技服务商会密切监控自身效率，并不断改进。", "explain", []],
+      [7, "Monitoring is the first step on the road to reduction, but there is much more to be done, and not just by big companies.", "监测是走向减排的第一步，但仍有大量工作要做，而且责任并不只在大公司。", "explain", []]
     ]
   },
   "qa": {
@@ -28,6 +26,7 @@
     "options_removed": true,
     "writing_excluded": true,
     "translation_alignment_reviewed": true,
+    "sentence_alignment_reviewed": true,
     "sentence_count": 7,
     "raw_text_materialized": true,
     "status": "reviewed_candidate"
