@@ -30,7 +30,19 @@ def inspect(root: Path):
                 try:
                     doc = load_json(candidate)
                     article = doc.get('article') or {}
-                    if int(doc.get('year', -1)) != year or article.get('id') != unit or not article.get('rows'):
+                    rows = article.get('rows') or []
+                    qa = doc.get('qa') or {}
+                    sentence_count = qa.get('sentence_count')
+                    invalid_sentence_count = (
+                        sentence_count is not None
+                        and int(sentence_count) != len(rows)
+                    )
+                    if (
+                        int(doc.get('year', -1)) != year
+                        or article.get('id') != unit
+                        or not rows
+                        or invalid_sentence_count
+                    ):
                         candidate_errors.append(f'{year}/{unit}')
                     else:
                         ready_candidates.append(f'{year}/{unit}')
