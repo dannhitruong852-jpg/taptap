@@ -1,0 +1,110 @@
+name: Promote and freeze 2007-2012 once
+
+on:
+  push:
+    branches:
+      - c-v4-article-preview-actual
+    paths:
+      - '.github/workflows/promote-freeze-2007-2012-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  promote-freeze-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: c-v4-article-preview-actual
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Promote reviewed vocabulary and bilingual mappings
+        run: |
+          set -euo pipefail
+          for year in 2007 2008 2009 2010 2011 2012; do
+            cp "reports/2007-2012-staging/vocabulary/$year/vocabulary-1-9.json" "reports/content-freeze/$year/vocabulary-1-9.json"
+            cp "reports/2007-2012-staging/final-bilingual-highlights/$year.json" "content-pipeline/curated/bilingual-highlights/$year.json"
+          done
+
+      - name: Freeze production board from concrete repository state
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path('reports/content-freeze/2007-2012-production-board.json')
+          board = json.loads(path.read_text(encoding='utf-8'))
+          units = ['cloze','text1','text2','text3','text4','partb','translation']
+          for year in range(2007, 2013):
+              missing = [u for u in units if not Path(f'reports/content-freeze/{year}/{u}.candidate.json').is_file()]
+              if missing:
+                  raise SystemExit(f'{year}: missing candidates before freeze: {missing}')
+          board['content_frozen'] = True
+          board['voice_started'] = False
+          board['totals'] = {'units': 42, 'candidate_materialized': 42, 'candidate_partial': 0, 'candidate_missing': 0}
+          board['years'] = {
+              str(year): {'candidate_materialized': units, 'candidate_partial': [], 'candidate_missing': []}
+              for year in range(2007, 2013)
+          }
+          board['freeze_gate_remaining'] = []
+          notes = list(board.get('notes') or [])
+          notes.append('2026-09-16: frozen after 42/42 candidate validation, reviewed vocabulary promotion, and exact bilingual occurrence mapping validation with zero unresolved occurrences.')
+          board['notes'] = notes
+          path.write_text(json.dumps(board, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          PY
+
+      - name: Require frozen production readiness
+        run: |
+          set -euo pipefail
+          python scripts/check_2007_2012_content_freeze.py --require-frozen
+          python scripts/check_2007_2012_production_ready.py --require-ready
+
+      - name: Build curated Reader content and strict bilingual highlights
+        run: |
+          set -euo pipefail
+          python scripts/build_2007_2012_curated.py
+          for year in 2007 2008 2009 2010 2011 2012; do
+            python content-pipeline/build_curated_year.py --year "$year"
+            python content-pipeline/build_bilingual_highlights.py --year "$year"
+          done
+
+      - name: Run critical Python contracts
+        run: |
+          python -m unittest \
+            scripts/tests/test_check_2007_2012_content_freeze.py \
+            scripts/tests/test_build_2007_2012_curated.py \
+            scripts/tests/test_2007_2012_workflow_contract.py \
+            scripts/tests/test_build_2007_2012_bilingual_highlights.py \
+            scripts/tests/test_build_2007_2012_vocabulary.py -v
+
+      - name: Recheck production readiness after Reader build
+        run: |
+          python scripts/check_2007_2012_production_ready.py --require-ready
+
+      - name: Commit frozen production inputs and Reader outputs
+        run: |
+          set -euo pipefail
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add \
+            reports/content-freeze/2007-2012-production-board.json \
+            reports/content-freeze/2007 reports/content-freeze/2008 reports/content-freeze/2009 \
+            reports/content-freeze/2010 reports/content-freeze/2011 reports/content-freeze/2012 \
+            content-pipeline/curated/bilingual-highlights \
+            content-pipeline/curated/2007.json content-pipeline/curated/2008.json content-pipeline/curated/2009.json \
+            content-pipeline/curated/2010.json content-pipeline/curated/2011.json content-pipeline/curated/2012.json \
+            content-pipeline/voice_profiles content-pipeline/direction \
+            kaoyan-reader-v1/content \
+            reports/bilingual-highlights \
+            reports/extraction
+          if git diff --cached --quiet; then
+            echo 'No changes to commit'
+          else
+            git commit -m 'content: freeze and build 2007-2012 Reader inputs'
+            git push origin HEAD:c-v4-article-preview-actual
+          fi
