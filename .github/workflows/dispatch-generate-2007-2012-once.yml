@@ -1,0 +1,23 @@
+name: Dispatch 2007-2012 generation once
+
+on:
+  push:
+    branches: [c-v4-article-preview-actual]
+    paths:
+      - '.github/workflows/dispatch-generate-2007-2012-once.yml'
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch production generator
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow run generate-kaoyan-2007-2012-batch.yml \
+            --repo "$GITHUB_REPOSITORY" \
+            --ref c-v4-article-preview-actual
