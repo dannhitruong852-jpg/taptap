@@ -41,6 +41,18 @@ class CatalogMergeTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             merge_catalogs(old, batch)
 
+    def test_identical_existing_article_is_idempotent(self):
+        row = {
+            'id': '2013-text1',
+            'year': 2013,
+            'content': './content/2013/c/text1.json',
+            'manifest': './audio/2013/v4/c-text1/manifest.json',
+        }
+        old = {'version': 1, 'articles': [row]}
+        batch = {'version': 1, 'articles': [dict(row)]}
+        result = merge_catalogs(old, batch)
+        self.assertEqual(result['articles'], [row])
+
 
 if __name__ == '__main__':
     unittest.main()
