@@ -37,8 +37,8 @@ class VocabularyBuilderContractTest(unittest.TestCase):
     def test_build_document_uses_production_schema_and_levels_6_to_9_only(self):
         records = {
             'intricate': {
-                'bnc': '12000', 'frq': '11000', 'collins': '1', 'oxford': '0',
-                'tag': 'cet6 ky toefl gre', 'translation': 'adj. 复杂的；错综的'
+                'word': 'intricate', 'bnc': '12000', 'frq': '11000', 'collins': '1', 'oxford': '0',
+                'tag': 'cet6 ky toefl gre', 'translation': 'adj. 复杂的；错综的', 'exchange': ''
             }
         }
         doc = build_vocab.build_document(2007, {'intricate'}, records, threshold=0.0)
@@ -49,6 +49,23 @@ class VocabularyBuilderContractTest(unittest.TestCase):
         level, meaning = doc['vocabulary']['intricate'][:2]
         self.assertIn(level, range(6, 10))
         self.assertTrue(meaning)
+
+    def test_inflected_surface_uses_lemma_metadata_and_becomes_variant(self):
+        records = {
+            'researchers': {
+                'word': 'researchers', 'bnc': '0', 'frq': '0', 'collins': '0', 'oxford': '0',
+                'tag': '', 'translation': '研究员（researcher的复数）', 'exchange': '0:researcher/1:s'
+            },
+            'researcher': {
+                'word': 'researcher', 'bnc': '4500', 'frq': '4800', 'collins': '2', 'oxford': '0',
+                'tag': 'cet6 ky', 'translation': 'n. 研究人员；研究者', 'exchange': 's:researchers'
+            },
+        }
+        doc = build_vocab.build_document(2009, {'researchers'}, records, threshold=0.0)
+        self.assertNotIn('researchers', doc['vocabulary'])
+        self.assertIn('researcher', doc['vocabulary'])
+        self.assertIn('researchers', doc['vocabulary']['researcher'][2:])
+        self.assertNotEqual(doc['vocabulary']['researcher'][0], 9)
 
 
 if __name__ == '__main__':
