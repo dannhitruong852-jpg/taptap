@@ -22,6 +22,20 @@ def validate_batch(manifest, catalog, reader_root, phase='preflight'):
     for year in sorted(years - present_years):
         errors.append(f'year {year}: no catalog articles')
 
+    expected_articles = manifest.get('expected_articles') or {}
+    for year in sorted(years):
+        expected = set(expected_articles.get(str(year), []))
+        actual = {
+            row['id'].removeprefix(f'{year}-')
+            for row in selected
+            if row.get('year') == year
+        }
+        if expected and actual != expected:
+            errors.append(
+                f'year {year}: article inventory mismatch '
+                f'expected={sorted(expected)} actual={sorted(actual)}'
+            )
+
     for row in selected:
         article_id = row.get('id', '<unknown>')
         content_path = _reader_path(reader_root, row.get('content', ''))
