@@ -1,0 +1,621 @@
+{
+  "year": 2007,
+  "section_type": "reading",
+  "article_id": "text3",
+  "source_sha256": "b265c5fdf5ca4b165967cf096072624c6e118e40139e6a942fcf84ce9670a99a",
+  "source_pages": [
+    7,
+    8
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "01",
+  "article_context": "经济与家庭风险分析。核心不是煽情，而是解释双职工家庭、退休、医疗和人口结构如何把风险逐步转移给中产家庭；语气理性、克制，但末段政治后果要形成明显收束。",
+  "article": {
+    "year": 2007,
+    "section": "text3",
+    "title": "阅读三 · 中产家庭承担的金融风险",
+    "background": "经济与家庭风险分析。核心不是煽情，而是解释双职工家庭、退休、医疗和人口结构如何把风险逐步转移给中产家庭；语气理性、克制，但末段政治后果要形成明显收束。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "During the past generation, the American middle-class family that once could count on hard work and fair play to keep itself financially secure has been transformed by economic risk and new realities.",
+      "zh": "在过去一代人的时间里，美国中产家庭曾经可以依靠勤奋工作和公平竞争来维持经济安全，如今却已被经济风险和新的现实彻底改变。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "once could count on",
+        "transformed by economic risk"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "During the past generation, the American middle-class family that once could count on hard work and fair play to keep itself financially secure has been transformed by economic risk and new realities.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text3/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Now a pink slip, a bad diagnosis, or a disappearing spouse can reduce a family from solidly middle class to newly poor in a few months.",
+      "zh": "如今，一纸解雇通知、一份糟糕的诊断结果，或配偶的离去，都可能在短短几个月内让一个原本稳居中产的家庭沦为新贫困家庭。",
+      "vocab": [],
+      "discourse_function": "example",
+      "prosody_focus": [
+        "a pink slip",
+        "in a few months"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Now a pink slip, a bad diagnosis, or a disappearing spouse can reduce a family from solidly middle class to newly poor in a few months.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text3/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 2,
+      "en": "In just one generation, millions of mothers have gone to work, transforming basic family economics.",
+      "zh": "仅仅一代人的时间里，数以百万计的母亲走入职场，从根本上改变了家庭经济结构。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [
+        "millions of mothers",
+        "transforming basic family economics"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "In just one generation, millions of mothers have gone to work, transforming basic family economics.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text3/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "Scholars, policymakers, and critics of all stripes have debated the social implications of these changes, but few have looked at the side effect: family risk has risen as well.",
+      "zh": "学者、政策制定者以及各种立场的评论人士一直在争论这些变化的社会影响，却很少有人注意到一个副作用：家庭面临的风险也上升了。",
+      "vocab": [
+        {
+          "word": "policymakers",
+          "lemma": "policymaker",
+          "level": 8,
+          "meaning": "政策制定者；决策人",
+          "start": 10,
+          "end": 22
+        },
+        {
+          "word": "critics",
+          "lemma": "critic",
+          "level": 6,
+          "meaning": "批评家；鉴定家",
+          "start": 28,
+          "end": 35
+        },
+        {
+          "word": "implications",
+          "lemma": "implication",
+          "level": 6,
+          "meaning": "牵连；含义",
+          "start": 75,
+          "end": 87
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "but few",
+        "family risk has risen"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Scholars, policymakers, and critics of all stripes have debated the social implications of these changes, but few have looked at the side effect: family risk has risen as well.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text3/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "Today's families have budgeted to the limits of their new two-paycheck status.",
+      "zh": "如今的家庭已经把两份工资收入几乎全部纳入日常预算，开支逼近了双收入所能承受的极限。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "budgeted to the limits",
+        "two-paycheck status"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Today's families have budgeted to the limits of their new two-paycheck status.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text3/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "As a result, they have lost the parachute they once had in times of financial setback—a back-up earner, usually Mom, who could go into the workforce if the primary earner got laid off or fell sick.",
+      "zh": "结果，一旦遭遇经济挫折，他们失去了过去那把“降落伞”——一名备用挣钱者，通常是母亲；当主要收入者被裁员或生病时，她原本可以进入劳动力市场补上收入缺口。",
+      "vocab": [
+        {
+          "word": "parachute",
+          "lemma": "parachute",
+          "level": 7,
+          "meaning": "降落伞",
+          "start": 32,
+          "end": 41
+        },
+        {
+          "word": "setback",
+          "lemma": "setback",
+          "level": 7,
+          "meaning": "挫折；退步",
+          "start": 78,
+          "end": 85
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "lost the parachute",
+        "a back-up earner"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "As a result, they have lost the parachute they once had in times of financial setback—a back-up earner, usually Mom, who could go into the workforce if the primary earner got laid off or fell sick.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text3/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "This added-worker effect could support the safety net offered by unemployment insurance or disability insurance to help families weather bad times.",
+      "zh": "这种“新增劳动者效应”原本可以与失业保险或伤残保险提供的安全网相互补充，帮助家庭熬过困难时期。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "added-worker effect",
+        "weather bad times"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "This added-worker effect could support the safety net offered by unemployment insurance or disability insurance to help families weather bad times.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text3/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 2,
+      "en": "But today, a disruption to family fortunes can no longer be made up with extra income from an otherwise-stay-at-home partner.",
+      "zh": "但在今天，家庭经济一旦遭受冲击，已经无法再靠原本留在家中的配偶额外就业来弥补损失。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "But today",
+        "can no longer be made up"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "But today, a disruption to family fortunes can no longer be made up with extra income from an otherwise-stay-at-home partner.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text3/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 3,
+      "en": "During the same period, families have been asked to absorb much more risk in their retirement income.",
+      "zh": "与此同时，家庭还被要求自行承担更多退休收入方面的风险。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [
+        "much more risk",
+        "retirement income"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "During the same period, families have been asked to absorb much more risk in their retirement income.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text3/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 3,
+      "en": "Steelworkers, airline employees, and now those in the auto industry are joining millions of families who must worry about interest rates, stock market fluctuation, and the harsh reality that they may outlive their retirement money.",
+      "zh": "钢铁工人、航空公司雇员，如今再加上汽车业从业者，正加入数以百万计家庭的行列：他们必须担忧利率、股市波动，以及一个残酷现实——自己可能活得比退休储蓄更久。",
+      "vocab": [
+        {
+          "word": "Steelworkers",
+          "lemma": "steelworker",
+          "level": 9,
+          "meaning": "炼钢工人",
+          "start": 0,
+          "end": 12
+        },
+        {
+          "word": "fluctuation",
+          "lemma": "fluctuation",
+          "level": 7,
+          "meaning": "变动；波动",
+          "start": 151,
+          "end": 162
+        }
+      ],
+      "discourse_function": "example",
+      "prosody_focus": [
+        "must worry about",
+        "outlive their retirement money"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "Steelworkers, airline employees, and now those in the auto industry are joining millions of families who must worry about interest rates, stock market fluctuation, and the harsh reality that they may outlive their retirement money.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text3/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 3,
+      "en": "For much of the past year, President Bush campaigned to move Social Security to a savings-account model, with retirees trading much or all of their guaranteed payments for payments depending on investment returns.",
+      "zh": "在过去一年的大部分时间里，布什总统一直推动把社会保障制度改成储蓄账户模式，让退休者用原本全部或大部分有保障的给付，换取取决于投资回报的收入。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [
+        "guaranteed payments",
+        "depending on investment returns"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "For much of the past year, President Bush campaigned to move Social Security to a savings-account model, with retirees trading much or all of their guaranteed payments for payments depending on investment returns.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text3/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 3,
+      "en": "For younger families, the picture is not any better.",
+      "zh": "对更年轻的家庭来说，情况也没有好到哪里去。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "not any better"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "For younger families, the picture is not any better.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text3/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 3,
+      "en": "Both the absolute cost of healthcare and the share of it borne by families have risen—and newly fashionable health-savings plans are spreading from legislative halls to Wal-Mart workers, with much higher deductibles and a large new dose of investment risk for families' future healthcare.",
+      "zh": "医疗总成本以及由家庭承担的那部分费用都在上升；与此同时，新近流行的医疗储蓄计划正从立法机构扩展到沃尔玛员工，而这类计划伴随着高得多的免赔额，也把一大块新的投资风险转嫁给家庭未来的医疗保障。",
+      "vocab": [
+        {
+          "word": "fashionable",
+          "lemma": "fashionable",
+          "level": 6,
+          "meaning": "a. 时髦的；上流社会的",
+          "start": 96,
+          "end": 107
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": [
+        "have risen",
+        "investment risk"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "Both the absolute cost of healthcare and the share of it borne by families have risen—and newly fashionable health-savings plans are spreading from legislative halls to Wal-Mart workers, with much higher deductibles and a large new dose of investment risk for families' future healthcare.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text3/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 3,
+      "en": "Even demographics are working against the middle-class family, as the odds of having a weak elderly parent—and all the attendant need for physical and financial assistance—have jumped eightfold in just one generation.",
+      "zh": "甚至人口结构也在对中产家庭不利：仅仅一代人的时间里，家中出现体弱年迈父母的概率已经增加到原来的八倍，随之而来的还有身体照护和经济援助需求。",
+      "vocab": [
+        {
+          "word": "demographics",
+          "lemma": "demographic",
+          "level": 6,
+          "meaning": "a. 人口统计的",
+          "start": 5,
+          "end": 17
+        },
+        {
+          "word": "attendant",
+          "lemma": "attendant",
+          "level": 7,
+          "meaning": "随从；侍者",
+          "start": 119,
+          "end": 128
+        }
+      ],
+      "discourse_function": "statistic",
+      "prosody_focus": [
+        "working against",
+        "jumped eightfold"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "Even demographics are working against the middle-class family, as the odds of having a weak elderly parent—and all the attendant need for physical and financial assistance—have jumped eightfold in just one generation.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text3/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 4,
+      "en": "From the middle-class family perspective, much of this, understandably, looks far less like an opportunity to exercise more financial responsibility, and a good deal more like a frightening acceleration of the wholesale shift of financial risk onto their already overburdened shoulders.",
+      "zh": "从中产家庭的角度看，这一切当然不像是一次承担更多财务责任的机会，反而更像是一场令人恐惧的加速过程：金融风险正在大规模转移到他们本已不堪重负的肩上。",
+      "vocab": [
+        {
+          "word": "perspective",
+          "lemma": "perspective",
+          "level": 6,
+          "meaning": "远景；透视感",
+          "start": 29,
+          "end": 40
+        },
+        {
+          "word": "understandably",
+          "lemma": "understandably",
+          "level": 7,
+          "meaning": "可懂；可了解",
+          "start": 56,
+          "end": 70
+        },
+        {
+          "word": "acceleration",
+          "lemma": "acceleration",
+          "level": 7,
+          "meaning": "加速；促进",
+          "start": 190,
+          "end": 202
+        },
+        {
+          "word": "overburdened",
+          "lemma": "overburden",
+          "level": 8,
+          "meaning": "t. 装载过多；负担过多",
+          "start": 263,
+          "end": 275
+        }
+      ],
+      "discourse_function": "evaluation_quote",
+      "prosody_focus": [
+        "far less like an opportunity",
+        "wholesale shift of financial risk"
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "From the middle-class family perspective, much of this, understandably, looks far less like an opportunity to exercise more financial responsibility, and a good deal more like a frightening acceleration of the wholesale shift of financial risk onto their already overburdened shoulders.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "serious",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text3/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 4,
+      "en": "The financial fallout has begun, and the political fallout may not be far behind.",
+      "zh": "经济上的后果已经显现，而政治上的后果恐怕也不会太远。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "has begun",
+        "may not be far behind"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "The financial fallout has begun, and the political fallout may not be far behind.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text3/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "year": 2007,
+  "section_type": "translation",
+  "article_id": "translation",
+  "source_sha256": "b265c5fdf5ca4b165967cf096072624c6e118e40139e6a942fcf84ce9670a99a",
+  "source_pages": [
+    13
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "09",
+  "article_context": "法律教育与新闻专业责任。这里只保留试卷要求翻译的 46-50 五个目标译段，不扩展到整篇背景文。语气清晰、理性、正式，法律与新闻术语优先保证准确。",
+  "article": {
+    "year": 2007,
+    "section": "translation",
+    "title": "翻译 · 法律教育与新闻专业素养",
+    "background": "法律教育与新闻专业责任。这里只保留试卷要求翻译的 46-50 五个目标译段，不扩展到整篇背景文。语气清晰、理性、正式，法律与新闻术语优先保证准确。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "Traditionally, legal learning has been viewed in such institutions as the special preserve of lawyers, rather than a necessary part of the intellectual equipment of an educated person.",
+      "zh": "传统上，在这些院校中，法律学习一直被视为律师这一职业群体的专属领域，而不是一个受过教育的人知识素养中必不可少的一部分。",
+      "vocab": [
+        {
+          "word": "Traditionally",
+          "lemma": "traditionally",
+          "level": 6,
+          "meaning": "传统上；传说上",
+          "start": 0,
+          "end": 13
+        },
+        {
+          "word": "intellectual",
+          "lemma": "intellectual",
+          "level": 6,
+          "meaning": "有知识者；知识分子",
+          "start": 139,
+          "end": 151
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "special preserve of lawyers",
+        "rather than"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "Traditionally, legal learning has been viewed in such institutions as the special preserve of lawyers, rather than a necessary part of the intellectual equipment of an educated person.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-translation/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 2,
+      "en": "On the other, it links these concepts to everyday realities in a manner which is parallel to the links journalists forge on a daily basis as they cover and comment on the news.",
+      "zh": "另一方面，法律又把这些概念同日常现实联系起来；这种联系方式，与记者每天在报道和评论新闻时所建立的概念与现实之间的联系是相似的。",
+      "vocab": [
+        {
+          "word": "forge",
+          "lemma": "forge",
+          "level": 6,
+          "meaning": "熔炉；铁工厂",
+          "start": 115,
+          "end": 120
+        }
+      ],
+      "discourse_function": "compare",
+      "prosody_focus": [
+        "links these concepts",
+        "parallel to the links journalists forge"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "On the other, it links these concepts to everyday realities in a manner which is parallel to the links journalists forge on a daily basis as they cover and comment on the news.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-translation/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 3,
+      "en": "But the idea that the journalist must understand the law more profoundly than an ordinary citizen rests on an understanding of the established conventions and special responsibilities of the news media.",
+      "zh": "但是，记者必须比普通公民更深刻地理解法律这一观点，是建立在对新闻媒体既有惯例和特殊责任的认识之上的。",
+      "vocab": [
+        {
+          "word": "profoundly",
+          "lemma": "profoundly",
+          "level": 7,
+          "meaning": "深深地；深切地",
+          "start": 62,
+          "end": 72
+        }
+      ],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "more profoundly",
+        "rests on an understanding"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "But the idea that the journalist must understand the law more profoundly than an ordinary citizen rests on an understanding of the established conventions and special responsibilities of the news media.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-translation/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 4,
+      "en": "In fact, it is difficult to see how journalists who do not have a clear grasp of the basic features of the Canadian Constitution can do a competent job on political stories.",
+      "zh": "事实上，很难想象，一个不能清楚掌握加拿大宪法基本特征的记者，如何能够胜任政治新闻报道。",
+      "vocab": [
+        {
+          "word": "Constitution",
+          "lemma": "constitution",
+          "level": 6,
+          "meaning": "构成；宪法",
+          "start": 116,
+          "end": 128
+        },
+        {
+          "word": "competent",
+          "lemma": "competent",
+          "level": 6,
+          "meaning": "a. 能干的；胜任的",
+          "start": 138,
+          "end": 147
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "do not have a clear grasp",
+        "competent job"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "In fact, it is difficult to see how journalists who do not have a clear grasp of the basic features of the Canadian Constitution can do a competent job on political stories.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-translation/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 5,
+      "en": "While comment and reaction from lawyers may enhance stories, it is preferable for journalists to rely on their own notions of significance and make their own judgments.",
+      "zh": "尽管律师的评论和反应可能会使报道更加充实，但记者最好还是依靠自己对事件重要性的理解，并作出自己的判断。",
+      "vocab": [
+        {
+          "word": "enhance",
+          "lemma": "enhance",
+          "level": 6,
+          "meaning": "t. 提高；加强",
+          "start": 44,
+          "end": 51
+        },
+        {
+          "word": "preferable",
+          "lemma": "preferable",
+          "level": 7,
+          "meaning": "a. 更可取的；更好的",
+          "start": 67,
+          "end": 77
+        },
+        {
+          "word": "significance",
+          "lemma": "significance",
+          "level": 6,
+          "meaning": "重要性；意义",
+          "start": 126,
+          "end": 138
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "While",
+        "preferable for journalists"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "While comment and reaction from lawyers may enhance stories, it is preferable for journalists to rely on their own notions of significance and make their own judgments.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-translation/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

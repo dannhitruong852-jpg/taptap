@@ -1,0 +1,578 @@
+{
+  "year": 2007,
+  "section_type": "reading",
+  "article_id": "text4",
+  "source_sha256": "b265c5fdf5ca4b165967cf096072624c6e118e40139e6a942fcf84ce9670a99a",
+  "source_pages": [
+    9,
+    10
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "09",
+  "article_context": "公司治理与监管评论。先以企业连续遭遇麻烦切入，再把数据安全提升为董事会和管理层责任，最后落到立法与监管。语气权威、克制，关键论断要清晰有压重。",
+  "article": {
+    "year": 2007,
+    "section": "text4",
+    "title": "阅读四 · 数据泄露与企业治理",
+    "background": "公司治理与监管评论。先以企业连续遭遇麻烦切入，再把数据安全提升为董事会和管理层责任，最后落到立法与监管。语气权威、克制，关键论断要清晰有压重。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "It never rains but it pours.",
+      "zh": "祸不单行。",
+      "vocab": [],
+      "discourse_function": "warning",
+      "prosody_focus": [
+        "never rains",
+        "pours"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "It never rains but it pours.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text4/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Just as bosses and boards have finally sorted out their worst accounting and compliance troubles, and improved their feeble corporate governance, a new problem threatens to earn them—especially in America—the sort of nasty headlines that inevitably lead to heads rolling in the executive suite: data insecurity.",
+      "zh": "就在企业老板和董事会终于处理好最严重的会计与合规问题，并改善了原本薄弱的公司治理之际，一个新的问题又威胁着他们——尤其是在美国——它足以招来那种最终导致高管下台的负面头条：数据安全失守。",
+      "vocab": [
+        {
+          "word": "compliance",
+          "lemma": "compliance",
+          "level": 6,
+          "meaning": "遵从；顺从",
+          "start": 77,
+          "end": 87
+        },
+        {
+          "word": "feeble",
+          "lemma": "feeble",
+          "level": 7,
+          "meaning": "a. 微弱的；衰弱的",
+          "start": 117,
+          "end": 123
+        },
+        {
+          "word": "corporate",
+          "lemma": "corporate",
+          "level": 6,
+          "meaning": "a. 社团的；合伙的",
+          "start": 124,
+          "end": 133
+        },
+        {
+          "word": "governance",
+          "lemma": "governance",
+          "level": 7,
+          "meaning": "统治；统辖",
+          "start": 134,
+          "end": 144
+        },
+        {
+          "word": "inevitably",
+          "lemma": "inevitably",
+          "level": 6,
+          "meaning": "不可避免地",
+          "start": 238,
+          "end": 248
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "finally sorted out",
+        "a new problem"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Just as bosses and boards have finally sorted out their worst accounting and compliance troubles, and improved their feeble corporate governance, a new problem threatens to earn them—especially in America—the sort of nasty headlines that inevitably lead to heads rolling in the executive suite: data insecurity.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text4/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "Left, until now, to odd, low-level IT staff to put right, and seen as a concern only of data-rich industries such as banking, telecoms and air travel, information protection is now high on the boss's agenda in businesses of every variety.",
+      "zh": "过去，信息保护往往被丢给边缘、低层级的 IT 员工处理，也只被视为银行、电信和航空等数据密集行业才需要担心的问题；如今，它已经进入各类企业老板的核心议程。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "until now",
+        "now high on the boss's agenda"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Left, until now, to odd, low-level IT staff to put right, and seen as a concern only of data-rich industries such as banking, telecoms and air travel, information protection is now high on the boss's agenda in businesses of every variety.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text4/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "Several massive leakages of customer and employee data this year—from organizations as diverse as Time Warner, the American defense contractor Science Applications International Corp and even the University of California, Berkeley—have left managers hurriedly peering into their intricate IT systems and business processes in search of potential vulnerabilities.",
+      "zh": "今年，多家背景迥异的机构发生了大规模客户和员工数据泄露，从时代华纳、美国国防承包商 Science Applications International Corp，甚至到加州大学伯克利分校；这些事件迫使管理者匆忙检查复杂的 IT 系统和业务流程，寻找潜在漏洞。",
+      "vocab": [
+        {
+          "word": "leakages",
+          "lemma": "leakage",
+          "level": 8,
+          "meaning": "漏；漏出物",
+          "start": 16,
+          "end": 24
+        },
+        {
+          "word": "diverse",
+          "lemma": "diverse",
+          "level": 6,
+          "meaning": "a. 不同的；变化多的",
+          "start": 87,
+          "end": 94
+        },
+        {
+          "word": "defense",
+          "lemma": "defense",
+          "level": 7,
+          "meaning": "防卫；防卫物",
+          "start": 124,
+          "end": 131
+        },
+        {
+          "word": "intricate",
+          "lemma": "intricate",
+          "level": 7,
+          "meaning": "a. 复杂的；错综的",
+          "start": 279,
+          "end": 288
+        },
+        {
+          "word": "vulnerabilities",
+          "lemma": "vulnerability",
+          "level": 7,
+          "meaning": "易受伤；易受责难",
+          "start": 346,
+          "end": 361
+        }
+      ],
+      "discourse_function": "example",
+      "prosody_focus": [
+        "massive leakages",
+        "potential vulnerabilities"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Several massive leakages of customer and employee data this year—from organizations as diverse as Time Warner, the American defense contractor Science Applications International Corp and even the University of California, Berkeley—have left managers hurriedly peering into their intricate IT systems and business processes in search of potential vulnerabilities.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text4/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 3,
+      "en": "“Data is becoming an asset which needs to be guarded as much as any other asset,” says Haim Mendelson of Stanford University's business school.",
+      "zh": "斯坦福大学商学院的 Haim Mendelson 说：“数据正在变成一种资产，需要像保护其他任何资产一样加以保护。”",
+      "vocab": [],
+      "discourse_function": "explain_quote",
+      "prosody_focus": [
+        "data is becoming an asset",
+        "guarded"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "“Data is becoming an asset which needs to be guarded as much as any other asset,” says Haim Mendelson of Stanford University's business school.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text4/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 3,
+      "en": "“The ability to guard customer data is the key to market value, which the board is responsible for on behalf of shareholders.”",
+      "zh": "“保护客户数据的能力关系到企业的市场价值，而董事会要代表股东对此负责。”",
+      "vocab": [],
+      "discourse_function": "explain_quote",
+      "prosody_focus": [
+        "key to market value",
+        "board is responsible"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "“The ability to guard customer data is the key to market value, which the board is responsible for on behalf of shareholders.”",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text4/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 3,
+      "en": "Indeed, just as there is the concept of Generally Accepted Accounting Principles, perhaps it is time for GASP, Generally Accepted Security Practices, suggested Eli Noam of New York's Columbia Business School.",
+      "zh": "纽约哥伦比亚大学商学院的 Eli Noam 指出，既然有“公认会计原则”（GAAP）这一概念，也许现在该有一套“公认安全实践”（GASP）了。",
+      "vocab": [],
+      "discourse_function": "compare",
+      "prosody_focus": [
+        "just as",
+        "Generally Accepted Security Practices"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "Indeed, just as there is the concept of Generally Accepted Accounting Principles, perhaps it is time for GASP, Generally Accepted Security Practices, suggested Eli Noam of New York's Columbia Business School.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text4/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 3,
+      "en": "“Setting the proper investment level for security, redundancy, and recovery is a management issue, not a technical one,” he says.",
+      "zh": "他说：“为安全、冗余和恢复确定适当的投入水平，是一个管理问题，而不是一个技术问题。”",
+      "vocab": [
+        {
+          "word": "redundancy",
+          "lemma": "redundancy",
+          "level": 7,
+          "meaning": "过多；冗长",
+          "start": 51,
+          "end": 61
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "management issue",
+        "not a technical one"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "“Setting the proper investment level for security, redundancy, and recovery is a management issue, not a technical one,” he says.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text4/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 4,
+      "en": "The mystery is that this should come as a surprise to any boss.",
+      "zh": "令人费解的是，这种道理竟然还会让某些老板感到意外。",
+      "vocab": [],
+      "discourse_function": "evaluation_quote",
+      "prosody_focus": [
+        "The mystery",
+        "surprise"
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "The mystery is that this should come as a surprise to any boss.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "serious",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text4/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 4,
+      "en": "Surely it should be obvious to the dimmest executive that trust, that most valuable of economic assets, is easily destroyed and hugely expensive to restore—and that few things are more likely to destroy trust than a company letting sensitive personal data get into the wrong hands.",
+      "zh": "即便是最迟钝的企业高管也理应明白：信任这种最宝贵的经济资产极易被毁掉，而重建成本却高得惊人；几乎没有什么比企业让敏感个人数据落入错误之手更容易摧毁信任。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "easily destroyed",
+        "hugely expensive to restore"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "Surely it should be obvious to the dimmest executive that trust, that most valuable of economic assets, is easily destroyed and hugely expensive to restore—and that few things are more likely to destroy trust than a company letting sensitive personal data get into the wrong hands.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text4/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 5,
+      "en": "The current state of affairs may have been encouraged—though not justified—by the lack of legal penalty in America, but not Europe, for data leakage.",
+      "zh": "目前这种局面或许受到一个因素的纵容——尽管这并不能为其辩解——那就是美国对数据泄露缺乏法律惩罚，而欧洲并非如此。",
+      "vocab": [
+        {
+          "word": "penalty",
+          "lemma": "penalty",
+          "level": 6,
+          "meaning": "处罚；刑罚",
+          "start": 96,
+          "end": 103
+        },
+        {
+          "word": "leakage",
+          "lemma": "leakage",
+          "level": 8,
+          "meaning": "漏；漏出物",
+          "start": 141,
+          "end": 148
+        }
+      ],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "though not justified",
+        "lack of legal penalty"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "The current state of affairs may have been encouraged—though not justified—by the lack of legal penalty in America, but not Europe, for data leakage.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text4/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 5,
+      "en": "Until California recently passed a law, American firms did not have to tell anyone, even the victim, when data went astray.",
+      "zh": "直到加州最近通过一项法律之前，美国公司即使发生数据失窃，也无须告知任何人，甚至不必通知受害者本人。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [
+        "did not have to tell anyone",
+        "even the victim"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "Until California recently passed a law, American firms did not have to tell anyone, even the victim, when data went astray.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text4/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 5,
+      "en": "That may change fast: lots of proposed data-security legislation is now doing the rounds in Washington, D.C.",
+      "zh": "这种情况可能很快改变：目前华盛顿正在流转、讨论大量拟议中的数据安全立法。",
+      "vocab": [
+        {
+          "word": "legislation",
+          "lemma": "legislation",
+          "level": 6,
+          "meaning": "立法；法律",
+          "start": 53,
+          "end": 64
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": [
+        "may change fast",
+        "data-security legislation"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "That may change fast: lots of proposed data-security legislation is now doing the rounds in Washington, D.C.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text4/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 5,
+      "en": "Meanwhile, the theft of information about some 40 million credit-card accounts in America, disclosed on June 17th, overshadowed a hugely important decision a day earlier by America's Federal Trade Commission that puts corporate America on notice that regulators will act if firms fail to provide adequate data security.",
+      "zh": "与此同时，6月17日披露的一起涉及美国约四千万个信用卡账户的信息盗窃案，盖过了前一天美国联邦贸易委员会作出的一项极其重要的决定；这项决定实际上是在警告美国企业界：如果公司不能提供充分的数据安全保障，监管者就会采取行动。",
+      "vocab": [
+        {
+          "word": "overshadowed",
+          "lemma": "overshadow",
+          "level": 7,
+          "meaning": "t. 遮阴；使阴暗",
+          "start": 115,
+          "end": 127
+        },
+        {
+          "word": "corporate",
+          "lemma": "corporate",
+          "level": 6,
+          "meaning": "a. 社团的；合伙的",
+          "start": 218,
+          "end": 227
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "40 million credit-card accounts",
+        "regulators will act"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "Meanwhile, the theft of information about some 40 million credit-card accounts in America, disclosed on June 17th, overshadowed a hugely important decision a day earlier by America's Federal Trade Commission that puts corporate America on notice that regulators will act if firms fail to provide adequate data security.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text4/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

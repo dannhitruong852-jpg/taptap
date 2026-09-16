@@ -1,8 +1,495 @@
 {
-  "research": [5, "研究；调查"],
-  "evidence": [5, "证据；依据"],
-  "economic": [5, "经济的"],
-  "policy": [5, "政策；方针"],
-  "social": [4, "社会的；社交的"],
-  "public": [4, "公众；公共的"]
+  "year": 2007,
+  "scale": "project-curated-1-9-v1",
+  "qa": {
+    "status": "reviewed",
+    "review_method": "calibrated_against_shipped_2002_2006",
+    "selector_threshold": 0.75,
+    "dictionary_source": "ECDICT offline snapshot",
+    "lemmatization": "ECDICT exchange 0:lemma when available",
+    "human_review_claimed": false
+  },
+  "vocabulary": {
+    "abolish": [
+      6,
+      "t. 废止；革除",
+      "abolished"
+    ],
+    "acceleration": [
+      7,
+      "加速；促进"
+    ],
+    "analogy": [
+      6,
+      "相似；类似",
+      "analogies"
+    ],
+    "analytical": [
+      7,
+      "a. 分析的；善于分析的"
+    ],
+    "assessment": [
+      6,
+      "评估；估定"
+    ],
+    "astrological": [
+      9,
+      "a. 占星学的；占星术的"
+    ],
+    "attendant": [
+      7,
+      "随从；侍者"
+    ],
+    "authentic": [
+      6,
+      "a. 可靠的；可信的"
+    ],
+    "biographical": [
+      7,
+      "a. 传记的"
+    ],
+    "chronological": [
+      7,
+      "a. 年代学的；按时间顺序的"
+    ],
+    "cognitive": [
+      6,
+      "a. 认知的；认识的"
+    ],
+    "coincidence": [
+      6,
+      "巧合；同时发生"
+    ],
+    "collaborate": [
+      7,
+      "i. 合作；勾结",
+      "collaborating"
+    ],
+    "colony": [
+      6,
+      "殖民地；移民队",
+      "colonies"
+    ],
+    "commerce": [
+      6,
+      "商业；商务"
+    ],
+    "communicate": [
+      6,
+      "t. 显露；传达",
+      "communicating"
+    ],
+    "competent": [
+      6,
+      "a. 能干的；胜任的"
+    ],
+    "compliance": [
+      6,
+      "遵从；顺从"
+    ],
+    "component": [
+      6,
+      "元件；组件",
+      "components"
+    ],
+    "conceive": [
+      6,
+      "t. 构思；认为",
+      "conceived"
+    ],
+    "confer": [
+      6,
+      "t. 授予；带来"
+    ],
+    "conservative": [
+      6,
+      "a. 保守的；守旧的"
+    ],
+    "constitution": [
+      6,
+      "构成；宪法"
+    ],
+    "corporate": [
+      6,
+      "a. 社团的；合伙的"
+    ],
+    "correlate": [
+      6,
+      "有相互关系的东西；相关物",
+      "correlated"
+    ],
+    "critic": [
+      6,
+      "批评家；鉴定家",
+      "critics"
+    ],
+    "defense": [
+      7,
+      "防卫；防卫物"
+    ],
+    "deliberate": [
+      6,
+      "a. 深思熟虑的；故意的"
+    ],
+    "demographic": [
+      6,
+      "a. 人口统计的",
+      "demographics"
+    ],
+    "discourage": [
+      6,
+      "t. 使气馁；阻碍",
+      "discouraged"
+    ],
+    "diverse": [
+      6,
+      "a. 不同的；变化多的"
+    ],
+    "economically": [
+      6,
+      "节约地；不浪费地"
+    ],
+    "egalitarian": [
+      7,
+      "a. 平等主义的"
+    ],
+    "elite": [
+      6,
+      "精华；精锐"
+    ],
+    "encompass": [
+      6,
+      "t. 围绕；完成",
+      "encompasses"
+    ],
+    "endeavor": [
+      6,
+      "努力；尽力",
+      "endeavors"
+    ],
+    "enhance": [
+      6,
+      "t. 提高；加强"
+    ],
+    "entail": [
+      6,
+      "t. 使成为必需；需要",
+      "entails"
+    ],
+    "envision": [
+      8,
+      "t. 想象；预想"
+    ],
+    "equality": [
+      6,
+      "平等；均匀"
+    ],
+    "fashionable": [
+      6,
+      "a. 时髦的；上流社会的"
+    ],
+    "feeble": [
+      7,
+      "a. 微弱的；衰弱的"
+    ],
+    "feedback": [
+      6,
+      "反馈；反应"
+    ],
+    "fledgling": [
+      8,
+      "羽毛初长的雏鸟；刚会飞的幼鸟"
+    ],
+    "fluctuation": [
+      7,
+      "变动；波动"
+    ],
+    "forge": [
+      6,
+      "熔炉；铁工厂"
+    ],
+    "genetically": [
+      7,
+      "创始；遗传学"
+    ],
+    "genetics": [
+      7,
+      "遗传学"
+    ],
+    "governance": [
+      7,
+      "统治；统辖"
+    ],
+    "gratification": [
+      8,
+      "令人满足的事(或物)；满足"
+    ],
+    "implication": [
+      6,
+      "牵连；含义",
+      "implications"
+    ],
+    "inborn": [
+      9,
+      "a. 天生的；先天的"
+    ],
+    "inevitably": [
+      6,
+      "不可避免地"
+    ],
+    "inhabitant": [
+      6,
+      "居民；居住者",
+      "inhabitants"
+    ],
+    "integrate": [
+      6,
+      "t. 综合；使完整",
+      "integrated"
+    ],
+    "intellectual": [
+      6,
+      "有知识者；知识分子"
+    ],
+    "intricate": [
+      7,
+      "a. 复杂的；错综的"
+    ],
+    "leadership": [
+      6,
+      "领导能力；领导阶层"
+    ],
+    "leakage": [
+      8,
+      "漏；漏出物",
+      "leakages"
+    ],
+    "legislation": [
+      6,
+      "立法；法律"
+    ],
+    "liberate": [
+      7,
+      "t. 解放；释放",
+      "liberated"
+    ],
+    "meaningfully": [
+      8,
+      "意味深长地"
+    ],
+    "monotonous": [
+      8,
+      "a. 单调的；无变化的"
+    ],
+    "naive": [
+      6,
+      "a. 天真的；纯真的"
+    ],
+    "neurology": [
+      9,
+      "神经病学"
+    ],
+    "noteworthy": [
+      7,
+      "a. 值得注目的；显著的"
+    ],
+    "numerical": [
+      7,
+      "a. 数字的；数值的"
+    ],
+    "organizational": [
+      6,
+      "a. 组织的"
+    ],
+    "overburden": [
+      8,
+      "t. 装载过多；负担过多",
+      "overburdened"
+    ],
+    "overshadow": [
+      7,
+      "t. 遮阴；使阴暗",
+      "overshadowed"
+    ],
+    "parachute": [
+      7,
+      "降落伞"
+    ],
+    "passive": [
+      6,
+      "a. 消极的；被动的"
+    ],
+    "penalty": [
+      6,
+      "处罚；刑罚"
+    ],
+    "perspective": [
+      6,
+      "远景；透视感"
+    ],
+    "phenomenon": [
+      6,
+      "现象；迹象"
+    ],
+    "philosopher": [
+      6,
+      "哲学家；哲人",
+      "philosophers"
+    ],
+    "policymaker": [
+      8,
+      "政策制定者；决策人",
+      "policymakers"
+    ],
+    "portuguese": [
+      7,
+      "葡萄牙人；葡萄牙语"
+    ],
+    "preferable": [
+      7,
+      "a. 更可取的；更好的"
+    ],
+    "profoundly": [
+      7,
+      "深深地；深切地"
+    ],
+    "psychologist": [
+      6,
+      "心理学家",
+      "psychologists"
+    ],
+    "psychology": [
+      6,
+      "心理学；心理状态"
+    ],
+    "rally": [
+      6,
+      "重振旗鼓；集合",
+      "rallying"
+    ],
+    "random": [
+      6,
+      "随意；随机"
+    ],
+    "redundancy": [
+      7,
+      "过多；冗长"
+    ],
+    "regime": [
+      6,
+      "政权；当权期间"
+    ],
+    "revenue": [
+      6,
+      "收入；岁入"
+    ],
+    "sentiment": [
+      6,
+      "感情；感伤",
+      "sentiments"
+    ],
+    "setback": [
+      7,
+      "挫折；退步",
+      "setbacks"
+    ],
+    "shortcoming": [
+      7,
+      "缺点；短处",
+      "shortcomings"
+    ],
+    "significance": [
+      6,
+      "重要性；意义"
+    ],
+    "sovereign": [
+      7,
+      "元首；独立国"
+    ],
+    "springtime": [
+      8,
+      "春天；春季"
+    ],
+    "standardized": [
+      7,
+      "a. 标准化的；标准的"
+    ],
+    "stanford-binet": [
+      9,
+      "斯坦福一比奈"
+    ],
+    "startle": [
+      7,
+      "惊愕；惊恐",
+      "startling"
+    ],
+    "statistical": [
+      6,
+      "a. 统计的；统计上的"
+    ],
+    "statistics": [
+      6,
+      "统计学；统计资料"
+    ],
+    "steelworker": [
+      9,
+      "炼钢工人",
+      "steelworkers"
+    ],
+    "supplement": [
+      6,
+      "补充物；增刊"
+    ],
+    "sustain": [
+      6,
+      "t. 承受；支持",
+      "sustained"
+    ],
+    "temper": [
+      6,
+      "(钢等的)硬度；脾气",
+      "tempered"
+    ],
+    "testify": [
+      6,
+      "证明；作证"
+    ],
+    "tournament": [
+      6,
+      "比赛；竞赛"
+    ],
+    "traditionally": [
+      6,
+      "传统上；传说上"
+    ],
+    "trait": [
+      6,
+      "特征；特性"
+    ],
+    "transition": [
+      6,
+      "转变；转换"
+    ],
+    "tribute": [
+      6,
+      "贡物；礼物"
+    ],
+    "understandably": [
+      7,
+      "可懂；可了解"
+    ],
+    "unreadiness": [
+      9,
+      "没预备；不敏捷"
+    ],
+    "verbal": [
+      6,
+      "a. 用言辞的；言语的"
+    ],
+    "vulnerability": [
+      7,
+      "易受伤；易受责难",
+      "vulnerabilities"
+    ]
+  }
 }

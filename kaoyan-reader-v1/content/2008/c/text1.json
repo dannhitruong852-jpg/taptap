@@ -1,0 +1,876 @@
+{
+  "year": 2008,
+  "section_type": "reading",
+  "article_id": "text1",
+  "source_sha256": "418a6a8a9c7396977fe3e3baaf6d292b786d51a1acccc2e66df5e4b029f1f9de",
+  "source_pages": [
+    3,
+    4
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "02",
+  "article_context": "性别差异与压力反应。文章先从生理反应解释女性对压力的易感性，再转向女性承担更多、更加长期和重复的人际压力，最后以单亲母亲经历落到现实生活。语气理性、同理但不过度煽情，因果与对比处清晰。",
+  "article": {
+    "year": 2008,
+    "section": "text1",
+    "title": "阅读一 · 女性为何更易受到长期压力影响",
+    "background": "性别差异与压力反应。文章先从生理反应解释女性对压力的易感性，再转向女性承担更多、更加长期和重复的人际压力，最后以单亲母亲经历落到现实生活。语气理性、同理但不过度煽情，因果与对比处清晰。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "While still catching up to men in some spheres of modern life, women appear to be way ahead in at least one undesirable category.",
+      "zh": "尽管在现代生活的一些领域女性仍在追赶男性，但至少在一个并不令人羡慕的方面，女性似乎远远走在了前面。",
+      "vocab": [
+        {
+          "word": "undesirable",
+          "lemma": "undesirable",
+          "level": 7,
+          "meaning": "a. 不受欢迎的；不合乎社会道德标准的",
+          "start": 108,
+          "end": 119
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "catching up to men",
+        "undesirable category"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "While still catching up to men in some spheres of modern life, women appear to be way ahead in at least one undesirable category.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text1/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "‘Women are particularly susceptible to developing depression and anxiety disorders in response to stress compared to men,’ according to Dr. Yehuda, chief psychiatrist at New York's Veterans Administration Hospital.",
+      "zh": "纽约退伍军人管理局医院精神科主任耶胡达博士指出：“与男性相比，女性在面对压力时尤其容易出现抑郁和焦虑障碍。”",
+      "vocab": [
+        {
+          "word": "susceptible",
+          "lemma": "susceptible",
+          "level": 7,
+          "meaning": "a. 易受影响的；易感动的",
+          "start": 24,
+          "end": 35
+        },
+        {
+          "word": "depression",
+          "lemma": "depression",
+          "level": 6,
+          "meaning": "不景气；消沉",
+          "start": 50,
+          "end": 60
+        },
+        {
+          "word": "psychiatrist",
+          "lemma": "psychiatrist",
+          "level": 6,
+          "meaning": "精神病医生；精神病学家",
+          "start": 154,
+          "end": 166
+        },
+        {
+          "word": "Veterans",
+          "lemma": "veteran",
+          "level": 6,
+          "meaning": "老手；退伍军人",
+          "start": 181,
+          "end": 189
+        },
+        {
+          "word": "Administration",
+          "lemma": "administration",
+          "level": 6,
+          "meaning": "行政；管理",
+          "start": 190,
+          "end": 204
+        }
+      ],
+      "discourse_function": "qualify_quote",
+      "prosody_focus": [
+        "particularly susceptible",
+        "depression and anxiety disorders"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "‘Women are particularly susceptible to developing depression and anxiety disorders in response to stress compared to men,’ according to Dr. Yehuda, chief psychiatrist at New York's Veterans Administration Hospital.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text1/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 2,
+      "en": "Studies of both animals and humans have shown that sex hormones somehow affect the stress response, causing females under stress to produce more of the trigger chemicals than do males under the same conditions.",
+      "zh": "对动物和人类的研究都表明，性激素会以某种方式影响压力反应，使处于压力中的雌性个体比相同条件下的雄性产生更多触发压力反应的化学物质。",
+      "vocab": [
+        {
+          "word": "trigger",
+          "lemma": "trigger",
+          "level": 6,
+          "meaning": "触发器；扳机",
+          "start": 152,
+          "end": 159
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "sex hormones",
+        "stress response",
+        "more of the trigger chemicals"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Studies of both animals and humans have shown that sex hormones somehow affect the stress response, causing females under stress to produce more of the trigger chemicals than do males under the same conditions.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text1/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "In several of the studies, when stressed-out female rats had their ovaries removed, their chemical responses became equal to those of the males.",
+      "zh": "在其中几项研究中，当处于压力状态的雌鼠被摘除卵巢后，它们的化学反应就变得与雄鼠相同。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "ovaries removed",
+        "equal to those of the males"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "In several of the studies, when stressed-out female rats had their ovaries removed, their chemical responses became equal to those of the males.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text1/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 3,
+      "en": "Adding to a woman's increased dose of stress chemicals are her increased ‘opportunities’ for stress.",
+      "zh": "除了体内会产生更多压力相关化学物质之外，女性遭遇压力的“机会”也更多。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [
+        "increased dose",
+        "increased opportunities"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Adding to a woman's increased dose of stress chemicals are her increased ‘opportunities’ for stress.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text1/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 3,
+      "en": "‘It's not necessarily that women don't cope as well.",
+      "zh": "“并不一定是女性更不善于应对压力。",
+      "vocab": [],
+      "discourse_function": "qualify_quote",
+      "prosody_focus": [
+        "not necessarily",
+        "don't cope as well"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "‘It's not necessarily that women don't cope as well.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text1/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 3,
+      "en": "It's just that they have so much more to cope with,’ says Dr. Yehuda.",
+      "zh": "问题只是，她们需要应付的事情实在多得多。”耶胡达博士说。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "so much more to cope with"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "It's just that they have so much more to cope with,’ says Dr. Yehuda.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text1/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 3,
+      "en": "‘Their capacity for tolerating stress may even be greater than men's,’ she observes, ‘it's just that they're dealing with so many more things that they become worn out from it more visibly and sooner.’",
+      "zh": "她指出：“女性承受压力的能力甚至可能比男性更强，只是她们同时要处理的事情太多，所以压力带来的疲惫会更早、更明显地表现出来。”",
+      "vocab": [
+        {
+          "word": "tolerating",
+          "lemma": "tolerate",
+          "level": 6,
+          "meaning": "t. 宽容；容许",
+          "start": 20,
+          "end": 30
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "may even be greater",
+        "so many more things",
+        "more visibly and sooner"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "‘Their capacity for tolerating stress may even be greater than men's,’ she observes, ‘it's just that they're dealing with so many more things that they become worn out from it more visibly and sooner.’",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text1/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 4,
+      "en": "Dr. Yehuda notes another difference between the sexes.",
+      "zh": "耶胡达博士还指出了男女之间的另一个差异。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [
+        "another difference"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "Dr. Yehuda notes another difference between the sexes.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text1/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 4,
+      "en": "‘I think that the kinds of things that women are exposed to tend to be in more of a chronic or repeated nature.",
+      "zh": "“我认为，女性所面对的事情往往更具有长期性或反复性。",
+      "vocab": [
+        {
+          "word": "chronic",
+          "lemma": "chronic",
+          "level": 6,
+          "meaning": "a. 慢性的；习惯性的",
+          "start": 84,
+          "end": 91
+        }
+      ],
+      "discourse_function": "qualify_quote",
+      "prosody_focus": [
+        "chronic or repeated nature"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "‘I think that the kinds of things that women are exposed to tend to be in more of a chronic or repeated nature.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text1/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 4,
+      "en": "Men go to war and are exposed to combat stress.",
+      "zh": "男性会上战场，承受战争带来的压力。",
+      "vocab": [],
+      "discourse_function": "example",
+      "prosody_focus": [
+        "combat stress"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "Men go to war and are exposed to combat stress.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text1/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 4,
+      "en": "Men are exposed to more acts of random physical violence.",
+      "zh": "男性也更多地遭遇随机性的身体暴力。",
+      "vocab": [
+        {
+          "word": "random",
+          "lemma": "random",
+          "level": 6,
+          "meaning": "随意；随机",
+          "start": 32,
+          "end": 38
+        }
+      ],
+      "discourse_function": "example",
+      "prosody_focus": [
+        "random physical violence"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "Men are exposed to more acts of random physical violence.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text1/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 4,
+      "en": "The kinds of interpersonal violence that women are exposed to tend to be in domestic situations, by, unfortunately, parents or other family members, and they tend not to be one-shot deals.",
+      "zh": "而女性所遭遇的人际暴力往往发生在家庭环境中，施暴者不幸地常常是父母或其他家庭成员，而且这种暴力通常不是一次性的。",
+      "vocab": [
+        {
+          "word": "interpersonal",
+          "lemma": "interpersonal",
+          "level": 7,
+          "meaning": "a. 人与人之间的；人际(关系)的",
+          "start": 13,
+          "end": 26
+        },
+        {
+          "word": "unfortunately",
+          "lemma": "unfortunately",
+          "level": 6,
+          "meaning": "恐怕；不幸的是",
+          "start": 101,
+          "end": 114
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "interpersonal violence",
+        "domestic situations",
+        "not to be one-shot deals"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "The kinds of interpersonal violence that women are exposed to tend to be in domestic situations, by, unfortunately, parents or other family members, and they tend not to be one-shot deals.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text1/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 4,
+      "en": "The wear-and-tear that comes from these longer relationships can be quite devastating.’",
+      "zh": "这些长期关系造成的持续消耗可能具有相当大的破坏性。”",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "wear-and-tear",
+        "quite devastating"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "The wear-and-tear that comes from these longer relationships can be quite devastating.’",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text1/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 5,
+      "en": "Adeline Alvarez married at 18 and gave birth to a son, but was determined to finish college.",
+      "zh": "阿德琳·阿尔瓦雷斯18岁结婚并生下一个儿子，但她仍决心完成大学学业。",
+      "vocab": [],
+      "discourse_function": "story",
+      "prosody_focus": [
+        "married at 18",
+        "determined to finish college"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "Adeline Alvarez married at 18 and gave birth to a son, but was determined to finish college.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text1/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 5,
+      "en": "‘I struggled a lot to get the college degree.",
+      "zh": "“为了拿到大学学位，我付出了很多艰辛。",
+      "vocab": [],
+      "discourse_function": "story",
+      "prosody_focus": [
+        "struggled a lot"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "‘I struggled a lot to get the college degree.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text1/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 5,
+      "en": "I was living in so much frustration that that was my escape, to go to school, and get ahead and do better.’",
+      "zh": "那时我的生活充满挫折，去上学成了我的一种逃离方式，我想借此向前走，让生活变得更好。”",
+      "vocab": [
+        {
+          "word": "frustration",
+          "lemma": "frustration",
+          "level": 6,
+          "meaning": "挫折；顿挫",
+          "start": 24,
+          "end": 35
+        }
+      ],
+      "discourse_function": "story",
+      "prosody_focus": [
+        "so much frustration",
+        "my escape",
+        "get ahead"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "I was living in so much frustration that that was my escape, to go to school, and get ahead and do better.’",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text1/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 5,
+      "en": "Later, her marriage ended and she became a single mother.",
+      "zh": "后来，她的婚姻结束了，她成了一名单亲母亲。",
+      "vocab": [],
+      "discourse_function": "story",
+      "prosody_focus": [
+        "single mother"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "Later, her marriage ended and she became a single mother.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text1/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 5,
+      "en": "‘It's the hardest thing to take care of a teenager, have a job, pay the rent, pay the car payment, and pay the debt.",
+      "zh": "“一边照顾青春期的孩子，一边工作，还要付房租、车贷和债务，这实在是最艰难的事情。",
+      "vocab": [],
+      "discourse_function": "sequence",
+      "prosody_focus": [
+        "take care of a teenager",
+        "pay the rent",
+        "pay the debt"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "‘It's the hardest thing to take care of a teenager, have a job, pay the rent, pay the car payment, and pay the debt.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text1/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "paragraph": 5,
+      "en": "I lived from paycheck to paycheck.’",
+      "zh": "我的日子就是靠一张工资支票接着一张工资支票勉强维持。”",
+      "vocab": [
+        {
+          "word": "paycheck",
+          "lemma": "paycheck",
+          "level": 7,
+          "meaning": "付薪水的支票；薪水",
+          "start": 13,
+          "end": 21
+        },
+        {
+          "word": "paycheck",
+          "lemma": "paycheck",
+          "level": 7,
+          "meaning": "付薪水的支票；薪水",
+          "start": 25,
+          "end": 33
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "paycheck to paycheck"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s20-01",
+          "text": "I lived from paycheck to paycheck.’",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text1/s20-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "paragraph": 6,
+      "en": "Not everyone experiences the kinds of severe chronic stresses Alvarez describes.",
+      "zh": "并不是每个人都会经历阿尔瓦雷斯所描述的那种严重而长期的压力。",
+      "vocab": [
+        {
+          "word": "chronic",
+          "lemma": "chronic",
+          "level": 6,
+          "meaning": "a. 慢性的；习惯性的",
+          "start": 45,
+          "end": 52
+        }
+      ],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "Not everyone",
+        "severe chronic stresses"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s21-01",
+          "text": "Not everyone experiences the kinds of severe chronic stresses Alvarez describes.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text1/s21-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "paragraph": 6,
+      "en": "But most women today are coping with a lot of obligations, with few breaks, and feeling the strain.",
+      "zh": "但如今大多数女性都要承担许多责任，几乎没有喘息的机会，并因此感受到压力。",
+      "vocab": [
+        {
+          "word": "obligations",
+          "lemma": "obligation",
+          "level": 6,
+          "meaning": "义务；责任",
+          "start": 46,
+          "end": 57
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "a lot of obligations",
+        "few breaks",
+        "feeling the strain"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s22-01",
+          "text": "But most women today are coping with a lot of obligations, with few breaks, and feeling the strain.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text1/s22-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "paragraph": 6,
+      "en": "Alvarez's experience demonstrates the importance of finding ways to diffuse stress before it threatens your health and your ability to function.",
+      "zh": "阿尔瓦雷斯的经历说明，在压力威胁到健康和正常生活能力之前，找到缓解压力的方法十分重要。",
+      "vocab": [
+        {
+          "word": "demonstrates",
+          "lemma": "demonstrate",
+          "level": 6,
+          "meaning": "t. 示范；证明",
+          "start": 21,
+          "end": 33
+        },
+        {
+          "word": "diffuse",
+          "lemma": "diffuse",
+          "level": 7,
+          "meaning": "散播；传播",
+          "start": 68,
+          "end": 75
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "diffuse stress",
+        "before it threatens your health"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s23-01",
+          "text": "Alvarez's experience demonstrates the importance of finding ways to diffuse stress before it threatens your health and your ability to function.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text1/s23-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

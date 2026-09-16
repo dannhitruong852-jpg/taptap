@@ -1,0 +1,736 @@
+{
+  "year": 2008,
+  "section_type": "reading",
+  "article_id": "text4",
+  "source_sha256": "418a6a8a9c7396977fe3e3baaf6d292b786d51a1acccc2e66df5e4b029f1f9de",
+  "source_pages": [
+    9,
+    10
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "03",
+  "article_context": "美国建国史与奴隶制。文章从华盛顿鲜为人知的牙齿移植细节切入，转向历史学界对建国者、奴隶制与政治妥协的重新审视。保持克制、历史叙述感，在道德矛盾、制度利益和人物转变处加强重音。",
+  "article": {
+    "year": 2008,
+    "section": "text4",
+    "title": "阅读四 · 美国建国者与奴隶制的道德妥协",
+    "background": "美国建国史与奴隶制。文章从华盛顿鲜为人知的牙齿移植细节切入，转向历史学界对建国者、奴隶制与政治妥协的重新审视。保持克制、历史叙述感，在道德矛盾、制度利益和人物转变处加强重音。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "In 1784, five years before he became president of the United States, George Washington, 52, was nearly toothless.",
+      "zh": "1784年，也就是出任美国总统前五年，52岁的乔治·华盛顿几乎已经没有牙齿。",
+      "vocab": [],
+      "discourse_function": "story",
+      "prosody_focus": [
+        "1784",
+        "nearly toothless"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "In 1784, five years before he became president of the United States, George Washington, 52, was nearly toothless.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text4/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "So he hired a dentist to transplant nine teeth into his jaw—having extracted them from the mouths of his slaves.",
+      "zh": "于是，他雇了一名牙医，把九颗牙齿移植到自己的下颌中——这些牙齿是从他的奴隶口中拔下来的。",
+      "vocab": [
+        {
+          "word": "transplant",
+          "lemma": "transplant",
+          "level": 7,
+          "meaning": "t. 使移居；移植",
+          "start": 25,
+          "end": 35
+        },
+        {
+          "word": "extracted",
+          "lemma": "extract",
+          "level": 6,
+          "meaning": "榨出物；精汁",
+          "start": 67,
+          "end": 76
+        }
+      ],
+      "discourse_function": "story",
+      "prosody_focus": [
+        "nine teeth",
+        "from the mouths of his slaves"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "So he hired a dentist to transplant nine teeth into his jaw—having extracted them from the mouths of his slaves.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text4/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 2,
+      "en": "That's a far different image from the cherry-tree-chopping George most people remember from their history books.",
+      "zh": "这与大多数人从历史课本中记得的那个“砍樱桃树的乔治”形象大不相同。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "far different image"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "That's a far different image from the cherry-tree-chopping George most people remember from their history books.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text4/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "But recently, many historians have begun to focus on the roles slavery played in the lives of the founding generation.",
+      "zh": "但近年来，许多历史学家开始关注奴隶制在美国建国一代人的生活中所扮演的角色。",
+      "vocab": [
+        {
+          "word": "historians",
+          "lemma": "historian",
+          "level": 6,
+          "meaning": "历史学家；记事者",
+          "start": 19,
+          "end": 29
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": [
+        "focus on the roles slavery played"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "But recently, many historians have begun to focus on the roles slavery played in the lives of the founding generation.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text4/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "They have been spurred in part by DNA evidence made available in 1998, which almost certainly proved Thomas Jefferson had fathered at least one child with his slave Sally Hemings.",
+      "zh": "促使他们转向这一问题的原因之一，是1998年出现的 DNA 证据；这些证据几乎可以确定，托马斯·杰斐逊至少与其奴隶萨莉·海明斯生过一个孩子。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "DNA evidence",
+        "almost certainly proved"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "They have been spurred in part by DNA evidence made available in 1998, which almost certainly proved Thomas Jefferson had fathered at least one child with his slave Sally Hemings.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text4/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "And only over the past 30 years have scholars examined history from the bottom up.",
+      "zh": "而且，学者们也只是在过去30年里才开始从底层视角重新审视历史。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [
+        "past 30 years",
+        "from the bottom up"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "And only over the past 30 years have scholars examined history from the bottom up.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text4/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "Works of several historians reveal the moral compromises made by the nation's early leaders and the fragile nature of the country's infancy.",
+      "zh": "几位历史学家的著作揭示了美国早期领导人所作的道德妥协，以及这个国家初创时期的脆弱处境。",
+      "vocab": [
+        {
+          "word": "historians",
+          "lemma": "historian",
+          "level": 6,
+          "meaning": "历史学家；记事者",
+          "start": 17,
+          "end": 27
+        },
+        {
+          "word": "compromises",
+          "lemma": "compromise",
+          "level": 6,
+          "meaning": "妥协；折中",
+          "start": 45,
+          "end": 56
+        },
+        {
+          "word": "fragile",
+          "lemma": "fragile",
+          "level": 6,
+          "meaning": "a. 易碎的；脆的",
+          "start": 100,
+          "end": 107
+        },
+        {
+          "word": "infancy",
+          "lemma": "infancy",
+          "level": 7,
+          "meaning": "幼年；初期",
+          "start": 132,
+          "end": 139
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "moral compromises",
+        "fragile nature"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "Works of several historians reveal the moral compromises made by the nation's early leaders and the fragile nature of the country's infancy.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text4/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 2,
+      "en": "More significantly, they argue that many of the Founding Fathers knew slavery was wrong—and yet most did little to fight it.",
+      "zh": "更重要的是，他们认为，许多建国先贤明知奴隶制是错误的，却几乎没有真正采取行动去反对它。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "knew slavery was wrong",
+        "yet most did little"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "More significantly, they argue that many of the Founding Fathers knew slavery was wrong—and yet most did little to fight it.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text4/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 3,
+      "en": "More than anything, the historians say, the founders were hampered by the culture of their time.",
+      "zh": "历史学家认为，最重要的是，建国者受到了他们所处时代文化的束缚。",
+      "vocab": [
+        {
+          "word": "historians",
+          "lemma": "historian",
+          "level": 6,
+          "meaning": "历史学家；记事者",
+          "start": 24,
+          "end": 34
+        },
+        {
+          "word": "founders",
+          "lemma": "founder",
+          "level": 6,
+          "meaning": "创立者；建立者",
+          "start": 44,
+          "end": 52
+        },
+        {
+          "word": "hampered",
+          "lemma": "hamper",
+          "level": 7,
+          "meaning": "食篮；阻碍物",
+          "start": 58,
+          "end": 66
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "hampered by the culture of their time"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "More than anything, the historians say, the founders were hampered by the culture of their time.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text4/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 3,
+      "en": "While Washington and Jefferson privately expressed distaste for slavery, they also understood that it was part of the political and economic bedrock of the country they helped to create.",
+      "zh": "虽然华盛顿和杰斐逊私下都表达过对奴隶制的反感，但他们也明白，奴隶制是他们参与建立的这个国家政治和经济基础的一部分。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "expressed distaste",
+        "political and economic bedrock"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "While Washington and Jefferson privately expressed distaste for slavery, they also understood that it was part of the political and economic bedrock of the country they helped to create.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text4/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 4,
+      "en": "For one thing, the South could not afford to part with its slaves.",
+      "zh": "首先，南方在经济上承受不起失去奴隶的代价。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "could not afford to part with"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "For one thing, the South could not afford to part with its slaves.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text4/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 4,
+      "en": "Owning slaves was ‘like having a large bank account,’ says Wiencek, author of An Imperfect God: George Washington, His Slaves, and the Creation of America.",
+      "zh": "《不完美的上帝：乔治·华盛顿、他的奴隶与美国的创立》一书作者温塞克说，拥有奴隶“就像拥有一个大额银行账户”。",
+      "vocab": [],
+      "discourse_function": "compare",
+      "prosody_focus": [
+        "like having a large bank account"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "Owning slaves was ‘like having a large bank account,’ says Wiencek, author of An Imperfect God: George Washington, His Slaves, and the Creation of America.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text4/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 4,
+      "en": "The southern states would not have signed the Constitution without protections for the ‘peculiar institution,’ including a clause that counted a slave as three fifths of a man for purposes of congressional representation.",
+      "zh": "如果宪法没有为这种“特殊制度”提供保护，南方各州就不会签署宪法；其中一项条款甚至规定，在计算国会代表名额时，一名奴隶按五分之三个人计算。",
+      "vocab": [
+        {
+          "word": "Constitution",
+          "lemma": "constitution",
+          "level": 6,
+          "meaning": "构成；宪法",
+          "start": 46,
+          "end": 58
+        },
+        {
+          "word": "congressional",
+          "lemma": "congressional",
+          "level": 6,
+          "meaning": "a. 会议的；议会的",
+          "start": 192,
+          "end": 205
+        },
+        {
+          "word": "representation",
+          "lemma": "representation",
+          "level": 6,
+          "meaning": "表示法；表现",
+          "start": 206,
+          "end": 220
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "would not have signed",
+        "three fifths of a man"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "The southern states would not have signed the Constitution without protections for the ‘peculiar institution,’ including a clause that counted a slave as three fifths of a man for purposes of congressional representation.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text4/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 5,
+      "en": "And the statesmen's political lives depended on slavery.",
+      "zh": "而这些政治家的政治生涯同样依赖于奴隶制。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "political lives depended on slavery"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "And the statesmen's political lives depended on slavery.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text4/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 5,
+      "en": "The three-fifths formula handed Jefferson his narrow victory in the presidential election of 1800 by inflating the votes of the southern states in the Electoral College.",
+      "zh": "三分之五折算公式提高了南方各州在选举人团中的票数，从而帮助杰斐逊在1800年总统选举中险胜。",
+      "vocab": [
+        {
+          "word": "presidential",
+          "lemma": "presidential",
+          "level": 6,
+          "meaning": "a. 总统制的；总统的",
+          "start": 68,
+          "end": 80
+        },
+        {
+          "word": "inflating",
+          "lemma": "inflate",
+          "level": 7,
+          "meaning": "t. 使膨胀；使得意",
+          "start": 101,
+          "end": 110
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "three-fifths formula",
+        "narrow victory",
+        "Electoral College"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "The three-fifths formula handed Jefferson his narrow victory in the presidential election of 1800 by inflating the votes of the southern states in the Electoral College.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text4/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 5,
+      "en": "Once in office, Jefferson extended slavery with the Louisiana Purchase in 1803; the new land was carved into 13 states, including three slave states.",
+      "zh": "杰斐逊上台后又通过1803年的路易斯安那购地扩大了奴隶制；这片新领土后来被划分为13个州，其中有3个蓄奴州。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [
+        "Louisiana Purchase",
+        "13 states",
+        "three slave states"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "Once in office, Jefferson extended slavery with the Louisiana Purchase in 1803; the new land was carved into 13 states, including three slave states.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text4/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 6,
+      "en": "Still, Jefferson freed Hemings's children—though not Hemings herself or his approximately 150 other slaves.",
+      "zh": "尽管如此，杰斐逊还是释放了海明斯的孩子们——但并没有释放海明斯本人，也没有释放自己其余大约150名奴隶。",
+      "vocab": [
+        {
+          "word": "approximately",
+          "lemma": "approximately",
+          "level": 6,
+          "meaning": "大约；大致",
+          "start": 76,
+          "end": 89
+        }
+      ],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "Still",
+        "though not",
+        "150 other slaves"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "Still, Jefferson freed Hemings's children—though not Hemings herself or his approximately 150 other slaves.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text4/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 6,
+      "en": "Washington, who had begun to believe that all men were created equal after observing the bravery of the black soldiers during the Revolutionary War, overcame the strong opposition of his relatives to grant his slaves their freedom in his will.",
+      "zh": "华盛顿在独立战争期间目睹黑人士兵的英勇表现后，开始相信人人生而平等；后来他克服亲属的强烈反对，在遗嘱中给予自己的奴隶自由。",
+      "vocab": [
+        {
+          "word": "Revolutionary",
+          "lemma": "revolutionary",
+          "level": 6,
+          "meaning": "革命者；革命党人",
+          "start": 130,
+          "end": 143
+        }
+      ],
+      "discourse_function": "story",
+      "prosody_focus": [
+        "all men were created equal",
+        "black soldiers",
+        "grant his slaves their freedom"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "Washington, who had begun to believe that all men were created equal after observing the bravery of the black soldiers during the Revolutionary War, overcame the strong opposition of his relatives to grant his slaves their freedom in his will.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text4/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 6,
+      "en": "Only a decade earlier, such an act would have required legislative approval in Virginia.",
+      "zh": "而仅仅在十年前，这样的举动在弗吉尼亚还必须得到立法机关批准。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "Only a decade earlier",
+        "legislative approval"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "Only a decade earlier, such an act would have required legislative approval in Virginia.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text4/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

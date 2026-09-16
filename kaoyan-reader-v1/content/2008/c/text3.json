@@ -1,0 +1,802 @@
+{
+  "year": 2008,
+  "section_type": "reading",
+  "article_id": "text3",
+  "source_sha256": "418a6a8a9c7396977fe3e3baaf6d292b786d51a1acccc2e66df5e4b029f1f9de",
+  "source_pages": [
+    7,
+    8
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "02",
+  "article_context": "人体生长与遗传限制。文章先用 NBA 球员变高制造表面印象，再区分职业体育招募效应与普通美国人身高停滞，最后解释营养改善和遗传约束。语气科学、清晰，统计数据与反直觉结论处加强重音。",
+  "article": {
+    "year": 2008,
+    "section": "text3",
+    "title": "阅读三 · 美国人的身高已接近遗传上限",
+    "background": "人体生长与遗传限制。文章先用 NBA 球员变高制造表面印象，再区分职业体育招募效应与普通美国人身高停滞，最后解释营养改善和遗传约束。语气科学、清晰，统计数据与反直觉结论处加强重音。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "In the early 1960s Wilt Chamberlain was one of the only three players in the National Basketball Association (NBA) listed at over seven feet.",
+      "zh": "20世纪60年代初，威尔特·张伯伦是美国职业篮球联赛（NBA）中仅有的三名身高超过7英尺的球员之一。",
+      "vocab": [],
+      "discourse_function": "example",
+      "prosody_focus": [
+        "only three players",
+        "over seven feet"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "In the early 1960s Wilt Chamberlain was one of the only three players in the National Basketball Association (NBA) listed at over seven feet.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text3/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "If he had played last season, however, he would have been one of 42.",
+      "zh": "然而，如果他参加的是上一个赛季，他就只会是42名这类球员中的一员。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "however",
+        "one of 42"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "If he had played last season, however, he would have been one of 42.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text3/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "The bodies playing major professional sports have changed dramatically over the years, and managers have been more than willing to adjust team uniforms to fit the growing numbers of bigger, longer frames.",
+      "zh": "多年来，参加主要职业体育赛事的运动员体型发生了显著变化，管理者也非常愿意调整队服，以适应越来越多更高大、更修长的体型。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [
+        "changed dramatically",
+        "bigger, longer frames"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "The bodies playing major professional sports have changed dramatically over the years, and managers have been more than willing to adjust team uniforms to fit the growing numbers of bigger, longer frames.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text3/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "The trend in sports, though, may be obscuring an unrecognized reality: Americans have generally stopped growing.",
+      "zh": "不过，体育界的这一趋势可能掩盖了一个尚未被充分认识的事实：美国人的身高总体上已经停止增长。",
+      "vocab": [
+        {
+          "word": "obscuring",
+          "lemma": "obscure",
+          "level": 6,
+          "meaning": "a. 模糊的；昏暗的",
+          "start": 36,
+          "end": 45
+        },
+        {
+          "word": "unrecognized",
+          "lemma": "unrecognized",
+          "level": 8,
+          "meaning": "a. 未被认出的；未被认定的",
+          "start": 49,
+          "end": 61
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "obscuring",
+        "Americans have generally stopped growing"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "The trend in sports, though, may be obscuring an unrecognized reality: Americans have generally stopped growing.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text3/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "Though typically about two inches taller now than 140 years ago, today's people—especially those born to families who have lived in the U.S. for many generations—apparently reached their limit in the early 1960s.",
+      "zh": "尽管今天的人通常比140年前高约2英寸，但如今的人——尤其是那些家族已在美国生活多代的人——显然在20世纪60年代初就已接近身高极限。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "two inches taller",
+        "reached their limit"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Though typically about two inches taller now than 140 years ago, today's people—especially those born to families who have lived in the U.S. for many generations—apparently reached their limit in the early 1960s.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text3/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "And they aren't likely to get any taller.",
+      "zh": "而且他们今后也不太可能再变得更高。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "aren't likely to get any taller"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "And they aren't likely to get any taller.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text3/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "‘In the general population today, at this genetic, environmental level, we've pretty much gone as far as we can go,’ says anthropologist William Cameron Chumlea of Wright State University.",
+      "zh": "莱特州立大学人类学家威廉·卡梅伦·丘姆利亚说：“就今天普通人群所处的遗传和环境水平而言，我们基本已经走到极限了。”",
+      "vocab": [
+        {
+          "word": "anthropologist",
+          "lemma": "anthropologist",
+          "level": 7,
+          "meaning": "人类学家",
+          "start": 122,
+          "end": 136
+        }
+      ],
+      "discourse_function": "qualify_quote",
+      "prosody_focus": [
+        "genetic, environmental level",
+        "as far as we can go"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "‘In the general population today, at this genetic, environmental level, we've pretty much gone as far as we can go,’ says anthropologist William Cameron Chumlea of Wright State University.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text3/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 2,
+      "en": "In the case of NBA players, their increase in height appears to result from the increasingly common practice of recruiting players from all over the world.",
+      "zh": "至于 NBA 球员，他们身高上升似乎源于一种越来越普遍的做法：从世界各地招募球员。",
+      "vocab": [
+        {
+          "word": "recruiting",
+          "lemma": "recruit",
+          "level": 6,
+          "meaning": "新兵；新手",
+          "start": 112,
+          "end": 122
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "appears to result from",
+        "recruiting players from all over the world"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "In the case of NBA players, their increase in height appears to result from the increasingly common practice of recruiting players from all over the world.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text3/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 3,
+      "en": "Growth, which rarely continues beyond the age of 20, demands calories and nutrients—notably, protein—to feed expanding tissues.",
+      "zh": "人体生长很少会持续到20岁以后，而生长需要热量和营养物质——尤其是蛋白质——来供给不断扩张的组织。",
+      "vocab": [
+        {
+          "word": "nutrients",
+          "lemma": "nutrient",
+          "level": 6,
+          "meaning": "a. 营养的；滋养的",
+          "start": 74,
+          "end": 83
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "calories and nutrients",
+        "protein"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "Growth, which rarely continues beyond the age of 20, demands calories and nutrients—notably, protein—to feed expanding tissues.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text3/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 3,
+      "en": "At the start of the 20th century, under-nutrition and childhood infections got in the way.",
+      "zh": "20世纪初，营养不足和儿童期感染阻碍了身体生长。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [
+        "under-nutrition",
+        "childhood infections"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "At the start of the 20th century, under-nutrition and childhood infections got in the way.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text3/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 3,
+      "en": "But as diet and health improved, children and adolescents have, on average, increased in height by about an inch and a half every 20 years, a pattern known as the secular trend in height.",
+      "zh": "但随着饮食和健康状况改善，儿童和青少年的平均身高每20年约增加1.5英寸，这一规律被称为身高的长期趋势。",
+      "vocab": [
+        {
+          "word": "adolescents",
+          "lemma": "adolescent",
+          "level": 6,
+          "meaning": "a. 青春期的；青少年的",
+          "start": 46,
+          "end": 57
+        },
+        {
+          "word": "secular",
+          "lemma": "secular",
+          "level": 6,
+          "meaning": "修道院外的教士",
+          "start": 163,
+          "end": 170
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "diet and health improved",
+        "an inch and a half every 20 years",
+        "secular trend"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "But as diet and health improved, children and adolescents have, on average, increased in height by about an inch and a half every 20 years, a pattern known as the secular trend in height.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text3/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 3,
+      "en": "Yet according to the Centers for Disease Control and Prevention, average height—5'9\" for men, 5'4\" for women—hasn't really changed since 1960.",
+      "zh": "然而，根据美国疾病控制与预防中心的数据，男性平均身高5英尺9英寸、女性5英尺4英寸，这一水平自1960年以来其实并没有真正变化。",
+      "vocab": [
+        {
+          "word": "Prevention",
+          "lemma": "prevention",
+          "level": 6,
+          "meaning": "阻止；妨碍",
+          "start": 53,
+          "end": 63
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "hasn't really changed since 1960"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "Yet according to the Centers for Disease Control and Prevention, average height—5'9\" for men, 5'4\" for women—hasn't really changed since 1960.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text3/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 4,
+      "en": "Genetically speaking, there are advantages to avoiding substantial height.",
+      "zh": "从遗传角度看，避免过高的身材其实具有一定优势。",
+      "vocab": [
+        {
+          "word": "Genetically",
+          "lemma": "genetically",
+          "level": 7,
+          "meaning": "创始；遗传学",
+          "start": 0,
+          "end": 11
+        },
+        {
+          "word": "substantial",
+          "lemma": "substantial",
+          "level": 6,
+          "meaning": "重要材料(或事物)；有实际价值的东西",
+          "start": 55,
+          "end": 66
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": [
+        "Genetically speaking",
+        "advantages"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "Genetically speaking, there are advantages to avoiding substantial height.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text3/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 4,
+      "en": "During childbirth, larger babies have more difficulty passing through the birth canal.",
+      "zh": "分娩时，体型较大的婴儿更难通过产道。",
+      "vocab": [],
+      "discourse_function": "example",
+      "prosody_focus": [
+        "larger babies",
+        "birth canal"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "During childbirth, larger babies have more difficulty passing through the birth canal.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text3/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 4,
+      "en": "Moreover, even though humans have been upright for millions of years, our feet and back continue to struggle with bipedal posture and cannot easily withstand repeated strain imposed by oversize limbs.",
+      "zh": "此外，尽管人类已经直立行走了数百万年，我们的双脚和背部仍在承受双足姿势带来的负担，也难以轻松承受过长肢体所造成的反复压力。",
+      "vocab": [
+        {
+          "word": "upright",
+          "lemma": "upright",
+          "level": 7,
+          "meaning": "a. 正直的；诚实的",
+          "start": 39,
+          "end": 46
+        },
+        {
+          "word": "bipedal",
+          "lemma": "bipedal",
+          "level": 9,
+          "meaning": "[医] 两足的",
+          "start": 114,
+          "end": 121
+        },
+        {
+          "word": "withstand",
+          "lemma": "withstand",
+          "level": 7,
+          "meaning": "t. 抵住；顶住",
+          "start": 148,
+          "end": 157
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "bipedal posture",
+        "repeated strain",
+        "oversize limbs"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "Moreover, even though humans have been upright for millions of years, our feet and back continue to struggle with bipedal posture and cannot easily withstand repeated strain imposed by oversize limbs.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text3/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 4,
+      "en": "‘There are some real constraints that are set by the genetic architecture of the individual organism,’ says anthropologist William Leonard of Northwestern University.",
+      "zh": "西北大学人类学家威廉·伦纳德说：“个体自身的遗传结构确实设定了一些实际限制。”",
+      "vocab": [
+        {
+          "word": "constraints",
+          "lemma": "constraint",
+          "level": 6,
+          "meaning": "强制；约束",
+          "start": 21,
+          "end": 32
+        },
+        {
+          "word": "architecture",
+          "lemma": "architecture",
+          "level": 6,
+          "meaning": "建筑学；建筑式样",
+          "start": 61,
+          "end": 73
+        },
+        {
+          "word": "organism",
+          "lemma": "organism",
+          "level": 6,
+          "meaning": "生物；有机体",
+          "start": 92,
+          "end": 100
+        },
+        {
+          "word": "anthropologist",
+          "lemma": "anthropologist",
+          "level": 7,
+          "meaning": "人类学家",
+          "start": 108,
+          "end": 122
+        },
+        {
+          "word": "Northwestern",
+          "lemma": "northwestern",
+          "level": 8,
+          "meaning": "a. 在西北部的；西北方的",
+          "start": 142,
+          "end": 154
+        }
+      ],
+      "discourse_function": "qualify_quote",
+      "prosody_focus": [
+        "real constraints",
+        "genetic architecture"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "‘There are some real constraints that are set by the genetic architecture of the individual organism,’ says anthropologist William Leonard of Northwestern University.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text3/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 5,
+      "en": "Genetic maximums can change, but don't expect this to happen soon.",
+      "zh": "遗传意义上的最大值可以改变，但不要指望这种变化很快发生。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "can change",
+        "don't expect this to happen soon"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "Genetic maximums can change, but don't expect this to happen soon.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text3/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 5,
+      "en": "Claire C. Gordon, senior anthropologist at the Army Research Center in Natick, Mass., ensures that 90 percent of the uniforms and workstations fit recruits without alteration.",
+      "zh": "马萨诸塞州纳蒂克陆军研究中心的高级人类学家克莱尔·C·戈登负责确保90%的制服和工作台无需改动就能适合新兵。",
+      "vocab": [
+        {
+          "word": "anthropologist",
+          "lemma": "anthropologist",
+          "level": 7,
+          "meaning": "人类学家",
+          "start": 25,
+          "end": 39
+        },
+        {
+          "word": "recruits",
+          "lemma": "recruit",
+          "level": 6,
+          "meaning": "新兵；新手",
+          "start": 147,
+          "end": 155
+        },
+        {
+          "word": "alteration",
+          "lemma": "alteration",
+          "level": 7,
+          "meaning": "变更；改动",
+          "start": 164,
+          "end": 174
+        }
+      ],
+      "discourse_function": "report",
+      "prosody_focus": [
+        "90 percent",
+        "without alteration"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "Claire C. Gordon, senior anthropologist at the Army Research Center in Natick, Mass., ensures that 90 percent of the uniforms and workstations fit recruits without alteration.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text3/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 5,
+      "en": "She says that, unlike those for basketball, the length of military uniforms has not changed for some time.",
+      "zh": "她说，与篮球服不同，军服的长度已经有一段时间没有变化了。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "unlike those for basketball",
+        "has not changed"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "She says that, unlike those for basketball, the length of military uniforms has not changed for some time.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text3/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "paragraph": 5,
+      "en": "And if you need to predict human height in the near future to design a piece of equipment, Gordon says that by and large, ‘you could use today's data and feel fairly confident.’",
+      "zh": "戈登表示，如果为了设计设备而需要预测不久将来的人体身高，那么总体而言，“采用今天的数据就可以相当有把握”。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "use today's data",
+        "fairly confident"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s20-01",
+          "text": "And if you need to predict human height in the near future to design a piece of equipment, Gordon says that by and large, ‘you could use today's data and feel fairly confident.’",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2008/c-text3/s20-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

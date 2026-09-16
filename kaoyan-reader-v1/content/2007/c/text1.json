@@ -1,0 +1,716 @@
+{
+  "year": 2007,
+  "section_type": "reading",
+  "article_id": "text1",
+  "source_sha256": "b265c5fdf5ca4b165967cf096072624c6e118e40139e6a942fcf84ce9670a99a",
+  "source_pages": [
+    4,
+    5
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "02",
+  "article_context": "能力发展与刻意练习主题。由世界杯球员出生月份现象切入，以 Ericsson 的记忆训练研究说明专家表现更多来自刻意练习；结论处强调天赋被高估，以及专家是练出来的而非天生的。",
+  "article": {
+    "year": 2007,
+    "section": "text1",
+    "title": "阅读一 · 顶尖表现是练出来的",
+    "background": "能力发展与刻意练习主题。由世界杯球员出生月份现象切入，以 Ericsson 的记忆训练研究说明专家表现更多来自刻意练习；结论处强调天赋被高估，以及专家是练出来的而非天生的。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "If you were to examine the birth certificates of every soccer player in 2006's World Cup tournament, you would most likely find a noteworthy quirk: elite soccer players are more likely to have been born in the earlier months of the year than in the later months.",
+      "zh": "如果查看2006年世界杯所有足球运动员的出生证明，你很可能会发现一个值得注意的反常现象：顶尖足球运动员出生在年初几个月的概率，比出生在年末几个月更高。",
+      "vocab": [
+        {
+          "word": "tournament",
+          "lemma": "tournament",
+          "level": 6,
+          "meaning": "比赛；竞赛",
+          "start": 89,
+          "end": 99
+        },
+        {
+          "word": "noteworthy",
+          "lemma": "noteworthy",
+          "level": 7,
+          "meaning": "a. 值得注目的；显著的",
+          "start": 130,
+          "end": 140
+        },
+        {
+          "word": "elite",
+          "lemma": "elite",
+          "level": 6,
+          "meaning": "精华；精锐",
+          "start": 148,
+          "end": 153
+        }
+      ],
+      "discourse_function": "example",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "If you were to examine the birth certificates of every soccer player in 2006's World Cup tournament, you would most likely find a noteworthy quirk: elite soccer players are more likely to have been born in the earlier months of the year than in the later months.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text1/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "If you then examined the European national youth teams that feed the World Cup and professional ranks, you would find this strange phenomenon to be even more pronounced.",
+      "zh": "如果再查看那些为世界杯和职业联赛输送球员的欧洲国家青年队，你会发现这种奇怪现象更加明显。",
+      "vocab": [
+        {
+          "word": "phenomenon",
+          "lemma": "phenomenon",
+          "level": 6,
+          "meaning": "现象；迹象",
+          "start": 131,
+          "end": 141
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "If you then examined the European national youth teams that feed the World Cup and professional ranks, you would find this strange phenomenon to be even more pronounced.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text1/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 2,
+      "en": "What might account for this strange phenomenon?",
+      "zh": "这种奇怪现象究竟该如何解释？",
+      "vocab": [
+        {
+          "word": "phenomenon",
+          "lemma": "phenomenon",
+          "level": 6,
+          "meaning": "现象；迹象",
+          "start": 36,
+          "end": 46
+        }
+      ],
+      "discourse_function": "ask",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "What might account for this strange phenomenon?",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text1/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "Here are a few guesses: a) certain astrological signs confer superior soccer skills; b) winter-born babies tend to have higher oxygen capacity, which increases soccer stamina; c) soccer-mad parents are more likely to conceive children in springtime, at the annual peak of soccer mania; d) none of the above.",
+      "zh": "这里有几种猜测：某些星座会赋予人更强的足球技能；冬季出生的婴儿往往有更高的携氧能力，从而增强足球耐力；痴迷足球的父母更可能在春季孕育孩子，那正是一年中足球狂热的高峰；或者，以上说法都不对。",
+      "vocab": [
+        {
+          "word": "astrological",
+          "lemma": "astrological",
+          "level": 9,
+          "meaning": "a. 占星学的；占星术的",
+          "start": 35,
+          "end": 47
+        },
+        {
+          "word": "confer",
+          "lemma": "confer",
+          "level": 6,
+          "meaning": "t. 授予；带来",
+          "start": 54,
+          "end": 60
+        },
+        {
+          "word": "conceive",
+          "lemma": "conceive",
+          "level": 6,
+          "meaning": "t. 构思；认为",
+          "start": 217,
+          "end": 225
+        },
+        {
+          "word": "springtime",
+          "lemma": "springtime",
+          "level": 8,
+          "meaning": "春天；春季",
+          "start": 238,
+          "end": 248
+        }
+      ],
+      "discourse_function": "playful",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Here are a few guesses: a) certain astrological signs confer superior soccer skills; b) winter-born babies tend to have higher oxygen capacity, which increases soccer stamina; c) soccer-mad parents are more likely to conceive children in springtime, at the annual peak of soccer mania; d) none of the above.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text1/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 3,
+      "en": "Anders Ericsson, a 58-year-old psychology professor at Florida State University, says he believes strongly in \"none of the above.\"",
+      "zh": "佛罗里达州立大学58岁的心理学教授安德斯·埃里克森说，他坚信答案是“以上都不对”。",
+      "vocab": [
+        {
+          "word": "psychology",
+          "lemma": "psychology",
+          "level": 6,
+          "meaning": "心理学；心理状态",
+          "start": 31,
+          "end": 41
+        }
+      ],
+      "discourse_function": "resolve",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Anders Ericsson, a 58-year-old psychology professor at Florida State University, says he believes strongly in \"none of the above.\"",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text1/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 3,
+      "en": "Ericsson grew up in Sweden, and studied nuclear engineering until he realized he would have more opportunity to conduct his own research if he switched to psychology.",
+      "zh": "埃里克森在瑞典长大，最初学习核工程，后来意识到，如果转到心理学领域，他会有更多机会开展自己的研究。",
+      "vocab": [
+        {
+          "word": "psychology",
+          "lemma": "psychology",
+          "level": 6,
+          "meaning": "心理学；心理状态",
+          "start": 155,
+          "end": 165
+        }
+      ],
+      "discourse_function": "story",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "Ericsson grew up in Sweden, and studied nuclear engineering until he realized he would have more opportunity to conduct his own research if he switched to psychology.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text1/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 3,
+      "en": "His first experiment, nearly 30 years ago, involved memory: training a person to hear and then repeat a random series of numbers.",
+      "zh": "大约30年前，他的第一个实验研究的是记忆：训练一个人听取一串随机数字，然后把它们复述出来。",
+      "vocab": [
+        {
+          "word": "random",
+          "lemma": "random",
+          "level": 6,
+          "meaning": "随意；随机",
+          "start": 104,
+          "end": 110
+        }
+      ],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "His first experiment, nearly 30 years ago, involved memory: training a person to hear and then repeat a random series of numbers.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text1/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 3,
+      "en": "“With the first subject, after about 20 hours of training, his digit span had risen from 7 to 20,” Ericsson recalls.",
+      "zh": "埃里克森回忆说：“第一名受试者经过大约20小时训练后，数字记忆广度从7位提高到了20位。”",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "“With the first subject, after about 20 hours of training, his digit span had risen from 7 to 20,” Ericsson recalls.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text1/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 3,
+      "en": "\"He kept improving, and after about 200 hours of training he had risen to over 80 numbers.\"",
+      "zh": "“他还在不断进步，训练大约200小时后，已经能够记住80多个数字。”",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "\"He kept improving, and after about 200 hours of training he had risen to over 80 numbers.\"",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text1/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 4,
+      "en": "This success, coupled with later research showing that memory itself is not genetically determined, led Ericsson to conclude that the act of memorizing is more of a cognitive exercise than an intuitive one.",
+      "zh": "这一成功，加上后来表明记忆本身并非由遗传决定的研究，使埃里克森得出结论：记忆行为与其说是一种直觉活动，不如说是一种认知练习。",
+      "vocab": [
+        {
+          "word": "genetically",
+          "lemma": "genetically",
+          "level": 7,
+          "meaning": "创始；遗传学",
+          "start": 76,
+          "end": 87
+        },
+        {
+          "word": "cognitive",
+          "lemma": "cognitive",
+          "level": 6,
+          "meaning": "a. 认知的；认识的",
+          "start": 165,
+          "end": 174
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "This success, coupled with later research showing that memory itself is not genetically determined, led Ericsson to conclude that the act of memorizing is more of a cognitive exercise than an intuitive one.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text1/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 4,
+      "en": "In other words, whatever inborn differences two people may exhibit in their abilities to memorize, those differences are swamped by how well each person \"encodes\" the information.",
+      "zh": "换句话说，不管两个人天生的记忆能力存在什么差异，这些差异都会被各自对信息进行“编码”的能力所淹没。",
+      "vocab": [
+        {
+          "word": "inborn",
+          "lemma": "inborn",
+          "level": 9,
+          "meaning": "a. 天生的；先天的",
+          "start": 25,
+          "end": 31
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "In other words, whatever inborn differences two people may exhibit in their abilities to memorize, those differences are swamped by how well each person \"encodes\" the information.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text1/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 4,
+      "en": "And the best way to learn how to encode information meaningfully, Ericsson determined, was a process known as deliberate practice.",
+      "zh": "埃里克森认为，学会如何有意义地编码信息，最好的办法是一种被称为“刻意练习”的过程。",
+      "vocab": [
+        {
+          "word": "meaningfully",
+          "lemma": "meaningfully",
+          "level": 8,
+          "meaning": "意味深长地",
+          "start": 52,
+          "end": 64
+        },
+        {
+          "word": "deliberate",
+          "lemma": "deliberate",
+          "level": 6,
+          "meaning": "a. 深思熟虑的；故意的",
+          "start": 110,
+          "end": 120
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "And the best way to learn how to encode information meaningfully, Ericsson determined, was a process known as deliberate practice.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text1/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 4,
+      "en": "Deliberate practice entails more than simply repeating a task.",
+      "zh": "刻意练习绝不只是简单地重复一项任务。",
+      "vocab": [
+        {
+          "word": "Deliberate",
+          "lemma": "deliberate",
+          "level": 6,
+          "meaning": "a. 深思熟虑的；故意的",
+          "start": 0,
+          "end": 10
+        },
+        {
+          "word": "entails",
+          "lemma": "entail",
+          "level": 6,
+          "meaning": "t. 使成为必需；需要",
+          "start": 20,
+          "end": 27
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "Deliberate practice entails more than simply repeating a task.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text1/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 4,
+      "en": "Rather, it involves setting specific goals, obtaining immediate feedback and concentrating as much on technique as on outcome.",
+      "zh": "它要求设定具体目标、获得即时反馈，并且对技术方法投入不亚于对结果的关注。",
+      "vocab": [
+        {
+          "word": "feedback",
+          "lemma": "feedback",
+          "level": 6,
+          "meaning": "反馈；反应",
+          "start": 64,
+          "end": 72
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "Rather, it involves setting specific goals, obtaining immediate feedback and concentrating as much on technique as on outcome.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text1/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 5,
+      "en": "Ericsson and his colleagues have thus taken to studying expert performers in a wide range of pursuits, including soccer.",
+      "zh": "因此，埃里克森及其同事开始研究包括足球在内的众多领域中的顶尖表现者。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "Ericsson and his colleagues have thus taken to studying expert performers in a wide range of pursuits, including soccer.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text1/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 5,
+      "en": "They gather all the data they can, not just performance statistics and biographical details but also the results of their own laboratory experiments with high achievers.",
+      "zh": "他们尽可能收集一切数据，不仅包括成绩统计和个人经历，还包括他们在实验室中对高成就者进行实验所得的结果。",
+      "vocab": [
+        {
+          "word": "statistics",
+          "lemma": "statistics",
+          "level": 6,
+          "meaning": "统计学；统计资料",
+          "start": 56,
+          "end": 66
+        },
+        {
+          "word": "biographical",
+          "lemma": "biographical",
+          "level": 7,
+          "meaning": "a. 传记的",
+          "start": 71,
+          "end": 83
+        }
+      ],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "They gather all the data they can, not just performance statistics and biographical details but also the results of their own laboratory experiments with high achievers.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text1/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 5,
+      "en": "Their work makes a rather startling assertion: the trait we commonly call talent is highly overrated.",
+      "zh": "他们的研究提出了一个颇为惊人的论断：我们通常所说的“天赋”被严重高估了。",
+      "vocab": [
+        {
+          "word": "startling",
+          "lemma": "startle",
+          "level": 7,
+          "meaning": "惊愕；惊恐",
+          "start": 26,
+          "end": 35
+        },
+        {
+          "word": "trait",
+          "lemma": "trait",
+          "level": 6,
+          "meaning": "特征；特性",
+          "start": 51,
+          "end": 56
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "Their work makes a rather startling assertion: the trait we commonly call talent is highly overrated.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text1/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 5,
+      "en": "Or, put another way, expert performers— whether in memory or surgery, ballet or computer programming— are nearly always made, not born.",
+      "zh": "换一种说法，无论是在记忆、外科手术、芭蕾还是计算机编程领域，专家级表现者几乎总是后天练成的，而不是天生的。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "Or, put another way, expert performers— whether in memory or surgery, ballet or computer programming— are nearly always made, not born.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-text1/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

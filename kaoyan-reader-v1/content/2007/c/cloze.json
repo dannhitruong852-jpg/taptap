@@ -1,0 +1,609 @@
+{
+  "year": 2007,
+  "section_type": "cloze",
+  "article_id": "cloze",
+  "source_sha256": "b265c5fdf5ca4b165967cf096072624c6e118e40139e6a942fcf84ce9670a99a",
+  "source_pages": [
+    1,
+    2
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "03",
+  "article_context": "历史叙述与制度分析。先交代拉美独立后的政治理想，再转向宗教、奴隶制与民主准备不足的现实张力；稳定、清楚，转折处有分量。",
+  "article": {
+    "year": 2007,
+    "section": "cloze",
+    "title": "完型 · 拉丁美洲独立后的政治理想与现实",
+    "background": "历史叙述与制度分析。先交代拉美独立后的政治理想，再转向宗教、奴隶制与民主准备不足的现实张力；稳定、清楚，转折处有分量。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "By 1830, the former Spanish and Portuguese colonies had become independent nations.",
+      "zh": "到1830年，原先的西班牙和葡萄牙殖民地已经成为独立国家。",
+      "vocab": [
+        {
+          "word": "Portuguese",
+          "lemma": "portuguese",
+          "level": 7,
+          "meaning": "葡萄牙人；葡萄牙语",
+          "start": 32,
+          "end": 42
+        },
+        {
+          "word": "colonies",
+          "lemma": "colony",
+          "level": 6,
+          "meaning": "殖民地；移民队",
+          "start": 43,
+          "end": 51
+        }
+      ],
+      "discourse_function": "report",
+      "prosody_focus": [
+        "By 1830",
+        "independent nations"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "By 1830, the former Spanish and Portuguese colonies had become independent nations.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-cloze/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "The roughly 20 million inhabitants of these nations looked hopefully to the future.",
+      "zh": "这些国家大约两千万居民满怀希望地展望未来。",
+      "vocab": [
+        {
+          "word": "inhabitants",
+          "lemma": "inhabitant",
+          "level": 6,
+          "meaning": "居民；居住者",
+          "start": 23,
+          "end": 34
+        }
+      ],
+      "discourse_function": "report",
+      "prosody_focus": [
+        "20 million inhabitants",
+        "hopefully"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "The roughly 20 million inhabitants of these nations looked hopefully to the future.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-cloze/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "Born in the crisis of the old regime and Iberian colonialism, many of the leaders of independence shared the ideals of representative government, careers open to talent, freedom of commerce and trade, the right to private property, and a belief in the individual as the basis of society.",
+      "zh": "许多独立运动领袖诞生于旧制度与伊比利亚殖民统治的危机之中，他们共同信奉一系列理想：代议制政府、凭才干获得职业机会、商业与贸易自由、私人财产权，以及把个人视为社会基础的观念。",
+      "vocab": [
+        {
+          "word": "regime",
+          "lemma": "regime",
+          "level": 6,
+          "meaning": "政权；当权期间",
+          "start": 30,
+          "end": 36
+        },
+        {
+          "word": "commerce",
+          "lemma": "commerce",
+          "level": 6,
+          "meaning": "商业；商务",
+          "start": 181,
+          "end": 189
+        }
+      ],
+      "discourse_function": "sequence",
+      "prosody_focus": [
+        "shared the ideals",
+        "right to private property"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Born in the crisis of the old regime and Iberian colonialism, many of the leaders of independence shared the ideals of representative government, careers open to talent, freedom of commerce and trade, the right to private property, and a belief in the individual as the basis of society.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-cloze/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 1,
+      "en": "Generally, there was a belief that the new nations should be sovereign and independent states, large enough to be economically viable and integrated by a common set of laws.",
+      "zh": "总体而言，人们相信这些新国家应当成为拥有主权的独立国家，规模要大到足以在经济上自立，并由一套共同法律整合起来。",
+      "vocab": [
+        {
+          "word": "sovereign",
+          "lemma": "sovereign",
+          "level": 7,
+          "meaning": "元首；独立国",
+          "start": 61,
+          "end": 70
+        },
+        {
+          "word": "economically",
+          "lemma": "economically",
+          "level": 6,
+          "meaning": "节约地；不浪费地",
+          "start": 114,
+          "end": 126
+        },
+        {
+          "word": "integrated",
+          "lemma": "integrate",
+          "level": 6,
+          "meaning": "t. 综合；使完整",
+          "start": 138,
+          "end": 148
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "sovereign and independent",
+        "economically viable"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Generally, there was a belief that the new nations should be sovereign and independent states, large enough to be economically viable and integrated by a common set of laws.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-cloze/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "On the issue of freedom of religion and the position of the Church, however, there was less agreement among the leadership.",
+      "zh": "然而，在宗教自由和教会地位的问题上，领导层内部的共识就少得多。",
+      "vocab": [
+        {
+          "word": "leadership",
+          "lemma": "leadership",
+          "level": 6,
+          "meaning": "领导能力；领导阶层",
+          "start": 112,
+          "end": 122
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "however",
+        "less agreement"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "On the issue of freedom of religion and the position of the Church, however, there was less agreement among the leadership.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-cloze/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "Roman Catholicism had been the state religion and the only one allowed by the Spanish crown.",
+      "zh": "罗马天主教原本是国教，也是西班牙王室唯一允许的宗教。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [
+        "state religion",
+        "only one allowed"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "Roman Catholicism had been the state religion and the only one allowed by the Spanish crown.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-cloze/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "While most leaders sought to maintain Catholicism as the official religion of the new states, some sought to end the exclusion of other faiths.",
+      "zh": "虽然大多数领导人希望继续把天主教维持为新国家的官方宗教，但也有人主张结束对其他信仰的排斥。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "While most leaders",
+        "some sought"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "While most leaders sought to maintain Catholicism as the official religion of the new states, some sought to end the exclusion of other faiths.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-cloze/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 2,
+      "en": "The defense of the Church became a rallying cry for the conservative forces.",
+      "zh": "捍卫教会由此成为保守势力的号召口号。",
+      "vocab": [
+        {
+          "word": "defense",
+          "lemma": "defense",
+          "level": 7,
+          "meaning": "防卫；防卫物",
+          "start": 4,
+          "end": 11
+        },
+        {
+          "word": "rallying",
+          "lemma": "rally",
+          "level": 6,
+          "meaning": "重振旗鼓；集合",
+          "start": 35,
+          "end": 43
+        },
+        {
+          "word": "conservative",
+          "lemma": "conservative",
+          "level": 6,
+          "meaning": "a. 保守的；守旧的",
+          "start": 56,
+          "end": 68
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "rallying cry",
+        "conservative forces"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "The defense of the Church became a rallying cry for the conservative forces.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-cloze/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 3,
+      "en": "The ideals of the early leaders of independence were often egalitarian, valuing equality of everything.",
+      "zh": "早期独立运动领袖的理想往往带有平等主义色彩，强调各方面的平等。",
+      "vocab": [
+        {
+          "word": "egalitarian",
+          "lemma": "egalitarian",
+          "level": 7,
+          "meaning": "a. 平等主义的",
+          "start": 59,
+          "end": 70
+        },
+        {
+          "word": "equality",
+          "lemma": "equality",
+          "level": 6,
+          "meaning": "平等；均匀",
+          "start": 80,
+          "end": 88
+        }
+      ],
+      "discourse_function": "report",
+      "prosody_focus": [
+        "egalitarian",
+        "equality"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "The ideals of the early leaders of independence were often egalitarian, valuing equality of everything.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-cloze/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 3,
+      "en": "Bolivar had received aid from Haiti and had promised in return to abolish slavery in the areas he liberated.",
+      "zh": "玻利瓦尔曾得到海地援助，并承诺作为回报，在自己解放的地区废除奴隶制。",
+      "vocab": [
+        {
+          "word": "abolish",
+          "lemma": "abolish",
+          "level": 6,
+          "meaning": "t. 废止；革除",
+          "start": 66,
+          "end": 73
+        },
+        {
+          "word": "liberated",
+          "lemma": "liberate",
+          "level": 7,
+          "meaning": "t. 解放；释放",
+          "start": 98,
+          "end": 107
+        }
+      ],
+      "discourse_function": "story",
+      "prosody_focus": [
+        "received aid from Haiti",
+        "abolish slavery"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "Bolivar had received aid from Haiti and had promised in return to abolish slavery in the areas he liberated.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-cloze/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 3,
+      "en": "By 1854, slavery had been abolished everywhere except Spain's remaining colonies.",
+      "zh": "到1854年，除西班牙仍保有的殖民地外，奴隶制已在各地被废除。",
+      "vocab": [
+        {
+          "word": "abolished",
+          "lemma": "abolish",
+          "level": 6,
+          "meaning": "t. 废止；革除",
+          "start": 26,
+          "end": 35
+        },
+        {
+          "word": "colonies",
+          "lemma": "colony",
+          "level": 6,
+          "meaning": "殖民地；移民队",
+          "start": 72,
+          "end": 80
+        }
+      ],
+      "discourse_function": "report",
+      "prosody_focus": [
+        "By 1854",
+        "abolished"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "By 1854, slavery had been abolished everywhere except Spain's remaining colonies.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-cloze/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 3,
+      "en": "Early promises to end Indian tribute and taxes on people of mixed origin came much slower because the new nations still needed the revenue such policies produced.",
+      "zh": "早期关于取消印第安人贡赋以及废除混血人口税收的承诺，落实得要慢得多，因为这些新国家仍需要这些政策带来的财政收入。",
+      "vocab": [
+        {
+          "word": "tribute",
+          "lemma": "tribute",
+          "level": 6,
+          "meaning": "贡物；礼物",
+          "start": 29,
+          "end": 36
+        },
+        {
+          "word": "revenue",
+          "lemma": "revenue",
+          "level": 6,
+          "meaning": "收入；岁入",
+          "start": 131,
+          "end": 138
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "came much slower",
+        "needed the revenue"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "Early promises to end Indian tribute and taxes on people of mixed origin came much slower because the new nations still needed the revenue such policies produced.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-cloze/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 3,
+      "en": "Egalitarian sentiments were often tempered by fears that the mass of the population was unprepared for self-rule and democracy.",
+      "zh": "平等主义情怀也常常受到一种担忧的制约：人们害怕广大民众尚未准备好实行自治与民主。",
+      "vocab": [
+        {
+          "word": "Egalitarian",
+          "lemma": "egalitarian",
+          "level": 7,
+          "meaning": "a. 平等主义的",
+          "start": 0,
+          "end": 11
+        },
+        {
+          "word": "sentiments",
+          "lemma": "sentiment",
+          "level": 6,
+          "meaning": "感情；感伤",
+          "start": 12,
+          "end": 22
+        },
+        {
+          "word": "tempered",
+          "lemma": "temper",
+          "level": 6,
+          "meaning": "(钢等的)硬度；脾气",
+          "start": 34,
+          "end": 42
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "tempered by fears",
+        "unprepared for self-rule"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "Egalitarian sentiments were often tempered by fears that the mass of the population was unprepared for self-rule and democracy.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2007/c-cloze/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

@@ -1,8 +1,415 @@
 {
-  "research": [5, "研究；调查"],
-  "evidence": [5, "证据；依据"],
-  "economic": [5, "经济的"],
-  "policy": [5, "政策；方针"],
-  "social": [4, "社会的；社交的"],
-  "public": [4, "公众；公共的"]
+  "year": 2008,
+  "scale": "project-curated-1-9-v1",
+  "qa": {
+    "status": "reviewed",
+    "review_method": "calibrated_against_shipped_2002_2006",
+    "selector_threshold": 0.75,
+    "dictionary_source": "ECDICT offline snapshot",
+    "lemmatization": "ECDICT exchange 0:lemma when available",
+    "human_review_claimed": false
+  },
+  "vocabulary": {
+    "abrupt": [
+      7,
+      "a. 突然的；唐突的"
+    ],
+    "abstract": [
+      6,
+      "a. 抽象的；深奥的"
+    ],
+    "administration": [
+      6,
+      "行政；管理"
+    ],
+    "adolescent": [
+      6,
+      "a. 青春期的；青少年的",
+      "adolescents"
+    ],
+    "affiliation": [
+      7,
+      "联系；从属关系",
+      "affiliations"
+    ],
+    "affirm": [
+      7,
+      "断言；确认"
+    ],
+    "alteration": [
+      7,
+      "变更；改动"
+    ],
+    "anthropologist": [
+      7,
+      "人类学家"
+    ],
+    "approximately": [
+      6,
+      "大约；大致"
+    ],
+    "architecture": [
+      6,
+      "建筑学；建筑式样"
+    ],
+    "arouse": [
+      6,
+      "t. 唤醒；鼓励",
+      "aroused"
+    ],
+    "assemble": [
+      6,
+      "t. 集合；收集"
+    ],
+    "assert": [
+      6,
+      "t. 主张；坚称",
+      "asserted"
+    ],
+    "bipedal": [
+      9,
+      "[医] 两足的"
+    ],
+    "chauvinistic": [
+      9,
+      "a. 本民族(或本性别)第一主义的；沙文主义的"
+    ],
+    "chronic": [
+      6,
+      "a. 慢性的；习惯性的"
+    ],
+    "clarify": [
+      6,
+      "i. 澄清；阐明"
+    ],
+    "clip": [
+      6,
+      "修剪；夹子"
+    ],
+    "compensate": [
+      6,
+      "偿还；补偿",
+      "compensating"
+    ],
+    "compose": [
+      6,
+      "t. 组成；写作"
+    ],
+    "compromise": [
+      6,
+      "妥协；折中",
+      "compromises"
+    ],
+    "congressional": [
+      6,
+      "a. 会议的；议会的"
+    ],
+    "constitution": [
+      6,
+      "构成；宪法"
+    ],
+    "constraint": [
+      6,
+      "强制；约束",
+      "constraints"
+    ],
+    "controversy": [
+      6,
+      "论争；辩论"
+    ],
+    "crab": [
+      7,
+      "螃蟹；偏航",
+      "crabbed"
+    ],
+    "critic": [
+      6,
+      "批评家；鉴定家",
+      "critics"
+    ],
+    "demonstrate": [
+      6,
+      "t. 示范；证明",
+      "demonstrates"
+    ],
+    "depression": [
+      6,
+      "不景气；消沉"
+    ],
+    "diffuse": [
+      7,
+      "散播；传播"
+    ],
+    "disproportionately": [
+      8,
+      "不匀称；不相称"
+    ],
+    "elite": [
+      6,
+      "精华；精锐",
+      "elites"
+    ],
+    "endeavor": [
+      6,
+      "努力；尽力"
+    ],
+    "evolutionary": [
+      6,
+      "a. 展开的；进化论的"
+    ],
+    "extract": [
+      6,
+      "榨出物；精汁",
+      "extracted"
+    ],
+    "far-reaching": [
+      9,
+      "a. 深远的；广泛的"
+    ],
+    "flexible": [
+      6,
+      "a. 易曲的；灵活的"
+    ],
+    "founder": [
+      6,
+      "创立者；建立者",
+      "founders"
+    ],
+    "fragile": [
+      6,
+      "a. 易碎的；脆的"
+    ],
+    "frustration": [
+      6,
+      "挫折；顿挫"
+    ],
+    "genetically": [
+      7,
+      "创始；遗传学"
+    ],
+    "grammatical": [
+      7,
+      "a. 语法的；合乎语法的"
+    ],
+    "hamper": [
+      7,
+      "食篮；阻碍物",
+      "hampered"
+    ],
+    "historian": [
+      6,
+      "历史学家；记事者",
+      "historians"
+    ],
+    "humanity": [
+      6,
+      "人性；人类"
+    ],
+    "hypothesis": [
+      6,
+      "假设",
+      "hypotheses"
+    ],
+    "infancy": [
+      7,
+      "幼年；初期"
+    ],
+    "inflate": [
+      7,
+      "t. 使膨胀；使得意",
+      "inflating"
+    ],
+    "injurious": [
+      8,
+      "a. 有害的；不公正的"
+    ],
+    "institutional": [
+      6,
+      "a. 制度的；公共机构的"
+    ],
+    "intellect": [
+      7,
+      "智力；出众的才华"
+    ],
+    "intellectual": [
+      6,
+      "有知识者；知识分子"
+    ],
+    "interpersonal": [
+      7,
+      "a. 人与人之间的；人际(关系)的"
+    ],
+    "mercilessly": [
+      8,
+      "无情地；残忍地"
+    ],
+    "northwestern": [
+      8,
+      "a. 在西北部的；西北方的"
+    ],
+    "nutrient": [
+      6,
+      "a. 营养的；滋养的",
+      "nutrients"
+    ],
+    "obligation": [
+      6,
+      "义务；责任",
+      "obligations"
+    ],
+    "obscure": [
+      6,
+      "a. 模糊的；昏暗的",
+      "obscuring"
+    ],
+    "organism": [
+      6,
+      "生物；有机体"
+    ],
+    "originate": [
+      6,
+      "t. 创始；发明",
+      "originated"
+    ],
+    "paradoxical": [
+      7,
+      "a. 似非而是的；矛盾的"
+    ],
+    "paycheck": [
+      7,
+      "付薪水的支票；薪水"
+    ],
+    "presidential": [
+      6,
+      "a. 总统制的；总统的"
+    ],
+    "prevention": [
+      6,
+      "阻止；妨碍"
+    ],
+    "psychiatrist": [
+      6,
+      "精神病医生；精神病学家"
+    ],
+    "railroad": [
+      7,
+      "铁路；铁路公司"
+    ],
+    "random": [
+      6,
+      "随意；随机"
+    ],
+    "recruit": [
+      6,
+      "新兵；新手",
+      "recruiting",
+      "recruits"
+    ],
+    "repository": [
+      7,
+      "贮藏所；贮物器",
+      "repositories"
+    ],
+    "representation": [
+      6,
+      "表示法；表现"
+    ],
+    "researcher": [
+      6,
+      "研究人员",
+      "researchers"
+    ],
+    "revolutionary": [
+      6,
+      "革命者；革命党人"
+    ],
+    "secular": [
+      6,
+      "修道院外的教士"
+    ],
+    "specialize": [
+      6,
+      "t. 使特殊化；列举",
+      "specializing"
+    ],
+    "straightforward": [
+      6,
+      "a. 笔直的；率直的"
+    ],
+    "subscribe": [
+      7,
+      "t. 捐献；签署"
+    ],
+    "substantial": [
+      6,
+      "重要材料(或事物)；有实际价值的东西"
+    ],
+    "substantiate": [
+      7,
+      "t. 使实体化；证实"
+    ],
+    "susceptible": [
+      7,
+      "a. 易受影响的；易感动的"
+    ],
+    "tentative": [
+      7,
+      "试验"
+    ],
+    "terrific": [
+      6,
+      "a. 非常好的；极端的"
+    ],
+    "thesis": [
+      6,
+      "论题；论文"
+    ],
+    "tolerate": [
+      6,
+      "t. 宽容；容许",
+      "tolerating"
+    ],
+    "transition": [
+      6,
+      "转变；转换",
+      "transitions"
+    ],
+    "transplant": [
+      7,
+      "t. 使移居；移植"
+    ],
+    "trigger": [
+      6,
+      "触发器；扳机"
+    ],
+    "undesirable": [
+      7,
+      "a. 不受欢迎的；不合乎社会道德标准的"
+    ],
+    "unfortunately": [
+      6,
+      "恐怕；不幸的是"
+    ],
+    "unrecognized": [
+      8,
+      "a. 未被认出的；未被认定的"
+    ],
+    "upright": [
+      7,
+      "a. 正直的；诚实的"
+    ],
+    "veteran": [
+      6,
+      "老手；退伍军人",
+      "veterans"
+    ],
+    "withstand": [
+      7,
+      "t. 抵住；顶住"
+    ],
+    "world-renowned": [
+      9,
+      "世界著名的；名满天下"
+    ]
+  }
 }

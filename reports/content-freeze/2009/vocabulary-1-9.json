@@ -1,8 +1,506 @@
 {
-  "research": [5, "研究；调查"],
-  "evidence": [5, "证据；依据"],
-  "economic": [5, "经济的"],
-  "policy": [5, "政策；方针"],
-  "social": [4, "社会的；社交的"],
-  "public": [4, "公众；公共的"]
+  "year": 2009,
+  "scale": "project-curated-1-9-v1",
+  "qa": {
+    "status": "reviewed",
+    "review_method": "calibrated_against_shipped_2002_2006",
+    "selector_threshold": 0.75,
+    "dictionary_source": "ECDICT offline snapshot",
+    "lemmatization": "ECDICT exchange 0:lemma when available",
+    "human_review_claimed": false
+  },
+  "vocabulary": {
+    "adoption": [
+      6,
+      "采用；采纳"
+    ],
+    "analytically": [
+      8,
+      "[机] 分析上"
+    ],
+    "ancestor": [
+      6,
+      "祖先；祖宗",
+      "ancestors"
+    ],
+    "ancestry": [
+      7,
+      "祖先；世系"
+    ],
+    "anthropologist": [
+      7,
+      "人类学家",
+      "anthropologists"
+    ],
+    "anthropology": [
+      7,
+      "人类学"
+    ],
+    "attribute": [
+      6,
+      "属性；标志",
+      "attributed"
+    ],
+    "by-product": [
+      9,
+      "副产品；额外收获"
+    ],
+    "characterize": [
+      6,
+      "t. 描绘...的特性；刻划...的性格",
+      "characterized"
+    ],
+    "chromosome": [
+      7,
+      "染色体"
+    ],
+    "civility": [
+      8,
+      "礼貌；礼仪"
+    ],
+    "coincide": [
+      6,
+      "i. 一致；符合",
+      "coinciding"
+    ],
+    "collaborative": [
+      7,
+      "a. 合作的；协作的"
+    ],
+    "collaboratively": [
+      9,
+      "合作地；协作地"
+    ],
+    "colonial": [
+      6,
+      "a. 殖民的；殖民地的"
+    ],
+    "colony": [
+      6,
+      "殖民地；移民队",
+      "colonies"
+    ],
+    "complexity": [
+      6,
+      "复杂；复杂性"
+    ],
+    "composition": [
+      6,
+      "作文；创作",
+      "compositions"
+    ],
+    "conditioning": [
+      7,
+      "调节；条件作用"
+    ],
+    "consciously": [
+      7,
+      "自觉地；有意识地"
+    ],
+    "consistently": [
+      6,
+      "坚固；坚实"
+    ],
+    "constrain": [
+      7,
+      "t. 强迫；限制"
+    ],
+    "constraint": [
+      6,
+      "强制；约束",
+      "constraints"
+    ],
+    "contrary": [
+      6,
+      "a. 相反的；矛盾的"
+    ],
+    "conventional": [
+      6,
+      "a. 传统的；习惯的"
+    ],
+    "counterpart": [
+      6,
+      "副本；复本",
+      "counterparts"
+    ],
+    "critic": [
+      6,
+      "批评家；鉴定家",
+      "critics"
+    ],
+    "decisive": [
+      6,
+      "a. 决定性的；坚定的"
+    ],
+    "dependent": [
+      6,
+      "依赖他人者",
+      "dependents"
+    ],
+    "deride": [
+      8,
+      "t. 嘲弄；嘲笑",
+      "derided"
+    ],
+    "diffuse": [
+      7,
+      "散播；传播",
+      "diffused"
+    ],
+    "diffusionism": [
+      9,
+      "弥漫说"
+    ],
+    "diffusionist": [
+      9,
+      "传流论者；(文化)传播论者",
+      "diffusionists"
+    ],
+    "disposition": [
+      7,
+      "性情；处置"
+    ],
+    "distinctive": [
+      6,
+      "a. 有特色的；出众的"
+    ],
+    "diverse": [
+      6,
+      "a. 不同的；变化多的"
+    ],
+    "dominant": [
+      6,
+      "a. 占优势的；支配的"
+    ],
+    "earnestness": [
+      9,
+      "认真；诚挚"
+    ],
+    "emigrate": [
+      7,
+      "(使)移居；(使)移民",
+      "emigrated"
+    ],
+    "episode": [
+      6,
+      "插曲；插话",
+      "episodes"
+    ],
+    "evaluation": [
+      6,
+      "评估；估价"
+    ],
+    "evolutionary": [
+      6,
+      "a. 展开的；进化论的"
+    ],
+    "evolve": [
+      6,
+      "i. 进展；进化",
+      "evolved"
+    ],
+    "faithfulness": [
+      8,
+      "忠诚；诚实"
+    ],
+    "fascination": [
+      7,
+      "令人着迷的事物；入迷"
+    ],
+    "foreseeable": [
+      7,
+      "a. 可预知的；能预测的"
+    ],
+    "fortunate": [
+      6,
+      "a. 幸运的；幸福的"
+    ],
+    "foster": [
+      6,
+      "a. 收养的；养育的",
+      "fosters"
+    ],
+    "frustration": [
+      6,
+      "挫折；顿挫",
+      "frustrations"
+    ],
+    "genealogist": [
+      9,
+      "系谱学者；系谱专家",
+      "genealogists"
+    ],
+    "geographic": [
+      7,
+      "a. 地理(学)的；地区(性)的"
+    ],
+    "great-grandparent": [
+      9,
+      "曾祖父或曾祖母；外曾祖父或外曾祖母",
+      "great-grandparents"
+    ],
+    "groundbreaking": [
+      8,
+      "a. 开创性的；突破性的"
+    ],
+    "humanity": [
+      6,
+      "人性；人类"
+    ],
+    "illiterate": [
+      8,
+      "文盲"
+    ],
+    "implication": [
+      6,
+      "牵连；含义"
+    ],
+    "inadequate": [
+      6,
+      "a. 不充分的；不适当的"
+    ],
+    "inconclusive": [
+      8,
+      "a. 非决定性的；无效果的"
+    ],
+    "incorrectly": [
+      7,
+      "错误地；不适当地"
+    ],
+    "inherit": [
+      6,
+      "t. 继承；遗传",
+      "inherited"
+    ],
+    "innovation": [
+      6,
+      "改革；创新",
+      "innovations"
+    ],
+    "innovational": [
+      9,
+      "a. 革新的；富有革新精神的"
+    ],
+    "innovative": [
+      6,
+      "a. 革新的；创新的"
+    ],
+    "innovatively": [
+      9,
+      "创新地"
+    ],
+    "intellectual": [
+      6,
+      "有知识者；知识分子",
+      "intellectuals"
+    ],
+    "intellectualize": [
+      9,
+      "t. 赋于理智",
+      "intellectualized"
+    ],
+    "ironically": [
+      6,
+      "冷嘲地；挖苦地"
+    ],
+    "lineage": [
+      7,
+      "血统；直系"
+    ],
+    "linguistics": [
+      7,
+      "语言学"
+    ],
+    "massachusetts": [
+      7,
+      "麻萨诸塞州"
+    ],
+    "metallurgy": [
+      9,
+      "冶金学；冶金术"
+    ],
+    "misunderstand": [
+      7,
+      "t. 误解；误会",
+      "misunderstood"
+    ],
+    "mitochondrial": [
+      9,
+      "线粒体的"
+    ],
+    "mock": [
+      7,
+      "嘲笑；戏弄",
+      "mocked"
+    ],
+    "naturalist": [
+      7,
+      "自然主义者"
+    ],
+    "originate": [
+      6,
+      "t. 创始；发明",
+      "originated"
+    ],
+    "over-the-counter": [
+      9,
+      "a. 不通过交易所而直接售给顾客的；不需处方可以出售的(药)"
+    ],
+    "paradoxical": [
+      7,
+      "a. 似非而是的；矛盾的"
+    ],
+    "particularism": [
+      9,
+      "完全忠于一种理论；特殊神宠论"
+    ],
+    "particularist": [
+      9,
+      "同上主义者"
+    ],
+    "passionate": [
+      6,
+      "a. 热情的；热烈的"
+    ],
+    "patent": [
+      6,
+      "专利权；许可证",
+      "patented"
+    ],
+    "perfection": [
+      7,
+      "完美；完成"
+    ],
+    "perpetuate": [
+      7,
+      "t. 使永存；使不朽",
+      "perpetuated"
+    ],
+    "phenomenon": [
+      6,
+      "现象；迹象",
+      "phenomena"
+    ],
+    "philosopher": [
+      6,
+      "哲学家；哲人"
+    ],
+    "precision": [
+      6,
+      "精密；精确"
+    ],
+    "preoccupation": [
+      7,
+      "抢先占据；先人之见",
+      "preoccupations"
+    ],
+    "prescription": [
+      6,
+      "处方；命令",
+      "prescriptions"
+    ],
+    "procedurally": [
+      9,
+      "procedural（程序上的）的变形；程序上地"
+    ],
+    "productive": [
+      6,
+      "a. 能生产的；有生产价值的"
+    ],
+    "productivity": [
+      6,
+      "生产力"
+    ],
+    "radically": [
+      6,
+      "根本地；完全地"
+    ],
+    "recession": [
+      6,
+      "后退；凹处"
+    ],
+    "reinforce": [
+      6,
+      "t. 加强；增援"
+    ],
+    "relationally": [
+      9,
+      "relational（有关系的；有联系的"
+    ],
+    "researcher": [
+      6,
+      "研究人员",
+      "researchers"
+    ],
+    "saliva": [
+      8,
+      "唾液；唾沫"
+    ],
+    "sermon": [
+      7,
+      "说教；启示",
+      "sermons"
+    ],
+    "skeptical": [
+      6,
+      "a. 怀疑论的；怀疑的"
+    ],
+    "solidarity": [
+      6,
+      "团结；团结一致"
+    ],
+    "standardized": [
+      7,
+      "a. 标准化的；标准的"
+    ],
+    "substantially": [
+      6,
+      "实质上；本质上"
+    ],
+    "superstitious": [
+      8,
+      "a. 迷信的"
+    ],
+    "systematically": [
+      7,
+      "有系统地；有组织地"
+    ],
+    "theological": [
+      6,
+      "a. 神学上的"
+    ],
+    "thoroughly": [
+      6,
+      "彻底地；绝对地"
+    ],
+    "unchangeable": [
+      9,
+      "a. 不变的；不能改变的"
+    ],
+    "undoubtedly": [
+      6,
+      "无疑；必定"
+    ],
+    "unfold": [
+      6,
+      "t. 展开；打开",
+      "unfolding"
+    ],
+    "uniqueness": [
+      8,
+      "[计] 唯一性"
+    ],
+    "unreflecting": [
+      9,
+      "a. 缺乏考虑的；无思想的"
+    ],
+    "virtuosity": [
+      8,
+      "精湛技巧；对古董等的爱好"
+    ],
+    "wistful": [
+      8,
+      "a. 渴望的；想望的"
+    ]
+  }
 }

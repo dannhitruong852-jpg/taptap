@@ -1,0 +1,512 @@
+{
+  "year": 2010,
+  "section_type": "cloze",
+  "article_id": "cloze",
+  "source_sha256": "55d401ca0ba03ceedaf32e9387eb0c07fbf354c467ff6eef0dc6a936c288ff6e",
+  "source_pages": [
+    1,
+    2
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "02",
+  "article_context": "公共卫生与全球猪流感疫情。文章按照疫情被认定、全球扩散、美国病例变化和疫苗供应展开，数字与公共卫生措施较密集，朗读保持新闻报道式的清晰和克制。",
+  "article": {
+    "year": 2010,
+    "section": "cloze",
+    "title": "完型 · 2009年猪流感全球疫情",
+    "background": "公共卫生与全球猪流感疫情。文章按照疫情被认定、全球扩散、美国病例变化和疫苗供应展开，数字与公共卫生措施较密集，朗读保持新闻报道式的清晰和克制。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "The outbreak of swine flu that was first detected in Mexico was declared a global epidemic on June 11, 2009.",
+      "zh": "最早在墨西哥发现的猪流感疫情，于2009年6月11日被宣布为全球性流行病。",
+      "vocab": [
+        {
+          "word": "outbreak",
+          "lemma": "outbreak",
+          "level": 6,
+          "meaning": "爆发；暴动",
+          "start": 4,
+          "end": 12
+        },
+        {
+          "word": "epidemic",
+          "lemma": "epidemic",
+          "level": 6,
+          "meaning": "传染病；流行病",
+          "start": 82,
+          "end": 90
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "The outbreak of swine flu that was first detected in Mexico was declared a global epidemic on June 11, 2009.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-cloze/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "It is the first worldwide epidemic designated by the World Health Organization in 41 years.",
+      "zh": "这是世界卫生组织41年来首次认定的全球性流行病。",
+      "vocab": [
+        {
+          "word": "epidemic",
+          "lemma": "epidemic",
+          "level": 6,
+          "meaning": "传染病；流行病",
+          "start": 26,
+          "end": 34
+        },
+        {
+          "word": "designated",
+          "lemma": "designate",
+          "level": 6,
+          "meaning": "t. 指定；指明",
+          "start": 35,
+          "end": 45
+        }
+      ],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "It is the first worldwide epidemic designated by the World Health Organization in 41 years.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-cloze/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 2,
+      "en": "The heightened alert prompted an emergency meeting with flu experts in Geneva that assembled after a sharp rise in cases in Australia, and rising numbers in Britain, Japan, Chile and elsewhere.",
+      "zh": "警戒级别的提高促使流感专家在日内瓦召开紧急会议；此前澳大利亚病例急剧增加，英国、日本、智利等地的病例数也在上升。",
+      "vocab": [
+        {
+          "word": "heightened",
+          "lemma": "heighten",
+          "level": 7,
+          "meaning": "t. 增高；提高",
+          "start": 4,
+          "end": 14
+        },
+        {
+          "word": "alert",
+          "lemma": "alert",
+          "level": 6,
+          "meaning": "a. 警觉的；灵敏的",
+          "start": 15,
+          "end": 20
+        },
+        {
+          "word": "assembled",
+          "lemma": "assemble",
+          "level": 6,
+          "meaning": "t. 集合；收集",
+          "start": 83,
+          "end": 92
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "The heightened alert prompted an emergency meeting with flu experts in Geneva that assembled after a sharp rise in cases in Australia, and rising numbers in Britain, Japan, Chile and elsewhere.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-cloze/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 3,
+      "en": "But the epidemic is “moderate” in severity, according to Margaret Chan, the organization’s director general, with the overwhelming majority of patients experiencing only mild symptoms and a full recovery, often in the absence of any medical treatment.",
+      "zh": "不过，世界卫生组织总干事陈冯富珍表示，这场疫情的严重程度“中等”，绝大多数患者只有轻微症状并能完全康复，而且往往无需任何医疗干预。",
+      "vocab": [
+        {
+          "word": "epidemic",
+          "lemma": "epidemic",
+          "level": 6,
+          "meaning": "传染病；流行病",
+          "start": 8,
+          "end": 16
+        },
+        {
+          "word": "overwhelming",
+          "lemma": "overwhelm",
+          "level": 6,
+          "meaning": "t. 淹没；受打击",
+          "start": 118,
+          "end": 130
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "But the epidemic is “moderate” in severity, according to Margaret Chan, the organization’s director general, with the overwhelming majority of patients experiencing only mild symptoms and a full recovery, often in the absence of any medical treatment.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-cloze/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 4,
+      "en": "The outbreak came to global notice in late April 2009, when Mexican authorities noted an unusually large number of hospitalizations and deaths among healthy adults.",
+      "zh": "2009年4月下旬，这场疫情开始引起全球关注，当时墨西哥当局注意到健康成年人中出现了异常大量的住院和死亡病例。",
+      "vocab": [
+        {
+          "word": "outbreak",
+          "lemma": "outbreak",
+          "level": 6,
+          "meaning": "爆发；暴动",
+          "start": 4,
+          "end": 12
+        },
+        {
+          "word": "hospitalizations",
+          "lemma": "hospitalization",
+          "level": 9,
+          "meaning": "医院收容；住院治疗",
+          "start": 115,
+          "end": 131
+        }
+      ],
+      "discourse_function": "sequence",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "The outbreak came to global notice in late April 2009, when Mexican authorities noted an unusually large number of hospitalizations and deaths among healthy adults.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-cloze/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 4,
+      "en": "As much of Mexico City shut down at the height of a panic, cases began to crop up in New York City, the southwestern United States and around the world.",
+      "zh": "在恐慌最严重时，墨西哥城大面积停摆；与此同时，纽约市、美国西南部以及世界各地开始陆续出现病例。",
+      "vocab": [
+        {
+          "word": "southwestern",
+          "lemma": "southwestern",
+          "level": 8,
+          "meaning": "a. 西南的；向西南的",
+          "start": 104,
+          "end": 116
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "As much of Mexico City shut down at the height of a panic, cases began to crop up in New York City, the southwestern United States and around the world.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-cloze/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 5,
+      "en": "In the United States, new cases seemed to fade as warmer weather arrived.",
+      "zh": "在美国，随着天气转暖，新增病例似乎逐渐减少。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "In the United States, new cases seemed to fade as warmer weather arrived.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-cloze/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 5,
+      "en": "But in late September 2009, officials reported there was significant flu activity in almost every state and that virtually all the samples tested are the new swine flu, also known as A/H1N1, not seasonal flu.",
+      "zh": "但到2009年9月下旬，官员报告说几乎每个州都有显著的流感活动，而且检测的样本几乎全部属于新型猪流感，即A/H1N1，而不是季节性流感。",
+      "vocab": [
+        {
+          "word": "significant",
+          "lemma": "significant",
+          "level": 6,
+          "meaning": "a. 重要的；有效的",
+          "start": 57,
+          "end": 68
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "But in late September 2009, officials reported there was significant flu activity in almost every state and that virtually all the samples tested are the new swine flu, also known as A/H1N1, not seasonal flu.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-cloze/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 5,
+      "en": "In the U.S., it has infected more than one million people, and caused more than 600 deaths and more than 6,000 hospitalizations.",
+      "zh": "在美国，它已经感染了100多万人，造成600多人死亡、6000多人住院。",
+      "vocab": [
+        {
+          "word": "hospitalizations",
+          "lemma": "hospitalization",
+          "level": 9,
+          "meaning": "医院收容；住院治疗",
+          "start": 111,
+          "end": 127
+        }
+      ],
+      "discourse_function": "statistic",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "In the U.S., it has infected more than one million people, and caused more than 600 deaths and more than 6,000 hospitalizations.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-cloze/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 6,
+      "en": "Federal health officials released Tamiflu for children from the national stockpile and began taking orders from the states for the new swine flu vaccine.",
+      "zh": "联邦卫生官员从国家储备中发放儿童用达菲，并开始接受各州对新型猪流感疫苗的订购。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "Federal health officials released Tamiflu for children from the national stockpile and began taking orders from the states for the new swine flu vaccine.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-cloze/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 6,
+      "en": "The new vaccine, which is different from the annual flu vaccine, is available ahead of expectations.",
+      "zh": "这种新疫苗不同于每年的季节性流感疫苗，其供应时间早于预期。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "The new vaccine, which is different from the annual flu vaccine, is available ahead of expectations.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-cloze/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 6,
+      "en": "More than three million doses were to be made available in early October 2009, though most of those initial doses were of the FluMist nasal spray type, which is not recommended for pregnant women, people over 50 or those with breathing difficulties, heart disease or several other problems.",
+      "zh": "2009年10月初将有300多万剂疫苗可供使用，不过其中大多数首批疫苗属于FluMist鼻喷剂型，不建议孕妇、50岁以上人群，以及患有呼吸困难、心脏病或其他若干疾病的人使用。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "More than three million doses were to be made available in early October 2009, though most of those initial doses were of the FluMist nasal spray type, which is not recommended for pregnant women, people over 50 or those with breathing difficulties, heart disease or several other problems.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-cloze/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 6,
+      "en": "But it was still possible to vaccinate people in other high-risk groups: health care workers, people caring for infants and healthy young people.",
+      "zh": "不过，仍然可以为其他高风险人群接种，包括医护人员、照料婴儿的人以及健康的年轻人。",
+      "vocab": [
+        {
+          "word": "vaccinate",
+          "lemma": "vaccinate",
+          "level": 8,
+          "meaning": "预防接种",
+          "start": 29,
+          "end": 38
+        },
+        {
+          "word": "infants",
+          "lemma": "infant",
+          "level": 6,
+          "meaning": "婴儿；儿童",
+          "start": 112,
+          "end": 119
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "But it was still possible to vaccinate people in other high-risk groups: health care workers, people caring for infants and healthy young people.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2010/c-cloze/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

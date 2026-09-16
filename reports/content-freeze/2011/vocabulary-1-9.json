@@ -1,8 +1,382 @@
 {
-  "reputation": [5, "声誉；名声"],
-  "compensation": [5, "报酬；补偿"],
-  "correlation": [5, "相关性；关联"],
-  "economic": [5, "经济的"],
-  "social": [4, "社会的；社交的"],
-  "public": [4, "公众；公共的"]
+  "year": 2011,
+  "scale": "project-curated-1-9-v1",
+  "qa": {
+    "status": "reviewed",
+    "review_method": "calibrated_against_shipped_2002_2006",
+    "selector_threshold": 0.75,
+    "dictionary_source": "ECDICT offline snapshot",
+    "lemmatization": "ECDICT exchange 0:lemma when available",
+    "human_review_claimed": false
+  },
+  "vocabulary": {
+    "abstract": [
+      6,
+      "a. 抽象的；深奥的"
+    ],
+    "abundance": [
+      6,
+      "丰富；充足"
+    ],
+    "administration": [
+      6,
+      "行政；管理"
+    ],
+    "aesthetic": [
+      6,
+      "a. 美学的；审美的"
+    ],
+    "air-conditioned": [
+      9,
+      "a. 备有空调设备的"
+    ],
+    "ambitious": [
+      6,
+      "a. 有野心的；抱负不凡的"
+    ],
+    "anonymity": [
+      7,
+      "匿名；姓氏不明"
+    ],
+    "applaud": [
+      7,
+      "拍手喝彩；称赞"
+    ],
+    "architect": [
+      6,
+      "建筑师；设计者",
+      "architects"
+    ],
+    "architectural": [
+      6,
+      "a. 有关建筑的；建筑学的"
+    ],
+    "architecture": [
+      6,
+      "建筑学；建筑式样"
+    ],
+    "authenticate": [
+      8,
+      "t. 证明可信；证实为真",
+      "authenticated"
+    ],
+    "benign": [
+      7,
+      "a. 善良的；良性的"
+    ],
+    "blunt": [
+      7,
+      "a. 钝的；坦率的"
+    ],
+    "celebrity": [
+      6,
+      "名声；名人"
+    ],
+    "charitable": [
+      7,
+      "a. 大慈大悲的；宽厚的"
+    ],
+    "cheerleader": [
+      9,
+      "啦啦队长",
+      "cheerleaders"
+    ],
+    "chronic": [
+      6,
+      "a. 慢性的；习惯性的"
+    ],
+    "chronicle": [
+      7,
+      "年代记；记录",
+      "chronicling"
+    ],
+    "comparable": [
+      6,
+      "a. 可比较的；比得上的"
+    ],
+    "compensation": [
+      6,
+      "补偿；赔偿金"
+    ],
+    "competitiveness": [
+      7,
+      "[经] 竞争"
+    ],
+    "completeness": [
+      8,
+      "完全"
+    ],
+    "compulsory": [
+      7,
+      "a. 被强制的；强迫的"
+    ],
+    "consumption": [
+      6,
+      "消费；消费量"
+    ],
+    "converge": [
+      7,
+      "i. 聚合；集中于一点"
+    ],
+    "cooperation": [
+      6,
+      "合作；协力"
+    ],
+    "correlation": [
+      6,
+      "相互关系；相关"
+    ],
+    "courageous": [
+      7,
+      "a. 勇敢的；大胆的"
+    ],
+    "credential": [
+      6,
+      "国书；凭据"
+    ],
+    "cyberspace": [
+      7,
+      "[计] 空间；网控空间"
+    ],
+    "depression": [
+      6,
+      "不景气；消沉"
+    ],
+    "desirable": [
+      6,
+      "a. 令人想望的；可取的"
+    ],
+    "disappearance": [
+      7,
+      "看不见；失踪",
+      "disappearances"
+    ],
+    "disintegration": [
+      7,
+      "瓦解"
+    ],
+    "distant": [
+      6,
+      "a. 远的；疏远的"
+    ],
+    "distinctive": [
+      6,
+      "a. 有特色的；出众的"
+    ],
+    "dominant": [
+      6,
+      "a. 占优势的；支配的"
+    ],
+    "ecosystem": [
+      7,
+      "生态系统"
+    ],
+    "efficiency": [
+      6,
+      "效率；效能"
+    ],
+    "emigrate": [
+      7,
+      "(使)移居；(使)移民",
+      "emigrated"
+    ],
+    "emission": [
+      6,
+      "发射；射出",
+      "emissions"
+    ],
+    "envision": [
+      8,
+      "t. 想象；预想",
+      "envisioned"
+    ],
+    "equivalent": [
+      6,
+      "同等物；等价物"
+    ],
+    "excessive": [
+      6,
+      "a. 过度的；过多的"
+    ],
+    "fitness": [
+      6,
+      "适合；合宜"
+    ],
+    "forthright": [
+      8,
+      "直率地；直接地"
+    ],
+    "globalisation": [
+      9,
+      "全球化；=globalization"
+    ],
+    "greenhouse": [
+      6,
+      "温室"
+    ],
+    "harmonisation": [
+      8,
+      "和谐；协调"
+    ],
+    "incentive": [
+      6,
+      "动机",
+      "incentives"
+    ],
+    "inconceivable": [
+      7,
+      "a. 不能想象的；想不到的"
+    ],
+    "infrastructure": [
+      6,
+      "基础结构；基础设施"
+    ],
+    "inhabit": [
+      6,
+      "t. 居住于；占据"
+    ],
+    "interference": [
+      6,
+      "冲突；干涉"
+    ],
+    "intervene": [
+      6,
+      "i. 插入；调停",
+      "intervening"
+    ],
+    "lawsuit": [
+      7,
+      "诉讼"
+    ],
+    "mechanical": [
+      6,
+      "a. 机械的；机械性的"
+    ],
+    "monetary": [
+      6,
+      "a. 货币的；金钱的"
+    ],
+    "navigate": [
+      7,
+      "i. 航行"
+    ],
+    "neighbor": [
+      6,
+      "邻居",
+      "neighbors"
+    ],
+    "neighborhood": [
+      9,
+      "附近；邻近",
+      "neighborhoods"
+    ],
+    "outlet": [
+      6,
+      "出口；发泄方法",
+      "outlets"
+    ],
+    "positively": [
+      6,
+      "明确地；肯定地"
+    ],
+    "probability": [
+      6,
+      "可能性；或然率"
+    ],
+    "prosperity": [
+      6,
+      "繁荣；茂盛"
+    ],
+    "psychiatrist": [
+      6,
+      "精神病医生；精神病学家",
+      "psychiatrists"
+    ],
+    "recession": [
+      6,
+      "后退；凹处"
+    ],
+    "redistribution": [
+      7,
+      "重新分配；再分发"
+    ],
+    "reliance": [
+      7,
+      "信任；信赖"
+    ],
+    "researcher": [
+      6,
+      "研究人员",
+      "researchers"
+    ],
+    "restraint": [
+      6,
+      "抑制；克制"
+    ],
+    "revenue": [
+      6,
+      "收入；岁入",
+      "revenues"
+    ],
+    "sanction": [
+      6,
+      "核准；制裁",
+      "sanctions"
+    ],
+    "self-sufficiency": [
+      9,
+      "自足；自负"
+    ],
+    "skepticism": [
+      7,
+      "怀疑论"
+    ],
+    "sophisticate": [
+      9,
+      "久经世故的人；精于...之道的人",
+      "sophisticated"
+    ],
+    "spokesperson": [
+      7,
+      "发言人；代言人"
+    ],
+    "stimulus": [
+      6,
+      "刺激；激励"
+    ],
+    "streetlight": [
+      9,
+      "街灯；路灯",
+      "streetlights"
+    ],
+    "subsequent": [
+      6,
+      "a. 后来的；接下去的"
+    ],
+    "subsequently": [
+      6,
+      "后来；随后"
+    ],
+    "subsidize": [
+      7,
+      "t. 补助；资助"
+    ],
+    "suggestive": [
+      7,
+      "a. 提示性的；影射的"
+    ],
+    "transaction": [
+      6,
+      "交易；办理",
+      "transactions"
+    ],
+    "uncompetitive": [
+      9,
+      "a. 无竞争力的"
+    ],
+    "vulnerable": [
+      6,
+      "a. 易受伤害的；有弱点的"
+    ]
+  }
 }

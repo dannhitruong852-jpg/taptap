@@ -1,8 +1,504 @@
 {
-  "research": [5, "研究；调查"],
-  "evidence": [5, "证据；依据"],
-  "economic": [5, "经济的"],
-  "policy": [5, "政策；方针"],
-  "social": [4, "社会的；社交的"],
-  "public": [4, "公众；公共的"]
+  "year": 2012,
+  "scale": "project-curated-1-9-v1",
+  "qa": {
+    "status": "reviewed",
+    "review_method": "calibrated_against_shipped_2002_2006",
+    "selector_threshold": 0.75,
+    "dictionary_source": "ECDICT offline snapshot",
+    "lemmatization": "ECDICT exchange 0:lemma when available",
+    "human_review_claimed": false
+  },
+  "vocabulary": {
+    "abbreviation": [
+      8,
+      "缩写词；缩写"
+    ],
+    "accomplish": [
+      6,
+      "t. 完成；达到",
+      "accomplished"
+    ],
+    "acknowledge": [
+      6,
+      "t. 承认；告知收悉",
+      "acknowledged"
+    ],
+    "across-the-board": [
+      9,
+      "a. 全面的；在固定时间内播送的"
+    ],
+    "administrator": [
+      6,
+      "管理人；行政官",
+      "administrators"
+    ],
+    "adventurism": [
+      9,
+      "冒险主义"
+    ],
+    "agitate": [
+      8,
+      "t. 使摇动；搅动",
+      "agitated"
+    ],
+    "amplify": [
+      7,
+      "t. 增强；放大",
+      "amplifying"
+    ],
+    "appreciation": [
+      6,
+      "感激；赏识"
+    ],
+    "assignment": [
+      6,
+      "分配；功课",
+      "assignments"
+    ],
+    "attribute": [
+      6,
+      "属性；标志",
+      "attributes"
+    ],
+    "biographical": [
+      7,
+      "a. 传记的"
+    ],
+    "biotech": [
+      7,
+      "生物技术"
+    ],
+    "biotechnology": [
+      7,
+      "生物工艺学；生物技术"
+    ],
+    "bourgeois": [
+      7,
+      "中产阶级分子；商人"
+    ],
+    "brutal": [
+      6,
+      "a. 残忍的；野蛮的"
+    ],
+    "cartoon": [
+      6,
+      "卡通画；漫画",
+      "cartoons"
+    ],
+    "civilian": [
+      6,
+      "平民；民法专家",
+      "civilians"
+    ],
+    "civilization": [
+      6,
+      "文明；教化"
+    ],
+    "commemorate": [
+      7,
+      "t. 纪念",
+      "commemorated"
+    ],
+    "conquer": [
+      7,
+      "t. 克服；征服",
+      "conquering"
+    ],
+    "contradictory": [
+      7,
+      "a. 反驳的；反对的"
+    ],
+    "conversely": [
+      7,
+      "相反；逆"
+    ],
+    "correlation": [
+      6,
+      "相互关系；相关",
+      "correlations"
+    ],
+    "correspondent": [
+      6,
+      "通讯记者；通信者"
+    ],
+    "counsel": [
+      6,
+      "商议；忠告",
+      "counselled"
+    ],
+    "critic": [
+      6,
+      "批评家；鉴定家",
+      "critics"
+    ],
+    "cunning": [
+      7,
+      "a. 狡猾的；巧妙的"
+    ],
+    "deprive": [
+      6,
+      "t. 剥夺；使丧失",
+      "depriving"
+    ],
+    "developmental": [
+      6,
+      "a. 发展的；进化的"
+    ],
+    "dictate": [
+      6,
+      "i. 听写；口述",
+      "dictated"
+    ],
+    "discern": [
+      7,
+      "辨别；看清楚",
+      "discerning"
+    ],
+    "domain": [
+      6,
+      "领域；领土"
+    ],
+    "dominant": [
+      6,
+      "a. 占优势的；支配的"
+    ],
+    "efficacy": [
+      7,
+      "功效；效力"
+    ],
+    "eliminate": [
+      6,
+      "t. 除去；排除"
+    ],
+    "elite": [
+      6,
+      "精华；精锐"
+    ],
+    "emigrate": [
+      7,
+      "(使)移居；(使)移民"
+    ],
+    "empower": [
+      7,
+      "t. 授予权力；允许",
+      "empowering"
+    ],
+    "epoch": [
+      8,
+      "新纪元；时代"
+    ],
+    "evolve": [
+      6,
+      "i. 进展；进化",
+      "evolved"
+    ],
+    "exemplary": [
+      7,
+      "a. 可仿效的；可做模范的"
+    ],
+    "faithfulness": [
+      8,
+      "忠诚；诚实"
+    ],
+    "fascinating": [
+      6,
+      "a. 迷人的；吸引人的"
+    ],
+    "forefather": [
+      8,
+      "祖先",
+      "forefathers"
+    ],
+    "formation": [
+      6,
+      "形成；构造"
+    ],
+    "fragment": [
+      6,
+      "碎片；破片",
+      "fragments"
+    ],
+    "gender-neutral": [
+      9,
+      "不分性别的；随中性化"
+    ],
+    "genetics": [
+      7,
+      "遗传学"
+    ],
+    "historian": [
+      6,
+      "历史学家；记事者"
+    ],
+    "hitherto": [
+      7,
+      "迄今；至今"
+    ],
+    "immense": [
+      6,
+      "a. 极广大的；无边的"
+    ],
+    "immigration": [
+      6,
+      "移民；移居"
+    ],
+    "implication": [
+      6,
+      "牵连；含义"
+    ],
+    "impoverish": [
+      9,
+      "t. 使贫穷；耗尽...的力气",
+      "impoverished"
+    ],
+    "inclusive": [
+      7,
+      "a. 包含的；包括的"
+    ],
+    "industrialist": [
+      7,
+      "企业家；实业家",
+      "industrialists"
+    ],
+    "infant": [
+      6,
+      "婴儿；儿童"
+    ],
+    "inflexible": [
+      8,
+      "a. 不屈曲的；不屈挠的"
+    ],
+    "innovation": [
+      6,
+      "改革；创新"
+    ],
+    "inspiration": [
+      6,
+      "灵感；鼓舞人心的人或物"
+    ],
+    "integrity": [
+      6,
+      "正直；廉正"
+    ],
+    "interact": [
+      6,
+      "i. 互相影响；交互作用"
+    ],
+    "intrinsically": [
+      7,
+      "[计] 本质的"
+    ],
+    "isolate": [
+      6,
+      "t. 使隔离；使孤立",
+      "isolated"
+    ],
+    "joblessness": [
+      9,
+      "失业；无活可干（jobless的名词形式）"
+    ],
+    "liberate": [
+      7,
+      "t. 解放；释放",
+      "liberated"
+    ],
+    "machiavelli": [
+      9,
+      "马基雅弗利"
+    ],
+    "magnify": [
+      7,
+      "t. 放大；扩大"
+    ],
+    "masculine": [
+      7,
+      "阳性；男性"
+    ],
+    "materialistic": [
+      8,
+      "a. 唯物论的；唯物主义的"
+    ],
+    "meaningful": [
+      6,
+      "a. 意味深长的"
+    ],
+    "molecule": [
+      6,
+      "分子；些微",
+      "molecules"
+    ],
+    "monopoly": [
+      6,
+      "垄断；专卖权",
+      "monopolies"
+    ],
+    "multiplicity": [
+      8,
+      "相重性；多重性"
+    ],
+    "necessity": [
+      6,
+      "需要；必需品",
+      "necessities"
+    ],
+    "nurture": [
+      7,
+      "养育；营养物",
+      "nurtured"
+    ],
+    "obsessed": [
+      7,
+      "a. 着迷的；无法摆脱的"
+    ],
+    "overturn": [
+      7,
+      "倾覆；破灭",
+      "overturned"
+    ],
+    "patent": [
+      6,
+      "专利权；许可证",
+      "patented",
+      "patents"
+    ],
+    "perception": [
+      6,
+      "知觉；感觉"
+    ],
+    "personalised": [
+      8,
+      "a. （英）个人化的（等于personalized）"
+    ],
+    "policymaker": [
+      8,
+      "政策制定者；决策人",
+      "policymakers"
+    ],
+    "portray": [
+      6,
+      "t. 描绘；描写",
+      "portrayed"
+    ],
+    "preliminary": [
+      6,
+      "初步做法；初步措施"
+    ],
+    "privilege": [
+      6,
+      "特权；特别恩典"
+    ],
+    "profoundly": [
+      7,
+      "深深地；深切地"
+    ],
+    "prudent": [
+      7,
+      "a. 审慎的；三思而后行的"
+    ],
+    "psychological": [
+      6,
+      "a. 心理学的；精神上的"
+    ],
+    "recession": [
+      6,
+      "后退；凹处"
+    ],
+    "reckless": [
+      7,
+      "a. 不介意的；大意的"
+    ],
+    "reinforce": [
+      6,
+      "t. 加强；增援"
+    ],
+    "relieve": [
+      6,
+      "t. 减轻；救济",
+      "relieved"
+    ],
+    "renaissance": [
+      7,
+      "复活；复兴"
+    ],
+    "resentment": [
+      6,
+      "怨恨；愤恨"
+    ],
+    "resolute": [
+      8,
+      "果断的人"
+    ],
+    "revolutionise": [
+      8,
+      "t. 使革命化；彻底改革",
+      "revolutionised"
+    ],
+    "ritual": [
+      6,
+      "仪式；典礼"
+    ],
+    "ruthlessness": [
+      8,
+      "无情；冷酷"
+    ],
+    "segment": [
+      6,
+      "片段；部分"
+    ],
+    "sentiment": [
+      6,
+      "感情；感伤"
+    ],
+    "significant": [
+      6,
+      "a. 重要的；有效的"
+    ],
+    "silicon": [
+      7,
+      "硅"
+    ],
+    "steadfast": [
+      8,
+      "a. 坚定的；踏实的"
+    ],
+    "suppress": [
+      6,
+      "t. 镇压；使止住"
+    ],
+    "supreme": [
+      6,
+      "至高；霸权"
+    ],
+    "tolerant": [
+      7,
+      "a. 宽容的；容忍的"
+    ],
+    "transmit": [
+      6,
+      "t. 传输；传染",
+      "transmitted"
+    ],
+    "unavoidable": [
+      7,
+      "a. 不可避免的；不得已的"
+    ],
+    "unfortunately": [
+      6,
+      "恐怕；不幸的是"
+    ],
+    "uniqueness": [
+      8,
+      "[计] 唯一性"
+    ],
+    "vice-president": [
+      9,
+      "副总裁；副校长"
+    ],
+    "violate": [
+      6,
+      "t. 违犯；亵渎",
+      "violates"
+    ]
+  }
 }

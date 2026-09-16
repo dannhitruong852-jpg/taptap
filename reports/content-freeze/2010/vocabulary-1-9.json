@@ -1,8 +1,433 @@
 {
-  "research": [5, "研究；调查"],
-  "evidence": [5, "证据；依据"],
-  "economic": [5, "经济的"],
-  "policy": [5, "政策；方针"],
-  "social": [4, "社会的；社交的"],
-  "public": [4, "公众；公共的"]
+  "year": 2010,
+  "scale": "project-curated-1-9-v1",
+  "qa": {
+    "status": "reviewed",
+    "review_method": "calibrated_against_shipped_2002_2006",
+    "selector_threshold": 0.75,
+    "dictionary_source": "ECDICT offline snapshot",
+    "lemmatization": "ECDICT exchange 0:lemma when available",
+    "human_review_claimed": false
+  },
+  "vocabulary": {
+    "abolish": [
+      6,
+      "t. 废止；革除",
+      "abolished"
+    ],
+    "adolescent": [
+      6,
+      "a. 青春期的；青少年的"
+    ],
+    "aeronautics": [
+      9,
+      "航空学；飞行术"
+    ],
+    "air-traffic-control": [
+      9,
+      "空中交通管制"
+    ],
+    "alert": [
+      6,
+      "a. 警觉的；灵敏的"
+    ],
+    "anecdote": [
+      7,
+      "轶事；奇闻",
+      "anecdotes"
+    ],
+    "antidiscrimination": [
+      9,
+      "反种族歧视的；反歧视的"
+    ],
+    "assemble": [
+      6,
+      "t. 集合；收集",
+      "assembled"
+    ],
+    "bankruptcy": [
+      6,
+      "破产者"
+    ],
+    "behavior": [
+      8,
+      "行为；举止",
+      "behaviors"
+    ],
+    "beverage": [
+      7,
+      "饮料"
+    ],
+    "bewilderingly": [
+      9,
+      "令人困惑地；使人昏乱地"
+    ],
+    "blueprint": [
+      7,
+      "蓝图；设计图"
+    ],
+    "boulder": [
+      7,
+      "大圆石"
+    ],
+    "cargo": [
+      6,
+      "货物"
+    ],
+    "cartoon": [
+      6,
+      "卡通画；漫画"
+    ],
+    "commercially": [
+      7,
+      "商业上；通商上"
+    ],
+    "companion": [
+      6,
+      "朋友；陪伴"
+    ],
+    "competent": [
+      6,
+      "a. 能干的；胜任的"
+    ],
+    "composite": [
+      7,
+      "a. 合成的；混合成的",
+      "composites"
+    ],
+    "conscience": [
+      6,
+      "良心"
+    ],
+    "consideration": [
+      6,
+      "考虑；原因"
+    ],
+    "controversy": [
+      6,
+      "论争；辩论",
+      "controversies"
+    ],
+    "conversational": [
+      7,
+      "a. 会话的；对话的"
+    ],
+    "crystallize": [
+      8,
+      "t. 使结晶；使具体化",
+      "crystallizes"
+    ],
+    "defendant": [
+      6,
+      "被告",
+      "defendants"
+    ],
+    "designate": [
+      6,
+      "t. 指定；指明",
+      "designated"
+    ],
+    "destination": [
+      6,
+      "目的地；目标",
+      "destinations"
+    ],
+    "dilemma": [
+      6,
+      "困境；(进退两难的)窘境"
+    ],
+    "diminish": [
+      6,
+      "(使)减少；(使)变小"
+    ],
+    "discrimination": [
+      6,
+      "差别；岐视"
+    ],
+    "disinfect": [
+      8,
+      "t. 消毒",
+      "disinfecting"
+    ],
+    "downturn": [
+      7,
+      "(尤指经济方面的)衰退；下降趋势"
+    ],
+    "efficiency": [
+      6,
+      "效率；效能"
+    ],
+    "eligible": [
+      6,
+      "a. 有资格当选的；合格的"
+    ],
+    "elite": [
+      6,
+      "精华；精锐"
+    ],
+    "emission": [
+      6,
+      "发射；射出",
+      "emissions"
+    ],
+    "endure": [
+      6,
+      "t. 忍受；忍耐",
+      "endured"
+    ],
+    "epidemic": [
+      6,
+      "传染病；流行病"
+    ],
+    "episode": [
+      6,
+      "插曲；插话"
+    ],
+    "erupt": [
+      6,
+      "i. 爆发",
+      "erupted"
+    ],
+    "exempt": [
+      7,
+      "免税者；被免除义务者",
+      "exempted"
+    ],
+    "foremost": [
+      7,
+      "a. 最初的；最重要的"
+    ],
+    "formation": [
+      6,
+      "形成；构造"
+    ],
+    "founder": [
+      6,
+      "创立者；建立者"
+    ],
+    "heighten": [
+      7,
+      "t. 增高；提高",
+      "heightened"
+    ],
+    "hospitalization": [
+      9,
+      "医院收容；住院治疗",
+      "hospitalizations"
+    ],
+    "impressionist": [
+      8,
+      "印象主义者；印象派作家",
+      "impressionists"
+    ],
+    "inequity": [
+      8,
+      "不公平；不公正",
+      "inequities"
+    ],
+    "infant": [
+      6,
+      "婴儿；儿童",
+      "infants"
+    ],
+    "intentional": [
+      7,
+      "a. 故意的；与目的有关的"
+    ],
+    "intimate": [
+      6,
+      "a. 亲密的；私人的"
+    ],
+    "investigate": [
+      6,
+      "调查；审查"
+    ],
+    "irony": [
+      6,
+      "反语；讽刺"
+    ],
+    "landmark": [
+      6,
+      "陆标；划时代的事"
+    ],
+    "literacy": [
+      6,
+      "读写能力；识字"
+    ],
+    "makeup": [
+      7,
+      "组成；性格"
+    ],
+    "miserable": [
+      6,
+      "a. 悲惨的；痛苦的"
+    ],
+    "moisturizer": [
+      9,
+      "润肤霜；保湿霜",
+      "moisturizers"
+    ],
+    "momentum": [
+      6,
+      "动力；动量"
+    ],
+    "multiple": [
+      6,
+      "倍数；并联"
+    ],
+    "naturalistic": [
+      8,
+      "a. 自然的；自然主义的"
+    ],
+    "occasionally": [
+      6,
+      "有时候；偶而"
+    ],
+    "operational": [
+      6,
+      "a. 操作的；运作的"
+    ],
+    "outbreak": [
+      6,
+      "爆发；暴动"
+    ],
+    "overwhelm": [
+      6,
+      "t. 淹没；受打击",
+      "overwhelming"
+    ],
+    "perception": [
+      6,
+      "知觉；感觉"
+    ],
+    "phenomenon": [
+      6,
+      "现象；迹象"
+    ],
+    "predictably": [
+      7,
+      "可预言地"
+    ],
+    "propel": [
+      7,
+      "t. 推进；驱使",
+      "propelling"
+    ],
+    "psychologist": [
+      6,
+      "心理学家"
+    ],
+    "qualification": [
+      6,
+      "资格；条件",
+      "qualifications"
+    ],
+    "questionable": [
+      7,
+      "a. 可疑的"
+    ],
+    "random": [
+      6,
+      "随意；随机"
+    ],
+    "reschedule": [
+      8,
+      "[计] 重安排；重调度"
+    ],
+    "researcher": [
+      6,
+      "研究人员",
+      "researchers"
+    ],
+    "respectively": [
+      6,
+      "各自地；独自地"
+    ],
+    "ritual": [
+      6,
+      "仪式；典礼",
+      "rituals"
+    ],
+    "ruthless": [
+      7,
+      "a. 无情的；残忍的"
+    ],
+    "scrub": [
+      7,
+      "用力擦洗；矮树"
+    ],
+    "shrewd": [
+      7,
+      "a. 精明的；锐利的"
+    ],
+    "significant": [
+      6,
+      "a. 重要的；有效的"
+    ],
+    "southwestern": [
+      8,
+      "a. 西南的；向西南的"
+    ],
+    "stereotypical": [
+      8,
+      "a. 典型的；带有成见的"
+    ],
+    "substantially": [
+      6,
+      "实质上；本质上"
+    ],
+    "subtle": [
+      6,
+      "a. 敏锐的；精细的"
+    ],
+    "supreme": [
+      6,
+      "至高；霸权"
+    ],
+    "sustainability": [
+      8,
+      "持续性；能维持性"
+    ],
+    "turbulence": [
+      7,
+      "混乱；动荡"
+    ],
+    "unconstitutional": [
+      7,
+      "a. 违反宪法的；不符合宪法的"
+    ],
+    "unfashionable": [
+      8,
+      "a. 不流行的；不时髦的"
+    ],
+    "unrepresentative": [
+      9,
+      "a. 非代表性的；不典型的"
+    ],
+    "unsubstantiated": [
+      8,
+      "[法] 未经证实的；不能肯定的"
+    ],
+    "unsustainability": [
+      9,
+      "不可持续性"
+    ],
+    "unthinkingly": [
+      9,
+      "不假思索地；轻率地"
+    ],
+    "vaccinate": [
+      8,
+      "预防接种"
+    ],
+    "verdict": [
+      6,
+      "裁决；判决",
+      "verdicts"
+    ],
+    "virtual": [
+      6,
+      "a. 实际上起作用的；虚的"
+    ]
+  }
 }
