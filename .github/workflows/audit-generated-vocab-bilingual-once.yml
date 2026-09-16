@@ -5,6 +5,7 @@ on:
     branches: [c-v4-article-preview-actual]
     paths:
       - '.github/workflows/audit-generated-vocab-bilingual-once.yml'
+      - 'scripts/build_2007_2012_vocabulary.py'
 
 jobs:
   audit:
@@ -27,7 +28,7 @@ jobs:
           units=('cloze','text1','text2','text3','text4','partb','translation')
           for year in range(2007,2013):
               vocab=json.loads(Path(f'/tmp/vocab/{year}/vocabulary-1-9.json').read_text())['vocabulary']
-              total=literal=0; unresolved=[]; resolved=[]
+              total=literal=0; unresolved=[]
               for unit in units:
                   doc=json.loads(Path(f'reports/content-freeze/{year}/{unit}.candidate.json').read_text())
                   for i,row in enumerate(doc['article']['rows'],1):
@@ -42,9 +43,9 @@ jobs:
                                       p=re.sub(r'[（(].*?[)）]','',part).strip()
                                       if p and p in zh and p not in candidates: candidates.append(p)
                                   if candidates:
-                                      literal+=1; resolved.append((unit,i,m.group(),level,max(candidates,key=len)))
+                                      literal+=1
                                   else:
-                                      unresolved.append({'unit':unit,'sentence':i,'word':m.group(),'level':level,'meaning':meaning,'zh':zh,'en':en})
+                                      unresolved.append({'unit':unit,'sentence':i,'word':m.group(),'lemma':lemma,'level':level,'meaning':meaning,'zh':zh,'en':en})
               print('YEAR',year,'vocab=',len(vocab),'occurrences=',total,'literal=',literal,'unresolved=',len(unresolved),'literal_rate=',round(literal/max(1,total),4))
-              print('UNRESOLVED_SAMPLE',json.dumps(unresolved[:40],ensure_ascii=False))
+              print('UNRESOLVED_SAMPLE',json.dumps(unresolved[:30],ensure_ascii=False))
           PY
