@@ -1,0 +1,723 @@
+{
+  "year": 2005,
+  "section_type": "reading",
+  "article_id": "text3",
+  "source_sha256": "6d1b28f9d8ce9e5c5c8632e1752e793f93458bc2f6b1d99fcef1892ac0a2c210",
+  "source_pages": [],
+  "accent": "en-US",
+  "primary_actor_id": "02",
+  "article_context": "心理与神经科学解释。把梦从“不可控噪音”推进为可能参与情绪调节、甚至可被训练控制的心理过程。",
+  "article": {
+    "year": 2005,
+    "section": "text3",
+    "title": "阅读三 · 梦境与情绪调节",
+    "background": "心理与神经科学解释。把梦从“不可控噪音”推进为可能参与情绪调节、甚至可被训练控制的心理过程。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "Of all the components of a good night’s sleep, dreams seem to be least within our control.",
+      "zh": "在一夜好眠的诸多组成部分中，梦似乎最不受我们控制。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "Of all the components of a good night’s sleep, dreams seem to be least within ou"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "Of all the components of a good night’s sleep, dreams seem to be least within our control.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text3/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "In dreams, a window opens into a world where logic is suspended and dead people speak.",
+      "zh": "梦中仿佛有一扇窗打开，通向一个逻辑失效、逝者开口说话的世界。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "In dreams, a window opens into a world where logic is suspended and dead people "
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "In dreams, a window opens into a world where logic is suspended and dead people speak.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text3/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "A century ago, Freud formulated his revolutionary theory that dreams were the disguised shadows of our unconscious desires and fears; by the late 1970s, neurologists had switched to thinking of them as just “mental noise” — the random byproducts of the neural-repair work that goes on during sleep.",
+      "zh": "一个世纪前，弗洛伊德提出革命性理论，认为梦是无意识欲望与恐惧乔装后的影子；到了20世纪70年代末，神经学家却转而把梦视为“精神噪音”，即睡眠中神经修复工作的随机副产品。",
+      "vocab": [],
+      "discourse_function": "compare",
+      "prosody_focus": [
+        "A century ago, Freud formulated his revolutionary theory that dreams were the di"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "A century ago, Freud formulated his revolutionary theory that dreams were the disguised shadows of our unconscious desires and fears; by the late 1970s, neurologists had switched to thinking of them as just “mental noise” — the random byproducts of the neural-repair work that goes on during sleep.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text3/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 1,
+      "en": "Now researchers suspect that dreams are part of the mind’s emotional thermostat, regulating moods while the brain is “offline.”",
+      "zh": "如今，研究人员怀疑梦是心灵“情绪恒温器”的一部分，在大脑“离线”时调节情绪。",
+      "vocab": [
+        {
+          "word": "thermostat",
+          "lemma": "thermostat",
+          "level": 7,
+          "meaning": "恒温器",
+          "start": 69,
+          "end": 79
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "Now researchers suspect that dreams are part of the mind’s emotional thermostat,"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Now researchers suspect that dreams are part of the mind’s emotional thermostat, regulating moods while the brain is “offline.”",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text3/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 1,
+      "en": "And one leading authority says that these intensely powerful mental events can be not only harnessed but actually brought under conscious control, to help us sleep and feel better.",
+      "zh": "一位权威专家甚至认为，这些力量强大的心理事件不仅可以加以利用，还能被有意识地控制，从而帮助我们睡得更好、感觉更好。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "And one leading authority says that these intensely powerful mental events can b"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "And one leading authority says that these intensely powerful mental events can be not only harnessed but actually brought under conscious control, to help us sleep and feel better.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text3/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "“It’s your dream,” says Rosalind Cartwright, chair of psychology at Chicago’s Medical Center. “If you don’t like it, change it.”",
+      "zh": "芝加哥医学中心心理学系主任罗莎琳德·卡特赖特说：“这是你的梦。你不喜欢，就改变它。”",
+      "vocab": [],
+      "discourse_function": "explain_quote",
+      "prosody_focus": [
+        "“It’s your dream,” says Rosalind Cartwright, chair of psychology at Chicago’s Me"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "“It’s your dream,” says Rosalind Cartwright, chair of psychology at Chicago’s Medical Center. “If you don’t like it, change it.”",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text3/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "Evidence from brain imaging supports this view.",
+      "zh": "脑成像证据支持这一观点。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "Evidence from brain imaging supports this view."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "Evidence from brain imaging supports this view.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text3/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 2,
+      "en": "The brain is as active during REM sleep — when most vivid dreams occur — as it is when fully awake, says Dr. Eric Nofzinger at the University of Pittsburgh.",
+      "zh": "匹兹堡大学的埃里克·诺夫辛格博士指出，在快速眼动睡眠期——大多数鲜明梦境发生于此——大脑的活跃程度与完全清醒时相当。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "The brain is as active during REM sleep — when most vivid dreams occur — as it i"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "The brain is as active during REM sleep — when most vivid dreams occur — as it is when fully awake, says Dr. Eric Nofzinger at the University of Pittsburgh.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text3/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 2,
+      "en": "But not all parts of the brain are equally involved; the limbic system, the “emotional brain,” is especially active, while the prefrontal cortex, the center of intellect and reasoning, is relatively quiet.",
+      "zh": "但大脑各部分参与程度并不相同：被称为“情绪脑”的边缘系统尤其活跃，而负责智力与推理的前额叶皮层则相对安静。",
+      "vocab": [
+        {
+          "word": "limbic",
+          "lemma": "limbic",
+          "level": 8,
+          "meaning": "边缘系统的",
+          "start": 57,
+          "end": 63
+        },
+        {
+          "word": "prefrontal",
+          "lemma": "prefrontal",
+          "level": 8,
+          "meaning": "前额叶的",
+          "start": 127,
+          "end": 137
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "But not all parts of the brain are equally involved; the limbic system, the “emo"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "But not all parts of the brain are equally involved; the limbic system, the “emotional brain,” is especially active, while the prefrontal cortex, the center of intellect and reasoning, is relatively quiet.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text3/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 2,
+      "en": "“We wake up from dreams happy or depressed, and those feelings can stay with us all day,” says Stanford sleep researcher Dr. William Dement.",
+      "zh": "斯坦福睡眠研究者威廉·德门特博士说：“我们从梦中醒来时可能快乐，也可能沮丧，而这些感受会伴随我们一整天。”",
+      "vocab": [],
+      "discourse_function": "explain_quote",
+      "prosody_focus": [
+        "“We wake up from dreams happy or depressed, and those feelings can stay with us "
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "“We wake up from dreams happy or depressed, and those feelings can stay with us all day,” says Stanford sleep researcher Dr. William Dement.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text3/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 3,
+      "en": "The link between dreams and emotions shows up among the patients in Cartwright’s clinic.",
+      "zh": "梦与情绪之间的联系，在卡特赖特诊所的患者身上体现得很明显。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "The link between dreams and emotions shows up among the patients in Cartwright’s"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "The link between dreams and emotions shows up among the patients in Cartwright’s clinic.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text3/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 3,
+      "en": "Most people seem to have more bad dreams early in the night, progressing toward happier ones before awakening, suggesting that they are working through negative feelings generated during the day.",
+      "zh": "大多数人在前半夜似乎恶梦更多，临近醒来时梦境逐渐愉快，这表明人们可能正在梦中消化白天产生的负面情绪。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [
+        "Most people seem to have more bad dreams early in the night, progressing toward "
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "Most people seem to have more bad dreams early in the night, progressing toward happier ones before awakening, suggesting that they are working through negative feelings generated during the day.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text3/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 3,
+      "en": "Because our conscious mind is occupied with daily life, we don’t always think about the emotional significance of the day’s events — until, it appears, we begin to dream.",
+      "zh": "由于清醒时的意识忙于日常生活，我们未必会思考当天事件的情绪意义——直到开始做梦，这种处理似乎才真正发生。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "Because our conscious mind is occupied with daily life, we don’t always think ab"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "Because our conscious mind is occupied with daily life, we don’t always think about the emotional significance of the day’s events — until, it appears, we begin to dream.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text3/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 3,
+      "en": "And this process need not be left to the unconscious.",
+      "zh": "而这一过程并非只能交给无意识。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "And this process need not be left to the unconscious."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "And this process need not be left to the unconscious.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text3/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 3,
+      "en": "Cartwright believes one can exercise conscious control over recurring bad dreams.",
+      "zh": "卡特赖特认为，人能够有意识地控制反复出现的恶梦。",
+      "vocab": [
+        {
+          "word": "recurring",
+          "lemma": "recurring",
+          "level": 6,
+          "meaning": "反复出现的",
+          "start": 60,
+          "end": 69
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "Cartwright believes one can exercise conscious control over recurring bad dreams"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "Cartwright believes one can exercise conscious control over recurring bad dreams.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text3/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 4,
+      "en": "As soon as you awaken, identify what is upsetting about the dream.",
+      "zh": "一醒来，就找出梦中究竟什么让你不安。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "As soon as you awaken, identify what is upsetting about the dream."
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "As soon as you awaken, identify what is upsetting about the dream.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text3/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 4,
+      "en": "Visualize how you would like it to end instead; the next time it occurs, try to wake up just enough to control its course.",
+      "zh": "设想一个你希望它拥有的结局；下次梦境重现时，试着让自己清醒到足以控制它的发展。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "Visualize how you would like it to end instead; the next time it occurs, try to "
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "Visualize how you would like it to end instead; the next time it occurs, try to wake up just enough to control its course.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text3/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 4,
+      "en": "With much practice people can learn to, literally, do it in their sleep.",
+      "zh": "经过大量练习，人们真的可以学会“在睡梦中”做到这一点。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "With much practice people can learn to, literally, do it in their sleep."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "With much practice people can learn to, literally, do it in their sleep.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text3/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 4,
+      "en": "At the end of the day, there’s probably little reason to pay attention to our dreams at all unless they keep us from sleeping or “we wake up in a panic,” Cartwright says.",
+      "zh": "卡特赖特说，归根结底，除非梦让我们无法安睡，或者“惊恐地醒来”，否则大概没有多少必要过分关注它。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "At the end of the day, there’s probably little reason to pay attention to our dr"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "At the end of the day, there’s probably little reason to pay attention to our dreams at all unless they keep us from sleeping or “we wake up in a panic,” Cartwright says.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text3/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "paragraph": 4,
+      "en": "Terrorism, economic uncertainties and general feelings of insecurity have increased people’s anxiety.",
+      "zh": "恐怖主义、经济不确定性以及普遍的不安全感，加重了人们的焦虑。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "Terrorism, economic uncertainties and general feelings of insecurity have increa"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s20-01",
+          "text": "Terrorism, economic uncertainties and general feelings of insecurity have increased people’s anxiety.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text3/s20-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "paragraph": 5,
+      "en": "Those suffering from persistent nightmares should seek help from a therapist.",
+      "zh": "长期受噩梦困扰的人应当寻求治疗师的帮助。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "Those suffering from persistent nightmares should seek help from a therapist."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s21-01",
+          "text": "Those suffering from persistent nightmares should seek help from a therapist.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text3/s21-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "paragraph": 5,
+      "en": "For the rest of us, the brain has its ways of working through bad feelings.",
+      "zh": "而对其余的人来说，大脑自有办法化解不良情绪。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "For the rest of us, the brain has its ways of working through bad feelings."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s22-01",
+          "text": "For the rest of us, the brain has its ways of working through bad feelings.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text3/s22-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "paragraph": 5,
+      "en": "Sleep — or rather dream — on it and you’ll feel better in the morning.",
+      "zh": "睡一觉——更准确地说，做一场梦——第二天早晨你就会好受些。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "Sleep — or rather dream — on it and you’ll feel better in the morning."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s23-01",
+          "text": "Sleep — or rather dream — on it and you’ll feel better in the morning.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text3/s23-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

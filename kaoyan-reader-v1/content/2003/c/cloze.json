@@ -1,0 +1,510 @@
+{
+  "year": 2003,
+  "section_type": "cloze",
+  "article_id": "cloze",
+  "source_sha256": "77149d8faa8b6d539e2e8a6bf6a1f2801af640e7a49f248f059e5483cbe22443",
+  "source_pages": [
+    1,
+    2
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "02",
+  "article_context": "面向教师解释青少年身心变化与活动设计。语气专业温和，以理解和建议为主；涉及竞争与责任时稍加强调，不做说教式朗读。",
+  "article": {
+    "year": 2003,
+    "section": "cloze",
+    "title": "完型 · 青少年成长与活动设计",
+    "background": "面向教师解释青少年身心变化与活动设计。语气专业温和，以理解和建议为主；涉及竞争与责任时稍加强调，不做说教式朗读。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "Teachers need to be aware of the emotional, intellectual, and physical changes that young adults experience.",
+      "zh": "教师需要意识到青少年在情感、智力和身体方面经历的种种变化。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "emotional, intellectual, and physical changes"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "Teachers need to be aware of the emotional, intellectual, and physical changes that young adults experience.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-cloze/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "And they also need to give serious thought to how they can best accommodate such changes.",
+      "zh": "他们还需要认真思考，怎样才能最好地适应这些变化。",
+      "vocab": [
+        {
+          "word": "accommodate",
+          "lemma": "accommodate",
+          "level": 6,
+          "meaning": "适应；容纳",
+          "start": 64,
+          "end": 75
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "serious thought",
+        "accommodate"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "And they also need to give serious thought to how they can best accommodate such changes.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-cloze/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "Growing bodies need movement and exercise, but not just in ways that emphasize competition.",
+      "zh": "成长中的身体需要活动和锻炼，但不应只采取强调竞争的方式。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "movement and exercise",
+        "not just",
+        "competition"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Growing bodies need movement and exercise,",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2003/c-cloze/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s03-02",
+          "text": " but not just in ways that emphasize competition.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-cloze/s03-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "Because they are adjusting to their new bodies and a whole host of new intellectual and emotional challenges, teenagers are especially self-conscious and need the confidence that comes from achieving success and knowing that their accomplishments are admired by others.",
+      "zh": "由于青少年正在适应新的身体状态，同时还要面对一系列新的智力与情感挑战，他们往往格外在意自我，也尤其需要一种信心——这种信心来自取得成功，以及知道自己的成就受到他人赞赏。",
+      "vocab": [
+        {
+          "word": "self-conscious",
+          "lemma": "self-conscious",
+          "level": 6,
+          "meaning": "拘谨的；自我意识强的",
+          "start": 135,
+          "end": 149
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "adjusting",
+        "self-conscious",
+        "confidence",
+        "admired"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Because they are adjusting to their new bodies and a whole host of new intellectual and emotional challenges,",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2003/c-cloze/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s04-02",
+          "text": " teenagers are especially self-conscious and need the confidence that comes from achieving success and knowing that their accomplishments are admired by others.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-cloze/s04-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "However, the typical teenage lifestyle is already filled with so much competition that it would be wise to plan activities in which there are more winners than losers, for example, publishing newsletters with many student-written book reviews, displaying student artwork, and sponsoring book discussion clubs.",
+      "zh": "然而，典型的青少年生活本就充满竞争，因此更明智的做法，是设计一些“赢家多于输家”的活动，比如出版刊登学生书评的简报、展示学生的美术作品，以及组织读书讨论俱乐部。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "However",
+        "more winners than losers",
+        "for example"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "However, the typical teenage lifestyle is already filled with so much competition that it would be wise to plan activities in which there are more winners than losers,",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2003/c-cloze/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s05-02",
+          "text": " for example, publishing newsletters with many student-written book reviews, displaying student artwork, and sponsoring book discussion clubs.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-cloze/s05-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 3,
+      "en": "A variety of small clubs can provide multiple opportunities for leadership, as well as for practice in successful group dynamics.",
+      "zh": "各种小型俱乐部既能提供多种锻炼领导能力的机会，也能让学生练习如何在群体中有效互动。",
+      "vocab": [
+        {
+          "word": "dynamics",
+          "lemma": "dynamics",
+          "level": 6,
+          "meaning": "互动机制；动力机制",
+          "start": 120,
+          "end": 128
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": [
+        "multiple opportunities",
+        "leadership",
+        "group dynamics"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "A variety of small clubs can provide multiple opportunities for leadership,",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2003/c-cloze/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s06-02",
+          "text": " as well as for practice in successful group dynamics.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-cloze/s06-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 3,
+      "en": "Making friends is extremely important to teenagers, and many shy students need the security of some kind of organization with a supportive adult barely visible in the background.",
+      "zh": "交朋友对青少年极其重要；许多害羞的学生还需要依托某种组织来获得安全感，同时有一位支持他们的成年人不过分显眼地在背后照看。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "Making friends",
+        "security",
+        "supportive adult"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "Making friends is extremely important to teenagers,",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2003/c-cloze/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s07-02",
+          "text": " and many shy students need the security of some kind of organization with a supportive adult barely visible in the background.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-cloze/s07-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 4,
+      "en": "In these activities, it is important to remember that young teens have short attention spans.",
+      "zh": "在这些活动中，有一点必须记住：年纪较小的青少年注意力持续时间较短。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "short attention spans"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "In these activities, it is important to remember that young teens have short attention spans.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-cloze/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 4,
+      "en": "A variety of activities should be organized so that participants can remain active as long as they want and then go on to something else without feeling guilty and without letting the other participants down.",
+      "zh": "活动应安排得丰富多样，让参与者可以想参加多久就参加多久，之后也能转去做别的事情，而不必感到内疚，也不会让其他参与者失望。",
+      "vocab": [],
+      "discourse_function": "sequence",
+      "prosody_focus": [
+        "remain active",
+        "go on to something else",
+        "without feeling guilty"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "A variety of activities should be organized so that participants can remain active as long as they want",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2003/c-cloze/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s09-02",
+          "text": " and then go on to something else without feeling guilty and without letting the other participants down.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-cloze/s09-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 5,
+      "en": "This does not mean that adults must accept irresponsibility.",
+      "zh": "这并不意味着成年人必须容忍不负责任的行为。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "does not mean",
+        "irresponsibility"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "This does not mean that adults must accept irresponsibility.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-cloze/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 5,
+      "en": "On the contrary, they can help students acquire a sense of commitment by planning for roles that are within their capabilities and their attention spans and by having clearly stated rules.",
+      "zh": "恰恰相反，成年人可以通过安排与学生能力和注意力范围相匹配的角色，并制定明确的规则，帮助他们培养责任感和投入意识。",
+      "vocab": [
+        {
+          "word": "acquire",
+          "lemma": "acquire",
+          "level": 6,
+          "meaning": "收购；获得",
+          "start": 40,
+          "end": 47
+        },
+        {
+          "word": "commitment",
+          "lemma": "commitment",
+          "level": 6,
+          "meaning": "投入；责任感",
+          "start": 59,
+          "end": 69
+        },
+        {
+          "word": "capabilities",
+          "lemma": "capability",
+          "level": 6,
+          "meaning": "能力",
+          "start": 114,
+          "end": 126
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "On the contrary",
+        "sense of commitment",
+        "within their capabilities"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "On the contrary,",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2003/c-cloze/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s11-02",
+          "text": " they can help students acquire a sense of commitment by planning for roles that are within their capabilities and their attention spans and by having clearly stated rules.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-cloze/s11-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

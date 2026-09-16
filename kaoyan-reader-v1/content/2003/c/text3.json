@@ -1,0 +1,960 @@
+{
+  "year": 2003,
+  "section_type": "reading",
+  "article_id": "text3",
+  "source_sha256": "77149d8faa8b6d539e2e8a6bf6a1f2801af640e7a49f248f059e5483cbe22443",
+  "source_pages": [
+    7,
+    8
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "01",
+  "article_context": "经济与产业结构分析。主线是“规模效应与垄断风险”的拉扯，数据、成本和市场机制要讲清楚；作者对被锁定托运人的担忧逐步增强，但保持分析者的克制。",
+  "article": {
+    "year": 2003,
+    "section": "text3",
+    "title": "阅读三 · 铁路兼并与垄断风险",
+    "background": "经济与产业结构分析。主线是“规模效应与垄断风险”的拉扯，数据、成本和市场机制要讲清楚；作者对被锁定托运人的担忧逐步增强，但保持分析者的克制。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "In recent years, railroads have been combining with each other, merging into supersystems, causing heightened concerns about monopoly.",
+      "zh": "近年来，美国铁路公司不断相互合并，形成“超级系统”，由此加剧了人们对垄断的担忧。",
+      "vocab": [
+        {
+          "word": "monopoly",
+          "lemma": "monopoly",
+          "level": 6,
+          "meaning": "垄断",
+          "start": 125,
+          "end": 133
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "merging into supersystems",
+        "monopoly"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "In recent years, railroads have been combining with each other, merging into supersystems,",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2003/c-text3/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s01-02",
+          "text": " causing heightened concerns about monopoly.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text3/s01-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "As recently as 1995, the top four railroads accounted for under 70 percent of the total ton-miles moved by rail.",
+      "zh": "就在1995年，四大铁路公司所承运的吨英里总量还不到铁路货运总量的70%。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [
+        "1995",
+        "under 70 percent"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "As recently as 1995, the top four railroads accounted for under 70 percent of the total ton-miles moved by rail.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text3/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "Next year, after a series of mergers is completed, just four railroads will control well over 90 percent of all the freight moved by major rail carriers.",
+      "zh": "而到明年，一系列兼并完成之后，仅四家铁路公司就将控制大型铁路承运商90%以上的货运量。",
+      "vocab": [
+        {
+          "word": "mergers",
+          "lemma": "merger",
+          "level": 6,
+          "meaning": "合并",
+          "start": 29,
+          "end": 36
+        },
+        {
+          "word": "carriers",
+          "lemma": "carrier",
+          "level": 6,
+          "meaning": "运输公司",
+          "start": 144,
+          "end": 152
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "Next year",
+        "well over 90 percent"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Next year, after a series of mergers is completed,",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2003/c-text3/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s03-02",
+          "text": " just four railroads will control well over 90 percent of all the freight moved by major rail carriers.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text3/s03-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "Supporters of the new supersystems argue that these mergers will allow for substantial cost reductions and better coordinated service.",
+      "zh": "新“超级系统”的支持者认为，这些兼并能够大幅降低成本，并使服务协调得更好。",
+      "vocab": [
+        {
+          "word": "mergers",
+          "lemma": "merger",
+          "level": 6,
+          "meaning": "合并",
+          "start": 52,
+          "end": 59
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "cost reductions",
+        "coordinated service"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Supporters of the new supersystems argue that these mergers will allow for substantial cost reductions and better coordinated service.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text3/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "Any threat of monopoly, they argue, is removed by fierce competition from trucks.",
+      "zh": "他们还认为，卡车运输的激烈竞争足以消除任何垄断威胁。",
+      "vocab": [
+        {
+          "word": "monopoly",
+          "lemma": "monopoly",
+          "level": 6,
+          "meaning": "垄断",
+          "start": 14,
+          "end": 22
+        }
+      ],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "threat of monopoly",
+        "fierce competition"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Any threat of monopoly, they argue, is removed by fierce competition from trucks.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text3/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "But many shippers complain that for heavy bulk commodities traveling long distances, such as coal, chemicals, and grain, trucking is too costly and the railroads therefore have them by the throat.",
+      "zh": "但许多托运人抱怨，对煤炭、化学品和谷物这类需要长途运输的大宗重货而言，卡车运输成本太高，因此铁路公司实际上扼住了他们的咽喉。",
+      "vocab": [
+        {
+          "word": "commodities",
+          "lemma": "commodity",
+          "level": 6,
+          "meaning": "商品；大宗货物",
+          "start": 47,
+          "end": 58
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "But",
+        "too costly",
+        "have them by the throat"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "But many shippers complain that for heavy bulk commodities traveling long distances, such as coal, chemicals, and grain,",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2003/c-text3/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s06-02",
+          "text": " trucking is too costly and the railroads therefore have them by the throat.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text3/s06-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 3,
+      "en": "The vast consolidation within the rail industry means that most shippers are served by only one rail company.",
+      "zh": "铁路行业的大规模整合意味着，大多数托运人实际上只由一家铁路公司服务。",
+      "vocab": [
+        {
+          "word": "consolidation",
+          "lemma": "consolidation",
+          "level": 7,
+          "meaning": "整合；合并",
+          "start": 9,
+          "end": 22
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "vast consolidation",
+        "only one"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "The vast consolidation within the rail industry means that most shippers are served by only one rail company.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text3/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 3,
+      "en": "Railroads typically charge such “captive shippers” 20 to 30 percent more than they do when another railroad is competing for the business.",
+      "zh": "铁路公司向这类“受制托运人”收取的费用，通常比有另一家铁路公司参与竞争时高出20%到30%。",
+      "vocab": [
+        {
+          "word": "captive",
+          "lemma": "captive",
+          "level": 7,
+          "meaning": "受制的；被控制的",
+          "start": 33,
+          "end": 40
+        }
+      ],
+      "discourse_function": "statistic",
+      "prosody_focus": [
+        "captive shippers",
+        "20 to 30 percent more"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "Railroads typically charge such “captive shippers” 20 to 30 percent more",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 90,
+          "audio_path": "./audio/2003/c-text3/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s08-02",
+          "text": " than they do when another railroad is competing for the business.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text3/s08-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 3,
+      "en": "Shippers who feel they are being overcharged have the right to appeal to the federal government’s Surface Transportation Board for rate relief, but the process is expensive, time-consuming, and will work only in truly extreme cases.",
+      "zh": "认为自己遭到过度收费的托运人，有权向联邦政府的地面运输委员会申诉，请求降低运价；但这一程序既昂贵又耗时，而且只有在真正极端的情况下才可能奏效。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "right to appeal",
+        "but",
+        "expensive",
+        "extreme cases"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "Shippers who feel they are being overcharged have the right to appeal to the federal government’s Surface Transportation Board for rate relief,",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2003/c-text3/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s09-02",
+          "text": " but the process is expensive, time-consuming, and will work only in truly extreme cases.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text3/s09-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 4,
+      "en": "Railroads justify rate discrimination against captive shippers on the grounds that in the long run it reduces everyone’s cost.",
+      "zh": "铁路公司为这种对“受制托运人”的差别定价辩护，理由是从长期看，它能降低所有人的成本。",
+      "vocab": [
+        {
+          "word": "discrimination",
+          "lemma": "discrimination",
+          "level": 6,
+          "meaning": "区别对待；歧视",
+          "start": 23,
+          "end": 37
+        },
+        {
+          "word": "captive",
+          "lemma": "captive",
+          "level": 7,
+          "meaning": "受制的；被控制的",
+          "start": 46,
+          "end": 53
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "justify",
+        "rate discrimination",
+        "long run"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "Railroads justify rate discrimination against captive shippers on the grounds that in the long run it reduces everyone’s cost.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text3/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 4,
+      "en": "If railroads charged all customers the same average rate, they argue, shippers who have the option of switching to trucks or other forms of transportation would do so, leaving remaining customers to shoulder the cost of keeping up the line.",
+      "zh": "他们认为，如果铁路公司向所有客户收取同样的平均费率，那些可以改用卡车或其他运输方式的客户就会离开，剩下的客户只得承担维持铁路线路的成本。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "same average rate",
+        "switching",
+        "shoulder the cost"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "If railroads charged all customers the same average rate, they argue,",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2003/c-text3/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s11-02",
+          "text": " shippers who have the option of switching to trucks or other forms of transportation would do so, leaving remaining customers to shoulder the cost of keeping up the line.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text3/s11-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 4,
+      "en": "It’s a theory to which many economists subscribe, but in practice it often leaves railroads in the position of determining which companies will flourish and which will fail.",
+      "zh": "不少经济学家赞同这一理论；但在实践中，它常常使铁路公司获得决定哪些企业兴旺、哪些企业倒下的权力。",
+      "vocab": [
+        {
+          "word": "flourish",
+          "lemma": "flourish",
+          "level": 7,
+          "meaning": "繁荣",
+          "start": 144,
+          "end": 152
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "many economists subscribe",
+        "but in practice",
+        "flourish",
+        "fail"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "It’s a theory to which many economists subscribe,",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2003/c-text3/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s12-02",
+          "text": " but in practice it often leaves railroads in the position of determining which companies will flourish and which will fail.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text3/s12-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 4,
+      "en": "“Do we really want railroads to be the arbiters of who wins and who loses in the marketplace?” asks Martin Bercovici, a Washington lawyer who frequently represents shippers.",
+      "zh": "“我们真的希望让铁路公司充当市场上谁赢谁输的裁决者吗？”经常代理托运人的华盛顿律师马丁·贝尔科维奇问道。",
+      "vocab": [
+        {
+          "word": "arbiters",
+          "lemma": "arbiter",
+          "level": 8,
+          "meaning": "仲裁者；裁决者",
+          "start": 39,
+          "end": 47
+        }
+      ],
+      "discourse_function": "ask",
+      "prosody_focus": [
+        "arbiters",
+        "who wins and who loses"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "“Do we really want railroads to be the arbiters of who wins and who loses in the marketplace?”",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 110,
+          "audio_path": "./audio/2003/c-text3/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s13-02",
+          "text": " asks Martin Bercovici, a Washington lawyer who frequently represents shippers.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text3/s13-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 5,
+      "en": "Many captive shippers also worry they will soon be hit with a round of huge rate increases.",
+      "zh": "许多受制托运人还担心，自己很快会遭遇新一轮大幅涨价。",
+      "vocab": [
+        {
+          "word": "captive",
+          "lemma": "captive",
+          "level": 7,
+          "meaning": "受制的；被控制的",
+          "start": 5,
+          "end": 12
+        }
+      ],
+      "discourse_function": "warning",
+      "prosody_focus": [
+        "huge rate increases"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "Many captive shippers also worry they will soon be hit with a round of huge rate increases.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text3/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 5,
+      "en": "The railroad industry as a whole, despite its brightening fortunes, still does not earn enough to cover the cost of the capital it must invest to keep up with its surging traffic.",
+      "zh": "尽管铁路行业整体前景正在好转，它赚到的钱仍不足以覆盖为了应对激增运量而必须投入的资本成本。",
+      "vocab": [
+        {
+          "word": "surging",
+          "lemma": "surging",
+          "level": 7,
+          "meaning": "激增的",
+          "start": 163,
+          "end": 170
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "despite",
+        "does not earn enough",
+        "surging traffic"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "The railroad industry as a whole, despite its brightening fortunes,",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2003/c-text3/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s15-02",
+          "text": " still does not earn enough to cover the cost of the capital it must invest to keep up with its surging traffic.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text3/s15-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 5,
+      "en": "Yet railroads continue to borrow billions to acquire one another, with Wall Street cheering them on.",
+      "zh": "然而，铁路公司仍在借入数十亿美元彼此收购，而华尔街还在一旁喝彩。",
+      "vocab": [
+        {
+          "word": "acquire",
+          "lemma": "acquire",
+          "level": 6,
+          "meaning": "收购；获得",
+          "start": 45,
+          "end": 52
+        }
+      ],
+      "discourse_function": "irony",
+      "prosody_focus": [
+        "Yet",
+        "borrow billions",
+        "cheering"
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "Yet railroads continue to borrow billions to acquire one another,",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "ironic",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 180,
+          "audio_path": "./audio/2003/c-text3/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s16-02",
+          "text": " with Wall Street cheering them on.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "ironic",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text3/s16-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 5,
+      "en": "Consider the $10.2 billion bid by Norfolk Southern and CSX to acquire Conrail this year.",
+      "zh": "看看今年诺福克南方铁路公司和 CSX 以102亿美元收购联合铁路公司的报价。",
+      "vocab": [
+        {
+          "word": "acquire",
+          "lemma": "acquire",
+          "level": 6,
+          "meaning": "收购；获得",
+          "start": 62,
+          "end": 69
+        }
+      ],
+      "discourse_function": "example",
+      "prosody_focus": [
+        "$10.2 billion",
+        "acquire Conrail"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "Consider the $10.2 billion bid by Norfolk Southern and CSX to acquire Conrail this year.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text3/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 5,
+      "en": "Conrail’s net railway operating income in 1996 was just $427 million, less than half of the carrying costs of the transaction.",
+      "zh": "联合铁路公司1996年的铁路运营净收入只有4.27亿美元，还不到这笔交易持有成本的一半。",
+      "vocab": [
+        {
+          "word": "transaction",
+          "lemma": "transaction",
+          "level": 6,
+          "meaning": "交易",
+          "start": 114,
+          "end": 125
+        }
+      ],
+      "discourse_function": "statistic",
+      "prosody_focus": [
+        "$427 million",
+        "less than half"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "Conrail’s net railway operating income in 1996 was just $427 million,",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 90,
+          "audio_path": "./audio/2003/c-text3/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s18-02",
+          "text": " less than half of the carrying costs of the transaction.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text3/s18-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 5,
+      "en": "Who’s going to pay for the rest of the bill?",
+      "zh": "剩下的账单由谁来付？",
+      "vocab": [],
+      "discourse_function": "ask",
+      "prosody_focus": [
+        "Who",
+        "rest of the bill"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "Who’s going to pay for the rest of the bill?",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text3/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "paragraph": 5,
+      "en": "Many captive shippers fear that they will, as Norfolk Southern and CSX increase their grip on the market.",
+      "zh": "许多受制托运人担心，买单的会是他们，因为诺福克南方和 CSX 对市场的控制正在进一步加强。",
+      "vocab": [
+        {
+          "word": "captive",
+          "lemma": "captive",
+          "level": 7,
+          "meaning": "受制的；被控制的",
+          "start": 5,
+          "end": 12
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "they will",
+        "increase their grip"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s20-01",
+          "text": "Many captive shippers fear that they will,",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 95,
+          "audio_path": "./audio/2003/c-text3/s20-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s20-02",
+          "text": " as Norfolk Southern and CSX increase their grip on the market.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2003/c-text3/s20-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

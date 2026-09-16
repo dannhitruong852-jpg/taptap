@@ -1,0 +1,741 @@
+{
+  "year": 2005,
+  "section_type": "reading",
+  "article_id": "text1",
+  "source_sha256": "6d1b28f9d8ce9e5c5c8632e1752e793f93458bc2f6b1d99fcef1892ac0a2c210",
+  "source_pages": [],
+  "accent": "en-US",
+  "primary_actor_id": "04",
+  "article_context": "自然科学实验叙述。先从人类加薪的不公平感切入，再讲实验反应，最后克制地落到公平感的演化问题。",
+  "article": {
+    "year": 2005,
+    "section": "text1",
+    "title": "阅读一 · 卷尾猴也在乎公平",
+    "background": "自然科学实验叙述。先从人类加薪的不公平感切入，再讲实验反应，最后克制地落到公平感的演化问题。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "Everybody loves a fat pay rise.",
+      "zh": "人人都喜欢大幅加薪。",
+      "vocab": [],
+      "discourse_function": "story",
+      "prosody_focus": [
+        "Everybody loves a fat pay rise."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "Everybody loves a fat pay rise.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text1/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Yet pleasure at your own can vanish if you learn that a colleague has been given a bigger one.",
+      "zh": "可一旦得知同事涨得更多，你对自己加薪的喜悦便可能烟消云散。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "Yet pleasure at your own can vanish if you learn that a colleague has been given"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Yet pleasure at your own can vanish if you learn that a colleague has been given a bigger one.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text1/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "Indeed, if he has a reputation for slacking, you might even be outraged.",
+      "zh": "要是那位同事还素有偷懒之名，你甚至可能愤愤不平。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "Indeed, if he has a reputation for slacking, you might even be outraged."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Indeed, if he has a reputation for slacking, you might even be outraged.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text1/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 1,
+      "en": "Such behaviour is regarded as “all too human”, with the underlying assumption that other animals would not be capable of this finely developed sense of grievance.",
+      "zh": "这种反应常被视为“太有人味了”，其背后的假定是：其他动物不可能具有如此细腻的受委屈感。",
+      "vocab": [
+        {
+          "word": "grievance",
+          "lemma": "grievance",
+          "level": 7,
+          "meaning": "委屈；不满",
+          "start": 152,
+          "end": 161
+        }
+      ],
+      "discourse_function": "explain_quote",
+      "prosody_focus": [
+        "Such behaviour is regarded as “all too human”, with the underlying assumption th"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Such behaviour is regarded as “all too human”, with the underlying assumption that other animals would not be capable of this finely developed sense of grievance.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text1/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 1,
+      "en": "But a study by Sarah Brosnan and Frans de Waal of Emory University in Atlanta, Georgia, which has just been published in Nature, suggests that it is all too monkey as well.",
+      "zh": "然而，亚特兰大埃默里大学的萨拉·布罗斯南和弗兰斯·德瓦尔刚刚发表于《自然》的一项研究表明，这种反应同样“很猴子”。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "But a study by Sarah Brosnan and Frans de Waal of Emory University in Atlanta, G"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "But a study by Sarah Brosnan and Frans de Waal of Emory University in Atlanta, Georgia, which has just been published in Nature, suggests that it is all too monkey as well.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text1/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "The researchers studied the behaviour of female brown capuchin monkeys.",
+      "zh": "研究人员观察了雌性棕色卷尾猴的行为。",
+      "vocab": [
+        {
+          "word": "capuchin",
+          "lemma": "capuchin",
+          "level": 8,
+          "meaning": "卷尾猴",
+          "start": 54,
+          "end": 62
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "The researchers studied the behaviour of female brown capuchin monkeys."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "The researchers studied the behaviour of female brown capuchin monkeys.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text1/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "They look cute.",
+      "zh": "它们看起来很可爱。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "They look cute."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "They look cute.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text1/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 2,
+      "en": "They are good-natured, co-operative creatures, and they share their food readily.",
+      "zh": "它们性情温和、善于合作，也乐于分享食物。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "They are good-natured, co-operative creatures, and they share their food readily"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "They are good-natured, co-operative creatures, and they share their food readily.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text1/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 2,
+      "en": "Above all, like their female human counterparts, they tend to pay much closer attention to the value of “goods and services” than males.",
+      "zh": "最重要的是，它们和人类女性一样，往往比雄性更在意“商品和服务”的价值。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "Above all, like their female human counterparts, they tend to pay much closer at"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "Above all, like their female human counterparts, they tend to pay much closer attention to the value of “goods and services” than males.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text1/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 2,
+      "en": "Such characteristics make them perfect candidates for Dr. Brosnan’s and Dr. de Waal’s study.",
+      "zh": "这些特点使它们成为布罗斯南博士和德瓦尔博士研究的理想对象。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "Such characteristics make them perfect candidates for Dr. Brosnan’s and Dr. de W"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "Such characteristics make them perfect candidates for Dr. Brosnan’s and Dr. de Waal’s study.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text1/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 3,
+      "en": "The researchers spent two years teaching their monkeys to exchange tokens for food.",
+      "zh": "研究人员用了两年时间，教这些猴子用代币换取食物。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "The researchers spent two years teaching their monkeys to exchange tokens for fo"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "The researchers spent two years teaching their monkeys to exchange tokens for food.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text1/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 3,
+      "en": "Normally, the monkeys were happy enough to exchange pieces of rock for slices of cucumber.",
+      "zh": "通常，它们很乐意用石块换取黄瓜片。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "Normally, the monkeys were happy enough to exchange pieces of rock for slices of"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "Normally, the monkeys were happy enough to exchange pieces of rock for slices of cucumber.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text1/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 3,
+      "en": "However, when two monkeys were placed in separate but adjoining chambers, so that each could observe what the other was getting in return for its rock, their behaviour became markedly different.",
+      "zh": "然而，当两只猴子被分别放进相邻的小隔间，彼此都能看到对方用石块换到了什么时，它们的行为便出现了明显变化。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "However, when two monkeys were placed in separate but adjoining chambers, so tha"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "However, when two monkeys were placed in separate but adjoining chambers, so that each could observe what the other was getting in return for its rock, their behaviour became markedly different.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text1/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 3,
+      "en": "In the world of capuchins grapes are luxury goods, and much preferable to cucumbers.",
+      "zh": "在卷尾猴的世界里，葡萄属于奢侈品，远比黄瓜更受欢迎。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "In the world of capuchins grapes are luxury goods, and much preferable to cucumb"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "In the world of capuchins grapes are luxury goods, and much preferable to cucumbers.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text1/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 3,
+      "en": "So when one monkey was handed a grape in exchange for her token, the second was reluctant to hand hers over for a mere piece of cucumber.",
+      "zh": "因此，当一只猴子用代币换到一颗葡萄时，另一只便不情愿再拿自己的代币去换区区一片黄瓜。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "So when one monkey was handed a grape in exchange for her token, the second was "
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "So when one monkey was handed a grape in exchange for her token, the second was reluctant to hand hers over for a mere piece of cucumber.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text1/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 4,
+      "en": "And if one received a grape without having to provide her token in exchange at all, the other either tossed her own token at the researcher or out of the chamber, or refused to accept the slice of cucumber.",
+      "zh": "如果其中一只甚至不用交代币就得到葡萄，另一只就会把自己的代币扔向研究人员或扔出隔间，或者干脆拒绝黄瓜片。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "And if one received a grape without having to provide her token in exchange at a"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "And if one received a grape without having to provide her token in exchange at all, the other either tossed her own token at the researcher or out of the chamber, or refused to accept the slice of cucumber.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text1/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 4,
+      "en": "Indeed, the mere presence of a grape in the other chamber, without an actual monkey to eat it, was enough to induce resentment in a female capuchin.",
+      "zh": "事实上，即使隔壁只摆着一颗葡萄，根本没有猴子去吃，也足以让一只雌性卷尾猴心生不满。",
+      "vocab": [
+        {
+          "word": "resentment",
+          "lemma": "resentment",
+          "level": 6,
+          "meaning": "怨愤",
+          "start": 116,
+          "end": 126
+        },
+        {
+          "word": "capuchin",
+          "lemma": "capuchin",
+          "level": 8,
+          "meaning": "卷尾猴",
+          "start": 139,
+          "end": 147
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "Indeed, the mere presence of a grape in the other chamber, without an actual mon"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "Indeed, the mere presence of a grape in the other chamber, without an actual monkey to eat it, was enough to induce resentment in a female capuchin.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text1/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 4,
+      "en": "The researchers suggest that capuchin monkeys, like humans, are guided by social emotions.",
+      "zh": "研究人员认为，卷尾猴与人类一样，也受到社会性情绪的支配。",
+      "vocab": [
+        {
+          "word": "capuchin",
+          "lemma": "capuchin",
+          "level": 8,
+          "meaning": "卷尾猴",
+          "start": 29,
+          "end": 37
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "The researchers suggest that capuchin monkeys, like humans, are guided by social"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "The researchers suggest that capuchin monkeys, like humans, are guided by social emotions.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text1/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 4,
+      "en": "In the wild, they are a co-operative, group-living species.",
+      "zh": "在野外，它们是一种群居且相互合作的动物。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "In the wild, they are a co-operative, group-living species."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "In the wild, they are a co-operative, group-living species.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text1/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "paragraph": 4,
+      "en": "Such co-operation is likely to be stable only when each animal feels it is not being cheated.",
+      "zh": "这种合作恐怕只有在每只动物都觉得自己没有吃亏时才能稳定维持。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "Such co-operation is likely to be stable only when each animal feels it is not b"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s20-01",
+          "text": "Such co-operation is likely to be stable only when each animal feels it is not being cheated.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text1/s20-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "paragraph": 5,
+      "en": "Feelings of righteous indignation, it seems, are not the preserve of people alone.",
+      "zh": "看来，义愤并非人类独有。",
+      "vocab": [
+        {
+          "word": "indignation",
+          "lemma": "indignation",
+          "level": 7,
+          "meaning": "义愤",
+          "start": 22,
+          "end": 33
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "Feelings of righteous indignation, it seems, are not the preserve of people alon"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s21-01",
+          "text": "Feelings of righteous indignation, it seems, are not the preserve of people alone.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text1/s21-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "paragraph": 5,
+      "en": "Refusing a lesser reward completely makes these feelings abundantly clear to other members of the group.",
+      "zh": "彻底拒绝较差的回报，会把这种情绪明明白白地传达给群体中的其他成员。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "Refusing a lesser reward completely makes these feelings abundantly clear to oth"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s22-01",
+          "text": "Refusing a lesser reward completely makes these feelings abundantly clear to other members of the group.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text1/s22-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "paragraph": 5,
+      "en": "However, whether such a sense of fairness evolved independently in capuchins and humans, or whether it stems from the common ancestor that the species had 35 million years ago, is, as yet, an unanswered question.",
+      "zh": "不过，这种公平感究竟是在卷尾猴和人类身上分别独立演化出来的，还是源自两者三千五百万年前的共同祖先，目前仍无定论。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "However, whether such a sense of fairness evolved independently in capuchins and"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s23-01",
+          "text": "However, whether such a sense of fairness evolved independently in capuchins and humans, or whether it stems from the common ancestor that the species had 35 million years ago, is, as yet, an unanswered question.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-text1/s23-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

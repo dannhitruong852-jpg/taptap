@@ -1,0 +1,300 @@
+{
+  "year": 2004,
+  "section_type": "translation",
+  "article_id": "translation",
+  "source_sha256": "f051c55c207511d8b1888faf55cfb3af726c8470ed5732d28f07d4c4994ae2c2",
+  "source_pages": [
+    11
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "02",
+  "article_context": "只朗读原卷41–45五个划线句。语言学学术解释为主，概念关系要清楚，尤其是语言差异、Whorf语言决定论及其因果表述。",
+  "article": {
+    "year": 2004,
+    "section": "translation",
+    "title": "翻译 · 语言结构与思维方式",
+    "background": "只朗读原卷41–45五个划线句。语言学学术解释为主，概念关系要清楚，尤其是语言差异、Whorf语言决定论及其因果表述。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "The Greeks assumed that the structure of language had some connection with the process of thought, which took root in Europe long before people realized how diverse languages could be.",
+      "zh": "希腊人认为，语言结构与思维过程存在某种联系；这一观点早在欧洲扎下根来，那时人们还远未认识到语言之间可以有多么巨大的差异。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "structure of language",
+        "process of thought",
+        "took root"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "The Greeks assumed that the structure of language had some connection with the process of thought,",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2004/c-translation/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s01-02",
+          "text": " which took root in Europe long before people realized how diverse languages could be.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-translation/s01-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 2,
+      "en": "We are obliged to them because some of these languages have since vanished, as the peoples who spoke them died out or became assimilated and lost their native languages.",
+      "zh": "我们应当感谢他们，因为这些语言中有一些后来已经消失：说这些语言的民族要么灭绝了，要么被同化，从而失去了自己的母语。",
+      "vocab": [
+        {
+          "word": "assimilated",
+          "lemma": "assimilate",
+          "level": 7,
+          "meaning": "同化",
+          "start": 125,
+          "end": 136
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "obliged",
+        "vanished",
+        "assimilated"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "We are obliged to them because some of these languages have since vanished,",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2004/c-translation/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s02-02",
+          "text": " as the peoples who spoke them died out or became assimilated and lost their native languages.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-translation/s02-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 3,
+      "en": "The newly described languages were often so strikingly different from the well-studied languages of Europe and Southeast Asia that some scholars even accused Boas and Sapir of fabricating their data.",
+      "zh": "这些新近被描述的语言，常常与欧洲和东南亚那些研究较充分的语言差异大得惊人，以至于有些学者甚至指责博厄斯和萨丕尔捏造数据。",
+      "vocab": [
+        {
+          "word": "fabricating",
+          "lemma": "fabricate",
+          "level": 7,
+          "meaning": "捏造",
+          "start": 176,
+          "end": 187
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "strikingly different",
+        "accused",
+        "fabricating"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "The newly described languages were often so strikingly different from the well-studied languages of Europe and Southeast Asia",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2004/c-translation/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s03-02",
+          "text": " that some scholars even accused Boas and Sapir of fabricating their data.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-translation/s03-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 4,
+      "en": "Being interested in the relationship of language and thought, Whorf developed the idea that the structure of language determines the structure of habitual thought in a society.",
+      "zh": "由于对语言与思维的关系感兴趣，沃尔夫逐渐形成了这样一种观点：语言的结构决定一个社会中习惯性思维的结构。",
+      "vocab": [
+        {
+          "word": "habitual",
+          "lemma": "habitual",
+          "level": 7,
+          "meaning": "习惯性的",
+          "start": 146,
+          "end": 154
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "relationship",
+        "determines",
+        "habitual thought"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Being interested in the relationship of language and thought,",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2004/c-translation/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s04-02",
+          "text": " Whorf developed the idea that the structure of language determines the structure of habitual thought in a society.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-translation/s04-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 5,
+      "en": "Whorf came to believe in a sort of linguistic determinism which, in its strongest form, states that language imprisons the mind, and that the grammatical patterns in a language can produce far-reaching consequences for the culture of a society.",
+      "zh": "沃尔夫后来相信某种语言决定论；这种理论在其最强形式下认为，语言会禁锢人的心智，而且一种语言的语法模式会对一个社会的文化产生深远影响。",
+      "vocab": [
+        {
+          "word": "linguistic determinism",
+          "lemma": "linguistic determinism",
+          "level": 8,
+          "meaning": "语言决定论",
+          "start": 35,
+          "end": 57
+        },
+        {
+          "word": "grammatical",
+          "lemma": "grammatical",
+          "level": 6,
+          "meaning": "语法的",
+          "start": 142,
+          "end": 153
+        },
+        {
+          "word": "far-reaching",
+          "lemma": "far-reaching",
+          "level": 7,
+          "meaning": "影响深远的",
+          "start": 189,
+          "end": 201
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "linguistic determinism",
+        "imprisons the mind",
+        "far-reaching consequences"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Whorf came to believe in a sort of linguistic determinism which, in its strongest form, states that language imprisons the mind,",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 95,
+          "audio_path": "./audio/2004/c-translation/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s05-02",
+          "text": " and that the grammatical patterns in a language can produce far-reaching consequences for the culture of a society.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-translation/s05-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

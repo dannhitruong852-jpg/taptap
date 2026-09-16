@@ -1,0 +1,1117 @@
+{
+  "year": 2004,
+  "section_type": "reading",
+  "article_id": "text4",
+  "source_sha256": "f051c55c207511d8b1888faf55cfb3af726c8470ed5732d28f07d4c4994ae2c2",
+  "source_pages": [
+    9,
+    10
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "10",
+  "article_context": "一篇明确的社会文化批判。作者反对把实用性置于智性之上；需要锋利、准确，但不能把观点读成愤怒宣言。引语较多，主讲人保持10号，句内用引语意图体现人物声音。",
+  "article": {
+    "year": 2004,
+    "section": "text4",
+    "title": "阅读四 · 美国教育中的反智主义",
+    "background": "一篇明确的社会文化批判。作者反对把实用性置于智性之上；需要锋利、准确，但不能把观点读成愤怒宣言。引语较多，主讲人保持10号，句内用引语意图体现人物声音。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "Americans today don’t place a very high value on intellect.",
+      "zh": "今天的美国人并不十分看重智性。",
+      "vocab": [
+        {
+          "word": "intellect",
+          "lemma": "intellect",
+          "level": 6,
+          "meaning": "理智；智性",
+          "start": 49,
+          "end": 58
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "don’t place a very high value",
+        "intellect"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "Americans today don’t place a very high value on intellect.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text4/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Our heroes are athletes, entertainers, and entrepreneurs, not scholars.",
+      "zh": "我们的英雄是运动员、娱乐明星和企业家，而不是学者。",
+      "vocab": [
+        {
+          "word": "entrepreneurs",
+          "lemma": "entrepreneur",
+          "level": 6,
+          "meaning": "企业家",
+          "start": 43,
+          "end": 56
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "heroes",
+        "not scholars"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Our heroes are athletes, entertainers, and entrepreneurs,",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2004/c-text4/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s02-02",
+          "text": " not scholars.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text4/s02-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "Even our schools are where we send our children to get a practical education — not to pursue knowledge for the sake of knowledge.",
+      "zh": "甚至学校也只是我们送孩子去接受实用教育的地方，而不是让他们为了知识本身去追求知识。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "practical education",
+        "not to pursue knowledge"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Even our schools are where we send our children to get a practical education —",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2004/c-text4/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s03-02",
+          "text": " not to pursue knowledge for the sake of knowledge.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text4/s03-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 1,
+      "en": "Symptoms of pervasive anti-intellectualism in our schools aren’t difficult to find.",
+      "zh": "学校里普遍存在的反智主义，其症状并不难发现。",
+      "vocab": [
+        {
+          "word": "pervasive",
+          "lemma": "pervasive",
+          "level": 7,
+          "meaning": "普遍存在的",
+          "start": 12,
+          "end": 21
+        },
+        {
+          "word": "anti-intellectualism",
+          "lemma": "anti-intellectualism",
+          "level": 8,
+          "meaning": "反智主义",
+          "start": 22,
+          "end": 42
+        }
+      ],
+      "discourse_function": "warning",
+      "prosody_focus": [
+        "pervasive anti-intellectualism"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Symptoms of pervasive anti-intellectualism in our schools aren’t difficult to find.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text4/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "“Schools have always been in a society where practical is more important than intellectual,” says education writer Diane Ravitch.",
+      "zh": "教育作家黛安·拉维奇说：“学校一直处在一个把实用看得比智性更重要的社会里。”",
+      "vocab": [],
+      "discourse_function": "explain_quote",
+      "prosody_focus": [
+        "practical",
+        "intellectual"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "“Schools have always been in a society where practical is more important than intellectual,”",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 95,
+          "audio_path": "./audio/2004/c-text4/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s05-02",
+          "text": " says education writer Diane Ravitch.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text4/s05-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "“Schools could be a counterbalance.”",
+      "zh": "“学校本可以成为一种制衡力量。”",
+      "vocab": [
+        {
+          "word": "counterbalance",
+          "lemma": "counterbalance",
+          "level": 7,
+          "meaning": "制衡力量",
+          "start": 20,
+          "end": 34
+        }
+      ],
+      "discourse_function": "evaluation_quote",
+      "prosody_focus": [
+        "counterbalance"
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "“Schools could be a counterbalance.”",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "serious",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text4/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "Ravitch’s latest book, Left Back: A Century of Failed School Reforms, traces the roots of anti-intellectualism in our schools, concluding they are anything but a counterbalance to the American distaste for intellectual pursuits.",
+      "zh": "拉维奇的新书《落在后面：一个世纪失败的学校改革》追溯了美国学校反智主义的根源，并得出结论：学校非但没有制衡美国人对智性追求的厌恶，反而恰恰相反。",
+      "vocab": [
+        {
+          "word": "anti-intellectualism",
+          "lemma": "anti-intellectualism",
+          "level": 8,
+          "meaning": "反智主义",
+          "start": 90,
+          "end": 110
+        },
+        {
+          "word": "counterbalance",
+          "lemma": "counterbalance",
+          "level": 7,
+          "meaning": "制衡力量",
+          "start": 162,
+          "end": 176
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "roots",
+        "anything but a counterbalance"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "Ravitch’s latest book, Left Back: A Century of Failed School Reforms, traces the roots of anti-intellectualism in our schools,",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2004/c-text4/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s07-02",
+          "text": " concluding they are anything but a counterbalance to the American distaste for intellectual pursuits.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text4/s07-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 2,
+      "en": "But they could and should be.",
+      "zh": "但学校本可以、也应该做到这一点。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "could and should"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "But they could and should be.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text4/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 3,
+      "en": "Encouraging kids to reject the life of the mind leaves them vulnerable to exploitation and control.",
+      "zh": "鼓励孩子拒绝心智生活，会使他们更容易受到利用和控制。",
+      "vocab": [
+        {
+          "word": "vulnerable",
+          "lemma": "vulnerable",
+          "level": 6,
+          "meaning": "易受伤害的",
+          "start": 60,
+          "end": 70
+        },
+        {
+          "word": "exploitation",
+          "lemma": "exploitation",
+          "level": 6,
+          "meaning": "利用；剥削",
+          "start": 74,
+          "end": 86
+        }
+      ],
+      "discourse_function": "warning",
+      "prosody_focus": [
+        "reject the life of the mind",
+        "vulnerable"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "Encouraging kids to reject the life of the mind",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 105,
+          "audio_path": "./audio/2004/c-text4/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s09-02",
+          "text": " leaves them vulnerable to exploitation and control.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text4/s09-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 3,
+      "en": "Without the ability to think critically, to defend their ideas and understand the ideas of others, they cannot fully participate in our democracy.",
+      "zh": "如果没有批判性思考、为自己的观点辩护并理解他人观点的能力，他们就无法充分参与民主生活。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [
+        "think critically",
+        "cannot fully participate"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "Without the ability to think critically, to defend their ideas and understand the ideas of others,",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 90,
+          "audio_path": "./audio/2004/c-text4/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s10-02",
+          "text": " they cannot fully participate in our democracy.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text4/s10-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 3,
+      "en": "Continuing along this path, says writer Earl Shorris, “We will become a second-rate country. We will have a less civil society.”",
+      "zh": "作家厄尔·肖里斯说，如果继续沿着这条路走下去，“我们将变成一个二流国家，我们的社会也会更加不文明”。",
+      "vocab": [],
+      "discourse_function": "evaluation_quote",
+      "prosody_focus": [
+        "second-rate country",
+        "less civil society"
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "Continuing along this path, says writer Earl Shorris,",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "serious",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 115,
+          "audio_path": "./audio/2004/c-text4/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s11-02",
+          "text": " “We will become a second-rate country. We will have a less civil society.”",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "serious",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text4/s11-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 4,
+      "en": "“Intellect is resented as a form of power or privilege,” writes historian and professor Richard Hofstadter in Anti-Intellectualism in American Life, a Pulitzer Prize-winning book on the roots of anti-intellectualism in U.S. politics, religion, and education.",
+      "zh": "历史学家、教授理查德·霍夫施塔特在普利策奖著作《美国生活中的反智主义》中写道：“智性被人厌恶，因为它被看成一种权力或特权。”该书研究了美国政治、宗教和教育中反智主义的根源。",
+      "vocab": [
+        {
+          "word": "Intellect",
+          "lemma": "intellect",
+          "level": 6,
+          "meaning": "理智；智性",
+          "start": 1,
+          "end": 10
+        },
+        {
+          "word": "Anti-Intellectualism",
+          "lemma": "anti-intellectualism",
+          "level": 8,
+          "meaning": "反智主义",
+          "start": 110,
+          "end": 130
+        },
+        {
+          "word": "anti-intellectualism",
+          "lemma": "anti-intellectualism",
+          "level": 8,
+          "meaning": "反智主义",
+          "start": 195,
+          "end": 215
+        }
+      ],
+      "discourse_function": "explain_quote",
+      "prosody_focus": [
+        "power or privilege",
+        "roots"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "“Intellect is resented as a form of power or privilege,”",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 95,
+          "audio_path": "./audio/2004/c-text4/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s12-02",
+          "text": " writes historian and professor Richard Hofstadter in Anti-Intellectualism in American Life, a Pulitzer Prize-winning book on the roots of anti-intellectualism in U.S. politics, religion, and education.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text4/s12-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 4,
+      "en": "From the beginning of our history, says Hofstadter, our democratic and populist urges have driven us to reject anything that smells of elitism.",
+      "zh": "霍夫施塔特说，从美国历史开始之初，民主主义和民粹主义的冲动就驱使我们排斥任何带有精英主义气息的东西。",
+      "vocab": [
+        {
+          "word": "populist",
+          "lemma": "populist",
+          "level": 7,
+          "meaning": "民粹主义的",
+          "start": 71,
+          "end": 79
+        },
+        {
+          "word": "elitism",
+          "lemma": "elitism",
+          "level": 7,
+          "meaning": "精英主义",
+          "start": 135,
+          "end": 142
+        }
+      ],
+      "discourse_function": "explain_quote",
+      "prosody_focus": [
+        "democratic and populist urges",
+        "elitism"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "From the beginning of our history, says Hofstadter,",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 95,
+          "audio_path": "./audio/2004/c-text4/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s13-02",
+          "text": " our democratic and populist urges have driven us to reject anything that smells of elitism.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text4/s13-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 4,
+      "en": "Practicality, common sense, and native intelligence have been considered more noble qualities than anything you could learn from a book.",
+      "zh": "实用性、常识和天生的聪明，一直被认为比从书本中学来的任何东西都更加高贵。",
+      "vocab": [],
+      "discourse_function": "compare",
+      "prosody_focus": [
+        "more noble",
+        "learn from a book"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "Practicality, common sense, and native intelligence have been considered more noble qualities",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 95,
+          "audio_path": "./audio/2004/c-text4/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s14-02",
+          "text": " than anything you could learn from a book.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text4/s14-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 5,
+      "en": "Ralph Waldo Emerson and other Transcendentalist philosophers thought schooling and rigorous book learning put unnatural restraints on children: “We are shut up in schools and college recitation rooms for 10 or 15 years and come out at last with a bellyful of words and do not know a thing.”",
+      "zh": "拉尔夫·沃尔多·爱默生等超验主义哲学家认为，学校教育和严格的书本学习给孩子施加了不自然的束缚：“我们被关在学校和大学背诵课堂里十年或十五年，最后满腹词句地走出来，却什么也不知道。”",
+      "vocab": [
+        {
+          "word": "rigorous",
+          "lemma": "rigorous",
+          "level": 6,
+          "meaning": "严谨的",
+          "start": 83,
+          "end": 91
+        },
+        {
+          "word": "restraints",
+          "lemma": "restraint",
+          "level": 6,
+          "meaning": "约束",
+          "start": 120,
+          "end": 130
+        }
+      ],
+      "discourse_function": "evaluation_quote",
+      "prosody_focus": [
+        "rigorous book learning",
+        "unnatural restraints",
+        "bellyful of words"
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "Ralph Waldo Emerson and other Transcendentalist philosophers thought schooling and rigorous book learning put unnatural restraints on children:",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "serious",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 115,
+          "audio_path": "./audio/2004/c-text4/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s15-02",
+          "text": " “We are shut up in schools and college recitation rooms for 10 or 15 years and come out at last with a bellyful of words and do not know a thing.”",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "serious",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text4/s15-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 5,
+      "en": "Mark Twain’s Huckleberry Finn exemplified American anti-intellectualism.",
+      "zh": "马克·吐温笔下的《哈克贝利·费恩历险记》体现了美国式反智主义。",
+      "vocab": [
+        {
+          "word": "anti-intellectualism",
+          "lemma": "anti-intellectualism",
+          "level": 8,
+          "meaning": "反智主义",
+          "start": 51,
+          "end": 71
+        }
+      ],
+      "discourse_function": "example",
+      "prosody_focus": [
+        "exemplified"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "Mark Twain’s Huckleberry Finn exemplified American anti-intellectualism.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text4/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 5,
+      "en": "Its hero avoids being civilized — going to school and learning to read — so he can preserve his innate goodness.",
+      "zh": "小说主人公逃避所谓“文明化”——不去上学、不学阅读——以保住自己天生的善良。",
+      "vocab": [
+        {
+          "word": "innate",
+          "lemma": "innate",
+          "level": 7,
+          "meaning": "天生的",
+          "start": 96,
+          "end": 102
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "avoids being civilized",
+        "innate goodness"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "Its hero avoids being civilized — going to school and learning to read —",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2004/c-text4/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s17-02",
+          "text": " so he can preserve his innate goodness.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text4/s17-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 6,
+      "en": "Intellect, according to Hofstadter, is different from native intelligence, a quality we reluctantly admire.",
+      "zh": "按照霍夫施塔特的说法，智性不同于我们勉强会欣赏的那种天生聪明。",
+      "vocab": [
+        {
+          "word": "Intellect",
+          "lemma": "intellect",
+          "level": 6,
+          "meaning": "理智；智性",
+          "start": 0,
+          "end": 9
+        }
+      ],
+      "discourse_function": "compare",
+      "prosody_focus": [
+        "Intellect",
+        "native intelligence"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "Intellect, according to Hofstadter, is different from native intelligence,",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 95,
+          "audio_path": "./audio/2004/c-text4/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s18-02",
+          "text": " a quality we reluctantly admire.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text4/s18-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 6,
+      "en": "Intellect is the critical, creative, and contemplative side of the mind.",
+      "zh": "智性是心智中批判、创造和沉思的一面。",
+      "vocab": [
+        {
+          "word": "Intellect",
+          "lemma": "intellect",
+          "level": 6,
+          "meaning": "理智；智性",
+          "start": 0,
+          "end": 9
+        },
+        {
+          "word": "contemplative",
+          "lemma": "contemplative",
+          "level": 8,
+          "meaning": "沉思的",
+          "start": 41,
+          "end": 54
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "critical",
+        "creative",
+        "contemplative"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "Intellect is the critical, creative, and contemplative side of the mind.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text4/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "paragraph": 6,
+      "en": "Intelligence seeks to grasp, manipulate, reorder, and adjust, while intellect examines, ponders, wonders, theorizes, criticizes, and imagines.",
+      "zh": "聪明才智追求的是把握、操纵、重组和调整；而智性则会审视、沉思、发问、建构理论、批判和想象。",
+      "vocab": [
+        {
+          "word": "intellect",
+          "lemma": "intellect",
+          "level": 6,
+          "meaning": "理智；智性",
+          "start": 68,
+          "end": 77
+        }
+      ],
+      "discourse_function": "compare",
+      "prosody_focus": [
+        "Intelligence seeks",
+        "while intellect"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s20-01",
+          "text": "Intelligence seeks to grasp, manipulate, reorder, and adjust,",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 95,
+          "audio_path": "./audio/2004/c-text4/s20-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s20-02",
+          "text": " while intellect examines, ponders, wonders, theorizes, criticizes, and imagines.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text4/s20-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "paragraph": 6,
+      "en": "School remains a place where intellect is mistrusted.",
+      "zh": "学校仍然是一个不信任智性的地方。",
+      "vocab": [
+        {
+          "word": "intellect",
+          "lemma": "intellect",
+          "level": 6,
+          "meaning": "理智；智性",
+          "start": 29,
+          "end": 38
+        }
+      ],
+      "discourse_function": "warning",
+      "prosody_focus": [
+        "mistrusted"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s21-01",
+          "text": "School remains a place where intellect is mistrusted.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text4/s21-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "paragraph": 6,
+      "en": "Hofstadter says our country’s educational system is in the grips of people who joyfully and militantly proclaim their hostility to intellect and their eagerness to identify with children who show the least intellectual promise.",
+      "zh": "霍夫施塔特说，我们国家的教育体系掌握在这样一群人手里：他们兴高采烈又斗志昂扬地宣称自己敌视智性，并急于与那些最缺乏智性潜力的孩子站在一起。",
+      "vocab": [
+        {
+          "word": "militantly",
+          "lemma": "militantly",
+          "level": 8,
+          "meaning": "激进地",
+          "start": 92,
+          "end": 102
+        },
+        {
+          "word": "hostility",
+          "lemma": "hostility",
+          "level": 7,
+          "meaning": "敌意",
+          "start": 118,
+          "end": 127
+        },
+        {
+          "word": "intellect",
+          "lemma": "intellect",
+          "level": 6,
+          "meaning": "理智；智性",
+          "start": 131,
+          "end": 140
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "in the grips",
+        "militantly",
+        "hostility",
+        "least intellectual promise"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s22-01",
+          "text": "Hofstadter says our country’s educational system is in the grips of people",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 95,
+          "audio_path": "./audio/2004/c-text4/s22-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s22-02",
+          "text": " who joyfully and militantly proclaim their hostility to intellect and their eagerness to identify with children who show the least intellectual promise.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text4/s22-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

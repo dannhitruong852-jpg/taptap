@@ -1,0 +1,637 @@
+{
+  "year": 2005,
+  "section_type": "part_b",
+  "article_id": "partb",
+  "source_sha256": "6d1b28f9d8ce9e5c5c8632e1752e793f93458bc2f6b1d99fcef1892ac0a2c210",
+  "source_pages": [],
+  "accent": "en-US",
+  "primary_actor_id": "09",
+  "article_context": "医疗政策与财政评论。逻辑核心是规模议价、联邦—省级协作与政治阻力，整体成熟克制，批评处有分量。",
+  "article": {
+    "year": 2005,
+    "section": "partb",
+    "title": "新题型 · 加拿大全国药品机构",
+    "background": "医疗政策与财政评论。逻辑核心是规模议价、联邦—省级协作与政治阻力，整体成熟克制，批评处有分量。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "Canada’s premiers, the leaders of provincial governments, if they have any breath left after complaining about Ottawa at their late July annual meeting, might spare a moment to do something, together, to reduce health-care costs.",
+      "zh": "加拿大各省省长在七月底年会上抱怨完联邦政府之后，若还喘得过气来，也许该抽点时间共同做些事情，降低医疗成本。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "Canada’s premiers, the leaders of provincial governments, if they have any breat"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "Canada’s premiers, the leaders of provincial governments, if they have any breath left after complaining about Ottawa at their late July annual meeting, might spare a moment to do something, together, to reduce health-care costs.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-partb/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "They’re all groaning about soaring health budgets, the fastest-growing component of which are pharmaceutical costs.",
+      "zh": "他们都在为飞涨的医疗预算叫苦，而其中增长最快的正是药品开支。",
+      "vocab": [
+        {
+          "word": "pharmaceutical",
+          "lemma": "pharmaceutical",
+          "level": 7,
+          "meaning": "制药的；药品的",
+          "start": 94,
+          "end": 108
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "They’re all groaning about soaring health budgets, the fastest-growing component"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "They’re all groaning about soaring health budgets, the fastest-growing component of which are pharmaceutical costs.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-partb/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "What to do?",
+      "zh": "怎么办？",
+      "vocab": [],
+      "discourse_function": "ask",
+      "prosody_focus": [
+        "What to do?"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "What to do?",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-partb/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 1,
+      "en": "Both the Romanow commission and the Kirby committee on health care — to say nothing of reports from other experts — recommended the creation of a national drug agency.",
+      "zh": "罗曼诺委员会和柯比医疗委员会——更不用说其他专家报告——都建议成立一个全国性药品机构。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "Both the Romanow commission and the Kirby committee on health care — to say noth"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Both the Romanow commission and the Kirby committee on health care — to say nothing of reports from other experts — recommended the creation of a national drug agency.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-partb/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 1,
+      "en": "Instead of each province having its own list of approved drugs, bureaucracy, procedures and limited bargaining power, all would pool resources, work with Ottawa, and create a national institution.",
+      "zh": "与其让各省分别拥有自己的核准药品清单、行政体系、办事程序和有限的议价能力，不如把资源汇集起来，与联邦政府合作，建立全国性机构。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "Instead of each province having its own list of approved drugs, bureaucracy, pro"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Instead of each province having its own list of approved drugs, bureaucracy, procedures and limited bargaining power, all would pool resources, work with Ottawa, and create a national institution.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-partb/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "But “national” doesn’t have to mean that.",
+      "zh": "不过，“全国性”未必非得如此理解。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "But “national” doesn’t have to mean that."
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "But “national” doesn’t have to mean that.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-partb/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "“National” could mean interprovincial — provinces combining efforts to create one body.",
+      "zh": "“全国性”也可以意味着跨省合作——各省联合起来建立一个共同机构。",
+      "vocab": [
+        {
+          "word": "interprovincial",
+          "lemma": "interprovincial",
+          "level": 8,
+          "meaning": "省际的",
+          "start": 22,
+          "end": 37
+        }
+      ],
+      "discourse_function": "explain_quote",
+      "prosody_focus": [
+        "“National” could mean interprovincial — provinces combining efforts to create on"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "“National” could mean interprovincial — provinces combining efforts to create one body.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-partb/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 2,
+      "en": "Either way, one benefit of a “national” organization would be to negotiate better prices, if possible, with drug manufacturers.",
+      "zh": "无论采取哪种形式，全国性组织的一项好处都是可以尽可能与制药企业谈出更有利的价格。",
+      "vocab": [],
+      "discourse_function": "explain_quote",
+      "prosody_focus": [
+        "Either way, one benefit of a “national” organization would be to negotiate bette"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "Either way, one benefit of a “national” organization would be to negotiate better prices, if possible, with drug manufacturers.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-partb/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 2,
+      "en": "Instead of having one province — or a series of hospitals within a province — negotiate a price for a given drug on the provincial list, the national agency would negotiate on behalf of all provinces.",
+      "zh": "届时，不再由某一个省或省内一批医院分别为清单上的某种药议价，而由全国性机构代表所有省份统一谈判。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "Instead of having one province — or a series of hospitals within a province — ne"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "Instead of having one province — or a series of hospitals within a province — negotiate a price for a given drug on the provincial list, the national agency would negotiate on behalf of all provinces.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-partb/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 2,
+      "en": "Rather than, say, Quebec, negotiating on behalf of seven million people, the national agency would negotiate on behalf of 31 million people.",
+      "zh": "比如，不再由魁北克代表七百万人谈判，而是由全国机构代表三千一百万人谈判。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [
+        "Rather than, say, Quebec, negotiating on behalf of seven million people, the nat"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "Rather than, say, Quebec, negotiating on behalf of seven million people, the national agency would negotiate on behalf of 31 million people.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-partb/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 3,
+      "en": "Basic economics suggests the greater the potential consumers, the higher the likelihood of a better price.",
+      "zh": "基本经济学常识告诉我们，潜在消费者越多，谈到更优惠价格的可能性就越大。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "Basic economics suggests the greater the potential consumers, the higher the lik"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "Basic economics suggests the greater the potential consumers, the higher the likelihood of a better price.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-partb/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 3,
+      "en": "A small step has been taken in the direction of a national agency with the creation of the Canadian Co-ordinating Office for Health Technology Assessment, funded by Ottawa and the provinces.",
+      "zh": "加拿大已经朝全国性机构迈出了一小步：由联邦和各省共同出资成立了加拿大卫生技术评估协调办公室。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "A small step has been taken in the direction of a national agency with the creat"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "A small step has been taken in the direction of a national agency with the creation of the Canadian Co-ordinating Office for Health Technology Assessment, funded by Ottawa and the provinces.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-partb/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 3,
+      "en": "Under it, a Common Drug Review recommends to provincial lists which new drugs should be included.",
+      "zh": "在该机构之下，共同药品审查机制会向各省建议哪些新药应列入省级清单。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "Under it, a Common Drug Review recommends to provincial lists which new drugs sh"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "Under it, a Common Drug Review recommends to provincial lists which new drugs should be included.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-partb/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 3,
+      "en": "Predictably, and regrettably, Quebec refused to join.",
+      "zh": "不出所料，也令人遗憾的是，魁北克拒绝加入。",
+      "vocab": [],
+      "discourse_function": "evaluation_quote",
+      "prosody_focus": [
+        "Predictably, and regrettably, Quebec refused to join."
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "Predictably, and regrettably, Quebec refused to join.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "serious",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-partb/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 3,
+      "en": "A few premiers are suspicious of any federal-provincial deal-making.",
+      "zh": "少数省长对任何联邦—省级协议都心存疑虑。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [
+        "A few premiers are suspicious of any federal-provincial deal-making."
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "A few premiers are suspicious of any federal-provincial deal-making.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-partb/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 4,
+      "en": "They, particularly Quebec and Alberta, just want Ottawa to fork over additional billions with few, if any, strings attached.",
+      "zh": "他们——尤其是魁北克和阿尔伯塔——只希望联邦政府再掏出几十亿，而且最好几乎不附带任何条件。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "They, particularly Quebec and Alberta, just want Ottawa to fork over additional "
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "They, particularly Quebec and Alberta, just want Ottawa to fork over additional billions with few, if any, strings attached.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-partb/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 4,
+      "en": "That’s one reason why the idea of a national list hasn’t gone anywhere, while drug costs keep rising fast.",
+      "zh": "这正是全国药品清单构想迟迟没有进展、而药品成本却继续快速上涨的原因之一。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "That’s one reason why the idea of a national list hasn’t gone anywhere, while dr"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "That’s one reason why the idea of a national list hasn’t gone anywhere, while drug costs keep rising fast.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-partb/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 4,
+      "en": "Premiers love to quote Mr. Romanow’s report selectively, especially the parts about more federal money.",
+      "zh": "省长们喜欢有选择地引用罗曼诺的报告，尤其爱引用那些要求联邦增加拨款的部分。",
+      "vocab": [],
+      "discourse_function": "irony",
+      "prosody_focus": [
+        "Premiers love to quote Mr. Romanow’s report selectively, especially the parts ab"
+      ],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "Premiers love to quote Mr. Romanow’s report selectively, especially the parts about more federal money.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "ironic",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-partb/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 4,
+      "en": "Perhaps they should read what he had to say about drugs: “A national drug agency would provide governments more influence on pharmaceutical companies in order to try to constrain the ever-increasing cost of drugs.”",
+      "zh": "也许他们更该读读他关于药品的论述：“全国性药品机构将使政府在制药企业面前拥有更大影响力，从而设法遏制不断上涨的药品成本。”",
+      "vocab": [
+        {
+          "word": "pharmaceutical",
+          "lemma": "pharmaceutical",
+          "level": 7,
+          "meaning": "制药的；药品的",
+          "start": 125,
+          "end": 139
+        }
+      ],
+      "discourse_function": "explain_quote",
+      "prosody_focus": [
+        "Perhaps they should read what he had to say about drugs: “A national drug agency"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "Perhaps they should read what he had to say about drugs: “A national drug agency would provide governments more influence on pharmaceutical companies in order to try to constrain the ever-increasing cost of drugs.”",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-partb/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "paragraph": 4,
+      "en": "So when the premiers gather in Niagara Falls to assemble their usual complaint list, they should also get cracking about something in their jurisdiction that would help their budgets and patients.",
+      "zh": "因此，当各省省长在尼亚加拉瀑布再次聚集、照例罗列种种抱怨时，也该真正着手做些属于自身权限范围、既能改善预算又能惠及患者的事情。",
+      "vocab": [
+        {
+          "word": "jurisdiction",
+          "lemma": "jurisdiction",
+          "level": 7,
+          "meaning": "管辖权",
+          "start": 140,
+          "end": 152
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "So when the premiers gather in Niagara Falls to assemble their usual complaint l"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s20-01",
+          "text": "So when the premiers gather in Niagara Falls to assemble their usual complaint list, they should also get cracking about something in their jurisdiction that would help their budgets and patients.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2005/c-partb/s20-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

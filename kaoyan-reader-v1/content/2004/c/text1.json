@@ -1,0 +1,1025 @@
+{
+  "year": 2004,
+  "section_type": "reading",
+  "article_id": "text1",
+  "source_sha256": "f051c55c207511d8b1888faf55cfb3af726c8470ed5732d28f07d4c4994ae2c2",
+  "source_pages": [
+    3,
+    4
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "06",
+  "article_context": "围绕互联网求职工具给出实用、现代的建议。先讲成功案例，再指出搜索代理的局限，最后落到“把它当提醒工具”。语气轻松清楚，像懂互联网的职场朋友。",
+  "article": {
+    "year": 2004,
+    "section": "text1",
+    "title": "阅读一 · 求职网站的个人搜索代理",
+    "background": "围绕互联网求职工具给出实用、现代的建议。先讲成功案例，再指出搜索代理的局限，最后落到“把它当提醒工具”。语气轻松清楚，像懂互联网的职场朋友。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "Hunting for a job late last year, lawyer Gant Redmon stumbled across CareerBuilder, a job database on the Internet.",
+      "zh": "去年年底找工作时，律师甘特·雷德蒙偶然发现了 CareerBuilder——一个互联网上的职位数据库。",
+      "vocab": [
+        {
+          "word": "stumbled across",
+          "lemma": "stumble across",
+          "level": 6,
+          "meaning": "偶然发现",
+          "start": 53,
+          "end": 68
+        }
+      ],
+      "discourse_function": "story",
+      "prosody_focus": [
+        "Hunting for a job",
+        "stumbled across",
+        "job database"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "Hunting for a job late last year, lawyer Gant Redmon stumbled across CareerBuilder,",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 75,
+          "audio_path": "./audio/2004/c-text1/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s01-02",
+          "text": " a job database on the Internet.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text1/s01-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "He searched it with no success but was attracted by the site’s “personal search agent.”",
+      "zh": "他在上面搜索了一番却一无所获，不过网站的“个人搜索代理”功能吸引了他。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "no success",
+        "personal search agent"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "He searched it with no success but was attracted by the site’s “personal search agent.”",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text1/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "It’s an interactive feature that lets visitors key in job criteria such as location, title, and salary, then e-mails them when a matching position is posted in the database.",
+      "zh": "这是一个交互功能：用户可以输入地点、职位名称、薪资等求职条件；数据库一旦出现匹配职位，系统就会发电子邮件通知。",
+      "vocab": [
+        {
+          "word": "criteria",
+          "lemma": "criteria",
+          "level": 6,
+          "meaning": "标准",
+          "start": 58,
+          "end": 66
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "job criteria",
+        "matching position"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "It’s an interactive feature that lets visitors key in job criteria such as location, title, and salary,",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2004/c-text1/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s03-02",
+          "text": " then e-mails them when a matching position is posted in the database.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text1/s03-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 1,
+      "en": "Redmon chose the keywords “legal,” “intellectual property,” and “Washington, D.C.”",
+      "zh": "雷德蒙选择了“法律”“知识产权”和“华盛顿特区”几个关键词。",
+      "vocab": [],
+      "discourse_function": "example",
+      "prosody_focus": [
+        "keywords"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Redmon chose the keywords “legal,” “intellectual property,” and “Washington, D.C.”",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text1/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 1,
+      "en": "Three weeks later, he got his first notification of an opening.",
+      "zh": "三周后，他收到了第一份职位空缺通知。",
+      "vocab": [
+        {
+          "word": "notification",
+          "lemma": "notification",
+          "level": 6,
+          "meaning": "通知",
+          "start": 36,
+          "end": 48
+        }
+      ],
+      "discourse_function": "story",
+      "prosody_focus": [
+        "Three weeks later",
+        "notification"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Three weeks later, he got his first notification of an opening.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text1/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 1,
+      "en": "“I struck gold,” says Redmon, who e-mailed his resume to the employer and won a position as in-house counsel for a company.",
+      "zh": "“我淘到金子了。”雷德蒙说。他把简历通过电子邮件发给雇主，最终得到了一家公司内部法律顾问的职位。",
+      "vocab": [
+        {
+          "word": "in-house counsel",
+          "lemma": "in-house counsel",
+          "level": 8,
+          "meaning": "公司内部法律顾问",
+          "start": 92,
+          "end": 108
+        }
+      ],
+      "discourse_function": "dialogue",
+      "prosody_focus": [
+        "struck gold",
+        "in-house counsel"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "“I struck gold,” says Redmon,",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 85,
+          "audio_path": "./audio/2004/c-text1/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s06-02",
+          "text": " who e-mailed his resume to the employer and won a position as in-house counsel for a company.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text1/s06-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "With thousands of career-related sites on the Internet, finding promising openings can be time-consuming and inefficient.",
+      "zh": "互联网上有成千上万个求职网站，要从中找到有希望的职位空缺，既耗时又低效。",
+      "vocab": [
+        {
+          "word": "inefficient",
+          "lemma": "inefficient",
+          "level": 6,
+          "meaning": "低效的",
+          "start": 109,
+          "end": 120
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "thousands",
+        "time-consuming",
+        "inefficient"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "With thousands of career-related sites on the Internet,",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2004/c-text1/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s07-02",
+          "text": " finding promising openings can be time-consuming and inefficient.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text1/s07-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 2,
+      "en": "Search agents reduce the need for repeated visits to the databases.",
+      "zh": "搜索代理减少了人们反复访问数据库的必要。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "reduce",
+        "repeated visits"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "Search agents reduce the need for repeated visits to the databases.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text1/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 2,
+      "en": "But although a search agent worked for Redmon, career experts see drawbacks.",
+      "zh": "不过，尽管搜索代理对雷德蒙奏效了，职业专家仍看到了它的缺点。",
+      "vocab": [
+        {
+          "word": "drawbacks",
+          "lemma": "drawback",
+          "level": 6,
+          "meaning": "缺点",
+          "start": 66,
+          "end": 75
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "although",
+        "drawbacks"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "But although a search agent worked for Redmon,",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2004/c-text1/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s09-02",
+          "text": " career experts see drawbacks.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text1/s09-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 3,
+      "en": "Narrowing your criteria, for example, may work against you: “Every time you answer a question you eliminate a possibility,” says one expert.",
+      "zh": "比如，把搜索条件定得过窄反而可能对你不利。一位专家说：“你每回答一个问题，就排除了一种可能。”",
+      "vocab": [
+        {
+          "word": "criteria",
+          "lemma": "criteria",
+          "level": 6,
+          "meaning": "标准",
+          "start": 15,
+          "end": 23
+        }
+      ],
+      "discourse_function": "warning",
+      "prosody_focus": [
+        "Narrowing your criteria",
+        "eliminate a possibility"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "Narrowing your criteria, for example, may work against you:",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 105,
+          "audio_path": "./audio/2004/c-text1/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s10-02",
+          "text": " “Every time you answer a question you eliminate a possibility,” says one expert.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text1/s10-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 3,
+      "en": "For any job search, you should start with a narrow concept — what you think you want to do — then broaden it.",
+      "zh": "任何求职都应该先从一个较窄的概念出发——也就是你以为自己想做什么——然后再逐步扩大范围。",
+      "vocab": [],
+      "discourse_function": "sequence",
+      "prosody_focus": [
+        "start with",
+        "then broaden"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "For any job search, you should start with a narrow concept — what you think you want to do —",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2004/c-text1/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s11-02",
+          "text": " then broaden it.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text1/s11-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 3,
+      "en": "“None of these programs do that,” says another expert.",
+      "zh": "另一位专家说：“这些程序没有一个会这么做。”",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [
+        "None"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "“None of these programs do that,” says another expert.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text1/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 3,
+      "en": "“There’s no career counseling implicit in all of this.”",
+      "zh": "“这里面并没有真正隐含着职业咨询。”",
+      "vocab": [
+        {
+          "word": "implicit",
+          "lemma": "implicit",
+          "level": 7,
+          "meaning": "隐含的",
+          "start": 30,
+          "end": 38
+        }
+      ],
+      "discourse_function": "dialogue",
+      "prosody_focus": [
+        "no career counseling"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "“There’s no career counseling implicit in all of this.”",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text1/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 3,
+      "en": "Instead, the best strategy is to use the agent as a kind of tip service to keep abreast of jobs in a particular database; when you get e-mail, consider it a reminder to check the database again.",
+      "zh": "相反，更好的策略是把搜索代理当成一种提示服务，用来及时了解某个数据库中的职位；收到邮件时，把它看作再次登录数据库查看的提醒。",
+      "vocab": [
+        {
+          "word": "keep abreast of",
+          "lemma": "keep abreast of",
+          "level": 7,
+          "meaning": "及时了解",
+          "start": 75,
+          "end": 90
+        }
+      ],
+      "discourse_function": "resolve",
+      "prosody_focus": [
+        "tip service",
+        "keep abreast of",
+        "reminder"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "Instead, the best strategy is to use the agent as a kind of tip service to keep abreast of jobs in a particular database;",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 75,
+          "audio_path": "./audio/2004/c-text1/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s14-02",
+          "text": " when you get e-mail, consider it a reminder to check the database again.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text1/s14-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 3,
+      "en": "“I would not rely on agents for finding everything that is added to a database that might interest me,” says the author of a job-searching guide.",
+      "zh": "一位求职指南作者说：“我不会依赖搜索代理去找出数据库中新增加的、所有可能让我感兴趣的东西。”",
+      "vocab": [],
+      "discourse_function": "qualify_quote",
+      "prosody_focus": [
+        "would not rely",
+        "everything"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "“I would not rely on agents for finding everything that is added to a database that might interest me,”",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 95,
+          "audio_path": "./audio/2004/c-text1/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s15-02",
+          "text": " says the author of a job-searching guide.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text1/s15-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 4,
+      "en": "Some sites design their agents to tempt job hunters to return.",
+      "zh": "有些网站设计搜索代理，目的之一就是吸引求职者再次回来。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [
+        "tempt",
+        "return"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "Some sites design their agents to tempt job hunters to return.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text1/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 4,
+      "en": "When CareerSite’s agent sends out messages to those who have signed up for its service, for example, it includes only three potential jobs — those it considers the best matches.",
+      "zh": "例如，CareerSite 的代理向注册用户发送消息时，只列出三个潜在职位——也就是它认为最匹配的三个。",
+      "vocab": [],
+      "discourse_function": "example",
+      "prosody_focus": [
+        "only three",
+        "best matches"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "When CareerSite’s agent sends out messages to those who have signed up for its service, for example,",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 65,
+          "audio_path": "./audio/2004/c-text1/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s17-02",
+          "text": " it includes only three potential jobs — those it considers the best matches.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text1/s17-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 4,
+      "en": "There may be more matches in the database; job hunters will have to visit the site again to find them — and they do.",
+      "zh": "数据库里也许还有更多匹配结果；求职者必须再次访问网站才能看到，而他们确实会这么做。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [
+        "more matches",
+        "visit the site again",
+        "they do"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "There may be more matches in the database;",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 130,
+          "audio_path": "./audio/2004/c-text1/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s18-02",
+          "text": " job hunters will have to visit the site again to find them — and they do.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text1/s18-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 4,
+      "en": "“On the day after we send our messages, we see a sharp increase in our traffic,” says Seth Peets, vice president of marketing for CareerSite.",
+      "zh": "CareerSite 营销副总裁塞思·皮茨说：“我们发出消息后的第二天，网站访问量会明显上升。”",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [
+        "sharp increase",
+        "traffic"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "“On the day after we send our messages, we see a sharp increase in our traffic,”",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 85,
+          "audio_path": "./audio/2004/c-text1/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s19-02",
+          "text": " says Seth Peets, vice president of marketing for CareerSite.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text1/s19-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "paragraph": 5,
+      "en": "Even those who aren’t hunting for jobs may find search agents worthwhile.",
+      "zh": "即便没有在找工作的人，也可能发现搜索代理很有价值。",
+      "vocab": [
+        {
+          "word": "worthwhile",
+          "lemma": "worthwhile",
+          "level": 6,
+          "meaning": "值得的",
+          "start": 62,
+          "end": 72
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": [
+        "Even those",
+        "worthwhile"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s20-01",
+          "text": "Even those who aren’t hunting for jobs may find search agents worthwhile.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text1/s20-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "paragraph": 5,
+      "en": "Some use them to keep a close watch on the demand for their line of work or gather information on compensation to arm themselves when negotiating for a raise.",
+      "zh": "有些人用它密切观察自己所在行业的用工需求，或者收集薪酬信息，为谈加薪时做好准备。",
+      "vocab": [
+        {
+          "word": "compensation",
+          "lemma": "compensation",
+          "level": 6,
+          "meaning": "薪酬；补偿",
+          "start": 98,
+          "end": 110
+        }
+      ],
+      "discourse_function": "compare",
+      "prosody_focus": [
+        "demand",
+        "compensation",
+        "negotiating for a raise"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s21-01",
+          "text": "Some use them to keep a close watch on the demand for their line of work",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 95,
+          "audio_path": "./audio/2004/c-text1/s21-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "s21-02",
+          "text": " or gather information on compensation to arm themselves when negotiating for a raise.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text1/s21-02.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "paragraph": 5,
+      "en": "Although happily employed, Redmon maintains his agent at CareerBuilder.",
+      "zh": "尽管现在工作得很愉快，雷德蒙仍保留着自己在 CareerBuilder 上的搜索代理。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": [
+        "Although",
+        "maintains"
+      ],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s22-01",
+          "text": "Although happily employed, Redmon maintains his agent at CareerBuilder.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text1/s22-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "paragraph": 5,
+      "en": "“You always keep your eyes open,” he says.",
+      "zh": "他说：“你总得睁着眼睛留意机会。”",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [
+        "keep your eyes open"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s23-01",
+          "text": "“You always keep your eyes open,” he says.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text1/s23-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "paragraph": 5,
+      "en": "Working with a personal search agent means having another set of eyes looking out for you.",
+      "zh": "使用个人搜索代理，就等于多了一双替你留意机会的眼睛。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [
+        "another set of eyes"
+      ],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s24-01",
+          "text": "Working with a personal search agent means having another set of eyes looking out for you.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2004/c-text1/s24-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}
