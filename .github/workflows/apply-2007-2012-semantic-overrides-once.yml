@@ -1,0 +1,90 @@
+name: Apply 2007-2012 semantic overrides once
+
+on:
+  push:
+    branches:
+      - c-v4-article-preview-actual
+    paths:
+      - '.github/workflows/apply-2007-2012-semantic-overrides-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: c-v4-article-preview-actual
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build final mappings
+        run: |
+          set -euo pipefail
+          mkdir -p reports/2007-2012-staging/final-bilingual-highlights
+          mkdir -p reports/2007-2012-staging/final-unresolved
+          for year in 2007 2008 2009 2010 2011 2012; do
+            python scripts/build_2007_2012_bilingual_highlights.py \
+              --root . \
+              --year "$year" \
+              --vocabulary "reports/2007-2012-staging/vocabulary/$year/vocabulary-1-9.json" \
+              --overrides "reports/2007-2012-staging/semantic-overrides/$year.json" \
+              --mapping-output "reports/2007-2012-staging/final-bilingual-highlights/$year.json" \
+              --unresolved-output "reports/2007-2012-staging/final-unresolved/$year.json"
+          done
+
+      - name: Validate counts and offsets
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          expected = {2007:129, 2008:104, 2009:153, 2010:117, 2011:102, 2012:135}
+          root = Path('.')
+          for year, expected_count in expected.items():
+              unresolved_doc = json.loads((root / 'reports/2007-2012-staging/final-unresolved' / f'{year}.json').read_text(encoding='utf-8'))
+              assert unresolved_doc['count'] == 0, (year, unresolved_doc['count'])
+
+              mapping = json.loads((root / 'reports/2007-2012-staging/final-bilingual-highlights' / f'{year}.json').read_text(encoding='utf-8'))
+              mapped = sum(len(entries) for sentence_map in mapping['articles'].values() for entries in sentence_map.values())
+              assert mapped == expected_count, (year, mapped, expected_count)
+
+              candidates = {}
+              for unit in ('cloze','text1','text2','text3','text4','partb','translation'):
+                  doc = json.loads((root / 'reports/content-freeze' / str(year) / f'{unit}.candidate.json').read_text(encoding='utf-8'))
+                  article = doc['article']
+                  rows = {}
+                  for i, row in enumerate(article['rows'], 1):
+                      rows[f's{i:02d}'] = {'en': str(row[1]).replace('|',''), 'zh': str(row[2])}
+                  candidates[str(article['id'])] = rows
+
+              for article_id, sentence_map in mapping['articles'].items():
+                  assert article_id in candidates, (year, article_id)
+                  for sentence_id, entries in sentence_map.items():
+                      assert sentence_id in candidates[article_id], (year, article_id, sentence_id)
+                      row = candidates[article_id][sentence_id]
+                      for entry in entries:
+                          assert row['en'][entry['en_start']:entry['en_end']] == entry['en_text'], (year, article_id, sentence_id, entry)
+                          for span in entry['zh_spans']:
+                              assert row['zh'][span['start']:span['end']] == span['text'], (year, article_id, sentence_id, span)
+
+              print(json.dumps({'year': year, 'mapped': mapped, 'unresolved': 0}, ensure_ascii=False))
+          PY
+
+      - name: Commit final staging mappings
+        run: |
+          set -euo pipefail
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add reports/2007-2012-staging/final-bilingual-highlights reports/2007-2012-staging/final-unresolved
+          if git diff --cached --quiet; then
+            echo 'No changes to commit'
+          else
+            git commit -m 'content: materialize final 2007-2012 bilingual mappings'
+            git push origin HEAD:c-v4-article-preview-actual
+          fi
