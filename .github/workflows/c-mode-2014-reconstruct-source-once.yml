@@ -1,0 +1,141 @@
+name: C Mode 2014 reconstruct source once
+
+on:
+  push:
+    branches:
+      - c-mode-v2-2013-2018-production
+    paths:
+      - '.github/workflows/c-mode-2014-reconstruct-source-once.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  reconstruct:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: .:voice-pipeline:content-pipeline
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: c-mode-v2-2013-2018-production
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Reconstruct 2014 canonical source from intact header and reviewed evidence
+        run: |
+          python - <<'PY'
+          import base64, json, zlib
+          from pathlib import Path
+
+          curated=Path('content-pipeline/curated')
+          parts=sorted(curated.glob('2014.json.gz.b64.part*'))
+          assert len(parts) == 5, [p.name for p in parts]
+          encoded=''.join(p.read_text(encoding='ascii').strip() for p in parts)
+          encoded += '=' * (-len(encoded) % 4)
+          raw=base64.b64decode(encoded, validate=True)
+
+          dec=zlib.decompressobj(16 + zlib.MAX_WBITS)
+          chunks=[]
+          failure=None
+          for i, byte in enumerate(raw):
+              try:
+                  piece=dec.decompress(bytes([byte]))
+                  if piece:
+                      chunks.append(piece)
+              except zlib.error as exc:
+                  failure={'compressed_byte':i,'error':str(exc)}
+                  break
+          assert failure is not None, 'historical split source unexpectedly became healthy'
+          plaintext=b''.join(chunks).decode('utf-8')
+          marker='"articles"'
+          marker_index=plaintext.index(marker)
+          header=json.loads(plaintext[:marker_index] + '"articles": []\n}')
+          assert list(header.keys()) == ['year','source_pdf','source_sha256','vocabulary','articles'], list(header.keys())
+          assert header['year'] == 2014
+          assert header['source_pdf'] == '2014年考研英语二真题（可复制搜索查词）.pdf'
+          assert header['source_sha256'] == '63da0a016fba9a18f4344ad8ce79c594e6703e84e77996c665f91f3b288f9fde'
+          assert len(header['vocabulary']) == 48, len(header['vocabulary'])
+
+          expected=['cloze','text1','text2','text3','text4','partb','translation']
+          evidence_root=Path('reports/content-freeze/2014')
+          articles=[]
+          evidence_rows=[]
+          for article_id in expected:
+              doc=json.loads((evidence_root/f'{article_id}.candidate.json').read_text(encoding='utf-8'))
+              qa=doc['qa']
+              article=doc['article']
+              assert doc['year'] == 2014
+              assert article['id'] == article_id
+              assert qa['source_sha256'] == header['source_sha256']
+              for flag in ('source_scope_verified','scope_exclusions_reviewed','text_fidelity_reviewed','translation_alignment_reviewed','sentence_alignment_reviewed'):
+                  assert qa[flag] is True, (article_id, flag, qa[flag])
+              assert qa['status'] == 'reviewed_candidate'
+              assert qa['expected_sentences'] == qa['actual_sentences'] == len(article['rows'])
+              articles.append(article)
+              evidence_rows.append({
+                  'article_id':article_id,
+                  'sentences':len(article['rows']),
+                  'curated_payload_sha256':qa.get('curated_payload_sha256'),
+              })
+
+          header['articles']=articles
+          output=curated/'2014.json'
+          output.write_text(json.dumps(header,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          recovery={
+              'year':2014,
+              'method':'intact gzip plaintext header plus seven reviewed candidate article payloads',
+              'historical_source_parts':[p.name for p in parts],
+              'historical_failure':failure,
+              'source_pdf':header['source_pdf'],
+              'source_sha256':header['source_sha256'],
+              'vocabulary_entries':len(header['vocabulary']),
+              'article_ids':expected,
+              'evidence':evidence_rows,
+              'english_chinese_article_payloads_modified':False,
+          }
+          report=evidence_root/'source-recovery.json'
+          report.write_text(json.dumps(recovery,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps(recovery,ensure_ascii=False,indent=2))
+          PY
+      - name: Build 2014 canonical reader content
+        run: python content-pipeline/build_curated_year.py --year 2014
+      - name: Build and verify 2014 bilingual layer
+        run: |
+          python content-pipeline/build_bilingual_highlights.py --year 2014
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          report=json.loads(Path('reports/bilingual-highlights/2014.json').read_text(encoding='utf-8'))
+          assert report['errors'] == [], report
+          assert report['reviewed_exceptions'] == 0, report
+          assert report['required_occurrences'] == report['mapped_occurrences'], report
+          docs=sorted(Path('kaoyan-reader-v1/content/2014/c').glob('*.json'))
+          assert len(docs) == 7, [p.name for p in docs]
+          print(json.dumps({'articles':len(docs),'bilingual':report},ensure_ascii=False))
+          PY
+      - name: Run content regression tests
+        run: |
+          python -m unittest \
+            content-pipeline/tests/test_bilingual_highlights.py \
+            content-pipeline/tests/test_build_bilingual_highlights.py \
+            content-pipeline/tests/test_build_curated_year.py -v
+      - name: Commit reconstructed source and verified 2014 outputs
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            content-pipeline/curated/2014.json \
+            reports/content-freeze/2014/source-recovery.json \
+            kaoyan-reader-v1/content/2014 \
+            kaoyan-reader-v1/content/catalog.json \
+            content-pipeline/voice_profiles/2014.json \
+            content-pipeline/direction/2014.json \
+            reports/extraction/2014.json \
+            reports/bilingual-highlights/2014.json
+          git diff --cached --check
+          git diff --cached --quiet && { echo 'No changes to commit.'; exit 0; }
+          git commit -m '[skip ci] stage: reconstruct and verify 2014 canonical source'
+          git pull --rebase origin c-mode-v2-2013-2018-production
+          git push origin HEAD:c-mode-v2-2013-2018-production
