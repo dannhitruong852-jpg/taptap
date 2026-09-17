@@ -1,0 +1,59 @@
+{
+  "year": 2013,
+  "article": {
+    "id": "cloze",
+    "section_type": "cloze",
+    "title": "完型 · 走向无现金社会为何缓慢",
+    "pages": [
+      1,
+      2
+    ],
+    "actor": "05",
+    "accent": "en-US",
+    "context": "解释无现金社会迟迟未全面到来的成本、浮存期、安全与隐私障碍。主讲人采用清晰的科技说明语气，按四项原因逐层推进。",
+    "domain": "technology / payments / privacy",
+    "author_stance": "analytical explanatory",
+    "formality": "medium-high",
+    "narrativity": "low",
+    "humor_level": "none",
+    "rationality_emotionality": "rational",
+    "baseline_mood": "calm analytical",
+    "preferred_age_impression": "adult",
+    "rows": [
+      [1,"Given the advantages of electronic money, you might think that we would move quickly to the cashless society in which all payments are made electronically.","鉴于电子货币的种种优势，你或许会以为，我们会很快迈入一个所有支付都以电子方式完成的无现金社会。","advance",[]],
+      [1,"However, a true cashless society is probably not around the corner.","然而，一个真正的无现金社会恐怕并不会很快到来。","contrast",[]],
+      [1,"Indeed, predictions have been around for two decades but have not yet come to fruition.","事实上，这种预测二十年来一直存在，却至今仍未成为现实。","contrast",[]],
+      [1,"For example, Business Week predicted in 1975 that electronic means of payment would soon \"revolutionize the very concept of money itself,\" only to reverse itself several years later.","例如，《商业周刊》曾在1975年预测，电子支付手段很快将“彻底改变货币本身的概念”，但几年后它又改口了。","example",[]],
+      [1,"Why has the movement to a cashless society been so slow in coming?","那么，为什么迈向无现金社会的进程来得如此缓慢？","ask",[]],
+      [2,"Although electronic means of payment may be more efficient than a payments system based on paper, several factors work against the disappearance of the paper system.","虽然电子支付手段可能比以纸张为基础的支付体系更高效，但仍有若干因素阻碍纸质支付体系消失。","contrast",[]],
+      [2,"First, it is very expensive to set up the computer, card reader, and telecommunications networks necessary to make electronic money the dominant form of payment.","首先，要建立让电子货币成为主要支付方式所必需的电脑、读卡器和相关电信网络，成本非常高。","sequence",[]],
+      [2,"Second, paper checks have the advantage that they provide receipts, something that many consumers are unwilling to give up.","其次，纸质支票有一个优势：它们能够提供收据，而许多消费者并不愿意放弃这一点。","sequence",[]],
+      [2,"Third, the use of paper checks gives consumers several days of \"float\" - it takes several days before a check is cashed and funds are withdrawn from the issuer's account, which means that the writer of the check can earn interest on the funds in the meantime.","第三，使用纸质支票能让消费者获得几天的“浮存期”：支票兑现并从出票人账户中扣款需要几天时间，这意味着开票人在此期间仍可用这笔资金赚取利息。","sequence",[]],
+      [2,"Because electronic payments are immediate, they eliminate the float for the consumer.","由于电子支付即时完成，它会消除消费者原本享有的这段浮存期。","conclude",[]],
+      [3,"Fourth, electronic means of payment may raise security and privacy concerns.","第四，电子支付手段还可能引发安全与隐私方面的担忧。","sequence",[]],
+      [3,"We often hear media reports that an unauthorized hacker has been able to access a computer database and to alter information stored there.","我们经常听到媒体报道，说有未经授权的黑客能够进入计算机数据库并篡改其中存储的信息。","report",[]],
+      [3,"The fact that this is not an uncommon occurrence means that dishonest persons might be able to access bank accounts in electronic payments systems and steal from someone else's accounts.","这种事情并非罕见，这意味着不法之徒可能进入电子支付系统中的银行账户，并从他人的账户中盗取钱款。","warning",[]],
+      [3,"The prevention of this type of fraud is no easy task, and a new field of computer science is developing to cope with security issues.","防范这类欺诈绝非易事，一个新的计算机科学领域正在发展，以应对这些安全问题。","warning",[]],
+      [3,"A further concern is that the use of electronic means of payment leaves an electronic trail that contains a large amount of personal data.","还有一个担忧是，使用电子支付手段会留下电子痕迹，其中包含大量个人数据。","advance",[]],
+      [3,"There are concerns that government, employers, and marketers might be able to access these data, thereby violating our privacy.","人们担心政府、雇主和营销人员可能获取这些数据，从而侵犯我们的隐私。","conclude",[]]
+    ],
+    "editorial_status": "reviewed_candidate"
+  },
+  "qa": {
+    "review_schema_version": "c-mode-v2-1",
+    "source_pdf": "2013年考研英语二真题（可复制搜索查词）.pdf",
+    "source_sha256": "ec8d1d5ddaf1d573083e0d0835d97835a0d68e7b7d797c749385cb0cb06e711b",
+    "source_scope_verified": true,
+    "scope_exclusions_reviewed": true,
+    "text_fidelity_reviewed": true,
+    "translation_alignment_reviewed": true,
+    "sentence_alignment_reviewed": true,
+    "sentence_count": 16,
+    "expected_sentences": 16,
+    "actual_sentences": 16,
+    "status": "reviewed_candidate",
+    "review_method": "visual PDF review plus curated sentence-level manuscript",
+    "unresolved_sections": [],
+    "curated_payload_sha256": "f54be95fafdcbfbb0f69375f48bf09349f593e28349e541ba78163f51c6fffb0"
+  }
+}
