@@ -1,0 +1,104 @@
+name: C Mode 2013-2018 preflight once
+
+on:
+  push:
+    branches:
+      - c-mode-v2-2013-2018-production
+    paths:
+      - '.github/workflows/c-mode-2013-2018-preflight-once.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: .:voice-pipeline:content-pipeline
+      BATCH_MANIFEST: batch-manifests/2013-2018.json
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: c-mode-v2-2013-2018-production
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Require repository production contract
+        run: |
+          test -s PRODUCTION_RULES.md
+          test -s docs/superpowers/specs/2026-09-17-c-mode-production-pipeline-v2-design.md
+      - name: Validate committed batch manifest
+        run: python -m production_v2.cli_manifest validate --manifest "$BATCH_MANIFEST"
+      - name: Run V2 core regression suite
+        run: python -m unittest discover -s production_v2/tests -v
+      - name: Build and preflight canary 2013
+        run: |
+          python content-pipeline/build_curated_year.py --year 2013
+          if [ -f content-pipeline/build_bilingual_highlights.py ]; then
+            python content-pipeline/build_bilingual_highlights.py --year 2013
+          fi
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          source=json.loads(Path(os.environ['BATCH_MANIFEST']).read_text())
+          source['years']=[2013]
+          source['expected_articles']={'2013':source['expected_articles']['2013']}
+          Path('/tmp/canary-manifest.json').write_text(json.dumps(source,indent=2)+'\n')
+          PY
+          python -m production_v2.cli_validate_batch \
+            --manifest /tmp/canary-manifest.json \
+            --catalog kaoyan-reader-v1/content/catalog.json \
+            --reader-root kaoyan-reader-v1 \
+            --phase preflight \
+            --report /tmp/canary-report.json
+      - name: Build all 2013-2018 content
+        run: |
+          for year in 2013 2014 2015 2016 2017 2018; do
+            python content-pipeline/build_curated_year.py --year "$year"
+            if [ -f content-pipeline/build_bilingual_highlights.py ]; then
+              python content-pipeline/build_bilingual_highlights.py --year "$year"
+            fi
+          done
+      - name: Run historical regression gates
+        run: |
+          python -m unittest discover -s production_v2/tests -v
+          if [ -f scripts/tests/test_2007_2012_workflow_contract.py ]; then
+            python -m unittest \
+              scripts/tests/test_check_2007_2012_content_freeze.py \
+              scripts/tests/test_build_2007_2012_curated.py \
+              scripts/tests/test_2007_2012_workflow_contract.py -v
+          fi
+          if [ -f content-pipeline/tests/test_bilingual_highlights.py ]; then
+            python -m unittest \
+              content-pipeline/tests/test_bilingual_highlights.py \
+              content-pipeline/tests/test_build_bilingual_highlights.py \
+              content-pipeline/tests/test_build_curated_year.py -v
+          fi
+      - name: Validate complete batch and prove validated transition
+        run: |
+          python -m production_v2.cli_validate_batch \
+            --manifest "$BATCH_MANIFEST" \
+            --catalog kaoyan-reader-v1/content/catalog.json \
+            --reader-root kaoyan-reader-v1 \
+            --phase preflight \
+            --report /tmp/preflight-report.json
+          python -m production_v2.cli_manifest advance \
+            --manifest "$BATCH_MANIFEST" --to validated --output /tmp/batch-validated.json
+      - name: Summarize preflight artifacts
+        run: |
+          echo '## C Mode 2013-2018 preflight' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Canary report:' >> "$GITHUB_STEP_SUMMARY"
+          cat /tmp/canary-report.json >> "$GITHUB_STEP_SUMMARY"
+          echo '' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Full preflight report:' >> "$GITHUB_STEP_SUMMARY"
+          cat /tmp/preflight-report.json >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: c-mode-2013-2018-preflight
+          path: |
+            /tmp/canary-report.json
+            /tmp/preflight-report.json
+            /tmp/batch-validated.json
+          if-no-files-found: error
+          retention-days: 14
