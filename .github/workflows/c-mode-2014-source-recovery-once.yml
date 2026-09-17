@@ -21,77 +21,41 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Localize deflate failure and search nearby Base64 substitutions
+      - name: Recover valid plaintext prefix before deflate corruption
         run: |
           python - <<'PY'
-          import base64, gzip, json, zlib
+          import base64, json, zlib
           from pathlib import Path
 
           root=Path('content-pipeline/curated')
           parts=[(root/f'2014.json.gz.b64.part{i:02d}').read_text(encoding='ascii').strip() for i in range(5)]
-          starts=[]
-          cursor=0
-          for part in parts:
-              starts.append(cursor)
-              cursor += len(part)
           encoded=''.join(parts)
-          padded=encoded + '=' * (-len(encoded) % 4)
-          raw=base64.b64decode(padded, validate=True)
-          print('part lengths:', [len(x) for x in parts], 'base64 chars:', len(encoded), 'compressed bytes:', len(raw))
-
+          encoded += '=' * (-len(encoded) % 4)
+          raw=base64.b64decode(encoded, validate=True)
           dec=zlib.decompressobj(16 + zlib.MAX_WBITS)
-          failure_byte=None
+          out=[]
+          failure=None
           for i, byte in enumerate(raw):
               try:
-                  dec.decompress(bytes([byte]))
+                  piece=dec.decompress(bytes([byte]))
+                  if piece:
+                      out.append(piece)
               except zlib.error as exc:
-                  failure_byte=i
-                  print('deflate failure byte:', i, 'error:', exc)
+                  failure=(i, str(exc))
                   break
-          if failure_byte is None:
-              raise SystemExit('streaming zlib did not reproduce corruption')
-
-          center=(failure_byte * 4) // 3
-          radius=384
-          lo=max(0, center-radius)
-          hi=min(len(encoded), center+radius+1)
-          print('searching base64 positions:', lo, 'through', hi-1, 'center:', center)
-          alphabet='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
-          candidates=[]
-          chars=list(encoded)
-          attempts=0
-          for pos in range(lo, hi):
-              original=chars[pos]
-              if original not in alphabet:
-                  continue
-              for replacement in alphabet:
-                  if replacement == original:
-                      continue
-                  attempts += 1
-                  chars[pos]=replacement
-                  candidate=''.join(chars)
-                  candidate += '=' * (-len(candidate) % 4)
-                  try:
-                      doc=json.loads(gzip.decompress(base64.b64decode(candidate, validate=True)).decode('utf-8'))
-                  except Exception:
-                      chars[pos]=original
-                      continue
-                  chars[pos]=original
-                  if doc.get('year') == 2014 and isinstance(doc.get('articles'), list) and len(doc['articles']) == 7:
-                      part_index=max(i for i,start in enumerate(starts) if start <= pos)
-                      candidates.append({
-                          'combined_position': pos,
-                          'part': part_index,
-                          'part_position': pos-starts[part_index],
-                          'from': original,
-                          'to': replacement,
-                          'articles': len(doc['articles']),
-                          'source_sha256': doc.get('source_sha256'),
-                      })
-              chars[pos]=original
-          print('attempts:', attempts)
-          print('valid candidates:', candidates)
-          if len(candidates) != 1:
-              raise SystemExit(f'expected exactly one nearby substitution candidate, found {len(candidates)}')
-          print('UNIQUE_RECOVERY=' + json.dumps(candidates[0], sort_keys=True))
+          plaintext=b''.join(out).decode('utf-8', errors='replace')
+          print('failure:', failure)
+          print('recovered_plaintext_chars:', len(plaintext))
+          print('--- PLAINTEXT PREFIX START ---')
+          print(plaintext[:20000])
+          print('--- PLAINTEXT PREFIX END ---')
+          print('--- PLAINTEXT TAIL START ---')
+          print(plaintext[-8000:])
+          print('--- PLAINTEXT TAIL END ---')
+          # Detect whether the vocabulary object is already syntactically closed
+          marker='"vocabulary"'
+          idx=plaintext.find(marker)
+          print('vocabulary_marker_index:', idx)
+          if idx >= 0:
+              print('vocabulary_context:', plaintext[idx:idx+12000])
           PY
