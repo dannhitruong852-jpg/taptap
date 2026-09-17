@@ -1,0 +1,80 @@
+name: C Mode 2016-2017 bilingual verify once
+
+on:
+  push:
+    branches:
+      - c-mode-v2-2013-2018-production
+    paths:
+      - '.github/workflows/c-mode-2016-2017-bilingual-verify-once.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: c-mode-v2-2013-2018-production
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build and validate 2016-2017 bilingual layers
+        env:
+          PYTHONPATH: .:voice-pipeline:content-pipeline
+        run: |
+          for year in 2016 2017; do
+            python content-pipeline/build_curated_year.py --year "$year"
+            python content-pipeline/build_bilingual_highlights.py --year "$year"
+          done
+      - name: Verify reports and article counts
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          summary=[]
+          for year in (2016, 2017):
+              report=json.loads(Path(f'reports/bilingual-highlights/{year}.json').read_text(encoding='utf-8'))
+              assert report == {
+                  'year': year,
+                  'required_occurrences': 0,
+                  'mapped_occurrences': 0,
+                  'reviewed_exceptions': 0,
+                  'errors': [],
+              }, report
+              docs=sorted(Path(f'kaoyan-reader-v1/content/{year}/c').glob('*.json'))
+              assert len(docs) == 7, (year,[p.name for p in docs])
+              summary.append({'year':year,'articles':len(docs),'report':report})
+          print(json.dumps(summary,ensure_ascii=False))
+          PY
+      - name: Run bilingual regression tests
+        env:
+          PYTHONPATH: .:voice-pipeline:content-pipeline
+        run: |
+          python -m unittest \
+            content-pipeline/tests/test_bilingual_highlights.py \
+            content-pipeline/tests/test_build_bilingual_highlights.py \
+            content-pipeline/tests/test_build_curated_year.py -v
+      - name: Commit verified 2016-2017 outputs
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            kaoyan-reader-v1/content/2016 \
+            kaoyan-reader-v1/content/2017 \
+            kaoyan-reader-v1/content/catalog.json \
+            content-pipeline/voice_profiles/2016.json \
+            content-pipeline/voice_profiles/2017.json \
+            content-pipeline/direction/2016.json \
+            content-pipeline/direction/2017.json \
+            reports/bilingual-highlights/2016.json \
+            reports/bilingual-highlights/2017.json
+          git diff --cached --check
+          if git diff --cached --quiet; then
+            echo 'No 2016-2017 output changes to commit.'
+          else
+            git commit -m '[skip ci] stage: verify 2016-2017 bilingual content'
+            git push origin HEAD:c-mode-v2-2013-2018-production
+          fi
