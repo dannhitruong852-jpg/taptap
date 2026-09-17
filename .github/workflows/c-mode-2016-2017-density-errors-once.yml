@@ -1,0 +1,56 @@
+name: C Mode 2016-2017 density errors once
+
+on:
+  push:
+    branches:
+      - c-mode-v2-2013-2018-production
+    paths:
+      - '.github/workflows/c-mode-2016-2017-density-errors-once.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: c-mode-v2-2013-2018-production
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Audit every article independently
+        env:
+          PYTHONPATH: .:voice-pipeline:content-pipeline
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from build_curated_year import load_curated_source, compile_article
+
+          out={}
+          for year in (2016,2017):
+              source=load_curated_source(Path('content-pipeline/curated'),year)
+              failures={}
+              for item in source['articles']:
+                  try:
+                      compile_article(source,item)
+                  except Exception as exc:
+                      failures[item['id']]=str(exc)
+              out[str(year)]={'failures':failures,'failure_count':len(failures)}
+          path=Path('reports/content-freeze/2016-2017-density-errors.json')
+          path.write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps(out,ensure_ascii=False))
+          PY
+      - name: Commit audit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/content-freeze/2016-2017-density-errors.json
+          git diff --cached --check
+          if ! git diff --cached --quiet; then
+            git commit -m '[skip ci] audit: persist 2016-2017 density errors'
+            git push origin HEAD:c-mode-v2-2013-2018-production
+          fi
