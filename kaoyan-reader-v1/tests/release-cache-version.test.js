@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const html = readFileSync(join(root, 'index.html'), 'utf8');
+const staticCache = readFileSync(join(root, 'static-resource-cache.js'), 'utf8');
 const release = 'active-sentence-20260918-v2';
 
 test('reader UI assets share a release cache-busting version', () => {
@@ -13,4 +14,8 @@ test('reader UI assets share a release cache-busting version', () => {
     const escaped = asset.replaceAll('.', '\\.');
     assert.match(html, new RegExp(`\\./${escaped}\\?v=${release}`), `${asset} must use release ${release}`);
   }
+});
+
+test('persistent static resource cache is versioned with the reader release', () => {
+  assert.match(staticCache, new RegExp(`DEFAULT_NAMESPACE='kaoyan-static-${release}'`));
 });
