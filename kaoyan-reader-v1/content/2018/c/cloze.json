@@ -1,0 +1,510 @@
+{
+  "year": 2018,
+  "section_type": "cloze",
+  "article_id": "cloze",
+  "source_sha256": "99f76a627175cece57eb1fc033f1b9112fafc9b3ab9d64dec2adb0350bd2dda5",
+  "source_pages": [
+    1,
+    2
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "02",
+  "article_context": "介绍一组关于“信息好奇心”的行为实验：即使预知答案或刺激令人不适，人们仍可能为消除不确定性主动探索；提前想象后果可以抑制这种有害好奇。",
+  "article": {
+    "year": 2018,
+    "section": "cloze",
+    "title": "完型 · 好奇心为什么会诱使人自找不痛快",
+    "background": "介绍一组关于“信息好奇心”的行为实验：即使预知答案或刺激令人不适，人们仍可能为消除不确定性主动探索；提前想象后果可以抑制这种有害好奇。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "Why do people read negative Internet comments and do other things that will obviously be painful?",
+      "zh": "为什么人们明知会难受，还会去读网上的负面评论，或做其他显然会带来痛苦的事？",
+      "vocab": [],
+      "discourse_function": "ask",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "Why do people read negative Internet comments and do other things that will obviously be painful?",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2018/c-cloze/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Because humans have an inherent need to resolve uncertainty, according to a recent study in Psychological Science.",
+      "zh": "《心理科学》近期发表的一项研究认为，这是因为人类天生有消除不确定性的需要。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Because humans have an inherent need to resolve uncertainty, according to a recent study in Psychological Science.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2018/c-cloze/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "The new research reveals that the need to know is so strong that people will seek to satisfy their curiosity even when it is clear the answer will hurt.",
+      "zh": "新研究表明，人们想知道答案的欲望如此强烈，以至于即便明知答案会令人难受，也仍会设法满足自己的好奇心。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "The new research reveals that the need to know is so strong that people will seek to satisfy their curiosity even when it is clear the answer will hurt.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2018/c-cloze/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "In a series of four experiments, behavioral scientists at the University of Chicago and the Wisconsin School of Business tested students' willingness to expose themselves to unpleasant stimuli in an effort to satisfy curiosity.",
+      "zh": "芝加哥大学和威斯康星商学院的行为科学家开展了四项实验，以检验学生为了满足好奇心，是否愿意主动让自己接触令人不适的刺激。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "In a series of four experiments, behavioral scientists at the University of Chicago and the Wisconsin School of Business tested students' willingness to expose themselves to unpleasant stimuli in an effort to satisfy curiosity.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2018/c-cloze/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "For one trial, each participant was shown a pile of pens that the researcher claimed were from a previous experiment.",
+      "zh": "在其中一次实验中，每位参与者都会看到一堆笔，研究人员声称这些笔来自之前的一项实验。",
+      "vocab": [],
+      "discourse_function": "example",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "For one trial, each participant was shown a pile of pens that the researcher claimed were from a previous experiment.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2018/c-cloze/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "The twist?",
+      "zh": "意外之处在于什么？",
+      "vocab": [],
+      "discourse_function": "ask",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "The twist?",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2018/c-cloze/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "Half of the pens would deliver an electric shock when clicked.",
+      "zh": "其中一半的笔一按就会释放电击。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "Half of the pens would deliver an electric shock when clicked.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2018/c-cloze/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 3,
+      "en": "Twenty-seven students were told which pens were electrified; another twenty-seven were told only that some were electrified.",
+      "zh": "27名学生被告知哪些笔带电；另有27名学生只知道有些笔带电，却不知道具体是哪几支。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "Twenty-seven students were told which pens were electrified; another twenty-seven were told only that some were electrified.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2018/c-cloze/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 3,
+      "en": "When left alone in the room, the students who did not know which ones would shock them clicked more pens and incurred more shocks than the students who knew what would happen.",
+      "zh": "独处房间时，不知道哪些笔会电到自己的学生按了更多支笔，遭受的电击也更多；而知道会发生什么的学生则没有这么做。",
+      "vocab": [],
+      "discourse_function": "compare",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "When left alone in the room, the students who did not know which ones would shock them clicked more pens and incurred more shocks than the students who knew what would happen.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2018/c-cloze/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 3,
+      "en": "Subsequent experiments reproduced this effect with other stimuli, such as the sound of fingernails on a chalkboard and photographs of disgusting insects.",
+      "zh": "后续实验用其他刺激复现了这一效应，例如指甲刮黑板的声音和令人反感的昆虫照片。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "Subsequent experiments reproduced this effect with other stimuli, such as the sound of fingernails on a chalkboard and photographs of disgusting insects.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2018/c-cloze/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 4,
+      "en": "The drive to discover is deeply rooted in humans, much the same as the basic drives for food or shelter, says Christopher Hsee of the University of Chicago.",
+      "zh": "芝加哥大学的克里斯托弗·奚说，探索未知的驱动力深植于人性，与人对食物或栖身之所的基本需求很相似。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "The drive to discover is deeply rooted in humans, much the same as the basic drives for food or shelter, says Christopher Hsee of the University of Chicago.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2018/c-cloze/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 4,
+      "en": "Curiosity is often considered a good instinct - it can lead to new scientific advances, for instance - but sometimes such inquiry can backfire.",
+      "zh": "好奇心通常被视为一种有益的本能——比如它能促成新的科学进展——但有时，这种探究欲也会适得其反。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "Curiosity is often considered a good instinct - it can lead to new scientific advances, for instance - but sometimes such inquiry can backfire.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2018/c-cloze/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 4,
+      "en": "The insight that curiosity can drive you to do self-destructive things is a profound one.",
+      "zh": "真正发人深省的是，好奇心竟能驱使人做出自我伤害的事情。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "The insight that curiosity can drive you to do self-destructive things is a profound one.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2018/c-cloze/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 5,
+      "en": "Unhealthy curiosity is possible to resist, however.",
+      "zh": "不过，不健康的好奇心并非无法克制。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "Unhealthy curiosity is possible to resist, however.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2018/c-cloze/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 5,
+      "en": "In a final experiment, participants who were encouraged to predict how they would feel after viewing an unpleasant picture were less likely to choose to see such an image.",
+      "zh": "在最后一项实验中，那些被鼓励预想自己看过令人不适的图片后会有什么感受的参与者，选择去看这类图片的可能性更低。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "In a final experiment, participants who were encouraged to predict how they would feel after viewing an unpleasant picture were less likely to choose to see such an image.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2018/c-cloze/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 5,
+      "en": "These results suggest that imagining the outcome of following through on one's curiosity ahead of time can help determine whether it is worth the endeavor.",
+      "zh": "结果表明，提前设想顺着好奇心行动会带来什么后果，有助于判断这件事究竟值不值得做。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "These results suggest that imagining the outcome of following through on one's curiosity ahead of time can help determine whether it is worth the endeavor.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2018/c-cloze/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 5,
+      "en": "\"Thinking about long-term consequences is key to reducing the possible negative effects of curiosity,\" Hsee says.",
+      "zh": "奚说：“要减少好奇心可能带来的负面影响，关键在于考虑长远后果。”",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "\"Thinking about long-term consequences is key to reducing the possible negative effects of curiosity,\" Hsee says.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2018/c-cloze/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 5,
+      "en": "In other words, don't read online comments.",
+      "zh": "换句话说，别去看网上的评论。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "In other words, don't read online comments.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2018/c-cloze/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

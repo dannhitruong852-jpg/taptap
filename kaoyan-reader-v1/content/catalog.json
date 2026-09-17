@@ -12,7 +12,8 @@
     2010,
     2011,
     2012,
-    2017
+    2017,
+    2018
   ],
   "default_article": "2002-text1",
   "articles": [
@@ -744,6 +745,69 @@
       "content": "./content/2017/c/translation.json",
       "manifest": "./audio/2017/v4/c-translation/manifest.json",
       "sentences": 7
+    },
+    {
+      "id": "2018-cloze",
+      "year": 2018,
+      "section_type": "cloze",
+      "title": "完型 · 好奇心为什么会诱使人自找不痛快",
+      "content": "./content/2018/c/cloze.json",
+      "manifest": "./audio/2018/v4/c-cloze/manifest.json",
+      "sentences": 18
+    },
+    {
+      "id": "2018-partb",
+      "year": 2018,
+      "section_type": "part_b",
+      "title": "阅读 Part B · 和陌生人自然聊起来的五种方法",
+      "content": "./content/2018/c/partb.json",
+      "manifest": "./audio/2018/v4/c-partb/manifest.json",
+      "sentences": 31
+    },
+    {
+      "id": "2018-text1",
+      "year": 2018,
+      "section_type": "reading",
+      "title": "阅读 Text 1 · 职业教育不该被“一刀切”的升学观低估",
+      "content": "./content/2018/c/text1.json",
+      "manifest": "./audio/2018/v4/c-text1/manifest.json",
+      "sentences": 24
+    },
+    {
+      "id": "2018-text2",
+      "year": 2018,
+      "section_type": "reading",
+      "title": "阅读 Text 2 · 可再生能源正在从“政策选择”变成市场趋势",
+      "content": "./content/2018/c/text2.json",
+      "manifest": "./audio/2018/v4/c-text2/manifest.json",
+      "sentences": 19
+    },
+    {
+      "id": "2018-text3",
+      "year": 2018,
+      "section_type": "reading",
+      "title": "阅读 Text 3 · 数字巨头真正经营的商品，是我们的数据",
+      "content": "./content/2018/c/text3.json",
+      "manifest": "./audio/2018/v4/c-text3/manifest.json",
+      "sentences": 18
+    },
+    {
+      "id": "2018-text4",
+      "year": 2018,
+      "section_type": "reading",
+      "title": "阅读 Text 4 · 真正高效的人，不只会专注，也懂得“闲下来”",
+      "content": "./content/2018/c/text4.json",
+      "manifest": "./audio/2018/v4/c-text4/manifest.json",
+      "sentences": 15
+    },
+    {
+      "id": "2018-translation",
+      "year": 2018,
+      "section_type": "translation",
+      "title": "翻译 · 比尔·盖茨如何用阅读打开职业想象",
+      "content": "./content/2018/c/translation.json",
+      "manifest": "./audio/2018/v4/c-translation/manifest.json",
+      "sentences": 9
     }
   ]
 }
