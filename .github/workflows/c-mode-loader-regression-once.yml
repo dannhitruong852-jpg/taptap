@@ -1,0 +1,24 @@
+name: C Mode loader regression once
+
+on:
+  push:
+    branches:
+      - c-mode-v2-2013-2018-production
+    paths:
+      - '.github/workflows/c-mode-loader-regression-once.yml'
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: c-mode-v2-2013-2018-production
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run curated source loader regression tests
+        env:
+          PYTHONPATH: .:voice-pipeline:content-pipeline
+        run: python -m unittest content-pipeline/tests/test_build_curated_year.py -v
