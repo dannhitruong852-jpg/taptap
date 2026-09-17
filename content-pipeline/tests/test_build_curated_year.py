@@ -108,6 +108,20 @@ class BuildCuratedYearTests(unittest.TestCase):
             self.assertEqual(source['year'], 2006)
             self.assertEqual(source['articles'], [])
 
+    def test_load_curated_source_restores_missing_base64_padding(self):
+        import base64, gzip, json, tempfile
+        payload = json.dumps({'year': 2013, 'articles': []}, ensure_ascii=False).encode('utf-8')
+        encoded = base64.b64encode(gzip.compress(payload)).decode('ascii').rstrip('=')
+        self.assertNotEqual(len(encoded) % 4, 0)
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            cut = len(encoded) // 2
+            (root / '2013.json.gz.b64.part00').write_text(encoded[:cut], encoding='ascii')
+            (root / '2013.json.gz.b64.part01').write_text(encoded[cut:], encoding='ascii')
+            source = build_curated_year.load_curated_source(root, 2013)
+            self.assertEqual(source['year'], 2013)
+            self.assertEqual(source['articles'], [])
+
 
 if __name__ == '__main__':
     unittest.main()
