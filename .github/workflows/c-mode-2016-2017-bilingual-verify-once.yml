@@ -6,6 +6,10 @@ on:
       - c-mode-v2-2013-2018-production
     paths:
       - '.github/workflows/c-mode-2016-2017-bilingual-verify-once.yml'
+      - 'content-pipeline/build_curated_year.py'
+      - 'content-pipeline/curated/discourse-overrides/2016.json'
+      - 'content-pipeline/curated/bilingual-highlights/2016.json'
+      - 'content-pipeline/curated/bilingual-highlights/2017.json'
   workflow_dispatch:
 
 permissions:
@@ -76,5 +80,6 @@ jobs:
             echo 'No 2016-2017 output changes to commit.'
           else
             git commit -m '[skip ci] stage: verify 2016-2017 bilingual content'
+            git pull --rebase origin c-mode-v2-2013-2018-production
             git push origin HEAD:c-mode-v2-2013-2018-production
           fi
