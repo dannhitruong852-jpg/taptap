@@ -21,7 +21,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Find unique missing Base64 character anywhere in part00
+      - name: Find unique single-character Base64 substitution
         run: |
           python - <<'PY'
           import base64, gzip, json, time
@@ -29,43 +29,62 @@ jobs:
 
           root=Path('content-pipeline/curated')
           parts=[(root/f'2014.json.gz.b64.part{i:02d}').read_text(encoding='ascii').strip() for i in range(5)]
-          print('part lengths:', [len(x) for x in parts])
-          assert len(parts[0]) == 5999, len(parts[0])
-          suffix=''.join(parts[1:])
+          boundaries=[]
+          total=0
+          for i, part in enumerate(parts):
+              boundaries.append((i, total, total + len(part)))
+              total += len(part)
+          encoded=''.join(parts)
+          padded=encoded + '=' * (-len(encoded) % 4)
+          print('part lengths:', [len(x) for x in parts], 'combined:', len(encoded))
+          try:
+              gzip.decompress(base64.b64decode(padded, validate=True))
+              raise SystemExit('current source unexpectedly decompresses; no recovery needed')
+          except Exception as exc:
+              print('baseline failure:', type(exc).__name__, str(exc))
+
           alphabet='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
           candidates=[]
           started=time.time()
           attempts=0
-          for pos in range(len(parts[0]) + 1):
-              prefix=parts[0][:pos]
-              tail=parts[0][pos:] + suffix
-              for ch in alphabet:
-                  attempts += 1
-                  encoded=prefix + ch + tail
-                  encoded += '=' * (-len(encoded) % 4)
-                  try:
-                      raw=base64.b64decode(encoded, validate=True)
-                      payload=gzip.decompress(raw)
-                  except Exception:
+          chars=list(encoded)
+          for pos, original in enumerate(encoded):
+              if original not in alphabet:
+                  continue
+              for replacement in alphabet:
+                  if replacement == original:
                       continue
+                  attempts += 1
+                  chars[pos]=replacement
+                  candidate=''.join(chars)
+                  candidate += '=' * (-len(candidate) % 4)
                   try:
+                      raw=base64.b64decode(candidate, validate=True)
+                      payload=gzip.decompress(raw)
                       doc=json.loads(payload.decode('utf-8'))
                   except Exception:
+                      chars[pos]=original
                       continue
-                  if doc.get('year') == 2014 and isinstance(doc.get('articles'), list):
+                  chars[pos]=original
+                  if doc.get('year') == 2014 and isinstance(doc.get('articles'), list) and len(doc['articles']) == 7:
+                      part_index=next(i for i,start,end in boundaries if start <= pos < end)
+                      part_start=boundaries[part_index][1]
                       candidates.append({
-                          'position': pos,
-                          'char': ch,
+                          'combined_position': pos,
+                          'part': part_index,
+                          'part_position': pos-part_start,
+                          'from': original,
+                          'to': replacement,
                           'articles': len(doc['articles']),
                           'source_sha256': doc.get('source_sha256'),
                       })
-              if pos and pos % 500 == 0:
+              chars[pos]=original
+              if pos and pos % 2000 == 0:
                   print(f'checked positions through {pos}; candidates={len(candidates)}; elapsed={time.time()-started:.1f}s')
           print('attempts:', attempts)
           print('valid candidates:', candidates)
           if len(candidates) != 1:
-              raise SystemExit(f'expected exactly one valid recovery candidate, found {len(candidates)}')
+              raise SystemExit(f'expected exactly one valid substitution candidate, found {len(candidates)}')
           c=candidates[0]
-          print(f"UNIQUE_RECOVERY_POSITION={c['position']}")
-          print(f"UNIQUE_RECOVERY_CHAR={c['char']}")
+          print('UNIQUE_RECOVERY=' + json.dumps(c, sort_keys=True))
           PY
