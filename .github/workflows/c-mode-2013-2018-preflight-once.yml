@@ -6,6 +6,8 @@ on:
       - c-mode-v2-2013-2018-production
     paths:
       - '.github/workflows/c-mode-2013-2018-preflight-once.yml'
+      - 'content-pipeline/curated/2014.json'
+      - 'content-pipeline/curated/discourse-overrides/**'
   workflow_dispatch:
 
 permissions:
