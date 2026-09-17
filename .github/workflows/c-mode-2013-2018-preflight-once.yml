@@ -79,28 +79,42 @@ jobs:
           fi
       - name: Validate complete batch and prove validated transition
         run: |
+          set +e
           python -m production_v2.cli_validate_batch \
             --manifest "$BATCH_MANIFEST" \
             --catalog kaoyan-reader-v1/content/catalog.json \
             --reader-root kaoyan-reader-v1 \
             --phase preflight \
             --report /tmp/preflight-report.json
+          code=$?
+          set -e
+          echo '--- full preflight report ---'
+          cat /tmp/preflight-report.json
+          if [ "$code" -ne 0 ]; then
+            exit "$code"
+          fi
           python -m production_v2.cli_manifest advance \
             --manifest "$BATCH_MANIFEST" --to validated --output /tmp/batch-validated.json
       - name: Summarize preflight artifacts
+        if: always()
         run: |
           echo '## C Mode 2013-2018 preflight' >> "$GITHUB_STEP_SUMMARY"
-          echo 'Canary report:' >> "$GITHUB_STEP_SUMMARY"
-          cat /tmp/canary-report.json >> "$GITHUB_STEP_SUMMARY"
+          if [ -f /tmp/canary-report.json ]; then
+            echo 'Canary report:' >> "$GITHUB_STEP_SUMMARY"
+            cat /tmp/canary-report.json >> "$GITHUB_STEP_SUMMARY"
+          fi
           echo '' >> "$GITHUB_STEP_SUMMARY"
-          echo 'Full preflight report:' >> "$GITHUB_STEP_SUMMARY"
-          cat /tmp/preflight-report.json >> "$GITHUB_STEP_SUMMARY"
+          if [ -f /tmp/preflight-report.json ]; then
+            echo 'Full preflight report:' >> "$GITHUB_STEP_SUMMARY"
+            cat /tmp/preflight-report.json >> "$GITHUB_STEP_SUMMARY"
+          fi
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: c-mode-2013-2018-preflight
           path: |
             /tmp/canary-report.json
             /tmp/preflight-report.json
             /tmp/batch-validated.json
-          if-no-files-found: error
+          if-no-files-found: warn
           retention-days: 14
