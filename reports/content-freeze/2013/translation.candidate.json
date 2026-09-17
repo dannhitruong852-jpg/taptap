@@ -1,0 +1,107 @@
+{
+  "year": 2013,
+  "article": {
+    "id": "translation",
+    "section_type": "translation",
+    "title": "翻译 · 超常记忆与情绪体验",
+    "pages": [
+      12,
+      13
+    ],
+    "actor": "07",
+    "accent": "en-US",
+    "context": "第一人称回忆超常记忆体验：信息量巨大却不觉得压垮，清晰记忆也不会放大情绪。主讲人采用温暖、平静、私密的回忆口吻。",
+    "domain": "memoir / memory / psychology",
+    "author_stance": "personal reflective",
+    "formality": "medium",
+    "narrativity": "high",
+    "humor_level": "none",
+    "rationality_emotionality": "balanced",
+    "baseline_mood": "warm reflective",
+    "preferred_age_impression": "adult",
+    "rows": [
+      [
+        1,
+        "I can pick a date from the past 53 years and know instantly where I was, what happened in the news and even the day of the week.",
+        "过去53年里的任何一个日期，我都可以随便挑出来，并立刻说出当时自己在哪里、新闻中发生了什么，甚至那天是星期几。",
+        "story",
+        []
+      ],
+      [
+        1,
+        "I've been able to do this since I was four.",
+        "从四岁起，我就一直拥有这种能力。",
+        "sequence",
+        []
+      ],
+      [
+        2,
+        "I never feel overwhelmed with the amount of information my brain absorbs.",
+        "大脑吸收大量信息，我也从不会感到不堪重负。",
+        "qualify",
+        []
+      ],
+      [
+        2,
+        "My mind seems to be able to cope and the information is stored away neatly.",
+        "我的大脑似乎能够应付这些信息，并把它们井井有条地储存起来。",
+        "explain",
+        []
+      ],
+      [
+        2,
+        "When I think of a sad memory, I do what everybody does - try to put it to one side.",
+        "想到一段悲伤的记忆时，我会像所有人一样，努力把它暂时放到一边。",
+        "story",
+        []
+      ],
+      [
+        2,
+        "I don't think it's harder for me just because my memory is clearer.",
+        "我并不觉得，仅仅因为自己的记忆更清晰，这件事对我来说就会更困难。",
+        "qualify",
+        []
+      ],
+      [
+        2,
+        "Powerful memory doesn't make my emotions any more acute or vivid.",
+        "强大的记忆力不会使我的情绪变得更加强烈或更鲜明。",
+        "contrast",
+        []
+      ],
+      [
+        2,
+        "I can recall the day my grandfather died and the sadness I felt when we went to the hospital the day before.",
+        "我能回想起祖父去世的那一天，也能想起前一天我们去医院时我感受到的悲伤。",
+        "story",
+        []
+      ],
+      [
+        2,
+        "I also remember that the musical play Hair opened on Broadway on the same day - they both just pop into my mind in the same way.",
+        "我还记得音乐剧《Hair》恰好也在同一天于百老汇开演——这两件事会以同样的方式自然而然地浮现在我的脑海中。",
+        "story",
+        []
+      ]
+    ],
+    "editorial_status": "reviewed_candidate"
+  },
+  "qa": {
+    "review_schema_version": "c-mode-v2-1",
+    "source_pdf": "2013年考研英语二真题（可复制搜索查词）.pdf",
+    "source_sha256": "ec8d1d5ddaf1d573083e0d0835d97835a0d68e7b7d797c749385cb0cb06e711b",
+    "source_scope_verified": true,
+    "scope_exclusions_reviewed": true,
+    "text_fidelity_reviewed": true,
+    "translation_alignment_reviewed": true,
+    "sentence_alignment_reviewed": true,
+    "sentence_count": 9,
+    "expected_sentences": 9,
+    "actual_sentences": 9,
+    "status": "reviewed_candidate",
+    "review_method": "visual PDF review plus curated sentence-level manuscript",
+    "unresolved_sections": [],
+    "curated_payload_sha256": "f54be95fafdcbfbb0f69375f48bf09349f593e28349e541ba78163f51c6fffb0"
+  }
+}
+}
