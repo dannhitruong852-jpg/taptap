@@ -5,11 +5,6 @@ on:
     branches:
       - c-mode-v2-2013-2018-production
   workflow_dispatch:
-    inputs:
-      year:
-        description: Year to audit
-        required: false
-        default: '2017'
 
 permissions:
   contents: read
@@ -22,71 +17,31 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Build curated 2017 source
-        run: python content-pipeline/build_curated_year.py --year 2017
-      - name: Audit compiled 2017 corpus
+      - name: Diagnose staged 2017 source
         run: |
           python - <<'PY'
-          import collections
-          import json
+          import base64
+          import re
+          import zlib
           from pathlib import Path
 
-          root = Path('.')
-          expected = ['cloze', 'text1', 'text2', 'text3', 'text4', 'partb', 'translation']
-          base = root / 'kaoyan-reader-v1/content/2017/c'
-          files = sorted(base.glob('*.json'))
-          ids = [p.stem for p in files]
-          assert ids == sorted(expected), (ids, expected)
-          report = {'year': 2017, 'articles': {}, 'totals': {}}
-          total_sentences = total_vocab = total_high = 0
-          used_actors = collections.Counter()
-          for path in files:
-              doc = json.loads(path.read_text(encoding='utf-8'))
-              rows = doc['sentences']
-              assert rows, path
-              missing_zh = [r['id'] for r in rows if not str(r.get('zh', '')).strip()]
-              assert not missing_zh, (path.name, missing_zh)
-              discourse = collections.Counter(r.get('discourse') for r in rows)
-              actors = collections.Counter(r.get('actor_id') for r in rows)
-              vocab = [v for r in rows for v in r.get('vocab', [])]
-              high = [v for v in vocab if int(v.get('level', 0)) >= 6]
-              for actor, count in actors.items():
-                  used_actors[actor] += count
-              report['articles'][path.stem] = {
-                  'sentences': len(rows),
-                  'vocab': len(vocab),
-                  'level6plus_vocab': len(high),
-                  'actors': dict(sorted(actors.items())),
-                  'discourse': dict(sorted(discourse.items(), key=lambda x: str(x[0]))),
-              }
-              total_sentences += len(rows)
-              total_vocab += len(vocab)
-              total_high += len(high)
-          report['totals'] = {
-              'articles': len(files),
-              'sentences': total_sentences,
-              'vocab': total_vocab,
-              'level6plus_vocab': total_high,
-              'actors': dict(sorted(used_actors.items())),
-          }
-          out = root / 'stage-audit-2017.json'
-          out.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-          print(out.read_text(encoding='utf-8'))
-          PY
-      - name: Check generated JSON parses
-        run: |
-          python - <<'PY'
-          import json
-          from pathlib import Path
-          for p in Path('kaoyan-reader-v1/content/2017/c').glob('*.json'):
-              json.loads(p.read_text(encoding='utf-8'))
-          json.loads(Path('content-pipeline/voice_profiles/2017.json').read_text(encoding='utf-8'))
-          json.loads(Path('content-pipeline/direction/2017.json').read_text(encoding='utf-8'))
-          json.loads(Path('reports/extraction/2017.json').read_text(encoding='utf-8'))
-          print('json parse: ok')
-          PY
-      - name: Upload audit report
+          parts = sorted(Path('content-pipeline/curated').glob('2017.json.gz.b64.part*'))
+          print('parts:', [(p.name, p.stat().st_size) for p in parts])
+          encoded = ''.join(p.read_text(encoding='ascii').strip() for p in parts)
+          raw = base64.b64decode(encoded)
+          dec = zlib.decompressobj(16 + zlib.MAX_WBITS)
+          prefix = dec.decompress(raw)
+          text = prefix.decode('utf-8', errors='replace')
+          print('compressed bytes:', len(raw))
+          print('recovered utf8 chars:', len(text))
+          print('gzip eof:', dec.eof)
+          print('article ids seen:', re.findall(r'"id"\s*:\s*"([^"]+)"', text))
+          print('--- RECOVERED TAIL START ---')
+          print(text[-12000:])
+          print('--- RECOVERED TAIL END ---')
+          Path('recovered-2017-prefix.json.txt').write_text(text, encoding='utf-8')
+      - name: Upload recovered prefix
         uses: actions/upload-artifact@v4
         with:
-          name: c-mode-stage-audit-2017
-          path: stage-audit-2017.json
+          name: recovered-2017-prefix
+          path: recovered-2017-prefix.json.txt
