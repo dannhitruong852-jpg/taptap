@@ -7,16 +7,32 @@
     {
       "name": "2017.json.gz.b64.part01",
       "bytes": 6000
+    },
+    {
+      "name": "2017.json.gz.b64.part02",
+      "bytes": 6000
+    },
+    {
+      "name": "2017.json.gz.b64.part03",
+      "bytes": 6000
+    },
+    {
+      "name": "2017.json.gz.b64.part04",
+      "bytes": 1192
     }
   ],
-  "encoded_chars": 12000,
-  "compressed_bytes": 9000,
-  "recovered_chars": 16314,
-  "gzip_eof": false,
+  "encoded_chars": 25192,
+  "compressed_bytes": 18894,
+  "recovered_chars": 39020,
+  "gzip_eof": true,
   "article_ids_seen": [
     "cloze",
     "text1",
-    "text2"
+    "text2",
+    "text3",
+    "text4",
+    "partb",
+    "translation"
   ],
-  "tail": "eens are born out of an \\\"oppressive ideology that demands that parents should always be interacting\\\" with their children: \\\"It's based on a somewhat fantasised, very white, very upper-middle-class ideology that says if you're failing to expose your child to 30,000 words you are neglecting them.\\\"\",\n          \"另一方面，特罗尼克本人担心，人们对孩子使用屏幕的焦虑源于一种“压迫性的意识形态”，它要求父母必须始终与孩子互动。他说：“这种观念建立在一种多少有些幻想化、非常白人化、非常中上阶层的意识形态之上，仿佛如果你没让孩子接触到3万个词，你就是在忽视他们。”\",\n          \"contrast\",\n          []\n        ],\n        [\n          4,\n          \"Tronick believes that just because a child isn't learning from the screen doesn't mean there's no value to it - particularly if it gives parents time to have a shower, do housework or simply have a break from their child.\",\n          \"特罗尼克认为，孩子没有从屏幕上学到东西，并不意味着屏幕就毫无价值——尤其当它能让父母腾出时间洗澡、做家务，或者只是暂时从照顾孩子中休息一下时。\",\n          \"explain\",\n          []\n        ],\n        [\n          4,\n          \"Parents, he says, can get a lot out of using their devices to speak to a friend or get some "
+  "tail": " to be honest, I said it, because I thought that fashion and me together was just a dream - I knew that no one could imagine me in the fashion industry at all!\",\n          \"但说实话，我之所以这样说，是因为我觉得自己与时尚结合在一起只不过是个梦想——我知道根本没人能想象我会进入时尚行业！\",\n          \"contrast\",\n          []\n        ],\n        [\n          6,\n          \"So I decided to look for some fashion-related courses that included writing.\",\n          \"于是，我决定寻找一些既与时尚相关、又包含写作内容的课程。\",\n          \"resolve\",\n          []\n        ],\n        [\n          7,\n          \"This is when I noticed the course \\\"Fashion Media & Promotion.\\\"\",\n          \"就在这时，我注意到了“时尚媒体与推广”这门课程。\",\n          \"conclude\",\n          []\n        ]\n      ],\n      \"humor_level\": \"none\",\n      \"editorial_status\": \"reviewed_candidate\",\n      \"author_stance\": \"personal reflective\",\n      \"formality\": \"medium-high\",\n      \"narrativity\": \"high\",\n      \"rationality_emotionality\": \"balanced\",\n      \"baseline_mood\": \"warm reflective\",\n      \"preferred_age_impression\": \"adult\"\n    }\n  ]\n}\n"
 }
