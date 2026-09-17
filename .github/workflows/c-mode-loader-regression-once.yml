@@ -8,6 +8,7 @@ on:
       - '.github/workflows/c-mode-loader-regression-once.yml'
       - 'content-pipeline/build_curated_year.py'
       - 'content-pipeline/tests/test_build_curated_year.py'
+      - 'content-pipeline/curated/discourse-overrides/**'
   workflow_dispatch:
 
 jobs:
