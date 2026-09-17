@@ -1,0 +1,93 @@
+name: C Mode review evidence audit once
+
+on:
+  push:
+    branches:
+      - c-mode-v2-2013-2018-production
+    paths:
+      - '.github/workflows/c-mode-review-evidence-audit-once.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: .:voice-pipeline:content-pipeline
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: c-mode-v2-2013-2018-production
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Audit stale or corrupt reviewed candidate evidence
+        run: |
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          import build_curated_year
+
+          targets={
+              2015:['cloze','text1','text2','text3'],
+              2017:['cloze','text1','text2','text3','text4'],
+              2018:['partb','translation'],
+          }
+          root=Path('.')
+          curated=root/'content-pipeline/curated'
+
+          def hashes(value):
+              variants={
+                  'compact_sorted_utf8':json.dumps(value,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode('utf-8'),
+                  'compact_utf8':json.dumps(value,ensure_ascii=False,separators=(',',':')).encode('utf-8'),
+                  'pretty_utf8':(json.dumps(value,ensure_ascii=False,indent=2)+'\n').encode('utf-8'),
+                  'compact_sorted_ascii':json.dumps(value,ensure_ascii=True,sort_keys=True,separators=(',',':')).encode('utf-8'),
+              }
+              return {k:hashlib.sha256(v).hexdigest() for k,v in variants.items()}
+
+          for year,article_ids in targets.items():
+              source=build_curated_year.load_curated_source(curated,year)
+              source_articles={a['id']:a for a in source['articles']}
+              print(f'=== YEAR {year} ===')
+              for article_id in article_ids:
+                  source_article=source_articles[article_id]
+                  path=root/f'reports/content-freeze/{year}/{article_id}.candidate.json'
+                  raw=path.read_bytes()
+                  print(f'--- {year}/{article_id} candidate_bytes={len(raw)} ---')
+                  try:
+                      text=raw.decode('utf-8')
+                      candidate=json.loads(text)
+                  except Exception as exc:
+                      print('PARSE_ERROR',type(exc).__name__,repr(str(exc)))
+                      if isinstance(exc,UnicodeDecodeError):
+                          pos=exc.start
+                          print('BYTE_CONTEXT',raw[max(0,pos-80):min(len(raw),pos+80)].hex())
+                          print('ASCII_CONTEXT',repr(raw[max(0,pos-160):min(len(raw),pos+160)].decode('utf-8',errors='replace')))
+                      else:
+                          print('TEXT_CONTEXT',repr(raw.decode('utf-8',errors='replace')[:8000]))
+                      print('SOURCE_ARTICLE_HASHES',json.dumps(hashes(source_article),sort_keys=True))
+                      continue
+                  qa=candidate.get('qa') or {}
+                  article=candidate.get('article') or {}
+                  print('QA_HASH',qa.get('curated_payload_sha256'))
+                  print('QA_KEYS',sorted(qa.keys()))
+                  print('SOURCE_ARTICLE_HASHES',json.dumps(hashes(source_article),sort_keys=True))
+                  print('CANDIDATE_ARTICLE_HASHES',json.dumps(hashes(article),sort_keys=True))
+                  rows_a=article.get('rows') or []
+                  rows_b=source_article.get('rows') or []
+                  print('ROW_COUNTS',len(rows_a),len(rows_b))
+                  for i,(a,b) in enumerate(zip(rows_a,rows_b),1):
+                      if a != b:
+                          print('DIFF_ROW',i)
+                          print('CANDIDATE',json.dumps(a,ensure_ascii=False))
+                          print('CANONICAL',json.dumps(b,ensure_ascii=False))
+                  if len(rows_a) != len(rows_b):
+                      print('ROW_COUNT_MISMATCH')
+                  for key in sorted(set(article)|set(source_article)):
+                      if key == 'rows':
+                          continue
+                      if article.get(key) != source_article.get(key):
+                          print('META_DIFF',key,json.dumps(article.get(key),ensure_ascii=False),json.dumps(source_article.get(key),ensure_ascii=False))
+          PY
