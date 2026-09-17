@@ -249,6 +249,7 @@ def load_curated_source(curated_dir: Path, year: int) -> dict:
     if not parts:
         raise FileNotFoundError(f'no curated source for {year}')
     encoded = ''.join(p.read_text(encoding='ascii').strip() for p in parts)
+    encoded += '=' * (-len(encoded) % 4)
     return json.loads(gzip.decompress(base64.b64decode(encoded)).decode('utf-8'))
 
 
