@@ -1,0 +1,61 @@
+{
+  "year": 2016,
+  "article": {
+    "id": "cloze",
+    "section_type": "cloze",
+    "title": "完型 · 快乐如何影响企业投资",
+    "pages": [
+      2,
+      3
+    ],
+    "actor": "06",
+    "accent": "en-US",
+    "context": "介绍一项关于地区幸福感与企业投资、研发投入之间关系的研究，并讨论乐观情绪、管理者特征与长期决策的可能联系。",
+    "domain": "behavioral economics / happiness / corporate investment",
+    "rows": [
+      [1,"Happy people work differently.","快乐的人工作方式有所不同。","advance",[]],
+      [1,"They're more productive, more creative, and willing to take greater risks.","他们往往更高效、更有创造力，也更愿意承担较大的风险。","advance",[]],
+      [1,"And new research suggests that happiness might influence how firms work, too.","新的研究还表明，幸福感甚至可能影响企业的运作方式。","advance",[]],
+      [2,"Companies located in places with happier people invest more, according to a recent research paper.","一篇近期研究论文指出，位于居民幸福感更高地区的企业会进行更多投资。","explain",[]],
+      [2,"In particular, firms in happy places spend more on R&D (research and development).","尤其是，这些地区的企业在研发上的投入更多。","explain",[]],
+      [2,"That's because happiness is linked to the kind of longer-term thinking necessary for making investments for the future.","这是因为，幸福感与一种更着眼长远的思维方式相关，而这种思维正是为未来进行投资所必需的。","explain",[]],
+      [3,"The researchers wanted to know if the optimism and inclination for risk-taking that come with happiness would change the way companies invested.","研究人员想知道，伴随幸福感而来的乐观情绪和冒险倾向，是否会改变企业的投资方式。","report",[]],
+      [3,"So they compared U.S. cities' average happiness measured by Gallup polling with the investment activity of publicly traded firms in those areas.","因此，他们把盖洛普民调测得的美国各城市平均幸福感，与当地上市公司的投资活动进行了比较。","conclude",[]],
+      [4,"Sure enough, firms' investment and R&D intensity were correlated with the happiness of the area in which they were headquartered.","果不其然，企业的投资强度和研发强度与其总部所在地的幸福感存在相关关系。","report",[]],
+      [4,"But is it really happiness that's linked to investment, or could something else about happier cities explain why firms there spend more on R&D?","但真正与投资相联系的究竟是幸福感本身，还是幸福城市的其他特征解释了当地企业为何更愿意投入研发？","ask",[]],
+      [4,"To find out, the researchers controlled for various factors that might make firms more likely to invest - like size, industry, and sales - and for indicators that a place was desirable to live in, like growth in wages or population.","为弄清这一点，研究人员控制了多种可能提高企业投资意愿的因素，如企业规模、所属行业和销售额，也控制了工资或人口增长等反映一地是否宜居的指标。","report",[]],
+      [4,"The link between happiness and investment generally held even after accounting for these things.","即便把这些因素考虑在内，幸福感与投资之间的联系总体上仍然存在。","report",[]],
+      [5,"The correlation between happiness and investment was particularly strong for younger firms, which the authors attribute to \"less codified decision making process\" and the possible presence of \"younger and less experienced managers who are more likely to be influenced by sentiment.\"","幸福感与投资之间的相关性在年轻企业中尤其明显，作者把这归因于“较少程式化的决策过程”，以及企业中可能存在“更年轻、经验更少、因而更容易受情绪影响的管理者”。","qualify",[]],
+      [5,"The relationship was also stronger in places where happiness was spread more equally.","在幸福感分布更均衡的地方，这种关系也更强。","qualify",[]],
+      [5,"Firms seem to invest more in places where most people are relatively happy, rather than in places with happiness inequality.","企业似乎更愿意在大多数人都相对幸福的地区增加投资，而不是在幸福感分布不均的地区。","qualify",[]],
+      [6,"While this doesn't prove that happiness causes firms to invest more or to take a longer-term view, the authors believe it at least hints at that possibility.","虽然这并不能证明幸福感会导致企业增加投资或采取更长远的眼光，但作者认为，它至少暗示了这种可能性。","contrast",[]],
+      [6,"It's not hard to imagine that local culture and sentiment would help shape how executives think about the future.","不难想象，当地文化与社会情绪会影响企业高管如何思考未来。","conclude",[]],
+      [6,"\"It surely seems plausible that happy people would be more forward-thinking and creative and lean towards R&D more than the average,\" said one researcher.","一位研究者表示：“幸福的人更有前瞻性、更具创造力，也比一般人更倾向于研发，这看起来完全合乎情理。”","dialogue",[]]
+    ],
+    "humor_level": "none",
+    "editorial_status": "reviewed_candidate",
+    "author_stance": "research explanatory",
+    "formality": "medium-high",
+    "narrativity": "low",
+    "rationality_emotionality": "rational",
+    "baseline_mood": "calm natural",
+    "preferred_age_impression": "adult"
+  },
+  "qa": {
+    "review_schema_version": "c-mode-v2-1",
+    "source_pdf": "2016年考研英语二真题（可复制搜索查词）.pdf",
+    "source_sha256": "c94c7b78e597c98d3618d930f009d8d2fd494adc94421fc90e6cdd86eebfce8f",
+    "source_scope_verified": true,
+    "scope_exclusions_reviewed": true,
+    "text_fidelity_reviewed": true,
+    "translation_alignment_reviewed": true,
+    "sentence_alignment_reviewed": true,
+    "sentence_count": 18,
+    "expected_sentences": 18,
+    "actual_sentences": 18,
+    "status": "reviewed_candidate",
+    "review_method": "visual PDF review plus curated sentence-level manuscript",
+    "unresolved_sections": [],
+    "curated_payload_sha256": "987d5e4966c8a511eeffb4ade81dd89da541e9b4c6811fb0ddda3acdd5a2076b"
+  }
+}
