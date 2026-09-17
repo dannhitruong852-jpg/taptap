@@ -1,0 +1,92 @@
+name: C Mode Stage Audit
+
+on:
+  push:
+    branches:
+      - c-mode-v2-2013-2018-production
+  workflow_dispatch:
+    inputs:
+      year:
+        description: Year to audit
+        required: false
+        default: '2017'
+
+permissions:
+  contents: read
+
+jobs:
+  audit-2017:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build curated 2017 source
+        run: python content-pipeline/build_curated_year.py --year 2017
+      - name: Audit compiled 2017 corpus
+        run: |
+          python - <<'PY'
+          import collections
+          import json
+          from pathlib import Path
+
+          root = Path('.')
+          expected = ['cloze', 'text1', 'text2', 'text3', 'text4', 'partb', 'translation']
+          base = root / 'kaoyan-reader-v1/content/2017/c'
+          files = sorted(base.glob('*.json'))
+          ids = [p.stem for p in files]
+          assert ids == sorted(expected), (ids, expected)
+          report = {'year': 2017, 'articles': {}, 'totals': {}}
+          total_sentences = total_vocab = total_high = 0
+          used_actors = collections.Counter()
+          for path in files:
+              doc = json.loads(path.read_text(encoding='utf-8'))
+              rows = doc['sentences']
+              assert rows, path
+              missing_zh = [r['id'] for r in rows if not str(r.get('zh', '')).strip()]
+              assert not missing_zh, (path.name, missing_zh)
+              discourse = collections.Counter(r.get('discourse') for r in rows)
+              actors = collections.Counter(r.get('actor_id') for r in rows)
+              vocab = [v for r in rows for v in r.get('vocab', [])]
+              high = [v for v in vocab if int(v.get('level', 0)) >= 6]
+              for actor, count in actors.items():
+                  used_actors[actor] += count
+              report['articles'][path.stem] = {
+                  'sentences': len(rows),
+                  'vocab': len(vocab),
+                  'level6plus_vocab': len(high),
+                  'actors': dict(sorted(actors.items())),
+                  'discourse': dict(sorted(discourse.items(), key=lambda x: str(x[0]))),
+              }
+              total_sentences += len(rows)
+              total_vocab += len(vocab)
+              total_high += len(high)
+          report['totals'] = {
+              'articles': len(files),
+              'sentences': total_sentences,
+              'vocab': total_vocab,
+              'level6plus_vocab': total_high,
+              'actors': dict(sorted(used_actors.items())),
+          }
+          out = root / 'stage-audit-2017.json'
+          out.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print(out.read_text(encoding='utf-8'))
+          PY
+      - name: Check generated JSON parses
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          for p in Path('kaoyan-reader-v1/content/2017/c').glob('*.json'):
+              json.loads(p.read_text(encoding='utf-8'))
+          json.loads(Path('content-pipeline/voice_profiles/2017.json').read_text(encoding='utf-8'))
+          json.loads(Path('content-pipeline/direction/2017.json').read_text(encoding='utf-8'))
+          json.loads(Path('reports/extraction/2017.json').read_text(encoding='utf-8'))
+          print('json parse: ok')
+          PY
+      - name: Upload audit report
+        uses: actions/upload-artifact@v4
+        with:
+          name: c-mode-stage-audit-2017
+          path: stage-audit-2017.json
