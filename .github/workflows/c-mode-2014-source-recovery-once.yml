@@ -1,0 +1,49 @@
+name: C Mode 2014 source recovery once
+
+on:
+  push:
+    branches:
+      - c-mode-v2-2013-2018-production
+    paths:
+      - '.github/workflows/c-mode-2014-source-recovery-once.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: c-mode-v2-2013-2018-production
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Find unique missing Base64 character at first split boundary
+        run: |
+          python - <<'PY'
+          import base64, gzip, json
+          from pathlib import Path
+
+          root=Path('content-pipeline/curated')
+          parts=[(root/f'2014.json.gz.b64.part{i:02d}').read_text(encoding='ascii').strip() for i in range(5)]
+          print('part lengths:', [len(x) for x in parts])
+          alphabet='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+          candidates=[]
+          for ch in alphabet:
+              encoded=parts[0]+ch+''.join(parts[1:])
+              encoded += '=' * (-len(encoded) % 4)
+              try:
+                  raw=base64.b64decode(encoded, validate=True)
+                  doc=json.loads(gzip.decompress(raw).decode('utf-8'))
+              except Exception:
+                  continue
+              if doc.get('year') == 2014 and isinstance(doc.get('articles'), list):
+                  candidates.append((ch, len(doc['articles']), doc.get('source_sha256')))
+          print('valid candidates:', candidates)
+          if len(candidates) != 1:
+              raise SystemExit(f'expected exactly one valid recovery candidate, found {len(candidates)}')
+          print('UNIQUE_RECOVERY_CHAR=' + candidates[0][0])
+          PY
