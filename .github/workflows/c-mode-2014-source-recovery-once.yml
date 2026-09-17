@@ -21,34 +21,47 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Find unique single-character Base64 substitution
+      - name: Localize deflate failure and search nearby Base64 substitutions
         run: |
           python - <<'PY'
-          import base64, gzip, json, time
+          import base64, gzip, json, zlib
           from pathlib import Path
 
           root=Path('content-pipeline/curated')
           parts=[(root/f'2014.json.gz.b64.part{i:02d}').read_text(encoding='ascii').strip() for i in range(5)]
-          boundaries=[]
-          total=0
-          for i, part in enumerate(parts):
-              boundaries.append((i, total, total + len(part)))
-              total += len(part)
+          starts=[]
+          cursor=0
+          for part in parts:
+              starts.append(cursor)
+              cursor += len(part)
           encoded=''.join(parts)
           padded=encoded + '=' * (-len(encoded) % 4)
-          print('part lengths:', [len(x) for x in parts], 'combined:', len(encoded))
-          try:
-              gzip.decompress(base64.b64decode(padded, validate=True))
-              raise SystemExit('current source unexpectedly decompresses; no recovery needed')
-          except Exception as exc:
-              print('baseline failure:', type(exc).__name__, str(exc))
+          raw=base64.b64decode(padded, validate=True)
+          print('part lengths:', [len(x) for x in parts], 'base64 chars:', len(encoded), 'compressed bytes:', len(raw))
 
+          dec=zlib.decompressobj(16 + zlib.MAX_WBITS)
+          failure_byte=None
+          for i, byte in enumerate(raw):
+              try:
+                  dec.decompress(bytes([byte]))
+              except zlib.error as exc:
+                  failure_byte=i
+                  print('deflate failure byte:', i, 'error:', exc)
+                  break
+          if failure_byte is None:
+              raise SystemExit('streaming zlib did not reproduce corruption')
+
+          center=(failure_byte * 4) // 3
+          radius=384
+          lo=max(0, center-radius)
+          hi=min(len(encoded), center+radius+1)
+          print('searching base64 positions:', lo, 'through', hi-1, 'center:', center)
           alphabet='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
           candidates=[]
-          started=time.time()
-          attempts=0
           chars=list(encoded)
-          for pos, original in enumerate(encoded):
+          attempts=0
+          for pos in range(lo, hi):
+              original=chars[pos]
               if original not in alphabet:
                   continue
               for replacement in alphabet:
@@ -59,32 +72,26 @@ jobs:
                   candidate=''.join(chars)
                   candidate += '=' * (-len(candidate) % 4)
                   try:
-                      raw=base64.b64decode(candidate, validate=True)
-                      payload=gzip.decompress(raw)
-                      doc=json.loads(payload.decode('utf-8'))
+                      doc=json.loads(gzip.decompress(base64.b64decode(candidate, validate=True)).decode('utf-8'))
                   except Exception:
                       chars[pos]=original
                       continue
                   chars[pos]=original
                   if doc.get('year') == 2014 and isinstance(doc.get('articles'), list) and len(doc['articles']) == 7:
-                      part_index=next(i for i,start,end in boundaries if start <= pos < end)
-                      part_start=boundaries[part_index][1]
+                      part_index=max(i for i,start in enumerate(starts) if start <= pos)
                       candidates.append({
                           'combined_position': pos,
                           'part': part_index,
-                          'part_position': pos-part_start,
+                          'part_position': pos-starts[part_index],
                           'from': original,
                           'to': replacement,
                           'articles': len(doc['articles']),
                           'source_sha256': doc.get('source_sha256'),
                       })
               chars[pos]=original
-              if pos and pos % 2000 == 0:
-                  print(f'checked positions through {pos}; candidates={len(candidates)}; elapsed={time.time()-started:.1f}s')
           print('attempts:', attempts)
           print('valid candidates:', candidates)
           if len(candidates) != 1:
-              raise SystemExit(f'expected exactly one valid substitution candidate, found {len(candidates)}')
-          c=candidates[0]
-          print('UNIQUE_RECOVERY=' + json.dumps(c, sort_keys=True))
+              raise SystemExit(f'expected exactly one nearby substitution candidate, found {len(candidates)}')
+          print('UNIQUE_RECOVERY=' + json.dumps(candidates[0], sort_keys=True))
           PY
