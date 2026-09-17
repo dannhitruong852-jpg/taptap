@@ -48,10 +48,11 @@ jobs:
                   failure={'compressed_byte':i,'error':str(exc)}
                   break
           assert failure is not None, 'historical split source unexpectedly became healthy'
-          plaintext=b''.join(chunks).decode('utf-8')
-          marker='"articles"'
-          marker_index=plaintext.index(marker)
-          header=json.loads(plaintext[:marker_index] + '"articles": []\n}')
+          recovered=b''.join(chunks)
+          marker=b'"articles"'
+          marker_index=recovered.index(marker)
+          header_prefix=recovered[:marker_index].decode('utf-8')
+          header=json.loads(header_prefix + '"articles": []\n}')
           assert list(header.keys()) == ['year','source_pdf','source_sha256','vocabulary','articles'], list(header.keys())
           assert header['year'] == 2014
           assert header['source_pdf'] == '2014年考研英语二真题（可复制搜索查词）.pdf'
