@@ -14,6 +14,8 @@ permissions:
 jobs:
   diagnose:
     runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: .:voice-pipeline:content-pipeline
     steps:
       - uses: actions/checkout@v4
         with:
@@ -21,15 +23,33 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Recover valid plaintext prefix before deflate corruption
+      - name: Compare healthy neighboring source envelopes
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          import build_curated_year
+          root=Path('content-pipeline/curated')
+          for year in (2013, 2015):
+              try:
+                  doc=build_curated_year.load_curated_source(root, year)
+              except Exception as exc:
+                  print(year, 'LOAD_FAILED', type(exc).__name__, str(exc))
+                  continue
+              envelope={k:v for k,v in doc.items() if k not in ('articles','vocabulary')}
+              print(year, 'KEYS', list(doc.keys()))
+              print(year, 'ENVELOPE', json.dumps(envelope,ensure_ascii=False,sort_keys=True))
+              print(year, 'VOCAB_SIZE', len(doc.get('vocabulary',{})), 'ARTICLES', [a.get('id') for a in doc.get('articles',[])])
+          PY
+      - name: Verify 2014 reviewed evidence is reconstructable
         run: |
           python - <<'PY'
           import base64, json, zlib
           from pathlib import Path
 
           root=Path('content-pipeline/curated')
-          parts=[(root/f'2014.json.gz.b64.part{i:02d}').read_text(encoding='ascii').strip() for i in range(5)]
-          encoded=''.join(parts)
+          parts=sorted(root.glob('2014.json.gz.b64.part*'))
+          encoded=''.join(p.read_text(encoding='ascii').strip() for p in parts)
           encoded += '=' * (-len(encoded) % 4)
           raw=base64.b64decode(encoded, validate=True)
           dec=zlib.decompressobj(16 + zlib.MAX_WBITS)
@@ -41,21 +61,42 @@ jobs:
                   if piece:
                       out.append(piece)
               except zlib.error as exc:
-                  failure=(i, str(exc))
+                  failure={'compressed_byte':i,'error':str(exc)}
                   break
-          plaintext=b''.join(out).decode('utf-8', errors='replace')
-          print('failure:', failure)
-          print('recovered_plaintext_chars:', len(plaintext))
-          print('--- PLAINTEXT PREFIX START ---')
-          print(plaintext[:20000])
-          print('--- PLAINTEXT PREFIX END ---')
-          print('--- PLAINTEXT TAIL START ---')
-          print(plaintext[-8000:])
-          print('--- PLAINTEXT TAIL END ---')
-          # Detect whether the vocabulary object is already syntactically closed
-          marker='"vocabulary"'
-          idx=plaintext.find(marker)
-          print('vocabulary_marker_index:', idx)
-          if idx >= 0:
-              print('vocabulary_context:', plaintext[idx:idx+12000])
+          plaintext=b''.join(out).decode('utf-8')
+          marker='"articles"'
+          idx=plaintext.index(marker)
+          header=json.loads(plaintext[:idx] + '"articles": []\n}')
+          expected=['cloze','text1','text2','text3','text4','partb','translation']
+          evidence_root=Path('reports/content-freeze/2014')
+          articles=[]
+          evidence=[]
+          for article_id in expected:
+              path=evidence_root/f'{article_id}.candidate.json'
+              doc=json.loads(path.read_text(encoding='utf-8'))
+              qa=doc['qa']
+              article=doc['article']
+              assert doc['year'] == 2014
+              assert article['id'] == article_id
+              assert qa['source_sha256'] == header['source_sha256']
+              assert qa['source_scope_verified'] is True
+              assert qa['scope_exclusions_reviewed'] is True
+              assert qa['text_fidelity_reviewed'] is True
+              assert qa['translation_alignment_reviewed'] is True
+              assert qa['sentence_alignment_reviewed'] is True
+              assert qa['status'] == 'reviewed_candidate'
+              assert qa['expected_sentences'] == qa['actual_sentences'] == len(article['rows'])
+              articles.append(article)
+              evidence.append({'id':article_id,'sentences':len(article['rows']),'payload_sha256':qa.get('curated_payload_sha256')})
+          assert set(header) >= {'year','source_pdf','source_sha256','vocabulary','articles'}
+          assert header['year'] == 2014
+          assert len(header['vocabulary']) == 48, len(header['vocabulary'])
+          print(json.dumps({
+              'header_keys':list(header.keys()),
+              'source_pdf':header['source_pdf'],
+              'source_sha256':header['source_sha256'],
+              'vocabulary_size':len(header['vocabulary']),
+              'failure':failure,
+              'evidence':evidence,
+          },ensure_ascii=False,indent=2))
           PY
