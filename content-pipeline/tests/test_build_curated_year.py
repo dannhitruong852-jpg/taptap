@@ -122,6 +122,40 @@ class BuildCuratedYearTests(unittest.TestCase):
             self.assertEqual(source['year'], 2013)
             self.assertEqual(source['articles'], [])
 
+    def test_load_curated_source_applies_reviewed_discourse_overrides(self):
+        import json, tempfile
+        source_doc = {
+            'year': 2016,
+            'articles': [
+                {
+                    'id': 'text2',
+                    'rows': [
+                        [1, 'Some environmentalists, however, were disappointed.', '然而，一些环保人士对此感到失望。', 'report', []],
+                    ],
+                },
+            ],
+        }
+        override_doc = {
+            'year': 2016,
+            'overrides': [
+                {
+                    'article_id': 'text2',
+                    'sentence_id': 's01',
+                    'from': 'report',
+                    'to': 'contrast',
+                    'reason': 'Explicit however contrast.',
+                },
+            ],
+        }
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            (root / '2016.json').write_text(json.dumps(source_doc, ensure_ascii=False), encoding='utf-8')
+            override_dir = root / 'discourse-overrides'
+            override_dir.mkdir()
+            (override_dir / '2016.json').write_text(json.dumps(override_doc, ensure_ascii=False), encoding='utf-8')
+            source = build_curated_year.load_curated_source(root, 2016)
+            self.assertEqual(source['articles'][0]['rows'][0][3], 'contrast')
+
 
 if __name__ == '__main__':
     unittest.main()
