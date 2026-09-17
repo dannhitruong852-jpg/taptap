@@ -1,0 +1,61 @@
+name: Recover 2017 Staged Prefix
+
+on:
+  push:
+    branches:
+      - c-mode-v2-2013-2018-production
+
+permissions:
+  contents: write
+
+jobs:
+  recover:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Recover partial gzip stream
+        run: |
+          python - <<'PY'
+          import base64
+          import json
+          import re
+          import zlib
+          from pathlib import Path
+
+          parts = sorted(Path('content-pipeline/curated').glob('2017.json.gz.b64.part*'))
+          encoded = ''.join(p.read_text(encoding='ascii').strip() for p in parts)
+          raw = base64.b64decode(encoded)
+          dec = zlib.decompressobj(16 + zlib.MAX_WBITS)
+          text = dec.decompress(raw).decode('utf-8', errors='replace')
+          out = Path('reports/recovery')
+          out.mkdir(parents=True, exist_ok=True)
+          (out / '2017-prefix.txt').write_text(text, encoding='utf-8')
+          meta = {
+              'parts': [{'name': p.name, 'bytes': p.stat().st_size} for p in parts],
+              'encoded_chars': len(encoded),
+              'compressed_bytes': len(raw),
+              'recovered_chars': len(text),
+              'gzip_eof': dec.eof,
+              'article_ids_seen': re.findall(r'"id"\s*:\s*"([^"]+)"', text),
+              'tail': text[-1000:],
+          }
+          (out / '2017-prefix-meta.json').write_text(json.dumps(meta, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print(json.dumps(meta, ensure_ascii=False, indent=2))
+          PY
+      - name: Commit recovery evidence
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/recovery/2017-prefix.txt reports/recovery/2017-prefix-meta.json
+          if git diff --cached --quiet; then
+            echo "No recovery changes"
+          else
+            git commit -m "stage: recover 2017 partial curated prefix"
+            git push origin HEAD:c-mode-v2-2013-2018-production
+          fi
