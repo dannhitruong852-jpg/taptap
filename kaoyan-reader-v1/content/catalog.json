@@ -12,6 +12,7 @@
     2010,
     2011,
     2012,
+    2014,
     2016,
     2017,
     2018
@@ -683,6 +684,69 @@
       "content": "./content/2012/c/translation.json",
       "manifest": "./audio/2012/v4/c-translation/manifest.json",
       "sentences": 6
+    },
+    {
+      "id": "2014-cloze",
+      "year": 2014,
+      "section_type": "cloze",
+      "title": "完型 · 肥胖、BMI与健康偏见",
+      "content": "./content/2014/c/cloze.json",
+      "manifest": "./audio/2014/v4/c-cloze/manifest.json",
+      "sentences": 26
+    },
+    {
+      "id": "2014-partb",
+      "year": 2014,
+      "section_type": "part_b",
+      "title": "阅读 Part B · 英国土地艺术的作品与观念",
+      "content": "./content/2014/c/partb.json",
+      "manifest": "./audio/2014/v4/c-partb/manifest.json",
+      "sentences": 18
+    },
+    {
+      "id": "2014-text1",
+      "year": 2014,
+      "section_type": "reading",
+      "title": "阅读 Text 1 · 怎样花钱才能获得更持久的幸福",
+      "content": "./content/2014/c/text1.json",
+      "manifest": "./audio/2014/v4/c-text1/manifest.json",
+      "sentences": 18
+    },
+    {
+      "id": "2014-text2",
+      "year": 2014,
+      "section_type": "reading",
+      "title": "阅读 Text 2 · 我们为何往往觉得自己比实际更好看",
+      "content": "./content/2014/c/text2.json",
+      "manifest": "./audio/2014/v4/c-text2/manifest.json",
+      "sentences": 19
+    },
+    {
+      "id": "2014-text3",
+      "year": 2014,
+      "section_type": "reading",
+      "title": "阅读 Text 3 · 与机器竞赛，还是与机器协作",
+      "content": "./content/2014/c/text3.json",
+      "manifest": "./audio/2014/v4/c-text3/manifest.json",
+      "sentences": 19
+    },
+    {
+      "id": "2014-text4",
+      "year": 2014,
+      "section_type": "reading",
+      "title": "阅读 Text 4 · 英国住房为何应被视为基础设施问题",
+      "content": "./content/2014/c/text4.json",
+      "manifest": "./audio/2014/v4/c-text4/manifest.json",
+      "sentences": 22
+    },
+    {
+      "id": "2014-translation",
+      "year": 2014,
+      "section_type": "translation",
+      "title": "翻译 · 现实主义的健康乐观",
+      "content": "./content/2014/c/translation.json",
+      "manifest": "./audio/2014/v4/c-translation/manifest.json",
+      "sentences": 10
     },
     {
       "id": "2016-cloze",

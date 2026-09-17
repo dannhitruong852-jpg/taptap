@@ -1,0 +1,609 @@
+{
+  "year": 2014,
+  "section_type": "reading",
+  "article_id": "text3",
+  "source_sha256": "63da0a016fba9a18f4344ad8ce79c594e6703e84e77996c665f91f3b288f9fde",
+  "source_pages": [
+    6,
+    7
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "05",
+  "article_context": "讨论自动化对就业的冲击，并借 John Hagel 的观点把问题从“机器取代人”转向工作设计与制度创新。语气应有科技评论的推进感。",
+  "article": {
+    "year": 2014,
+    "section": "text3",
+    "title": "阅读 Text 3 · 与机器竞赛，还是与机器协作",
+    "background": "讨论自动化对就业的冲击，并借 John Hagel 的观点把问题从“机器取代人”转向工作设计与制度创新。语气应有科技评论的推进感。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "The concept of man versus machine is at least as old as the industrial revolution, but this phenomenon tends to be most acutely felt during economic downturns and fragile recoveries.",
+      "zh": "“人与机器对抗”这一观念至少和工业革命一样古老，但在经济衰退和脆弱复苏时期，人们对这种现象的感受往往最为强烈。",
+      "vocab": [
+        {
+          "word": "acutely",
+          "lemma": "acutely",
+          "level": 7,
+          "meaning": "强烈",
+          "start": 120,
+          "end": 127
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "The concept of man versus machine is at least as old as the industrial revolution, but this phenomenon tends to be most acutely felt during economic downturns and fragile recoveries.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text3/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "And yet, it would be a mistake to think we are right now simply experiencing the painful side of a boom and bust cycle.",
+      "zh": "然而，如果认为我们现在只是正在经历繁荣—萧条周期痛苦的一面，那就错了。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "And yet, it would be a mistake to think we are right now simply experiencing the painful side of a boom and bust cycle.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text3/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "Certain jobs have gone away for good, outmoded by machines.",
+      "zh": "有些工作已经永久消失，被机器淘汰了。",
+      "vocab": [
+        {
+          "word": "outmoded",
+          "lemma": "outmoded",
+          "level": 7,
+          "meaning": "淘汰",
+          "start": 38,
+          "end": 46
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Certain jobs have gone away for good, outmoded by machines.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text3/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 1,
+      "en": "Since technology has such an insatiable appetite for eating up human jobs, this phenomenon will continue to restructure our economy in ways we cannot immediately foresee.",
+      "zh": "由于技术对吞噬人类工作岗位有着近乎贪得无厌的胃口，这一现象还会继续以我们暂时无法预见的方式重塑经济。",
+      "vocab": [
+        {
+          "word": "insatiable",
+          "lemma": "insatiable",
+          "level": 8,
+          "meaning": "贪得无厌",
+          "start": 29,
+          "end": 39
+        }
+      ],
+      "discourse_function": "warning",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Since technology has such an insatiable appetite for eating up human jobs, this phenomenon will continue to restructure our economy in ways we cannot immediately foresee.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text3/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "When there is rapid improvement in the price and performance of technology, jobs that were once thought to be immune from automation suddenly become threatened.",
+      "zh": "当技术的价格与性能迅速改善时，那些曾被认为不会受到自动化影响的工作会突然面临威胁。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "When there is rapid improvement in the price and performance of technology, jobs that were once thought to be immune from automation suddenly become threatened.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text3/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "This argument has attracted a lot of attention, via the success of the book Race Against the Machine, by Erik Brynjolfsson and Andrew McAfee, who both hail from MIT's Center for Digital Business.",
+      "zh": "这一论点随着埃里克·布林约尔松和安德鲁·麦卡菲所著《与机器赛跑》的走红而受到广泛关注；两位作者都来自麻省理工学院数字商业中心。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "This argument has attracted a lot of attention, via the success of the book Race Against the Machine, by Erik Brynjolfsson and Andrew McAfee, who both hail from MIT's Center for Digital Business.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text3/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 3,
+      "en": "This is a powerful argument, and a scary one.",
+      "zh": "这个论点很有力量，也令人不安。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "This is a powerful argument, and a scary one.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text3/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 3,
+      "en": "And yet, John Hagel, author of The Power of Pull and other books, says Brynjolfsson and McAfee miss the reason why these jobs are so vulnerable to technology in the first place.",
+      "zh": "不过，《拉力的力量》等书的作者约翰·哈格尔认为，布林约尔松和麦卡菲忽略了这些工作为何从一开始就如此容易受到技术冲击。",
+      "vocab": [
+        {
+          "word": "vulnerable",
+          "lemma": "vulnerable",
+          "level": 7,
+          "meaning": "容易受到",
+          "start": 133,
+          "end": 143
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "And yet, John Hagel, author of The Power of Pull and other books, says Brynjolfsson and McAfee miss the reason why these jobs are so vulnerable to technology in the first place.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text3/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 4,
+      "en": "Hagel says we have designed jobs in the U.S. that tend to be \"tightly scripted\" and \"highly standardized\" ones that leave no room for \"individual initiative or creativity\".",
+      "zh": "哈格尔说，美国设计出的许多工作往往“程序严密”“高度标准化”，不给“个人主动性或创造力”留下空间。",
+      "vocab": [
+        {
+          "word": "initiative",
+          "lemma": "initiative",
+          "level": 6,
+          "meaning": "主动性",
+          "start": 146,
+          "end": 156
+        }
+      ],
+      "discourse_function": "explain_quote",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "Hagel says we have designed jobs in the U.S. that tend to be \"tightly scripted\" and \"highly standardized\" ones that leave no room for \"individual initiative or creativity\".",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text3/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 4,
+      "en": "In short, these are the types of jobs that machines can perform much better at than human beings.",
+      "zh": "简而言之，这类工作恰恰是机器比人做得好得多的工作。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "In short, these are the types of jobs that machines can perform much better at than human beings.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text3/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 4,
+      "en": "That is how we have put a giant target sign on the backs of American workers, Hagel says.",
+      "zh": "哈格尔说，我们正是这样在美国劳动者背后画上了一个巨大的靶心。",
+      "vocab": [],
+      "discourse_function": "evaluation_quote",
+      "prosody_focus": [],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "That is how we have put a giant target sign on the backs of American workers, Hagel says.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text3/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 5,
+      "en": "It's time to reinvent the formula for how work is conducted, since we are still relying on a very 20th century notion of work, Hagel says.",
+      "zh": "哈格尔认为，是时候重新设计工作的运作方式了，因为我们仍然依赖一种非常20世纪的工作观。",
+      "vocab": [],
+      "discourse_function": "action_turn",
+      "prosody_focus": [],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "It's time to reinvent the formula for how work is conducted, since we are still relying on a very 20th century notion of work, Hagel says.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "lively",
+          "intensity": 2,
+          "rate": 1.04,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text3/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 5,
+      "en": "In our rapidly changing economy, we more than ever need people in the workplace who can take initiative and exercise their imagination \"to respond to unexpected events\".",
+      "zh": "在快速变化的经济中，我们比以往任何时候都更需要能在职场中发挥主动性、运用想象力“应对意外事件”的人。",
+      "vocab": [
+        {
+          "word": "initiative",
+          "lemma": "initiative",
+          "level": 6,
+          "meaning": "主动性",
+          "start": 93,
+          "end": 103
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "In our rapidly changing economy, we more than ever need people in the workplace who can take initiative and exercise their imagination \"to respond to unexpected events\".",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text3/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 5,
+      "en": "That is not something machines are good at.",
+      "zh": "而这并不是机器擅长的事情。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "That is not something machines are good at.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text3/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 5,
+      "en": "They are designed to perform very predictable activities.",
+      "zh": "机器被设计出来，是为了执行高度可预测的活动。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "They are designed to perform very predictable activities.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text3/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 6,
+      "en": "As Hagel notes, Brynjolfsson and McAfee indeed touched on this point in their book.",
+      "zh": "正如哈格尔所指出的，布林约尔松和麦卡菲的确在书中谈到了这一点。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "As Hagel notes, Brynjolfsson and McAfee indeed touched on this point in their book.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text3/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 6,
+      "en": "We need to reframe race against the machine as race with the machine.",
+      "zh": "我们需要把“与机器赛跑”重新理解为“和机器一起赛跑”。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "We need to reframe race against the machine as race with the machine.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text3/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 6,
+      "en": "In other words, we need to look at the ways in which machines can augment human labor rather than replace it.",
+      "zh": "换言之，我们应当关注机器怎样增强人类劳动，而不是怎样取代人类劳动。",
+      "vocab": [
+        {
+          "word": "augment",
+          "lemma": "augment",
+          "level": 8,
+          "meaning": "增强",
+          "start": 66,
+          "end": 73
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "In other words, we need to look at the ways in which machines can augment human labor rather than replace it.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text3/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 6,
+      "en": "So then the problem is not really about technology, but rather, \"how do we innovate our institutions and our work practices?\"",
+      "zh": "因此，真正的问题并不在技术本身，而在于“我们如何创新我们的制度和工作实践？”",
+      "vocab": [
+        {
+          "word": "institutions",
+          "lemma": "institutions",
+          "level": 6,
+          "meaning": "制度",
+          "start": 88,
+          "end": 100
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "So then the problem is not really about technology, but rather, \"how do we innovate our institutions and our work practices?\"",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text3/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,572 @@
+{
+  "year": 2014,
+  "section_type": "reading",
+  "article_id": "text1",
+  "source_sha256": "63da0a016fba9a18f4344ad8ce79c594e6703e84e77996c665f91f3b288f9fde",
+  "source_pages": [
+    3
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "01",
+  "article_context": "借一位彩票大奖得主切入《Happy Money》的研究结论：体验、关系、给予与稀缺性往往比物质消费更能带来持久满足。语气理性、轻松，适度保留作者的幽默。",
+  "article": {
+    "year": 2014,
+    "section": "text1",
+    "title": "阅读 Text 1 · 怎样花钱才能获得更持久的幸福",
+    "background": "借一位彩票大奖得主切入《Happy Money》的研究结论：体验、关系、给予与稀缺性往往比物质消费更能带来持久满足。语气理性、轻松，适度保留作者的幽默。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "What would you do with $590m?",
+      "zh": "如果你有5.9亿美元，你会怎么花？",
+      "vocab": [],
+      "discourse_function": "ask",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "What would you do with $590m?",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text1/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "This is now a question for Gloria MacKenzie, an 84-year-old widow who recently emerged from her small, tin-roofed house in Florida to collect the biggest undivided lottery jackpot in history.",
+      "zh": "如今，这正是84岁的寡妇格洛丽亚·麦肯齐要面对的问题：她最近从佛罗里达那座带锡皮屋顶的小房子里走出来，领取了史上金额最大的单人彩票头奖。",
+      "vocab": [],
+      "discourse_function": "story",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "This is now a question for Gloria MacKenzie, an 84-year-old widow who recently emerged from her small, tin-roofed house in Florida to collect the biggest undivided lottery jackpot in history.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text1/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "If she hopes her new-found fortune will yield lasting feelings of fulfilment, she could do worse than read Happy Money by Elizabeth Dunn and Michael Norton.",
+      "zh": "如果她希望这笔新得的财富能带来持久的满足感，那么读一读伊丽莎白·邓恩和迈克尔·诺顿合著的《幸福金钱》，不失为一个好选择。",
+      "vocab": [
+        {
+          "word": "fulfilment",
+          "lemma": "fulfilment",
+          "level": 7,
+          "meaning": "满足感",
+          "start": 66,
+          "end": 76
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "If she hopes her new-found fortune will yield lasting feelings of fulfilment, she could do worse than read Happy Money by Elizabeth Dunn and Michael Norton.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text1/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "These two academics use an array of behavioral research to show that the most rewarding ways to spend money can be counterintuitive.",
+      "zh": "这两位学者借助一系列行为研究表明，最能带来回报的花钱方式有时是反直觉的。",
+      "vocab": [
+        {
+          "word": "counterintuitive",
+          "lemma": "counterintuitive",
+          "level": 8,
+          "meaning": "反直觉的",
+          "start": 115,
+          "end": 131
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "These two academics use an array of behavioral research to show that the most rewarding ways to spend money can be counterintuitive.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text1/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "Fantasies of great wealth often involve visions of fancy cars and extravagant homes.",
+      "zh": "人们幻想巨额财富时，常会想到豪车和奢华的住宅。",
+      "vocab": [
+        {
+          "word": "extravagant",
+          "lemma": "extravagant",
+          "level": 7,
+          "meaning": "奢华的",
+          "start": 66,
+          "end": 77
+        }
+      ],
+      "discourse_function": "example",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Fantasies of great wealth often involve visions of fancy cars and extravagant homes.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text1/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "Yet satisfaction with these material purchases wears off fairly quickly.",
+      "zh": "然而，这些物质消费带来的满足很快就会消退。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "Yet satisfaction with these material purchases wears off fairly quickly.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text1/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "What was once exciting and new becomes old-hat; regret creeps in.",
+      "zh": "曾经令人兴奋的新鲜事物会变得司空见惯，懊悔也随之悄然滋生。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "What was once exciting and new becomes old-hat; regret creeps in.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text1/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 2,
+      "en": "It is far better to spend money on experiences, say Ms Dunn and Mr Norton, like interesting trips, unique meals or even going to the cinema.",
+      "zh": "邓恩和诺顿认为，把钱花在体验上要好得多，比如有趣的旅行、独特的一餐，甚至只是去看一场电影。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "It is far better to spend money on experiences, say Ms Dunn and Mr Norton, like interesting trips, unique meals or even going to the cinema.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text1/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 2,
+      "en": "These purchases often become more valuable with time - as stories or memories - particularly if they involve feeling more connected to others.",
+      "zh": "这类消费往往会随着时间推移，以故事或记忆的形式变得更有价值，尤其是在它们能让人感到与他人联系更紧密时。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "These purchases often become more valuable with time - as stories or memories - particularly if they involve feeling more connected to others.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text1/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 3,
+      "en": "This slim volume is packed with tips to help wage slaves as well as lottery winners get the most \"happiness bang for your buck.\"",
+      "zh": "这本薄薄的书里装满了实用建议，既帮助工薪族，也帮助彩票赢家，让每一块钱尽可能换来更多幸福。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "This slim volume is packed with tips to help wage slaves as well as lottery winners get the most \"happiness bang for your buck.\"",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text1/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 3,
+      "en": "It seems most people would be better off if they could shorten their commutes to work, spend more time with friends and family and less of it watching television (something the average American spends a whopping two months a year doing, and is hardly jollier for it).",
+      "zh": "看来，如果人们能缩短通勤时间，多陪朋友和家人，少看一些电视，生活会更好；普通美国人一年竟有足足两个月花在看电视上，却几乎没有因此更快乐。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "It seems most people would be better off if they could shorten their commutes to work, spend more time with friends and family and less of it watching television (something the average American spends a whopping two months a year doing, and is hardly jollier for it).",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text1/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 3,
+      "en": "Buying gifts or giving to charity is often more pleasurable than purchasing things for oneself, and luxuries are most enjoyable when they are consumed sparingly.",
+      "zh": "买礼物送人或捐给慈善机构，往往比给自己买东西更令人愉快；而奢侈品只有在有节制地享用时最让人愉悦。",
+      "vocab": [
+        {
+          "word": "sparingly",
+          "lemma": "sparingly",
+          "level": 7,
+          "meaning": "有节制地",
+          "start": 151,
+          "end": 160
+        }
+      ],
+      "discourse_function": "compare",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "Buying gifts or giving to charity is often more pleasurable than purchasing things for oneself, and luxuries are most enjoyable when they are consumed sparingly.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text1/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 3,
+      "en": "This is apparently the reason McDonald's restricts the availability of its popular McRib - a marketing trick that has turned the pork sandwich into an object of obsession.",
+      "zh": "这显然就是麦当劳限制热门产品 McRib 供应的原因：这种营销手法把一个猪肉三明治变成了令人痴迷的对象。",
+      "vocab": [],
+      "discourse_function": "example",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "This is apparently the reason McDonald's restricts the availability of its popular McRib - a marketing trick that has turned the pork sandwich into an object of obsession.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text1/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 4,
+      "en": "Readers of Happy Money are clearly a privileged lot, anxious about fulfilment, not hunger.",
+      "zh": "显然，《幸福金钱》的读者属于较为优裕的一群，他们焦虑的是满足感，而不是饥饿。",
+      "vocab": [
+        {
+          "word": "fulfilment",
+          "lemma": "fulfilment",
+          "level": 7,
+          "meaning": "满足感",
+          "start": 67,
+          "end": 77
+        }
+      ],
+      "discourse_function": "qualify",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "Readers of Happy Money are clearly a privileged lot, anxious about fulfilment, not hunger.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text1/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 4,
+      "en": "Money may not quite buy happiness, but people in wealthier countries are generally happier than those in poor ones.",
+      "zh": "金钱也许不能直接买到幸福，但富裕国家的人总体上确实比贫穷国家的人更快乐。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "Money may not quite buy happiness, but people in wealthier countries are generally happier than those in poor ones.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text1/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 4,
+      "en": "Yet the link between feeling good and spending money on others can be seen among rich and poor people around the world, and scarcity enhances the pleasure of most things for most people.",
+      "zh": "不过，在世界各地，无论贫富，人们都能看到为他人花钱与感觉良好之间的联系，而且稀缺性会增强大多数人从大多数事物中获得的快乐。",
+      "vocab": [
+        {
+          "word": "scarcity",
+          "lemma": "scarcity",
+          "level": 7,
+          "meaning": "稀缺性",
+          "start": 124,
+          "end": 132
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "Yet the link between feeling good and spending money on others can be seen among rich and poor people around the world, and scarcity enhances the pleasure of most things for most people.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text1/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 4,
+      "en": "Not everyone will agree with the authors' policy ideas, which range from mandating more holiday time to reducing tax incentives for American homebuyers.",
+      "zh": "并非所有人都会赞同作者的政策主张，从强制增加休假时间，到削减美国购房者的税收激励，这些主张跨度很大。",
+      "vocab": [
+        {
+          "word": "incentives",
+          "lemma": "incentives",
+          "level": 7,
+          "meaning": "激励",
+          "start": 117,
+          "end": 127
+        }
+      ],
+      "discourse_function": "qualify",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "Not everyone will agree with the authors' policy ideas, which range from mandating more holiday time to reducing tax incentives for American homebuyers.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text1/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 4,
+      "en": "But most people will come away from this book believing it was money well spent.",
+      "zh": "但大多数人读完这本书后，都会觉得这笔钱花得值。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "But most people will come away from this book believing it was money well spent.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text1/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "year": 2014,
+  "method": "intact gzip plaintext header plus seven reviewed candidate article payloads",
+  "historical_source_parts": [
+    "2014.json.gz.b64.part00",
+    "2014.json.gz.b64.part01",
+    "2014.json.gz.b64.part02",
+    "2014.json.gz.b64.part03",
+    "2014.json.gz.b64.part04"
+  ],
+  "historical_failure": {
+    "compressed_byte": 2873,
+    "error": "Error -3 while decompressing data: invalid distance too far back"
+  },
+  "source_pdf": "2014年考研英语二真题（可复制搜索查词）.pdf",
+  "source_sha256": "63da0a016fba9a18f4344ad8ce79c594e6703e84e77996c665f91f3b288f9fde",
+  "vocabulary_entries": 48,
+  "article_ids": [
+    "cloze",
+    "text1",
+    "text2",
+    "text3",
+    "text4",
+    "partb",
+    "translation"
+  ],
+  "evidence": [
+    {
+      "article_id": "cloze",
+      "sentences": 26,
+      "curated_payload_sha256": "7235ccc74419c92011cfc38929d62f551bca1aae49ff214d312cedb946f1a4f1"
+    },
+    {
+      "article_id": "text1",
+      "sentences": 18,
+      "curated_payload_sha256": "7235ccc74419c92011cfc38929d62f551bca1aae49ff214d312cedb946f1a4f1"
+    },
+    {
+      "article_id": "text2",
+      "sentences": 19,
+      "curated_payload_sha256": "7235ccc74419c92011cfc38929d62f551bca1aae49ff214d312cedb946f1a4f1"
+    },
+    {
+      "article_id": "text3",
+      "sentences": 19,
+      "curated_payload_sha256": "7235ccc74419c92011cfc38929d62f551bca1aae49ff214d312cedb946f1a4f1"
+    },
+    {
+      "article_id": "text4",
+      "sentences": 22,
+      "curated_payload_sha256": "7235ccc74419c92011cfc38929d62f551bca1aae49ff214d312cedb946f1a4f1"
+    },
+    {
+      "article_id": "partb",
+      "sentences": 18,
+      "curated_payload_sha256": "7235ccc74419c92011cfc38929d62f551bca1aae49ff214d312cedb946f1a4f1"
+    },
+    {
+      "article_id": "translation",
+      "sentences": 10,
+      "curated_payload_sha256": "7235ccc74419c92011cfc38929d62f551bca1aae49ff214d312cedb946f1a4f1"
+    }
+  ],
+  "english_chinese_article_payloads_modified": false
+}
