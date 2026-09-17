@@ -1,0 +1,53 @@
+name: C Mode Export 2016 Source
+
+on:
+  push:
+    branches:
+      - c-mode-v2-2013-2018-production
+    paths:
+      - '.github/workflows/c-mode-export-2016-source.yml'
+      - 'content-pipeline/curated/2016.json.gz.b64.part*'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Reconstruct reviewed 2016 source
+        shell: bash
+        run: |
+          cat content-pipeline/curated/2016.json.gz.b64.part* | base64 -d | gzip -d > /tmp/2016.curated.json
+      - name: Validate reconstructed source
+        shell: bash
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+
+          path = Path('/tmp/2016.curated.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+          expected = ['cloze', 'text1', 'text2', 'text3', 'text4', 'partb', 'translation']
+          articles = data.get('articles', [])
+          assert data.get('year') == 2016, data.get('year')
+          assert [a.get('id') for a in articles] == expected, [a.get('id') for a in articles]
+          assert all(a.get('editorial_status') in {'reviewed_candidate', 'confirmed_official'} for a in articles)
+          assert all(a.get('rows') for a in articles)
+          print('2016 source export: ok')
+          print('articles:', len(articles))
+          print('sentence_units:', sum(len(a['rows']) for a in articles))
+          print('sha256:', hashlib.sha256(path.read_bytes()).hexdigest())
+          PY
+      - name: Upload reconstructed source artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: c-mode-2016-curated-source
+          path: /tmp/2016.curated.json
+          if-no-files-found: error
+          retention-days: 7
