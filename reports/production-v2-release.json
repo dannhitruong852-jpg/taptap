@@ -4,13 +4,15 @@
   "source_ref": "b9c5fde97cd854383164031455f43857154b3bda",
   "freeze_id": "6ab366587c9c892df47439c75153836c0db41cfe2c2a6d97ad681c3617caf8a6",
   "previous_production_sha": "b56b6d5c89119ca36bc0a4459cc238125d2bc09e",
-  "state": "release_candidate",
+  "state": "published",
   "state_history": [
     "draft",
     "validated",
     "frozen",
     "rendering",
     "merged",
-    "release_candidate"
-  ]
+    "release_candidate",
+    "published"
+  ],
+  "content_commit_sha": "5537cb29f6e09143f1a6136f182c58bc14470dbc"
 }
