@@ -1,0 +1,81 @@
+name: Recover 2019 staged audio once
+
+on:
+  push:
+    branches: ['c-mode-v2-launch-release']
+    paths: ['recover-2019-audio.trigger']
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      SOURCE_RUN_ID: '35340867006'
+      YEAR: '2019'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: c-mode-v2-launch-release
+          fetch-depth: 0
+      - name: Download validated merged candidate
+        run: |
+          rm -rf /tmp/merged
+          mkdir -p /tmp/merged
+          gh run download "$SOURCE_RUN_ID" -R "$GITHUB_REPOSITORY"             -n "kaoyan-c-${YEAR}-merged-candidate"             -D /tmp/merged
+      - name: Install validated audio
+        run: |
+          test -d "/tmp/merged/audio/${YEAR}/v4"
+          test -s "/tmp/merged/reports/c-v4-${YEAR}-merge.json"
+          rm -rf "kaoyan-reader-v1/audio/${YEAR}/v4"
+          mkdir -p "kaoyan-reader-v1/audio/${YEAR}"
+          cp -a "/tmp/merged/audio/${YEAR}/v4" "kaoyan-reader-v1/audio/${YEAR}/v4"
+          cp "/tmp/merged/reports/c-v4-${YEAR}-merge.json" "kaoyan-reader-v1/reports/c-v4-${YEAR}-merge.json"
+      - name: Verify staged 2019 audio
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          year=2019
+          catalog=json.loads(Path('kaoyan-reader-v1/content/catalog.json').read_text())
+          canary=json.loads(Path(f'reports/production-v2/{year}-canary.json').read_text())
+          assert canary.get('ok') is True and canary.get('errors')==[]
+          rows=[r for r in catalog['articles'] if r['year']==year]
+          assert len(rows)==7
+          summary={}
+          for row in rows:
+              manifest_path=Path('kaoyan-reader-v1')/row['manifest'].removeprefix('./')
+              assert manifest_path.is_file(),manifest_path
+              manifest=json.loads(manifest_path.read_text())
+              assert manifest['qa']['technical']=='passed'
+              assert manifest.get('missing_segments')==[]
+              assert len(manifest['sentences'])==row['sentences']
+              for sentence in manifest['sentences'].values():
+                  for key in ('path','mp3_path'):
+                      asset=Path('kaoyan-reader-v1')/sentence[key].removeprefix('./')
+                      assert asset.is_file(),asset
+              summary[row['id']]={'sentences':len(manifest['sentences']),'technical':'passed'}
+          report={
+              'schema_version':'c-mode-v2-launch-audio-1',
+              'source_workflow_run_id':os.environ['SOURCE_RUN_ID'],
+              'branch':'c-mode-v2-launch-release',
+              'years':[year],
+              'ok':True,
+              'articles':{str(year):summary},
+              'errors':[]
+          }
+          out=Path('reports/launch-audio')
+          out.mkdir(parents=True,exist_ok=True)
+          (out/f'{year}.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+          print(json.dumps({'ok':True,'year':year,'articles':len(summary)}))
+          PY
+      - name: Commit recovered 2019 audio
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "kaoyan-reader-v1/audio/${YEAR}" "kaoyan-reader-v1/reports/c-v4-${YEAR}-merge.json" "reports/launch-audio/${YEAR}.json"
+          git commit -m "feat(c-mode): stage validated 2019 audio from run ${SOURCE_RUN_ID}"
+          git push origin HEAD:c-mode-v2-launch-release
