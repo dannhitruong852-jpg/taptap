@@ -1,0 +1,75 @@
+{
+  "year": 2022,
+  "article": {
+    "id": "translation",
+    "section_type": "translation",
+    "title": "翻译 · 绘画中的意外结果如何训练创造性解决问题",
+    "pages": [
+      13
+    ],
+    "actor": "15",
+    "accent": "en-US",
+    "context": "文章指出，绘画结果偏离预期虽然令人失望，却能训练人适应变化、处理挫折并寻找创造性解决方案，这种能力也可迁移到日常生活。",
+    "editorial_status": "reviewed_candidate",
+    "rows": [
+      [
+        1,
+        "Although we try our best, sometimes our paintings rarely turn out as originally planned.",
+        "尽管我们已经竭尽全力，有时画作仍很少会完全按照最初计划呈现。",
+        "qualify",
+        []
+      ],
+      [
+        1,
+        "Changes in the light, the limitations of your painting materials, and the lack of experience and technique mean that what you start out trying to achieve may not come to life the way that you expected.",
+        "光线变化、绘画材料的限制以及经验和技巧不足，都意味着你最初想实现的效果未必会如预期那样呈现。",
+        "explain",
+        []
+      ],
+      [
+        2,
+        "Although this can be frustrating and disappointing, it turns out that this can actually be good for you.",
+        "虽然这可能令人沮丧、令人失望，但事实证明，它其实可能对你有好处。",
+        "contrast",
+        []
+      ],
+      [
+        2,
+        "Unexpected results have two benefits: you pretty quickly learn to deal with disappointment and realise that when one door closes, another opens.",
+        "意外结果有两个好处：你会很快学会面对失望，并意识到一扇门关上时，另一扇门会打开。",
+        "explain",
+        []
+      ],
+      [
+        2,
+        "You also quickly learn to adapt and come up with creative solutions to the problems the painting presents, and thinking outside the box will become your second nature.",
+        "你也会很快学会适应，并为绘画带来的问题想出创造性解决方案；跳出框架思考最终会成为你的第二天性。",
+        "advance",
+        []
+      ],
+      [
+        3,
+        "In fact, creative problem-solving skills are incredibly useful in daily life, with which you're more likely to be able to find a solution when a problem arises.",
+        "事实上，创造性解决问题的能力在日常生活中极其有用；拥有这种能力，问题出现时你更可能找到解决办法。",
+        "conclude",
+        []
+      ]
+    ]
+  },
+  "qa": {
+    "review_schema_version": "c-mode-v2-1",
+    "source_scope_verified": true,
+    "scope_exclusions_reviewed": true,
+    "text_fidelity_reviewed": true,
+    "translation_alignment_reviewed": true,
+    "sentence_alignment_reviewed": true,
+    "status": "reviewed_candidate",
+    "review_method": "visual PDF review plus reviewed sentence-level bilingual manuscript",
+    "unresolved_sections": [],
+    "source_pdf": "2022年考研英语二真题【可复制搜索查词】.pdf",
+    "source_sha256": "6905f827ee76eb3d4165c7aaeb09af9387c60addbd5af8e959d5e8a9ddcfa7f8",
+    "sentence_count": 6,
+    "expected_sentences": 6,
+    "actual_sentences": 6
+  }
+}
