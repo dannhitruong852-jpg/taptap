@@ -1,0 +1,23 @@
+{
+  "schema_version": "c-mode-v2-canary-evidence-1",
+  "year": 2019,
+  "branch": "c-mode-v2-2019-2024-production",
+  "source_commit": "3664bc068421b3b9ee4b53befc91243c84a84849",
+  "phase": "preflight",
+  "ok": true,
+  "articles_checked": 7,
+  "reviewed_candidates_checked": 7,
+  "sentence_counts": {
+    "cloze": 19,
+    "text1": 24,
+    "text2": 21,
+    "text3": 27,
+    "text4": 20,
+    "partb": 21,
+    "translation": 9
+  },
+  "level6_vocab_occurrences_checked": 90,
+  "mapped_occurrences": 90,
+  "errors": [],
+  "note": "Equivalent V2 canary gates executed against committed Reader content, reviewed candidates, voice profiles, catalog and bilingual occurrence mappings."
+}
