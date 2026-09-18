@@ -1,0 +1,42 @@
+{
+  "schema_version": "c-mode-v2-launch-audio-1",
+  "source_workflow_run_id": "35340867006",
+  "branch": "c-mode-v2-launch-release",
+  "years": [
+    2019
+  ],
+  "ok": true,
+  "articles": {
+    "2019": {
+      "2019-cloze": {
+        "sentences": 19,
+        "technical": "passed"
+      },
+      "2019-partb": {
+        "sentences": 21,
+        "technical": "passed"
+      },
+      "2019-text1": {
+        "sentences": 24,
+        "technical": "passed"
+      },
+      "2019-text2": {
+        "sentences": 21,
+        "technical": "passed"
+      },
+      "2019-text3": {
+        "sentences": 27,
+        "technical": "passed"
+      },
+      "2019-text4": {
+        "sentences": 20,
+        "technical": "passed"
+      },
+      "2019-translation": {
+        "sentences": 9,
+        "technical": "passed"
+      }
+    }
+  },
+  "errors": []
+}
