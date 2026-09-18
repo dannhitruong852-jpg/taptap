@@ -1,0 +1,171 @@
+name: Resume C Mode V2 release 2013-2018 once
+
+on:
+  push:
+    branches:
+      - c-mode-v2-2013-2018-production
+    paths:
+      - '.github/workflows/c-mode-resume-release-2013-2018-once.yml'
+
+permissions:
+  contents: write
+  actions: read
+
+env:
+  PYTHONPATH: .:voice-pipeline:content-pipeline
+  SOURCE_RUN_ID: '35301230026'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    outputs:
+      new_sha: ${{ steps.publish.outputs.new_sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/download-artifact@v4
+        with:
+          name: c-mode-v2-frozen-2013-2018
+          path: /tmp/frozen-input
+          github-token: ${{ github.token }}
+          run-id: ${{ env.SOURCE_RUN_ID }}
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: c-mode-v2-2013-2018-*-merged
+          path: /tmp/merged
+          merge-multiple: false
+          github-token: ${{ github.token }}
+          run-id: ${{ env.SOURCE_RUN_ID }}
+      - name: Build release candidate from exact frozen and merged artifacts
+        id: baseline
+        run: |
+          git fetch origin gh-pages
+          baseline=$(git rev-parse origin/gh-pages)
+          echo "baseline_sha=$baseline" >> "$GITHUB_OUTPUT"
+          git worktree add /tmp/production "$baseline"
+          cp /tmp/production/kaoyan-reader-v1/content/catalog.json /tmp/baseline-catalog.json
+          cp -a /tmp/frozen-input/kaoyan-reader-v1/. /tmp/production/kaoyan-reader-v1/
+          python - <<'PY'
+          import json, shutil
+          from pathlib import Path
+          batch=json.loads(Path('/tmp/frozen-input/batch-manifest.json').read_text())
+          for year in batch['years']:
+              matches=list(Path('/tmp/merged').glob(f'**/audio/{year}/v4'))
+              assert len(matches)==1,(year,matches)
+              target=Path(f'/tmp/production/kaoyan-reader-v1/audio/{year}/v4')
+              target.parent.mkdir(parents=True,exist_ok=True)
+              shutil.copytree(matches[0],target,dirs_exist_ok=True)
+              reports=list(Path('/tmp/merged').glob(f'**/reports/c-v4-{year}-merge.json'))
+              assert len(reports)==1,(year,reports)
+              dst=Path(f'/tmp/production/kaoyan-reader-v1/reports/c-v4-{year}-merge.json')
+              dst.parent.mkdir(parents=True,exist_ok=True)
+              shutil.copy2(reports[0],dst)
+          PY
+      - name: Rebuild additive catalog and run release gates
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from production_v2.catalog_merge import merge_catalogs
+          baseline=json.loads(Path('/tmp/baseline-catalog.json').read_text())
+          source=json.loads(Path('/tmp/frozen-input/kaoyan-reader-v1/content/catalog.json').read_text())
+          batch=json.loads(Path('/tmp/frozen-input/batch-manifest.json').read_text())
+          years=set(batch['years'])
+          batch_catalog={'version':source.get('version',1),'articles':[x for x in source['articles'] if x['year'] in years]}
+          candidate=merge_catalogs(baseline,batch_catalog)
+          Path('/tmp/production/kaoyan-reader-v1/content/catalog.json').write_text(json.dumps(candidate,ensure_ascii=False,indent=2)+'\n')
+          PY
+          python -m production_v2.cli_release_guard \
+            --old /tmp/baseline-catalog.json \
+            --new /tmp/production/kaoyan-reader-v1/content/catalog.json \
+            --report /tmp/release-guard.json
+          python -m production_v2.cli_validate_batch \
+            --manifest /tmp/frozen-input/batch-manifest.json \
+            --catalog /tmp/production/kaoyan-reader-v1/content/catalog.json \
+            --reader-root /tmp/production/kaoyan-reader-v1 \
+            --phase release \
+            --report /tmp/release-validation.json
+          cd /tmp/production/kaoyan-reader-v1
+          npm test
+      - name: Build rollback metadata and publish
+        id: publish
+        env:
+          BASELINE_SHA: ${{ steps.baseline.outputs.baseline_sha }}
+        working-directory: /tmp/production
+        run: |
+          mkdir -p reports
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          batch=json.loads(Path('/tmp/frozen-input/batch-manifest.json').read_text())
+          freeze=json.loads(Path('/tmp/frozen-input/freeze-report.json').read_text())
+          meta={
+              'batch_id':batch['batch_id'],
+              'pipeline_version':batch['pipeline_version'],
+              'source_ref':batch['source_ref'],
+              'freeze_id':freeze['freeze_id'],
+              'previous_production_sha':os.environ['BASELINE_SHA'],
+              'state':'release_candidate',
+              'state_history':['draft','validated','frozen','rendering','merged','release_candidate'],
+          }
+          Path('reports/production-v2-release.json').write_text(json.dumps(meta,indent=2)+'\n')
+          PY
+          cp /tmp/release-guard.json reports/release-guard.json
+          cp /tmp/release-validation.json reports/release-validation.json
+          git fetch origin gh-pages
+          current=$(git rev-parse origin/gh-pages)
+          test "$current" = "$BASELINE_SHA"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add kaoyan-reader-v1 reports
+          git commit -m "feat: publish C Mode V2 batch 2013-2018 resumed release"
+          content_sha=$(git rev-parse HEAD)
+          export CONTENT_SHA="$content_sha"
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          path=Path('reports/production-v2-release.json')
+          data=json.loads(path.read_text())
+          data['state']='published'
+          data['state_history']=['draft','validated','frozen','rendering','merged','release_candidate','published']
+          data['content_commit_sha']=os.environ['CONTENT_SHA']
+          path.write_text(json.dumps(data,indent=2)+'\n')
+          PY
+          git add reports/production-v2-release.json
+          git commit -m "chore: finalize C Mode V2 2013-2018 state"
+          new_sha=$(git rev-parse HEAD)
+          git push origin HEAD:gh-pages
+          echo "new_sha=$new_sha" >> "$GITHUB_OUTPUT"
+
+  verify_pages:
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify matching Pages deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARGET_SHA: ${{ needs.release.outputs.new_sha }}
+        run: |
+          for attempt in $(seq 1 30); do
+            payload=$(gh api "/repos/$GITHUB_REPOSITORY/actions/runs?branch=gh-pages&per_page=30")
+            row=$(printf '%s' "$payload" | python -c 'import json,sys,os; d=json.load(sys.stdin); t=os.environ["TARGET_SHA"]; rows=[r for r in d.get("workflow_runs",[]) if r.get("head_sha")==t and r.get("name")=="pages build and deployment"]; print(json.dumps(rows[0]) if rows else "")')
+            if [ -n "$row" ]; then
+              status=$(printf '%s' "$row" | python -c 'import json,sys; print(json.load(sys.stdin).get("status",""))')
+              conclusion=$(printf '%s' "$row" | python -c 'import json,sys; print(json.load(sys.stdin).get("conclusion") or "")')
+              if [ "$status" = completed ]; then
+                test "$conclusion" = success
+                echo "Pages deployment succeeded for $TARGET_SHA"
+                exit 0
+              fi
+            fi
+            sleep 10
+          done
+          echo "Pages verification timed out" >&2
+          exit 4
