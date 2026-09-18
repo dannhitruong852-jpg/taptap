@@ -102,5 +102,26 @@ class BilingualHighlightContractTests(unittest.TestCase):
         self.assertEqual(report['reviewed_exceptions'], 1)
 
 
+    def test_study_gloss_only_exception_covers_unaligned_occurrence_without_chinese_span(self):
+        module = self._module()
+        phrase = 'fell short of expectations'
+        en = 'The plan fell short of expectations.'
+        start = en.index(phrase)
+        article = {'article_id':'text1','sentences':[{
+            'id':'s01','en':en,'zh':'这项计划的结果比人们原先设想的更差。',
+            'vocab':[{'word':phrase,'level':7,'start':start,'end':start+len(phrase),'meaning':'未达到预期','study_gloss':'未达到预期'}],
+        }]}
+        mapping = {'version':1,'year':2027,'articles':{'text1':{}},'exceptions':[{
+            'kind':'study_gloss_only','article_id':'text1','sentence_id':'s01',
+            'en_start':start,'en_end':start+len(phrase),'en_text':phrase,
+            'study_gloss':'未达到预期','reason':'translation restructures the concept without a clean exact Chinese span',
+        }]}
+        report = module.validate_bilingual_highlights(mapping, [article])
+        self.assertEqual(report['errors'], [])
+        self.assertEqual(report['mapped_occurrences'], 0)
+        self.assertEqual(report['reviewed_exceptions'], 1)
+        self.assertEqual(report['study_gloss_only_occurrences'], 1)
+
+
 if __name__ == '__main__':
     unittest.main()

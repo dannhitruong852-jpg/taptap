@@ -72,11 +72,17 @@ def vocabulary_for(text: str, lexicon: dict) -> list[dict]:
     found = []
     for lemma, entry in lexicon.items():
         level, meaning, *variants = entry
+        study_gloss = str(meaning).strip()
+        if not study_gloss:
+            raise ValueError(f'{lemma}: missing Chinese study gloss')
         for surface in [lemma, *variants]:
-            for match in re.finditer(r'(?<![\w-])' + re.escape(surface) + r'(?![\w-])', text, flags=re.I):
+            for match in re.finditer(r'(?<![\\w-])' + re.escape(surface) + r'(?![\\w-])', text, flags=re.I):
                 found.append({
                     'word': match.group(), 'lemma': lemma, 'level': int(level),
-                    'meaning': meaning, 'start': match.start(), 'end': match.end(),
+                    'meaning': study_gloss,
+                    'study_gloss': study_gloss,
+                    'gloss_source': 'curated_lexicon',
+                    'start': match.start(), 'end': match.end(),
                 })
     return sorted(found, key=lambda x: (x['start'], -(x['end'] - x['start'])))
 

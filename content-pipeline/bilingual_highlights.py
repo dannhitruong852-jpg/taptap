@@ -45,6 +45,7 @@ def validate_bilingual_highlights(mapping: dict, article_docs: list[dict]) -> di
     required = _required_occurrences(article_docs)
     mapped_keys: set[tuple[str, str, int, int]] = set()
     exception_keys: set[tuple[str, str, int, int]] = set()
+    study_gloss_only_keys: set[tuple[str, str, int, int]] = set()
 
     articles = mapping.get("articles", {}) if isinstance(mapping, dict) else {}
     if not isinstance(articles, dict):
@@ -129,6 +130,17 @@ def validate_bilingual_highlights(mapping: dict, article_docs: list[dict]) -> di
         if key in exception_keys:
             errors.append(_error("duplicate_exception", article_id=article_id, sentence_id=sentence_id, en_start=start, en_end=end))
             continue
+        kind = str(exception.get("kind", "")).strip()
+        if kind == "study_gloss_only":
+            gloss = str(exception.get("study_gloss", "")).strip()
+            if not gloss:
+                errors.append(_error("study_gloss_only_missing_gloss", article_id=article_id, sentence_id=sentence_id, en_start=start, en_end=end))
+                continue
+            expected = str(required[key].get("study_gloss") or required[key].get("meaning") or "").strip()
+            if expected and gloss != expected:
+                errors.append(_error("study_gloss_mismatch", article_id=article_id, sentence_id=sentence_id, en_start=start, en_end=end))
+                continue
+            study_gloss_only_keys.add(key)
         exception_keys.add(key)
 
     covered = mapped_keys | exception_keys
@@ -152,5 +164,6 @@ def validate_bilingual_highlights(mapping: dict, article_docs: list[dict]) -> di
         "required_occurrences": len(required),
         "mapped_occurrences": len(mapped_keys),
         "reviewed_exceptions": len(exception_keys),
+        "study_gloss_only_occurrences": len(study_gloss_only_keys),
         "errors": errors,
     }

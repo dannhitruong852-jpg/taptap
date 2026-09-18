@@ -19,9 +19,17 @@ REVIEW_FLAGS={
 }
 LOW={'qualify','settle','example','report'}
 
+def study_gloss_for(vocab:dict)->str:
+    return str(vocab.get('study_gloss') or vocab.get('meaning') or '').strip()
+
 def build_mapping(year:int,docs:list[dict])->tuple[dict,dict]:
-    mapping={'year':year,'articles':{},'exceptions':[]}
-    required=mapped=0
+    mapping={
+        'year':year,
+        'articles':{},
+        'exceptions':[],
+        'study_gloss_policy':'separate-from-translation-alignment-v1',
+    }
+    required=mapped=study_only=0
     for doc in docs:
         amap={}
         for sentence in doc['sentences']:
@@ -30,42 +38,59 @@ def build_mapping(year:int,docs:list[dict])->tuple[dict,dict]:
                 if int(vocab.get('level',0))<6:
                     continue
                 required+=1
-                meaning=str(vocab.get('meaning',''))
-                pos=sentence['zh'].find(meaning)
+                gloss=study_gloss_for(vocab)
+                if not gloss:
+                    raise ValueError(f"{doc['article_id']}:{sentence['id']}: missing Chinese study gloss for {vocab['word']}")
+                pos=sentence['zh'].find(gloss)
                 if pos<0:
-                    raise ValueError(f"{doc['article_id']}:{sentence['id']}: reviewed Chinese meaning not found for {vocab['word']} -> {meaning}")
+                    mapping['exceptions'].append({
+                        'kind':'study_gloss_only',
+                        'article_id':doc['article_id'],
+                        'sentence_id':sentence['id'],
+                        'en_start':vocab['start'],
+                        'en_end':vocab['end'],
+                        'en_text':vocab['word'],
+                        'study_gloss':gloss,
+                        'reason':'no exact reviewed Chinese translation span; keep the Chinese gloss only in the vocabulary/phrase book',
+                    })
+                    study_only+=1
+                    continue
                 entries.append({
                     'en_start':vocab['start'],'en_end':vocab['end'],'en_text':vocab['word'],
-                    'zh_spans':[{'start':pos,'end':pos+len(meaning),'text':meaning}],
+                    'zh_spans':[{'start':pos,'end':pos+len(gloss),'text':gloss}],
                 })
                 mapped+=1
             if entries:
                 amap[sentence['id']]=entries
         mapping['articles'][doc['article_id']]=amap
-    report={'year':year,'required_occurrences':required,'mapped_occurrences':mapped,'reviewed_exceptions':0,'errors':[]}
-    return mapping,report
+    return mapping,{
+        'year':year,'required_occurrences':required,'mapped_occurrences':mapped,
+        'reviewed_exceptions':study_only,'study_gloss_only_occurrences':study_only,'errors':[],
+    }
 
 def validate(year:int,source:dict,docs:list[dict],mapping:dict)->dict:
     errors=[]
     by_id={d['article_id']:d for d in docs}
     if set(by_id)!= {'cloze','text1','text2','text3','text4','partb','translation'}:
         errors.append('article inventory mismatch')
-    req=mapped=0
+    req=mapped=excepted=0
     profiles=build_voice_profiles(source)['profiles']
+    exceptions=mapping.get('exceptions',[]) if isinstance(mapping,dict) else []
     for article in source['articles']:
         aid=article['id']; doc=by_id[aid]
         if len(article['rows'])!=len(doc['sentences']): errors.append(f'{aid}: sentence count mismatch')
         actor=str(article['actor']).zfill(2)
         if doc['primary_actor_id']!=actor or profiles[aid]['primary_actor_id']!=actor: errors.append(f'{aid}: actor mismatch')
-        labels=[]
-        outstanding={}
+        labels=[]; outstanding={}
         for idx,(row,sentence) in enumerate(zip(article['rows'],doc['sentences']),1):
             if row[1].replace('|','')!=sentence['en'] or row[2]!=sentence['zh']: errors.append(f'{aid}:s{idx:02d}: text mismatch')
             if ''.join(seg['text'] for seg in sentence['segments'])!=sentence['en']: errors.append(f'{aid}:s{idx:02d}: segment coverage')
             labels.append(sentence['discourse_function'])
             for v in sentence.get('vocab',[]):
                 if int(v.get('level',0))>=6:
-                    req+=1; outstanding[(sentence['id'],v['start'],v['end'])]=v
+                    req+=1
+                    if not study_gloss_for(v): errors.append(f"{aid}:{sentence['id']}: missing study gloss {v['word']}")
+                    outstanding[(sentence['id'],v['start'],v['end'])]=v
         for i in range(max(0,len(labels)-2)):
             if all(x in LOW for x in labels[i:i+3]): errors.append(f'{aid}: sentences {i+1}-{i+3} low-intensity density')
         for sid,entries in (mapping['articles'].get(aid) or {}).items():
@@ -78,8 +103,24 @@ def validate(year:int,source:dict,docs:list[dict],mapping:dict)->dict:
                 for z in e.get('zh_spans',[]):
                     if sentence['zh'][z['start']:z['end']]!=z['text']: errors.append(f'{aid}:{sid}: Chinese span mismatch')
                 if key in outstanding: del outstanding[key]; mapped+=1
+        for e in exceptions:
+            if str(e.get('article_id',''))!=aid: continue
+            sid=str(e.get('sentence_id','')); key=(sid,e.get('en_start'),e.get('en_end')); vocab=outstanding.get(key)
+            if vocab is None: errors.append(f'{aid}:{sid}: unexpected or duplicate alignment exception'); continue
+            if not str(e.get('reason','')).strip(): errors.append(f'{aid}:{sid}: alignment exception missing reason'); continue
+            if e.get('kind')=='study_gloss_only':
+                gloss=str(e.get('study_gloss','')).strip()
+                if not gloss: errors.append(f'{aid}:{sid}: study-gloss-only exception missing gloss'); continue
+                if gloss!=study_gloss_for(vocab): errors.append(f'{aid}:{sid}: study gloss mismatch for {vocab["word"]}'); continue
+            del outstanding[key]; excepted+=1
         for key,v in outstanding.items(): errors.append(f"{aid}:{key[0]}: unmapped {v['word']}")
-    return {'ok':not errors,'phase':'preflight','years':[year],'articles_checked':len(docs),'reviewed_candidates_checked':len(docs),'level6_vocab_occurrences_checked':req,'mapped_occurrences':mapped,'errors':errors}
+    return {
+        'ok':not errors,'phase':'preflight','years':[year],'articles_checked':len(docs),
+        'reviewed_candidates_checked':len(docs),'level6_vocab_occurrences_checked':req,
+        'mapped_occurrences':mapped,'reviewed_exceptions':excepted,
+        'study_gloss_only_occurrences':sum(1 for e in exceptions if e.get('kind')=='study_gloss_only'),
+        'errors':errors,
+    }
 
 def main():
     ap=argparse.ArgumentParser(); ap.add_argument('--year',type=int,required=True); args=ap.parse_args(); year=args.year

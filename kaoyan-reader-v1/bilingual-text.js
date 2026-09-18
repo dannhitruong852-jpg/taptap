@@ -11,7 +11,7 @@ export function renderEnglish(sentence) {
     const v=vocabulary.find(v=>start<v.end&&end>v.start);
     const classes=['read-token'];if(v)classes.push('vocab');
     let attrs=`class="${classes.join(' ')}" data-char-start="${start}" data-char-end="${end}"`;
-    if(v)attrs+=` data-pair="${v.start}:${v.end}" data-level="${v.level}" data-meaning="${escapeHtml(v.meaning||'')}"`;
+    if(v){const studyGloss=v.study_gloss||v.meaning||'';attrs+=` data-pair="${v.start}:${v.end}" data-level="${v.level}" data-meaning="${escapeHtml(studyGloss)}"`;}
     html+=`<span ${attrs}>${escapeHtml(match[0])}</span>`;
     at=end;
   }

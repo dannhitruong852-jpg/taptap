@@ -32,8 +32,19 @@ class BuildCuratedYearTests(unittest.TestCase):
         self.assertEqual(doc['primary_actor_id'], '02')
         self.assertEqual(doc['sentences'][0]['segments'][0]['audio_path'], './audio/2005/c-cloze/s01-01.opus')
         self.assertEqual(doc['sentences'][0]['vocab'][0]['level'], 7)
+        self.assertEqual(doc['sentences'][0]['vocab'][0]['study_gloss'], '被低估的')
+        self.assertEqual(doc['sentences'][0]['vocab'][0]['gloss_source'], 'curated_lexicon')
         self.assertEqual(''.join(x['text'] for x in doc['sentences'][0]['segments']), doc['sentences'][0]['en'])
         self.assertEqual(validate_article(doc), [])
+
+    def test_multiword_phrase_keeps_study_gloss_independent_of_translation_alignment(self):
+        text = 'The plan fell short of expectations.'
+        phrase = 'fell short of expectations'
+        vocab = build_curated_year.vocabulary_for(text, {'fall short of expectations': [7, '未达到预期', phrase]})
+        self.assertEqual(len(vocab), 1)
+        self.assertEqual(vocab[0]['word'], phrase)
+        self.assertEqual(vocab[0]['study_gloss'], '未达到预期')
+        self.assertEqual(vocab[0]['gloss_source'], 'curated_lexicon')
 
     def test_builds_year_voice_profiles_and_direction_map(self):
         source = {
