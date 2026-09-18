@@ -1,0 +1,56 @@
+name: Verify 2019-2024 final state once
+
+on:
+  push:
+    branches:
+      - c-mode-v2-2019-2024-production
+    paths:
+      - '.github/workflows/verify-2019-2024-final-once.yml'
+
+permissions:
+  contents: read
+
+env:
+  PYTHONPATH: .:voice-pipeline:content-pipeline
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run full core regression suite
+        run: |
+          python -m unittest discover -s production_v2/tests -v
+          python -m unittest content-pipeline/tests/test_build_curated_year.py -v
+          python -m unittest content-pipeline/tests/test_bilingual_highlights.py -v
+      - name: Rebuild and validate 2023 and 2024 from committed reviewed sources
+        run: |
+          for year in 2023 2024; do
+            python content-pipeline/build_curated_year.py --year "$year"
+            python - <<PY
+          import json
+          from pathlib import Path
+          year=$year
+          src=json.loads(Path('batch-manifests/2019-2024.json').read_text())
+          src['years']=[year]
+          src['expected_articles']={str(year):src['expected_articles'][str(year)]}
+          Path(f'/tmp/{year}-manifest.json').write_text(json.dumps(src,indent=2)+'\n')
+          PY
+            python -m production_v2.cli_validate_batch --manifest "/tmp/$year-manifest.json" --catalog kaoyan-reader-v1/content/catalog.json --reader-root kaoyan-reader-v1 --phase preflight --report "/tmp/$year-final-verify.json"
+            cat "/tmp/$year-final-verify.json"
+          done
+      - name: Assert committed evidence remains green
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          for year in (2019,2020,2021,2022,2023,2024):
+              p=Path(f'reports/production-v2/{year}-canary.json')
+              d=json.loads(p.read_text())
+              assert d['ok'] is True, (year,d)
+              assert d['errors'] == [], (year,d['errors'])
+              print(year, d['articles_checked'], d['reviewed_candidates_checked'], d['level6_vocab_occurrences_checked'], d['mapped_occurrences'], 'OK')
+          PY
