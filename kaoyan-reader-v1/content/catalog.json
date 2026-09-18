@@ -16,7 +16,8 @@
     2016,
     2017,
     2018,
-    2019
+    2019,
+    2020
   ],
   "default_article": "2002-text1",
   "articles": [
@@ -1000,6 +1001,69 @@
       "content": "./content/2019/c/translation.json",
       "manifest": "./audio/2019/v4/c-translation/manifest.json",
       "sentences": 9
+    },
+    {
+      "id": "2020-cloze",
+      "year": 2020,
+      "section_type": "cloze",
+      "title": "完形填空 · 有耐心的父母如何示范情绪控制",
+      "content": "./content/2020/c/cloze.json",
+      "manifest": "./audio/2020/v4/c-cloze/manifest.json",
+      "sentences": 21
+    },
+    {
+      "id": "2020-partb",
+      "year": 2020,
+      "section_type": "part_b",
+      "title": "阅读 Part B · 在办公室赢得所有人的五种方法",
+      "content": "./content/2020/c/partb.json",
+      "manifest": "./audio/2020/v4/c-partb/manifest.json",
+      "sentences": 32
+    },
+    {
+      "id": "2020-text1",
+      "year": 2020,
+      "section_type": "reading",
+      "title": "阅读 Text 1 · 老鼠会把社交机器人当成伙伴吗",
+      "content": "./content/2020/c/text1.json",
+      "manifest": "./audio/2020/v4/c-text1/manifest.json",
+      "sentences": 18
+    },
+    {
+      "id": "2020-text2",
+      "year": 2020,
+      "section_type": "reading",
+      "title": "阅读 Text 2 · 为什么顶级 CEO 薪酬持续上涨",
+      "content": "./content/2020/c/text2.json",
+      "manifest": "./audio/2020/v4/c-text2/manifest.json",
+      "sentences": 18
+    },
+    {
+      "id": "2020-text3",
+      "year": 2020,
+      "section_type": "reading",
+      "title": "阅读 Text 3 · 城市限行无法独自解决空气污染",
+      "content": "./content/2020/c/text3.json",
+      "manifest": "./audio/2020/v4/c-text3/manifest.json",
+      "sentences": 20
+    },
+    {
+      "id": "2020-text4",
+      "year": 2020,
+      "section_type": "reading",
+      "title": "阅读 Text 4 · Z 世代求职更看重确定性与稳定",
+      "content": "./content/2020/c/text4.json",
+      "manifest": "./audio/2020/v4/c-text4/manifest.json",
+      "sentences": 18
+    },
+    {
+      "id": "2020-translation",
+      "year": 2020,
+      "section_type": "translation",
+      "title": "翻译 · 失败取决于我们如何看待它",
+      "content": "./content/2020/c/translation.json",
+      "manifest": "./audio/2020/v4/c-translation/manifest.json",
+      "sentences": 10
     }
   ]
 }
