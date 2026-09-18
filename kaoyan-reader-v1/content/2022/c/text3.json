@@ -1,0 +1,537 @@
+{
+  "year": 2022,
+  "section_type": "reading",
+  "article_id": "text3",
+  "source_sha256": "6905f827ee76eb3d4165c7aaeb09af9387c60addbd5af8e959d5e8a9ddcfa7f8",
+  "source_pages": [
+    7,
+    8
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "13",
+  "article_context": "文章解释数字界面的“暗黑模式”：通过隐藏成本、误导流程、退出困难等设计影响用户决策，并呼吁企业内部协作、自律及监管共同减少数字欺骗。",
+  "article": {
+    "year": 2022,
+    "section": "text3",
+    "title": "阅读 Text 3 · 数字产品里的“暗黑模式”如何操纵用户",
+    "background": "文章解释数字界面的“暗黑模式”：通过隐藏成本、误导流程、退出困难等设计影响用户决策，并呼吁企业内部协作、自律及监管共同减少数字欺骗。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "We have all encountered them, in both our personal and professional lives.",
+      "zh": "无论私人生活还是工作中，我们都遇到过这类情况。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "We have all encountered them, in both our personal and professional lives.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text3/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Think about the times you felt tricked or frustrated by a membership or subscription that had a seamless sign-up process but was later difficult to cancel.",
+      "zh": "想想那些会员或订阅：注册时无比顺畅，取消时却异常困难，让你感到受骗或挫败。",
+      "vocab": [
+        {
+          "word": "seamless",
+          "lemma": "seamless",
+          "level": 7,
+          "meaning": "顺畅",
+          "start": 96,
+          "end": 104
+        }
+      ],
+      "discourse_function": "example",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Think about the times you felt tricked or frustrated by a membership or subscription that had a seamless sign-up process but was later difficult to cancel.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text3/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "Something that should be simple and transparent can be complicated, intentionally or unintentionally, in ways that impair consumer choice.",
+      "zh": "原本应当简单透明的事情，可能被有意或无意地复杂化，从而损害消费者的选择。",
+      "vocab": [
+        {
+          "word": "impair",
+          "lemma": "impair",
+          "level": 7,
+          "meaning": "损害",
+          "start": 115,
+          "end": 121
+        }
+      ],
+      "discourse_function": "warning",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Something that should be simple and transparent can be complicated, intentionally or unintentionally, in ways that impair consumer choice.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text3/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 1,
+      "en": "These are examples of dark patterns.",
+      "zh": "这些就是“暗黑模式”的例子。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "These are examples of dark patterns.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text3/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "First coined in 2010 by user experience expert Harry Brignull, “dark patterns” is a catch-all term for practices that manipulate user interfaces to influence the decision-making ability of users.",
+      "zh": "“暗黑模式”一词由用户体验专家哈里·布里格纳尔于2010年首次提出，是对一类做法的统称：它们通过操纵用户界面来影响用户的决策能力。",
+      "vocab": [
+        {
+          "word": "manipulate",
+          "lemma": "manipulate",
+          "level": 7,
+          "meaning": "操纵",
+          "start": 118,
+          "end": 128
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "First coined in 2010 by user experience expert Harry Brignull, “dark patterns” is a catch-all term for practices that manipulate user interfaces to influence the decision-making ability of users.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text3/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "Brignull identifies 12 types of common dark patterns, ranging from misdirection and hidden costs to “roach motel,” where a user experience seems easy and intuitive at the start, but turns difficult when the user tries to get out.",
+      "zh": "布里格纳尔总结了12种常见暗黑模式，从误导、隐藏成本到“蟑螂旅馆”式设计——进入时看似轻松直觉，想退出时却困难重重。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "Brignull identifies 12 types of common dark patterns, ranging from misdirection and hidden costs to “roach motel,” where a user experience seems easy and intuitive at the start, but turns difficult when the user tries to get out.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text3/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 3,
+      "en": "In a 2019 study of 53,000 product pages and 11,000 websites, researchers found that about one in 10 employs these design practices.",
+      "zh": "2019年一项覆盖5.3万个产品页面和1.1万个网站的研究发现，大约十分之一使用了这些设计手法。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "In a 2019 study of 53,000 product pages and 11,000 websites, researchers found that about one in 10 employs these design practices.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text3/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 3,
+      "en": "Though widely prevalent, the concept of dark patterns is still not well understood.",
+      "zh": "尽管暗黑模式十分普遍，人们对这一概念仍缺乏充分理解。",
+      "vocab": [
+        {
+          "word": "prevalent",
+          "lemma": "prevalent",
+          "level": 7,
+          "meaning": "普遍",
+          "start": 14,
+          "end": 23
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "Though widely prevalent, the concept of dark patterns is still not well understood.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text3/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 3,
+      "en": "Business and nonprofit leaders should be aware of dark patterns and try to avoid the gray areas they engender.",
+      "zh": "企业和非营利组织领导者应了解暗黑模式，并努力避免它们造成的灰色地带。",
+      "vocab": [],
+      "discourse_function": "encourage",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "Business and nonprofit leaders should be aware of dark patterns and try to avoid the gray areas they engender.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text3/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 4,
+      "en": "Where is the line between ethical, persuasive design and dark patterns?",
+      "zh": "合乎伦理的说服性设计与暗黑模式之间，界线究竟在哪里？",
+      "vocab": [],
+      "discourse_function": "ask",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "Where is the line between ethical, persuasive design and dark patterns?",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text3/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 4,
+      "en": "Businesses should engage in conversations with IT, compliance, risk, and legal teams to review their privacy policy, and include in the discussion the customer/user experience designers and coders responsible for the company's user interface, as well as the marketers and advertisers responsible for sign-ups, checkout baskets, pricing, and promotions.",
+      "zh": "企业应与IT、合规、风险和法律团队沟通，审查隐私政策；同时还应让负责用户界面的客户/用户体验设计师和程序员，以及负责注册、购物车、定价和促销的营销与广告人员加入讨论。",
+      "vocab": [],
+      "discourse_function": "encourage",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "Businesses should engage in conversations with IT, compliance, risk, and legal teams to review their privacy policy, and include in the discussion the customer/user experience designers and coders responsible for the company's user interface, as well as the marketers and advertisers responsible for sign-ups, checkout baskets, pricing, and promotions.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text3/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 4,
+      "en": "Any or all these teams can play a role in creating or avoiding “digital deception.”",
+      "zh": "这些团队中的任何一个或全部，都可能参与制造或避免“数字欺骗”。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "Any or all these teams can play a role in creating or avoiding “digital deception.”",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text3/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 5,
+      "en": "Lawmakers and regulators are slowly starting to address the ambiguity around dark patterns, most recently at the state level.",
+      "zh": "立法者和监管者正逐步处理暗黑模式周围的模糊性，最近的行动主要发生在州一级。",
+      "vocab": [
+        {
+          "word": "ambiguity",
+          "lemma": "ambiguity",
+          "level": 7,
+          "meaning": "模糊性",
+          "start": 60,
+          "end": 69
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "Lawmakers and regulators are slowly starting to address the ambiguity around dark patterns, most recently at the state level.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text3/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 5,
+      "en": "In March, the California Attorney General announced the approval of additional regulations under the California Consumer Privacy Act (CCPA) that “ensure that consumers will not be confused or misled when seeking to exercise their data privacy rights.”",
+      "zh": "3月，加州总检察长宣布批准《加州消费者隐私法》下的补充规定，以“确保消费者在行使数据隐私权时不会受到迷惑或误导”。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "In March, the California Attorney General announced the approval of additional regulations under the California Consumer Privacy Act (CCPA) that “ensure that consumers will not be confused or misled when seeking to exercise their data privacy rights.”",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text3/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 5,
+      "en": "The regulations aim to ban dark patterns—this means prohibiting companies from using confusing language or unnecessary steps such as forcing them to click through multiple screens or listen to reasons why they shouldn't opt out.",
+      "zh": "这些规定旨在禁止暗黑模式，也就是禁止企业使用令人困惑的语言或不必要步骤，比如强迫消费者点击多个页面，或听取为何不应退出的理由。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "The regulations aim to ban dark patterns—this means prohibiting companies from using confusing language or unnecessary steps such as forcing them to click through multiple screens or listen to reasons why they shouldn't opt out.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text3/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 6,
+      "en": "As more states consider promulgating additional regulations, there is a need for greater accountability from within the business community.",
+      "zh": "随着更多州考虑制定补充规定，商业界内部需要承担更大的问责责任。",
+      "vocab": [
+        {
+          "word": "accountability",
+          "lemma": "accountability",
+          "level": 7,
+          "meaning": "问责",
+          "start": 89,
+          "end": 103
+        }
+      ],
+      "discourse_function": "warning",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "As more states consider promulgating additional regulations, there is a need for greater accountability from within the business community.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text3/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 6,
+      "en": "Dark patterns also can be addressed on a self-regulatory basis, but only if organizations hold themselves accountable, not just to legal requirements but also to industry best practices and standards.",
+      "zh": "暗黑模式也可以通过行业自律来应对，但前提是组织真正对自己负责，不只满足法律要求，也遵守行业最佳实践和标准。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "Dark patterns also can be addressed on a self-regulatory basis, but only if organizations hold themselves accountable, not just to legal requirements but also to industry best practices and standards.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text3/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}
