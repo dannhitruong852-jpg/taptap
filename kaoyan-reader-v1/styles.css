@@ -103,6 +103,7 @@ h1 {
 }
 .sentence-card.is-active .sentence-number { background:#2d2a23; color:#fff; }
 .en {
+  -webkit-user-select:text; user-select:text;
   font-family: ui-serif, Georgia, "Times New Roman", serif;
   font-size:16px; line-height:1.46; letter-spacing:0; color:#282722;
 }
