@@ -1,0 +1,789 @@
+{
+  "year": 2026,
+  "section_type": "part_b",
+  "article_id": "partb",
+  "source_sha256": "28d1cd118a3744ff33a5f8ecd47fb733cf6127845a9fb31c81087288eff339a8",
+  "source_pages": [
+    12,
+    13
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "04",
+  "article_context": "文章围绕全球森林恢复中的现实瓶颈展开：种子和苗木供应、亚洲树种的结实周期、气候变化造成的新病虫害风险、土壤条件以及不同利益相关者的目标差异。结论强调，恢复工作既关乎森林，也关乎真正参与和管理土地的人。",
+  "article": {
+    "year": 2026,
+    "section": "partb",
+    "title": "新题型 Part B · 森林恢复不仅是种树，更是人与生态的协同",
+    "background": "文章围绕全球森林恢复中的现实瓶颈展开：种子和苗木供应、亚洲树种的结实周期、气候变化造成的新病虫害风险、土壤条件以及不同利益相关者的目标差异。结论强调，恢复工作既关乎森林，也关乎真正参与和管理土地的人。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "In an effort to support restoration programmes, specialists are developing supplies of seeds and seedlings, maintaining gene banks and sequencing the genomes of indigenous trees and other crops.",
+      "zh": "为了支持恢复项目，专家正在扩大种子和幼苗供应、维护基因库，并对本土的树木及其他作物进行基因组测序。",
+      "vocab": [
+        {
+          "word": "indigenous",
+          "lemma": "indigenous",
+          "level": 7,
+          "meaning": "本土的",
+          "start": 161,
+          "end": 171
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "In an effort to support restoration programmes, specialists are developing supplies of seeds and seedlings, maintaining gene banks and sequencing the genomes of indigenous trees and other crops.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-partb/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Their work deals with one of the problems that could block major restoration efforts in different parts of the world.",
+      "zh": "他们的工作针对的是一个可能阻碍世界不同地区大规模恢复行动的问题。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Their work deals with one of the problems that could block major restoration efforts in different parts of the world.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-partb/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 2,
+      "en": "“Where's the planting material going to come from?",
+      "zh": "“种植材料要从哪里来？",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "“Where's the planting material going to come from?",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-partb/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "That's one big bottleneck,” says genetic-resources specialist Rami Jamnadass.",
+      "zh": "遗传资源专家Rami Jamnadass说：“这是一个巨大的瓶颈。”",
+      "vocab": [
+        {
+          "word": "bottleneck",
+          "lemma": "bottleneck",
+          "level": 7,
+          "meaning": "瓶颈",
+          "start": 15,
+          "end": 25
+        }
+      ],
+      "discourse_function": "evaluation_quote",
+      "prosody_focus": "",
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "That's one big bottleneck,” says genetic-resources specialist Rami Jamnadass.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "serious",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-partb/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 3,
+      "en": "Asia is arguably the region most neglected by global efforts to increase diversity in restoration and to study native species.",
+      "zh": "在全球提高恢复多样性和研究本地物种的努力中，亚洲可以说是最被忽视的地区。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Asia is arguably the region most neglected by global efforts to increase diversity in restoration and to study native species.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-partb/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 3,
+      "en": "Christopher Kettle, Biodiversity International's director for forest genetic resources and restoration in Rome, says that the need for infrastructure—things such as mechanisms for collecting and storing seeds, and nurseries to raise seedlings—might be most desperate here because many trees are ‘masting’ species, which don’t produce seeds every year.",
+      "zh": "国际生物多样性组织驻罗马的森林遗传资源与恢复主管Christopher Kettle表示，这里对基础设施的需求可能最为迫切，包括收集和储存种子的机制以及培育幼苗的苗圃，因为许多树木属于不会每年结籽的“丰歉年结实”物种。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "Christopher Kettle, Biodiversity International's director for forest genetic resources and restoration in Rome, says that the need for infrastructure—things such as mechanisms for collecting and storing seeds, and nurseries to raise seedlings—might be most desperate here because many trees are ‘masting’ species, which don’t produce seeds every year.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-partb/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 3,
+      "en": "People need to be ready.",
+      "zh": "人们必须提前做好准备。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "People need to be ready.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-partb/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 3,
+      "en": "“Otherwise, you miss the boat, you lose all the seed and you’ve got to wait another seven years,” says Ketle.",
+      "zh": "Ketle说：“否则你就会错过时机，种子全部失去，然后还得再等七年。”",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "“Otherwise, you miss the boat, you lose all the seed and you’ve got to wait another seven years,” says Ketle.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-partb/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 3,
+      "en": "“This is a really, really critical issue for restoration in Southeast Asia, because many of the most important timber species and tree species—the ones that will lock up the most carbon—they're all masting species.”",
+      "zh": "“这对东南亚的恢复工作来说确实是一个极其关键的问题，因为许多最重要的木材树种和其他树种——也就是能固定最多碳的那些树种——全都是‘丰歉年结实’物种。”",
+      "vocab": [],
+      "discourse_function": "evaluation_quote",
+      "prosody_focus": "",
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "“This is a really, really critical issue for restoration in Southeast Asia, because many of the most important timber species and tree species—the ones that will lock up the most carbon—they're all masting species.”",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "serious",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-partb/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 4,
+      "en": "Climate change is a driving factor in the push to restore forests, but it also raises questions, such as where trees can thrive in the future.",
+      "zh": "气候变化推动着森林恢复行动，但同时也提出了新的问题，例如未来哪些地方适合树木生长。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "Climate change is a driving factor in the push to restore forests, but it also raises questions, such as where trees can thrive in the future.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-partb/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 4,
+      "en": "Climate change is also expected to alter relationships between trees, insects, diseases and other forest species.",
+      "zh": "预计气候变化还会改变树木、昆虫、疾病与其他森林物种之间的关系。",
+      "vocab": [],
+      "discourse_function": "warning",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "Climate change is also expected to alter relationships between trees, insects, diseases and other forest species.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-partb/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 4,
+      "en": "“Insects that today are a minor problem may become a major problem if they can produce three or four generations in a year,” says forest ecologist John Stanturf.",
+      "zh": "森林生态学家John Stanturf说：“今天还是小问题的昆虫，如果一年能繁殖三四代，可能就会变成大问题。”",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "“Insects that today are a minor problem may become a major problem if they can produce three or four generations in a year,” says forest ecologist John Stanturf.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-partb/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 4,
+      "en": "This remains a significant knowledge gap.",
+      "zh": "这仍是一个重大的知识空白。",
+      "vocab": [],
+      "discourse_function": "warning",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "This remains a significant knowledge gap.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-partb/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 4,
+      "en": "“We know enough to know that this is a concerm, but we don’t know enough about how to respond to it yet.",
+      "zh": "“我们知道得已经足以确认这是一个值得担忧的问题，但对于该如何应对，目前知道得还不够。",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "“We know enough to know that this is a concerm, but we don’t know enough about how to respond to it yet.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-partb/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 4,
+      "en": "Thats a great area to be doing research.”",
+      "zh": "这是非常值得开展研究的领域。”",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "Thats a great area to be doing research.”",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-partb/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 4,
+      "en": "So is soil, says Cindy Prescot, a forest ecologist at the University of British Columbia in Vancouver.",
+      "zh": "温哥华不列颠哥伦比亚大学森林生态学家Cindy Prescot表示，土壤也是如此。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "So is soil, says Cindy Prescot, a forest ecologist at the University of British Columbia in Vancouver.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-partb/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 4,
+      "en": "“If you don’t look at the soil at the start, you can spend a lot of money and time putting in species that aren't going to survive there.”",
+      "zh": "“如果一开始不考察土壤，你可能会花费大量金钱和时间去种植根本无法在那里存活的物种。”",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "“If you don’t look at the soil at the start, you can spend a lot of money and time putting in species that aren't going to survive there.”",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-partb/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 5,
+      "en": "With so much research left to do, leaders in the field have been doing some soul-searching, and acknowledging that restoration can be motivated by—and designed to meet—different needs.",
+      "zh": "由于还有大量研究工作尚待完成，该领域的领军者开始反思，并承认恢复行动可能源于不同动机，也可能被设计来满足不同需求。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "With so much research left to do, leaders in the field have been doing some soul-searching, and acknowledging that restoration can be motivated by—and designed to meet—different needs.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-partb/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 5,
+      "en": "“When you talk about conservation or restoration, the first question has to be restoration by whom, for whom?” says Daniel Janzen, a biologist at the University of Pennsylvania.",
+      "zh": "宾夕法尼亚大学生物学家Daniel Janzen说：“当你谈论保护或恢复时，第一个问题必须是：由谁来恢复，又是为谁恢复？”",
+      "vocab": [],
+      "discourse_function": "ask",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "“When you talk about conservation or restoration, the first question has to be restoration by whom, for whom?” says Daniel Janzen, a biologist at the University of Pennsylvania.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-partb/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "paragraph": 6,
+      "en": "The question can have more than one answer.",
+      "zh": "这个问题可能不止一个答案。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": "",
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s20-01",
+          "text": "The question can have more than one answer.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-partb/s20-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "paragraph": 6,
+      "en": "Much of the global funding for restoration is dedicated to developing it as a tool to mitigate climate change, notes restoration ecologist Pedro Brancalion.",
+      "zh": "恢复生态学家Pedro Brancalion指出，全球很大一部分恢复资金用于把恢复行动发展成缓解气候变化的工具。",
+      "vocab": [
+        {
+          "word": "mitigate",
+          "lemma": "mitigate",
+          "level": 7,
+          "meaning": "缓解",
+          "start": 86,
+          "end": 94
+        }
+      ],
+      "discourse_function": "report",
+      "prosody_focus": "",
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s21-01",
+          "text": "Much of the global funding for restoration is dedicated to developing it as a tool to mitigate climate change, notes restoration ecologist Pedro Brancalion.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-partb/s21-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "paragraph": 6,
+      "en": "“But if you ask a farmer in Brazil if he or she is concerned about climate change, they would say, ‘No, I am concerned about water,’ ” he says.",
+      "zh": "他说：“但如果你问一位巴西农民是否担心气候变化，对方会说：‘不，我担心的是水。’”",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s22-01",
+          "text": "“But if you ask a farmer in Brazil if he or she is concerned about climate change, they would say, ‘No, I am concerned about water,’ ” he says.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-partb/s22-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "paragraph": 6,
+      "en": "Their interests as stewards of the land need to be better integrated with those who have the money to support restoration.",
+      "zh": "这些土地守护者的利益，需要与那些拥有资金、能够支持恢复行动的人更好地结合起来。",
+      "vocab": [
+        {
+          "word": "stewards",
+          "lemma": "stewards",
+          "level": 7,
+          "meaning": "守护者",
+          "start": 19,
+          "end": 27
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s23-01",
+          "text": "Their interests as stewards of the land need to be better integrated with those who have the money to support restoration.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-partb/s23-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "paragraph": 7,
+      "en": "That has been the strongest lesson of all for forest ecologist Robin Chazdon.",
+      "zh": "对森林生态学家Robin Chazdon而言，这正是所有经验中最深刻的一条。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s24-01",
+          "text": "That has been the strongest lesson of all for forest ecologist Robin Chazdon.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-partb/s24-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "paragraph": 7,
+      "en": "Restoration is about more than what gets planted in the ground, she says.",
+      "zh": "她说，恢复工作所关心的远不只是地里种下了什么。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s25-01",
+          "text": "Restoration is about more than what gets planted in the ground, she says.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-partb/s25-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "paragraph": 7,
+      "en": "“Yes, its about forests, but it’s really about people.",
+      "zh": "“没错，它关乎森林，但真正关乎的是人。",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s26-01",
+          "text": "“Yes, its about forests, but it’s really about people.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-partb/s26-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "paragraph": 7,
+      "en": "They are the agents of restoration.”",
+      "zh": "人，才是恢复行动真正的主体。”",
+      "vocab": [],
+      "discourse_function": "evaluation_quote",
+      "prosody_focus": "",
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s27-01",
+          "text": "They are the agents of restoration.”",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "serious",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-partb/s27-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

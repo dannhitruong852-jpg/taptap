@@ -22,7 +22,8 @@
     2022,
     2023,
     2024,
-    2025
+    2025,
+    2026
   ],
   "default_article": "2002-text1",
   "articles": [
@@ -1384,6 +1385,69 @@
       "content": "./content/2025/c/translation.json",
       "manifest": "./audio/2025/v4/c-translation/manifest.json",
       "sentences": 10
+    },
+    {
+      "id": "2026-cloze",
+      "year": 2026,
+      "section_type": "cloze",
+      "title": "完形填空 · 别把别人的行为都理解成针对自己",
+      "content": "./content/2026/c/cloze.json",
+      "manifest": "./audio/2026/v4/c-cloze/manifest.json",
+      "sentences": 18
+    },
+    {
+      "id": "2026-partb",
+      "year": 2026,
+      "section_type": "part_b",
+      "title": "新题型 Part B · 森林恢复不仅是种树，更是人与生态的协同",
+      "content": "./content/2026/c/partb.json",
+      "manifest": "./audio/2026/v4/c-partb/manifest.json",
+      "sentences": 27
+    },
+    {
+      "id": "2026-text1",
+      "year": 2026,
+      "section_type": "reading",
+      "title": "阅读 Text 1 · 公共图书馆远比刻板印象更有活力",
+      "content": "./content/2026/c/text1.json",
+      "manifest": "./audio/2026/v4/c-text1/manifest.json",
+      "sentences": 21
+    },
+    {
+      "id": "2026-text2",
+      "year": 2026,
+      "section_type": "reading",
+      "title": "阅读 Text 2 · 把 AI 当朋友时也要守住数据边界",
+      "content": "./content/2026/c/text2.json",
+      "manifest": "./audio/2026/v4/c-text2/manifest.json",
+      "sentences": 20
+    },
+    {
+      "id": "2026-text3",
+      "year": 2026,
+      "section_type": "reading",
+      "title": "阅读 Text 3 · 意大利高铁扩容升级前先承受阵痛",
+      "content": "./content/2026/c/text3.json",
+      "manifest": "./audio/2026/v4/c-text3/manifest.json",
+      "sentences": 18
+    },
+    {
+      "id": "2026-text4",
+      "year": 2026,
+      "section_type": "reading",
+      "title": "阅读 Text 4 · 芝加哥街头节庆需要社区共同买单",
+      "content": "./content/2026/c/text4.json",
+      "manifest": "./audio/2026/v4/c-text4/manifest.json",
+      "sentences": 18
+    },
+    {
+      "id": "2026-translation",
+      "year": 2026,
+      "section_type": "translation",
+      "title": "翻译 · 穿着如何影响心理、自我表达与自信",
+      "content": "./content/2026/c/translation.json",
+      "manifest": "./audio/2026/v4/c-translation/manifest.json",
+      "sentences": 9
     }
   ]
 }

@@ -1,0 +1,555 @@
+{
+  "year": 2026,
+  "section_type": "reading",
+  "article_id": "text3",
+  "source_sha256": "28d1cd118a3744ff33a5f8ecd47fb733cf6127845a9fb31c81087288eff339a8",
+  "source_pages": [
+    8,
+    9
+  ],
+  "accent": "en-GB",
+  "primary_actor_id": "13",
+  "article_context": "文章解释意大利高铁近期频繁延误的双重原因：大规模基础设施升级施工，以及线路容量不足、快慢车混跑。未来通过高铁线路分离、高密度技术和卫星信号系统，运能与运行流畅性有望提升。",
+  "article": {
+    "year": 2026,
+    "section": "text3",
+    "title": "阅读 Text 3 · 意大利高铁扩容升级前先承受阵痛",
+    "background": "文章解释意大利高铁近期频繁延误的双重原因：大规模基础设施升级施工，以及线路容量不足、快慢车混跑。未来通过高铁线路分离、高密度技术和卫星信号系统，运能与运行流畅性有望提升。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "Since the 2008 launch of the high-speed rail network between Rome and Milan, trains have become the preferred means of travel across Italy for locals and tourists alike.",
+      "zh": "自2008年罗马与米兰之间的高速铁路网开通以来，火车已经成为意大利本地人和游客在全国旅行时的首选交通方式。",
+      "vocab": [],
+      "discourse_function": "sequence",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "Since the 2008 launch of the high-speed rail network between Rome and Milan, trains have become the preferred means of travel across Italy for locals and tourists alike.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text3/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Fast trains can cover the 500km between the two cities in three hours.",
+      "zh": "高速列车三小时即可跑完两座城市之间500公里的路程。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Fast trains can cover the 500km between the two cities in three hours.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text3/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "The network also connects Naples, Bologna, Florence and Turin.",
+      "zh": "这张铁路网还连接那不勒斯、博洛尼亚、佛罗伦萨和都灵。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "The network also connects Naples, Bologna, Florence and Turin.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text3/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 1,
+      "en": "In many cases, it is the best option—in terms of travel time and cost—for both leisure and business travellers.",
+      "zh": "在很多情况下，无论对休闲旅客还是商务旅客，从时间和成本来看，高铁都是最佳选择。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "In many cases, it is the best option—in terms of travel time and cost—for both leisure and business travellers.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text3/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "This is why the recent severe delays caused by numerous maintenance works have thrown the rail industry into chaos at a time when most people head on holiday, which matters for business in a country where tourism accounts for 10 percent of GDP.",
+      "zh": "正因如此，近期大量维护工程造成的严重延误才会在多数人出门度假之际让铁路行业陷入混乱；而在一个旅游业占GDP 10%的国家，这对商业影响尤其重大。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "This is why the recent severe delays caused by numerous maintenance works have thrown the rail industry into chaos at a time when most people head on holiday, which matters for business in a country where tourism accounts for 10 percent of GDP.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text3/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 3,
+      "en": "Disruptions have become increasingly frequent with train delays now a fixture in Italian media coverage.",
+      "zh": "铁路中断越来越频繁，列车延误如今已经成为意大利媒体报道中的常见内容。",
+      "vocab": [],
+      "discourse_function": "warning",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "Disruptions have become increasingly frequent with train delays now a fixture in Italian media coverage.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text3/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 3,
+      "en": "Ferrovie dello Stato Italiane, the publicly controlled group that owns train operator Trenitalia and the national train network RFI, said 23 percent of all high-speed trains it operated were late in 2023.",
+      "zh": "拥有列车运营商Trenitalia和国家铁路网RFI的国有控股集团Ferrovie dello Stato Italiane表示，2023年其运营的所有高速列车中有23%发生延误。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "Ferrovie dello Stato Italiane, the publicly controlled group that owns train operator Trenitalia and the national train network RFI, said 23 percent of all high-speed trains it operated were late in 2023.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text3/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 4,
+      "en": "The huge improvements in Italy's obsolete infrastructure partly explained the disruption, said Ferrovie.",
+      "zh": "Ferrovie表示，对意大利陈旧的基础设施进行大规模升级，是造成中断的部分原因。",
+      "vocab": [
+        {
+          "word": "obsolete",
+          "lemma": "obsolete",
+          "level": 6,
+          "meaning": "陈旧的",
+          "start": 33,
+          "end": 41
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "The huge improvements in Italy's obsolete infrastructure partly explained the disruption, said Ferrovie.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text3/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 4,
+      "en": "RFI, the network operator, is the single largest European recovery fund beneficiary with planned investments of €24bn by 2026.",
+      "zh": "作为铁路网运营方，RFI是欧洲复苏基金最大的单一受益者，计划到2026年投入240亿欧元。",
+      "vocab": [
+        {
+          "word": "beneficiary",
+          "lemma": "beneficiary",
+          "level": 7,
+          "meaning": "受益者",
+          "start": 72,
+          "end": 83
+        }
+      ],
+      "discourse_function": "statistic",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "RFI, the network operator, is the single largest European recovery fund beneficiary with planned investments of €24bn by 2026.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text3/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 4,
+      "en": "Ferrovie will invest a total of €124bn in infrastructure over the next 10 years.",
+      "zh": "未来十年，Ferrovie将在基础设施上总计投资1,240亿欧元。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "Ferrovie will invest a total of €124bn in infrastructure over the next 10 years.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text3/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 5,
+      "en": "But lack of capacity is another problem.",
+      "zh": "但运力不足是另一个问题。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "But lack of capacity is another problem.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text3/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 5,
+      "en": "Transport economist Andrea Giuricin said the planned investments would bring improvements but disruptions in the meantime were inevitable.",
+      "zh": "交通经济学家Andrea Giuricin表示，计划中的投资会带来改善，但在此期间发生中断是不可避免的。",
+      "vocab": [
+        {
+          "word": "inevitable",
+          "lemma": "inevitable",
+          "level": 6,
+          "meaning": "不可避免的",
+          "start": 127,
+          "end": 137
+        }
+      ],
+      "discourse_function": "qualify",
+      "prosody_focus": "",
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "Transport economist Andrea Giuricin said the planned investments would bring improvements but disruptions in the meantime were inevitable.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text3/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 5,
+      "en": "“We have a mixed system, there is no spare capacity and as soon as there's a hiccup on the line, the situation becomes highly complex,” he said.",
+      "zh": "他说：“我们采用的是混合运行系统，没有多余运力；线路上只要出现一点小故障，局面就会变得极其复杂。”",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "“We have a mixed system, there is no spare capacity and as soon as there's a hiccup on the line, the situation becomes highly complex,” he said.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text3/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 5,
+      "en": "A mixed system means that high-speed trains must travel on the regular tracks on certain routes or when passing through large cities.",
+      "zh": "所谓混合运行系统，是指高速列车在某些线路或穿过大城市时必须与普通列车共用常规轨道。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "A mixed system means that high-speed trains must travel on the regular tracks on certain routes or when passing through large cities.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text3/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 5,
+      "en": "If there's congestion or, for example, a local train breaks down, the entire high-speed network is affected.",
+      "zh": "一旦发生拥堵，或者例如某趟地方列车故障，整个高铁网络都会受到影响。",
+      "vocab": [],
+      "discourse_function": "example",
+      "prosody_focus": "",
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "If there's congestion or, for example, a local train breaks down, the entire high-speed network is affected.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text3/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 6,
+      "en": "One of the most important changes the upgrades will bring is the segregation of the high-speed line from the regular one in certain urban centres through the construction of underground rail links.",
+      "zh": "这些升级将带来的一个最重要变化，是通过建设地下铁路连接线，在部分城市中心实现高速线路与普通线路的分离。",
+      "vocab": [
+        {
+          "word": "segregation",
+          "lemma": "segregation",
+          "level": 7,
+          "meaning": "分离",
+          "start": 65,
+          "end": 76
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "One of the most important changes the upgrades will bring is the segregation of the high-speed line from the regular one in certain urban centres through the construction of underground rail links.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text3/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 6,
+      "en": "Improvements will also come from the high-density technology and satellite signalling that RFI has been investing in for years, say experts.",
+      "zh": "专家表示，RFI多年来持续投资的高密度技术和卫星信号系统也会带来改善。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "Improvements will also come from the high-density technology and satellite signalling that RFI has been investing in for years, say experts.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text3/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 6,
+      "en": "It will allow for a reduction of the distance between high-speed trains travelling on the same line at any given time, which should mean a significant increase in capacity and traffic fluidity, according to Giuricin.",
+      "zh": "Giuricin称，这将允许缩短同一线路上同时运行的高速列车之间的距离，从而显著提升运力和交通流畅性。",
+      "vocab": [
+        {
+          "word": "fluidity",
+          "lemma": "fluidity",
+          "level": 7,
+          "meaning": "流畅性",
+          "start": 184,
+          "end": 192
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "It will allow for a reduction of the distance between high-speed trains travelling on the same line at any given time, which should mean a significant increase in capacity and traffic fluidity, according to Giuricin.",
+          "speaker_role": "narrator",
+          "actor_id": "13",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text3/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}
