@@ -21,3 +21,19 @@ test('multi-word vocabulary renders as one continuous range that contains its sp
   assert.equal(html.replace(/<[^>]+>/g,''),en);
   assert.doesNotMatch(html,/class="read-token vocab"/);
 });
+
+test('saved phrase highlight renders as one continuous range including spaces', () => {
+  const en='Dr. Cochran suggests that the intelligence and diseases are intimately linked.';
+  const phrase='suggests that the intelligence and diseases are intimately linked';
+  const start=en.indexOf(phrase),end=start+phrase.length;
+  const vocab=[
+    {word:'suggests',level:6,start,end:start+8,meaning:'认为'},
+    {word:'intelligence',level:6,start:en.indexOf('intelligence'),end:en.indexOf('intelligence')+12,meaning:'智力'},
+    {word:'diseases',level:6,start:en.indexOf('diseases'),end:en.indexOf('diseases')+8,meaning:'疾病'}
+  ];
+  const html=renderEnglish({en,vocab},[{start,end}]);
+  assert.equal((html.match(/class="phrase-mark-en"/g)||[]).length,1);
+  assert.match(html,/class="phrase-mark-en"[^>]*>.*suggests<\/span> <span class="read-token"[^>]*>that<\/span> <span class="read-token"[^>]*>the<\/span>.*intelligence.* and .*diseases.* are .*intimately.* linked<\/span>/);
+  assert.doesNotMatch(html,/class="read-token phrase-mark-en"/);
+  assert.equal(html.replace(/<[^>]+>/g,''),en);
+});

@@ -28,16 +28,45 @@ function continuousVocabularyRanges(sentence) {
   return selected;
 }
 
-export function renderEnglish(sentence) {
-  const ranges=continuousVocabularyRanges(sentence);
-  let html='',at=0;
+function renderEnglishSlice(sentence,start=0,end=sentence.en.length) {
+  const ranges=continuousVocabularyRanges(sentence).filter(v=>v.start<end&&v.end>start);
+  let html='',at=start;
   for(const vocab of ranges){
-    html+=renderTokenSlice(sentence.en.slice(at,vocab.start),at);
+    const left=Math.max(start,vocab.start),right=Math.min(end,vocab.end);
+    if(left<at||right<=left)continue;
+    html+=renderTokenSlice(sentence.en.slice(at,left),at);
     const studyGloss=vocab.study_gloss||vocab.meaning||'';
-    html+=`<span class="vocab vocab-range" data-pair="${vocab.start}:${vocab.end}" data-level="${vocab.level}" data-meaning="${escapeHtml(studyGloss)}">${renderTokenSlice(sentence.en.slice(vocab.start,vocab.end),vocab.start)}</span>`;
-    at=vocab.end;
+    html+=`<span class="vocab vocab-range" data-pair="${vocab.start}:${vocab.end}" data-level="${vocab.level}" data-meaning="${escapeHtml(studyGloss)}">${renderTokenSlice(sentence.en.slice(left,right),left)}</span>`;
+    at=right;
   }
-  return html+renderTokenSlice(sentence.en.slice(at),at);
+  return html+renderTokenSlice(sentence.en.slice(at,end),at);
+}
+
+function continuousPhraseRanges(sentence,ranges=[]) {
+  const normalized=(ranges||[]).map(range=>({
+    start:Math.max(0,Number(range.start)),
+    end:Math.min(sentence.en.length,Number(range.end))
+  })).filter(range=>Number.isFinite(range.start)&&Number.isFinite(range.end)&&range.end>range.start)
+    .sort((x,y)=>x.start-y.start||x.end-y.end);
+  const merged=[];
+  for(const range of normalized){
+    const last=merged.at(-1);
+    if(last&&range.start<=last.end)last.end=Math.max(last.end,range.end);
+    else merged.push({...range});
+  }
+  return merged;
+}
+
+export function renderEnglish(sentence,phraseRanges=[]) {
+  const ranges=continuousPhraseRanges(sentence,phraseRanges);
+  if(!ranges.length)return renderEnglishSlice(sentence);
+  let html='',at=0;
+  for(const range of ranges){
+    html+=renderEnglishSlice(sentence,at,range.start);
+    html+=`<span class="phrase-mark-en" data-phrase-start="${range.start}" data-phrase-end="${range.end}">${renderEnglishSlice(sentence,range.start,range.end)}</span>`;
+    at=range.end;
+  }
+  return html+renderEnglishSlice(sentence,at,sentence.en.length);
 }
 
 export function validChineseRanges(sentence, pairs = []) {

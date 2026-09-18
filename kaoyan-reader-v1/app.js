@@ -7,7 +7,7 @@ import { createHybridAudioPlayer } from './hybrid-audio-player.js';
 import { measureLatency } from './latency-metrics.js';
 import { sentenceProgress, isExplicitLegacyTimingVersion } from './progress.js';
 import { readStateAtTime, activeChineseGroups } from './time-index.js';
-import { renderEnglish, renderChinese } from './bilingual-text.js?v=phrase-study-continuous-20260918-v1';
+import { renderEnglish, renderChinese } from './bilingual-text.js?v=phrase-study-continuous-20260918-v2';
 import { createTapGuard, createTapArbiter, attachSpeedControl } from './reader-controls.js?v=phrase-study-20260918-v2';
 import { resolvePlayerScroll } from './scroll-behavior.js';
 import { pickArticle, selectArticles, adjacentArticle } from './catalog.js';
@@ -95,10 +95,8 @@ function overlapsRange(start,end,rangeStart,rangeEnd){return end>rangeStart&&sta
 function applySentenceInlineHighlights(card,index){
  const sentence=sentences[index];if(!card||!sentence)return;
  const entries=inlineHighlightStore.list(currentEntry?.id||'').filter(entry=>entry.sentenceId===sentence.id);
- card.querySelectorAll('.en .read-token').forEach(node=>{
-  const start=Number(node.dataset.charStart),end=Number(node.dataset.charEnd);
-  node.classList.toggle('phrase-mark-en',entries.some(entry=>overlapsRange(start,end,Number(entry.enStart),Number(entry.enEnd))));
- });
+ const enEl=card.querySelector('.en');
+ if(enEl)enEl.innerHTML=renderEnglish(sentence,entries.map(entry=>({start:Number(entry.enStart),end:Number(entry.enEnd)})));
  card.querySelectorAll('.zh [data-zh-start][data-zh-end]').forEach(node=>{
   const start=Number(node.dataset.zhStart),end=Number(node.dataset.zhEnd);
   node.classList.toggle('phrase-mark-zh',entries.some(entry=>(entry.zhRanges||[]).some(range=>overlapsRange(start,end,Number(range.start),Number(range.end)))));
