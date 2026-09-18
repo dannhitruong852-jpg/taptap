@@ -13,7 +13,6 @@ import { resolvePlayerScroll } from './scroll-behavior.js';
 import { pickArticle, selectArticles, adjacentArticle } from './catalog.js';
 import { createArticleBundleStore } from './article-bundle-store.js';
 import { resolveLinkedHighlight, createInlineHighlightStore } from './inline-phrase-highlights.js';
-import { resolveLinkedHighlight, createInlineHighlightStore } from './inline-phrase-highlights.js';
 
 let article={}, sentences=[], manifest={segments:{}};
 let catalog=null, loading=true, selectionGeneration=0, bilingualMappings={}, semanticMappings={};
@@ -49,10 +48,6 @@ try{
 }catch{}
 const inlineHighlightStore=createInlineHighlightStore({storage:inlineHighlightStorage});
 let phraseHighlightSelection=null,phraseHighlightFrame=null,phraseHighlightInvalidKey='';
-const phraseHighlightAction=document.querySelector('#phrase-highlight-action');
-let inlineHighlightStorage=null;try{inlineHighlightStorage=window.localStorage;}catch{}
-const inlineHighlightStore=createInlineHighlightStore({storage:inlineHighlightStorage});
-let phraseSelection=null,phraseSelectionFrame=null;
 const state={current:0,speed:1,playing:false,paused:false,showVocab:true,timer:null,playerHidden:false,programmaticScrollUntil:0,scrollAnchorY:Math.max(0,window.scrollY||0),scrollFrame:null,playRequestedAt:null};
 const emotionLabels={neutral:'自然讲述',warm:'温暖讲解',lively:'轻快生动',serious:'严肃克制',curious:'好奇追问',ironic:'冷幽默',tense:'紧张转折',emotional:'情绪加强'};
 function hasSelectedText(){return Boolean(window.getSelection()?.toString());}
@@ -78,12 +73,11 @@ function phraseHighlightSelectionFromWindow(){
  return {card,enEl:startEn,index,sentence,start:offsets.start,end:offsets.end,text:offsets.text,rect:{left:anchor.left,right:anchor.right,top:anchor.top,bottom:anchor.bottom}};
 }
 function positionPhraseHighlightAction(snapshot){
- const button=phraseHighlightAction;button.hidden=false;
- const width=button.offsetWidth||92,height=button.offsetHeight||38;
+ const width=phraseHighlightAction.offsetWidth||92,height=phraseHighlightAction.offsetHeight||38;
  const center=(snapshot.rect.left+snapshot.rect.right)/2;
  const left=Math.max(8,Math.min(window.innerWidth-width-8,center-width/2));
  const top=Math.max(8,Math.min(window.innerHeight-height-8,snapshot.rect.top-height-10));
- button.style.left=`${left}px`;button.style.top=`${top}px`;button.style.transform='none';
+ phraseHighlightAction.hidden=false;phraseHighlightAction.style.left=`${left}px`;phraseHighlightAction.style.top=`${top}px`;phraseHighlightAction.style.transform='none';
 }
 function refreshPhraseHighlightAction(){
  phraseHighlightFrame=null;
@@ -94,15 +88,11 @@ function refreshPhraseHighlightAction(){
   if(snapshot.key!==phraseHighlightInvalidKey){phraseHighlightInvalidKey=snapshot.key;showToast(snapshot.invalid==='cross-sentence'?'请在同一句中选择词群':'词群请控制在 120 个英文字符以内');}
   return;
  }
- phraseHighlightInvalidKey='';phraseHighlightSelection=snapshot;positionPhraseHighlightAction(snapshot);
+ phraseHighlightInvalidKey='';phraseHighlightSelection=snapshot;tapGuard.cancel();tapArbiter.cancel();positionPhraseHighlightAction(snapshot);
 }
-function schedulePhraseHighlightAction(){
- if(phraseHighlightFrame!==null)return;
- phraseHighlightFrame=window.requestAnimationFrame(refreshPhraseHighlightAction);
-}
+function schedulePhraseHighlightAction(){if(phraseHighlightFrame!==null)return;phraseHighlightFrame=window.requestAnimationFrame(refreshPhraseHighlightAction);}
 function highlightWords(sentence,enEl){
- const timed=manifest.sentences?.[sentence.id]?.words;
- if(Array.isArray(timed)&&timed.length)return timed;
+ const timed=manifest.sentences?.[sentence.id]?.words;if(Array.isArray(timed)&&timed.length)return timed;
  return [...enEl.querySelectorAll('.read-token')].map(node=>({char_start:Number(node.dataset.charStart),char_end:Number(node.dataset.charEnd)})).filter(word=>Number.isFinite(word.char_start)&&Number.isFinite(word.char_end));
 }
 function overlapsRange(start,end,rangeStart,rangeEnd){return end>rangeStart&&start<rangeEnd;}
@@ -133,67 +123,6 @@ function saveCurrentPhraseHighlight(){
  window.getSelection()?.removeAllRanges();hidePhraseHighlightAction();
  showToast(result.added?'已标记词群':'这个词群已经标记过');
 }
-function nodeElement(node){return node?.nodeType===Node.ELEMENT_NODE?node:node?.parentElement||null;}
-function hidePhraseHighlightAction(){phraseSelection=null;phraseHighlightAction.hidden=true;}
-function selectionOffsets(range,enEl){
- const before=document.createRange();before.selectNodeContents(enEl);before.setEnd(range.startContainer,range.startOffset);
- const raw=range.toString(),lead=(raw.match(/^\s+/)||[''])[0].length,trail=(raw.match(/\s+$/)||[''])[0].length;
- return {start:before.toString().length+lead,end:before.toString().length+raw.length-trail,text:raw.trim().replace(/\s+/g,' ')};
-}
-function currentPhraseSelection(){
- const selection=window.getSelection();if(!selection||selection.rangeCount!==1||selection.isCollapsed)return null;
- const range=selection.getRangeAt(0),startEn=nodeElement(range.startContainer)?.closest('.en'),endEn=nodeElement(range.endContainer)?.closest('.en');
- if(!startEn&&!endEn)return null;
- if(!startEn||!endEn||startEn!==endEn)return {invalid:'cross'};
- const card=startEn.closest('.sentence-card');if(!card)return null;
- const offsets=selectionOffsets(range,startEn);if(!offsets.text)return null;if(offsets.text.length>120)return {invalid:'long'};
- const index=Number(card.dataset.index),sentence=sentences[index];if(!sentence)return null;
- const rect=range.getBoundingClientRect();
- return {card,enEl:startEn,index,sentence,start:offsets.start,end:offsets.end,text:offsets.text,rect};
-}
-function positionPhraseHighlightAction(rect){
- phraseHighlightAction.hidden=false;const width=phraseHighlightAction.offsetWidth||88,height=phraseHighlightAction.offsetHeight||38;
- const center=rect.left+rect.width/2,left=Math.max(8,Math.min(window.innerWidth-width-8,center-width/2));
- const top=Math.max(8,Math.min(window.innerHeight-height-8,rect.top-height-10));
- phraseHighlightAction.style.left=`${left}px`;phraseHighlightAction.style.top=`${top}px`;
-}
-function refreshPhraseHighlightAction(){
- phraseSelectionFrame=null;const snapshot=currentPhraseSelection();
- if(!snapshot){hidePhraseHighlightAction();return;}
- if(snapshot.invalid){hidePhraseHighlightAction();showToast(snapshot.invalid==='cross'?'请在同一句中选择词群':'词群请控制在 120 个英文字符以内');return;}
- phraseSelection=snapshot;tapGuard.cancel();tapArbiter.cancel();positionPhraseHighlightAction(snapshot.rect);
-}
-function schedulePhraseHighlightAction(){if(phraseSelectionFrame!==null)return;phraseSelectionFrame=window.requestAnimationFrame(refreshPhraseHighlightAction);}
-function phraseWords(sentence,enEl){
- const timed=manifest.sentences?.[sentence.id]?.words;if(Array.isArray(timed)&&timed.length)return timed;
- return [...enEl.querySelectorAll('.read-token')].map(node=>({char_start:Number(node.dataset.charStart),char_end:Number(node.dataset.charEnd)})).filter(word=>Number.isFinite(word.char_start)&&Number.isFinite(word.char_end));
-}
-function textBoundary(root,offset){
- const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let at=0,node;
- while((node=walker.nextNode())){const next=at+node.nodeValue.length;if(offset<=next)return {node,offset:Math.max(0,offset-at)};at=next;}
- return null;
-}
-function wrapTextRange(root,start,end,className){
- if(!root||end<=start)return;const a=textBoundary(root,start),b=textBoundary(root,end);if(!a||!b)return;
- const range=document.createRange();range.setStart(a.node,a.offset);range.setEnd(b.node,b.offset);
- const mark=document.createElement('span');mark.className=className;mark.append(range.extractContents());range.insertNode(mark);
-}
-function applyArticleHighlights(){
- if(!currentEntry)return;const entries=inlineHighlightStore.list(currentEntry.id);
- const bySentence=new Map();for(const entry of entries){if(!bySentence.has(entry.sentenceId))bySentence.set(entry.sentenceId,[]);bySentence.get(entry.sentenceId).push(entry);}
- sentences.forEach((sentence,index)=>{
-  const card=listEl.querySelector(`.sentence-card[data-index="${index}"]`),marks=bySentence.get(sentence.id)||[];if(!card||!marks.length)return;
-  const en=card.querySelector('.en'),zh=card.querySelector('.zh');
-  for(const mark of [...marks].sort((a,b)=>b.enStart-a.enStart)){wrapTextRange(en,mark.enStart,mark.enEnd,'phrase-mark-en');for(const range of [...(mark.zhRanges||[])].sort((a,b)=>b.start-a.start))wrapTextRange(zh,range.start,range.end,'phrase-mark-zh');}
- });
-}
-function savePhraseHighlight(){
- const snapshot=phraseSelection;if(!snapshot||loading||!currentEntry)return;
- const linked=resolveLinkedHighlight({sentence:snapshot.sentence,selectionStart:snapshot.start,selectionEnd:snapshot.end,words:phraseWords(snapshot.sentence,snapshot.enEl),semanticGroups:semanticMappings[snapshot.sentence.id]||[],bilingualPairs:bilingualMappings[snapshot.sentence.id]||[]});
- const result=inlineHighlightStore.add({articleId:currentEntry.id,sentenceId:snapshot.sentence.id,enStart:linked.enStart,enEnd:linked.enEnd,zhRanges:linked.zhRanges,source:linked.source,createdAt:Date.now()});
- window.getSelection()?.removeAllRanges();hidePhraseHighlightAction();renderSentences();updateActive(false);
- showToast(result.added?'已标记词群':'这个词群已经标记过了');
-}
 const tapGuard=createTapGuard();
 const tapArbiter=createTapArbiter({delay:300});
 function renderSentences(){
@@ -204,7 +133,7 @@ function renderSentences(){
    <div class="zh" lang="zh-CN" id="translation-${sentence.id}" hidden>${renderChinese(sentence,bilingualMappings[sentence.id]||[],manifest.sentences?.[sentence.id]?.words?semanticMappings[sentence.id]||[]:[])}</div>
   </div>
  </article>`).join('');
- applyArticleHighlights();
+ applyAllInlineHighlights();
 }
 function toggleTranslation(card){
  const zh=card.querySelector('.zh');
@@ -372,11 +301,6 @@ function moveArticle(delta){
 }
 document.addEventListener('selectionchange',schedulePhraseHighlightAction);
 phraseHighlightAction.addEventListener('pointerdown',event=>{event.preventDefault();event.stopPropagation();});
-phraseHighlightAction.addEventListener('pointerup',event=>{event.preventDefault();event.stopPropagation();savePhraseHighlight();});
-phraseHighlightAction.addEventListener('click',event=>{event.preventDefault();event.stopPropagation();if(event.detail===0)savePhraseHighlight();});
-
-document.addEventListener('selectionchange',schedulePhraseHighlightAction);
-phraseHighlightAction.addEventListener('pointerdown',event=>{event.preventDefault();event.stopPropagation();});
 phraseHighlightAction.addEventListener('pointerup',event=>{event.preventDefault();event.stopPropagation();saveCurrentPhraseHighlight();});
 phraseHighlightAction.addEventListener('click',event=>{event.preventDefault();event.stopPropagation();if(event.detail===0)saveCurrentPhraseHighlight();});
 
@@ -416,11 +340,10 @@ nextButton.addEventListener('click',()=>moveArticle(1));
 playerShell.addEventListener('click',event=>{if(state.playerHidden&&!event.target.closest('button')){applyPlayerVisibility(false);state.scrollAnchorY=Math.max(0,window.scrollY||0);}});
 attachSpeedControl(document.querySelector('#speed-control'),rate=>{state.speed=rate;hybridAudioPlayer.setPlaybackRate(rate);});
 vocabButton.addEventListener('click',()=>{state.showVocab=!state.showVocab;document.body.classList.toggle('hide-vocab',!state.showVocab);vocabButton.setAttribute('aria-checked',String(state.showVocab));});
-window.addEventListener('wheel',()=>{state.programmaticScrollUntil=0;hidePhraseHighlightAction();},{passive:true});
+window.addEventListener('wheel',()=>{state.programmaticScrollUntil=0;},{passive:true});
 window.addEventListener('touchmove',()=>{state.programmaticScrollUntil=0;},{passive:true});
 window.addEventListener('scrollend',()=>{state.programmaticScrollUntil=0;state.scrollAnchorY=Math.max(0,window.scrollY||0);},{passive:true});
 window.addEventListener('scroll',()=>{hidePhraseHighlightAction();queueViewportScroll();},{passive:true});
-window.addEventListener('resize',hidePhraseHighlightAction,{passive:true});
 window.addEventListener('beforeunload',()=>{hybridAudioPlayer.stop();audioCache.clearMemory();decodedAudioStore?.clearDecoded();});
 
 async function openArticle(entry){
