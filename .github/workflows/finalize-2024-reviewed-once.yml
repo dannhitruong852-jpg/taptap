@@ -1,5 +1,5 @@
 name: Finalize reviewed 2024 curated once
-# rerun after canonical discourse normalization
+# rerun after raw-shard materialization fix
 
 on:
   push:
@@ -26,13 +26,15 @@ jobs:
       - name: Materialize reviewed 2024 curated source
         run: |
           python - <<'PY'
-          import json, sys
+          import base64, gzip, json
           from pathlib import Path
-          sys.path.insert(0, 'content-pipeline')
-          from build_curated_year import load_curated_source
 
           curated = Path('content-pipeline/curated')
-          source = load_curated_source(curated, 2024)
+          parts = sorted(curated.glob('2024.json.gz.b64.part*'))
+          assert len(parts) == 5, parts
+          encoded = ''.join(p.read_text(encoding='ascii').strip() for p in parts)
+          encoded += '=' * (-len(encoded) % 4)
+          source = json.loads(gzip.decompress(base64.b64decode(encoded)).decode('utf-8'))
           expected = ['cloze','text1','text2','text3','text4','partb','translation']
           assert [a['id'] for a in source['articles']] == expected
           assert source['source_sha256'] == '94b209362bfd0e33b8d7c52239522511bf499983e1046123c7a74c25c2c8ff78'
