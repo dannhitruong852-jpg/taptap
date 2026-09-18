@@ -7,12 +7,12 @@ import { createHybridAudioPlayer } from './hybrid-audio-player.js';
 import { measureLatency } from './latency-metrics.js';
 import { sentenceProgress, isExplicitLegacyTimingVersion } from './progress.js';
 import { readStateAtTime, activeChineseGroups } from './time-index.js';
-import { renderEnglish, renderChinese } from './bilingual-text.js';
-import { createTapGuard, createTapArbiter, attachSpeedControl } from './reader-controls.js';
+import { renderEnglish, renderChinese } from './bilingual-text.js?v=phrase-study-20260918-v2';
+import { createTapGuard, createTapArbiter, attachSpeedControl } from './reader-controls.js?v=phrase-study-20260918-v2';
 import { resolvePlayerScroll } from './scroll-behavior.js';
 import { pickArticle, selectArticles, adjacentArticle } from './catalog.js';
 import { createArticleBundleStore } from './article-bundle-store.js';
-import { resolveLinkedHighlight, createInlineHighlightStore } from './inline-phrase-highlights.js';
+import { resolveLinkedHighlight, createInlineHighlightStore, snippetFromRanges } from './inline-phrase-highlights.js?v=phrase-study-20260918-v2';
 
 let article={}, sentences=[], manifest={segments:{}};
 let catalog=null, loading=true, selectionGeneration=0, bilingualMappings={}, semanticMappings={};
@@ -39,7 +39,16 @@ const statusEl=document.querySelector('#player-status');
 const playerShell=document.querySelector('#player-shell');
 const vocabButton=document.querySelector('#toggle-vocab');
 const toast=document.querySelector('#toast');
+const phraseStudyBar=document.querySelector('#phrase-study-bar');
+const phraseHighlightSelectionText=document.querySelector('#phrase-highlight-selection');
 const phraseHighlightAction=document.querySelector('#phrase-highlight-action');
+const phraseBookOpenButton=document.querySelector('#phrase-book-open');
+const phraseBookBackdrop=document.querySelector('#phrase-book-backdrop');
+const phraseBookCloseButton=document.querySelector('#phrase-book-close');
+const phraseBookYear=document.querySelector('#phrase-book-year');
+const phraseBookList=document.querySelector('#phrase-book-list');
+const phraseBookEmpty=document.querySelector('#phrase-book-empty');
+const phraseBookBlurButton=document.querySelector('#phrase-book-blur');
 let inlineHighlightStorage=null;
 try{inlineHighlightStorage=window.localStorage;}catch{}
 const inlineHighlightStore=createInlineHighlightStore({storage:inlineHighlightStorage});
@@ -48,7 +57,7 @@ const state={current:0,speed:1,playing:false,paused:false,showVocab:true,timer:n
 const emotionLabels={neutral:'自然讲述',warm:'温暖讲解',lively:'轻快生动',serious:'严肃克制',curious:'好奇追问',ironic:'冷幽默',tense:'紧张转折',emotional:'情绪加强'};
 function hasSelectedText(){return Boolean(window.getSelection()?.toString());}
 function nodeElement(node){return node?.nodeType===Node.ELEMENT_NODE?node:node?.parentElement||null;}
-function hidePhraseHighlightAction(){phraseHighlightSelection=null;phraseHighlightAction.hidden=true;}
+function hidePhraseHighlightAction(){phraseHighlightSelection=null;phraseStudyBar.hidden=true;}
 function selectionOffsets(range,enEl){
  const before=document.createRange();before.selectNodeContents(enEl);before.setEnd(range.startContainer,range.startOffset);
  const raw=range.toString();const leading=(raw.match(/^\s+/)||[''])[0].length;const trailing=(raw.match(/\s+$/)||[''])[0].length;
@@ -64,16 +73,7 @@ function phraseHighlightSelectionFromWindow(){
  const offsets=selectionOffsets(range,startEn);if(!offsets.text)return null;
  if(offsets.text.length>120)return {invalid:'too-long',key:offsets.text.slice(0,140)};
  const index=Number(card.dataset.index);const sentence=sentences[index];if(!sentence)return null;
- const rect=range.getBoundingClientRect();const fallback=[...range.getClientRects()].at(-1);const anchor=(rect.width||rect.height)?rect:fallback;
- if(!anchor)return null;
- return {card,enEl:startEn,index,sentence,start:offsets.start,end:offsets.end,text:offsets.text,rect:{left:anchor.left,right:anchor.right,top:anchor.top,bottom:anchor.bottom}};
-}
-function positionPhraseHighlightAction(snapshot){
- const width=phraseHighlightAction.offsetWidth||92,height=phraseHighlightAction.offsetHeight||38;
- const center=(snapshot.rect.left+snapshot.rect.right)/2;
- const left=Math.max(8,Math.min(window.innerWidth-width-8,center-width/2));
- const top=Math.max(8,Math.min(window.innerHeight-height-8,snapshot.rect.top-height-10));
- phraseHighlightAction.hidden=false;phraseHighlightAction.style.left=`${left}px`;phraseHighlightAction.style.top=`${top}px`;phraseHighlightAction.style.transform='none';
+ return {card,enEl:startEn,index,sentence,start:offsets.start,end:offsets.end,text:offsets.text};
 }
 function refreshPhraseHighlightAction(){
  phraseHighlightFrame=null;
@@ -84,7 +84,7 @@ function refreshPhraseHighlightAction(){
   if(snapshot.key!==phraseHighlightInvalidKey){phraseHighlightInvalidKey=snapshot.key;showToast(snapshot.invalid==='cross-sentence'?'请在同一句中选择词群':'词群请控制在 120 个英文字符以内');}
   return;
  }
- phraseHighlightInvalidKey='';phraseHighlightSelection=snapshot;tapGuard.cancel();tapArbiter.cancel();positionPhraseHighlightAction(snapshot);
+ phraseHighlightInvalidKey='';phraseHighlightSelection=snapshot;tapGuard.cancel();tapArbiter.cancel();phraseHighlightSelectionText.textContent=snapshot.text;phraseStudyBar.hidden=false;
 }
 function schedulePhraseHighlightAction(){if(phraseHighlightFrame!==null)return;phraseHighlightFrame=window.requestAnimationFrame(refreshPhraseHighlightAction);}
 function highlightWords(sentence,enEl){
@@ -105,6 +105,52 @@ function applySentenceInlineHighlights(card,index){
  });
 }
 function applyAllInlineHighlights(){listEl.querySelectorAll('.sentence-card').forEach(card=>applySentenceInlineHighlights(card,Number(card.dataset.index)));}
+function currentPhraseBookYear(){return Number(phraseBookYear.value)||Number(currentEntry?.year)||inlineHighlightStore.years().at(-1)||2002;}
+function updatePhraseBookButton(){
+ const year=Number(currentEntry?.year)||Number(yearSelect.value)||2002;
+ const count=inlineHighlightStore.listYear(year).length;
+ phraseBookOpenButton.textContent=`${year} 词群本${count?` · ${count}`:''}`;
+}
+function setPhraseBookBlurred(year,blurred){
+ inlineHighlightStore.setYearBlurred(year,blurred);
+ phraseBookBackdrop.querySelector('.phrase-book-panel')?.classList.toggle('is-blurred',blurred);
+ phraseBookBlurButton.setAttribute('aria-pressed',String(blurred));
+ phraseBookBlurButton.textContent=blurred?'显示译文':'模糊译文';
+}
+function phraseBookItem(entry){
+ const item=document.createElement('article');item.className='phrase-book-item';
+ const row=document.createElement('button');row.className='phrase-book-row';row.type='button';row.setAttribute('aria-expanded','false');
+ const en=document.createElement('span');en.className='phrase-book-en';en.textContent=entry.selectedText||entry.sourceSentence?.slice(entry.enStart,entry.enEnd)||'已标记词群';
+ const zh=document.createElement('span');zh.className='phrase-book-zh';zh.textContent=entry.translationSnippet||'暂无可靠对应译文';
+ if(entry.translationSnippet)zh.classList.add('has-translation');
+ row.append(en,zh);
+ const detail=document.createElement('div');detail.className='phrase-book-detail';detail.hidden=true;
+ const sourceEn=document.createElement('p');sourceEn.className='phrase-book-source-en';sourceEn.textContent=entry.sourceSentence||'';
+ const sourceZh=document.createElement('p');sourceZh.className='phrase-book-source-zh';sourceZh.textContent=entry.sourceSentenceZh||'';
+ const meta=document.createElement('div');meta.className='phrase-book-meta';
+ const source=document.createElement('span');source.textContent=entry.articleTitle||entry.articleId||'';
+ const remove=document.createElement('button');remove.className='phrase-book-delete';remove.type='button';remove.textContent='删除';
+ remove.addEventListener('click',event=>{event.stopPropagation();inlineHighlightStore.remove(entry);applyAllInlineHighlights();renderPhraseBook(currentPhraseBookYear());updatePhraseBookButton();showToast('已删除标记');});
+ meta.append(source,remove);detail.append(sourceEn,sourceZh,meta);
+ row.addEventListener('click',()=>{detail.hidden=!detail.hidden;row.setAttribute('aria-expanded',String(!detail.hidden));});
+ item.append(row,detail);return item;
+}
+function renderPhraseBook(year=currentPhraseBookYear()){
+ const years=[...new Set([...inlineHighlightStore.years(),Number(currentEntry?.year)].filter(Number.isFinite))].sort((a,b)=>a-b);
+ phraseBookYear.replaceChildren(...years.map(value=>new Option(String(value),String(value))));
+ phraseBookYear.value=String(year);
+ const entries=inlineHighlightStore.listYear(year);
+ phraseBookList.replaceChildren(...entries.map(phraseBookItem));
+ phraseBookEmpty.hidden=entries.length>0;
+ setPhraseBookBlurred(year,inlineHighlightStore.getYearBlurred(year));
+}
+function openPhraseBook(){
+ hidePhraseHighlightAction();window.getSelection()?.removeAllRanges();
+ const year=Number(currentEntry?.year)||Number(yearSelect.value)||inlineHighlightStore.years().at(-1)||2002;
+ renderPhraseBook(year);phraseBookBackdrop.hidden=false;document.body.classList.add('phrase-book-opened');phraseBookCloseButton.focus();
+}
+function closePhraseBook(){phraseBookBackdrop.hidden=true;document.body.classList.remove('phrase-book-opened');phraseBookOpenButton.focus();}
+
 function saveCurrentPhraseHighlight(){
  const snapshot=phraseHighlightSelection;if(!snapshot||loading)return;
  const linked=resolveLinkedHighlight({
@@ -112,10 +158,17 @@ function saveCurrentPhraseHighlight(){
   words:highlightWords(snapshot.sentence,snapshot.enEl),semanticGroups:semanticMappings[snapshot.sentence.id]||[],bilingualPairs:bilingualMappings[snapshot.sentence.id]||[]
  });
  const result=inlineHighlightStore.add({
-  articleId:currentEntry?.id||article.article_id||'',sentenceId:snapshot.sentence.id,
+  year:Number(currentEntry?.year)||null,
+  articleId:currentEntry?.id||article.article_id||'',
+  articleTitle:currentEntry?.title||article.title||'',
+  sentenceId:snapshot.sentence.id,
+  selectedText:snapshot.text,
+  translationSnippet:snippetFromRanges(snapshot.sentence.zh,linked.zhRanges),
+  sourceSentence:snapshot.sentence.en,
+  sourceSentenceZh:snapshot.sentence.zh,
   enStart:linked.enStart,enEnd:linked.enEnd,zhRanges:linked.zhRanges,source:linked.source,createdAt:Date.now()
  });
- applySentenceInlineHighlights(snapshot.card,snapshot.index);
+ applySentenceInlineHighlights(snapshot.card,snapshot.index);updatePhraseBookButton();
  window.getSelection()?.removeAllRanges();hidePhraseHighlightAction();
  showToast(result.added?'已标记词群':'这个词群已经标记过');
 }
@@ -299,6 +352,12 @@ document.addEventListener('selectionchange',schedulePhraseHighlightAction);
 phraseHighlightAction.addEventListener('pointerdown',event=>{event.preventDefault();event.stopPropagation();});
 phraseHighlightAction.addEventListener('pointerup',event=>{event.preventDefault();event.stopPropagation();saveCurrentPhraseHighlight();});
 phraseHighlightAction.addEventListener('click',event=>{event.preventDefault();event.stopPropagation();if(event.detail===0)saveCurrentPhraseHighlight();});
+phraseBookOpenButton.addEventListener('click',openPhraseBook);
+phraseBookCloseButton.addEventListener('click',closePhraseBook);
+phraseBookYear.addEventListener('change',()=>renderPhraseBook(Number(phraseBookYear.value)));
+phraseBookBlurButton.addEventListener('click',()=>{const year=currentPhraseBookYear();setPhraseBookBlurred(year,!inlineHighlightStore.getYearBlurred(year));});
+phraseBookBackdrop.addEventListener('click',event=>{if(event.target===phraseBookBackdrop)closePhraseBook();});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!phraseBookBackdrop.hidden)closePhraseBook();});
 
 listEl.addEventListener('pointerdown',event=>{
  const card=event.target.closest('.sentence-card');if(!card||event.target.closest('button'))return;
@@ -352,7 +411,7 @@ async function openArticle(entry){
   const audioCount=sentences.filter(s=>manifest.sentences?.[s.id]?.path||s.segments.every(x=>manifest.segments?.[x.id]?.path)).length;const seamlessCount=sentences.filter(s=>manifest.sentences?.[s.id]?.path).length;
   document.querySelector('#content-status').textContent=`${sentences.length} 句中英对照 · 音频 ${audioCount}/${sentences.length} 句可播放${seamlessCount?` · C无缝 ${seamlessCount}/${sentences.length}`:''}`;
   statusEl.textContent=audioCount===sentences.length?'轻点查译文 · 点序号听本句':'正文已就绪 · 音频生成中';
-  history.replaceState(null,'',`#${entry.id}`);renderSentences();updateActive(false);resetSentenceProgress(0);updateArticleNavState();applyPlayerVisibility(false);measureLatency('article-switch',switchStarted);warmRange(0,4);warmArticleRemainder();scheduleAdjacentWarm(entry,selectionToken);
+  history.replaceState(null,'',`#${entry.id}`);renderSentences();updatePhraseBookButton();updateActive(false);resetSentenceProgress(0);updateArticleNavState();applyPlayerVisibility(false);measureLatency('article-switch',switchStarted);warmRange(0,4);warmArticleRemainder();scheduleAdjacentWarm(entry,selectionToken);
   if(!globalArticlePreloadStarted&&catalog){globalArticlePreloadStarted=true;void articleBundleStore.preload(catalog.articles.filter(item=>item.id!==entry.id));}
  }catch(error){if(selectionToken!==selectionGeneration)return;loading=false;statusEl.textContent='正文加载失败';showToast('请重新选择文章或刷新页面');}
 }
