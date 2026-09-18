@@ -81,3 +81,21 @@ test('marking the same phrase can upgrade an older entry with a generated study 
   assert.equal(updated.added,false);assert.equal(updated.updated,true);
   assert.equal(store.listYear(2014)[0].studyGloss,'测试');
 });
+
+
+test('user-edited study gloss persists without changing linked Chinese ranges',()=>{
+  const memory=new Map();
+  const storage={
+    getItem:key=>memory.has(key)?memory.get(key):null,
+    setItem:(key,value)=>memory.set(key,value)
+  };
+  const base={year:2008,articleId:'2008-cloze',sentenceId:'s13',enStart:4,enEnd:14,selectedText:'put down to',studyGloss:'原释义',zhRanges:[{start:0,end:3}],source:'semantic'};
+  const store=createInlineHighlightStore({storage});
+  store.add(base);
+  store.add({...base,studyGloss:'归因于；认为……是由……造成的',glossSource:'user-edited'});
+  const reopened=createInlineHighlightStore({storage});
+  const saved=reopened.listYear(2008)[0];
+  assert.equal(saved.studyGloss,'归因于；认为……是由……造成的');
+  assert.equal(saved.glossSource,'user-edited');
+  assert.deepEqual(saved.zhRanges,[{start:0,end:3}]);
+});
