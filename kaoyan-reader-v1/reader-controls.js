@@ -36,6 +36,52 @@ export function createTapGuard({now = () => performance.now(), maxDuration = 450
   };
 }
 
+
+export function createTapArbiter({
+  delay = 300,
+  now = () => performance.now(),
+  setTimer = (fn, ms) => setTimeout(fn, ms),
+  clearTimer = id => clearTimeout(id),
+} = {}) {
+  let pending = null;
+
+  function clearPending() {
+    if (pending?.timer != null) clearTimer(pending.timer);
+    const previous = pending;
+    pending = null;
+    return previous;
+  }
+
+  function flush() {
+    const previous = clearPending();
+    if (previous) previous.single();
+  }
+
+  function tap(key, {single, double}) {
+    const stamp = now();
+    if (pending && pending.key === key && stamp - pending.at <= delay) {
+      clearPending();
+      double();
+      return 'double';
+    }
+    if (pending) flush();
+    const entry = {key, at:stamp, single, timer:null};
+    entry.timer = setTimer(() => {
+      if (pending !== entry) return;
+      pending = null;
+      single();
+    }, delay);
+    pending = entry;
+    return 'pending';
+  }
+
+  function isDoubleCandidate(key) {
+    return Boolean(pending && pending.key === key && now() - pending.at <= delay);
+  }
+
+  return {tap, flush, cancel:clearPending, isDoubleCandidate};
+}
+
 export function attachSpeedControl(root, onRate) {
   const trigger=root.querySelector('#speed-value,.speed-value');
   const menu=root.querySelector('.speed-menu');
