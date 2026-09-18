@@ -25,8 +25,8 @@ test('one stored mark is also a year-book record with its learning context',()=>
 
 test('year books stay separated',()=>{
   const store=createInlineHighlightStore({storage:memoryStorage()});
-  store.add({year:2002,articleId:'a',sentenceId:'s1',enStart:1,enEnd:2,createdAt:1});
-  store.add({year:2003,articleId:'b',sentenceId:'s2',enStart:1,enEnd:2,createdAt:2});
+  store.add({year:2002,articleId:'a',sentenceId:'s1',selectedText:'alpha',enStart:1,enEnd:2,createdAt:1});
+  store.add({year:2003,articleId:'b',sentenceId:'s2',selectedText:'beta',enStart:1,enEnd:2,createdAt:2});
   assert.equal(store.listYear(2002).length,1);
   assert.equal(store.listYear(2003).length,1);
   assert.deepEqual(store.years(),[2002,2003]);
