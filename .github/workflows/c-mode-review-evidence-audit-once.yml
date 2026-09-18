@@ -192,6 +192,10 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git commit -m 'fix: restore reviewed candidate evidence containers'
+          # Preflight rebuilds tracked reader outputs only as temporary verification.
+          # Keep the committed evidence repair, discard those unstaged build products,
+          # then rebase safely if another workflow advanced the branch.
+          git reset --hard HEAD
           git pull --rebase origin "$BRANCH"
           git push origin HEAD:"$BRANCH"
       - name: Summary
