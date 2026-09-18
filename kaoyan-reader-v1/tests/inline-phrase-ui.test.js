@@ -34,3 +34,10 @@ test('release versions the modules involved in phrase marking',()=>{
   assert.match(app,/\.\/reader-controls\.js\?v=/);
   assert.match(app,/\.\/inline-phrase-highlights\.js\?v=/);
 });
+
+
+test('selection text node and selection state use distinct identifiers',()=>{
+  assert.match(app,/const phraseHighlightSelectionText=document\.querySelector\('#phrase-highlight-selection'\)/);
+  assert.match(app,/let phraseHighlightSelection=null/);
+  assert.doesNotMatch(app,/const phraseHighlightSelection=document\.querySelector/);
+});
