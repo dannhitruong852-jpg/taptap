@@ -1,5 +1,5 @@
 name: Finalize reviewed 2024 curated once
-# rerun after V2 override reasons
+# rerun with canonical metadata folded into formal source
 
 on:
   push:
@@ -35,6 +35,25 @@ jobs:
           encoded = ''.join(p.read_text(encoding='ascii').strip() for p in parts)
           encoded += '=' * (-len(encoded) % 4)
           source = json.loads(gzip.decompress(base64.b64decode(encoded)).decode('utf-8'))
+
+          # Normalize five reviewed metadata labels into the repository's canonical
+          # discourse vocabulary. English and Chinese sentence text are untouched.
+          fixes = {
+              ('cloze', 12): ('advice', 'encourage'),
+              ('cloze', 18): ('diagnose', 'warning'),
+              ('cloze', 19): ('advice', 'encourage'),
+              ('translation', 1): ('scene', 'story'),
+              ('translation', 5): ('cause_effect', 'conclude'),
+          }
+          for article in source['articles']:
+              for number, row in enumerate(article['rows'], 1):
+                  key=(article['id'], number)
+                  if key not in fixes:
+                      continue
+                  before, after=fixes[key]
+                  assert row[3] == before, (key, row[3], before)
+                  row[3] = after
+
           expected = ['cloze','text1','text2','text3','text4','partb','translation']
           assert [a['id'] for a in source['articles']] == expected
           assert source['source_sha256'] == '94b209362bfd0e33b8d7c52239522511bf499983e1046123c7a74c25c2c8ff78'
