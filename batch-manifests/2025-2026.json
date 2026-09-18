@@ -1,0 +1,33 @@
+{
+  "batch_id": "2025-2026",
+  "pipeline_version": 2,
+  "years": [
+    2025,
+    2026
+  ],
+  "expected_articles": {
+    "2025": [
+      "cloze",
+      "text1",
+      "text2",
+      "text3",
+      "text4",
+      "partb",
+      "translation"
+    ],
+    "2026": [
+      "cloze",
+      "text1",
+      "text2",
+      "text3",
+      "text4",
+      "partb",
+      "translation"
+    ]
+  },
+  "source_ref": "46dad652260489b253002bfab1cdc9479632eb00",
+  "state": "draft",
+  "created_at": "2026-09-18T17:27:30+00:00",
+  "freeze": null,
+  "artifacts": {}
+}
