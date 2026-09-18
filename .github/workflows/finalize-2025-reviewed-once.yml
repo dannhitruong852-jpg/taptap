@@ -1,0 +1,123 @@
+name: Finalize reviewed 2025 curated once
+
+on:
+  push:
+    branches:
+      - c-mode-v2-2025-2026-production
+    paths:
+      - '.github/workflows/finalize-2025-reviewed-once.yml'
+
+permissions:
+  contents: write
+
+env:
+  PYTHONPATH: .:voice-pipeline:content-pipeline
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Materialize reviewed 2025 curated source
+        run: |
+          python - <<'PY'
+          import base64, gzip, json
+          from pathlib import Path
+
+          curated = Path('content-pipeline/curated')
+          parts = sorted(curated.glob('2025.json.gz.b64.part*'))
+          assert [p.name for p in parts] == [
+              '2025.json.gz.b64.part00',
+              '2025.json.gz.b64.part01',
+              '2025.json.gz.b64.part02',
+              '2025.json.gz.b64.part03',
+          ], [p.name for p in parts]
+          encoded = ''.join(p.read_text(encoding='ascii').strip() for p in parts)
+          encoded += '=' * (-len(encoded) % 4)
+          source = json.loads(gzip.decompress(base64.b64decode(encoded)).decode('utf-8'))
+
+          expected = ['cloze','text1','text2','text3','text4','partb','translation']
+          assert source['year'] == 2025, source.get('year')
+          assert [a['id'] for a in source['articles']] == expected
+          assert source.get('unresolved_sections') == [], source.get('unresolved_sections')
+          assert all(a.get('rows') for a in source['articles'])
+          out = curated / '2025.json'
+          out.write_text(json.dumps(source, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print(json.dumps({
+              'year': source['year'],
+              'articles': expected,
+              'sentence_counts': {a['id']: len(a['rows']) for a in source['articles']},
+              'source_sha256': source.get('source_sha256'),
+          }, ensure_ascii=False))
+          PY
+
+      - name: Finalize and compile 2025
+        run: |
+          python content-pipeline/finalize_curated_year.py --year 2025
+          python content-pipeline/build_curated_year.py --year 2025
+
+      - name: Run canonical regressions
+        run: |
+          python -m unittest discover -s production_v2/tests -v
+          python -m unittest content-pipeline/tests/test_build_curated_year.py -v
+          python -m unittest content-pipeline/tests/test_bilingual_highlights.py -v
+
+      - name: Run 2025 V2 canonical preflight
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          from production_v2.manifest import build_manifest
+          src = build_manifest('2025', [2025], os.environ.get('GITHUB_SHA','unknown'))
+          Path('/tmp/2025-manifest.json').write_text(json.dumps(src, indent=2) + '\n')
+          PY
+          set +e
+          python -m production_v2.cli_validate_batch --manifest /tmp/2025-manifest.json --catalog kaoyan-reader-v1/content/catalog.json --reader-root kaoyan-reader-v1 --phase preflight --report reports/production-v2/2025-canonical-regression.json
+          rc=$?
+          set -e
+          cat reports/production-v2/2025-canonical-regression.json
+          exit "$rc"
+
+      - name: Assert final 2025 evidence
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          canary=json.loads(Path('reports/production-v2/2025-canary.json').read_text())
+          assert canary['ok'] is True, canary
+          assert canary['errors'] == [], canary['errors']
+          assert canary['articles_checked'] == 7
+          assert canary['reviewed_candidates_checked'] == 7
+          assert canary['mapped_occurrences'] == canary['level6_vocab_occurrences_checked']
+          expected={'cloze','text1','text2','text3','text4','partb','translation'}
+          reader=Path('kaoyan-reader-v1/content/2025/c')
+          assert {p.stem for p in reader.glob('*.json')} == expected
+          report=json.loads(Path('reports/production-v2/2025-canonical-regression.json').read_text())
+          assert report['ok'] is True, report
+          assert report['errors'] == [], report
+          print(json.dumps({'canary':canary,'canonical_regression':report},ensure_ascii=False,indent=2))
+          PY
+
+      - name: Commit reviewed 2025 outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add \
+            content-pipeline/curated/2025.json \
+            content-pipeline/curated/bilingual-highlights/2025.json \
+            content-pipeline/voice_profiles/2025.json \
+            content-pipeline/direction/2025.json \
+            kaoyan-reader-v1/content/catalog.json \
+            kaoyan-reader-v1/content/2025 \
+            reports/bilingual-highlights/2025.json \
+            reports/content-freeze/2025 \
+            reports/extraction/2025.json \
+            reports/production-v2/2025-canary.json \
+            reports/production-v2/2025-canonical-regression.json
+          git diff --cached --check
+          git commit -m 'build(c-mode): finalize reviewed 2025 [skip ci]'
+          git push origin HEAD:c-mode-v2-2025-2026-production
