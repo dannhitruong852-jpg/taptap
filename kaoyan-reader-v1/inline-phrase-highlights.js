@@ -1,5 +1,5 @@
-const DEFAULT_KEY='kaoyan-inline-phrase-highlights-v1';
-const DEFAULT_PREFS_KEY='kaoyan-inline-phrase-prefs-v1';
+const DEFAULT_KEY='kaoyan-inline-phrase-highlights-v2';
+const DEFAULT_PREFS_KEY='kaoyan-inline-phrase-prefs-v2';
 
 function clamp(value,min,max){return Math.max(min,Math.min(max,Number(value)||0));}
 function overlap(aStart,aEnd,bStart,bEnd){return aEnd>bStart&&aStart<bEnd;}
@@ -13,32 +13,66 @@ function mergeRanges(ranges){
   }
   return merged;
 }
+export function semanticGroupsForYear(document,year,articleId){
+  if(Number(document?.year)!==Number(year))return {};
+  const articles=document?.articles;
+  if(!articles||typeof articles!=='object'||Array.isArray(articles))return {};
+  const article=articles[articleId];
+  return article&&typeof article==='object'&&!Array.isArray(article)?article:{};
+}
 function semanticRanges({start,end,words,groups}){
   if(!Array.isArray(words)||!words.length||!Array.isArray(groups)||!groups.length)return null;
   const selected=[];
   words.forEach((word,index)=>{if(overlap(start,end,Number(word.char_start),Number(word.char_end)))selected.push(index);});
   if(!selected.length)return null;
-  const first=selected[0],last=selected[selected.length-1]+1;
-  const ranges=groups.filter(group=>overlap(first,last,Number(group.en_word_start),Number(group.en_word_end)))
-    .map(group=>({start:Number(group.zh_char_start),end:Number(group.zh_char_end)}));
+  const first=selected[0],last=selected[selected.length-1]+1,selectedCount=last-first;
+  const candidates=[];
+  const covered=new Set();
+  for(const group of groups){
+    const gs=Number(group.en_word_start),ge=Number(group.en_word_end);
+    if(!Number.isInteger(gs)||!Number.isInteger(ge)||ge<=gs)continue;
+    const left=Math.max(first,gs),right=Math.min(last,ge),overlapWords=Math.max(0,right-left);
+    if(!overlapWords)continue;
+    const groupCoverage=overlapWords/(ge-gs);
+    if(groupCoverage<0.65)continue;
+    candidates.push(group);
+    for(let i=left;i<right;i++)covered.add(i);
+  }
+  if(!candidates.length||covered.size/selectedCount<0.8)return null;
+  const ranges=candidates.map(group=>({start:Number(group.zh_char_start),end:Number(group.zh_char_end)}));
   const merged=mergeRanges(ranges);
   return merged.length?merged:null;
 }
-function bilingualRanges({start,end,pairs}){
+function canBridgeChineseGap(text){
+  const gap=String(text||'');
+  return gap.length<=4&&!/[，。；：！？、,.!?;:\n\r]/.test(gap);
+}
+function bilingualRanges({start,end,pairs,zh}){
   if(!Array.isArray(pairs)||!pairs.length)return null;
-  const ranges=pairs.filter(pair=>overlap(start,end,Number(pair.en_start),Number(pair.en_end)))
-    .flatMap(pair=>Array.isArray(pair.zh_spans)?pair.zh_spans:[])
+  const matched=pairs.filter(pair=>overlap(start,end,Number(pair.en_start),Number(pair.en_end)))
+    .sort((a,b)=>Number(a.en_start)-Number(b.en_start));
+  const ranges=matched.flatMap(pair=>Array.isArray(pair.zh_spans)?pair.zh_spans:[])
     .map(span=>({start:Number(span.start),end:Number(span.end)}));
   const merged=mergeRanges(ranges);
-  return merged.length?merged:null;
+  if(!merged.length)return null;
+  if(merged.length<2||matched.length<2)return {ranges:merged,bridged:false};
+  const bridged=[{...merged[0]}];
+  let changed=false;
+  for(const next of merged.slice(1)){
+    const last=bridged.at(-1);
+    const gap=String(zh||'').slice(last.end,next.start);
+    if(next.start>=last.end&&canBridgeChineseGap(gap)){last.end=next.end;changed=true;}
+    else bridged.push({...next});
+  }
+  return {ranges:bridged,bridged:changed};
 }
 export function resolveLinkedHighlight({sentence,selectionStart,selectionEnd,words=[],semanticGroups=[],bilingualPairs=[]}){
   const en=String(sentence?.en||'');
   const start=clamp(selectionStart,0,en.length),end=clamp(selectionEnd,start,en.length);
   const semantic=semanticRanges({start,end,words,groups:semanticGroups});
   if(semantic)return {enStart:start,enEnd:end,zhRanges:semantic,source:'semantic'};
-  const bilingual=bilingualRanges({start,end,pairs:bilingualPairs});
-  if(bilingual)return {enStart:start,enEnd:end,zhRanges:bilingual,source:'bilingual'};
+  const bilingual=bilingualRanges({start,end,pairs:bilingualPairs,zh:sentence?.zh});
+  if(bilingual)return {enStart:start,enEnd:end,zhRanges:bilingual.ranges,source:bilingual.bridged?'bilingual-context':'bilingual'};
   return {enStart:start,enEnd:end,zhRanges:[],source:'none'};
 }
 function parseArray(value){try{const result=JSON.parse(value);return Array.isArray(result)?result:[];}catch{return[];}}
