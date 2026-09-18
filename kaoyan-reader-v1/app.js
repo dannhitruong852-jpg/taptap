@@ -49,7 +49,8 @@ const phraseBookBlurButton=document.querySelector('#phrase-book-blur');
 const phraseBookSummary=document.querySelector('#phrase-book-summary');
 const phraseBookList=document.querySelector('#phrase-book-list');
 const phraseBookEmpty=document.querySelector('#phrase-book-empty');
-const phraseBookStore=createPhraseBookStore({storage:window.localStorage});
+let phraseBookStorage=null;try{phraseBookStorage=window.localStorage;}catch{}
+const phraseBookStore=createPhraseBookStore({storage:phraseBookStorage});
 let phraseSelection=null,phraseSelectionFrame=null,phraseSelectionInvalidKey='';
 const state={current:0,speed:1,playing:false,paused:false,showVocab:true,timer:null,playerHidden:false,programmaticScrollUntil:0,scrollAnchorY:Math.max(0,window.scrollY||0),scrollFrame:null,playRequestedAt:null};
 const emotionLabels={neutral:'自然讲述',warm:'温暖讲解',lively:'轻快生动',serious:'严肃克制',curious:'好奇追问',ironic:'冷幽默',tense:'紧张转折',emotional:'情绪加强'};
@@ -424,7 +425,8 @@ function moveArticle(delta){
 
 document.addEventListener('selectionchange',schedulePhraseSelectionAction);
 phraseSelectionAction.addEventListener('pointerdown',event=>{event.preventDefault();event.stopPropagation();});
-phraseSelectionAction.addEventListener('click',event=>{event.preventDefault();event.stopPropagation();saveCurrentPhraseSelection();});
+phraseSelectionAction.addEventListener('pointerup',event=>{event.preventDefault();event.stopPropagation();saveCurrentPhraseSelection();});
+phraseSelectionAction.addEventListener('click',event=>{event.preventDefault();event.stopPropagation();if(event.detail===0)saveCurrentPhraseSelection();});
 phraseBookOpenButton.addEventListener('click',openPhraseBook);
 phraseBookCloseButton.addEventListener('click',closePhraseBook);
 phraseBookBlurButton.addEventListener('click',()=>setPhraseBookBlurred(!phraseBookStore.getBlurred()));
