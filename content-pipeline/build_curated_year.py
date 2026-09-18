@@ -76,7 +76,7 @@ def vocabulary_for(text: str, lexicon: dict) -> list[dict]:
         if not study_gloss:
             raise ValueError(f'{lemma}: missing Chinese study gloss')
         for surface in [lemma, *variants]:
-            for match in re.finditer(r'(?<![\\w-])' + re.escape(surface) + r'(?![\\w-])', text, flags=re.I):
+            for match in re.finditer(r'(?<![\w-])' + re.escape(surface) + r'(?![\w-])', text, flags=re.I):
                 found.append({
                     'word': match.group(), 'lemma': lemma, 'level': int(level),
                     'meaning': study_gloss,
