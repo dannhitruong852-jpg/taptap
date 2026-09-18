@@ -1,7 +1,7 @@
 name: Reader pipeline checks
 on:
   push:
-    branches: [kaoyan-reader-v1, c-v4-2002-complete]
+    branches: [kaoyan-reader-v1, c-v4-2002-complete, c-mode-v2-2013-2018-production]
     paths:
       - '.github/workflows/**'
       - 'content-pipeline/**'
