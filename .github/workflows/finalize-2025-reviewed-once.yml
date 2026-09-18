@@ -45,6 +45,10 @@ jobs:
           assert [a['id'] for a in source['articles']] == expected
           assert source.get('unresolved_sections') == [], source.get('unresolved_sections')
           assert all(a.get('rows') for a in source['articles'])
+          # Canonicalize the reviewed Part B metadata only. Sentence text is untouched.
+          partb = next(a for a in source['articles'] if a['id'] == 'partb')
+          assert partb.get('section_type') in {'partb', 'part_b'}, partb.get('section_type')
+          partb['section_type'] = 'part_b'
           out = curated / '2025.json'
           out.write_text(json.dumps(source, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
           print(json.dumps({
