@@ -1,0 +1,591 @@
+{
+  "year": 2022,
+  "section_type": "reading",
+  "article_id": "text2",
+  "source_sha256": "6905f827ee76eb3d4165c7aaeb09af9387c60addbd5af8e959d5e8a9ddcfa7f8",
+  "source_pages": [
+    5,
+    6
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "04",
+  "article_context": "文章介绍美国“非退休”趋势：寿命延长、心理满足与财务压力共同推动越来越多人退休后继续工作，同时也提醒人们提前规划长期财务目标。",
+  "article": {
+    "year": 2022,
+    "section": "text2",
+    "title": "阅读 Text 2 · 为什么越来越多美国人选择“退休后继续工作”",
+    "background": "文章介绍美国“非退休”趋势：寿命延长、心理满足与财务压力共同推动越来越多人退休后继续工作，同时也提醒人们提前规划长期财务目标。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "More Americans are opting to work well into retirement, a growing trend that threatens to upend the old workforce model.",
+      "zh": "越来越多美国人选择退休后继续工作，这一趋势正在挑战传统劳动力模式。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "More Americans are opting to work well into retirement, a growing trend that threatens to upend the old workforce model.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text2/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 2,
+      "en": "One in three Americans who are at least 40 have, or plan to have a job in retirement to prepare for a longer life, according to a survey conducted by Harris Poll for TD Ameritrade.",
+      "zh": "哈里斯民调为德美利证券所做的调查显示，40岁及以上美国人中，每三人就有一人已经或计划退休后继续工作，以应对更长寿命。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "One in three Americans who are at least 40 have, or plan to have a job in retirement to prepare for a longer life, according to a survey conducted by Harris Poll for TD Ameritrade.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text2/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 2,
+      "en": "Even more surprising is that more than half of “unretirees”—those who plan to work in retirement or went back to work after retiring—said they would be employed in their later years even if they had enough money to settle down, the survey showed.",
+      "zh": "更令人意外的是，超过一半的“非退休者”——即计划退休后工作或退休后重返职场的人——表示，即使有足够的钱安度晚年，他们晚年仍会工作。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Even more surprising is that more than half of “unretirees”—those who plan to work in retirement or went back to work after retiring—said they would be employed in their later years even if they had enough money to settle down, the survey showed.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text2/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 3,
+      "en": "Financial needs aren't the only culprit for the “unretirement” trend.",
+      "zh": "财务需求并不是“非退休”趋势的唯一原因。",
+      "vocab": [
+        {
+          "word": "culprit",
+          "lemma": "culprit",
+          "level": 7,
+          "meaning": "原因",
+          "start": 32,
+          "end": 39
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Financial needs aren't the only culprit for the “unretirement” trend.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text2/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 3,
+      "en": "Other reasons, according to the study, include personal fulfillment such as staying mentally fit, preventing boredom or avoiding depression.",
+      "zh": "研究显示，其他原因还包括个人满足感，例如保持头脑活跃、避免无聊或预防抑郁。",
+      "vocab": [
+        {
+          "word": "fulfillment",
+          "lemma": "fulfillment",
+          "level": 6,
+          "meaning": "满足感",
+          "start": 56,
+          "end": 67
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Other reasons, according to the study, include personal fulfillment such as staying mentally fit, preventing boredom or avoiding depression.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text2/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 4,
+      "en": "“The concept of retirement is evolving,” said Christine Russell, senior manager of retirement at TD Ameritrade.",
+      "zh": "德美利证券退休业务高级经理克里斯蒂娜·拉塞尔说：“退休的概念正在变化。”",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "“The concept of retirement is evolving,” said Christine Russell, senior manager of retirement at TD Ameritrade.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text2/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 4,
+      "en": "“It's not just about finances.",
+      "zh": "“它不只是财务问题。",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "“It's not just about finances.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text2/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 4,
+      "en": "The value of work is also driving folks to continue working past retirement.”",
+      "zh": "工作的价值本身，也在推动人们退休后继续工作。”",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "The value of work is also driving folks to continue working past retirement.”",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text2/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 5,
+      "en": "One reason for the change in retirement patterns: Americans are living longer.",
+      "zh": "退休模式变化的一个原因，是美国人活得更久。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "One reason for the change in retirement patterns: Americans are living longer.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text2/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 5,
+      "en": "Older Americans are also the fastest-growing segment of the U.S. workforce.",
+      "zh": "老年美国人也是美国劳动力中增长最快的群体。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "Older Americans are also the fastest-growing segment of the U.S. workforce.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text2/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 5,
+      "en": "The percentage of retirement-age people in the labor force has doubled over the past three decades.",
+      "zh": "过去30年，达到退休年龄却仍在劳动力中的人口比例翻了一番。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "The percentage of retirement-age people in the labor force has doubled over the past three decades.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text2/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 5,
+      "en": "About 20% of people 65 and older were in the workforce in February 2019, up from an all-time low of 10% in January 1985, according to money manager United Income.",
+      "zh": "资产管理机构United Income数据显示，2019年2月，65岁及以上人口约20%仍在就业，高于1985年1月历史低点的10%。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "About 20% of people 65 and older were in the workforce in February 2019, up from an all-time low of 10% in January 1985, according to money manager United Income.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text2/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 6,
+      "en": "Because of longer life spans, Americans are also boosting their savings to preserve their nest eggs, the TD Ameritrade study showed, which surveyed 2,000 adults between 40 to 79.",
+      "zh": "德美利证券对2000名40至79岁成年人所做的调查显示，由于寿命延长，美国人也在增加储蓄，以保住养老积蓄。",
+      "vocab": [
+        {
+          "word": "preserve",
+          "lemma": "preserve",
+          "level": 6,
+          "meaning": "保住",
+          "start": 75,
+          "end": 83
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "Because of longer life spans, Americans are also boosting their savings to preserve their nest eggs, the TD Ameritrade study showed, which surveyed 2,000 adults between 40 to 79.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text2/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 6,
+      "en": "Six in 10 “unretirees” are increasing their savings in anticipation of a longer life.",
+      "zh": "十个“非退休者”中有六个正在增加储蓄，以应对更长寿命。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "Six in 10 “unretirees” are increasing their savings in anticipation of a longer life.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text2/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 6,
+      "en": "Among the most popular ways they are doing this, the company said, is by reducing their overall expenses, securing life insurance or maximizing their contributions to retirement accounts.",
+      "zh": "该公司称，最常见的做法包括减少总体开支、购买人寿保险，或尽可能提高退休账户缴款。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "Among the most popular ways they are doing this, the company said, is by reducing their overall expenses, securing life insurance or maximizing their contributions to retirement accounts.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text2/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 7,
+      "en": "Unfortunately, many people who are opting to work in retirement are preparing to do so because they are worried about making ends meet in their later years, said Brent Weiss, a co-founder at Baltimore-based financial-planning firm Facet Wealth.",
+      "zh": "巴尔的摩理财公司Facet Wealth联合创始人布伦特·韦斯说，遗憾的是，许多人之所以准备退休后继续工作，是因为担心晚年收支难以平衡。",
+      "vocab": [],
+      "discourse_function": "warning",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "Unfortunately, many people who are opting to work in retirement are preparing to do so because they are worried about making ends meet in their later years, said Brent Weiss, a co-founder at Baltimore-based financial-planning firm Facet Wealth.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text2/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 7,
+      "en": "He suggested that preretirees should speak with a financial adviser to set long-term financial goals.",
+      "zh": "他建议临近退休者与财务顾问沟通，设定长期财务目标。",
+      "vocab": [],
+      "discourse_function": "encourage",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "He suggested that preretirees should speak with a financial adviser to set long-term financial goals.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text2/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 8,
+      "en": "“The most challenging moments in life are getting married, starting a family and ultimately retiring,” Weiss said.",
+      "zh": "韦斯说：“人生最具挑战的时刻包括结婚、组建家庭以及最终退休。”",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "“The most challenging moments in life are getting married, starting a family and ultimately retiring,” Weiss said.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text2/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 8,
+      "en": "“It's not just a financial decision, but an emotional one.",
+      "zh": "“这不只是一个财务决定，也是一个情感决定。",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "“It's not just a financial decision, but an emotional one.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text2/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "paragraph": 8,
+      "en": "Many people believe they can't retire.”",
+      "zh": "许多人认为自己根本退不了休。”",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s20-01",
+          "text": "Many people believe they can't retire.”",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text2/s20-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}
