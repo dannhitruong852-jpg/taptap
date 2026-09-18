@@ -1,0 +1,268 @@
+name: Publish C Mode V2 2019-2024 to Pages once
+
+on:
+  push:
+    branches: ['c-mode-v2-launch-release']
+    paths: ['publish-2019-2024.trigger']
+
+permissions:
+  contents: write
+  actions: read
+
+env:
+  PYTHONPATH: .
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    outputs:
+      new_sha: ${{ steps.publish.outputs.new_sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: c-mode-v2-launch-release
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Verify frozen 2019-2024 release inputs
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          years=range(2019,2025)
+          catalog=json.loads(Path('kaoyan-reader-v1/content/catalog.json').read_text())
+          for year in years:
+              launch=json.loads(Path(f'reports/launch-audio/{year}.json').read_text())
+              assert launch.get('ok') is True, (year,launch)
+              assert launch.get('errors') == [], (year,launch.get('errors'))
+              rows=[x for x in catalog['articles'] if x['year']==year]
+              assert len(rows)==7,(year,len(rows))
+              for row in rows:
+                  content=Path('kaoyan-reader-v1')/row['content'].removeprefix('./')
+                  manifest=Path('kaoyan-reader-v1')/row['manifest'].removeprefix('./')
+                  assert content.is_file(),content
+                  assert manifest.is_file(),manifest
+                  data=json.loads(manifest.read_text())
+                  assert data['qa']['technical']=='passed',(year,row['id'])
+                  assert data.get('missing_segments')==[],(year,row['id'])
+                  assert len(data.get('sentences',{}))==row['sentences'],(year,row['id'])
+                  for sentence in data['sentences'].values():
+                      for key in ('path','mp3_path'):
+                          asset=Path('kaoyan-reader-v1')/sentence[key].removeprefix('./')
+                          assert asset.is_file(),asset
+          print('2019-2024 frozen release inputs verified')
+          PY
+
+      - name: Build additive Pages candidate from current production
+        id: baseline
+        run: |
+          git fetch origin gh-pages
+          baseline=$(git rev-parse origin/gh-pages)
+          echo "baseline_sha=$baseline" >> "$GITHUB_OUTPUT"
+          git worktree add --detach /tmp/site "$baseline"
+          cp /tmp/site/kaoyan-reader-v1/content/catalog.json /tmp/baseline-catalog.json
+
+          for year in 2019 2020 2021 2022 2023 2024; do
+            rm -rf "/tmp/site/kaoyan-reader-v1/content/$year"
+            cp -a "kaoyan-reader-v1/content/$year" "/tmp/site/kaoyan-reader-v1/content/$year"
+            rm -rf "/tmp/site/kaoyan-reader-v1/audio/$year"
+            mkdir -p "/tmp/site/kaoyan-reader-v1/audio"
+            cp -a "kaoyan-reader-v1/audio/$year" "/tmp/site/kaoyan-reader-v1/audio/$year"
+            mkdir -p /tmp/site/kaoyan-reader-v1/reports
+            cp "kaoyan-reader-v1/reports/c-v4-$year-merge.json" "/tmp/site/kaoyan-reader-v1/reports/c-v4-$year-merge.json"
+            mkdir -p /tmp/site/reports/launch-audio
+            cp "reports/launch-audio/$year.json" "/tmp/site/reports/launch-audio/$year.json"
+          done
+
+      - name: Merge catalog without touching existing 2002-2018
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from production_v2.catalog_merge import merge_catalogs
+
+          baseline=json.loads(Path('/tmp/baseline-catalog.json').read_text())
+          source=json.loads(Path('kaoyan-reader-v1/content/catalog.json').read_text())
+          years=set(range(2019,2025))
+          batch={
+              'version':source.get('version',1),
+              'articles':[x for x in source['articles'] if x['year'] in years]
+          }
+          assert len(batch['articles'])==42,len(batch['articles'])
+          candidate=merge_catalogs(baseline,batch)
+          expected=list(range(2002,2025))
+          assert candidate['years']==expected,(candidate['years'],expected)
+          Path('/tmp/site/kaoyan-reader-v1/content/catalog.json').write_text(
+              json.dumps(candidate,ensure_ascii=False,indent=2)+'\n'
+          )
+          PY
+
+      - name: Run release guard and full static integrity checks
+        run: |
+          python -m production_v2.cli_release_guard             --old /tmp/baseline-catalog.json             --new /tmp/site/kaoyan-reader-v1/content/catalog.json             --report /tmp/release-guard-2019-2024.json
+
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          root=Path('/tmp/site/kaoyan-reader-v1')
+          catalog=json.loads((root/'content/catalog.json').read_text())
+          assert catalog['years']==list(range(2002,2025))
+          errors=[]
+          summary={}
+          for year in range(2019,2025):
+              rows=[x for x in catalog['articles'] if x['year']==year]
+              if len(rows)!=7:
+                  errors.append(f'{year}: article count {len(rows)}')
+                  continue
+              total=0
+              for row in rows:
+                  content=root/row['content'].removeprefix('./')
+                  manifest=root/row['manifest'].removeprefix('./')
+                  if not content.is_file(): errors.append(f'missing {content}')
+                  if not manifest.is_file(): errors.append(f'missing {manifest}'); continue
+                  data=json.loads(manifest.read_text())
+                  if data.get('qa',{}).get('technical')!='passed': errors.append(f'{row["id"]}: technical')
+                  if data.get('missing_segments')!=[]: errors.append(f'{row["id"]}: missing segments')
+                  if len(data.get('sentences',{}))!=row['sentences']: errors.append(f'{row["id"]}: sentence count')
+                  total += len(data.get('sentences',{}))
+                  for sentence in data.get('sentences',{}).values():
+                      for key in ('path','mp3_path'):
+                          asset=root/sentence[key].removeprefix('./')
+                          if not asset.is_file(): errors.append(f'missing {asset}')
+              summary[str(year)]={'articles':len(rows),'sentences':total}
+          report={'ok':not errors,'years':list(range(2019,2025)),'summary':summary,'errors':errors}
+          Path('/tmp/release-validation-2019-2024.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+          assert not errors,errors[:20]
+          print(json.dumps(report,ensure_ascii=False))
+          PY
+
+          cd /tmp/site/kaoyan-reader-v1
+          npm test
+
+      - name: Commit additive release to gh-pages
+        id: publish
+        env:
+          BASELINE_SHA: ${{ steps.baseline.outputs.baseline_sha }}
+        working-directory: /tmp/site
+        run: |
+          mkdir -p reports
+          cp /tmp/release-guard-2019-2024.json reports/release-guard-2019-2024.json
+          cp /tmp/release-validation-2019-2024.json reports/release-validation-2019-2024.json
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          meta={
+              'batch_id':'2019-2024',
+              'pipeline_version':2,
+              'source_branch':'c-mode-v2-launch-release',
+              'previous_production_sha':os.environ['BASELINE_SHA'],
+              'state':'release_candidate',
+              'state_history':['content_frozen','audio_rendered','merged','validated','release_candidate'],
+              'years':list(range(2019,2025))
+          }
+          Path('reports/production-v2-release-2019-2024.json').write_text(json.dumps(meta,indent=2)+'\n')
+          PY
+
+          git fetch origin gh-pages
+          current=$(git rev-parse origin/gh-pages)
+          test "$current" = "$BASELINE_SHA"
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add kaoyan-reader-v1/content kaoyan-reader-v1/audio kaoyan-reader-v1/reports reports
+          git commit -m "feat: publish C Mode V2 2019-2024"
+          content_sha=$(git rev-parse HEAD)
+          export CONTENT_SHA="$content_sha"
+
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          path=Path('reports/production-v2-release-2019-2024.json')
+          data=json.loads(path.read_text())
+          data['state']='published'
+          data['state_history']=['content_frozen','audio_rendered','merged','validated','release_candidate','published']
+          data['content_commit_sha']=os.environ['CONTENT_SHA']
+          path.write_text(json.dumps(data,indent=2)+'\n')
+          PY
+
+          git add reports/production-v2-release-2019-2024.json
+          git commit -m "chore: finalize C Mode V2 2019-2024 release state"
+          new_sha=$(git rev-parse HEAD)
+          git push origin HEAD:gh-pages
+          echo "new_sha=$new_sha" >> "$GITHUB_OUTPUT"
+
+  verify_pages:
+    needs: publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for matching Pages deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARGET_SHA: ${{ needs.publish.outputs.new_sha }}
+        run: |
+          for attempt in $(seq 1 36); do
+            payload=$(gh api "/repos/$GITHUB_REPOSITORY/actions/runs?branch=gh-pages&per_page=40")
+            row=$(printf '%s' "$payload" | python -c 'import json,sys,os; d=json.load(sys.stdin); t=os.environ["TARGET_SHA"]; rows=[r for r in d.get("workflow_runs",[]) if r.get("head_sha")==t and r.get("name")=="pages build and deployment"]; print(json.dumps(rows[0]) if rows else "")')
+            if [ -n "$row" ]; then
+              status=$(printf '%s' "$row" | python -c 'import json,sys; print(json.load(sys.stdin).get("status",""))')
+              conclusion=$(printf '%s' "$row" | python -c 'import json,sys; print(json.load(sys.stdin).get("conclusion") or "")')
+              if [ "$status" = completed ]; then
+                test "$conclusion" = success
+                echo "Pages deployment succeeded for $TARGET_SHA"
+                exit 0
+              fi
+            fi
+            sleep 10
+          done
+          echo "Pages deployment verification timed out" >&2
+          exit 4
+
+      - name: Live smoke test 2002-2024 catalog and 2019-2024 assets
+        run: |
+          python - <<'PY'
+          import json, time, urllib.request
+          from urllib.parse import urljoin
+
+          base='https://dannhitruong852-jpg.github.io/taptap/kaoyan-reader-v1/'
+
+          def fetch_json(url, tries=12):
+              last=None
+              for _ in range(tries):
+                  try:
+                      req=urllib.request.Request(url,headers={'Cache-Control':'no-cache','User-Agent':'c-mode-launch-smoke'})
+                      with urllib.request.urlopen(req,timeout=20) as r:
+                          return json.load(r)
+                  except Exception as e:
+                      last=e
+                      time.sleep(5)
+              raise last
+
+          def head_ok(url):
+              req=urllib.request.Request(url,method='HEAD',headers={'Cache-Control':'no-cache','User-Agent':'c-mode-launch-smoke'})
+              with urllib.request.urlopen(req,timeout=20) as r:
+                  assert 200 <= r.status < 400,(url,r.status)
+
+          head_ok(base+'index.html')
+          head_ok(base+'app.js')
+          catalog=fetch_json(base+'content/catalog.json')
+          assert catalog['years']==list(range(2002,2025)),catalog['years']
+
+          for year in range(2019,2025):
+              rows=[x for x in catalog['articles'] if x['year']==year]
+              assert len(rows)==7,(year,len(rows))
+              for row in rows:
+                  fetch_json(urljoin(base,row['content'].removeprefix('./')))
+                  manifest=fetch_json(urljoin(base,row['manifest'].removeprefix('./')))
+                  assert manifest.get('qa',{}).get('technical')=='passed',row['id']
+                  assert manifest.get('missing_segments')==[],row['id']
+                  first=next(iter(manifest['sentences'].values()))
+                  head_ok(urljoin(base,first['mp3_path'].removeprefix('./')))
+          print('LIVE_SMOKE_OK: 2002-2024 catalog; 2019-2024 content/manifests/audio reachable')
+          PY
