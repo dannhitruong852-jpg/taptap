@@ -1,4 +1,4 @@
-name: C Mode review evidence audit once
+name: C Mode review evidence repair once
 
 on:
   push:
@@ -9,21 +9,24 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  audit:
+  repair:
     runs-on: ubuntu-latest
     env:
       PYTHONPATH: .:voice-pipeline:content-pipeline
+      BRANCH: c-mode-v2-2013-2018-production
+      BATCH_MANIFEST: batch-manifests/2013-2018.json
     steps:
       - uses: actions/checkout@v4
         with:
           ref: c-mode-v2-2013-2018-production
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Audit stale or corrupt reviewed candidate evidence
+      - name: Repair reviewed candidate containers from canonical reviewed source
         run: |
           python - <<'PY'
           import hashlib, json
@@ -35,59 +38,97 @@ jobs:
               2017:['cloze','text1','text2','text3','text4'],
               2018:['partb','translation'],
           }
+          required_flags=(
+              'source_scope_verified','scope_exclusions_reviewed','text_fidelity_reviewed',
+              'translation_alignment_reviewed','sentence_alignment_reviewed',
+          )
           root=Path('.')
           curated=root/'content-pipeline/curated'
+          decoder=json.JSONDecoder()
 
-          def hashes(value):
-              variants={
-                  'compact_sorted_utf8':json.dumps(value,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode('utf-8'),
-                  'compact_utf8':json.dumps(value,ensure_ascii=False,separators=(',',':')).encode('utf-8'),
-                  'pretty_utf8':(json.dumps(value,ensure_ascii=False,indent=2)+'\n').encode('utf-8'),
-                  'compact_sorted_ascii':json.dumps(value,ensure_ascii=True,sort_keys=True,separators=(',',':')).encode('utf-8'),
-              }
-              return {k:hashlib.sha256(v).hexdigest() for k,v in variants.items()}
+          def canonical_hash(article):
+              raw=json.dumps(article,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode('utf-8')
+              return hashlib.sha256(raw).hexdigest()
 
+          def extract_qa(path):
+              raw=path.read_bytes()
+              try:
+                  return json.loads(raw.decode('utf-8'))['qa']
+              except Exception:
+                  marker=b'\n  "qa": '
+                  pos=raw.rfind(marker)
+                  assert pos >= 0, f'{path}: QA marker not found'
+                  tail=raw[pos+len(marker):].decode('utf-8')
+                  qa,end=decoder.raw_decode(tail)
+                  assert isinstance(qa,dict), f'{path}: QA tail is not an object'
+                  return qa
+
+          hashes=set()
+          source_shas=set()
+          for article_id in ['cloze','text1','text2','text3','text4','partb','translation']:
+              qa=extract_qa(root/f'reports/content-freeze/2015/{article_id}.candidate.json')
+              hashes.add(qa.get('curated_payload_sha256'))
+              source_shas.add(qa.get('source_sha256'))
+          assert len(hashes)==1 and None not in hashes, hashes
+          assert len(source_shas)==1 and None not in source_shas, source_shas
+          print('2015 historical year-level QA hash:',next(iter(hashes)))
+
+          repaired=[]
           for year,article_ids in targets.items():
               source=build_curated_year.load_curated_source(curated,year)
               source_articles={a['id']:a for a in source['articles']}
-              print(f'=== YEAR {year} ===')
+              assert set(article_ids) <= set(source_articles)
               for article_id in article_ids:
-                  source_article=source_articles[article_id]
                   path=root/f'reports/content-freeze/{year}/{article_id}.candidate.json'
-                  raw=path.read_bytes()
-                  print(f'--- {year}/{article_id} candidate_bytes={len(raw)} ---')
-                  try:
-                      text=raw.decode('utf-8')
-                      candidate=json.loads(text)
-                  except Exception as exc:
-                      print('PARSE_ERROR',type(exc).__name__,repr(str(exc)))
-                      if isinstance(exc,UnicodeDecodeError):
-                          pos=exc.start
-                          print('BYTE_CONTEXT',raw[max(0,pos-80):min(len(raw),pos+80)].hex())
-                          print('ASCII_CONTEXT',repr(raw[max(0,pos-160):min(len(raw),pos+160)].decode('utf-8',errors='replace')))
-                      else:
-                          print('TEXT_CONTEXT',repr(raw.decode('utf-8',errors='replace')[:8000]))
-                      print('SOURCE_ARTICLE_HASHES',json.dumps(hashes(source_article),sort_keys=True))
-                      continue
-                  qa=candidate.get('qa') or {}
-                  article=candidate.get('article') or {}
-                  print('QA_HASH',qa.get('curated_payload_sha256'))
-                  print('QA_KEYS',sorted(qa.keys()))
-                  print('SOURCE_ARTICLE_HASHES',json.dumps(hashes(source_article),sort_keys=True))
-                  print('CANDIDATE_ARTICLE_HASHES',json.dumps(hashes(article),sort_keys=True))
-                  rows_a=article.get('rows') or []
-                  rows_b=source_article.get('rows') or []
-                  print('ROW_COUNTS',len(rows_a),len(rows_b))
-                  for i,(a,b) in enumerate(zip(rows_a,rows_b),1):
-                      if a != b:
-                          print('DIFF_ROW',i)
-                          print('CANDIDATE',json.dumps(a,ensure_ascii=False))
-                          print('CANONICAL',json.dumps(b,ensure_ascii=False))
-                  if len(rows_a) != len(rows_b):
-                      print('ROW_COUNT_MISMATCH')
-                  for key in sorted(set(article)|set(source_article)):
-                      if key == 'rows':
-                          continue
-                      if article.get(key) != source_article.get(key):
-                          print('META_DIFF',key,json.dumps(article.get(key),ensure_ascii=False),json.dumps(source_article.get(key),ensure_ascii=False))
+                  qa=extract_qa(path)
+                  article=source_articles[article_id]
+                  assert qa.get('review_schema_version')=='c-mode-v2-1',(year,article_id,qa)
+                  for flag in required_flags:
+                      assert qa.get(flag) is True,(year,article_id,flag,qa.get(flag))
+                  assert qa.get('status')=='reviewed_candidate',(year,article_id,qa.get('status'))
+                  assert not (qa.get('unresolved_sections') or []),(year,article_id,qa.get('unresolved_sections'))
+                  assert qa.get('source_sha256')==source.get('source_sha256'),(
+                      year,article_id,qa.get('source_sha256'),source.get('source_sha256')
+                  )
+                  count=len(article.get('rows') or [])
+                  for key in ('sentence_count','expected_sentences','actual_sentences'):
+                      assert int(qa.get(key,-1))==count,(year,article_id,key,qa.get(key),count)
+                  if year in (2017,2018):
+                      assert qa.get('curated_payload_sha256')==canonical_hash(article),(
+                          year,article_id,qa.get('curated_payload_sha256'),canonical_hash(article)
+                      )
+                  doc={'year':year,'article':article,'qa':qa}
+                  path.write_text(json.dumps(doc,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+                  repaired.append(str(path))
+                  print('repaired',year,article_id,'rows',count)
+          print('repaired_count',len(repaired))
           PY
+      - name: Rebuild all batch content and run exact preflight gate
+        run: |
+          for year in 2013 2014 2015 2016 2017 2018; do
+            python content-pipeline/build_curated_year.py --year "$year"
+            python content-pipeline/build_bilingual_highlights.py --year "$year"
+          done
+          python -m unittest discover -s production_v2/tests -v
+          python -m unittest             content-pipeline/tests/test_bilingual_highlights.py             content-pipeline/tests/test_build_bilingual_highlights.py             content-pipeline/tests/test_build_curated_year.py -v
+          python -m production_v2.cli_validate_batch             --manifest "$BATCH_MANIFEST"             --catalog kaoyan-reader-v1/content/catalog.json             --reader-root kaoyan-reader-v1             --phase preflight             --report /tmp/preflight-report.json
+          cat /tmp/preflight-report.json
+      - name: Commit repaired evidence only after green preflight
+        run: |
+          git add             reports/content-freeze/2015/cloze.candidate.json             reports/content-freeze/2015/text1.candidate.json             reports/content-freeze/2015/text2.candidate.json             reports/content-freeze/2015/text3.candidate.json             reports/content-freeze/2017/cloze.candidate.json             reports/content-freeze/2017/text1.candidate.json             reports/content-freeze/2017/text2.candidate.json             reports/content-freeze/2017/text3.candidate.json             reports/content-freeze/2017/text4.candidate.json             reports/content-freeze/2018/partb.candidate.json             reports/content-freeze/2018/translation.candidate.json
+          if git diff --cached --quiet; then
+            echo 'No evidence changes to commit.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'fix: restore reviewed candidate evidence containers'
+          git pull --rebase origin "$BRANCH"
+          git push origin HEAD:"$BRANCH"
+      - name: Summary
+        if: always()
+        run: |
+          echo '## Reviewed evidence repair' >> "$GITHUB_STEP_SUMMARY"
+          if [ -f /tmp/preflight-report.json ]; then
+            cat /tmp/preflight-report.json >> "$GITHUB_STEP_SUMMARY"
+          fi
