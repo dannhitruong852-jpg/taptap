@@ -376,12 +376,12 @@ jobs:
         shell: bash
         run: |
           while read -r year; do
-            test -d "/tmp/merged/$year/kaoyan-reader-v1/audio/$year/v4"
-            test -s "/tmp/merged/$year/kaoyan-reader-v1/reports/c-v4-$year-merge.json"
+            test -d "/tmp/merged/$year/audio/$year/v4"
+            test -s "/tmp/merged/$year/reports/c-v4-$year-merge.json"
             rm -rf "kaoyan-reader-v1/audio/$year/v4"
             mkdir -p "kaoyan-reader-v1/audio/$year"
-            cp -a "/tmp/merged/$year/kaoyan-reader-v1/audio/$year/v4" "kaoyan-reader-v1/audio/$year/v4"
-            cp "/tmp/merged/$year/kaoyan-reader-v1/reports/c-v4-$year-merge.json" "kaoyan-reader-v1/reports/c-v4-$year-merge.json"
+            cp -a "/tmp/merged/$year/audio/$year/v4" "kaoyan-reader-v1/audio/$year/v4"
+            cp "/tmp/merged/$year/reports/c-v4-$year-merge.json" "kaoyan-reader-v1/reports/c-v4-$year-merge.json"
           done < /tmp/years.txt
       - name: Verify staged release assets against frozen production evidence
         run: |
