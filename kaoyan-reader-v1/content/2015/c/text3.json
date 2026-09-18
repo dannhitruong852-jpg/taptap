@@ -1,0 +1,519 @@
+{
+  "year": 2015,
+  "section_type": "reading",
+  "article_id": "text3",
+  "source_sha256": "9a1919b936cade4ea5b1567aa6102b7cb233d54c9f480795d100ce2e70f924ae",
+  "source_pages": [
+    8,
+    9
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "05",
+  "article_context": "分析美国企业话语从目标、战略转向旅程、激情、愿景和团队等词汇的变化，以及这种语言如何塑造员工对工作的意义感与忠诚。",
+  "article": {
+    "year": 2015,
+    "section": "text3",
+    "title": "阅读 Text 3 · 企业语言为何越来越“情绪化”",
+    "background": "分析美国企业话语从目标、战略转向旅程、激情、愿景和团队等词汇的变化，以及这种语言如何塑造员工对工作的意义感与忠诚。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "Even in traditional offices, \"the lingua franca of corporate America has gotten much more emotional and much more right-brained than it was 20 years ago,\" said Harvard Business School professor Nancy Koehn.",
+      "zh": "哈佛商学院教授南希·科恩说，即便在传统办公室里，“美国企业界的通用语言也比20年前情绪化得多、更加偏向右脑表达”。",
+      "vocab": [
+        {
+          "word": "lingua franca",
+          "lemma": "lingua franca",
+          "level": 8,
+          "meaning": "通用语言",
+          "start": 34,
+          "end": 47
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "Even in traditional offices, \"the lingua franca of corporate America has gotten much more emotional and much more right-brained than it was 20 years ago,\" said Harvard Business School professor Nancy Koehn.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-text3/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "She started spinning off examples.",
+      "zh": "她随即列举起例子。",
+      "vocab": [],
+      "discourse_function": "sequence",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "She started spinning off examples.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-text3/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "\"If you and I parachuted back to Fortune 500 companies in 1990, we would see much less frequent use of terms like journey, mission, passion.",
+      "zh": "“如果你我一下子回到1990年的《财富》500强公司，会发现 journey、mission、passion 这类词远没有今天常见。",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "\"If you and I parachuted back to Fortune 500 companies in 1990, we would see much less frequent use of terms like journey, mission, passion.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-text3/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 1,
+      "en": "There were goals, there were strategies, there were objectives, but we didn't talk about energy; we didn't talk about passion.",
+      "zh": "“那时会谈目标、战略和任务，却不会谈能量，也不会谈激情。”",
+      "vocab": [],
+      "discourse_function": "explain_quote",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "There were goals, there were strategies, there were objectives, but we didn't talk about energy; we didn't talk about passion.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-text3/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "Koehn pointed out that this new era of corporate vocabulary is very \"team\"-oriented - and not by coincidence.",
+      "zh": "科恩指出，这一新时代的企业词汇非常强调“团队”，而这并非偶然。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Koehn pointed out that this new era of corporate vocabulary is very \"team\"-oriented - and not by coincidence.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-text3/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "\"Let's not forget sports - in male-dominated corporate America, it's still a big deal.",
+      "zh": "“别忘了体育——在男性主导的美国企业界，它依然十分重要。",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "\"Let's not forget sports - in male-dominated corporate America, it's still a big deal.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-text3/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "It's not explicitly conscious; it's the idea that I'm a coach, and you're my team, and we're in this together. ",
+      "zh": "“这未必是明确自觉的想法；更像是‘我是教练，你们是我的团队，我们一起干’。”",
+      "vocab": [],
+      "discourse_function": "explain_quote",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "It's not explicitly conscious; it's the idea that I'm a coach, and you're my team, and we're in this together. ",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-text3/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 2,
+      "en": "There are lots and lots of CEOs in very different companies, but most think of themselves as coaches and this is their team and they want to win.\"",
+      "zh": "“很多不同公司的CEO都把自己看成教练，把员工看成自己的团队，而他们想赢。”",
+      "vocab": [],
+      "discourse_function": "explain_quote",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "There are lots and lots of CEOs in very different companies, but most think of themselves as coaches and this is their team and they want to win.\"",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-text3/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 3,
+      "en": "These terms are also intended to infuse work with meaning - and, as Rakesh Khurana, another professor, points out, increase allegiance to the firm.",
+      "zh": "这些词还意在为工作注入意义；正如另一位教授拉凯什·库拉纳所指出的，它们也会增强员工对公司的忠诚。",
+      "vocab": [
+        {
+          "word": "allegiance",
+          "lemma": "allegiance",
+          "level": 7,
+          "meaning": "忠诚",
+          "start": 124,
+          "end": 134
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "These terms are also intended to infuse work with meaning - and, as Rakesh Khurana, another professor, points out, increase allegiance to the firm.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-text3/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 3,
+      "en": "\"You have the importation of terminology that historically used to be associated with non-profit organizations and religious organizations: terms like vision, values, passion, and purpose,\" said Khurana.",
+      "zh": "库拉纳说：“企业引入了过去通常与非营利组织和宗教组织联系在一起的术语，比如愿景、价值观、激情和使命。”",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "\"You have the importation of terminology that historically used to be associated with non-profit organizations and religious organizations: terms like vision, values, passion, and purpose,\" said Khurana.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-text3/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 4,
+      "en": "This new focus on personal fulfillment can help keep employees motivated amid increasingly loud debates over work-life balance.",
+      "zh": "在围绕工作与生活平衡的争论日益激烈之际，这种对个人满足感的新关注有助于维持员工的工作动力。",
+      "vocab": [
+        {
+          "word": "fulfillment",
+          "lemma": "fulfillment",
+          "level": 7,
+          "meaning": "满足感",
+          "start": 27,
+          "end": 38
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "This new focus on personal fulfillment can help keep employees motivated amid increasingly loud debates over work-life balance.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-text3/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 4,
+      "en": "The \"mommy wars\" of the 1990s are still going on today, prompting arguments about why women still can't have it all and books like Sheryl Sandberg's Lean In, whose title has become a buzzword in its own right.",
+      "zh": "20世纪90年代的“妈妈之战”至今仍在延续，引发了“为什么女性依然无法兼得一切”等争论，也催生了谢丽尔·桑德伯格的《向前一步》等书，而书名本身也成了流行语。",
+      "vocab": [
+        {
+          "word": "buzzword",
+          "lemma": "buzzword",
+          "level": 7,
+          "meaning": "流行语",
+          "start": 183,
+          "end": 191
+        }
+      ],
+      "discourse_function": "example",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "The \"mommy wars\" of the 1990s are still going on today, prompting arguments about why women still can't have it all and books like Sheryl Sandberg's Lean In, whose title has become a buzzword in its own right.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-text3/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 4,
+      "en": "Terms like unplug, offline, life-hack, bandwidth, and capacity are all about setting boundaries between the office and the home.",
+      "zh": "unplug、offline、life-hack、bandwidth、capacity 等词，都围绕着如何在办公室与家庭之间划定边界。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "Terms like unplug, offline, life-hack, bandwidth, and capacity are all about setting boundaries between the office and the home.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-text3/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 4,
+      "en": "But if your work is your \"passion,\" you'll be more likely to devote yourself to it, even if that means going home for dinner and then working long after the kids are in bed.",
+      "zh": "但如果工作就是你的“激情”，你便更可能把自己投入其中，即使这意味着回家吃完晚饭后，还要在孩子入睡很久之后继续工作。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "But if your work is your \"passion,\" you'll be more likely to devote yourself to it, even if that means going home for dinner and then working long after the kids are in bed.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-text3/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 5,
+      "en": "But this seems to be the irony of office speak: Everyone makes fun of it, but managers love it, companies depend on it, and regular people willingly absorb it.",
+      "zh": "然而，这似乎正是办公室话语的讽刺之处：人人都拿它开玩笑，经理却喜欢它，公司依赖它，普通人也自愿吸收它。",
+      "vocab": [],
+      "discourse_function": "irony",
+      "prosody_focus": [],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "But this seems to be the irony of office speak: Everyone makes fun of it, but managers love it, companies depend on it, and regular people willingly absorb it.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "ironic",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-text3/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 5,
+      "en": "As a linguist once said, \"You can get people to think it's nonsense at the same time that you buy into it.\"",
+      "zh": "正如一位语言学家曾说：“你可以一边让人觉得它是胡扯，一边又让人真正接受它。”",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "As a linguist once said, \"You can get people to think it's nonsense at the same time that you buy into it.\"",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-text3/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 5,
+      "en": "In a workplace that's fundamentally indifferent to your life and its meaning, office speak can help you figure out how you relate to your work - and how your work defines who you are.",
+      "zh": "在一个从根本上并不关心你的人生及其意义的工作场所里，办公室话语却能帮助你理解自己与工作的关系，以及工作如何定义你是谁。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "In a workplace that's fundamentally indifferent to your life and its meaning, office speak can help you figure out how you relate to your work - and how your work defines who you are.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-text3/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

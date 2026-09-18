@@ -1,0 +1,429 @@
+{
+  "year": 2013,
+  "section_type": "reading",
+  "article_id": "text1",
+  "source_sha256": "ec8d1d5ddaf1d573083e0d0835d97835a0d68e7b7d797c749385cb0cb06e711b",
+  "source_pages": [
+    3,
+    4
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "01",
+  "article_context": "讨论自动化、全球化与信息技术如何挤压平均技能岗位，并主张通过更高水平教育获得独特价值。笑话开场，随后转入理性经济分析。",
+  "article": {
+    "year": 2013,
+    "section": "text1",
+    "title": "阅读一 · 平均水平已经不够",
+    "background": "讨论自动化、全球化与信息技术如何挤压平均技能岗位，并主张通过更高水平教育获得独特价值。笑话开场，随后转入理性经济分析。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "In an essay entitled \"Making It in America,\" the author Adam Davidson relates a joke from cotton country about just how much a modern textile mill has been automated: The average mill has only two employees today, \"a man and a dog.",
+      "zh": "在一篇题为《在美国闯出一片天地》的文章中，作者亚当·戴维森讲了一个来自棉纺地区的笑话，用来说明现代纺织厂的自动化程度有多高：如今，一家普通工厂只需要两名“员工”——一个人和一条狗。",
+      "vocab": [],
+      "discourse_function": "story",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "In an essay entitled \"Making It in America,\" the author Adam Davidson relates a joke from cotton country about just how much a modern textile mill has been automated: The average mill has only two employees today, \"a man and a dog.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2013/c-text1/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "The man is there to feed the dog, and the dog is there to keep the man away from the machines.\"",
+      "zh": "人的工作是喂狗，而狗的工作是看住这个人，不让他靠近机器。",
+      "vocab": [],
+      "discourse_function": "story",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "The man is there to feed the dog, and the dog is there to keep the man away from the machines.\"",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2013/c-text1/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 2,
+      "en": "Davidson's article is one of a number of pieces that have recently appeared making the point that the reason we have such stubbornly high unemployment and declining middle-class incomes today is largely because of the big drop in demand because of the Great Recession, but it is also because of the advances in both globalization and the information technology revolution, which are more rapidly than ever replacing labor with machines or foreign workers.",
+      "zh": "戴维森的文章是近来许多文章之一，指出如今失业率居高不下、中产阶层收入下降，主要是因为大衰退导致需求大幅减少，同时也因为全球化和信息技术革命不断推进，它们正以前所未有的速度用机器或外国工人取代劳动力。",
+      "vocab": [
+        {
+          "word": "stubbornly",
+          "lemma": "stubbornly",
+          "level": 6,
+          "meaning": "顽固地；持续不退地",
+          "start": 122,
+          "end": 132
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Davidson's article is one of a number of pieces that have recently appeared making the point that the reason we have such stubbornly high unemployment and declining middle-class incomes today is largely because of the big drop in demand because of the Great Recession, but it is also because of the advances in both globalization and the information technology revolution, which are more rapidly than ever replacing labor with machines or foreign workers.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2013/c-text1/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 3,
+      "en": "In the past, workers with average skills, doing an average job, could earn an average lifestyle.",
+      "zh": "过去，技能一般的工人做着普通工作，也能过上普通的生活。",
+      "vocab": [],
+      "discourse_function": "sequence",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "In the past, workers with average skills, doing an average job, could earn an average lifestyle.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2013/c-text1/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 3,
+      "en": "But, today, average is officially over.",
+      "zh": "但今天，“平均水平”正式成为过去。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "But, today, average is officially over.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2013/c-text1/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 3,
+      "en": "Being average just won't earn you what it used to.",
+      "zh": "仅仅达到平均水平，已经无法再让你得到过去那样的回报。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "Being average just won't earn you what it used to.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2013/c-text1/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 3,
+      "en": "It can't when so many more employers have so much more access to so much more above average cheap foreign labor, cheap robotics, cheap software, cheap automation and cheap genius.",
+      "zh": "如今太多雇主能获得大量高于平均水平的廉价外国劳动力、廉价机器人技术、廉价软件、廉价自动化和廉价天才人才，因此平均水平已无法带来过去的回报。",
+      "vocab": [
+        {
+          "word": "robotics",
+          "lemma": "robotics",
+          "level": 7,
+          "meaning": "机器人技术",
+          "start": 119,
+          "end": 127
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "It can't when so many more employers have so much more access to so much more above average cheap foreign labor, cheap robotics, cheap software, cheap automation and cheap genius.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2013/c-text1/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 3,
+      "en": "Therefore, everyone needs to find their extra - their unique value contribution that makes them stand out in whatever is their field of employment.",
+      "zh": "因此，每个人都需要找到自己的“额外价值”——一种独特的价值贡献，让自己在所从事的领域中脱颖而出。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "Therefore, everyone needs to find their extra - their unique value contribution that makes them stand out in whatever is their field of employment.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2013/c-text1/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 4,
+      "en": "Yes, new technology has been eating jobs forever, and always will.",
+      "zh": "没错，新技术一直都在吞噬工作岗位，而且今后也会如此。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "Yes, new technology has been eating jobs forever, and always will.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2013/c-text1/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 4,
+      "en": "But there's been an acceleration.",
+      "zh": "但这种趋势近来已经出现明显的加速。",
+      "vocab": [
+        {
+          "word": "acceleration",
+          "lemma": "acceleration",
+          "level": 6,
+          "meaning": "加速；加快",
+          "start": 20,
+          "end": 32
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "But there's been an acceleration.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2013/c-text1/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 4,
+      "en": "As Davidson notes, \"In the 10 years ending in 2009, [U.S.] factories shed workers so fast that they erased almost all the gains of the previous 70 years; roughly one out of every three manufacturing jobs - about 6 million in total - disappeared.\"",
+      "zh": "正如戴维森所指出的：“截至2009年的十年间，美国工厂裁员速度之快，几乎抹去了此前70年取得的全部就业增长；大约每三个制造业岗位中就有一个消失，总数约为600万个。”",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "As Davidson notes, \"In the 10 years ending in 2009, [U.S.] factories shed workers so fast that they erased almost all the gains of the previous 70 years; roughly one out of every three manufacturing jobs - about 6 million in total - disappeared.\"",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2013/c-text1/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 5,
+      "en": "There will always be change - new jobs, new products, new services.",
+      "zh": "变化永远都会发生——会有新的工作、新的产品和新的服务。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "There will always be change - new jobs, new products, new services.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2013/c-text1/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 5,
+      "en": "But the one thing we know for sure is that with each advance in globalization and the I.T. revolution, the best jobs will require workers to have more and better education to make themselves above average.",
+      "zh": "但有一点我们可以确定：全球化和信息技术革命每向前一步，最好的工作岗位就会要求劳动者接受更多、更好的教育，使自己达到高于平均水平。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "But the one thing we know for sure is that with each advance in globalization and the I.T. revolution, the best jobs will require workers to have more and better education to make themselves above average.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2013/c-text1/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 6,
+      "en": "In a world where average is officially over, there are many things we need to do to support employment, but nothing would be more important than passing some kind of G.I. Bill for the 21st century that ensures that every American has access to post-high school education.",
+      "zh": "在一个“平均水平已经过时”的世界里，为了促进就业，我们需要做很多事情；但没有什么比通过某种面向21世纪的《军人权利法案》更重要，它应确保每个美国人都能接受高中后的教育。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "In a world where average is officially over, there are many things we need to do to support employment, but nothing would be more important than passing some kind of G.I. Bill for the 21st century that ensures that every American has access to post-high school education.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2013/c-text1/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,707 @@
+{
+  "year": 2014,
+  "section_type": "reading",
+  "article_id": "text4",
+  "source_sha256": "63da0a016fba9a18f4344ad8ce79c594e6703e84e77996c665f91f3b288f9fde",
+  "source_pages": [
+    8,
+    9
+  ],
+  "accent": "en-GB",
+  "primary_actor_id": "14",
+  "article_context": "从英国政策与财政角度论证住房对经济增长的重要性，讨论可负担住房、地方借贷上限、租赁环境与公共拨款。采用成熟克制的英式政策评论语气。",
+  "article": {
+    "year": 2014,
+    "section": "text4",
+    "title": "阅读 Text 4 · 英国住房为何应被视为基础设施问题",
+    "background": "从英国政策与财政角度论证住房对经济增长的重要性，讨论可负担住房、地方借贷上限、租赁环境与公共拨款。采用成熟克制的英式政策评论语气。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "When the government talks about infrastructure contributing to the economy the focus is usually on roads, railways, broadband and energy.",
+      "zh": "政府谈到基础设施如何促进经济时，通常关注的是公路、铁路、宽带和能源。",
+      "vocab": [
+        {
+          "word": "infrastructure",
+          "lemma": "infrastructure",
+          "level": 6,
+          "meaning": "基础设施",
+          "start": 32,
+          "end": 46
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "When the government talks about infrastructure contributing to the economy the focus is usually on roads, railways, broadband and energy.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text4/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Housing is seldom mentioned.",
+      "zh": "住房却很少被提及。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Housing is seldom mentioned.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text4/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 2,
+      "en": "Why is that?",
+      "zh": "为什么会这样？",
+      "vocab": [],
+      "discourse_function": "ask",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Why is that?",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text4/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "To some extent the housing sector must shoulder the blame.",
+      "zh": "在一定程度上，住房行业本身也必须承担责任。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "To some extent the housing sector must shoulder the blame.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text4/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "We have not been good at communicating the real value that housing can contribute to economic growth.",
+      "zh": "我们并不善于向外界说明住房能够为经济增长贡献的真实价值。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "We have not been good at communicating the real value that housing can contribute to economic growth.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text4/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "Then there is the scale of the typical housing project.",
+      "zh": "其次，还有一般住房项目的规模问题。",
+      "vocab": [],
+      "discourse_function": "sequence",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "Then there is the scale of the typical housing project.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text4/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "It is hard to shove for attention among multibillion-pound infrastructure projects, so it is inevitable that the attention is focused elsewhere.",
+      "zh": "与动辄数十亿英镑的基础设施项目争夺关注并不容易，因此注意力转向别处也就不可避免。",
+      "vocab": [
+        {
+          "word": "infrastructure",
+          "lemma": "infrastructure",
+          "level": 6,
+          "meaning": "基础设施",
+          "start": 59,
+          "end": 73
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "It is hard to shove for attention among multibillion-pound infrastructure projects, so it is inevitable that the attention is focused elsewhere.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text4/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 2,
+      "en": "But perhaps the most significant reason is that the issue has always been so politically charged.",
+      "zh": "但最重要的原因或许在于，住房问题一直具有如此强烈的政治色彩。",
+      "vocab": [
+        {
+          "word": "politically charged",
+          "lemma": "politically charged",
+          "level": 8,
+          "meaning": "政治色彩",
+          "start": 77,
+          "end": 96
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "But perhaps the most significant reason is that the issue has always been so politically charged.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text4/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 3,
+      "en": "Nevertheless, the affordable housing situation is desperate.",
+      "zh": "尽管如此，可负担住房的形势已经十分严峻。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "Nevertheless, the affordable housing situation is desperate.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text4/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 3,
+      "en": "Waiting lists increase all the time and we are simply not building enough new homes.",
+      "zh": "等候名单不断变长，而我们建造的新住房就是不够。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "Waiting lists increase all the time and we are simply not building enough new homes.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text4/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 4,
+      "en": "The comprehensive spending review offers an opportunity for the government to help rectify this.",
+      "zh": "全面支出审查给政府提供了帮助纠正这一局面的机会。",
+      "vocab": [
+        {
+          "word": "rectify",
+          "lemma": "rectify",
+          "level": 7,
+          "meaning": "纠正",
+          "start": 83,
+          "end": 90
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "The comprehensive spending review offers an opportunity for the government to help rectify this.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text4/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 4,
+      "en": "It needs to put historical prejudices to one side and take some steps to address our urgent housing need.",
+      "zh": "政府需要把历史成见放到一边，采取措施应对迫切的住房需求。",
+      "vocab": [
+        {
+          "word": "prejudices",
+          "lemma": "prejudices",
+          "level": 7,
+          "meaning": "成见",
+          "start": 27,
+          "end": 37
+        }
+      ],
+      "discourse_function": "action_turn",
+      "prosody_focus": [],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "It needs to put historical prejudices to one side and take some steps to address our urgent housing need.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "lively",
+          "intensity": 2,
+          "rate": 1.04,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text4/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 5,
+      "en": "There are some indications that it is preparing to do just that.",
+      "zh": "有一些迹象表明，政府正准备这样做。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "There are some indications that it is preparing to do just that.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text4/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 5,
+      "en": "The communities minister, Don Foster, has hinted that George Osborne, Chancellor of the Exchequer, may introduce more flexibility to the current cap on the amount that local authorities can borrow against their housing stock debt.",
+      "zh": "社区事务大臣唐·福斯特暗示，财政大臣乔治·奥斯本可能会提高现有借款上限的灵活性；这一上限目前限制着地方政府以其住房存量债务为基础所能借入的金额。",
+      "vocab": [
+        {
+          "word": "authorities",
+          "lemma": "authorities",
+          "level": 6,
+          "meaning": "地方政府",
+          "start": 174,
+          "end": 185
+        }
+      ],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "The communities minister, Don Foster, has hinted that George Osborne, Chancellor of the Exchequer, may introduce more flexibility to the current cap on the amount that local authorities can borrow against their housing stock debt.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text4/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 5,
+      "en": "Evidence shows that 60,000 extra new homes could be built over the next five years if the cap were lifted, increasing GDP by 0.6%.",
+      "zh": "证据显示，如果取消这一上限，未来五年可以额外建造6万套新住房，并使 GDP 增长0.6%。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "Evidence shows that 60,000 extra new homes could be built over the next five years if the cap were lifted, increasing GDP by 0.6%.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text4/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 6,
+      "en": "Ministers should also look at creating greater certainty in the rental environment, which would have a significant impact on the ability of registered providers to fund new developments from revenues.",
+      "zh": "大臣们还应考虑让租赁环境具有更大的确定性，因为这会显著影响注册住房提供者依靠收入为新开发项目融资的能力。",
+      "vocab": [
+        {
+          "word": "certainty",
+          "lemma": "certainty",
+          "level": 6,
+          "meaning": "确定性",
+          "start": 47,
+          "end": 56
+        },
+        {
+          "word": "revenues",
+          "lemma": "revenues",
+          "level": 7,
+          "meaning": "收入",
+          "start": 191,
+          "end": 199
+        }
+      ],
+      "discourse_function": "action_turn",
+      "prosody_focus": [],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "Ministers should also look at creating greater certainty in the rental environment, which would have a significant impact on the ability of registered providers to fund new developments from revenues.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "lively",
+          "intensity": 2,
+          "rate": 1.04,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text4/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 7,
+      "en": "But it is not just down to the government.",
+      "zh": "但责任并不只在政府。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "But it is not just down to the government.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text4/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 7,
+      "en": "While these measures would be welcome in the short term, we must face up to the fact that the existing £4.5bn programme of grants to fund new affordable housing, set to expire in 2015, is unlikely to be extended beyond then.",
+      "zh": "虽然这些措施在短期内会受到欢迎，但我们必须面对这样一个事实：现有的45亿英镑可负担住房拨款计划将在2015年到期，此后不太可能继续延长。",
+      "vocab": [
+        {
+          "word": "expire",
+          "lemma": "expire",
+          "level": 6,
+          "meaning": "到期",
+          "start": 169,
+          "end": 175
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "While these measures would be welcome in the short term, we must face up to the fact that the existing £4.5bn programme of grants to fund new affordable housing, set to expire in 2015, is unlikely to be extended beyond then.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text4/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 7,
+      "en": "The Labour party has recently announced that it will retain a large part of the coalition's spending plans if it returns to power.",
+      "zh": "工党最近宣布，如果重新执政，它将保留联合政府支出计划中的很大一部分。",
+      "vocab": [
+        {
+          "word": "coalition",
+          "lemma": "coalition",
+          "level": 7,
+          "meaning": "联合政府",
+          "start": 80,
+          "end": 89
+        }
+      ],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "The Labour party has recently announced that it will retain a large part of the coalition's spending plans if it returns to power.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text4/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "paragraph": 7,
+      "en": "The housing sector needs to accept that we are very unlikely to ever return to the era of large-scale public grants.",
+      "zh": "住房行业需要接受一个现实：我们几乎不可能再回到大规模公共拨款的时代。",
+      "vocab": [],
+      "discourse_function": "warning",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s20-01",
+          "text": "The housing sector needs to accept that we are very unlikely to ever return to the era of large-scale public grants.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text4/s20-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "paragraph": 7,
+      "en": "We need to adjust to this changing climate.",
+      "zh": "我们需要适应这种正在变化的环境。",
+      "vocab": [],
+      "discourse_function": "action_turn",
+      "prosody_focus": [],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s21-01",
+          "text": "We need to adjust to this changing climate.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "lively",
+          "intensity": 2,
+          "rate": 1.04,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text4/s21-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "paragraph": 8,
+      "en": "While the government's commitment to long-term funding may have changed, the very pressing need for more affordable housing is real and is not going away.",
+      "zh": "尽管政府对长期资金支持的承诺可能已经改变，但增加可负担住房的迫切需求是真实存在的，而且不会自行消失。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s22-01",
+          "text": "While the government's commitment to long-term funding may have changed, the very pressing need for more affordable housing is real and is not going away.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text4/s22-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

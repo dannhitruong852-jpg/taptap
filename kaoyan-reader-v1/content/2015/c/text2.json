@@ -1,0 +1,486 @@
+{
+  "year": 2015,
+  "section_type": "reading",
+  "article_id": "text2",
+  "source_sha256": "9a1919b936cade4ea5b1567aa6102b7cb233d54c9f480795d100ce2e70f924ae",
+  "source_pages": [
+    5,
+    6
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "01",
+  "article_context": "介绍第一代大学生的成就差距及一项低成本干预方案，重点解释实践知识、阶层文化与高校责任。",
+  "article": {
+    "year": 2015,
+    "section": "text2",
+    "title": "阅读 Text 2 · 第一代大学生的成就差距如何缩小",
+    "background": "介绍第一代大学生的成就差距及一项低成本干预方案，重点解释实践知识、阶层文化与高校责任。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "For years, studies have found that first-generation college students - those who do not have a parent with a college degree - lag other students on a range of education achievement factors.",
+      "zh": "多年来，研究一直发现，第一代大学生——也就是父母没有大学学历的学生——在多项教育成就指标上落后于其他学生。",
+      "vocab": [
+        {
+          "word": "first-generation",
+          "lemma": "first-generation",
+          "level": 6,
+          "meaning": "第一代大学生",
+          "start": 35,
+          "end": 51
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "For years, studies have found that first-generation college students - those who do not have a parent with a college degree - lag other students on a range of education achievement factors.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-text2/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Their grades are lower and their dropout rates are higher.",
+      "zh": "他们的成绩更低，退学率也更高。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Their grades are lower and their dropout rates are higher.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-text2/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "But since such students are most likely to advance economically if they succeed in higher education, colleges and universities have pushed for decades to recruit more of them.",
+      "zh": "然而，由于这类学生一旦在高等教育中取得成功，最有可能实现经济地位提升，各高校几十年来一直努力招收更多这样的学生。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "But since such students are most likely to advance economically if they succeed in higher education, colleges and universities have pushed for decades to recruit more of them.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-text2/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 1,
+      "en": "This has created \"a paradox\" in that recruiting first-generation students, but then watching many of them fail, means that higher education has \"continued to reproduce and widen, rather than close\" an achievement gap based on social class, according to the depressing beginning of a paper forthcoming in the journal Psychological Science.",
+      "zh": "一篇即将发表于《心理科学》的论文在开头不无沉重地指出，这造成了“一种悖论”：高校招收第一代大学生，却又眼看许多人失败，这意味着高等教育“并没有缩小，反而持续复制并扩大”基于社会阶层的成就差距。",
+      "vocab": [
+        {
+          "word": "paradox",
+          "lemma": "paradox",
+          "level": 7,
+          "meaning": "悖论",
+          "start": 20,
+          "end": 27
+        },
+        {
+          "word": "first-generation",
+          "lemma": "first-generation",
+          "level": 6,
+          "meaning": "第一代大学生",
+          "start": 48,
+          "end": 64
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "This has created \"a paradox\" in that recruiting first-generation students, but then watching many of them fail, means that higher education has \"continued to reproduce and widen, rather than close\" an achievement gap based on social class, according to the depressing beginning of a paper forthcoming in the journal Psychological Science.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-text2/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "But the article is actually quite optimistic, as it outlines a potential solution to this problem, suggesting that an approach (which involves a one-hour, next-to-no-cost program) can close 63 percent of the achievement gap (measured by such factors as grades) between first-generation and other students.",
+      "zh": "但这篇文章实际上相当乐观，因为它提出了一种可能的解决方案：一个只需一小时、几乎不花成本的项目，可能缩小第一代大学生与其他学生之间63%的成就差距（以成绩等指标衡量）。",
+      "vocab": [
+        {
+          "word": "first-generation",
+          "lemma": "first-generation",
+          "level": 6,
+          "meaning": "第一代大学生",
+          "start": 269,
+          "end": 285
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "But the article is actually quite optimistic, as it outlines a potential solution to this problem, suggesting that an approach (which involves a one-hour, next-to-no-cost program) can close 63 percent of the achievement gap (measured by such factors as grades) between first-generation and other students.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-text2/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 3,
+      "en": "The authors of the paper are from different universities, and their findings are based on a study involving 147 students (who completed the project) at an unnamed private university.",
+      "zh": "论文作者来自不同高校，其结论基于一项研究：某所未具名私立大学有147名完成项目的学生参与其中。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "The authors of the paper are from different universities, and their findings are based on a study involving 147 students (who completed the project) at an unnamed private university.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-text2/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 3,
+      "en": "First generation was defined as not having a parent with a four-year college degree.",
+      "zh": "研究把“第一代大学生”定义为父母均没有四年制大学学位的学生。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "First generation was defined as not having a parent with a four-year college degree.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-text2/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 3,
+      "en": "Most of the first-generation students (59.1 percent) were recipients of Pell Grants, a federal grant for undergraduates with financial need, while this was true only for 8.6 percent of the students with at least one parent with a four-year degree.",
+      "zh": "第一代大学生中大多数（59.1%）领取佩尔助学金——这是面向经济困难本科生的联邦资助；而父母至少一方拥有四年制大学学位的学生中，仅8.6%领取该助学金。",
+      "vocab": [
+        {
+          "word": "first-generation",
+          "lemma": "first-generation",
+          "level": 6,
+          "meaning": "第一代大学生",
+          "start": 12,
+          "end": 28
+        },
+        {
+          "word": "recipients",
+          "lemma": "recipients",
+          "level": 6,
+          "meaning": "领取",
+          "start": 58,
+          "end": 68
+        }
+      ],
+      "discourse_function": "statistic",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "Most of the first-generation students (59.1 percent) were recipients of Pell Grants, a federal grant for undergraduates with financial need, while this was true only for 8.6 percent of the students with at least one parent with a four-year degree.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-text2/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 4,
+      "en": "Their thesis - that a relatively modest intervention could have a big impact - was based on the view that first-generation students may be most lacking not in potential but in practical knowledge about how to deal with the issues that face most college students.",
+      "zh": "他们的核心观点——相对小规模的干预也可能产生巨大影响——建立在这样一种判断上：第一代大学生最缺的或许不是潜力，而是处理多数大学生都会面对的问题所需的实际知识。",
+      "vocab": [
+        {
+          "word": "modest",
+          "lemma": "modest",
+          "level": 6,
+          "meaning": "相对小规模",
+          "start": 33,
+          "end": 39
+        },
+        {
+          "word": "intervention",
+          "lemma": "intervention",
+          "level": 7,
+          "meaning": "干预",
+          "start": 40,
+          "end": 52
+        },
+        {
+          "word": "first-generation",
+          "lemma": "first-generation",
+          "level": 6,
+          "meaning": "第一代大学生",
+          "start": 106,
+          "end": 122
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "Their thesis - that a relatively modest intervention could have a big impact - was based on the view that first-generation students may be most lacking not in potential but in practical knowledge about how to deal with the issues that face most college students.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-text2/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 4,
+      "en": "They cite past research by several authors to show that this is the gap that must be narrowed to close the achievement gap.",
+      "zh": "他们引用多位作者以往的研究，说明要缩小成就差距，就必须弥合这种知识差距。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "They cite past research by several authors to show that this is the gap that must be narrowed to close the achievement gap.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-text2/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 5,
+      "en": "Many first-generation students \"struggle to navigate the middle-class culture of higher education, learn the 'rules of the game,' and take advantage of college resources,\" they write.",
+      "zh": "他们写道，许多第一代大学生“很难适应高等教育中的中产阶层文化、掌握‘游戏规则’，并充分利用大学资源”。",
+      "vocab": [
+        {
+          "word": "first-generation",
+          "lemma": "first-generation",
+          "level": 6,
+          "meaning": "第一代大学生",
+          "start": 5,
+          "end": 21
+        },
+        {
+          "word": "navigate",
+          "lemma": "navigate",
+          "level": 6,
+          "meaning": "适应",
+          "start": 44,
+          "end": 52
+        }
+      ],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "Many first-generation students \"struggle to navigate the middle-class culture of higher education, learn the 'rules of the game,' and take advantage of college resources,\" they write.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-text2/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 5,
+      "en": "And this becomes more of a problem when colleges don't talk about the class advantages and disadvantages of different groups of students.",
+      "zh": "当高校不讨论不同学生群体所拥有的阶层优势与劣势时，这个问题会更加严重。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "And this becomes more of a problem when colleges don't talk about the class advantages and disadvantages of different groups of students.",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-text2/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 5,
+      "en": "\"Because US colleges and universities seldom acknowledge how social class can affect students' educational experiences, many first-generation students lack insight about why they are struggling and do not understand how students 'like them' can improve.\"",
+      "zh": "“由于美国高校很少承认社会阶层会怎样影响学生的教育经历，许多第一代大学生并不明白自己为何陷入困境，也不了解‘像他们一样的学生’怎样才能改善处境。”",
+      "vocab": [
+        {
+          "word": "acknowledge",
+          "lemma": "acknowledge",
+          "level": 6,
+          "meaning": "承认",
+          "start": 45,
+          "end": 56
+        },
+        {
+          "word": "first-generation",
+          "lemma": "first-generation",
+          "level": 6,
+          "meaning": "第一代大学生",
+          "start": 125,
+          "end": 141
+        }
+      ],
+      "discourse_function": "explain_quote",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "\"Because US colleges and universities seldom acknowledge how social class can affect students' educational experiences, many first-generation students lack insight about why they are struggling and do not understand how students 'like them' can improve.\"",
+          "speaker_role": "narrator",
+          "actor_id": "01",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-text2/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

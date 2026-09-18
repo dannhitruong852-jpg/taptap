@@ -12,6 +12,10 @@
     2010,
     2011,
     2012,
+    2013,
+    2014,
+    2015,
+    2016,
     2017,
     2018
   ],
@@ -682,6 +686,258 @@
       "content": "./content/2012/c/translation.json",
       "manifest": "./audio/2012/v4/c-translation/manifest.json",
       "sentences": 6
+    },
+    {
+      "id": "2013-cloze",
+      "year": 2013,
+      "section_type": "cloze",
+      "title": "完型 · 走向无现金社会为何缓慢",
+      "content": "./content/2013/c/cloze.json",
+      "manifest": "./audio/2013/v4/c-cloze/manifest.json",
+      "sentences": 16
+    },
+    {
+      "id": "2013-partb",
+      "year": 2013,
+      "section_type": "part_b",
+      "title": "新题型 · 预算有限也能吃得好",
+      "content": "./content/2013/c/partb.json",
+      "manifest": "./audio/2013/v4/c-partb/manifest.json",
+      "sentences": 25
+    },
+    {
+      "id": "2013-text1",
+      "year": 2013,
+      "section_type": "reading",
+      "title": "阅读一 · 平均水平已经不够",
+      "content": "./content/2013/c/text1.json",
+      "manifest": "./audio/2013/v4/c-text1/manifest.json",
+      "sentences": 14
+    },
+    {
+      "id": "2013-text2",
+      "year": 2013,
+      "section_type": "reading",
+      "title": "阅读二 · 新时代的候鸟式移民",
+      "content": "./content/2013/c/text2.json",
+      "manifest": "./audio/2013/v4/c-text2/manifest.json",
+      "sentences": 22
+    },
+    {
+      "id": "2013-text3",
+      "year": 2013,
+      "section_type": "reading",
+      "title": "阅读三 · 给快速反应按下暂停键",
+      "content": "./content/2013/c/text3.json",
+      "manifest": "./audio/2013/v4/c-text3/manifest.json",
+      "sentences": 18
+    },
+    {
+      "id": "2013-text4",
+      "year": 2013,
+      "section_type": "reading",
+      "title": "阅读四 · 女性董事配额与任人唯贤",
+      "content": "./content/2013/c/text4.json",
+      "manifest": "./audio/2013/v4/c-text4/manifest.json",
+      "sentences": 18
+    },
+    {
+      "id": "2013-translation",
+      "year": 2013,
+      "section_type": "translation",
+      "title": "翻译 · 超常记忆与情绪体验",
+      "content": "./content/2013/c/translation.json",
+      "manifest": "./audio/2013/v4/c-translation/manifest.json",
+      "sentences": 9
+    },
+    {
+      "id": "2014-cloze",
+      "year": 2014,
+      "section_type": "cloze",
+      "title": "完型 · 肥胖、BMI与健康偏见",
+      "content": "./content/2014/c/cloze.json",
+      "manifest": "./audio/2014/v4/c-cloze/manifest.json",
+      "sentences": 26
+    },
+    {
+      "id": "2014-partb",
+      "year": 2014,
+      "section_type": "part_b",
+      "title": "阅读 Part B · 英国土地艺术的作品与观念",
+      "content": "./content/2014/c/partb.json",
+      "manifest": "./audio/2014/v4/c-partb/manifest.json",
+      "sentences": 18
+    },
+    {
+      "id": "2014-text1",
+      "year": 2014,
+      "section_type": "reading",
+      "title": "阅读 Text 1 · 怎样花钱才能获得更持久的幸福",
+      "content": "./content/2014/c/text1.json",
+      "manifest": "./audio/2014/v4/c-text1/manifest.json",
+      "sentences": 18
+    },
+    {
+      "id": "2014-text2",
+      "year": 2014,
+      "section_type": "reading",
+      "title": "阅读 Text 2 · 我们为何往往觉得自己比实际更好看",
+      "content": "./content/2014/c/text2.json",
+      "manifest": "./audio/2014/v4/c-text2/manifest.json",
+      "sentences": 19
+    },
+    {
+      "id": "2014-text3",
+      "year": 2014,
+      "section_type": "reading",
+      "title": "阅读 Text 3 · 与机器竞赛，还是与机器协作",
+      "content": "./content/2014/c/text3.json",
+      "manifest": "./audio/2014/v4/c-text3/manifest.json",
+      "sentences": 19
+    },
+    {
+      "id": "2014-text4",
+      "year": 2014,
+      "section_type": "reading",
+      "title": "阅读 Text 4 · 英国住房为何应被视为基础设施问题",
+      "content": "./content/2014/c/text4.json",
+      "manifest": "./audio/2014/v4/c-text4/manifest.json",
+      "sentences": 22
+    },
+    {
+      "id": "2014-translation",
+      "year": 2014,
+      "section_type": "translation",
+      "title": "翻译 · 现实主义的健康乐观",
+      "content": "./content/2014/c/translation.json",
+      "manifest": "./audio/2014/v4/c-translation/manifest.json",
+      "sentences": 10
+    },
+    {
+      "id": "2015-cloze",
+      "year": 2015,
+      "section_type": "cloze",
+      "title": "完型 · 放下手机，与陌生人交谈",
+      "content": "./content/2015/c/cloze.json",
+      "manifest": "./audio/2015/v4/c-cloze/manifest.json",
+      "sentences": 21
+    },
+    {
+      "id": "2015-partb",
+      "year": 2015,
+      "section_type": "part_b",
+      "title": "阅读 Part B · 帮你熬过艰难时刻的朴素道理",
+      "content": "./content/2015/c/partb.json",
+      "manifest": "./audio/2015/v4/c-partb/manifest.json",
+      "sentences": 33
+    },
+    {
+      "id": "2015-text1",
+      "year": 2015,
+      "section_type": "reading",
+      "title": "阅读 Text 1 · 为什么家里可能比工作场所更有压力",
+      "content": "./content/2015/c/text1.json",
+      "manifest": "./audio/2015/v4/c-text1/manifest.json",
+      "sentences": 24
+    },
+    {
+      "id": "2015-text2",
+      "year": 2015,
+      "section_type": "reading",
+      "title": "阅读 Text 2 · 第一代大学生的成就差距如何缩小",
+      "content": "./content/2015/c/text2.json",
+      "manifest": "./audio/2015/v4/c-text2/manifest.json",
+      "sentences": 13
+    },
+    {
+      "id": "2015-text3",
+      "year": 2015,
+      "section_type": "reading",
+      "title": "阅读 Text 3 · 企业语言为何越来越“情绪化”",
+      "content": "./content/2015/c/text3.json",
+      "manifest": "./audio/2015/v4/c-text3/manifest.json",
+      "sentences": 17
+    },
+    {
+      "id": "2015-text4",
+      "year": 2015,
+      "section_type": "reading",
+      "title": "阅读 Text 4 · 奥巴马医改与自愿兼职就业",
+      "content": "./content/2015/c/text4.json",
+      "manifest": "./audio/2015/v4/c-text4/manifest.json",
+      "sentences": 23
+    },
+    {
+      "id": "2015-translation",
+      "year": 2015,
+      "section_type": "translation",
+      "title": "翻译 · 为什么熟悉的路程感觉更短",
+      "content": "./content/2015/c/translation.json",
+      "manifest": "./audio/2015/v4/c-translation/manifest.json",
+      "sentences": 10
+    },
+    {
+      "id": "2016-cloze",
+      "year": 2016,
+      "section_type": "cloze",
+      "title": "完型 · 快乐如何影响企业投资",
+      "content": "./content/2016/c/cloze.json",
+      "manifest": "./audio/2016/v4/c-cloze/manifest.json",
+      "sentences": 18
+    },
+    {
+      "id": "2016-partb",
+      "year": 2016,
+      "section_type": "part_b",
+      "title": "阅读 Part B · 像孩子一样生活，幸福反而更自然",
+      "content": "./content/2016/c/partb.json",
+      "manifest": "./audio/2016/v4/c-partb/manifest.json",
+      "sentences": 28
+    },
+    {
+      "id": "2016-text1",
+      "year": 2016,
+      "section_type": "reading",
+      "title": "阅读 Text 1 · 为什么要让孩子尽早接触编程",
+      "content": "./content/2016/c/text1.json",
+      "manifest": "./audio/2016/v4/c-text1/manifest.json",
+      "sentences": 18
+    },
+    {
+      "id": "2016-text2",
+      "year": 2016,
+      "section_type": "reading",
+      "title": "阅读 Text 2 · 小草原榛鸡保护中的联邦与地方博弈",
+      "content": "./content/2016/c/text2.json",
+      "manifest": "./audio/2016/v4/c-text2/manifest.json",
+      "sentences": 18
+    },
+    {
+      "id": "2016-text3",
+      "year": 2016,
+      "section_type": "reading",
+      "title": "阅读 Text 3 · 为什么“挤时间”不等于真正阅读",
+      "content": "./content/2016/c/text3.json",
+      "manifest": "./audio/2016/v4/c-text3/manifest.json",
+      "sentences": 20
+    },
+    {
+      "id": "2016-text4",
+      "year": 2016,
+      "section_type": "reading",
+      "title": "阅读 Text 4 · 年轻美国人正在重画成功路线图",
+      "content": "./content/2016/c/text4.json",
+      "manifest": "./audio/2016/v4/c-text4/manifest.json",
+      "sentences": 13
+    },
+    {
+      "id": "2016-translation",
+      "year": 2016,
+      "section_type": "translation",
+      "title": "翻译 · 超市如何让消费者从理性选择转向情绪购物",
+      "content": "./content/2016/c/translation.json",
+      "manifest": "./audio/2016/v4/c-translation/manifest.json",
+      "sentences": 7
     },
     {
       "id": "2017-cloze",

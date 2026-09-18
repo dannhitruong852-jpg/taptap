@@ -1,0 +1,942 @@
+{
+  "year": 2015,
+  "section_type": "part_b",
+  "article_id": "partb",
+  "source_sha256": "9a1919b936cade4ea5b1567aa6102b7cb233d54c9f480795d100ce2e70f924ae",
+  "source_pages": [
+    11,
+    12
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "11",
+  "article_context": "以劝导式文章总结面对恐惧、过去、困境、孤独与自我怀疑时的几条生活原则。语气温暖直接，但避免鸡汤式夸张。",
+  "article": {
+    "year": 2015,
+    "section": "partb",
+    "title": "阅读 Part B · 帮你熬过艰难时刻的朴素道理",
+    "background": "以劝导式文章总结面对恐惧、过去、困境、孤独与自我怀疑时的几条生活原则。语气温暖直接，但避免鸡汤式夸张。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "Unfortunately, life is not a bed of roses.",
+      "zh": "遗憾的是，生活并不总是一帆风顺。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "Unfortunately, life is not a bed of roses.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "We are going through life facing sad experiences.",
+      "zh": "在人生旅途中，我们会面对种种令人难过的经历。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "We are going through life facing sad experiences.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "Moreover, we are grieving various kinds of loss: a friendship, a romantic relationship or a house.",
+      "zh": "此外，我们还会为各种失去而悲伤：一段友谊、一段恋情，或是一所房子。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Moreover, we are grieving various kinds of loss: a friendship, a romantic relationship or a house.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 1,
+      "en": "Hard times may hold you down at what usually seems like the most inopportune time, but you should remember that they won't last forever.",
+      "zh": "艰难时刻往往会在最不合时宜的时候把你压住，但你应当记住，它们不会永远持续。",
+      "vocab": [
+        {
+          "word": "inopportune",
+          "lemma": "inopportune",
+          "level": 8,
+          "meaning": "不合时宜",
+          "start": 65,
+          "end": 76
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Hard times may hold you down at what usually seems like the most inopportune time, but you should remember that they won't last forever.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "When our time of mourning is over, we press forward, stronger with a greater understanding and respect for life.",
+      "zh": "当哀伤的时期过去，我们会继续向前，变得更坚强，也更懂得理解和珍惜生命。",
+      "vocab": [],
+      "discourse_function": "resolve",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "When our time of mourning is over, we press forward, stronger with a greater understanding and respect for life.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "Furthermore, these losses make us mature and eventually move us toward future opportunities for growth and happiness.",
+      "zh": "而且，这些失去会使我们成熟，最终把我们带向未来成长与幸福的机会。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "Furthermore, these losses make us mature and eventually move us toward future opportunities for growth and happiness.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "I want to share these old truths I've learned along the way.",
+      "zh": "我想分享一些自己一路走来领悟到的朴素道理。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "I want to share these old truths I've learned along the way.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 3,
+      "en": "Fear is both useful and harmful.",
+      "zh": "恐惧既有用，也可能有害。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "Fear is both useful and harmful.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 3,
+      "en": "This normal human reaction is used to protect us by signaling danger and preparing us to deal with it.",
+      "zh": "这种正常的人类反应通过发出危险信号、让我们做好应对准备来保护我们。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "This normal human reaction is used to protect us by signaling danger and preparing us to deal with it.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 3,
+      "en": "Unfortunately, people create inner barriers with a help of exaggerating fears.",
+      "zh": "遗憾的是，人们常因夸大恐惧而在内心筑起障碍。",
+      "vocab": [],
+      "discourse_function": "warning",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "Unfortunately, people create inner barriers with a help of exaggerating fears.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 3,
+      "en": "My favorite actor Will Smith once said, \"Fear is not real.",
+      "zh": "我最喜欢的演员威尔·史密斯曾说：“恐惧并不真实。",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "My favorite actor Will Smith once said, \"Fear is not real.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 3,
+      "en": "It is a product of thoughts you create.",
+      "zh": "它是你自己制造出来的思想产物。",
+      "vocab": [],
+      "discourse_function": "explain_quote",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "It is a product of thoughts you create.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 3,
+      "en": "Do not misunderstand me.",
+      "zh": "别误解我的意思。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "Do not misunderstand me.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 3,
+      "en": "Danger is very real.",
+      "zh": "危险是真实存在的。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "Danger is very real.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 3,
+      "en": "But fear is a choice.\"",
+      "zh": "但恐惧是一种选择。”",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "But fear is a choice.\"",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 3,
+      "en": "I do completely agree that fears are just the product of our luxuriant imagination.",
+      "zh": "我完全赞同：许多恐惧不过是我们过度丰富的想象所制造的产物。",
+      "vocab": [
+        {
+          "word": "luxuriant",
+          "lemma": "luxuriant",
+          "level": 8,
+          "meaning": "过度丰富",
+          "start": 61,
+          "end": 70
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "I do completely agree that fears are just the product of our luxuriant imagination.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 4,
+      "en": "If you are surrounded by problems and cannot stop thinking about the past, try to focus on the present moment.",
+      "zh": "如果你被问题包围、无法停止回想过去，试着把注意力放回当下。",
+      "vocab": [],
+      "discourse_function": "action_turn",
+      "prosody_focus": [],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "If you are surrounded by problems and cannot stop thinking about the past, try to focus on the present moment.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "lively",
+          "intensity": 2,
+          "rate": 1.04,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 4,
+      "en": "Many of us are weighed down by the past or anxious about the future.",
+      "zh": "我们中的许多人被过去拖累，或为未来焦虑。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "Many of us are weighed down by the past or anxious about the future.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 4,
+      "en": "You may feel guilt over your past, but you are poisoning the present with the things and circumstances you cannot change.",
+      "zh": "你也许会因过去而内疚，但如果执着于那些无法改变的事情和处境，你其实是在毒害当下。",
+      "vocab": [],
+      "discourse_function": "warning",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "You may feel guilt over your past, but you are poisoning the present with the things and circumstances you cannot change.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "paragraph": 4,
+      "en": "Value the present moment and remember how fortunate you are to be alive.",
+      "zh": "珍惜此刻，并记得能够活着本身就是一种幸运。",
+      "vocab": [],
+      "discourse_function": "encourage",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s20-01",
+          "text": "Value the present moment and remember how fortunate you are to be alive.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s20-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "paragraph": 4,
+      "en": "Enjoy the beauty of the world around and keep the eyes open to see the possibilities before you.",
+      "zh": "欣赏周围世界的美，也睁开眼睛看见摆在面前的各种可能。",
+      "vocab": [],
+      "discourse_function": "encourage",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s21-01",
+          "text": "Enjoy the beauty of the world around and keep the eyes open to see the possibilities before you.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s21-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "paragraph": 4,
+      "en": "Happiness is not a point of future and not a moment from the past, but a mindset that can be designed into the present.",
+      "zh": "幸福既不是未来的某个点，也不是过去的某一刻，而是一种可以在当下塑造的心态。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s22-01",
+          "text": "Happiness is not a point of future and not a moment from the past, but a mindset that can be designed into the present.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s22-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "paragraph": 5,
+      "en": "Sometimes it is easy to feel bad because you are going through tough times.",
+      "zh": "身处艰难时期时，人很容易感觉糟糕。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s23-01",
+          "text": "Sometimes it is easy to feel bad because you are going through tough times.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s23-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "paragraph": 5,
+      "en": "You can be easily caught up by life problems that you forget to pause and appreciate the things you have.",
+      "zh": "你很容易被生活问题裹挟，以至于忘记停下来珍惜自己已经拥有的东西。",
+      "vocab": [],
+      "discourse_function": "warning",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s24-01",
+          "text": "You can be easily caught up by life problems that you forget to pause and appreciate the things you have.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s24-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "paragraph": 5,
+      "en": "Only strong people prefer to smile and value their life instead of crying and complaining about something.",
+      "zh": "真正坚强的人更愿意微笑并珍视生活，而不是一味哭泣、抱怨。",
+      "vocab": [],
+      "discourse_function": "encourage",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s25-01",
+          "text": "Only strong people prefer to smile and value their life instead of crying and complaining about something.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s25-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "paragraph": 6,
+      "en": "No matter how isolated you might feel and how serious the situation is, you should always remember that you are not alone.",
+      "zh": "无论你感到多么孤立、处境多么严峻，都应始终记住：你并不孤单。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s26-01",
+          "text": "No matter how isolated you might feel and how serious the situation is, you should always remember that you are not alone.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s26-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "paragraph": 6,
+      "en": "Try to keep in mind that almost everyone respects and wants to help you if you are trying to make a good change in your life, especially your dearest and nearest people.",
+      "zh": "请记住，只要你正努力让生活变得更好，几乎每个人都会尊重并愿意帮助你，尤其是最亲近的人。",
+      "vocab": [],
+      "discourse_function": "encourage",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s27-01",
+          "text": "Try to keep in mind that almost everyone respects and wants to help you if you are trying to make a good change in your life, especially your dearest and nearest people.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s27-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "paragraph": 6,
+      "en": "You may have a circle of friends who provide constant good humor, help and companionship.",
+      "zh": "你也许有一群朋友，持续给你带来欢笑、帮助和陪伴。",
+      "vocab": [],
+      "discourse_function": "example",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s28-01",
+          "text": "You may have a circle of friends who provide constant good humor, help and companionship.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s28-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "paragraph": 6,
+      "en": "If you have no friends or relatives, try to participate in several online communities, full of people who are always willing to share advice and encouragement.",
+      "zh": "如果身边没有朋友或亲人，可以尝试加入一些网络社区，那里有许多人愿意分享建议并给予鼓励。",
+      "vocab": [],
+      "discourse_function": "action_turn",
+      "prosody_focus": [],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s29-01",
+          "text": "If you have no friends or relatives, try to participate in several online communities, full of people who are always willing to share advice and encouragement.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "lively",
+          "intensity": 2,
+          "rate": 1.04,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s29-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "paragraph": 7,
+      "en": "Today many people find it difficult to trust their own opinion and seek balance by gaining objectivity from external sources.",
+      "zh": "如今，很多人难以相信自己的判断，总想从外部来源获得所谓客观性来寻求平衡。",
+      "vocab": [
+        {
+          "word": "objectivity",
+          "lemma": "objectivity",
+          "level": 7,
+          "meaning": "客观性",
+          "start": 91,
+          "end": 102
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s30-01",
+          "text": "Today many people find it difficult to trust their own opinion and seek balance by gaining objectivity from external sources.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s30-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s31",
+      "paragraph": 7,
+      "en": "This way you devalue your opinion and show that you are incapable of managing your own life.",
+      "zh": "这样做会贬低自己的判断，也仿佛在表明自己无力掌控自己的生活。",
+      "vocab": [],
+      "discourse_function": "warning",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s31-01",
+          "text": "This way you devalue your opinion and show that you are incapable of managing your own life.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s31-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s32",
+      "paragraph": 7,
+      "en": "When you are struggling to achieve something important you should believe in yourself and be sure that your decision is the best.",
+      "zh": "当你正努力实现重要目标时，应当相信自己，并确信自己的决定是最适合自己的。",
+      "vocab": [],
+      "discourse_function": "encourage",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s32-01",
+          "text": "When you are struggling to achieve something important you should believe in yourself and be sure that your decision is the best.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s32-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s33",
+      "paragraph": 7,
+      "en": "You live in your skin, think your own thoughts, have your own values and make your own choices.",
+      "zh": "毕竟，是你生活在自己的身体里，思考自己的想法，拥有自己的价值观，也作出自己的选择。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s33-01",
+          "text": "You live in your skin, think your own thoughts, have your own values and make your own choices.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2015/c-partb/s33-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

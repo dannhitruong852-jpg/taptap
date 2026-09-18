@@ -1,0 +1,337 @@
+{
+  "year": 2014,
+  "section_type": "translation",
+  "article_id": "translation",
+  "source_sha256": "63da0a016fba9a18f4344ad8ce79c594e6703e84e77996c665f91f3b288f9fde",
+  "source_pages": [
+    12
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "02",
+  "article_context": "解释积极心理学所说的“健康乐观”：接触现实、允许自己不完美、复盘并拉开人生视角。语气温和、清楚、有安定感。",
+  "article": {
+    "year": 2014,
+    "section": "translation",
+    "title": "翻译 · 现实主义的健康乐观",
+    "background": "解释积极心理学所说的“健康乐观”：接触现实、允许自己不完美、复盘并拉开人生视角。语气温和、清楚、有安定感。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "Most people would define optimism as being endlessly happy, with a glass that's perpetually half full.",
+      "zh": "大多数人会把乐观定义为永远快乐，仿佛杯子永远都是半满的。",
+      "vocab": [
+        {
+          "word": "perpetually",
+          "lemma": "perpetually",
+          "level": 7,
+          "meaning": "永远",
+          "start": 80,
+          "end": 91
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "Most people would define optimism as being endlessly happy, with a glass that's perpetually half full.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-translation/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "But that's exactly the kind of false cheerfulness that positive psychologists wouldn't recommend.",
+      "zh": "但这恰恰是积极心理学家不会提倡的那种虚假乐观。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "But that's exactly the kind of false cheerfulness that positive psychologists wouldn't recommend.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-translation/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "\"Healthy optimism means being in touch with reality,\" says Tal Ben-Shahar, a Harvard professor.",
+      "zh": "哈佛大学教授塔尔·本-沙哈尔说：“健康的乐观意味着与现实保持接触。”",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "\"Healthy optimism means being in touch with reality,\" says Tal Ben-Shahar, a Harvard professor.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-translation/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 1,
+      "en": "According to Ben-Shahar, realistic optimists are those who make the best of things that happen, but not those who believe everything happens for the best.",
+      "zh": "本-沙哈尔认为，现实主义的乐观者，是那些能从已经发生的事情中尽可能获得最好结果的人，而不是相信凡事都会自动朝最好方向发展的人。",
+      "vocab": [
+        {
+          "word": "realistic optimists",
+          "lemma": "realistic optimists",
+          "level": 7,
+          "meaning": "现实主义的乐观者",
+          "start": 25,
+          "end": 44
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "According to Ben-Shahar, realistic optimists are those who make the best of things that happen, but not those who believe everything happens for the best.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-translation/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "Ben-Shahar uses three optimistic exercises.",
+      "zh": "本-沙哈尔会采用三种乐观练习。",
+      "vocab": [],
+      "discourse_function": "sequence",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Ben-Shahar uses three optimistic exercises.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-translation/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "When he feels down - say, after giving a bad lecture - he grants himself permission to be human.",
+      "zh": "当他情绪低落时——比如一堂课讲得不好之后——他会允许自己只是一个普通人。",
+      "vocab": [],
+      "discourse_function": "story",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "When he feels down - say, after giving a bad lecture - he grants himself permission to be human.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-translation/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "He reminds himself that not every lecture can be a Nobel winner; some will be less effective than others.",
+      "zh": "他会提醒自己，不是每一堂课都能达到“诺贝尔奖级别”；有些课的效果就是会比另一些差。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "He reminds himself that not every lecture can be a Nobel winner; some will be less effective than others.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-translation/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 2,
+      "en": "Next is reconstruction.",
+      "zh": "接下来是复盘重构。",
+      "vocab": [
+        {
+          "word": "reconstruction",
+          "lemma": "reconstruction",
+          "level": 7,
+          "meaning": "复盘重构",
+          "start": 8,
+          "end": 22
+        }
+      ],
+      "discourse_function": "sequence",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "Next is reconstruction.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-translation/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 2,
+      "en": "He analyzes the weak lecture, learning lessons for the future about what works and what doesn't.",
+      "zh": "他分析那堂表现不佳的课，从中总结哪些方法有效、哪些无效，为今后汲取经验。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "He analyzes the weak lecture, learning lessons for the future about what works and what doesn't.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-translation/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 2,
+      "en": "Finally, there is perspective, which involves acknowledging that in the grand scheme of life, one lecture really doesn't matter.",
+      "zh": "最后是拉开视角：承认从整个人生的大格局来看，一堂课其实真的没有那么重要。",
+      "vocab": [
+        {
+          "word": "perspective",
+          "lemma": "perspective",
+          "level": 6,
+          "meaning": "视角",
+          "start": 18,
+          "end": 29
+        },
+        {
+          "word": "acknowledging",
+          "lemma": "acknowledging",
+          "level": 6,
+          "meaning": "承认",
+          "start": 46,
+          "end": 59
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "Finally, there is perspective, which involves acknowledging that in the grand scheme of life, one lecture really doesn't matter.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-translation/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

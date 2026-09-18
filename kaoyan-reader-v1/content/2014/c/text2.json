@@ -1,0 +1,626 @@
+{
+  "year": 2014,
+  "section_type": "reading",
+  "article_id": "text2",
+  "source_sha256": "63da0a016fba9a18f4344ad8ce79c594e6703e84e77996c665f91f3b288f9fde",
+  "source_pages": [
+    4,
+    5
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "02",
+  "article_context": "介绍“高于平均水平效应”和自我美化研究，解释人们如何在记忆、照片与社交媒体中维持更积极的自我形象。语气是清晰的心理学科普。",
+  "article": {
+    "year": 2014,
+    "section": "text2",
+    "title": "阅读 Text 2 · 我们为何往往觉得自己比实际更好看",
+    "background": "介绍“高于平均水平效应”和自我美化研究，解释人们如何在记忆、照片与社交媒体中维持更积极的自我形象。语气是清晰的心理学科普。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "An article in Scientific American has pointed out that empirical research says that, actually, you think you're more beautiful than you are.",
+      "zh": "《科学美国人》的一篇文章指出，实证研究表明：事实上，你往往觉得自己比实际更漂亮。",
+      "vocab": [
+        {
+          "word": "empirical",
+          "lemma": "empirical",
+          "level": 7,
+          "meaning": "实证",
+          "start": 55,
+          "end": 64
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "An article in Scientific American has pointed out that empirical research says that, actually, you think you're more beautiful than you are.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text2/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "We have a deep-seated need to feel good about ourselves and we naturally employ a number of self-enhancing strategies to achieve this.",
+      "zh": "我们内心深处需要对自己感觉良好，因此会自然而然地采用多种自我美化策略来达到这一目的。",
+      "vocab": [
+        {
+          "word": "self-enhancing",
+          "lemma": "self-enhancing",
+          "level": 7,
+          "meaning": "自我美化",
+          "start": 92,
+          "end": 106
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "We have a deep-seated need to feel good about ourselves and we naturally employ a number of self-enhancing strategies to achieve this.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text2/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "Social psychologists have amassed oceans of research into what they call the \"above average effect\", or \"illusory superiority\", and shown that, for example, 70% of us rate ourselves as above average in leadership, 93% in driving and 85% at getting on well with others - all obviously statistical impossibilities.",
+      "zh": "社会心理学家已经积累了大量有关所谓“高于平均水平效应”或“虚幻优越感”的研究，并发现：例如，70%的人认为自己的领导力高于平均水平，93%的人认为自己的驾驶水平高于平均水平，85%的人认为自己与人相处的能力高于平均水平——从统计上看，这些显然都不可能同时成立。",
+      "vocab": [
+        {
+          "word": "amassed",
+          "lemma": "amassed",
+          "level": 7,
+          "meaning": "积累",
+          "start": 26,
+          "end": 33
+        },
+        {
+          "word": "illusory",
+          "lemma": "illusory",
+          "level": 7,
+          "meaning": "虚幻",
+          "start": 105,
+          "end": 113
+        }
+      ],
+      "discourse_function": "statistic",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Social psychologists have amassed oceans of research into what they call the \"above average effect\", or \"illusory superiority\", and shown that, for example, 70% of us rate ourselves as above average in leadership, 93% in driving and 85% at getting on well with others - all obviously statistical impossibilities.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text2/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "We rose-tint our memories and put ourselves into self-affirming situations.",
+      "zh": "我们会给自己的记忆染上一层玫瑰色，也会把自己置于能够肯定自我的情境中。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "We rose-tint our memories and put ourselves into self-affirming situations.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text2/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "We become defensive when criticised, and apply negative stereotypes to others to boost our own esteem.",
+      "zh": "受到批评时，我们会转入防御状态，还会把负面的刻板印象套在别人身上，以抬高自己的自尊。",
+      "vocab": [
+        {
+          "word": "stereotypes",
+          "lemma": "stereotypes",
+          "level": 7,
+          "meaning": "刻板印象",
+          "start": 56,
+          "end": 67
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "We become defensive when criticised, and apply negative stereotypes to others to boost our own esteem.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text2/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "We stalk around thinking we're hot stuff.",
+      "zh": "我们昂首走来走去，觉得自己相当了不起。",
+      "vocab": [],
+      "discourse_function": "irony",
+      "prosody_focus": [],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "We stalk around thinking we're hot stuff.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "ironic",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text2/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 3,
+      "en": "Psychologist and behavioural scientist Nicholas Epley oversaw a key study into self-enhancement and attractiveness.",
+      "zh": "心理学家兼行为科学家尼古拉斯·埃普利主持了一项关于自我美化与吸引力的重要研究。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "Psychologist and behavioural scientist Nicholas Epley oversaw a key study into self-enhancement and attractiveness.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text2/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 3,
+      "en": "Rather than have people simply rate their beauty compared with others, he asked them to identify an original photograph of themselves from a lineup including versions that had been altered to appear more and less attractive.",
+      "zh": "他没有让受试者简单评价自己相较他人的外貌，而是让他们从一组照片中找出自己的原始照片；这组照片里还混入了经过处理、显得更好看或更不好看的版本。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "Rather than have people simply rate their beauty compared with others, he asked them to identify an original photograph of themselves from a lineup including versions that had been altered to appear more and less attractive.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text2/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 3,
+      "en": "Visual recognition, reads the study, is \"an automatic psychological process, occurring rapidly and intuitively with little or no apparent conscious deliberation\".",
+      "zh": "研究写道，视觉识别是“一种自动的心理过程，会迅速而直觉地发生，几乎不需要或完全不需要明显的有意识深思”。",
+      "vocab": [
+        {
+          "word": "deliberation",
+          "lemma": "deliberation",
+          "level": 8,
+          "meaning": "深思",
+          "start": 148,
+          "end": 160
+        }
+      ],
+      "discourse_function": "explain_quote",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "Visual recognition, reads the study, is \"an automatic psychological process, occurring rapidly and intuitively with little or no apparent conscious deliberation\".",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text2/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 3,
+      "en": "If the subjects quickly chose a falsely flattering image - which most did - they genuinely believed it was really how they looked.",
+      "zh": "如果受试者很快选中了那张经过美化、却并不真实的照片——而大多数人确实如此——那说明他们真心相信自己就是那个样子。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "If the subjects quickly chose a falsely flattering image - which most did - they genuinely believed it was really how they looked.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text2/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 4,
+      "en": "Epley found no significant gender difference in responses.",
+      "zh": "埃普利发现，男女受试者的反应并没有显著差异。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "Epley found no significant gender difference in responses.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text2/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 4,
+      "en": "Nor was there any evidence that those who self-enhanced the most (that is, the participants who thought the most positively doctored pictures were real) were doing so to make up for profound insecurities.",
+      "zh": "也没有证据表明，那些自我美化程度最高的人——也就是把美化得最明显的照片当成真实照片的人——这样做是为了弥补深层的不安全感。",
+      "vocab": [
+        {
+          "word": "insecurities",
+          "lemma": "insecurities",
+          "level": 7,
+          "meaning": "不安全感",
+          "start": 191,
+          "end": 203
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "Nor was there any evidence that those who self-enhanced the most (that is, the participants who thought the most positively doctored pictures were real) were doing so to make up for profound insecurities.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text2/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 4,
+      "en": "In fact, those who thought that the images higher up the attractiveness scale were real directly corresponded with those who showed other markers for having higher self-esteem.",
+      "zh": "事实上，越是把吸引力评分更高的照片当作真实照片的人，越会同时表现出其他高自尊的指标。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "In fact, those who thought that the images higher up the attractiveness scale were real directly corresponded with those who showed other markers for having higher self-esteem.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text2/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 4,
+      "en": "\"I don't think the findings that we have are any evidence of personal delusion,\" says Epley.",
+      "zh": "埃普利说：“我不认为我们的研究结果能证明个人存在妄想。”",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "\"I don't think the findings that we have are any evidence of personal delusion,\" says Epley.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text2/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 4,
+      "en": "\"It's a reflection simply of people generally thinking well of themselves.\"",
+      "zh": "“它只不过反映了人们通常对自己评价不错。”",
+      "vocab": [],
+      "discourse_function": "explain_quote",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "\"It's a reflection simply of people generally thinking well of themselves.\"",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text2/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 4,
+      "en": "If you are depressed, you won't be self-enhancing.",
+      "zh": "如果你处于抑郁状态，就不会进行这种自我美化。",
+      "vocab": [
+        {
+          "word": "self-enhancing",
+          "lemma": "self-enhancing",
+          "level": 7,
+          "meaning": "自我美化",
+          "start": 35,
+          "end": 49
+        }
+      ],
+      "discourse_function": "qualify",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "If you are depressed, you won't be self-enhancing.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text2/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 5,
+      "en": "Knowing the results of Epley's study, it makes sense that many people hate photographs of themselves viscerally - on one level, they don't even recognise the person in the picture as themselves.",
+      "zh": "了解埃普利的研究结果后，就不难理解为什么很多人会本能地讨厌自己的照片：在某种层面上，他们甚至认不出照片里的人就是自己。",
+      "vocab": [
+        {
+          "word": "viscerally",
+          "lemma": "viscerally",
+          "level": 8,
+          "meaning": "本能地",
+          "start": 101,
+          "end": 111
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "Knowing the results of Epley's study, it makes sense that many people hate photographs of themselves viscerally - on one level, they don't even recognise the person in the picture as themselves.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text2/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 5,
+      "en": "Facebook, therefore, is a self-enhancer's paradise, where people can share only the most flattering photos, the cream of their wit, style, beauty, intellect and lifestyles.",
+      "zh": "因此，Facebook 堪称自我美化者的天堂：人们可以只展示最上镜的照片，以及自己机智、品位、美貌、才智和生活方式中最光鲜的一面。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "Facebook, therefore, is a self-enhancer's paradise, where people can share only the most flattering photos, the cream of their wit, style, beauty, intellect and lifestyles.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text2/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 5,
+      "en": "It's not that people's profiles are dishonest, says Catalina Toma of Wisconsin-Madison University, \"but they portray an idealised version of themselves.\"",
+      "zh": "威斯康星大学麦迪逊分校的卡塔利娜·托马说，人们的个人主页并非不诚实，“只是呈现了一个理想化的自己”。",
+      "vocab": [
+        {
+          "word": "idealised",
+          "lemma": "idealised",
+          "level": 7,
+          "meaning": "理想化",
+          "start": 120,
+          "end": 129
+        }
+      ],
+      "discourse_function": "qualify_quote",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "It's not that people's profiles are dishonest, says Catalina Toma of Wisconsin-Madison University, \"but they portray an idealised version of themselves.\"",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2014/c-text2/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}
