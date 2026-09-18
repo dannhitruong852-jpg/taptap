@@ -184,3 +184,81 @@ body.movie .en { font-size:clamp(18px,4.6vw,22px); line-height:1.5; }
   .en { font-size:20px; }
   .zh { font-size:15px; }
 }
+
+
+.reader-setting-actions { display:flex; align-items:center; gap:8px; }
+.phrase-book-open {
+  display:inline-flex; align-items:center; gap:7px; min-height:34px; padding:0 11px;
+  border:1px solid var(--line); border-radius:999px; background:rgba(255,255,255,.7);
+  color:#4f4b43; font-size:12px; font-weight:800; cursor:pointer;
+}
+.phrase-book-open b {
+  min-width:19px; height:19px; padding:0 5px; display:grid; place-items:center;
+  border-radius:999px; background:#2f2d28; color:#fff; font-size:10px;
+}
+.phrase-selection-action {
+  position:fixed; z-index:80; left:50%; top:50%; transform:translate(-50%,-100%);
+  border:0; border-radius:999px; padding:10px 14px; background:#24231f; color:#fff;
+  box-shadow:0 10px 28px rgba(27,25,21,.22); font-size:12px; font-weight:800;
+  white-space:nowrap; cursor:pointer; touch-action:manipulation;
+}
+.phrase-selection-action[hidden] { display:none; }
+
+.phrase-book-backdrop {
+  position:fixed; z-index:70; inset:0; background:rgba(29,27,23,.28);
+  backdrop-filter:blur(5px); padding:12px; display:flex; justify-content:center; align-items:flex-end;
+}
+.phrase-book-backdrop[hidden] { display:none; }
+.phrase-book-panel {
+  width:min(720px,100%); max-height:min(82vh,760px); overflow:hidden;
+  display:flex; flex-direction:column; border:1px solid rgba(48,45,38,.12);
+  border-radius:26px; background:#faf8f3; box-shadow:0 24px 70px rgba(34,30,23,.24);
+}
+.phrase-book-header {
+  display:flex; align-items:flex-start; justify-content:space-between; gap:16px;
+  padding:19px 18px 12px;
+}
+.phrase-book-kicker { margin:0 0 2px; color:#9b9386; font-size:10px; font-weight:800; letter-spacing:.08em; }
+.phrase-book-header h2 { margin:0; font-family:ui-serif,Georgia,"Songti SC",serif; font-size:27px; letter-spacing:-.03em; }
+.phrase-book-close {
+  width:36px; height:36px; border:0; border-radius:50%; background:#ece8df;
+  color:#5b564e; font-size:25px; line-height:1; cursor:pointer;
+}
+.phrase-book-toolbar {
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  padding:0 18px 12px; color:#817a70; font-size:11px;
+}
+.phrase-book-blur {
+  border:1px solid var(--line); border-radius:999px; padding:8px 11px;
+  background:#fff; color:#4e4a43; font-size:11px; font-weight:800; cursor:pointer;
+}
+.phrase-book-blur[aria-pressed="true"] { background:#2f2d28; color:#fff; border-color:#2f2d28; }
+.phrase-book-columns {
+  display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.05fr); gap:14px;
+  padding:8px 18px; border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+  color:#a1988c; font-size:10px; font-weight:800;
+}
+.phrase-book-list { overflow:auto; overscroll-behavior:contain; padding:0 10px 16px; }
+.phrase-book-item {
+  border-bottom:1px solid rgba(48,45,38,.09); padding:0 8px;
+}
+.phrase-book-row {
+  width:100%; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.05fr); gap:14px;
+  align-items:start; border:0; background:transparent; padding:15px 0 12px; text-align:left; cursor:pointer;
+}
+.phrase-book-en { font-family:ui-serif,Georgia,"Times New Roman",serif; font-size:16px; line-height:1.42; color:#25241f; font-weight:700; }
+.phrase-book-zh { font-size:13px; line-height:1.55; color:#716b62; transition:filter .16s ease, opacity .16s ease; }
+.phrase-book-panel.is-blurred .phrase-book-zh { filter:blur(6px); opacity:.78; user-select:none; }
+.phrase-book-detail { padding:0 0 15px; }
+.phrase-book-detail[hidden] { display:none; }
+.phrase-book-source-en { margin:0 0 7px; color:#45423d; font-family:ui-serif,Georgia,"Times New Roman",serif; font-size:13px; line-height:1.55; }
+.phrase-book-source-zh { margin:0 0 9px; color:#817a70; font-size:12px; line-height:1.6; }
+.phrase-book-meta { display:flex; align-items:center; justify-content:space-between; gap:12px; color:#aaa195; font-size:10px; }
+.phrase-book-delete { border:0; background:transparent; color:#9b5c55; padding:5px 0; font-size:10px; font-weight:800; cursor:pointer; }
+.phrase-book-empty { margin:0; padding:28px 18px 34px; text-align:center; color:#a1988c; font-size:12px; line-height:1.65; }
+body.phrase-book-opened { overflow:hidden; }
+
+@media (min-width:700px) {
+  .phrase-book-backdrop { align-items:center; }
+  .phrase-book-panel { border-radius:28px; }
+}
