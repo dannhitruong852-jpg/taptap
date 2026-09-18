@@ -109,6 +109,8 @@ h1 {
 .vocab {
   font-weight:850; color:#312614; background:linear-gradient(transparent 67%, rgba(215,181,110,.38) 0);
   border-radius:3px;
+  -webkit-box-decoration-break:slice;
+  box-decoration-break:slice;
 }
 body.hide-vocab .vocab { font-weight:inherit; color:inherit; background:none; }
 body.hide-chinese .zh { display:none; }
