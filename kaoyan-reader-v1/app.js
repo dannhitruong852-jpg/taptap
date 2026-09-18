@@ -29,7 +29,6 @@ const yearSelect=document.querySelector('#year-select');
 const audioSupport=document.createElement('audio');
 const supportsOpus=Boolean(audioSupport.canPlayType('audio/ogg; codecs="opus"'));
 const listEl=document.querySelector('#sentence-list');
-const backgroundEl=document.querySelector('#article-background');
 const playButton=document.querySelector('#play-toggle');
 const previousButton=document.querySelector('#previous');
 const nextButton=document.querySelector('#next');
@@ -216,7 +215,7 @@ const tapGuard=createTapGuard();
 const tapArbiter=createTapArbiter({delay:300});
 function renderSentences(){
  listEl.innerHTML=sentences.map((sentence,index)=>`<article class="sentence-card${index===state.current?' is-active':''}" data-index="${index}" data-translation-open="false">
-  <button class="sentence-number sentence-play" type="button" aria-label="播放第 ${index+1} 句" title="播放本句"><span>${String(index+1).padStart(2,'0')}</span><span class="sentence-play-icon" aria-hidden="true">▶</span></button>
+  <span class="sentence-number" aria-hidden="true">${String(index+1).padStart(2,'0')}</span>
   <div class="sentence-content" role="button" tabindex="0" aria-expanded="false" aria-controls="translation-${sentence.id}" aria-label="第 ${index+1} 句，点击显示或收起译文">
    <div class="en" lang="en">${renderEnglish(sentence)}</div>
    <div class="zh" lang="zh-CN" id="translation-${sentence.id}" hidden>${renderChinese(sentence,bilingualMappings[sentence.id]||[],manifest.sentences?.[sentence.id]?.words?semanticMappings[sentence.id]||[]:[])}</div>
@@ -426,7 +425,6 @@ window.addEventListener('pointercancel',()=>tapGuard.cancel(),{passive:true});
 listEl.addEventListener('contextmenu',()=>{tapGuard.cancel();tapArbiter.cancel();},{passive:true});
 listEl.addEventListener('click',event=>{
  const card=event.target.closest('.sentence-card');if(!card||loading)return;
- if(event.target.closest('.sentence-play')){speak(Number(card.dataset.index),{scroll:false});applyPlayerVisibility(false);state.scrollAnchorY=Math.max(0,window.scrollY||0);return;}
  if(event.detail===0)toggleTranslation(card);
 });
 listEl.addEventListener('keydown',event=>{if(event.key!=='Enter'&&event.key!==' ')return;if(!event.target.matches('.sentence-content')||hasSelectedText())return;event.preventDefault();toggleTranslation(event.target.closest('.sentence-card'));});
@@ -447,10 +445,9 @@ async function openArticle(entry){
  try{
   const [loaded,semantic]=await Promise.all([articleBundleStore.get(entry),semanticMapPromise]);if(!loaded||selectionToken!==selectionGeneration)return;
   currentEntry=entry;const mapArticles=loaded.bilingual?.articles||{};bilingualMappings=mapArticles[loaded.content.article_id]||mapArticles[entry.id]||{};semanticMappings=semanticGroupsForYear(semantic,entry.year,loaded.content.article_id);({article,sentences}=loaded.content);manifest=loaded.manifest;
-  state.current=0;loading=false;playButton.disabled=false;backgroundEl.textContent=article.background;document.querySelector('#article-title').textContent=article.title;document.querySelector('.year-chip').textContent=`${entry.year} · ${article.title.split(' · ')[0]}`;document.title=`${article.title} · ${entry.year} 英语精读`;listEl.setAttribute('aria-label',`${article.title} 双语精读`);
-  const audioCount=sentences.filter(s=>manifest.sentences?.[s.id]?.path||s.segments.every(x=>manifest.segments?.[x.id]?.path)).length;const seamlessCount=sentences.filter(s=>manifest.sentences?.[s.id]?.path).length;
-  document.querySelector('#content-status').textContent=`${sentences.length} 句中英对照 · 音频 ${audioCount}/${sentences.length} 句可播放${seamlessCount?` · C无缝 ${seamlessCount}/${sentences.length}`:''}`;
-  statusEl.textContent=audioCount===sentences.length?'轻点查译文 · 点序号听本句':'正文已就绪 · 音频生成中';
+  state.current=0;loading=false;playButton.disabled=false;document.querySelector('#article-title').textContent=article.title;document.title=`${article.title} · ${entry.year} 英语精读`;listEl.setAttribute('aria-label',`${article.title} 双语精读`);
+  const audioCount=sentences.filter(s=>manifest.sentences?.[s.id]?.path||s.segments.every(x=>manifest.segments?.[x.id]?.path)).length;
+  statusEl.textContent=audioCount===sentences.length?'音频已就绪 · 双击句框可重播':'正文已就绪 · 音频生成中';
   history.replaceState(null,'',`#${entry.id}`);renderSentences();updatePhraseBookButton();updateActive(false);resetSentenceProgress(0);updateArticleNavState();applyPlayerVisibility(false);measureLatency('article-switch',switchStarted);warmRange(0,4);warmArticleRemainder();scheduleAdjacentWarm(entry,selectionToken);
   if(!globalArticlePreloadStarted&&catalog){globalArticlePreloadStarted=true;void articleBundleStore.preload(catalog.articles.filter(item=>item.id!==entry.id));}
  }catch(error){if(selectionToken!==selectionGeneration)return;loading=false;statusEl.textContent='正文加载失败';showToast('请重新选择文章或刷新页面');}
@@ -463,4 +460,4 @@ sectionSelect.addEventListener('change',()=>fillArticleOptions());
 yearSelect.addEventListener('change',()=>fillArticleOptions());
 try{
  const response=await fetch('./content/catalog.json',{cache:'no-cache'});if(!response.ok)throw new Error('catalog-load-failed');catalog=await response.json();yearSelect.replaceChildren(...catalog.years.map(year=>new Option(String(year),String(year))));const selected=pickArticle(catalog,location.hash.slice(1)||catalog.default_article);yearSelect.value=String(selected.year);fillArticleOptions(selected.id);
-}catch(error){statusEl.textContent='目录加载失败';document.querySelector('#content-status').textContent='请刷新页面重试';}
+}catch(error){statusEl.textContent='目录加载失败';showToast('目录加载失败，请刷新页面重试');}
