@@ -1,0 +1,346 @@
+name: Generate C Mode V2 audio 2019-2024
+
+on:
+  workflow_dispatch:
+    inputs:
+      years:
+        description: 'Comma-separated years from 2019-2024, or all'
+        required: true
+        default: '2019'
+        type: string
+  push:
+    branches: ['c-mode-v2-launch-release']
+    paths: ['audio-v2.trigger']
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: c-mode-v2-audio-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  HF_HOME: /tmp/chatterbox-hf-cache
+  PYTHONPATH: voice-pipeline:content-pipeline
+  OMP_NUM_THREADS: '4'
+  MKL_NUM_THREADS: '4'
+  PYTHONUNBUFFERED: '1'
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      years: ${{ steps.matrix.outputs.years }}
+      units: ${{ steps.matrix.outputs.units }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate renderer contracts
+        run: |
+          python -m unittest \
+            voice-pipeline/tests/test_batching.py \
+            voice-pipeline/tests/test_generate_batch.py \
+            voice-pipeline/tests/test_merge_c_v4_generic.py \
+            voice-pipeline/tests/test_chatterbox_actor_adapter.py -v
+      - name: Validate frozen production inputs and plan matrix
+        id: matrix
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            spec='${{ inputs.years }}'
+          else
+            spec="$(tr -d '[:space:]' < audio-v2.trigger)"
+          fi
+          SPEC="$spec" python - <<'PY'
+          import json, os
+          from pathlib import Path
+
+          allowed=list(range(2019,2025))
+          raw=os.environ['SPEC'].strip().lower()
+          if raw in ('all','2019-2024','2019–2024'):
+              years=allowed
+          else:
+              years=[]
+              for token in raw.split(','):
+                  token=token.strip()
+                  if not token:
+                      continue
+                  year=int(token)
+                  if year not in allowed:
+                      raise SystemExit(f'unsupported year: {year}')
+                  if year not in years:
+                      years.append(year)
+          if not years:
+              raise SystemExit('no years selected')
+
+          order={'cloze':0,'text1':1,'text2':2,'text3':3,'text4':4,'partb':5,'translation':6}
+          units=[]
+          for year in years:
+              canary_path=Path(f'reports/production-v2/{year}-canary.json')
+              canary=json.loads(canary_path.read_text())
+              assert canary.get('ok') is True, (year,canary)
+              assert canary.get('errors') == [], (year,canary.get('errors'))
+              content_dir=Path(f'kaoyan-reader-v1/content/{year}/c')
+              articles=sorted((p.stem for p in content_dir.glob('*.json')), key=lambda x:(order.get(x,99),x))
+              assert articles == ['cloze','text1','text2','text3','text4','partb','translation'], (year,articles)
+              assert Path(f'content-pipeline/voice_profiles/{year}.json').is_file(), year
+              assert Path(f'content-pipeline/direction/{year}.json').is_file(), year
+              for article in articles:
+                  units.append({'year':year,'article':article})
+
+          out=Path(os.environ['GITHUB_OUTPUT'])
+          with out.open('a', encoding='utf-8') as handle:
+              handle.write('years='+json.dumps(years,separators=(',',':'))+'\n')
+              handle.write('units='+json.dumps(units,separators=(',',':'))+'\n')
+          print({'years':years,'units':len(units)})
+          PY
+  voicepack:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install reference preparation dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          python -m pip install numpy==1.26.4 soundfile==0.13.1 requests
+      - name: Build baseline profiles and production approvals
+        run: |
+          mkdir -p /tmp/voicepack/profiles /tmp/voicepack/references /tmp/expansion-profiles
+          python voice-pipeline/calibration/build_expansion_profiles.py --output /tmp/expansion-profiles
+          for n in $(seq -w 1 15); do
+            if [ -f "voice-pipeline/calibration/actors/${n}.json" ]; then
+              cp "voice-pipeline/calibration/actors/${n}.json" "/tmp/voicepack/profiles/${n}.json"
+            else
+              cp "/tmp/expansion-profiles/${n}.json" "/tmp/voicepack/profiles/${n}.json"
+            fi
+          done
+          cp voice-pipeline/calibration/actors/production_approvals.json /tmp/voicepack/profiles/production_approvals.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          path=Path('/tmp/voicepack/profiles/production_approvals.json')
+          data=json.loads(path.read_text())
+          data['actors']['06']={
+              'status':'accepted',
+              'eligible_for':['production'],
+              'approval_method':'automated_c_v4_qa',
+              'qa_policy':'automated-c-v4-qa-2',
+              'qa2_golden_run_id':34743370177,
+              'qa2_expansion_run_id':34740877351,
+              'intent_variants':{
+                  'neutral_explain':'B',
+                  'serious_analysis':'A',
+                  'warm_explain':'A',
+                  'narrative_build':'A',
+                  'contrast':'B',
+                  'information_peak':'B',
+                  'restrained_irony':'A',
+                  'quoted_character':'C',
+                  'qualification':'A',
+                  'curious_probe':'A'
+              }
+          }
+          path.write_text(json.dumps(data,indent=2)+'\n')
+          PY
+      - name: Download actor03 final profile
+        uses: actions/download-artifact@v4
+        with: {name: c-v4-final-two-r7-03, path: /tmp/final03, github-token: '${{ github.token }}', repository: dannhitruong852-jpg/taptap, run-id: '34757803286'}
+      - name: Download actor07 final profile
+        uses: actions/download-artifact@v4
+        with: {name: c-v4-six-repair-r2-07, path: /tmp/final07, github-token: '${{ github.token }}', repository: dannhitruong852-jpg/taptap, run-id: '34746310492'}
+      - name: Download actor10 final profile
+        uses: actions/download-artifact@v4
+        with: {name: c-v4-six-repair-10, path: /tmp/final10, github-token: '${{ github.token }}', repository: dannhitruong852-jpg/taptap, run-id: '34744873122'}
+      - name: Download actor11 final profile
+        uses: actions/download-artifact@v4
+        with: {name: c-v4-six-repair-11, path: /tmp/final11, github-token: '${{ github.token }}', repository: dannhitruong852-jpg/taptap, run-id: '34744873122'}
+      - name: Download actor14 final profile
+        uses: actions/download-artifact@v4
+        with: {name: c-v4-six-repair-r4-14, path: /tmp/final14, github-token: '${{ github.token }}', repository: dannhitruong852-jpg/taptap, run-id: '34749959122'}
+      - name: Download actor15 final profile
+        uses: actions/download-artifact@v4
+        with: {name: c-v4-actor15-repair-r9, path: /tmp/final15, github-token: '${{ github.token }}', repository: dannhitruong852-jpg/taptap, run-id: '34765501954'}
+      - name: Install repaired profiles
+        run: |
+          for n in 03 07 10 11 14 15; do
+            src="/tmp/final${n}/profiles/${n}.json"
+            test -s "$src"
+            cp "$src" "/tmp/voicepack/profiles/${n}.json"
+          done
+      - name: Prepare all actor references at the profile-visible root
+        run: |
+          for n in $(seq -w 1 15); do
+            case "$n" in
+              01|02|04|05|08|09|12|13)
+                python voice-pipeline/prepare_2002_cast_references.py --actor "$n" --output /tmp/voicepack/references ;;
+              03|14)
+                python voice-pipeline/calibration/prepare_repair_references_r4.py --actor "$n" --output /tmp/voicepack/references ;;
+              *)
+                python voice-pipeline/calibration/prepare_expansion_references.py --actor "$n" --output /tmp/voicepack/references ;;
+            esac
+          done
+      - name: Download actor15 X11 prompt
+        uses: actions/download-artifact@v4
+        with: {name: c-v4-final-two-r6-15, path: /tmp/r6, github-token: '${{ github.token }}', repository: dannhitruong852-jpg/taptap, run-id: '34754229039'}
+      - name: Install actor15 X11 prompt
+        run: cp /tmp/r6/audio/actor15/actor15-08-probe-X11.wav /tmp/voicepack/references/actor15-08-probe-X11.wav
+      - name: Preflight every actor intent and reference
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from adapters.chatterbox_actor_adapter import resolve_controls
+          from calibration.automatic_qa import REQUIRED_INTENTS
+          profiles=Path('/tmp/voicepack/profiles')
+          references=Path('/tmp/voicepack/references')
+          checked=0
+          for number in range(1,16):
+              actor=f'{number:02d}'
+              for intent in REQUIRED_INTENTS:
+                  for intensity in (0,1,2):
+                      controls=resolve_controls(actor,intent,intensity,profiles)
+                      target=references/controls['reference_path']
+                      assert target.is_file(),(actor,intent,intensity,target)
+                      checked += 1
+          print({'actor_intent_intensity_checks':checked})
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kaoyan-c-v4-production-voicepack
+          path: /tmp/voicepack
+          if-no-files-found: error
+          retention-days: 14
+
+
+  render:
+    needs: [plan, voicepack]
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 8
+      matrix:
+        shard: [0, 1, 2]
+        unit: ${{ fromJSON(needs.plan.outputs.units) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - uses: actions/cache@v4
+        with:
+          path: /tmp/chatterbox-hf-cache
+          key: chatterbox-original-en-017-v1
+      - uses: actions/download-artifact@v4
+        with:
+          name: kaoyan-c-v4-production-voicepack
+          path: /tmp/voicepack
+      - name: Install renderer dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          python -m pip install chatterbox-tts==0.1.7 numpy==1.26.4 soundfile==0.13.1
+      - name: Verify frozen render inputs
+        run: |
+          test -s 'kaoyan-reader-v1/content/${{ matrix.unit.year }}/c/${{ matrix.unit.article }}.json'
+          test -s 'content-pipeline/voice_profiles/${{ matrix.unit.year }}.json'
+          test -s 'content-pipeline/direction/${{ matrix.unit.year }}.json'
+      - name: Compute render cache digest
+        id: render-cache
+        run: |
+          digest=$({
+            sha256sum 'kaoyan-reader-v1/content/${{ matrix.unit.year }}/c/${{ matrix.unit.article }}.json'
+            sha256sum 'content-pipeline/voice_profiles/${{ matrix.unit.year }}.json'
+            sha256sum 'content-pipeline/direction/${{ matrix.unit.year }}.json'
+            sha256sum voice-pipeline/generate_c_v4.py voice-pipeline/generate_batch.py voice-pipeline/adapters/chatterbox_actor_adapter.py
+            find /tmp/voicepack/profiles /tmp/voicepack/references -type f -print0 | sort -z | xargs -0 sha256sum
+          } | sha256sum | cut -d' ' -f1)
+          echo "digest=$digest" >> "$GITHUB_OUTPUT"
+      - name: Restore previous shard cache when available
+        uses: actions/cache@v4
+        with:
+          path: batch-out/${{ matrix.unit.year }}/${{ matrix.unit.article }}
+          key: kaoyan-v2-${{ matrix.unit.year }}-${{ matrix.unit.article }}-${{ matrix.shard }}-${{ steps.render-cache.outputs.digest }}
+      - name: Render shard from frozen inputs
+        run: |
+          python voice-pipeline/generate_c_v4.py \
+            --year '${{ matrix.unit.year }}' \
+            --article '${{ matrix.unit.article }}' \
+            --shard '${{ matrix.shard }}' --shards 3 --max-attempts 2 \
+            --calibration-dir /tmp/voicepack/profiles \
+            --references-dir /tmp/voicepack/references \
+            --output 'batch-out/${{ matrix.unit.year }}/${{ matrix.unit.article }}'
+      - name: Require shard manifest
+        run: test -s 'batch-out/${{ matrix.unit.year }}/${{ matrix.unit.article }}/v4-shard-${{ matrix.shard }}.json'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: kaoyan-c-${{ matrix.unit.year }}-${{ matrix.unit.article }}-shard-${{ matrix.shard }}
+          path: batch-out/${{ matrix.unit.year }}/${{ matrix.unit.article }}
+          if-no-files-found: error
+          retention-days: 14
+
+  merge:
+    needs: [plan, render]
+    if: always() && needs.plan.result == 'success' && needs.render.result != 'cancelled'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        year: ${{ fromJSON(needs.plan.outputs.years) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install merge dependency
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+      - name: Verify frozen canonical content
+        run: |
+          test -d 'kaoyan-reader-v1/content/${{ matrix.year }}/c'
+          test -s 'reports/production-v2/${{ matrix.year }}-canary.json'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: kaoyan-c-${{ matrix.year }}-*
+          path: /tmp/incoming
+          merge-multiple: false
+      - name: Merge sentence assets and verify completeness
+        run: python voice-pipeline/merge_c_v4.py --year '${{ matrix.year }}' --incoming /tmp/incoming
+      - name: Verify every browser manifest is technically complete
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          year='${{ matrix.year }}'
+          report=json.loads(Path(f'kaoyan-reader-v1/reports/c-v4-{year}-merge.json').read_text())
+          assert report['status']=='complete_candidate',report
+          assert report['qa']['technical']=='passed',report
+          for article,data in report['articles'].items():
+              assert not data['missing'],(article,data['missing'])
+              manifest=json.loads(Path(f'kaoyan-reader-v1/audio/{year}/v4/c-{article}/manifest.json').read_text())
+              assert manifest['qa']['technical']=='passed',article
+              assert not manifest['missing_segments'],article
+              for sentence in manifest['sentences'].values():
+                  for key in ('path','mp3_path'):
+                      target=Path('kaoyan-reader-v1')/sentence[key].removeprefix('./')
+                      assert target.is_file(),target
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kaoyan-c-${{ matrix.year }}-merged-candidate
+          path: |
+            kaoyan-reader-v1/content/${{ matrix.year }}/c
+            kaoyan-reader-v1/audio/${{ matrix.year }}/v4
+            kaoyan-reader-v1/reports/c-v4-${{ matrix.year }}-merge.json
+          if-no-files-found: error
+          retention-days: 14
