@@ -86,7 +86,7 @@ class ReaderUX(unittest.TestCase):
         p.screenshot(path=str(REPORT/'x-player-speed-menu.png'),full_page=False)
 
     def test_05_player_previous_next_controls_switch_whole_articles_not_sentences(self):
-        p=self.page;p.locator('.sentence-play').nth(1).click();p.wait_for_function('window.__audio.some(a=>!a.paused&&a.currentTime>.1)',timeout=15000)
+        p=self.page;target=p.locator('.sentence-card').nth(1).locator('.en');target.tap();p.wait_for_timeout(80);target.tap();p.wait_for_function('window.__audio.some(a=>!a.paused&&a.currentTime>.1)',timeout=15000)
         self.assertTrue(p.locator('#player-position').inner_text().startswith('02'))
         p.locator('#next').click()
         p.wait_for_function("document.querySelector('#article-select').value==='2002-text2' && document.querySelector('#player-position').textContent.trim().startsWith('01') && document.querySelectorAll('.sentence-card').length===16")

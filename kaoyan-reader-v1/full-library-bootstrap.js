@@ -13,9 +13,13 @@ function ensureStatusElement(){
   node.style.opacity='.68';
   node.style.fontSize='.78rem';
   node.textContent='离线缓存准备中';
-  const anchor=document.querySelector('#content-status');
-  if(anchor?.parentNode)anchor.parentNode.insertBefore(node,anchor.nextSibling);
-  else document.body.appendChild(node);
+  const anchor=document.querySelector('.catalog-controls');
+  if(anchor)anchor.insertAdjacentElement('afterend',node);
+  else{
+    const hero=document.querySelector('.hero');
+    if(hero)hero.appendChild(node);
+    else document.body.appendChild(node);
+  }
   return node;
 }
 

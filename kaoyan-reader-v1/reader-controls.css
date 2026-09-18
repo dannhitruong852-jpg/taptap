@@ -1,5 +1,5 @@
 /* Learning controls; article text stays selectable and native. */
-.reader-settings{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:18px 2px 0;color:var(--ink-soft);font-size:12px}
+.reader-settings{display:flex;align-items:center;justify-content:flex-end;margin:8px 2px 0;color:var(--ink-soft);font-size:12px}
 .vocab-toggle{display:flex;align-items:center;gap:8px;min-height:44px;padding:4px 0 4px 10px;border:0;background:none;color:#4d483f;font-size:12px;font-weight:650;white-space:nowrap;cursor:pointer}
 .vocab-toggle i{display:block;width:30px;height:18px;border-radius:99px;background:#c9c4b9;position:relative;transition:background .15s}
 .vocab-toggle i::after{content:"";position:absolute;left:3px;top:3px;width:12px;height:12px;border-radius:50%;background:#fff;transition:transform .15s}
@@ -11,8 +11,6 @@
 .sentence-content:focus-visible{outline:2px solid #b6a27c}
 .en,.zh,.en *,.zh *{-webkit-user-select:text;user-select:text;-webkit-touch-callout:default}
 .zh[hidden]{display:none!important}
-.sentence-card .sentence-play{border:0;left:7px;top:10px;width:32px;height:42px;display:flex;flex-direction:column;justify-content:center;gap:3px;cursor:pointer;user-select:none;-webkit-user-select:none}
-.sentence-play-icon{font-size:8px;line-height:1;opacity:.65}
 .zh .zh-vocab{font-weight:800;color:#514838;background:linear-gradient(transparent 70%,rgba(215,181,110,.25) 0)}
 body.hide-vocab .sentence-card .vocab,body.hide-vocab .sentence-card .vocab.read-token{font-weight:inherit!important;background:none!important;color:inherit}
 .sentence-card::after{pointer-events:none}
@@ -56,7 +54,6 @@ body.hide-vocab .sentence-card .vocab,body.hide-vocab .sentence-card .vocab.read
  .player-phrase-book{width:62px;min-width:62px;font-size:11px}
 }
 
-@media(min-width:700px){.sentence-card .sentence-play{left:13px;top:16px}}
 @media(min-width:768px){
  .player-shell{width:520px;left:50%;right:auto;bottom:18px;transform:translate3d(-50%,0,0);border-radius:22px;border-bottom:1px solid rgba(48,45,38,.08)}
  .player-shell.is-collapsed{transform:translate3d(-50%,calc(100% + 46px),0)}

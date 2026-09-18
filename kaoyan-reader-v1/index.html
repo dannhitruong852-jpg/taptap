@@ -6,10 +6,10 @@
   <meta name="theme-color" content="#f5f1e8">
   <meta name="description" content="2002 考研英语 C 模式双语精读：预生成音频、逐句朗读、零运行时 TTS。">
   <title>2002 · 英语真题精读</title>
-  <link rel="stylesheet" href="./styles.css?v=phrase-study-edit-20260919-v1">
-  <link rel="stylesheet" href="./catalog.css?v=phrase-study-edit-20260919-v1">
-  <link rel="stylesheet" href="./readalong.css?v=phrase-study-edit-20260919-v1">
-  <link rel="stylesheet" href="./reader-controls.css?v=phrase-study-edit-20260919-v1">
+  <link rel="stylesheet" href="./styles.css?v=reader-cleanup-20260919-v1">
+  <link rel="stylesheet" href="./catalog.css?v=reader-cleanup-20260919-v1">
+  <link rel="stylesheet" href="./readalong.css?v=reader-cleanup-20260919-v1">
+  <link rel="stylesheet" href="./reader-controls.css?v=reader-cleanup-20260919-v1">
   <style>
     .transport-row{left:94px;right:10px;grid-template-columns:46px 56px 46px 68px;gap:12px;justify-content:end;align-items:center}
     .article-nav{width:46px;height:46px}
@@ -23,10 +23,6 @@
 <body data-mood="warm" data-reader-ui="tap-translate-v1">
   <main class="page-shell">
     <header class="hero">
-      <div class="topline">
-        <span class="year-chip">2002 · Text 1</span>
-        <span class="free-chip">预生成 · 零运行时 TTS</span>
-      </div>
       <h1 id="article-title">把真题读懂，也听懂</h1>
       <p class="subtitle">逐句中英对照 · 理解导向的美式日常交流式朗读</p>
       <nav class="catalog-controls" aria-label="试卷文章目录">
@@ -34,13 +30,7 @@
         <label>题型<select id="section-select"><option value="">全部</option><option value="cloze">完型</option><option value="reading">阅读</option><option value="translation">翻译</option></select></label>
         <label class="article-control">文章<select id="article-select" aria-label="选择文章"></select></label>
       </nav>
-      <p id="content-status" class="content-status" aria-live="polite">正在加载2002年目录</p>
-      <div class="director-card">
-        <div class="director-icon">🎬</div>
-        <div><div class="director-title">这篇文章怎么读</div><p id="article-background"></p></div>
-      </div>
       <div class="reader-settings">
-        <span>先读英文，轻点查译文</span>
         <button id="toggle-vocab" class="vocab-toggle" type="button" role="switch" aria-checked="true" aria-label="6级及以上难词双语标注"><span>难词 6+</span><i aria-hidden="true"></i></button>
       </div>
     </header>
@@ -89,7 +79,7 @@
     </aside>
   </div>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script type="module" src="./app.js?v=phrase-study-edit-20260919-v1"></script>
-  <script type="module" src="./full-library-bootstrap.js?v=phrase-study-edit-20260919-v1"></script>
+  <script type="module" src="./app.js?v=reader-cleanup-20260919-v1"></script>
+  <script type="module" src="./full-library-bootstrap.js?v=reader-cleanup-20260919-v1"></script>
 </body>
 </html>
