@@ -13,7 +13,6 @@ import { resolvePlayerScroll } from './scroll-behavior.js';
 import { pickArticle, selectArticles, adjacentArticle } from './catalog.js';
 import { createArticleBundleStore } from './article-bundle-store.js';
 import { resolvePhraseSnippet, createPhraseBookStore } from './phrase-book.js';
-import { resolvePhraseSnippet, createPhraseBookStore } from './phrase-book.js';
 
 let article={}, sentences=[], manifest={segments:{}};
 let catalog=null, loading=true, selectionGeneration=0, bilingualMappings={}, semanticMappings={};
@@ -52,18 +51,6 @@ const phraseBookList=document.querySelector('#phrase-book-list');
 const phraseBookEmpty=document.querySelector('#phrase-book-empty');
 const phraseBookStore=createPhraseBookStore({storage:window.localStorage});
 let phraseSelection=null,phraseSelectionFrame=null,phraseSelectionInvalidKey='';
-const phraseAction=document.querySelector('#phrase-selection-action');
-const phraseBookOpen=document.querySelector('#phrase-book-open');
-const phraseBookBackdrop=document.querySelector('#phrase-book-backdrop');
-const phraseBookPanel=document.querySelector('#phrase-book-panel');
-const phraseBookClose=document.querySelector('#phrase-book-close');
-const phraseBookBlur=document.querySelector('#phrase-book-blur');
-const phraseBookList=document.querySelector('#phrase-book-list');
-const phraseBookEmpty=document.querySelector('#phrase-book-empty');
-const phraseBookCount=document.querySelector('#phrase-book-count');
-let phraseStorage=null;try{phraseStorage=window.localStorage;}catch{}
-const phraseBook=createPhraseBookStore({storage:phraseStorage});
-let phraseSelection=null,phraseSelectionTimer=null;
 const state={current:0,speed:1,playing:false,paused:false,showVocab:true,timer:null,playerHidden:false,programmaticScrollUntil:0,scrollAnchorY:Math.max(0,window.scrollY||0),scrollFrame:null,playRequestedAt:null};
 const emotionLabels={neutral:'自然讲述',warm:'温暖讲解',lively:'轻快生动',serious:'严肃克制',curious:'好奇追问',ironic:'冷幽默',tense:'紧张转折',emotional:'情绪加强'};
 function hasSelectedText(){return Boolean(window.getSelection()?.toString());}
@@ -342,66 +329,6 @@ function moveArticle(delta){
  syncArticleSelectors(target);openArticle(target);
 }
 
-function nodeElement(node){return node?.nodeType===Node.ELEMENT_NODE?node:node?.parentElement;}
-function hidePhraseAction(){phraseAction.hidden=true;phraseSelection=null;}
-function sentenceWordRanges(card){return [...card.querySelectorAll('.en .read-token')].map(node=>({char_start:Number(node.dataset.charStart),char_end:Number(node.dataset.charEnd)})).filter(x=>Number.isFinite(x.char_start)&&Number.isFinite(x.char_end));}
-function currentPhraseSelection(){
- const selection=window.getSelection();if(!selection||selection.rangeCount===0||selection.isCollapsed)return null;
- const anchorEn=nodeElement(selection.anchorNode)?.closest?.('.en'),focusEn=nodeElement(selection.focusNode)?.closest?.('.en');
- if(!anchorEn||!focusEn)return null;
- if(anchorEn!==focusEn)return {invalid:'cross'};
- const card=anchorEn.closest('.sentence-card');if(!card)return null;
- const range=selection.getRangeAt(0);const prefix=document.createRange();prefix.selectNodeContents(anchorEn);prefix.setEnd(range.startContainer,range.startOffset);
- const suffix=document.createRange();suffix.selectNodeContents(anchorEn);suffix.setEnd(range.endContainer,range.endOffset);
- let start=prefix.toString().length,end=suffix.toString().length;const index=Number(card.dataset.index),sentence=sentences[index];if(!sentence)return null;
- let raw=sentence.en.slice(start,end);const lead=raw.match(/^\s*/)?.[0].length||0,trail=raw.match(/\s*$/)?.[0].length||0;start+=lead;end-=trail;raw=sentence.en.slice(start,end);
- if(!raw)return null;if(raw.length>120)return {invalid:'long'};
- const rect=range.getBoundingClientRect();return {card,index,sentence,start,end,text:raw,rect};
-}
-function positionPhraseAction(rect){
- const width=150,half=width/2;let x=rect.left+rect.width/2,y=rect.top-8;
- x=Math.max(half+8,Math.min(window.innerWidth-half-8,x));if(y<56)y=rect.bottom+46;
- phraseAction.style.left=`${x}px`;phraseAction.style.top=`${Math.max(48,y)}px`;phraseAction.hidden=false;
-}
-function syncPhraseSelection(){
- const result=currentPhraseSelection();
- if(!result){hidePhraseAction();return;}
- if(result.invalid){hidePhraseAction();if(result.invalid==='cross')showToast('请在同一句中选择词群');else if(result.invalid==='long')showToast('词群请控制在 120 个英文字符以内');return;}
- phraseSelection=result;tapGuard.cancel();tapArbiter.cancel();positionPhraseAction(result.rect);
-}
-function renderPhraseBook(){
- const entries=phraseBook.list(),blurred=phraseBook.getBlurred();phraseBookCount.textContent=String(entries.length);phraseBookEmpty.hidden=entries.length>0;phraseBookList.replaceChildren();
- phraseBookBlur.textContent=blurred?'显示译文':'模糊译文';phraseBookBlur.setAttribute('aria-pressed',String(blurred));
- for(const entry of entries){
-  const item=document.createElement('div');item.className='phrase-book-item';
-  const row=document.createElement('button');row.type='button';row.className='phrase-book-row';
-  const en=document.createElement('span');en.className='phrase-english';en.textContent=entry.selectedText;
-  const zh=document.createElement('span');zh.className=`phrase-translation${blurred?' is-blurred':''}`;zh.textContent=entry.translationSnippet;
-  row.append(en,zh);
-  const detail=document.createElement('div');detail.className='phrase-book-detail';detail.hidden=true;
-  const source=document.createElement('p');source.textContent=entry.sourceSentence;
-  const sourceZh=document.createElement('p');sourceZh.textContent=entry.sourceSentenceZh;
-  const meta=document.createElement('p');meta.textContent=`${entry.year} · ${entry.articleTitle||entry.articleId}`;
-  const del=document.createElement('button');del.type='button';del.className='phrase-book-delete';del.textContent='删除';del.addEventListener('click',e=>{e.stopPropagation();phraseBook.remove(entry.id);renderPhraseBook();});
-  detail.append(source,sourceZh,meta,del);row.addEventListener('click',()=>{detail.hidden=!detail.hidden;});item.append(row,detail);phraseBookList.append(item);
- }
-}
-function openPhraseBook(){hidePhraseAction();renderPhraseBook();phraseBookBackdrop.hidden=false;}
-function closePhraseBook(){phraseBookBackdrop.hidden=true;}
-function addCurrentPhrase(){
- const selected=phraseSelection;if(!selected||loading)return;
- const {sentence,index,start,end,text}=selected;const card=selected.card;
- const snippet=resolvePhraseSnippet({sentence,selectionStart:start,selectionEnd:end,words:sentenceWordRanges(card),semanticGroups:semanticMappings[sentence.id]||[],bilingualPairs:bilingualMappings[sentence.id]||[]});
- const result=phraseBook.add({selectedText:text,translationSnippet:snippet.text,sourceSentence:sentence.en,sourceSentenceZh:sentence.zh,sentenceId:sentence.id,articleId:currentEntry?.id||article.article_id,articleTitle:article.title||currentEntry?.title||'',year:currentEntry?.year||Number(yearSelect.value),selectionStart:start,selectionEnd:end,zhStart:snippet.zhStart,zhEnd:snippet.zhEnd,mappingSource:snippet.source,createdAt:Date.now()});
- showToast(result.added?'已加入词群本':'已在词群本中');window.getSelection()?.removeAllRanges();hidePhraseAction();renderPhraseBook();
-}
-phraseAction.addEventListener('pointerdown',event=>{event.preventDefault();event.stopPropagation();});
-phraseAction.addEventListener('click',event=>{event.preventDefault();event.stopPropagation();addCurrentPhrase();});
-document.addEventListener('selectionchange',()=>{window.clearTimeout(phraseSelectionTimer);phraseSelectionTimer=window.setTimeout(syncPhraseSelection,100);});
-phraseBookOpen.addEventListener('click',openPhraseBook);phraseBookClose.addEventListener('click',closePhraseBook);
-phraseBookBackdrop.addEventListener('click',event=>{if(event.target===phraseBookBackdrop)closePhraseBook();});
-phraseBookBlur.addEventListener('click',()=>{phraseBook.setBlurred(!phraseBook.getBlurred());renderPhraseBook();});
-
 document.addEventListener('selectionchange',schedulePhraseSelectionAction);
 phraseSelectionAction.addEventListener('pointerdown',event=>{event.preventDefault();event.stopPropagation();});
 phraseSelectionAction.addEventListener('click',event=>{event.preventDefault();event.stopPropagation();saveCurrentPhraseSelection();});
@@ -451,12 +378,12 @@ vocabButton.addEventListener('click',()=>{state.showVocab=!state.showVocab;docum
 window.addEventListener('wheel',()=>{state.programmaticScrollUntil=0;},{passive:true});
 window.addEventListener('touchmove',()=>{state.programmaticScrollUntil=0;},{passive:true});
 window.addEventListener('scrollend',()=>{state.programmaticScrollUntil=0;state.scrollAnchorY=Math.max(0,window.scrollY||0);},{passive:true});
-window.addEventListener('scroll',()=>{phraseAction.hidden=true;queueViewportScroll();},{passive:true});
-window.addEventListener('resize',()=>{phraseAction.hidden=true;},{passive:true});
+window.addEventListener('scroll',()=>{hidePhraseSelectionAction();queueViewportScroll();},{passive:true});
+window.addEventListener('resize',hidePhraseSelectionAction,{passive:true});
 window.addEventListener('beforeunload',()=>{hybridAudioPlayer.stop();audioCache.clearMemory();decodedAudioStore?.clearDecoded();});
 
 async function openArticle(entry){
- if(!entry)return;hidePhraseAction();window.getSelection()?.removeAllRanges();const switchStarted=performance.now();const selectionToken=++selectionGeneration;tapGuard.cancel();tapArbiter.cancel();loading=true;clearTimer();hybridAudioPlayer.stop();fallbackAudioPlayer.clearPreload();audioCache.clearMemory();setPlaying(false,false);playButton.disabled=true;statusEl.textContent='正在加载正文';
+ if(!entry)return;hidePhraseSelectionAction();window.getSelection()?.removeAllRanges();const switchStarted=performance.now();const selectionToken=++selectionGeneration;tapGuard.cancel();tapArbiter.cancel();loading=true;clearTimer();hybridAudioPlayer.stop();fallbackAudioPlayer.clearPreload();audioCache.clearMemory();setPlaying(false,false);playButton.disabled=true;statusEl.textContent='正在加载正文';
  articleBundleStore.cancelLowPriorityWork();
  try{
   const [loaded,semantic]=await Promise.all([articleBundleStore.get(entry),semanticMapPromise]);if(!loaded||selectionToken!==selectionGeneration)return;
