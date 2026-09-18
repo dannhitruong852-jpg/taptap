@@ -1,5 +1,5 @@
 name: Finalize reviewed 2024 curated once
-# rerun after raw-shard materialization fix
+# rerun with canonical preflight diagnostics
 
 on:
   push:
@@ -75,7 +75,12 @@ jobs:
           src['expected_articles']={str(year):src['expected_articles'][str(year)]}
           Path('/tmp/2024-manifest.json').write_text(json.dumps(src,indent=2)+'\n')
           PY
-          python -m production_v2.cli_validate_batch             --manifest /tmp/2024-manifest.json             --catalog kaoyan-reader-v1/content/catalog.json             --reader-root kaoyan-reader-v1             --phase preflight             --report reports/production-v2/2024-canonical-regression.json
+          set +e
+          python -m production_v2.cli_validate_batch --manifest /tmp/2024-manifest.json --catalog kaoyan-reader-v1/content/catalog.json --reader-root kaoyan-reader-v1 --phase preflight --report reports/production-v2/2024-canonical-regression.json
+          rc=$?
+          set -e
+          cat reports/production-v2/2024-canonical-regression.json
+          exit "$rc"
 
       - name: Assert final 2024 evidence
         run: |
