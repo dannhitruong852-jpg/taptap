@@ -1,0 +1,546 @@
+{
+  "year": 2026,
+  "section_type": "cloze",
+  "article_id": "cloze",
+  "source_sha256": "28d1cd118a3744ff33a5f8ecd47fb733cf6127845a9fb31c81087288eff339a8",
+  "source_pages": [
+    2,
+    3
+  ],
+  "accent": "en-GB",
+  "primary_actor_id": "07",
+  "article_context": "文章讨论“个人化解读”和“读心”两种常见认知倾向：人们容易把他人的批评、取消约会等行为解释为对自己的负面评价；更好的做法是挑战这种假设，并尝试从他人的处境寻找替代解释。",
+  "article": {
+    "year": 2026,
+    "section": "cloze",
+    "title": "完形填空 · 别把别人的行为都理解成针对自己",
+    "background": "文章讨论“个人化解读”和“读心”两种常见认知倾向：人们容易把他人的批评、取消约会等行为解释为对自己的负面评价；更好的做法是挑战这种假设，并尝试从他人的处境寻找替代解释。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "Most of us strive for self-respect—to see ourselves in a positive light, to be proud of who we are.",
+      "zh": "我们大多数人都追求自尊——希望以积极的眼光看待自己，并为真实的自己感到自豪。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "Most of us strive for self-respect—to see ourselves in a positive light, to be proud of who we are.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-cloze/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Any comments or experiences that undermine those feelings of self-worth can be uncomfortable and it's only natural to want to avoid them.",
+      "zh": "任何削弱这种自我价值感的评论或经历都会令人不舒服，而想要避开它们也是很自然的。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Any comments or experiences that undermine those feelings of self-worth can be uncomfortable and it's only natural to want to avoid them.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-cloze/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "But the thing is, whether your self-worth really is being undermined is, to a large degree, subjective.",
+      "zh": "但问题在于，你的自我价值是否真的受到了损害，在很大程度上是主观的。",
+      "vocab": [
+        {
+          "word": "subjective",
+          "lemma": "subjective",
+          "level": 6,
+          "meaning": "主观的",
+          "start": 92,
+          "end": 102
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "But the thing is, whether your self-worth really is being undermined is, to a large degree, subjective.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-cloze/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 1,
+      "en": "Much of it comes down to your perception of what someone said or did.",
+      "zh": "这很大程度上取决于你对别人言行的理解。",
+      "vocab": [
+        {
+          "word": "perception",
+          "lemma": "perception",
+          "level": 6,
+          "meaning": "理解",
+          "start": 30,
+          "end": 40
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Much of it comes down to your perception of what someone said or did.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-cloze/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "When you take things personally, you're interpreting these situations as saying something significant and negative about you as a person.",
+      "zh": "当你把事情往自己身上揽时，你是在把这些情境理解为：它们揭示了关于你这个人的某种重要而负面的东西。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "When you take things personally, you're interpreting these situations as saying something significant and negative about you as a person.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-cloze/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "Say your boss picks holes in your sales report, and you come away feeling like this means she thinks you're a poor member of staff.",
+      "zh": "比如老板挑出了你销售报告中的问题，你离开时却觉得，这意味着她认为你是个表现很差的员工。",
+      "vocab": [],
+      "discourse_function": "example",
+      "prosody_focus": "",
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "Say your boss picks holes in your sales report, and you come away feeling like this means she thinks you're a poor member of staff.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-cloze/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "Or, two of your friends cancel your planned get-together at the pub and you interpret this as meaning they're bored of you.",
+      "zh": "又或者，两位朋友取消了原本计划好的酒吧聚会，而你把这理解成他们已经厌烦了你。",
+      "vocab": [],
+      "discourse_function": "example",
+      "prosody_focus": "",
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "Or, two of your friends cancel your planned get-together at the pub and you interpret this as meaning they're bored of you.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-cloze/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 2,
+      "en": "Psychologists have a term for this way of thinking: personalisation.",
+      "zh": "心理学家给这种思维方式起了一个术语：个人化解读。",
+      "vocab": [
+        {
+          "word": "personalisation",
+          "lemma": "personalisation",
+          "level": 7,
+          "meaning": "个人化解读",
+          "start": 52,
+          "end": 67
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "Psychologists have a term for this way of thinking: personalisation.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-cloze/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 3,
+      "en": "But the reality is that your boss might view you very highly.",
+      "zh": "但现实可能是，你的老板其实非常看重你。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "But the reality is that your boss might view you very highly.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-cloze/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 3,
+      "en": "It's just you made Some mistakes in the report and she wanted to point these out so that you do better next time.",
+      "zh": "只不过你在报告中犯了一些错误，她希望把这些问题指出来，好让你下次做得更好。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "It's just you made Some mistakes in the report and she wanted to point these out so that you do better next time.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-cloze/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 3,
+      "en": "Similarly, in the case of your friends cancelling, perhaps they both felt unwell that weekend or they just changed their minds.",
+      "zh": "同样地，就朋友取消聚会而言，也许那周末他们两个人都身体不适，或者只是改变了主意。",
+      "vocab": [],
+      "discourse_function": "compare",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "Similarly, in the case of your friends cancelling, perhaps they both felt unwell that weekend or they just changed their minds.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-cloze/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 4,
+      "en": "In both examples—and others that we all experience—there's another process at work that psychologists call mind reading.",
+      "zh": "在这两个例子以及我们都会经历的其他情形中，还有另一种心理过程在起作用，心理学家称之为“读心”。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "In both examples—and others that we all experience—there's another process at work that psychologists call mind reading.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-cloze/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 4,
+      "en": "This is when you assume to know what other people are thinking about you; when you can’t really know without asking them directly.",
+      "zh": "所谓“读心”，就是你自以为知道别人怎么看你；可如果不直接去问他们，你其实无法真正知道。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "This is when you assume to know what other people are thinking about you; when you can’t really know without asking them directly.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-cloze/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 5,
+      "en": "One simple way to avoid engaging in personalisation and mind reading is to challenge your negative assumptions of what's happened.",
+      "zh": "避免陷入个人化解读和“读心”的一个简单办法，是质疑自己对已经发生之事所作的负面假设。",
+      "vocab": [
+        {
+          "word": "personalisation",
+          "lemma": "personalisation",
+          "level": 7,
+          "meaning": "个人化解读",
+          "start": 36,
+          "end": 51
+        }
+      ],
+      "discourse_function": "encourage",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "One simple way to avoid engaging in personalisation and mind reading is to challenge your negative assumptions of what's happened.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-cloze/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 5,
+      "en": "When you find yourself taking a situation personally, try to think of other interpretations that are less focused on you—especially in the sense of saying anything deep or fundamental about you.",
+      "zh": "当你发现自己把某种情境理解成针对个人时，试着寻找一些不那么以自己为中心的解释——尤其不要把它看成在说明关于你本人的什么深层或根本问题。",
+      "vocab": [],
+      "discourse_function": "encourage",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "When you find yourself taking a situation personally, try to think of other interpretations that are less focused on you—especially in the sense of saying anything deep or fundamental about you.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-cloze/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 6,
+      "en": "When you do this, it might help to try to put yourself in other people's shoes.",
+      "zh": "这样做时，试着设身处地站在别人角度思考，可能会有所帮助。",
+      "vocab": [],
+      "discourse_function": "encourage",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "When you do this, it might help to try to put yourself in other people's shoes.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-cloze/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 6,
+      "en": "The fact your boss took the time to give you feedback at all means they care enough to want to help you improve.",
+      "zh": "老板愿意花时间给你反馈，本身就说明她足够在意，愿意帮助你改进。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "The fact your boss took the time to give you feedback at all means they care enough to want to help you improve.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-cloze/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 6,
+      "en": "When it comes to your friends—maybe it's because your friendship is so strong that they felt able to cancel at late notice.",
+      "zh": "至于你的朋友，也许恰恰因为你们的友谊足够牢固，他们才觉得临时取消也不会伤害这段关系。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "When it comes to your friends—maybe it's because your friendship is so strong that they felt able to cancel at late notice.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-cloze/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}
