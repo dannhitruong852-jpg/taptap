@@ -5,21 +5,32 @@ import {readFileSync} from 'node:fs';
 const app=readFileSync(new URL('../app.js',import.meta.url),'utf8');
 const html=readFileSync(new URL('../index.html',import.meta.url),'utf8');
 const css=readFileSync(new URL('../styles.css',import.meta.url),'utf8');
-const bilingual=readFileSync(new URL('../bilingual-text.js',import.meta.url),'utf8');
 
-test('reader uses one inline mark action and no phrase-book UI',()=>{
+test('selection action is a fixed bottom study bar, not a selection-adjacent bubble',()=>{
+  assert.match(html,/id="phrase-study-bar"/);
+  assert.match(html,/id="phrase-highlight-selection"/);
   assert.match(html,/id="phrase-highlight-action"/);
-  assert.doesNotMatch(html,/phrase-book/);
-  assert.match(app,/from '\.\/inline-phrase-highlights\.js'/);
-  assert.match(app,/resolveLinkedHighlight/);
-  assert.match(app,/addEventListener\('selectionchange'/);
+  assert.match(css,/\.phrase-study-bar\s*\{[^}]*position\s*:\s*fixed/s);
+  assert.match(css,/\.phrase-study-bar\s*\{[^}]*bottom\s*:/s);
+  assert.doesNotMatch(app,/getBoundingClientRect\(\).*positionPhraseHighlightAction/s);
 });
 
-test('English and linked Chinese receive persistent inline mark classes',()=>{
-  assert.match(css,/\.phrase-mark-en/);
-  assert.match(css,/\.phrase-mark-zh/);
-  assert.match(app,/phrase-mark-en/);
-  assert.match(app,/phrase-mark-zh/);
-  assert.match(bilingual,/data-zh-start/);
-  assert.match(bilingual,/data-zh-end/);
+test('one mark automatically feeds a year-scoped phrase book',()=>{
+  for(const id of ['phrase-book-open','phrase-book-backdrop','phrase-book-year','phrase-book-list','phrase-book-blur']){
+    assert.match(html,new RegExp(`id="${id}"`));
+  }
+  assert.match(app,/inlineHighlightStore\.listYear/);
+  assert.match(app,/currentEntry\?\.year/);
+  assert.match(app,/translationSnippet/);
+});
+
+test('marking keeps single-tap translation and double-tap replay paths intact',()=>{
+  assert.match(app,/single:\(\)=>\{if\(!loading&&card\.isConnected\)toggleTranslation\(card\);\}/);
+  assert.match(app,/double:\(\)=>\{[\s\S]*?speak\(Number\(card\.dataset\.index\),\{scroll:false\}\)/);
+});
+
+test('release versions the modules involved in phrase marking',()=>{
+  assert.match(app,/\.\/bilingual-text\.js\?v=/);
+  assert.match(app,/\.\/reader-controls\.js\?v=/);
+  assert.match(app,/\.\/inline-phrase-highlights\.js\?v=/);
 });
