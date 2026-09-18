@@ -18,7 +18,8 @@
     2018,
     2019,
     2020,
-    2021
+    2021,
+    2022
   ],
   "default_article": "2002-text1",
   "articles": [
@@ -1128,6 +1129,69 @@
       "content": "./content/2021/c/translation.json",
       "manifest": "./audio/2021/v4/c-translation/manifest.json",
       "sentences": 7
+    },
+    {
+      "id": "2022-cloze",
+      "year": 2022,
+      "section_type": "cloze",
+      "title": "完形填空 · 把写作真正放到优先级上",
+      "content": "./content/2022/c/cloze.json",
+      "manifest": "./audio/2022/v4/c-cloze/manifest.json",
+      "sentences": 21
+    },
+    {
+      "id": "2022-partb",
+      "year": 2022,
+      "section_type": "part_b",
+      "title": "阅读 Part B · 中断后如何安全恢复运动",
+      "content": "./content/2022/c/partb.json",
+      "manifest": "./audio/2022/v4/c-partb/manifest.json",
+      "sentences": 29
+    },
+    {
+      "id": "2022-text1",
+      "year": 2022,
+      "section_type": "reading",
+      "title": "阅读 Text 1 · “气候友好型鸡蛋”能成为下一类高端食品吗",
+      "content": "./content/2022/c/text1.json",
+      "manifest": "./audio/2022/v4/c-text1/manifest.json",
+      "sentences": 19
+    },
+    {
+      "id": "2022-text2",
+      "year": 2022,
+      "section_type": "reading",
+      "title": "阅读 Text 2 · 为什么越来越多美国人选择“退休后继续工作”",
+      "content": "./content/2022/c/text2.json",
+      "manifest": "./audio/2022/v4/c-text2/manifest.json",
+      "sentences": 20
+    },
+    {
+      "id": "2022-text3",
+      "year": 2022,
+      "section_type": "reading",
+      "title": "阅读 Text 3 · 数字产品里的“暗黑模式”如何操纵用户",
+      "content": "./content/2022/c/text3.json",
+      "manifest": "./audio/2022/v4/c-text3/manifest.json",
+      "sentences": 17
+    },
+    {
+      "id": "2022-text4",
+      "year": 2022,
+      "section_type": "reading",
+      "title": "阅读 Text 4 · 一堂伦理课真的能改变吃肉行为吗",
+      "content": "./content/2022/c/text4.json",
+      "manifest": "./audio/2022/v4/c-text4/manifest.json",
+      "sentences": 18
+    },
+    {
+      "id": "2022-translation",
+      "year": 2022,
+      "section_type": "translation",
+      "title": "翻译 · 绘画中的意外结果如何训练创造性解决问题",
+      "content": "./content/2022/c/translation.json",
+      "manifest": "./audio/2022/v4/c-translation/manifest.json",
+      "sentences": 6
     }
   ]
 }
