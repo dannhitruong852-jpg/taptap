@@ -1,0 +1,27 @@
+name: Launch C Mode V2 2025-2026 once
+
+on:
+  push:
+    branches:
+      - c-mode-v2-2025-2026-production
+    paths:
+      - '.github/workflows/launch-c-mode-v2-2025-2026-once.yml'
+
+permissions:
+  contents: read
+  actions: write
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch production V2
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow run c-mode-production-v2.yml \
+            --repo "$GITHUB_REPOSITORY" \
+            --ref c-mode-v2-2025-2026-production \
+            -f batch_manifest=batch-manifests/2025-2026.json \
+            -f publish=true \
+            -f shards=3
