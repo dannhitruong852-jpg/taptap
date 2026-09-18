@@ -41,10 +41,13 @@
       </div>
       <div class="reader-settings">
         <span>先读英文，轻点查译文</span>
-        <button id="toggle-vocab" class="vocab-toggle" type="button" role="switch" aria-checked="true" aria-label="6级及以上难词双语标注"><span>难词 6+</span><i aria-hidden="true"></i></button>
+        <div class="reader-setting-actions">
+          <button id="phrase-book-open" class="phrase-book-open" type="button" aria-haspopup="dialog"><span>词群本</span><b id="phrase-book-count" aria-label="已收藏 0 条">0</b></button>
+          <button id="toggle-vocab" class="vocab-toggle" type="button" role="switch" aria-checked="true" aria-label="6级及以上难词双语标注"><span>难词 6+</span><i aria-hidden="true"></i></button>
+        </div>
       </div>
     </header>
-    <section class="howto" aria-label="使用方法"><span>轻点句框查译文</span><b>·</b><span>长按文字复制</span><b>·</b><span>点序号播放</span></section>
+    <section class="howto" aria-label="使用方法"><span>轻点句框查译文</span><b>·</b><span>双击重播</span><b>·</b><span>长按选词群</span></section>
     <section id="sentence-list" class="sentence-list" aria-label="2002 Text 1 双语精读"></section>
     <footer class="footer-note">只读真题正文，不含题目选项和作文。词汇使用本项目1—9级学习标尺，6级及以上突出显示，并非官方词汇分级。音频为预生成候选版，播放时不调用TTS。<a href="./THIRD_PARTY_AUDIO_NOTICE.txt" target="_blank" rel="noopener">音频来源与许可</a></footer>
   </main>
@@ -70,6 +73,25 @@
       </div>
     </div>
   </aside>
+  <button id="phrase-selection-action" class="phrase-selection-action" type="button" hidden>＋ 加入词群本</button>
+  <div id="phrase-book-backdrop" class="phrase-book-backdrop" hidden>
+    <aside id="phrase-book-panel" class="phrase-book-panel" role="dialog" aria-modal="true" aria-labelledby="phrase-book-title">
+      <header class="phrase-book-header">
+        <div>
+          <p class="phrase-book-kicker">真题语境收藏</p>
+          <h2 id="phrase-book-title">词群本</h2>
+        </div>
+        <button id="phrase-book-close" class="phrase-book-close" type="button" aria-label="关闭词群本">×</button>
+      </header>
+      <div class="phrase-book-toolbar">
+        <span id="phrase-book-summary">0 个词群</span>
+        <button id="phrase-book-blur" class="phrase-book-blur" type="button" aria-pressed="false">模糊译文</button>
+      </div>
+      <div class="phrase-book-columns" aria-hidden="true"><span>英文词群</span><span>语境译文</span></div>
+      <div id="phrase-book-list" class="phrase-book-list"></div>
+      <p id="phrase-book-empty" class="phrase-book-empty">还没有词群。回到正文，长按选中英文后加入。</p>
+    </aside>
+  </div>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script type="module" src="./app.js?v=active-sentence-20260918-v2"></script>
   <script type="module" src="./full-library-bootstrap.js?v=active-sentence-20260918-v2"></script>
