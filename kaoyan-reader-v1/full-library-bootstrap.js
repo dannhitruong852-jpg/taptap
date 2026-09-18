@@ -1,6 +1,6 @@
 import {createAudioCache} from './audio-cache.js';
 import {createArticleBundleStore} from './article-bundle-store.js';
-import {createStaticResourceCache} from './static-resource-cache.js';
+import {createStaticResourceCache} from './static-resource-cache.js?v=phrase-study-20260918-v2';
 import {createFullLibraryCacheCoordinator} from './full-library-cache.js';
 
 function ensureStatusElement(){
