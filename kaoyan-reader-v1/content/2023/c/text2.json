@@ -1,0 +1,536 @@
+{
+  "year": 2023,
+  "section_type": "reading",
+  "article_id": "text2",
+  "source_sha256": "91de84dad565eefd8ec245aa5b6291d336664c1549b6c4bff901594aed044f34",
+  "source_pages": [
+    6,
+    7
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "07",
+  "article_context": "文章批评以私有化和商业化解决美国国家公园资金危机的思路，指出公园基础设施长期失修的根源是慢性资金不足，而公众愿意额外纳税维护公园，其生态、教育、历史与文化价值也远超商业收入。",
+  "article": {
+    "year": 2023,
+    "section": "text2",
+    "title": "阅读 Text 2 · 美国国家公园真正缺的不是商业化，而是稳定资金",
+    "background": "文章批评以私有化和商业化解决美国国家公园资金危机的思路，指出公园基础设施长期失修的根源是慢性资金不足，而公众愿意额外纳税维护公园，其生态、教育、历史与文化价值也远超商业收入。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "It's easy to dismiss as absurd the federal government's ideas for plugging the chronic funding gap of our national parks.",
+      "zh": "人们很容易把联邦政府为填补国家公园长期资金缺口而提出的设想斥为荒唐。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "It's easy to dismiss as absurd the federal government's ideas for plugging the chronic funding gap of our national parks.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-text2/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Can anyone really think it's a good idea to allow Amazon deliveries to your tent in Yosemite or food trucks to line up under the redwood trees at Sequoia National Park?",
+      "zh": "难道真有人认为，让亚马逊把包裹送到你在优胜美地的帐篷前，或者让餐车在红杉国家公园的巨杉下排成一列，是个好主意吗？",
+      "vocab": [],
+      "discourse_function": "ask",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Can anyone really think it's a good idea to allow Amazon deliveries to your tent in Yosemite or food trucks to line up under the redwood trees at Sequoia National Park?",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-text2/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 2,
+      "en": "But the government is right about one thing: U.S. national parks are in crisis.",
+      "zh": "但有一点政府说对了：美国国家公园确实正陷入危机。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "But the government is right about one thing: U.S. national parks are in crisis.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-text2/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "Collectively, they have a maintenance backlog of more than $12 billion.",
+      "zh": "这些公园累积的维护欠账超过120亿美元。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Collectively, they have a maintenance backlog of more than $12 billion.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-text2/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "Roads, trails, restrooms, visitor centers and other infrastructure are crumbling.",
+      "zh": "道路、步道、洗手间、游客中心以及其他基础设施都在破败。",
+      "vocab": [
+        {
+          "word": "infrastructure",
+          "lemma": "infrastructure",
+          "level": 6,
+          "meaning": "基础设施",
+          "start": 52,
+          "end": 66
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Roads, trails, restrooms, visitor centers and other infrastructure are crumbling.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-text2/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 3,
+      "en": "But privatizing and commercializing the campgrounds would not be a cure-all.",
+      "zh": "然而，把露营地私有化、商业化并不是包治百病的办法。",
+      "vocab": [
+        {
+          "word": "privatizing",
+          "lemma": "privatize",
+          "level": 7,
+          "meaning": "私有化",
+          "start": 4,
+          "end": 15
+        },
+        {
+          "word": "commercializing",
+          "lemma": "commercialize",
+          "level": 7,
+          "meaning": "商业化",
+          "start": 20,
+          "end": 35
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "But privatizing and commercializing the campgrounds would not be a cure-all.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-text2/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 3,
+      "en": "Campgrounds are a tiny portion of the overall infrastructure backlog, and businesses in the parks hand over, on average, only about 5% of their revenues to the National Park Service.",
+      "zh": "露营地只占全部基础设施欠账中的很小一部分，而且园内企业平均仅把约5%的收入上交给国家公园管理局。",
+      "vocab": [
+        {
+          "word": "infrastructure",
+          "lemma": "infrastructure",
+          "level": 6,
+          "meaning": "基础设施",
+          "start": 46,
+          "end": 60
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "Campgrounds are a tiny portion of the overall infrastructure backlog, and businesses in the parks hand over, on average, only about 5% of their revenues to the National Park Service.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-text2/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 4,
+      "en": "Moreover, increased privatization would certainly undercut one of the major reasons why 300 million visitors come to the parks each year: to enjoy nature and get a break from the commercial drumbeat that overwhelms daily life.",
+      "zh": "更重要的是，进一步私有化必然会削弱每年3亿游客来到国家公园的一个主要理由：享受自然，并暂时摆脱充斥日常生活的商业喧嚣。",
+      "vocab": [],
+      "discourse_function": "warning",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "Moreover, increased privatization would certainly undercut one of the major reasons why 300 million visitors come to the parks each year: to enjoy nature and get a break from the commercial drumbeat that overwhelms daily life.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-text2/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 5,
+      "en": "The real problem is that the parks have been chronically starved of funding.",
+      "zh": "真正的问题在于，这些公园长期资金不足。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "The real problem is that the parks have been chronically starved of funding.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-text2/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 5,
+      "en": "An economic survey of 700 U.S. taxpayers found that people would be willing to pay a significant amount of money to make sure the parks and their programs are kept intact.",
+      "zh": "一项针对700名美国纳税人的经济调查发现，人们愿意支付一笔可观的钱，以确保国家公园及其项目完整保留下来。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "An economic survey of 700 U.S. taxpayers found that people would be willing to pay a significant amount of money to make sure the parks and their programs are kept intact.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-text2/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 5,
+      "en": "Some 81% of respondents said they would be willing to pay additional taxes for the next 10 years to avoid any cuts to the national parks.",
+      "zh": "约81%的受访者表示，未来10年愿意缴纳额外税款，以避免国家公园遭到任何削减。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "Some 81% of respondents said they would be willing to pay additional taxes for the next 10 years to avoid any cuts to the national parks.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-text2/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 6,
+      "en": "The national parks provide great value to U.S. residents both as places to escape and as symbols of nature.",
+      "zh": "国家公园既是人们逃离日常生活的去处，也是自然的象征，因此为美国居民提供了巨大价值。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "The national parks provide great value to U.S. residents both as places to escape and as symbols of nature.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-text2/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 6,
+      "en": "On top of this, they produce value from their extensive educational programs, their positive impact on the climate through carbon sequestration, their contribution to our cultural and artistic life, and of course through tourism.",
+      "zh": "除此之外，国家公园还通过广泛的教育项目、碳封存带来的积极气候影响、对文化艺术生活的贡献，以及旅游业创造价值。",
+      "vocab": [
+        {
+          "word": "sequestration",
+          "lemma": "sequestration",
+          "level": 8,
+          "meaning": "碳封存",
+          "start": 130,
+          "end": 143
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "On top of this, they produce value from their extensive educational programs, their positive impact on the climate through carbon sequestration, their contribution to our cultural and artistic life, and of course through tourism.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-text2/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 6,
+      "en": "The parks also help keep America's past alive, working with thousands of local jurisdictions around the country to protect historical sites and to bring the stories of these places to life.",
+      "zh": "国家公园还帮助保存美国的历史记忆，与全国数千个地方辖区合作保护历史遗址，让这些地方的故事重新鲜活起来。",
+      "vocab": [
+        {
+          "word": "jurisdictions",
+          "lemma": "jurisdiction",
+          "level": 7,
+          "meaning": "辖区",
+          "start": 79,
+          "end": 92
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "The parks also help keep America's past alive, working with thousands of local jurisdictions around the country to protect historical sites and to bring the stories of these places to life.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-text2/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 7,
+      "en": "The parks do all this on a shoestring.",
+      "zh": "而国家公园完成这一切，靠的却是极其有限的预算。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "The parks do all this on a shoestring.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-text2/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 7,
+      "en": "Congress allocates only $3 billion a year to the national park system—an amount that has been flat since 2001 (in inflation-adjusted dollars) with the exception of a onetime boost in 2009.",
+      "zh": "国会每年只为国家公园系统拨款30亿美元——按通胀调整后的美元计算，除2009年一次性增加外，这一数额自2001年以来一直没有增长。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "Congress allocates only $3 billion a year to the national park system—an amount that has been flat since 2001 (in inflation-adjusted dollars) with the exception of a onetime boost in 2009.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-text2/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 7,
+      "en": "Meanwhile, the number of annual visitors has increased by more than 50% since 1980, and now stands at 330 million visitors per year.",
+      "zh": "与此同时，年游客人数自1980年以来增长了50%以上，如今已达到每年3.3亿人次。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "Meanwhile, the number of annual visitors has increased by more than 50% since 1980, and now stands at 330 million visitors per year.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-text2/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "year": 2023,
+  "article": {
+    "id": "translation",
+    "section_type": "translation",
+    "title": "翻译 · 诗歌的力量、起源与朗诵传统",
+    "pages": [
+      14
+    ],
+    "actor": "15",
+    "accent": "en-GB",
+    "context": "短文以华兹华斯和浪漫主义开篇，说明诗歌凭借词语、节奏与声音改变读者感受；诗歌早于文字而存在，长期承担讲故事和传承历史的功能，并天然与歌曲和朗诵相连。",
+    "editorial_status": "reviewed_candidate",
+    "rows": [
+      [
+        1,
+        "In the late 18th century, William Wordsworth became famous for his poems about nature.",
+        "18世纪末，威廉·华兹华斯因描写自然的诗歌而闻名。",
+        "story",
+        []
+      ],
+      [
+        1,
+        "And he was one of the founders of a movement called Romanticism, which celebrated the wonders of the natural world.",
+        "他也是浪漫主义运动的奠基者之一，这场运动赞颂自然世界的奇迹。",
+        "explain",
+        []
+      ],
+      [
+        2,
+        "Poetry is powerful.",
+        "诗歌富有强大的感染力。",
+        "emphasize",
+        []
+      ],
+      [
+        2,
+        "Its energy and rhythm can capture a reader, transport them to another world and make them see things differently.",
+        "诗歌的能量和韵律能够抓住读者，把他们带往另一个世界，并让他们以不同的方式看待事物。",
+        "explain",
+        []
+      ],
+      [
+        2,
+        "Through carefully selected words and phrases, poems can be dramatic, funny, beautiful, moving and inspiring.",
+        "借助精心选择的词语和短语，诗歌可以富有戏剧性、幽默、优美、动人而又鼓舞人心。",
+        "explain",
+        []
+      ],
+      [
+        3,
+        "No one knows for sure when poetry began but it has been around for thousands of years, even before people could write.",
+        "没有人确切知道诗歌始于何时，但它已经存在了数千年，甚至早在人们会书写之前就已出现。",
+        "advance",
+        []
+      ],
+      [
+        3,
+        "It was a way to tell stories and pass down history.",
+        "它曾是一种讲述故事、传承历史的方式。",
+        "explain",
+        []
+      ],
+      [
+        3,
+        "It is closely related to song and even when written it is usually created to be performed out loud.",
+        "诗歌与歌曲关系密切，即使被写下来，通常也是为了大声吟诵而创作。",
+        "explain",
+        []
+      ],
+      [
+        3,
+        "Poems really come to life when they are recited.",
+        "诗歌在被朗诵时才真正鲜活起来。",
+        "emphasize",
+        []
+      ],
+      [
+        3,
+        "This can also help with understanding them too, because the rhythm and sounds of the words become clearer.",
+        "朗诵也有助于理解诗歌，因为词语的韵律与声音会因此变得更加清晰。",
+        "conclude",
+        []
+      ]
+    ]
+  },
+  "qa": {
+    "review_schema_version": "c-mode-v2-1",
+    "source_scope_verified": true,
+    "scope_exclusions_reviewed": true,
+    "text_fidelity_reviewed": true,
+    "translation_alignment_reviewed": true,
+    "sentence_alignment_reviewed": true,
+    "status": "reviewed_candidate",
+    "review_method": "visual PDF review plus reviewed sentence-level bilingual manuscript",
+    "unresolved_sections": [],
+    "source_pdf": "2023年考研英语二真题【可复制搜索查词】.pdf",
+    "source_sha256": "91de84dad565eefd8ec245aa5b6291d336664c1549b6c4bff901594aed044f34",
+    "sentence_count": 10,
+    "expected_sentences": 10,
+    "actual_sentences": 10
+  }
+}

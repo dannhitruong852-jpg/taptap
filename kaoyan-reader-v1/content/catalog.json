@@ -19,7 +19,8 @@
     2019,
     2020,
     2021,
-    2022
+    2022,
+    2023
   ],
   "default_article": "2002-text1",
   "articles": [
@@ -1192,6 +1193,69 @@
       "content": "./content/2022/c/translation.json",
       "manifest": "./audio/2022/v4/c-translation/manifest.json",
       "sentences": 6
+    },
+    {
+      "id": "2023-cloze",
+      "year": 2023,
+      "section_type": "cloze",
+      "title": "完形填空 · 跨部门增长团队如何突破业务增长瓶颈",
+      "content": "./content/2023/c/cloze.json",
+      "manifest": "./audio/2023/v4/c-cloze/manifest.json",
+      "sentences": 18
+    },
+    {
+      "id": "2023-partb",
+      "year": 2023,
+      "section_type": "part_b",
+      "title": "阅读 Part B · 英国净零建筑新规为何短期推高住房与扩建成本",
+      "content": "./content/2023/c/partb.json",
+      "manifest": "./audio/2023/v4/c-partb/manifest.json",
+      "sentences": 27
+    },
+    {
+      "id": "2023-text1",
+      "year": 2023,
+      "section_type": "reading",
+      "title": "阅读 Text 1 · 人造草坪的便利与生态代价",
+      "content": "./content/2023/c/text1.json",
+      "manifest": "./audio/2023/v4/c-text1/manifest.json",
+      "sentences": 16
+    },
+    {
+      "id": "2023-text2",
+      "year": 2023,
+      "section_type": "reading",
+      "title": "阅读 Text 2 · 美国国家公园真正缺的不是商业化，而是稳定资金",
+      "content": "./content/2023/c/text2.json",
+      "manifest": "./audio/2023/v4/c-text2/manifest.json",
+      "sentences": 17
+    },
+    {
+      "id": "2023-text3",
+      "year": 2023,
+      "section_type": "reading",
+      "title": "阅读 Text 3 · 互联网没有毁掉记忆，而是在改变我们记忆什么",
+      "content": "./content/2023/c/text3.json",
+      "manifest": "./audio/2023/v4/c-text3/manifest.json",
+      "sentences": 20
+    },
+    {
+      "id": "2023-text4",
+      "year": 2023,
+      "section_type": "reading",
+      "title": "阅读 Text 4 · 青少年的叛逆与利他为何会同时上升",
+      "content": "./content/2023/c/text4.json",
+      "manifest": "./audio/2023/v4/c-text4/manifest.json",
+      "sentences": 24
+    },
+    {
+      "id": "2023-translation",
+      "year": 2023,
+      "section_type": "translation",
+      "title": "翻译 · 诗歌的力量、起源与朗诵传统",
+      "content": "./content/2023/c/translation.json",
+      "manifest": "./audio/2023/v4/c-translation/manifest.json",
+      "sentences": 10
     }
   ]
 }
