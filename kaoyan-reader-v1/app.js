@@ -8,7 +8,7 @@ import { measureLatency } from './latency-metrics.js';
 import { sentenceProgress, isExplicitLegacyTimingVersion } from './progress.js';
 import { readStateAtTime, activeChineseGroups } from './time-index.js';
 import { renderEnglish, renderChinese } from './bilingual-text.js';
-import { createTapGuard, attachSpeedControl } from './reader-controls.js';
+import { createTapGuard, createTapArbiter, attachSpeedControl } from './reader-controls.js';
 import { resolvePlayerScroll } from './scroll-behavior.js';
 import { pickArticle, selectArticles, adjacentArticle } from './catalog.js';
 import { createArticleBundleStore } from './article-bundle-store.js';
@@ -42,6 +42,7 @@ const state={current:0,speed:1,playing:false,paused:false,showVocab:true,timer:n
 const emotionLabels={neutral:'自然讲述',warm:'温暖讲解',lively:'轻快生动',serious:'严肃克制',curious:'好奇追问',ironic:'冷幽默',tense:'紧张转折',emotional:'情绪加强'};
 function hasSelectedText(){return Boolean(window.getSelection()?.toString());}
 const tapGuard=createTapGuard();
+const tapArbiter=createTapArbiter({delay:300});
 function renderSentences(){
  listEl.innerHTML=sentences.map((sentence,index)=>`<article class="sentence-card${index===state.current?' is-active':''}" data-index="${index}" data-translation-open="false">
   <button class="sentence-number sentence-play" type="button" aria-label="播放第 ${index+1} 句" title="播放本句"><span>${String(index+1).padStart(2,'0')}</span><span class="sentence-play-icon" aria-hidden="true">▶</span></button>
@@ -215,15 +216,34 @@ function moveArticle(delta){
  if(!target){showToast(delta<0?'已经是第一篇':'已经是最后一篇');return;}
  syncArticleSelectors(target);openArticle(target);
 }
-listEl.addEventListener('pointerdown',event=>{const card=event.target.closest('.sentence-card');if(card&&!event.target.closest('button'))tapGuard.down(event,card.dataset.index,hasSelectedText());},{passive:true});
+listEl.addEventListener('pointerdown',event=>{
+ const card=event.target.closest('.sentence-card');if(!card||event.target.closest('button'))return;
+ if(tapArbiter.isDoubleCandidate(card.dataset.index))event.preventDefault();
+ tapGuard.down(event,card.dataset.index,hasSelectedText());
+});
 listEl.addEventListener('pointermove',event=>tapGuard.move(event),{passive:true});
+listEl.addEventListener('pointerup',event=>{
+ const card=event.target.closest('.sentence-card');if(!card||loading||event.target.closest('button'))return;
+ tapGuard.up(event);
+ if(!tapGuard.accept(card.dataset.index,hasSelectedText()))return;
+ tapArbiter.tap(card.dataset.index,{
+  single:()=>{if(!loading&&card.isConnected)toggleTranslation(card);},
+  double:()=>{
+   if(loading)return;
+   window.getSelection()?.removeAllRanges();
+   speak(Number(card.dataset.index),{scroll:false});
+   applyPlayerVisibility(false);
+   state.scrollAnchorY=Math.max(0,window.scrollY||0);
+  }
+ });
+},{passive:true});
 window.addEventListener('pointerup',event=>tapGuard.up(event),{passive:true});
 window.addEventListener('pointercancel',()=>tapGuard.cancel(),{passive:true});
-listEl.addEventListener('contextmenu',()=>tapGuard.cancel(),{passive:true});
+listEl.addEventListener('contextmenu',()=>{tapGuard.cancel();tapArbiter.cancel();},{passive:true});
 listEl.addEventListener('click',event=>{
  const card=event.target.closest('.sentence-card');if(!card||loading)return;
  if(event.target.closest('.sentence-play')){speak(Number(card.dataset.index),{scroll:false});applyPlayerVisibility(false);state.scrollAnchorY=Math.max(0,window.scrollY||0);return;}
- if(event.detail>1)return;if(tapGuard.accept(card.dataset.index,hasSelectedText(),event.detail===0))toggleTranslation(card);
+ if(event.detail===0)toggleTranslation(card);
 });
 listEl.addEventListener('keydown',event=>{if(event.key!=='Enter'&&event.key!==' ')return;if(!event.target.matches('.sentence-content')||hasSelectedText())return;event.preventDefault();toggleTranslation(event.target.closest('.sentence-card'));});
 playButton.addEventListener('click',togglePlay);
@@ -239,7 +259,7 @@ window.addEventListener('scroll',queueViewportScroll,{passive:true});
 window.addEventListener('beforeunload',()=>{hybridAudioPlayer.stop();audioCache.clearMemory();decodedAudioStore?.clearDecoded();});
 
 async function openArticle(entry){
- if(!entry)return;const switchStarted=performance.now();const selectionToken=++selectionGeneration;tapGuard.cancel();loading=true;clearTimer();hybridAudioPlayer.stop();fallbackAudioPlayer.clearPreload();audioCache.clearMemory();setPlaying(false,false);playButton.disabled=true;statusEl.textContent='正在加载正文';
+ if(!entry)return;const switchStarted=performance.now();const selectionToken=++selectionGeneration;tapGuard.cancel();tapArbiter.cancel();loading=true;clearTimer();hybridAudioPlayer.stop();fallbackAudioPlayer.clearPreload();audioCache.clearMemory();setPlaying(false,false);playButton.disabled=true;statusEl.textContent='正在加载正文';
  articleBundleStore.cancelLowPriorityWork();
  try{
   const [loaded,semantic]=await Promise.all([articleBundleStore.get(entry),semanticMapPromise]);if(!loaded||selectionToken!==selectionGeneration)return;
