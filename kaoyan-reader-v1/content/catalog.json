@@ -17,7 +17,8 @@
     2017,
     2018,
     2019,
-    2020
+    2020,
+    2021
   ],
   "default_article": "2002-text1",
   "articles": [
@@ -1064,6 +1065,69 @@
       "content": "./content/2020/c/translation.json",
       "manifest": "./audio/2020/v4/c-translation/manifest.json",
       "sentences": 10
+    },
+    {
+      "id": "2021-cloze",
+      "year": 2021,
+      "section_type": "cloze",
+      "title": "完形填空 · 单一绩效目标为何会扭曲行为",
+      "content": "./content/2021/c/cloze.json",
+      "manifest": "./audio/2021/v4/c-cloze/manifest.json",
+      "sentences": 40
+    },
+    {
+      "id": "2021-partb",
+      "year": 2021,
+      "section_type": "part_b",
+      "title": "阅读 Part B · 如何与权力比你大的人表达不同意见",
+      "content": "./content/2021/c/partb.json",
+      "manifest": "./audio/2021/v4/c-partb/manifest.json",
+      "sentences": 33
+    },
+    {
+      "id": "2021-text1",
+      "year": 2021,
+      "section_type": "reading",
+      "title": "阅读 Text 1 · 疫情时代的再培训与技能错配",
+      "content": "./content/2021/c/text1.json",
+      "manifest": "./audio/2021/v4/c-text1/manifest.json",
+      "sentences": 19
+    },
+    {
+      "id": "2021-text2",
+      "year": 2021,
+      "section_type": "reading",
+      "title": "阅读 Text 2 · 英国粮食自给真的可行吗",
+      "content": "./content/2021/c/text2.json",
+      "manifest": "./audio/2021/v4/c-text2/manifest.json",
+      "sentences": 16
+    },
+    {
+      "id": "2021-text3",
+      "year": 2021,
+      "section_type": "reading",
+      "title": "阅读 Text 3 · 科技巨头“小额收购”的竞争争议",
+      "content": "./content/2021/c/text3.json",
+      "manifest": "./audio/2021/v4/c-text3/manifest.json",
+      "sentences": 17
+    },
+    {
+      "id": "2021-text4",
+      "year": 2021,
+      "section_type": "reading",
+      "title": "阅读 Text 4 · 复杂社会判断中直觉何时胜过深思",
+      "content": "./content/2021/c/text4.json",
+      "manifest": "./audio/2021/v4/c-text4/manifest.json",
+      "sentences": 22
+    },
+    {
+      "id": "2021-translation",
+      "year": 2021,
+      "section_type": "translation",
+      "title": "翻译 · 陌生人的短暂交流也能提升归属感",
+      "content": "./content/2021/c/translation.json",
+      "manifest": "./audio/2021/v4/c-translation/manifest.json",
+      "sentences": 7
     }
   ]
 }
