@@ -89,6 +89,7 @@ h1 {
   box-shadow:0 8px 24px rgba(70,58,38,.045);
   cursor:pointer; transition: transform .2s ease, border-color .25s ease, box-shadow .25s ease, background .25s ease;
 }
+.sentence-content { touch-action: manipulation; }
 .sentence-card:active { transform:scale(.992); }
 .sentence-card.is-active {
   border-color:rgba(121,91,45,.42); background:#fffdf8;
