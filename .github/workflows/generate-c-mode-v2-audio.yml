@@ -13,7 +13,7 @@ on:
     paths: ['audio-v2.trigger']
 
 permissions:
-  contents: read
+  contents: write
   actions: read
 
 concurrency:
@@ -344,3 +344,104 @@ jobs:
             kaoyan-reader-v1/reports/c-v4-${{ matrix.year }}-merge.json
           if-no-files-found: error
           retention-days: 14
+
+
+  stage:
+    needs: [plan, merge]
+    if: needs.plan.result == 'success' && needs.merge.result == 'success'
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      YEARS_JSON: ${{ needs.plan.outputs.years }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: c-mode-v2-launch-release
+          fetch-depth: 0
+      - name: Download validated merged candidates
+        shell: bash
+        run: |
+          rm -rf /tmp/merged
+          mkdir -p /tmp/merged
+          python - <<'PY' > /tmp/years.txt
+          import json, os
+          for year in json.loads(os.environ['YEARS_JSON']):
+              print(year)
+          PY
+          while read -r year; do
+            mkdir -p "/tmp/merged/$year"
+            gh run download "$GITHUB_RUN_ID" -R "$GITHUB_REPOSITORY"               -n "kaoyan-c-${year}-merged-candidate"               -D "/tmp/merged/$year"
+          done < /tmp/years.txt
+      - name: Install audio only; preserve frozen content
+        shell: bash
+        run: |
+          while read -r year; do
+            test -d "/tmp/merged/$year/kaoyan-reader-v1/audio/$year/v4"
+            test -s "/tmp/merged/$year/kaoyan-reader-v1/reports/c-v4-$year-merge.json"
+            rm -rf "kaoyan-reader-v1/audio/$year/v4"
+            mkdir -p "kaoyan-reader-v1/audio/$year"
+            cp -a "/tmp/merged/$year/kaoyan-reader-v1/audio/$year/v4" "kaoyan-reader-v1/audio/$year/v4"
+            cp "/tmp/merged/$year/kaoyan-reader-v1/reports/c-v4-$year-merge.json" "kaoyan-reader-v1/reports/c-v4-$year-merge.json"
+          done < /tmp/years.txt
+      - name: Verify staged release assets against frozen production evidence
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+
+          years=json.loads(os.environ['YEARS_JSON'])
+          catalog=json.loads(Path('kaoyan-reader-v1/content/catalog.json').read_text())
+          summary={}
+          for year in years:
+              canary=json.loads(Path(f'reports/production-v2/{year}-canary.json').read_text())
+              assert canary.get('ok') is True and canary.get('errors') == [], (year,canary)
+              rows=[row for row in catalog['articles'] if row['year']==year]
+              assert len(rows)==7,(year,len(rows))
+              article_summary={}
+              for row in rows:
+                  manifest_path=Path('kaoyan-reader-v1')/row['manifest'].removeprefix('./')
+                  assert manifest_path.is_file(),manifest_path
+                  manifest=json.loads(manifest_path.read_text())
+                  assert manifest['qa']['technical']=='passed',(year,row['id'])
+                  assert manifest.get('missing_segments')==[],(year,row['id'],manifest.get('missing_segments'))
+                  assert len(manifest.get('sentences',{}))==row['sentences'],(year,row['id'])
+                  for sentence in manifest['sentences'].values():
+                      for key in ('path','mp3_path'):
+                          asset=Path('kaoyan-reader-v1')/sentence[key].removeprefix('./')
+                          assert asset.is_file(),asset
+                  article_summary[row['id']]={'sentences':len(manifest['sentences']),'technical':'passed'}
+              summary[str(year)]=article_summary
+
+          report={
+              'schema_version':'c-mode-v2-launch-audio-1',
+              'source_workflow_run_id':os.environ['GITHUB_RUN_ID'],
+              'source_sha':os.environ['GITHUB_SHA'],
+              'branch':'c-mode-v2-launch-release',
+              'years':years,
+              'ok':True,
+              'articles':summary,
+              'errors':[]
+          }
+          out=Path('reports/launch-audio')
+          out.mkdir(parents=True,exist_ok=True)
+          (out/'latest.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+          for year in years:
+              (out/f'{year}.json').write_text(json.dumps({
+                  **report,
+                  'years':[year],
+                  'articles':{str(year):summary[str(year)]}
+              },ensure_ascii=False,indent=2)+'\n')
+          print(json.dumps({'ok':True,'years':years,'articles':sum(len(v) for v in summary.values())}))
+          PY
+      - name: Commit validated audio to release branch
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add kaoyan-reader-v1/audio kaoyan-reader-v1/reports reports/launch-audio
+          if git diff --cached --quiet; then
+            echo "No staged changes"
+          else
+            git commit -m "feat(c-mode): stage validated audio for ${YEARS_JSON}"
+            git push origin HEAD:c-mode-v2-launch-release
+          fi
