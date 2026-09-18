@@ -15,7 +15,8 @@
     2014,
     2016,
     2017,
-    2018
+    2018,
+    2019
   ],
   "default_article": "2002-text1",
   "articles": [
@@ -935,6 +936,69 @@
       "title": "翻译 · 比尔·盖茨如何用阅读打开职业想象",
       "content": "./content/2018/c/translation.json",
       "manifest": "./audio/2018/v4/c-translation/manifest.json",
+      "sentences": 9
+    },
+    {
+      "id": "2019-cloze",
+      "year": 2019,
+      "section_type": "cloze",
+      "title": "完型 · 不要让体重秤绑架健身目标",
+      "content": "./content/2019/c/cloze.json",
+      "manifest": "./audio/2019/v4/c-cloze/manifest.json",
+      "sentences": 19
+    },
+    {
+      "id": "2019-partb",
+      "year": 2019,
+      "section_type": "part_b",
+      "title": "阅读 Part B · 买房时孩子的意见该有多大分量",
+      "content": "./content/2019/c/partb.json",
+      "manifest": "./audio/2019/v4/c-partb/manifest.json",
+      "sentences": 21
+    },
+    {
+      "id": "2019-text1",
+      "year": 2019,
+      "section_type": "reading",
+      "title": "阅读 Text 1 · 适度内疚如何促进合作与修复关系",
+      "content": "./content/2019/c/text1.json",
+      "manifest": "./audio/2019/v4/c-text1/manifest.json",
+      "sentences": 24
+    },
+    {
+      "id": "2019-text2",
+      "year": 2019,
+      "section_type": "reading",
+      "title": "阅读 Text 2 · 森林碳汇为何需要“先减后增”的管理",
+      "content": "./content/2019/c/text2.json",
+      "manifest": "./audio/2019/v4/c-text2/manifest.json",
+      "sentences": 21
+    },
+    {
+      "id": "2019-text3",
+      "year": 2019,
+      "section_type": "reading",
+      "title": "阅读 Text 3 · 美国农业缺工与移民政策困局",
+      "content": "./content/2019/c/text3.json",
+      "manifest": "./audio/2019/v4/c-text3/manifest.json",
+      "sentences": 27
+    },
+    {
+      "id": "2019-text4",
+      "year": 2019,
+      "section_type": "reading",
+      "title": "阅读 Text 4 · 塑料危机不能只靠个人消费选择",
+      "content": "./content/2019/c/text4.json",
+      "manifest": "./audio/2019/v4/c-text4/manifest.json",
+      "sentences": 20
+    },
+    {
+      "id": "2019-translation",
+      "year": 2019,
+      "section_type": "translation",
+      "title": "翻译 · 詹姆斯·赫里奥特的写作成功从来不是轻而易举",
+      "content": "./content/2019/c/translation.json",
+      "manifest": "./audio/2019/v4/c-translation/manifest.json",
       "sentences": 9
     }
   ]

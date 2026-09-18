@@ -1,0 +1,319 @@
+{
+  "year": 2019,
+  "section_type": "translation",
+  "article_id": "translation",
+  "source_sha256": "e1fbf6bc49f23efd1c80d27e34300ba9739041d0afb6aa16364a55e76770f224",
+  "source_pages": [
+    13
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "07",
+  "article_context": "以英国作家詹姆斯·赫里奥特为例，说明看似自然流畅的文字背后，是长期练习、重写、阅读以及面对失望和拒稿仍坚持不懈的结果。",
+  "article": {
+    "year": 2019,
+    "section": "translation",
+    "title": "翻译 · 詹姆斯·赫里奥特的写作成功从来不是轻而易举",
+    "background": "以英国作家詹姆斯·赫里奥特为例，说明看似自然流畅的文字背后，是长期练习、重写、阅读以及面对失望和拒稿仍坚持不懈的结果。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "It is easy to underestimate English writer James Herriot.",
+      "zh": "人们很容易低估英国作家詹姆斯·赫里奥特。",
+      "vocab": [
+        {
+          "word": "underestimate",
+          "lemma": "underestimate",
+          "level": 6,
+          "meaning": "低估",
+          "start": 14,
+          "end": 27
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "It is easy to underestimate English writer James Herriot.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-translation/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "He had such a pleasant, readable style that one might think that anyone could imitate it.",
+      "zh": "他的文风如此亲切、易读，以至于人们可能会觉得任何人都能模仿。",
+      "vocab": [
+        {
+          "word": "imitate",
+          "lemma": "imitate",
+          "level": 6,
+          "meaning": "模仿",
+          "start": 78,
+          "end": 85
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "He had such a pleasant, readable style that one might think that anyone could imitate it.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-translation/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "How many times have I heard people say, \"I could write a book. I just haven't the time.\"",
+      "zh": "我不知听过多少次有人说：“我也能写一本书，只是没有时间。”",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "How many times have I heard people say, \"I could write a book. I just haven't the time.\"",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-translation/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 1,
+      "en": "Easily said.",
+      "zh": "说起来容易。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Easily said.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-translation/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 1,
+      "en": "Not so easily done.",
+      "zh": "做起来却没那么容易。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Not so easily done.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-translation/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 1,
+      "en": "James Herriot, contrary to popular opinion, did not find it easy in his early days of, as he put it, \"having a go at the writing game\".",
+      "zh": "与普遍看法相反，詹姆斯·赫里奥特早年尝试他所谓的“写作游戏”时，也并不觉得轻松。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "James Herriot, contrary to popular opinion, did not find it easy in his early days of, as he put it, \"having a go at the writing game\".",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-translation/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 1,
+      "en": "While he obviously had an abundance of natural talent, the final, polished work that he gave to the world was the result of years of practicing, re-writing and reading.",
+      "zh": "他显然天赋充沛，但最终呈现给世人的那些成熟精炼的作品，却是多年练习、重写和阅读的结果。",
+      "vocab": [
+        {
+          "word": "abundance",
+          "lemma": "abundance",
+          "level": 6,
+          "meaning": "充沛",
+          "start": 26,
+          "end": 35
+        },
+        {
+          "word": "polished",
+          "lemma": "polished",
+          "level": 6,
+          "meaning": "成熟精炼",
+          "start": 66,
+          "end": 74
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "While he obviously had an abundance of natural talent, the final, polished work that he gave to the world was the result of years of practicing, re-writing and reading.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-translation/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 1,
+      "en": "Like the majority of authors, he had to suffer many disappointments and rejections along the way, but these made him all the more determined to succeed.",
+      "zh": "和大多数作家一样，他一路上不得不经受许多失望和拒稿，但这些反而使他更加坚定地要取得成功。",
+      "vocab": [
+        {
+          "word": "rejections",
+          "lemma": "rejections",
+          "level": 6,
+          "meaning": "拒稿",
+          "start": 72,
+          "end": 82
+        }
+      ],
+      "discourse_function": "story",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "Like the majority of authors, he had to suffer many disappointments and rejections along the way, but these made him all the more determined to succeed.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-translation/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 1,
+      "en": "Everything he achieved in life was earned the hard way and his success in the literary field was no exception.",
+      "zh": "他一生中的一切成就都靠艰苦努力赢来，他在文学领域的成功也不例外。",
+      "vocab": [
+        {
+          "word": "literary",
+          "lemma": "literary",
+          "level": 6,
+          "meaning": "文学",
+          "start": 78,
+          "end": 86
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "Everything he achieved in life was earned the hard way and his success in the literary field was no exception.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-translation/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

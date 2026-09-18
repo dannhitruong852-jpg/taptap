@@ -1,0 +1,894 @@
+{
+  "year": 2019,
+  "section_type": "reading",
+  "article_id": "text3",
+  "source_sha256": "e1fbf6bc49f23efd1c80d27e34300ba9739041d0afb6aa16364a55e76770f224",
+  "source_pages": [
+    7,
+    8
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "10",
+  "article_context": "文章从美国农场长期缺工切入，说明农业劳动力老龄化、本土工人不愿回流、机械化尚不能覆盖高价值作物，以及H-2A签证程序低效等问题，最后把政策选择概括为“进口食物，还是进口采摘食物的工人”。语气应严谨、有现实压力感。",
+  "article": {
+    "year": 2019,
+    "section": "text3",
+    "title": "阅读 Text 3 · 美国农业缺工与移民政策困局",
+    "background": "文章从美国农场长期缺工切入，说明农业劳动力老龄化、本土工人不愿回流、机械化尚不能覆盖高价值作物，以及H-2A签证程序低效等问题，最后把政策选择概括为“进口食物，还是进口采摘食物的工人”。语气应严谨、有现实压力感。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "American farmers have been complaining of labor shortages for several years.",
+      "zh": "美国农场主多年来一直在抱怨劳动力短缺。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "American farmers have been complaining of labor shortages for several years.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text3/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "The complaints are unlikely to stop without an overhaul of immigration rules for farm workers.",
+      "zh": "如果不彻底改革农业工人的移民规则，这些抱怨恐怕不会停止。",
+      "vocab": [
+        {
+          "word": "overhaul",
+          "lemma": "overhaul",
+          "level": 7,
+          "meaning": "彻底改革",
+          "start": 47,
+          "end": 55
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "The complaints are unlikely to stop without an overhaul of immigration rules for farm workers.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text3/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 2,
+      "en": "Congress has obstructed efforts to create a more straightforward visa for agricultural workers that would let foreign workers stay longer in the U.S. and change jobs within the industry.",
+      "zh": "国会一直阻挠建立一种更简便的农业工人签证；这种签证本可以让外国工人在美国停留更久，并在农业内部更换工作。",
+      "vocab": [
+        {
+          "word": "obstructed",
+          "lemma": "obstructed",
+          "level": 7,
+          "meaning": "阻挠",
+          "start": 13,
+          "end": 23
+        },
+        {
+          "word": "straightforward",
+          "lemma": "straightforward",
+          "level": 6,
+          "meaning": "更简便",
+          "start": 49,
+          "end": 64
+        },
+        {
+          "word": "agricultural",
+          "lemma": "agricultural",
+          "level": 6,
+          "meaning": "农业",
+          "start": 74,
+          "end": 86
+        }
+      ],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Congress has obstructed efforts to create a more straightforward visa for agricultural workers that would let foreign workers stay longer in the U.S. and change jobs within the industry.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text3/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "If this doesn't change, American businesses, communities, and consumers will be the losers.",
+      "zh": "如果这一点不改变，美国企业、社区和消费者都会成为输家。",
+      "vocab": [],
+      "discourse_function": "warning",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "If this doesn't change, American businesses, communities, and consumers will be the losers.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text3/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 3,
+      "en": "Perhaps half of U.S. farm laborers are undocumented immigrants.",
+      "zh": "美国农业劳工中，可能有一半是无证移民。",
+      "vocab": [
+        {
+          "word": "undocumented",
+          "lemma": "undocumented",
+          "level": 7,
+          "meaning": "无证",
+          "start": 39,
+          "end": 51
+        }
+      ],
+      "discourse_function": "statistic",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Perhaps half of U.S. farm laborers are undocumented immigrants.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text3/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 3,
+      "en": "As fewer such workers enter the country, the characteristics of the agricultural workforce are changing.",
+      "zh": "随着进入美国的这类工人减少，农业劳动力的构成也在发生变化。",
+      "vocab": [
+        {
+          "word": "agricultural",
+          "lemma": "agricultural",
+          "level": 6,
+          "meaning": "农业",
+          "start": 68,
+          "end": 80
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "As fewer such workers enter the country, the characteristics of the agricultural workforce are changing.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text3/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 3,
+      "en": "Today's farm laborers, while still predominantly born in Mexico, are more likely to be settled rather than migrating and more likely to be married than single.",
+      "zh": "如今的农场劳工虽然仍主要出生于墨西哥，但比过去更可能已经定居而不是四处迁移，也更可能已婚而非单身。",
+      "vocab": [
+        {
+          "word": "predominantly",
+          "lemma": "predominantly",
+          "level": 7,
+          "meaning": "主要",
+          "start": 35,
+          "end": 48
+        }
+      ],
+      "discourse_function": "compare",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "Today's farm laborers, while still predominantly born in Mexico, are more likely to be settled rather than migrating and more likely to be married than single.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text3/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 3,
+      "en": "They're also aging.",
+      "zh": "而且，他们正在变老。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "They're also aging.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text3/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 3,
+      "en": "At the start of this century, about one-third of crop workers were over the age of 35.",
+      "zh": "本世纪初，大约三分之一的种植业工人年龄超过35岁。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "At the start of this century, about one-third of crop workers were over the age of 35.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text3/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 3,
+      "en": "Now more than half are.",
+      "zh": "如今，这一比例已经超过一半。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "Now more than half are.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text3/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 3,
+      "en": "And picking crops is hard on older bodies.",
+      "zh": "而采摘作物对年长者的身体负担很重。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "And picking crops is hard on older bodies.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text3/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 3,
+      "en": "One oft-debated cure for this labor shortage remains as implausible as it's been all along: Native U.S. workers won't be returning to the farm.",
+      "zh": "一个经常被讨论的解决办法依然和过去一样不现实：美国本土工人不会重返农场。",
+      "vocab": [
+        {
+          "word": "implausible",
+          "lemma": "implausible",
+          "level": 8,
+          "meaning": "不现实",
+          "start": 56,
+          "end": 67
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "One oft-debated cure for this labor shortage remains as implausible as it's been all along: Native U.S. workers won't be returning to the farm.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text3/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 4,
+      "en": "Mechanization isn't the answer, either - not yet, at least.",
+      "zh": "机械化也不是答案——至少目前还不是。",
+      "vocab": [
+        {
+          "word": "Mechanization",
+          "lemma": "mechanization",
+          "level": 8,
+          "meaning": "机械化",
+          "start": 0,
+          "end": 13
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "Mechanization isn't the answer, either - not yet, at least.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text3/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 4,
+      "en": "Production of corn, cotton, rice, soybeans, and wheat has been largely mechanized, but many high-value, labor-intensive crops, such as strawberries, need labor.",
+      "zh": "玉米、棉花、水稻、大豆和小麦的生产已经大体实现机械化，但草莓等许多高价值、劳动密集型作物仍然需要大量人工。",
+      "vocab": [
+        {
+          "word": "labor-intensive",
+          "lemma": "labor-intensive",
+          "level": 7,
+          "meaning": "劳动密集型",
+          "start": 104,
+          "end": 119
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "Production of corn, cotton, rice, soybeans, and wheat has been largely mechanized, but many high-value, labor-intensive crops, such as strawberries, need labor.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text3/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 4,
+      "en": "Even dairy farms, where robots do a small share of milking, have a long way to go before they're automated.",
+      "zh": "即便是在已经由机器人承担少量挤奶工作的奶牛场，距离全面自动化也还有很长的路。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "Even dairy farms, where robots do a small share of milking, have a long way to go before they're automated.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text3/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 5,
+      "en": "As a result, farms have grown increasingly reliant on temporary guest workers using the H-2A visa to fill the gaps in the workforce.",
+      "zh": "因此，农场越来越依赖持H-2A签证的临时外籍工人来填补劳动力缺口。",
+      "vocab": [
+        {
+          "word": "reliant",
+          "lemma": "reliant",
+          "level": 6,
+          "meaning": "依赖",
+          "start": 43,
+          "end": 50
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "As a result, farms have grown increasingly reliant on temporary guest workers using the H-2A visa to fill the gaps in the workforce.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text3/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 5,
+      "en": "Starting around 2012, requests for the visas rose sharply; from 2011 to 2016 the number of visas issued more than doubled.",
+      "zh": "大约从2012年开始，这类签证的申请量迅速上升；2011年至2016年，签发数量增加了一倍多。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "Starting around 2012, requests for the visas rose sharply; from 2011 to 2016 the number of visas issued more than doubled.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text3/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 6,
+      "en": "The H-2A visa has no numerical cap, unlike the H-2B visa for nonagricultural work, which is limited to 66,000 a year.",
+      "zh": "H-2A签证没有数量上限，而用于非农业工作的H-2B签证每年上限为6.6万份。",
+      "vocab": [
+        {
+          "word": "numerical cap",
+          "lemma": "numerical cap",
+          "level": 7,
+          "meaning": "数量上限",
+          "start": 21,
+          "end": 34
+        }
+      ],
+      "discourse_function": "compare",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "The H-2A visa has no numerical cap, unlike the H-2B visa for nonagricultural work, which is limited to 66,000 a year.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text3/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 6,
+      "en": "Even so, employers complain they aren't given all the workers they need.",
+      "zh": "即便如此，雇主仍抱怨自己得不到所需的全部工人。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "Even so, employers complain they aren't given all the workers they need.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text3/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "paragraph": 6,
+      "en": "The process is cumbersome, expensive, and unreliable.",
+      "zh": "这一程序繁琐、昂贵，而且不可靠。",
+      "vocab": [
+        {
+          "word": "cumbersome",
+          "lemma": "cumbersome",
+          "level": 7,
+          "meaning": "繁琐",
+          "start": 15,
+          "end": 25
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s20-01",
+          "text": "The process is cumbersome, expensive, and unreliable.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text3/s20-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "paragraph": 6,
+      "en": "One survey found that bureaucratic delays led the average H-2A worker to arrive on the job 22 days late.",
+      "zh": "一项调查发现，官僚程序造成的延误，使H-2A工人平均晚到岗22天。",
+      "vocab": [
+        {
+          "word": "bureaucratic",
+          "lemma": "bureaucratic",
+          "level": 7,
+          "meaning": "官僚",
+          "start": 22,
+          "end": 34
+        }
+      ],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s21-01",
+          "text": "One survey found that bureaucratic delays led the average H-2A worker to arrive on the job 22 days late.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text3/s21-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "paragraph": 6,
+      "en": "The shortage is compounded by federal immigration raids, which remove some workers and drive others underground.",
+      "zh": "联邦政府的移民突击执法进一步加剧了短缺：一些工人被带走，另一些则被迫转入地下。",
+      "vocab": [
+        {
+          "word": "compounded",
+          "lemma": "compounded",
+          "level": 7,
+          "meaning": "加剧",
+          "start": 16,
+          "end": 26
+        },
+        {
+          "word": "raids",
+          "lemma": "raids",
+          "level": 6,
+          "meaning": "突击执法",
+          "start": 50,
+          "end": 55
+        }
+      ],
+      "discourse_function": "warning",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s22-01",
+          "text": "The shortage is compounded by federal immigration raids, which remove some workers and drive others underground.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text3/s22-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "paragraph": 7,
+      "en": "In a 2012 survey, 71 percent of tree-fruit growers and almost 80 percent of raisin and berry growers said they were short of labor.",
+      "zh": "2012年的一项调查中，71%的树生水果种植者和近80%的葡萄干及浆果种植者表示劳动力不足。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s23-01",
+          "text": "In a 2012 survey, 71 percent of tree-fruit growers and almost 80 percent of raisin and berry growers said they were short of labor.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text3/s23-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "paragraph": 7,
+      "en": "Some western farmers have responded by moving operations to Mexico.",
+      "zh": "一些美国西部农场主的应对方式，是把生产经营迁往墨西哥。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s24-01",
+          "text": "Some western farmers have responded by moving operations to Mexico.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text3/s24-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "paragraph": 7,
+      "en": "From 1998 to 2000, 14.5 percent of the fruit Americans consumed was imported.",
+      "zh": "1998年至2000年，美国人消费的水果中有14.5%来自进口。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s25-01",
+          "text": "From 1998 to 2000, 14.5 percent of the fruit Americans consumed was imported.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text3/s25-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "paragraph": 7,
+      "en": "Little more than a decade later, the share of imports was 25.8 percent.",
+      "zh": "仅仅十多年后，进口水果的占比就升到了25.8%。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s26-01",
+          "text": "Little more than a decade later, the share of imports was 25.8 percent.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text3/s26-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "paragraph": 8,
+      "en": "In effect, the U.S. can import food or it can import the workers who pick it.",
+      "zh": "归根结底，美国要么进口食物，要么进口负责采摘食物的工人。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s27-01",
+          "text": "In effect, the U.S. can import food or it can import the workers who pick it.",
+          "speaker_role": "narrator",
+          "actor_id": "10",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text3/s27-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

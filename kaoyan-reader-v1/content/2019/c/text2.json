@@ -1,0 +1,713 @@
+{
+  "year": 2019,
+  "section_type": "reading",
+  "article_id": "text2",
+  "source_sha256": "e1fbf6bc49f23efd1c80d27e34300ba9739041d0afb6aa16364a55e76770f224",
+  "source_pages": [
+    5,
+    6
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "03",
+  "article_context": "文章解释森林既是应对气候变化的重要碳汇，也会因干旱、虫害和火灾而失去吸碳能力。加州方案通过疏林、清理灌木和优先处理高风险地区，以短期牺牲部分吸碳能力换取长期森林韧性。语气应稳健、清晰、有政策解释感。",
+  "article": {
+    "year": 2019,
+    "section": "text2",
+    "title": "阅读 Text 2 · 森林碳汇为何需要“先减后增”的管理",
+    "background": "文章解释森林既是应对气候变化的重要碳汇，也会因干旱、虫害和火灾而失去吸碳能力。加州方案通过疏林、清理灌木和优先处理高风险地区，以短期牺牲部分吸碳能力换取长期森林韧性。语气应稳健、清晰、有政策解释感。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "Forests give us shade, quiet and one of the harder challenges in the fight against climate change.",
+      "zh": "森林为我们提供阴凉与宁静，也给应对气候变化带来了最棘手的挑战之一。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "Forests give us shade, quiet and one of the harder challenges in the fight against climate change.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text2/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Even as we humans count on forests to soak up a good share of the carbon dioxide we produce, we are threatening their ability to do so.",
+      "zh": "就在我们指望森林吸收相当一部分人类排放的二氧化碳时，我们却正在损害森林完成这项任务的能力。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Even as we humans count on forests to soak up a good share of the carbon dioxide we produce, we are threatening their ability to do so.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text2/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "The climate change we are hastening could one day leave us with forests that emit more carbon than they absorb.",
+      "zh": "我们正在加速的气候变化，有一天可能会让森林排放的碳比它们吸收的还多。",
+      "vocab": [],
+      "discourse_function": "warning",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "The climate change we are hastening could one day leave us with forests that emit more carbon than they absorb.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text2/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "Thankfully, there is a way out of this trap - but it involves striking a subtle balance.",
+      "zh": "好在，这个困局并非无解，只是需要把握一种微妙的平衡。",
+      "vocab": [
+        {
+          "word": "subtle",
+          "lemma": "subtle",
+          "level": 6,
+          "meaning": "微妙",
+          "start": 73,
+          "end": 79
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Thankfully, there is a way out of this trap - but it involves striking a subtle balance.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text2/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "Helping forests flourish as valuable \"carbon sinks\" long into the future may require reducing their capacity to absorb carbon now.",
+      "zh": "要让森林在未来很长时间里都能作为宝贵的“碳汇”茁壮存在，可能需要暂时降低它们眼下吸收碳的能力。",
+      "vocab": [
+        {
+          "word": "flourish",
+          "lemma": "flourish",
+          "level": 7,
+          "meaning": "茁壮",
+          "start": 16,
+          "end": 24
+        },
+        {
+          "word": "carbon sinks",
+          "lemma": "carbon sinks",
+          "level": 7,
+          "meaning": "碳汇",
+          "start": 38,
+          "end": 50
+        },
+        {
+          "word": "capacity",
+          "lemma": "capacity",
+          "level": 6,
+          "meaning": "能力",
+          "start": 100,
+          "end": 108
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Helping forests flourish as valuable \"carbon sinks\" long into the future may require reducing their capacity to absorb carbon now.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text2/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "California is leading the way, as it does on so many climate efforts, in figuring out the details.",
+      "zh": "和许多气候行动一样，加州正在率先探索其中的具体做法。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "California is leading the way, as it does on so many climate efforts, in figuring out the details.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text2/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 3,
+      "en": "The state's proposed Forest Carbon Plan aims to double efforts to thin out young trees and clear brush in parts of the forest.",
+      "zh": "加州拟议中的《森林碳计划》准备把部分林区疏伐幼树、清理灌木的力度提高一倍。",
+      "vocab": [
+        {
+          "word": "brush",
+          "lemma": "brush",
+          "level": 6,
+          "meaning": "灌木",
+          "start": 97,
+          "end": 102
+        }
+      ],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "The state's proposed Forest Carbon Plan aims to double efforts to thin out young trees and clear brush in parts of the forest.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text2/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 3,
+      "en": "This temporarily lowers carbon-carrying capacity.",
+      "zh": "这样做会暂时降低森林承载碳的能力。",
+      "vocab": [
+        {
+          "word": "capacity",
+          "lemma": "capacity",
+          "level": 6,
+          "meaning": "能力",
+          "start": 40,
+          "end": 48
+        }
+      ],
+      "discourse_function": "qualify",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "This temporarily lowers carbon-carrying capacity.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text2/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 3,
+      "en": "But the remaining trees draw a greater share of the available moisture, so they grow and thrive, restoring the forest's capacity to pull carbon from the air.",
+      "zh": "但留下的树木能分得更多可用水分，从而生长得更好，并逐步恢复森林从空气中吸收碳的能力。",
+      "vocab": [
+        {
+          "word": "capacity",
+          "lemma": "capacity",
+          "level": 6,
+          "meaning": "能力",
+          "start": 120,
+          "end": 128
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "But the remaining trees draw a greater share of the available moisture, so they grow and thrive, restoring the forest's capacity to pull carbon from the air.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text2/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 3,
+      "en": "Healthy trees are also better able to fend off insects.",
+      "zh": "健康的树木也更能抵御虫害。",
+      "vocab": [
+        {
+          "word": "fend off",
+          "lemma": "fend off",
+          "level": 7,
+          "meaning": "抵御",
+          "start": 38,
+          "end": 46
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "Healthy trees are also better able to fend off insects.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text2/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 3,
+      "en": "The landscape is rendered less easily burnable.",
+      "zh": "整个林区也会因此更不容易燃烧。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "The landscape is rendered less easily burnable.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text2/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 3,
+      "en": "Even in the event of a fire, fewer trees are consumed.",
+      "zh": "即使真的发生火灾，被烧毁的树木也会更少。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "Even in the event of a fire, fewer trees are consumed.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text2/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 4,
+      "en": "The need for such planning is increasingly urgent.",
+      "zh": "这种规划正变得越来越紧迫。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "The need for such planning is increasingly urgent.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text2/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 4,
+      "en": "Already, since 2010, drought and insects have killed over 100 million trees in California, most of them in 2016 alone, and wildfires have burned hundreds of thousands of acres.",
+      "zh": "自2010年以来，干旱和虫害已经导致加州超过一亿棵树死亡，其中大多数仅在2016年一年内死亡；野火还烧毁了数十万英亩林地。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "Already, since 2010, drought and insects have killed over 100 million trees in California, most of them in 2016 alone, and wildfires have burned hundreds of thousands of acres.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text2/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 5,
+      "en": "California plans to treat 35,000 acres of forest a year by 2020, and 60,000 by 2030 - financed from the proceeds of the state's emissions-permit auctions.",
+      "zh": "加州计划到2020年每年治理3.5万英亩森林，到2030年提高到6万英亩；资金来自该州排放许可拍卖的收入。",
+      "vocab": [
+        {
+          "word": "emissions-permit auctions",
+          "lemma": "emissions-permit auctions",
+          "level": 8,
+          "meaning": "排放许可拍卖",
+          "start": 128,
+          "end": 153
+        }
+      ],
+      "discourse_function": "statistic",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "California plans to treat 35,000 acres of forest a year by 2020, and 60,000 by 2030 - financed from the proceeds of the state's emissions-permit auctions.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text2/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 5,
+      "en": "That's only a small share of the total acreage that could benefit, about half a million acres in all, so it will be vital to prioritize areas at greatest risk of fire or drought.",
+      "zh": "这只占可能从治理中受益的总面积的一小部分——总计约50万英亩，因此优先处理火灾或干旱风险最高的地区至关重要。",
+      "vocab": [
+        {
+          "word": "acreage",
+          "lemma": "acreage",
+          "level": 7,
+          "meaning": "面积",
+          "start": 39,
+          "end": 46
+        },
+        {
+          "word": "prioritize",
+          "lemma": "prioritize",
+          "level": 7,
+          "meaning": "优先处理",
+          "start": 125,
+          "end": 135
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "That's only a small share of the total acreage that could benefit, about half a million acres in all, so it will be vital to prioritize areas at greatest risk of fire or drought.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text2/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 6,
+      "en": "The strategy also aims to ensure that carbon in woody material removed from the forests is locked away in the form of solid lumber or burned as biofuel in vehicles that would otherwise run on fossil fuels.",
+      "zh": "这一策略还希望确保，从森林中移出的木质材料里的碳，要么以实木木材的形式被长期固定，要么作为生物燃料供原本会使用化石燃料的车辆燃烧。",
+      "vocab": [
+        {
+          "word": "woody",
+          "lemma": "woody",
+          "level": 7,
+          "meaning": "木质",
+          "start": 48,
+          "end": 53
+        },
+        {
+          "word": "biofuel",
+          "lemma": "biofuel",
+          "level": 7,
+          "meaning": "生物燃料",
+          "start": 144,
+          "end": 151
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "The strategy also aims to ensure that carbon in woody material removed from the forests is locked away in the form of solid lumber or burned as biofuel in vehicles that would otherwise run on fossil fuels.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text2/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 6,
+      "en": "New research on transportation biofuels is already under way.",
+      "zh": "关于交通运输生物燃料的新研究已经展开。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "New research on transportation biofuels is already under way.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text2/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 7,
+      "en": "State governments are well accustomed to managing forests, but traditionally they've focused on wildlife, watersheds and opportunities for recreation.",
+      "zh": "州政府早已习惯管理森林，但传统上关注的主要是野生动物、流域以及休闲娱乐机会。",
+      "vocab": [
+        {
+          "word": "watersheds",
+          "lemma": "watersheds",
+          "level": 8,
+          "meaning": "流域",
+          "start": 106,
+          "end": 116
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "State governments are well accustomed to managing forests, but traditionally they've focused on wildlife, watersheds and opportunities for recreation.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text2/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "paragraph": 7,
+      "en": "Only recently have they come to see the vital part forests will have to play in storing carbon.",
+      "zh": "直到最近，他们才逐渐认识到森林在储存碳方面必须发挥的关键作用。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s20-01",
+          "text": "Only recently have they come to see the vital part forests will have to play in storing carbon.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text2/s20-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "paragraph": 7,
+      "en": "California's plan, which is expected to be finalized by the governor next year, should serve as a model.",
+      "zh": "加州的这项计划预计将于明年由州长最终敲定，它应当成为一个范例。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s21-01",
+          "text": "California's plan, which is expected to be finalized by the governor next year, should serve as a model.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text2/s21-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

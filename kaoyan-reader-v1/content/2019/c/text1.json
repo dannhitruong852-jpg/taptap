@@ -1,0 +1,862 @@
+{
+  "year": 2019,
+  "section_type": "reading",
+  "article_id": "text1",
+  "source_sha256": "e1fbf6bc49f23efd1c80d27e34300ba9739041d0afb6aa16364a55e76770f224",
+  "source_pages": [
+    3,
+    4
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "04",
+  "article_context": "文章重新评价“内疚”这种情绪：适量内疚并非纯粹负担，它能促使人反思错误、修复关系，并在同情心不足时成为合作与分享的另一条心理路径。语气应兼具心理学科普的清晰和对复杂情绪的克制理解。",
+  "article": {
+    "year": 2019,
+    "section": "text1",
+    "title": "阅读 Text 1 · 适度内疚如何促进合作与修复关系",
+    "background": "文章重新评价“内疚”这种情绪：适量内疚并非纯粹负担，它能促使人反思错误、修复关系，并在同情心不足时成为合作与分享的另一条心理路径。语气应兼具心理学科普的清晰和对复杂情绪的克制理解。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "Unlike so-called basic emotions such as sadness, fear, and anger, guilt emerges a little later, in conjunction with a child's growing grasp of social and moral norms.",
+      "zh": "与悲伤、恐惧和愤怒这类所谓基本情绪不同，内疚出现得稍晚一些，它伴随着儿童对社会规范和道德规范理解的逐渐加深。",
+      "vocab": [
+        {
+          "word": "norms",
+          "lemma": "norms",
+          "level": 6,
+          "meaning": "规范",
+          "start": 160,
+          "end": 165
+        }
+      ],
+      "discourse_function": "compare",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "Unlike so-called basic emotions such as sadness, fear, and anger, guilt emerges a little later, in conjunction with a child's growing grasp of social and moral norms.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text1/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Children aren't born knowing how to say \"I'm sorry\"; rather, they learn over time that such statements appease parents and friends - and their own consciences.",
+      "zh": "孩子并不是生来就知道该怎么说“对不起”；他们是在成长过程中逐渐明白，这样的话能安抚父母和朋友，也能让自己的良心得到安宁。",
+      "vocab": [
+        {
+          "word": "appease",
+          "lemma": "appease",
+          "level": 7,
+          "meaning": "安抚",
+          "start": 103,
+          "end": 110
+        },
+        {
+          "word": "consciences",
+          "lemma": "consciences",
+          "level": 7,
+          "meaning": "良心",
+          "start": 147,
+          "end": 158
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Children aren't born knowing how to say \"I'm sorry\"; rather, they learn over time that such statements appease parents and friends - and their own consciences.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text1/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "This is why researchers generally regard so-called moral guilt, in the right amount, to be a good thing.",
+      "zh": "因此，研究者通常认为，所谓道德性内疚只要程度适当，就是一件好事。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "This is why researchers generally regard so-called moral guilt, in the right amount, to be a good thing.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text1/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "In the popular imagination, of course, guilt still gets a bad rap.",
+      "zh": "当然，在大众印象里，内疚依然名声不佳。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "In the popular imagination, of course, guilt still gets a bad rap.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text1/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "It is deeply uncomfortable - it's the emotional equivalent of wearing a jacket weighted with stones.",
+      "zh": "它让人非常难受，就像在情绪上穿了一件塞满石头的沉重外套。",
+      "vocab": [],
+      "discourse_function": "compare",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "It is deeply uncomfortable - it's the emotional equivalent of wearing a jacket weighted with stones.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text1/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "Yet this understanding is outdated.",
+      "zh": "然而，这种理解已经过时。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "Yet this understanding is outdated.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text1/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "\"There has been a kind of revival or a rethinking about what guilt is and what role guilt can serve,\" says Amrisha Vaish, a psychology researcher at the University of Virginia, adding that this revival is part of a larger recognition that emotions aren't binary - feelings that may be advantageous in one context may be harmful in another.",
+      "zh": "弗吉尼亚大学心理学研究者阿姆丽莎·瓦伊什说：“人们正在重新关注、重新思考内疚究竟是什么，以及它能发挥什么作用。”她还指出，这种重新审视属于一种更广泛的认识转变：情绪并非非好即坏；一种感受在某种情境下可能有利，在另一种情境下却可能有害。",
+      "vocab": [
+        {
+          "word": "revival",
+          "lemma": "revival",
+          "level": 6,
+          "meaning": "重新关注",
+          "start": 26,
+          "end": 33
+        },
+        {
+          "word": "revival",
+          "lemma": "revival",
+          "level": 6,
+          "meaning": "重新关注",
+          "start": 194,
+          "end": 201
+        },
+        {
+          "word": "advantageous",
+          "lemma": "advantageous",
+          "level": 7,
+          "meaning": "有利",
+          "start": 285,
+          "end": 297
+        }
+      ],
+      "discourse_function": "explain_quote",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "\"There has been a kind of revival or a rethinking about what guilt is and what role guilt can serve,\" says Amrisha Vaish, a psychology researcher at the University of Virginia, adding that this revival is part of a larger recognition that emotions aren't binary - feelings that may be advantageous in one context may be harmful in another.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.99,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text1/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 2,
+      "en": "Jealousy and anger, for example, may have evolved to alert us to important inequalities.",
+      "zh": "例如，嫉妒和愤怒可能就是进化出来的警报机制，用来提醒我们注意重要的不平等。",
+      "vocab": [
+        {
+          "word": "inequalities",
+          "lemma": "inequalities",
+          "level": 6,
+          "meaning": "不平等",
+          "start": 75,
+          "end": 87
+        }
+      ],
+      "discourse_function": "example",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "Jealousy and anger, for example, may have evolved to alert us to important inequalities.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text1/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 2,
+      "en": "Too much happiness can be destructive.",
+      "zh": "就连幸福过了头，也可能具有破坏性。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "Too much happiness can be destructive.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text1/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 3,
+      "en": "And guilt, by prompting us to think more deeply about our goodness, can encourage humans to make up for errors and fix relationships.",
+      "zh": "而内疚会促使我们更深入地反思自己的善恶，从而推动人们弥补过错、修复关系。",
+      "vocab": [
+        {
+          "word": "prompting",
+          "lemma": "prompting",
+          "level": 6,
+          "meaning": "促使",
+          "start": 14,
+          "end": 23
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "And guilt, by prompting us to think more deeply about our goodness, can encourage humans to make up for errors and fix relationships.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text1/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 3,
+      "en": "Guilt, in other words, can help hold a cooperative species together.",
+      "zh": "换句话说，内疚能够帮助一个依靠合作生存的物种维系在一起。",
+      "vocab": [
+        {
+          "word": "cooperative",
+          "lemma": "cooperative",
+          "level": 6,
+          "meaning": "合作",
+          "start": 39,
+          "end": 50
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "Guilt, in other words, can help hold a cooperative species together.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text1/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 3,
+      "en": "It is a kind of social glue.",
+      "zh": "它就像一种“社会黏合剂”。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "It is a kind of social glue.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text1/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 4,
+      "en": "Viewed in this light, guilt is an opportunity.",
+      "zh": "从这个角度看，内疚反而是一种机会。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "Viewed in this light, guilt is an opportunity.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text1/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 4,
+      "en": "Work by Tina Malti, a psychology professor at the University of Toronto, suggests that guilt may compensate for an emotional deficiency.",
+      "zh": "多伦多大学心理学教授蒂娜·马尔蒂的研究表明，内疚可能会弥补某种情感缺失。",
+      "vocab": [
+        {
+          "word": "compensate",
+          "lemma": "compensate",
+          "level": 6,
+          "meaning": "弥补",
+          "start": 97,
+          "end": 107
+        },
+        {
+          "word": "deficiency",
+          "lemma": "deficiency",
+          "level": 7,
+          "meaning": "缺失",
+          "start": 125,
+          "end": 135
+        }
+      ],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "Work by Tina Malti, a psychology professor at the University of Toronto, suggests that guilt may compensate for an emotional deficiency.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text1/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 4,
+      "en": "In a number of studies, Malti and others have shown that guilt and sympathy may represent different pathways to cooperation and sharing.",
+      "zh": "在多项研究中，马尔蒂等人发现，内疚和同情心可能代表着通向合作与分享的不同心理路径。",
+      "vocab": [
+        {
+          "word": "sympathy",
+          "lemma": "sympathy",
+          "level": 6,
+          "meaning": "同情心",
+          "start": 67,
+          "end": 75
+        }
+      ],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "In a number of studies, Malti and others have shown that guilt and sympathy may represent different pathways to cooperation and sharing.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text1/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 4,
+      "en": "Some kids who are low in sympathy may make up for that shortfall by experiencing more guilt, which can rein in their nastier impulses.",
+      "zh": "有些孩子同情心较弱，却可能因为更容易感到内疚而弥补这种不足；内疚能约束他们那些不那么友善的冲动。",
+      "vocab": [
+        {
+          "word": "sympathy",
+          "lemma": "sympathy",
+          "level": 6,
+          "meaning": "同情心",
+          "start": 25,
+          "end": 33
+        },
+        {
+          "word": "shortfall",
+          "lemma": "shortfall",
+          "level": 7,
+          "meaning": "不足",
+          "start": 55,
+          "end": 64
+        },
+        {
+          "word": "rein in",
+          "lemma": "rein in",
+          "level": 7,
+          "meaning": "约束",
+          "start": 103,
+          "end": 110
+        },
+        {
+          "word": "impulses",
+          "lemma": "impulses",
+          "level": 6,
+          "meaning": "冲动",
+          "start": 125,
+          "end": 133
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "Some kids who are low in sympathy may make up for that shortfall by experiencing more guilt, which can rein in their nastier impulses.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text1/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 4,
+      "en": "And vice versa: High sympathy can substitute for low guilt.",
+      "zh": "反过来也一样：较强的同情心也可以弥补较弱的内疚感。",
+      "vocab": [
+        {
+          "word": "sympathy",
+          "lemma": "sympathy",
+          "level": 6,
+          "meaning": "同情心",
+          "start": 21,
+          "end": 29
+        }
+      ],
+      "discourse_function": "compare",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "And vice versa: High sympathy can substitute for low guilt.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text1/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 5,
+      "en": "In a 2014 study, for example, Malti looked at 244 children.",
+      "zh": "例如，在2014年的一项研究中，马尔蒂考察了244名儿童。",
+      "vocab": [],
+      "discourse_function": "example",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "In a 2014 study, for example, Malti looked at 244 children.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text1/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 5,
+      "en": "Using caregiver assessments and the children's self-observations, she rated each child's overall sympathy level and his or her tendency to feel negative emotions after moral transgressions.",
+      "zh": "她结合照料者的评估和孩子们的自我观察，对每个孩子的总体同情心水平，以及他们在发生道德过错后产生负面情绪的倾向进行了评分。",
+      "vocab": [
+        {
+          "word": "sympathy",
+          "lemma": "sympathy",
+          "level": 6,
+          "meaning": "同情心",
+          "start": 97,
+          "end": 105
+        },
+        {
+          "word": "transgressions",
+          "lemma": "transgressions",
+          "level": 8,
+          "meaning": "过错",
+          "start": 174,
+          "end": 188
+        }
+      ],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "Using caregiver assessments and the children's self-observations, she rated each child's overall sympathy level and his or her tendency to feel negative emotions after moral transgressions.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text1/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "paragraph": 5,
+      "en": "Then the kids were handed chocolate coins, and given a chance to share them with an anonymous child.",
+      "zh": "随后，孩子们拿到了一些巧克力金币，并有机会把它们分享给一个匿名儿童。",
+      "vocab": [
+        {
+          "word": "anonymous",
+          "lemma": "anonymous",
+          "level": 6,
+          "meaning": "匿名",
+          "start": 84,
+          "end": 93
+        }
+      ],
+      "discourse_function": "sequence",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s20-01",
+          "text": "Then the kids were handed chocolate coins, and given a chance to share them with an anonymous child.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text1/s20-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "paragraph": 5,
+      "en": "For the low-sympathy kids, how much they shared appeared to turn on how inclined they were to feel guilty.",
+      "zh": "对于同情心较弱的孩子来说，他们愿意分享多少，似乎取决于他们有多容易产生内疚感。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s21-01",
+          "text": "For the low-sympathy kids, how much they shared appeared to turn on how inclined they were to feel guilty.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text1/s21-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "paragraph": 5,
+      "en": "The guilt-prone ones shared more, even though they hadn't magically become more sympathetic to the other child's deprivation.",
+      "zh": "那些更容易内疚的孩子分享得更多，尽管他们并没有神奇地变得更能同情另一个孩子所处的匮乏境况。",
+      "vocab": [
+        {
+          "word": "deprivation",
+          "lemma": "deprivation",
+          "level": 8,
+          "meaning": "匮乏",
+          "start": 113,
+          "end": 124
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s22-01",
+          "text": "The guilt-prone ones shared more, even though they hadn't magically become more sympathetic to the other child's deprivation.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text1/s22-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "paragraph": 6,
+      "en": "\"That's good news,\" Malti says.",
+      "zh": "马尔蒂说：“这是个好消息。”",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s23-01",
+          "text": "\"That's good news,\" Malti says.",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text1/s23-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "paragraph": 6,
+      "en": "\"We can be prosocial because we caused harm and we feel regret.\"",
+      "zh": "“我们之所以能表现出亲社会行为，可以只是因为自己造成了伤害，并因此感到后悔。”",
+      "vocab": [
+        {
+          "word": "prosocial",
+          "lemma": "prosocial",
+          "level": 8,
+          "meaning": "亲社会",
+          "start": 11,
+          "end": 20
+        }
+      ],
+      "discourse_function": "evaluation_quote",
+      "prosody_focus": [],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s24-01",
+          "text": "\"We can be prosocial because we caused harm and we feel regret.\"",
+          "speaker_role": "narrator",
+          "actor_id": "04",
+          "emotion": "serious",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-text1/s24-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}
