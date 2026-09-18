@@ -1,0 +1,105 @@
+name: Finalize reviewed 2024 curated once
+# rerun after exact shard recovery - final execution
+
+on:
+  push:
+    branches:
+      - c-mode-v2-2019-2024-production
+    paths:
+      - '.github/workflows/finalize-2024-reviewed-once.yml'
+
+permissions:
+  contents: write
+
+env:
+  PYTHONPATH: .:voice-pipeline:content-pipeline
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Materialize reviewed 2024 curated source
+        run: |
+          python - <<'PY'
+          import json, sys
+          from pathlib import Path
+          sys.path.insert(0, 'content-pipeline')
+          from build_curated_year import load_curated_source
+
+          curated = Path('content-pipeline/curated')
+          source = load_curated_source(curated, 2024)
+          expected = ['cloze','text1','text2','text3','text4','partb','translation']
+          assert [a['id'] for a in source['articles']] == expected
+          assert source['source_sha256'] == '94b209362bfd0e33b8d7c52239522511bf499983e1046123c7a74c25c2c8ff78'
+          assert source.get('unresolved_sections') == []
+          assert {a['id']: len(a['rows']) for a in source['articles']} == {
+              'cloze': 19, 'text1': 17, 'text2': 14, 'text3': 17,
+              'text4': 16, 'partb': 16, 'translation': 6,
+          }
+          out = curated / '2024.json'
+          out.write_text(json.dumps(source, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print(json.dumps({
+              'year': source['year'],
+              'articles': expected,
+              'sentence_counts': {a['id']:len(a['rows']) for a in source['articles']},
+              'source_sha256': source['source_sha256'],
+          }, ensure_ascii=False))
+          PY
+
+      - name: Finalize and compile 2024
+        run: |
+          python content-pipeline/finalize_curated_year.py --year 2024
+          python content-pipeline/build_curated_year.py --year 2024
+
+      - name: Run canonical regressions
+        run: |
+          python -m unittest discover -s production_v2/tests -v
+          python -m unittest content-pipeline/tests/test_build_curated_year.py -v
+          python -m unittest content-pipeline/tests/test_bilingual_highlights.py -v
+
+      - name: Run 2024 V2 canonical preflight
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          src=json.loads(Path('batch-manifests/2019-2024.json').read_text())
+          year=2024
+          src['years']=[year]
+          src['expected_articles']={str(year):src['expected_articles'][str(year)]}
+          Path('/tmp/2024-manifest.json').write_text(json.dumps(src,indent=2)+'\n')
+          PY
+          python -m production_v2.cli_validate_batch             --manifest /tmp/2024-manifest.json             --catalog kaoyan-reader-v1/content/catalog.json             --reader-root kaoyan-reader-v1             --phase preflight             --report reports/production-v2/2024-canonical-regression.json
+
+      - name: Assert final 2024 evidence
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          canary=json.loads(Path('reports/production-v2/2024-canary.json').read_text())
+          assert canary['ok'] is True, canary
+          assert canary['errors'] == [], canary['errors']
+          assert canary['articles_checked'] == 7
+          assert canary['reviewed_candidates_checked'] == 7
+          assert canary['mapped_occurrences'] == canary['level6_vocab_occurrences_checked']
+          expected={'cloze','text1','text2','text3','text4','partb','translation'}
+          reader=Path('kaoyan-reader-v1/content/2024/c')
+          assert {p.stem for p in reader.glob('*.json')} == expected
+          report=json.loads(Path('reports/production-v2/2024-canonical-regression.json').read_text())
+          assert report['ok'] is True, report
+          assert report['errors'] == [], report
+          print(json.dumps({'canary':canary,'canonical_regression':report},ensure_ascii=False,indent=2))
+          PY
+
+      - name: Commit reviewed 2024 outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add             content-pipeline/curated/2024.json             content-pipeline/curated/bilingual-highlights/2024.json             content-pipeline/voice_profiles/2024.json             content-pipeline/direction/2024.json             kaoyan-reader-v1/content/catalog.json             kaoyan-reader-v1/content/2024             reports/bilingual-highlights/2024.json             reports/content-freeze/2024             reports/extraction/2024.json             reports/production-v2/2024-canary.json             reports/production-v2/2024-canonical-regression.json
+          git diff --cached --check
+          git commit -m 'build(c-mode): finalize reviewed 2024 [skip ci]'
+          git push origin HEAD:c-mode-v2-2019-2024-production
