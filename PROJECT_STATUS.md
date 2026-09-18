@@ -11,11 +11,11 @@
 ## 当前任务（2026-09-18）
 - 用户明确：2018 及以前完成，接着生产 **2019—2024**；只汇报关键进度和异常。
 - 当前工作分支：`c-mode-v2-2019-2024-production`。
-- 核实到的内容提交：`989caf507be597cbac56747ed20add8f12227e84`（初始化新批次清单和源文件登记）。
+- 核实到的内容提交：`b4067911ea58ac03c29c10d4e7e1565cfbf99121`（2019 已完成编译、reviewed candidate、QA 与 V2 canary）。
 - 基线内容分支：`c-mode-v2-2013-2018-production`，HEAD `95208fcaaeb38907547f64e7d46322bd8caee077`。
 - 批次清单：`batch-manifests/2019-2024.json`，每年 cloze、text1—text4、partb、translation，共 42 篇，当前 draft。
-- 2019：正文、逐句翻译、演员/韵律、词汇及双语映射正在制作，尚未保存可宣称完成的内容。
-- 2020—2024：待制作。六年原卷已找到；2024 未随本轮附件挂载，已通过用户已有文件找回，其持久标识为 `libfile_fa8f9ed28b30819184b4677bc515eb0a`，名称 `2024年考研英语二真题【可复制搜索查词】.pdf`。新分支初始源登记中的 2024 locating_original 已过时，下一次内容检查点更新。
+- 2019：已完成。原 3 个 curated gzip 分片在 Part B 第 2 句中途截断；未重做既有 curated，而是保留已审前缀并仅恢复缺失尾段。已生成 voice profile、direction、Reader 7 篇、reviewed candidate 7 份与双语 QA；141 句，level-6+ occurrence 90/90，V2 canary preflight 0 errors。证据：`reports/production-v2/2019-canary.json`。
+- 2020—2024：待制作；下一步从 2020 开始，沿用 2019 已通过的 reviewed candidate + QA + V2 canary 模式逐年推进。六年原卷已找到；2024 未随本轮附件挂载，已通过用户已有文件找回，其持久标识为 `libfile_fa8f9ed28b30819184b4677bc515eb0a`，名称 `2024年考研英语二真题【可复制搜索查词】.pdf`。新分支初始源登记中的 2024 locating_original 已过时，下一次内容检查点更新。
 - 已执行：V2 基础回归 54 项通过。尚未正式全批校验、冻结、音频生成或发布。
 - source_ref 目前指向基线，全部源稿保存后必须更新至完整源稿提交，不能直接用基线冻结。
 
