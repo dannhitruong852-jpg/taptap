@@ -3,7 +3,7 @@ name: Reader tests
 on:
   workflow_dispatch:
   push:
-    branches: ['c-v4-article-preview-actual']
+    branches: ['c-v4-article-preview-actual', 'c-mode-v2-2019-2024-production']
     paths:
       - 'kaoyan-reader-v1/**'
       - 'content-pipeline/**'
@@ -40,6 +40,7 @@ jobs:
             content-pipeline/tests/test_bilingual_highlights.py \
             content-pipeline/tests/test_build_bilingual_highlights.py \
             content-pipeline/tests/test_build_curated_year.py \
+            content-pipeline/tests/test_finalize_curated_year.py \
             scripts/tests/test_build_2007_2012_bilingual_highlights.py \
             scripts/tests/test_build_2007_2012_curated.py \
             scripts/tests/test_build_2007_2012_vocabulary.py \
