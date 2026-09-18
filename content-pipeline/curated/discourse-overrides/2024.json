@@ -6,31 +6,36 @@
       "article_id": "cloze",
       "sentence_id": "s12",
       "from": "advice",
-      "to": "encourage"
+      "to": "encourage",
+      "reason": "Reviewed imperative recommendation; canonical C-mode label is encourage."
     },
     {
       "article_id": "cloze",
       "sentence_id": "s18",
       "from": "diagnose",
-      "to": "warning"
+      "to": "warning",
+      "reason": "Reviewed diagnostic warning signs; canonical C-mode label is warning."
     },
     {
       "article_id": "cloze",
       "sentence_id": "s19",
       "from": "advice",
-      "to": "encourage"
+      "to": "encourage",
+      "reason": "Reviewed imperative recovery recommendation; canonical C-mode label is encourage."
     },
     {
       "article_id": "translation",
       "sentence_id": "s01",
       "from": "scene",
-      "to": "story"
+      "to": "story",
+      "reason": "Reviewed sensory scene-setting sentence; canonical C-mode label is story."
     },
     {
       "article_id": "translation",
       "sentence_id": "s05",
       "from": "cause_effect",
-      "to": "conclude"
+      "to": "conclude",
+      "reason": "Reviewed causal-result sentence; canonical C-mode label is conclude."
     }
   ]
 }
