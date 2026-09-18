@@ -1,0 +1,220 @@
+{
+  "year": 2022,
+  "section_type": "translation",
+  "article_id": "translation",
+  "source_sha256": "6905f827ee76eb3d4165c7aaeb09af9387c60addbd5af8e959d5e8a9ddcfa7f8",
+  "source_pages": [
+    13
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "15",
+  "article_context": "文章指出，绘画结果偏离预期虽然令人失望，却能训练人适应变化、处理挫折并寻找创造性解决方案，这种能力也可迁移到日常生活。",
+  "article": {
+    "year": 2022,
+    "section": "translation",
+    "title": "翻译 · 绘画中的意外结果如何训练创造性解决问题",
+    "background": "文章指出，绘画结果偏离预期虽然令人失望，却能训练人适应变化、处理挫折并寻找创造性解决方案，这种能力也可迁移到日常生活。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "Although we try our best, sometimes our paintings rarely turn out as originally planned.",
+      "zh": "尽管我们已经竭尽全力，有时画作仍很少会完全按照最初计划呈现。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "Although we try our best, sometimes our paintings rarely turn out as originally planned.",
+          "speaker_role": "narrator",
+          "actor_id": "15",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-translation/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Changes in the light, the limitations of your painting materials, and the lack of experience and technique mean that what you start out trying to achieve may not come to life the way that you expected.",
+      "zh": "光线变化、绘画材料的限制以及经验和技巧不足，都意味着你最初想实现的效果未必会如预期那样呈现。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Changes in the light, the limitations of your painting materials, and the lack of experience and technique mean that what you start out trying to achieve may not come to life the way that you expected.",
+          "speaker_role": "narrator",
+          "actor_id": "15",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-translation/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 2,
+      "en": "Although this can be frustrating and disappointing, it turns out that this can actually be good for you.",
+      "zh": "虽然这可能令人沮丧、令人失望，但事实证明，它其实可能对你有好处。",
+      "vocab": [
+        {
+          "word": "frustrating",
+          "lemma": "frustrating",
+          "level": 6,
+          "meaning": "令人沮丧",
+          "start": 21,
+          "end": 32
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Although this can be frustrating and disappointing, it turns out that this can actually be good for you.",
+          "speaker_role": "narrator",
+          "actor_id": "15",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-translation/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "Unexpected results have two benefits: you pretty quickly learn to deal with disappointment and realise that when one door closes, another opens.",
+      "zh": "意外结果有两个好处：你会很快学会面对失望，并意识到一扇门关上时，另一扇门会打开。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Unexpected results have two benefits: you pretty quickly learn to deal with disappointment and realise that when one door closes, another opens.",
+          "speaker_role": "narrator",
+          "actor_id": "15",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-translation/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "You also quickly learn to adapt and come up with creative solutions to the problems the painting presents, and thinking outside the box will become your second nature.",
+      "zh": "你也会很快学会适应，并为绘画带来的问题想出创造性解决方案；跳出框架思考最终会成为你的第二天性。",
+      "vocab": [
+        {
+          "word": "adapt",
+          "lemma": "adapt",
+          "level": 6,
+          "meaning": "适应",
+          "start": 26,
+          "end": 31
+        },
+        {
+          "word": "creative",
+          "lemma": "creative",
+          "level": 6,
+          "meaning": "创造性",
+          "start": 49,
+          "end": 57
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "You also quickly learn to adapt and come up with creative solutions to the problems the painting presents, and thinking outside the box will become your second nature.",
+          "speaker_role": "narrator",
+          "actor_id": "15",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-translation/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 3,
+      "en": "In fact, creative problem-solving skills are incredibly useful in daily life, with which you're more likely to be able to find a solution when a problem arises.",
+      "zh": "事实上，创造性解决问题的能力在日常生活中极其有用；拥有这种能力，问题出现时你更可能找到解决办法。",
+      "vocab": [
+        {
+          "word": "creative",
+          "lemma": "creative",
+          "level": 6,
+          "meaning": "创造性",
+          "start": 9,
+          "end": 17
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "In fact, creative problem-solving skills are incredibly useful in daily life, with which you're more likely to be able to find a solution when a problem arises.",
+          "speaker_role": "narrator",
+          "actor_id": "15",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-translation/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}
