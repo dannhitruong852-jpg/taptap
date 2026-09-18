@@ -73,7 +73,7 @@ class ReaderUX(unittest.TestCase):
 
     def test_03_bilingual_highlights_and_single_global_switch(self):
         p=self.page;self.assertEqual(p.locator('#toggle-chinese,#movie-mode').count(),0);self.assertEqual(p.locator('.reader-settings button').count(),2);self.assertEqual(p.locator('#phrase-book-open').count(),1)
-        card=p.locator('.sentence-card').nth(1);card.locator('.en').tap();en=card.locator('.en .vocab').first;zh=card.locator('.zh .zh-vocab').first
+        card=p.locator('.sentence-card').nth(1);card.locator('.en').tap();p.wait_for_timeout(340);en=card.locator('.en .vocab').first;zh=card.locator('.zh .zh-vocab').first
         self.assertEqual(en.inner_text().strip(),'sympathy');self.assertEqual(zh.inner_text(),'认同');self.assertGreaterEqual(int(zh.evaluate('el=>getComputedStyle(el).fontWeight')),700)
         p.locator('#toggle-vocab').click();self.assertLess(int(en.evaluate('el=>getComputedStyle(el).fontWeight')),700);self.assertTrue(card.locator('.zh').is_visible());p.locator('#toggle-vocab').click();self.assertGreaterEqual(int(zh.evaluate('el=>getComputedStyle(el).fontWeight')),700)
 
