@@ -1,0 +1,36 @@
+{
+  "year": 2024,
+  "rationale": "Normalize five reviewed 2024 discourse labels to the repository's canonical C-mode vocabulary without changing English or Chinese text.",
+  "overrides": [
+    {
+      "article_id": "cloze",
+      "sentence_id": "s12",
+      "from": "advice",
+      "to": "encourage"
+    },
+    {
+      "article_id": "cloze",
+      "sentence_id": "s18",
+      "from": "diagnose",
+      "to": "warning"
+    },
+    {
+      "article_id": "cloze",
+      "sentence_id": "s19",
+      "from": "advice",
+      "to": "encourage"
+    },
+    {
+      "article_id": "translation",
+      "sentence_id": "s01",
+      "from": "scene",
+      "to": "story"
+    },
+    {
+      "article_id": "translation",
+      "sentence_id": "s05",
+      "from": "cause_effect",
+      "to": "conclude"
+    }
+  ]
+}
