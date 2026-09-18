@@ -1,0 +1,212 @@
+{
+  "year": 2024,
+  "section_type": "translation",
+  "article_id": "translation",
+  "source_sha256": "94b209362bfd0e33b8d7c52239522511bf499983e1046123c7a74c25c2c8ff78",
+  "source_pages": [
+    14
+  ],
+  "accent": "en-GB",
+  "primary_actor_id": "15",
+  "article_context": "文章描写农贸市场的感官体验与经济机制：消费者不仅能购买新鲜时令农产品并直接认识生产者，生产者也因减少中间商而获得更多利润，市场的规模和供给则随当地农业季节变化。",
+  "article": {
+    "year": 2024,
+    "section": "translation",
+    "title": "翻译 · 农贸市场如何同时连接感官、生产者、本地经济与时令食物",
+    "background": "文章描写农贸市场的感官体验与经济机制：消费者不仅能购买新鲜时令农产品并直接认识生产者，生产者也因减少中间商而获得更多利润，市场的规模和供给则随当地农业季节变化。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "With the smell of coffee and fresh bread floating in the air, stalls bursting with colourful vegetables and tempting cheeses, and the buzz of friendly chats, farmers’ markets are a feast for the senses.",
+      "zh": "空气里飘着咖啡与新鲜面包的香气，摊位上堆满色彩鲜艳的蔬菜和诱人的奶酪，耳边又是友好交谈的嗡嗡声，农贸市场堪称一场感官盛宴。",
+      "vocab": [],
+      "discourse_function": "story",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "With the smell of coffee and fresh bread floating in the air, stalls bursting with colourful vegetables and tempting cheeses, and the buzz of friendly chats, farmers’ markets are a feast for the senses.",
+          "speaker_role": "narrator",
+          "actor_id": "15",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-translation/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "They also provide an opportunity to talk to the people responsible for growing or raising your food, support your local economy and pick up fresh seasonal produce—all at the same time.",
+      "zh": "它还让你能够与种植或饲养这些食物的人交谈，支持本地经济，同时买到新鲜的时令农产品——几件事一次完成。",
+      "vocab": [
+        {
+          "word": "seasonal",
+          "lemma": "seasonal",
+          "level": 6,
+          "meaning": "时令",
+          "start": 146,
+          "end": 154
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "They also provide an opportunity to talk to the people responsible for growing or raising your food, support your local economy and pick up fresh seasonal produce—all at the same time.",
+          "speaker_role": "narrator",
+          "actor_id": "15",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-translation/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 2,
+      "en": "Farmers’ markets are usually weekly or monthly events, most often with outdoor stalls, which allow farmers or producers to sell their food directly to customers.",
+      "zh": "农贸市场通常每周或每月举办一次，多数设有露天摊位，让农民或生产者能够直接把食品卖给顾客。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Farmers’ markets are usually weekly or monthly events, most often with outdoor stalls, which allow farmers or producers to sell their food directly to customers.",
+          "speaker_role": "narrator",
+          "actor_id": "15",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-translation/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "The size or regularity of markets can vary from season to season, depending on the area’s agricultural calendar, and you’re likely to find different produce on sale at different times of the year.",
+      "zh": "市场的规模或举办频率会随季节变化，这取决于当地的农业生产周期；一年中的不同时段，你往往会看到不同的农产品上市。",
+      "vocab": [
+        {
+          "word": "regularity",
+          "lemma": "regularity",
+          "level": 6,
+          "meaning": "频率",
+          "start": 12,
+          "end": 22
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "The size or regularity of markets can vary from season to season, depending on the area’s agricultural calendar, and you’re likely to find different produce on sale at different times of the year.",
+          "speaker_role": "narrator",
+          "actor_id": "15",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-translation/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "By cutting out the middlemen, the farmers secure more profit for their produce.",
+      "zh": "通过省去中间商，农民能从自己的农产品中获得更多利润。",
+      "vocab": [
+        {
+          "word": "middlemen",
+          "lemma": "middlemen",
+          "level": 6,
+          "meaning": "中间商",
+          "start": 19,
+          "end": 28
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "By cutting out the middlemen, the farmers secure more profit for their produce.",
+          "speaker_role": "narrator",
+          "actor_id": "15",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-translation/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "Shoppers also benefit from seeing exactly where—and to who—their money is going.",
+      "zh": "购物者也能从中受益，因为他们可以清楚看到自己的钱究竟流向哪里、又付给了谁。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "Shoppers also benefit from seeing exactly where—and to who—their money is going.",
+          "speaker_role": "narrator",
+          "actor_id": "15",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-translation/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

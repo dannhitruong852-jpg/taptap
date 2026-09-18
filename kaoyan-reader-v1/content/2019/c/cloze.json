@@ -1,0 +1,635 @@
+{
+  "year": 2019,
+  "section_type": "cloze",
+  "article_id": "cloze",
+  "source_sha256": "e1fbf6bc49f23efd1c80d27e34300ba9739041d0afb6aa16364a55e76770f224",
+  "source_pages": [
+    1,
+    2
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "08",
+  "article_context": "作者以自己的健身经历说明：过于频繁称重会让注意力从整体健康转向体重数字，改为每两周称重后，训练目标、营养判断和心理状态都更稳定。语气应亲切、务实，像有经验的人在分享可执行的健身建议。",
+  "article": {
+    "year": 2019,
+    "section": "cloze",
+    "title": "完型 · 不要让体重秤绑架健身目标",
+    "background": "作者以自己的健身经历说明：过于频繁称重会让注意力从整体健康转向体重数字，改为每两周称重后，训练目标、营养判断和心理状态都更稳定。语气应亲切、务实，像有经验的人在分享可执行的健身建议。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "Weighing yourself regularly is a wonderful way to stay aware of any significant weight fluctuations.",
+      "zh": "定期称体重，是了解自己是否出现显著体重波动的好方法。",
+      "vocab": [
+        {
+          "word": "significant",
+          "lemma": "significant",
+          "level": 6,
+          "meaning": "显著",
+          "start": 68,
+          "end": 79
+        },
+        {
+          "word": "fluctuations",
+          "lemma": "fluctuations",
+          "level": 7,
+          "meaning": "波动",
+          "start": 87,
+          "end": 99
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "Weighing yourself regularly is a wonderful way to stay aware of any significant weight fluctuations.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-cloze/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "However, when done too often, this habit can sometimes hurt more than it helps.",
+      "zh": "然而，一旦称得过于频繁，这个习惯有时反而会弊大于利。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "However, when done too often, this habit can sometimes hurt more than it helps.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-cloze/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 2,
+      "en": "As for me, weighing myself every day caused me to shift my focus from being generally healthy and physically active, to focusing solely on the scale.",
+      "zh": "就我而言，每天称重使我的注意力从保持整体健康、积极活动，转移到了只盯着体重秤上的数字。",
+      "vocab": [
+        {
+          "word": "solely",
+          "lemma": "solely",
+          "level": 6,
+          "meaning": "只",
+          "start": 129,
+          "end": 135
+        }
+      ],
+      "discourse_function": "story",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "As for me, weighing myself every day caused me to shift my focus from being generally healthy and physically active, to focusing solely on the scale.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-cloze/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "That was bad to my overall fitness goals.",
+      "zh": "这对我的整体健身目标并没有好处。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "That was bad to my overall fitness goals.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-cloze/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "I had gained weight in the form of muscle mass, but thinking only of lowering the number on the scale, I altered my training program.",
+      "zh": "我增加的其实是肌肉重量，可因为一心只想着把体重秤上的数字降下来，我还是改变了训练计划。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "I had gained weight in the form of muscle mass, but thinking only of lowering the number on the scale, I altered my training program.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-cloze/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "That conflicted with how I needed to train to reach my goals.",
+      "zh": "这与我为了实现目标本来应该采用的训练方式发生了冲突。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "That conflicted with how I needed to train to reach my goals.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-cloze/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 3,
+      "en": "I also found that weighing myself daily did not provide an accurate depiction of the hard work and progress I was making in the gym.",
+      "zh": "我还发现，每天称重并不能准确反映我在健身房付出的努力和取得的进步。",
+      "vocab": [
+        {
+          "word": "depiction",
+          "lemma": "depiction",
+          "level": 7,
+          "meaning": "反映",
+          "start": 68,
+          "end": 77
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "I also found that weighing myself daily did not provide an accurate depiction of the hard work and progress I was making in the gym.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-cloze/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 3,
+      "en": "It takes about three weeks to a month to notice significant changes in your weight due to altering your training program.",
+      "zh": "改变训练计划后，大约要三周到一个月，体重才会出现明显变化。",
+      "vocab": [
+        {
+          "word": "significant",
+          "lemma": "significant",
+          "level": 6,
+          "meaning": "显著",
+          "start": 48,
+          "end": 59
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "It takes about three weeks to a month to notice significant changes in your weight due to altering your training program.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-cloze/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 3,
+      "en": "The most immediate changes will be observed in skill level, strength and inches lost.",
+      "zh": "最先显现出来的变化，往往是在动作水平、力量以及身体围度的缩减上。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "The most immediate changes will be observed in skill level, strength and inches lost.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-cloze/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 4,
+      "en": "For these reasons, I stopped weighing myself every day and switched to a bimonthly weighing schedule instead.",
+      "zh": "基于这些原因，我不再每天称重，而是改为每两周称一次。",
+      "vocab": [
+        {
+          "word": "bimonthly",
+          "lemma": "bimonthly",
+          "level": 7,
+          "meaning": "每两周",
+          "start": 73,
+          "end": 82
+        }
+      ],
+      "discourse_function": "action_turn",
+      "prosody_focus": [],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "For these reasons, I stopped weighing myself every day and switched to a bimonthly weighing schedule instead.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "lively",
+          "intensity": 2,
+          "rate": 1.04,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-cloze/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 4,
+      "en": "Since weight loss is not my goal, it is less important for me to track my weight each week.",
+      "zh": "既然减重并不是我的目标，我也就没必要每周追踪体重。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "Since weight loss is not my goal, it is less important for me to track my weight each week.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-cloze/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 4,
+      "en": "Weighing every other week allows me to observe and account for any significant weight changes.",
+      "zh": "每隔一周称一次，既能让我观察到明显的体重变化，也有时间判断这些变化是怎么来的。",
+      "vocab": [
+        {
+          "word": "significant",
+          "lemma": "significant",
+          "level": 6,
+          "meaning": "显著",
+          "start": 67,
+          "end": 78
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "Weighing every other week allows me to observe and account for any significant weight changes.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-cloze/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 4,
+      "en": "That tells me whether I need to adjust my training program.",
+      "zh": "这样我就能知道是否需要调整训练计划。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "That tells me whether I need to adjust my training program.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-cloze/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 5,
+      "en": "I use my bimonthly weigh-in results to get information about my nutrition as well.",
+      "zh": "我也会利用每两周一次的称重结果来了解自己的营养状况。",
+      "vocab": [
+        {
+          "word": "bimonthly",
+          "lemma": "bimonthly",
+          "level": 7,
+          "meaning": "每两周",
+          "start": 9,
+          "end": 18
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "I use my bimonthly weigh-in results to get information about my nutrition as well.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-cloze/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 5,
+      "en": "If my training intensity remains the same, but I'm constantly hungry and dropping weight, this is a sign that I need to increase my daily caloric intake.",
+      "zh": "如果训练强度没有变化，我却总觉得饿、体重还在下降，那就说明我需要提高每天的热量摄入。",
+      "vocab": [
+        {
+          "word": "caloric",
+          "lemma": "caloric",
+          "level": 7,
+          "meaning": "热量",
+          "start": 138,
+          "end": 145
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "If my training intensity remains the same, but I'm constantly hungry and dropping weight, this is a sign that I need to increase my daily caloric intake.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-cloze/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 6,
+      "en": "The decision to stop weighing myself every day has done wonders for my overall health, fitness and well-being.",
+      "zh": "停止每天称重这一决定，让我的整体健康、健身状态和幸福感都大为改善。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "The decision to stop weighing myself every day has done wonders for my overall health, fitness and well-being.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-cloze/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 6,
+      "en": "I'm experiencing increased zeal for working out since I no longer carry the burden of a disappointing morning weigh-in.",
+      "zh": "自从不再背负“早晨一称体重就失望”的心理负担后，我训练时反而更有热情了。",
+      "vocab": [
+        {
+          "word": "zeal",
+          "lemma": "zeal",
+          "level": 7,
+          "meaning": "热情",
+          "start": 27,
+          "end": 31
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "I'm experiencing increased zeal for working out since I no longer carry the burden of a disappointing morning weigh-in.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-cloze/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 6,
+      "en": "I've also experienced greater success in achieving my specific fitness goals, because I'm training according to those goals, not the numbers on a scale.",
+      "zh": "我在实现具体健身目标方面也更成功了，因为现在我的训练依据是目标本身，而不是体重秤上的数字。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "I've also experienced greater success in achieving my specific fitness goals, because I'm training according to those goals, not the numbers on a scale.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-cloze/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 7,
+      "en": "Rather than obsessing over the scale, turn your focus to how you look, feel, how your clothes fit and your overall energy level.",
+      "zh": "与其执着于体重秤，不如把注意力放在自己的外形和感受、衣服是否合身，以及整体精力状态上。",
+      "vocab": [
+        {
+          "word": "obsessing",
+          "lemma": "obsessing",
+          "level": 7,
+          "meaning": "执着",
+          "start": 12,
+          "end": 21
+        }
+      ],
+      "discourse_function": "encourage",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "Rather than obsessing over the scale, turn your focus to how you look, feel, how your clothes fit and your overall energy level.",
+          "speaker_role": "narrator",
+          "actor_id": "08",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2019/c-cloze/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": "c-mode-v2-launch-audio-1",
+  "source_workflow_run_id": "35353164612",
+  "source_sha": "8cbf2e1dc3a3f871066383b7d289f99512fc9068",
+  "branch": "c-mode-v2-launch-release",
+  "years": [
+    2021
+  ],
+  "ok": true,
+  "articles": {
+    "2021": {
+      "2021-cloze": {
+        "sentences": 40,
+        "technical": "passed"
+      },
+      "2021-partb": {
+        "sentences": 33,
+        "technical": "passed"
+      },
+      "2021-text1": {
+        "sentences": 19,
+        "technical": "passed"
+      },
+      "2021-text2": {
+        "sentences": 16,
+        "technical": "passed"
+      },
+      "2021-text3": {
+        "sentences": 17,
+        "technical": "passed"
+      },
+      "2021-text4": {
+        "sentences": 22,
+        "technical": "passed"
+      },
+      "2021-translation": {
+        "sentences": 7,
+        "technical": "passed"
+      }
+    }
+  },
+  "errors": []
+}

@@ -1,0 +1,807 @@
+{
+  "year": 2023,
+  "section_type": "part_b",
+  "article_id": "partb",
+  "source_sha256": "91de84dad565eefd8ec245aa5b6291d336664c1549b6c4bff901594aed044f34",
+  "source_pages": [
+    12,
+    13
+  ],
+  "accent": "en-GB",
+  "primary_actor_id": "02",
+  "article_context": "文章介绍英国英格兰地区为实现2050净零排放而实施的新建筑法规。新规提高通风、能效、供暖、门窗和玻璃面积等标准，短期会增加材料与施工成本，但业内人士预计规模化后成本会回落，长期可通过节能收益回补。",
+  "article": {
+    "year": 2023,
+    "section": "partb",
+    "title": "阅读 Part B · 英国净零建筑新规为何短期推高住房与扩建成本",
+    "background": "文章介绍英国英格兰地区为实现2050净零排放而实施的新建筑法规。新规提高通风、能效、供暖、门窗和玻璃面积等标准，短期会增加材料与施工成本，但业内人士预计规模化后成本会回落，长期可通过节能收益回补。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "Net-Zero Rules Set to Send Cost of New Homes and Extensions Soaring",
+      "zh": "净零新规将使新建住房和扩建工程成本飙升",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "Net-Zero Rules Set to Send Cost of New Homes and Extensions Soaring",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-partb/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 2,
+      "en": "New building regulations aimed at improving energy efficiency are set to increase the price of new homes, as well as those of extensions and loft conversions on existing ones.",
+      "zh": "旨在提高能源效率的新建筑法规将推高新建住房的价格，也会增加现有住宅扩建和阁楼改造的费用。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "New building regulations aimed at improving energy efficiency are set to increase the price of new homes, as well as those of extensions and loft conversions on existing ones.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-partb/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 3,
+      "en": "The rules, which came into effect on Wednesday in England, are part of government plans to reduce the UK's carbon emissions to net zero by 2050.",
+      "zh": "这些规则于周三在英格兰生效，是英国政府到2050年把碳排放降至净零计划的一部分。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "The rules, which came into effect on Wednesday in England, are part of government plans to reduce the UK's carbon emissions to net zero by 2050.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-partb/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 3,
+      "en": "They set new standards for ventilation, energy efficiency and heating, and state that new residential buildings must have charging points for electric vehicles.",
+      "zh": "新规为通风、能源效率和供暖设定了新标准，并规定新建住宅必须配备电动汽车充电点。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "They set new standards for ventilation, energy efficiency and heating, and state that new residential buildings must have charging points for electric vehicles.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-partb/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 4,
+      "en": "The moves are the most significant change to building regulations in years, and industry experts say they will inevitably lead to higher prices at a time when a shortage of materials and high labour costs are already driving up bills.",
+      "zh": "这些措施是多年来建筑法规最重大的变化；业内专家表示，在材料短缺和高人工成本已经推高账单之际，新规必然会进一步抬高价格。",
+      "vocab": [],
+      "discourse_function": "warning",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "The moves are the most significant change to building regulations in years, and industry experts say they will inevitably lead to higher prices at a time when a shortage of materials and high labour costs are already driving up bills.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-partb/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 5,
+      "en": "Brian Berry, chief executive of the Federation of Master Builders, says the measures will require new materials, testing methods, products and systems to be installed.",
+      "zh": "建筑大师联合会首席执行官布赖恩·贝里表示，这些措施将要求采用新的材料、测试方法、产品和系统。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "Brian Berry, chief executive of the Federation of Master Builders, says the measures will require new materials, testing methods, products and systems to be installed.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-partb/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 5,
+      "en": "“All this comes at an increased cost during a time when prices are already sky high.",
+      "zh": "“在价格本已高得惊人的时候，这一切都会带来额外成本。",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "“All this comes at an increased cost during a time when prices are already sky high.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-partb/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 5,
+      "en": "Inevitably, consumers will have to pay more,” he says.",
+      "zh": "消费者不可避免地要付更多钱。”他说。",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "Inevitably, consumers will have to pay more,” he says.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-partb/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 6,
+      "en": "Gareth Belsham, of surveyors Naismiths, says people who are upgrading, or extending their home, will be directly affected.",
+      "zh": "测量师事务所 Naismiths 的加雷思·贝尔沙姆说，升级或扩建住宅的人会直接受到影响。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "Gareth Belsham, of surveyors Naismiths, says people who are upgrading, or extending their home, will be directly affected.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-partb/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 6,
+      "en": "“The biggest changes relate to heating and insulation,” he explains.",
+      "zh": "他解释说：“最大的变化与供暖和保温有关。”",
+      "vocab": [
+        {
+          "word": "insulation",
+          "lemma": "insulation",
+          "level": 6,
+          "meaning": "保温",
+          "start": 43,
+          "end": 53
+        }
+      ],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "“The biggest changes relate to heating and insulation,” he explains.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-partb/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 6,
+      "en": "“There are new rules concerning the amount of glazing used in extensions, and any new windows or doors must be highly insulated.”",
+      "zh": "“扩建工程中使用多少玻璃有了新规定，而且任何新窗户或新门都必须具有很高的保温性能。”",
+      "vocab": [
+        {
+          "word": "glazing",
+          "lemma": "glazing",
+          "level": 8,
+          "meaning": "玻璃",
+          "start": 46,
+          "end": 53
+        }
+      ],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "“There are new rules concerning the amount of glazing used in extensions, and any new windows or doors must be highly insulated.”",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-partb/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 7,
+      "en": "Windows and doors will have to adhere to higher standards, while there are new limits on the amount of glazing you can have to reduce unwanted heat from the sun.",
+      "zh": "门窗必须符合更高标准，同时为减少来自阳光的不必要热量，玻璃面积也有了新的限制。",
+      "vocab": [
+        {
+          "word": "glazing",
+          "lemma": "glazing",
+          "level": 8,
+          "meaning": "玻璃",
+          "start": 103,
+          "end": 110
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "Windows and doors will have to adhere to higher standards, while there are new limits on the amount of glazing you can have to reduce unwanted heat from the sun.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-partb/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 8,
+      "en": "Thomas Goodman, of MyJobQuote, says this will bring in new restrictions for extensions.",
+      "zh": "MyJobQuote 的托马斯·古德曼说，这将给住宅扩建带来新的限制。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "Thomas Goodman, of MyJobQuote, says this will bring in new restrictions for extensions.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-partb/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 8,
+      "en": "“Glazing on windows, doors and roof lights must cover no more than 25% of the floor area to prevent heat loss,” he says.",
+      "zh": "他说：“为了防止热量流失，窗户、门和屋顶采光窗的玻璃面积不得超过楼面面积的25%。”",
+      "vocab": [
+        {
+          "word": "Glazing",
+          "lemma": "glazing",
+          "level": 8,
+          "meaning": "玻璃",
+          "start": 1,
+          "end": 8
+        }
+      ],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "“Glazing on windows, doors and roof lights must cover no more than 25% of the floor area to prevent heat loss,” he says.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-partb/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 9,
+      "en": "As the rules came into effect last Wednesday, property developers were rushing to file plans just before the deadline.",
+      "zh": "由于新规于上周三生效，房地产开发商在截止日期前争相提交方案。",
+      "vocab": [],
+      "discourse_function": "story",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "As the rules came into effect last Wednesday, property developers were rushing to file plans just before the deadline.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-partb/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 9,
+      "en": "Any plans submitted before that date are considered to be under the previous rules, and can go ahead as long as work starts before 15 June next year.",
+      "zh": "在那一日期之前提交的任何方案都按旧规处理，只要工程在明年6月15日前开工，就可以继续推进。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "Any plans submitted before that date are considered to be under the previous rules, and can go ahead as long as work starts before 15 June next year.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-partb/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 10,
+      "en": "Builders which have costed projects, but have not filed the paperwork, may need to go back and submit fresh estimates, says Marcus Jefford of Build Aviator.",
+      "zh": "Build Aviator 的马库斯·杰福德说，那些已经给项目核算成本、但尚未提交文件的建筑商，可能需要重新提交新的报价。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "Builders which have costed projects, but have not filed the paperwork, may need to go back and submit fresh estimates, says Marcus Jefford of Build Aviator.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-partb/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 11,
+      "en": "Materials prices are already up 25% in the last two years.",
+      "zh": "过去两年，材料价格已经上涨了25%。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "Materials prices are already up 25% in the last two years.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-partb/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 11,
+      "en": "How much overall prices will increase as a result of the rule changes is not clear.",
+      "zh": "新规究竟会使总体价格上涨多少，目前还不清楚。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "How much overall prices will increase as a result of the rule changes is not clear.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-partb/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "paragraph": 11,
+      "en": "“Whilst admirable in their intentions, they will add to the cost of housebuilding at a time when many already feel that they are priced out of homeownership,” says Jonathan Rolande of the National Association of Property Buyers.",
+      "zh": "全国购房者协会的乔纳森·罗兰德说：“这些规定的初衷虽然值得赞许，但在许多人已经觉得房价高到无法置业之际，它们还会进一步增加建房成本。”",
+      "vocab": [],
+      "discourse_function": "evaluation_quote",
+      "prosody_focus": [],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s20-01",
+          "text": "“Whilst admirable in their intentions, they will add to the cost of housebuilding at a time when many already feel that they are priced out of homeownership,” says Jonathan Rolande of the National Association of Property Buyers.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-partb/s20-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "paragraph": 11,
+      "en": "“An average extension will probably see around £3,000 additional cost thanks to the new regs.”",
+      "zh": "“由于新规，一项普通扩建工程可能会增加约3,000英镑的成本。”",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s21-01",
+          "text": "“An average extension will probably see around £3,000 additional cost thanks to the new regs.”",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-partb/s21-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "paragraph": 12,
+      "en": "John Kelly, a construction lawyer at Freeths law firm, believes prices will eventually come down.",
+      "zh": "Freeths 律师事务所的建筑律师约翰·凯利认为，价格最终会降下来。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s22-01",
+          "text": "John Kelly, a construction lawyer at Freeths law firm, believes prices will eventually come down.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-partb/s22-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "paragraph": 12,
+      "en": "But not in the immediate future.",
+      "zh": "但不会是在短期内。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s23-01",
+          "text": "But not in the immediate future.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-partb/s23-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "paragraph": 12,
+      "en": "“As the marketplace adapts to the new requirements, and the technologies that support them, the scaling up of these technologies will eventually bring costs down, but in the short term, we will all have to pay the price of the necessary transition,” he says.",
+      "zh": "他说：“随着市场适应新的要求以及支撑这些要求的技术，这些技术实现规模化后最终会降低成本；但短期内，我们都必须为这场必要的转型付出代价。”",
+      "vocab": [],
+      "discourse_function": "qualify_quote",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s24-01",
+          "text": "“As the marketplace adapts to the new requirements, and the technologies that support them, the scaling up of these technologies will eventually bring costs down, but in the short term, we will all have to pay the price of the necessary transition,” he says.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-partb/s24-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "paragraph": 13,
+      "en": "However, the long-term effects of the changes will be more comfortable and energy-efficient homes, adds Andrew Mellor, of PRP architects.",
+      "zh": "不过，PRP 建筑事务所的安德鲁·梅勒补充说，从长期看，这些变化会带来更舒适、更节能的住宅。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s25-01",
+          "text": "However, the long-term effects of the changes will be more comfortable and energy-efficient homes, adds Andrew Mellor, of PRP architects.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-partb/s25-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "paragraph": 13,
+      "en": "“Homeowners will probably recoup that cost over time in energy bill savings.",
+      "zh": "“房主很可能会随着时间推移，通过节省能源账单把这部分成本赚回来。",
+      "vocab": [
+        {
+          "word": "recoup",
+          "lemma": "recoup",
+          "level": 7,
+          "meaning": "赚回来",
+          "start": 26,
+          "end": 32
+        }
+      ],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s26-01",
+          "text": "“Homeowners will probably recoup that cost over time in energy bill savings.",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-partb/s26-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "paragraph": 13,
+      "en": "It will obviously be very volatile at the moment, but they will have that benefit over time.”",
+      "zh": "眼下情况显然会很不稳定，但从长远来看，他们会获得这种收益。”",
+      "vocab": [
+        {
+          "word": "volatile",
+          "lemma": "volatile",
+          "level": 7,
+          "meaning": "不稳定",
+          "start": 26,
+          "end": 34
+        }
+      ],
+      "discourse_function": "settle",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s27-01",
+          "text": "It will obviously be very volatile at the moment, but they will have that benefit over time.”",
+          "speaker_role": "narrator",
+          "actor_id": "02",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2023/c-partb/s27-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

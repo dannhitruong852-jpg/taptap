@@ -1,0 +1,590 @@
+{
+  "year": 2022,
+  "section_type": "reading",
+  "article_id": "text1",
+  "source_sha256": "6905f827ee76eb3d4165c7aaeb09af9387c60addbd5af8e959d5e8a9ddcfa7f8",
+  "source_pages": [
+    3,
+    4
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "11",
+  "article_context": "文章介绍通过再生农业生产的“气候友好型鸡蛋”：利用土壤、覆盖作物与放养体系减碳，并讨论消费者是否愿意为这种可持续属性支付溢价。",
+  "article": {
+    "year": 2022,
+    "section": "text1",
+    "title": "阅读 Text 1 · “气候友好型鸡蛋”能成为下一类高端食品吗",
+    "background": "文章介绍通过再生农业生产的“气候友好型鸡蛋”：利用土壤、覆盖作物与放养体系减碳，并讨论消费者是否愿意为这种可持续属性支付溢价。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "On a recent sunny day, 13,000 chickens roam over Larry Brown's 40 windswept acres in Shiner, Texas.",
+      "zh": "最近一个阳光明媚的日子里，1.3万只鸡在得州夏纳拉里·布朗那40英亩迎风的土地上自由活动。",
+      "vocab": [],
+      "discourse_function": "story",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "On a recent sunny day, 13,000 chickens roam over Larry Brown's 40 windswept acres in Shiner, Texas.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text1/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Some rest in the shade of a parked car.",
+      "zh": "有些鸡在停着的汽车阴影下休息。",
+      "vocab": [],
+      "discourse_function": "story",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Some rest in the shade of a parked car.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text1/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "Others drink water with the cows.",
+      "zh": "另一些则和奶牛一起喝水。",
+      "vocab": [],
+      "discourse_function": "story",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Others drink water with the cows.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text1/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 1,
+      "en": "This all seems random, but it's by design, part of what the $6.1 billion U.S. egg industry bets will be its next big thing: climate-friendly eggs.",
+      "zh": "这一切看似随意，其实都是精心设计的，也是规模61亿美元的美国鸡蛋行业押注的下一件大事：气候友好型鸡蛋。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "This all seems random, but it's by design, part of what the $6.1 billion U.S. egg industry bets will be its next big thing: climate-friendly eggs.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text1/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "These eggs, which are making their debut now on shelves for as much as $8 a dozen, are still labeled organic and animal-friendly, but they're also from birds that live on farms using regenerative agriculture—special techniques to cultivate rich soils that can trap greenhouse gases.",
+      "zh": "这些鸡蛋刚刚上市，每打售价最高达8美元；它们仍被标为有机、动物友好，但还来自采用再生型农业的农场——这种特殊技术通过培育肥沃土壤来吸收温室气体。",
+      "vocab": [
+        {
+          "word": "regenerative",
+          "lemma": "regenerative",
+          "level": 8,
+          "meaning": "再生型",
+          "start": 183,
+          "end": 195
+        },
+        {
+          "word": "cultivate",
+          "lemma": "cultivate",
+          "level": 6,
+          "meaning": "培育",
+          "start": 230,
+          "end": 239
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "These eggs, which are making their debut now on shelves for as much as $8 a dozen, are still labeled organic and animal-friendly, but they're also from birds that live on farms using regenerative agriculture—special techniques to cultivate rich soils that can trap greenhouse gases.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text1/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "Such eggs could be marketed as helping to fight climate change.",
+      "zh": "因此，这类鸡蛋可以被宣传为有助于应对气候变化。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "Such eggs could be marketed as helping to fight climate change.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text1/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 3,
+      "en": "“I'm excited about our progress,” says Brown, who is adding more cover crops that draw worms and crickets for the chickens to eat.",
+      "zh": "布朗说：“我们的进展让我很兴奋。”他正在增加更多覆盖作物，以吸引蚯蚓和蟋蟀供鸡啄食。",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "“I'm excited about our progress,” says Brown, who is adding more cover crops that draw worms and crickets for the chickens to eat.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text1/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 3,
+      "en": "The birds' waste then fertilizes fields.",
+      "zh": "鸡的排泄物随后又为土地施肥。",
+      "vocab": [],
+      "discourse_function": "sequence",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "The birds' waste then fertilizes fields.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text1/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 3,
+      "en": "Such improvements “allow our hens to forage for higher-quality natural feed that will be good for the land, the hens, and the eggs that we supply to our customers.”",
+      "zh": "这些改进“让母鸡能够觅食质量更高的天然饲料，这对土地、母鸡以及我们供应给顾客的鸡蛋都有好处”。",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "Such improvements “allow our hens to forage for higher-quality natural feed that will be good for the land, the hens, and the eggs that we supply to our customers.”",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text1/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 4,
+      "en": "The egg industry's push is the first major test of whether animal products from regenerative farms can become the next premium offering.",
+      "zh": "鸡蛋行业的这次推动，是首次大规模检验再生型农场的动物产品能否成为下一类高端商品。",
+      "vocab": [
+        {
+          "word": "regenerative",
+          "lemma": "regenerative",
+          "level": 8,
+          "meaning": "再生型",
+          "start": 80,
+          "end": 92
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "The egg industry's push is the first major test of whether animal products from regenerative farms can become the next premium offering.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text1/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 4,
+      "en": "In barely more than a decade, organic eggs went from being dismissed as a niche product in natural foods stores to being sold at Walmart.",
+      "zh": "短短十多年里，有机鸡蛋从天然食品店里被轻视的小众商品，变成了沃尔玛也销售的产品。",
+      "vocab": [],
+      "discourse_function": "story",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "In barely more than a decade, organic eggs went from being dismissed as a niche product in natural foods stores to being sold at Walmart.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text1/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 4,
+      "en": "More recently there were similar doubts about probiotics and plant-based meats, but both have exploded into major supermarket categories.",
+      "zh": "更近些时候，人们也曾同样怀疑益生菌和植物肉，但两者后来都迅速成长为超市中的重要品类。",
+      "vocab": [],
+      "discourse_function": "compare",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "More recently there were similar doubts about probiotics and plant-based meats, but both have exploded into major supermarket categories.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text1/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 4,
+      "en": "If the sustainable-egg rollout is successful, it could open the floodgates for regenerative beef, broccoli, and beyond.",
+      "zh": "如果可持续鸡蛋推广成功，就可能为再生型牛肉、西兰花乃至更多产品打开闸门。",
+      "vocab": [
+        {
+          "word": "regenerative",
+          "lemma": "regenerative",
+          "level": 8,
+          "meaning": "再生型",
+          "start": 79,
+          "end": 91
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "If the sustainable-egg rollout is successful, it could open the floodgates for regenerative beef, broccoli, and beyond.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text1/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 5,
+      "en": "Regenerative products could be a hard sell, because the concept is tough to define quickly, says Julie Stanton, associate professor of agricultural economics at Pennsylvania State University Brandywine.",
+      "zh": "宾州州立大学布兰迪万校区农业经济学副教授朱莉·斯坦顿说，再生型产品可能不容易卖，因为这个概念很难迅速解释清楚。",
+      "vocab": [
+        {
+          "word": "Regenerative",
+          "lemma": "regenerative",
+          "level": 8,
+          "meaning": "再生型",
+          "start": 0,
+          "end": 12
+        }
+      ],
+      "discourse_function": "qualify",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "Regenerative products could be a hard sell, because the concept is tough to define quickly, says Julie Stanton, associate professor of agricultural economics at Pennsylvania State University Brandywine.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text1/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 5,
+      "en": "Such farming also brings minimal, if any, improvement to the food products, though some producers say their eggs have more protein.",
+      "zh": "这种农业方式对食品本身的改善也非常有限，甚至可能没有，尽管一些生产者声称鸡蛋含有更多蛋白质。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "Such farming also brings minimal, if any, improvement to the food products, though some producers say their eggs have more protein.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text1/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 6,
+      "en": "The industry is betting that the same consumers paying more for premium attributes such as free-range, non-GMO, and pasture-raised eggs will embrace sustainability.",
+      "zh": "行业押注，那些愿意为散养、非转基因、牧场饲养等高端属性多付钱的消费者，也会接受可持续性。",
+      "vocab": [
+        {
+          "word": "sustainability",
+          "lemma": "sustainability",
+          "level": 6,
+          "meaning": "可持续性",
+          "start": 149,
+          "end": 163
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "The industry is betting that the same consumers paying more for premium attributes such as free-range, non-GMO, and pasture-raised eggs will embrace sustainability.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text1/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 6,
+      "en": "Surveys show that younger generations are more concerned about climate change, and some of the success of plant-based meat can be chalked up to shoppers wanting to signal their desire to protect the environment.",
+      "zh": "调查显示，年轻一代更关注气候变化；植物肉的一部分成功，也可归因于消费者希望通过购买行为表达保护环境的愿望。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "Surveys show that younger generations are more concerned about climate change, and some of the success of plant-based meat can be chalked up to shoppers wanting to signal their desire to protect the environment.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text1/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 6,
+      "en": "Young adults “really care about the planet,” says John Brunnquell, president of Egg Innovations.",
+      "zh": "Egg Innovations公司总裁约翰·布伦奎尔说，年轻人“真的很关心这个星球”。",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "Young adults “really care about the planet,” says John Brunnquell, president of Egg Innovations.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text1/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 6,
+      "en": "“They are absolutely altering the food chain beyond what I think even they understand what they're doing.”",
+      "zh": "“他们确实正在改变食物链，改变的程度甚至超出了他们自己对所做之事的理解。”",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "“They are absolutely altering the food chain beyond what I think even they understand what they're doing.”",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-text1/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

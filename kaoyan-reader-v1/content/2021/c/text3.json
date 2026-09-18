@@ -1,0 +1,510 @@
+{
+  "year": 2021,
+  "section_type": "reading",
+  "article_id": "text3",
+  "source_sha256": "b29aa8ed12fc42ed09c28f9a330df5ea3704ffefe260ee8f97ff4d80af39da6f",
+  "source_pages": [
+    7,
+    8
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "12",
+  "article_context": "文章围绕微软收购Wunderlist和Sunrise展开，讨论大型科技公司通过小额收购吸纳人才乃至提前消灭潜在竞争者的争议，以及美国监管机构开始调查。",
+  "article": {
+    "year": 2021,
+    "section": "text3",
+    "title": "阅读 Text 3 · 科技巨头“小额收购”的竞争争议",
+    "background": "文章围绕微软收购Wunderlist和Sunrise展开，讨论大型科技公司通过小额收购吸纳人才乃至提前消灭潜在竞争者的争议，以及美国监管机构开始调查。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "When Microsoft bought task management app Wunderlist and mobile calendar Sunrise in 2015, it picked two newcomers that were attracting considerable buzz in Silicon Valley.",
+      "zh": "2015年微软收购任务管理应用Wunderlist和移动日历Sunrise时，选中的是两家在硅谷颇受关注的新秀。",
+      "vocab": [],
+      "discourse_function": "story",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "When Microsoft bought task management app Wunderlist and mobile calendar Sunrise in 2015, it picked two newcomers that were attracting considerable buzz in Silicon Valley.",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2021/c-text3/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Microsoft's own Office dominates the market for “productivity” software, but the start-ups represented a new wave of technology designed from the ground up for the smartphone world.",
+      "zh": "微软自己的Office主导“生产力”软件市场，但这两家初创公司代表了从一开始就为智能手机世界设计的新一代技术。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Microsoft's own Office dominates the market for “productivity” software, but the start-ups represented a new wave of technology designed from the ground up for the smartphone world.",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2021/c-text3/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 2,
+      "en": "Both apps, however, were later scrapped after Microsoft said it had used their best features in its own products.",
+      "zh": "然而，这两款应用后来都被停止，因为微软称已把它们最好的功能用于自己的产品。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Both apps, however, were later scrapped after Microsoft said it had used their best features in its own products.",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2021/c-text3/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "Their teams of engineers stayed on, making them two of the many “acqui-hires” that the biggest companies have used to feed their great hunger for tech talent.",
+      "zh": "但工程师团队留了下来，这使它们成为大型公司为满足技术人才需求而进行的众多“收购式招聘”中的两个案例。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Their teams of engineers stayed on, making them two of the many “acqui-hires” that the biggest companies have used to feed their great hunger for tech talent.",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2021/c-text3/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 3,
+      "en": "To Microsoft's critics, the fates of Wunderlist and Sunrise are examples of a remorseless drive by Big Tech to chew up any innovative companies that lie in their path.",
+      "zh": "在微软的批评者看来，Wunderlist和Sunrise的命运体现了科技巨头无情吞噬挡在路上的创新公司的冲动。",
+      "vocab": [
+        {
+          "word": "remorseless",
+          "lemma": "remorseless",
+          "level": 8,
+          "meaning": "无情",
+          "start": 78,
+          "end": 89
+        }
+      ],
+      "discourse_function": "warning",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "To Microsoft's critics, the fates of Wunderlist and Sunrise are examples of a remorseless drive by Big Tech to chew up any innovative companies that lie in their path.",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2021/c-text3/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 3,
+      "en": "“They bought the seedlings and closed them down,” complained Paul Arnold, a partner at San Francisco-based Switch Ventures, putting an end to businesses that might one day turn into competitors.",
+      "zh": "旧金山Switch Ventures合伙人保罗·阿诺德抱怨说：“他们买下幼苗，然后把它们关掉。”这等于终结了那些有朝一日可能成长为竞争者的企业。",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "“They bought the seedlings and closed them down,” complained Paul Arnold, a partner at San Francisco-based Switch Ventures, putting an end to businesses that might one day turn into competitors.",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2021/c-text3/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 3,
+      "en": "Microsoft declined to comment.",
+      "zh": "微软拒绝置评。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "Microsoft declined to comment.",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2021/c-text3/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 4,
+      "en": "Like other start-up investors, Mr Arnold's own business often depends on selling start-ups to larger tech companies, though he admits to mixed feelings about the result.",
+      "zh": "和其他初创投资者一样，阿诺德自己的生意也常依赖把初创公司卖给更大的科技企业，不过他承认自己对此感受复杂。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "Like other start-up investors, Mr Arnold's own business often depends on selling start-ups to larger tech companies, though he admits to mixed feelings about the result.",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2021/c-text3/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 4,
+      "en": "“I think these things are good for me, if I put my selfish hat on.",
+      "zh": "“如果我只从自己的利益出发，我认为这些事对我是有好处的。",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "“I think these things are good for me, if I put my selfish hat on.",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2021/c-text3/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 4,
+      "en": "But are they good for the American economy?",
+      "zh": "但它们对美国经济有好处吗？",
+      "vocab": [],
+      "discourse_function": "ask",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "But are they good for the American economy?",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2021/c-text3/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 4,
+      "en": "I don't know.”",
+      "zh": "我不知道。”",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "I don't know.”",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2021/c-text3/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 5,
+      "en": "The U.S. Federal Trade Commission says it wants to find the answer to that question.",
+      "zh": "美国联邦贸易委员会表示，希望找到这个问题的答案。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "The U.S. Federal Trade Commission says it wants to find the answer to that question.",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2021/c-text3/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 5,
+      "en": "This week, it asked the five most valuable U.S. tech companies for information about their many small acquisitions over the past decade.",
+      "zh": "本周，该机构要求美国市值最高的五家科技公司提供过去十年众多小额收购的信息。",
+      "vocab": [
+        {
+          "word": "acquisitions",
+          "lemma": "acquisition",
+          "level": 6,
+          "meaning": "收购",
+          "start": 102,
+          "end": 114
+        }
+      ],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "This week, it asked the five most valuable U.S. tech companies for information about their many small acquisitions over the past decade.",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2021/c-text3/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 5,
+      "en": "Although only a research project at this stage, the request has raised the prospect of regulators wading into early-stage tech markets that until now have been beyond their reach.",
+      "zh": "尽管目前只是研究项目，这项要求已经使监管机构未来介入此前难以触及的早期科技市场成为可能。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "Although only a research project at this stage, the request has raised the prospect of regulators wading into early-stage tech markets that until now have been beyond their reach.",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2021/c-text3/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 6,
+      "en": "Given their combined market value of more than $5.5 trillion, rifling through such small deals—many of them much less prominent than Wunderlist and Sunrise—might seem beside the point.",
+      "zh": "考虑到这五家公司合计市值超过5.5万亿美元，翻查这类小额交易——其中许多远不如Wunderlist和Sunrise知名——似乎有些抓错重点。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "Given their combined market value of more than $5.5 trillion, rifling through such small deals—many of them much less prominent than Wunderlist and Sunrise—might seem beside the point.",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2021/c-text3/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 6,
+      "en": "Between them, the five biggest tech companies have spent an average of only $3.4 billion a year on sub-$1 billion acquisitions over the past five years—a drop in the ocean compared with their massive financial reserves, and the more than $130 billion of venture capital that was invested in the U.S. last year.",
+      "zh": "过去五年，这五大科技公司每年用于10亿美元以下收购的平均支出只有34亿美元；与其庞大资金储备及去年美国超过1300亿美元的风险投资相比，这只是沧海一粟。",
+      "vocab": [
+        {
+          "word": "acquisitions",
+          "lemma": "acquisition",
+          "level": 6,
+          "meaning": "收购",
+          "start": 114,
+          "end": 126
+        }
+      ],
+      "discourse_function": "statistic",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "Between them, the five biggest tech companies have spent an average of only $3.4 billion a year on sub-$1 billion acquisitions over the past five years—a drop in the ocean compared with their massive financial reserves, and the more than $130 billion of venture capital that was invested in the U.S. last year.",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2021/c-text3/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 7,
+      "en": "However, critics say the big companies use such deals to buy their most threatening potential competitors before their businesses have a chance to gain momentum, in some cases as part of a “buy and kill” tactic to simply close them down.",
+      "zh": "然而批评者称，大公司会利用这类交易，在最具威胁的潜在竞争者尚未发展起来之前就将其收购；有时这甚至属于“买下并杀死”的策略，目的就是直接关闭它们。",
+      "vocab": [],
+      "discourse_function": "warning",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "However, critics say the big companies use such deals to buy their most threatening potential competitors before their businesses have a chance to gain momentum, in some cases as part of a “buy and kill” tactic to simply close them down.",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2021/c-text3/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,834 @@
+{
+  "year": 2022,
+  "section_type": "part_b",
+  "article_id": "partb",
+  "source_sha256": "6905f827ee76eb3d4165c7aaeb09af9387c60addbd5af8e959d5e8a9ddcfa7f8",
+  "source_pages": [
+    11,
+    12
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "05",
+  "article_context": "文章提供恢复运动的五条策略：降低起点、倾听身体、建立习惯、先练动作、与他人一起运动，在避免受伤和倦怠的同时逐步恢复体能。",
+  "article": {
+    "year": 2022,
+    "section": "partb",
+    "title": "阅读 Part B · 中断后如何安全恢复运动",
+    "background": "文章提供恢复运动的五条策略：降低起点、倾听身体、建立习惯、先练动作、与他人一起运动，在避免受伤和倦怠的同时逐步恢复体能。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "Getting back into exercise after a break can be a challenge in the best of times, but with gyms and in-person exercise classes off-limits to many people these days, it can be tricky to know where to start.",
+      "zh": "中断一段时间后重新运动，即使在正常时期也有挑战；如今许多人又无法去健身房或参加线下课程，更容易不知道从哪里开始。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "Getting back into exercise after a break can be a challenge in the best of times, but with gyms and in-person exercise classes off-limits to many people these days, it can be tricky to know where to start.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-partb/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "And it's important to get the right dose of activity.",
+      "zh": "而且，掌握合适的运动量非常重要。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "And it's important to get the right dose of activity.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-partb/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "“Too much too soon either results in injury or burnout,” says Mary Yoke, PhD, a faculty member in the kinesiology department at Indiana University in Bloomington.",
+      "zh": "印第安纳大学布卢明顿分校运动机能学教师玛丽·约克说：“太多、太快，只会导致受伤或倦怠。”",
+      "vocab": [
+        {
+          "word": "burnout",
+          "lemma": "burnout",
+          "level": 7,
+          "meaning": "倦怠",
+          "start": 47,
+          "end": 54
+        }
+      ],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "“Too much too soon either results in injury or burnout,” says Mary Yoke, PhD, a faculty member in the kinesiology department at Indiana University in Bloomington.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-partb/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 1,
+      "en": "The following simple strategies will help you return to exercise safely after a break.",
+      "zh": "下面这些简单策略能帮助你在中断后安全恢复运动。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "The following simple strategies will help you return to exercise safely after a break.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-partb/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "Don't try to go back to what you were doing before your break.",
+      "zh": "不要一开始就恢复到中断前的运动量。",
+      "vocab": [],
+      "discourse_function": "warning",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Don't try to go back to what you were doing before your break.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-partb/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "If you were walking 3 miles a day, playing 18 holes of golf three times a week, or lifting 10-pound dumbbells for three sets of 10 reps, reduce activity to half a mile every other day, or nine holes of golf once a week with short walks on other days, or use 5-pound dumbbells for one set of 10 reps.",
+      "zh": "如果以前每天走3英里、每周三次打18洞高尔夫，或用10磅哑铃做三组每组10次，那么现在可以改为隔天走半英里、每周一次打9洞并在其他日子短走，或用5磅哑铃做一组10次。",
+      "vocab": [],
+      "discourse_function": "example",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "If you were walking 3 miles a day, playing 18 holes of golf three times a week, or lifting 10-pound dumbbells for three sets of 10 reps, reduce activity to half a mile every other day, or nine holes of golf once a week with short walks on other days, or use 5-pound dumbbells for one set of 10 reps.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-partb/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "Increase time, distance, and intensity gradually.",
+      "zh": "时间、距离和强度都要逐步增加。",
+      "vocab": [],
+      "discourse_function": "encourage",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "Increase time, distance, and intensity gradually.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-partb/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 2,
+      "en": "“This isn't something you can do overnight,” says Keri L. Denay, MD, lead author of a recent American College of Sports Medicine advisory that encourages Americans to not overlook the benefits of activity during the pandemic.",
+      "zh": "美国运动医学会近期建议的主要作者克里·德奈医生说：“这不是一夜之间能做到的事。”该建议提醒美国人不要忽视疫情期间运动的好处。",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "“This isn't something you can do overnight,” says Keri L. Denay, MD, lead author of a recent American College of Sports Medicine advisory that encourages Americans to not overlook the benefits of activity during the pandemic.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-partb/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 2,
+      "en": "But you'll reap benefits such as less anxiety and improved sleep right away.",
+      "zh": "不过，你很快就能收获焦虑减少、睡眠改善等好处。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "But you'll reap benefits such as less anxiety and improved sleep right away.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-partb/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 3,
+      "en": "If you're breathing too hard to talk in complete sentences, back off.",
+      "zh": "如果喘得连完整句子都说不出来，就降低强度。",
+      "vocab": [],
+      "discourse_function": "warning",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "If you're breathing too hard to talk in complete sentences, back off.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-partb/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 3,
+      "en": "If you feel good, go a little longer or faster.",
+      "zh": "如果感觉不错，可以稍微延长时间或加快速度。",
+      "vocab": [],
+      "discourse_function": "encourage",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "If you feel good, go a little longer or faster.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-partb/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 3,
+      "en": "Feeling wiped out after a session?",
+      "zh": "一次训练后筋疲力尽？",
+      "vocab": [],
+      "discourse_function": "ask",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "Feeling wiped out after a session?",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-partb/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 3,
+      "en": "Go easier next time.",
+      "zh": "那下次就轻松一点。",
+      "vocab": [],
+      "discourse_function": "resolve",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "Go easier next time.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-partb/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 3,
+      "en": "And stay alert to serious symptoms, such as chest pain or pressure, severe shortness of breath or dizziness, or faintness, and seek medical attention immediately.",
+      "zh": "同时警惕胸痛或压迫感、严重呼吸困难、眩晕或昏厥等严重症状，并立即就医。",
+      "vocab": [],
+      "discourse_function": "warning",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "And stay alert to serious symptoms, such as chest pain or pressure, severe shortness of breath or dizziness, or faintness, and seek medical attention immediately.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-partb/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 4,
+      "en": "Consistency is the key to getting stronger and building endurance and stamina.",
+      "zh": "坚持是增强力量、建立耐力和体能的关键。",
+      "vocab": [
+        {
+          "word": "stamina",
+          "lemma": "stamina",
+          "level": 7,
+          "meaning": "耐力",
+          "start": 70,
+          "end": 77
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "Consistency is the key to getting stronger and building endurance and stamina.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-partb/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 4,
+      "en": "Ten minutes of activity per day is a good start, says Marcus Jackovitz, DPT, a physical therapist at the University of Miami Hospital.",
+      "zh": "迈阿密大学医院物理治疗师马库斯·杰科维茨说，每天活动10分钟就是很好的起点。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "Ten minutes of activity per day is a good start, says Marcus Jackovitz, DPT, a physical therapist at the University of Miami Hospital.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-partb/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 4,
+      "en": "All the experts we spoke with highly recommend walking because it's the easiest, most accessible form of exercise.",
+      "zh": "我们采访的所有专家都强烈推荐步行，因为它是最简单、最容易做到的运动形式。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "All the experts we spoke with highly recommend walking because it's the easiest, most accessible form of exercise.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-partb/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 4,
+      "en": "Although it can be a workout on its own, if your goal is to get back to Zumba classes, tennis, cycling, or any other activity, walking is also a great first step.",
+      "zh": "步行本身可以作为锻炼；如果你的目标是恢复尊巴、网球、骑行或其他运动，它也是极好的第一步。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "Although it can be a workout on its own, if your goal is to get back to Zumba classes, tennis, cycling, or any other activity, walking is also a great first step.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-partb/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 5,
+      "en": "Even if you can't yet do a favorite activity, you can practice the moves.",
+      "zh": "即使暂时不能真正进行最喜欢的运动，也可以先练习动作。",
+      "vocab": [],
+      "discourse_function": "encourage",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "Even if you can't yet do a favorite activity, you can practice the moves.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-partb/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "paragraph": 5,
+      "en": "With or without a club or racket, swing like you're hitting the ball.",
+      "zh": "无论手里有没有球杆或球拍，都可以模仿击球动作。",
+      "vocab": [],
+      "discourse_function": "example",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s20-01",
+          "text": "With or without a club or racket, swing like you're hitting the ball.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-partb/s20-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "paragraph": 5,
+      "en": "Paddle like you're in a kayak or canoe.",
+      "zh": "像坐在皮划艇或独木舟里一样练习划桨。",
+      "vocab": [],
+      "discourse_function": "sequence",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s21-01",
+          "text": "Paddle like you're in a kayak or canoe.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-partb/s21-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "paragraph": 5,
+      "en": "Mimic your favorite swimming strokes.",
+      "zh": "模仿你最喜欢的游泳动作。",
+      "vocab": [
+        {
+          "word": "Mimic",
+          "lemma": "mimic",
+          "level": 6,
+          "meaning": "模仿",
+          "start": 0,
+          "end": 5
+        }
+      ],
+      "discourse_function": "example",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s22-01",
+          "text": "Mimic your favorite swimming strokes.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-partb/s22-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "paragraph": 5,
+      "en": "The action will remind you of the joy the activity brought you and prime your muscles for when you can get out there again.",
+      "zh": "这些动作会唤起运动曾带给你的快乐，也会提前让肌肉为重新上场做好准备。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s23-01",
+          "text": "The action will remind you of the joy the activity brought you and prime your muscles for when you can get out there again.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-partb/s23-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "paragraph": 6,
+      "en": "Exercising with others “can keep you accountable and make it more fun, so you're more likely to do it again,” Jackovitz says.",
+      "zh": "杰科维茨说，与别人一起锻炼“能让你更有责任感，也更有趣，因此更可能再次去做”。",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s24-01",
+          "text": "Exercising with others “can keep you accountable and make it more fun, so you're more likely to do it again,” Jackovitz says.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-partb/s24-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "paragraph": 6,
+      "en": "You can do activities such as golf and tennis or take a walk with others and still be socially distant.",
+      "zh": "你可以和别人一起打高尔夫、网球或散步，同时仍保持社交距离。",
+      "vocab": [],
+      "discourse_function": "example",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s25-01",
+          "text": "You can do activities such as golf and tennis or take a walk with others and still be socially distant.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-partb/s25-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "paragraph": 6,
+      "en": "But when you can't connect in person, consider using technology.",
+      "zh": "如果无法线下见面，可以考虑借助技术。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s26-01",
+          "text": "But when you can't connect in person, consider using technology.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-partb/s26-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "paragraph": 6,
+      "en": "Chat on the phone with a friend while you walk around your neighborhood.",
+      "zh": "在社区散步时和朋友打电话聊天。",
+      "vocab": [],
+      "discourse_function": "encourage",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s27-01",
+          "text": "Chat on the phone with a friend while you walk around your neighborhood.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-partb/s27-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "paragraph": 6,
+      "en": "FaceTime with a relative as you strength train or stretch at home.",
+      "zh": "在家做力量训练或拉伸时，可以和亲人视频通话。",
+      "vocab": [],
+      "discourse_function": "encourage",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s28-01",
+          "text": "FaceTime with a relative as you strength train or stretch at home.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-partb/s28-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "paragraph": 6,
+      "en": "You can also join a livestream or on-demand exercise class.",
+      "zh": "你还可以参加直播或点播健身课程。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s29-01",
+          "text": "You can also join a livestream or on-demand exercise class.",
+          "speaker_role": "narrator",
+          "actor_id": "05",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2022/c-partb/s29-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

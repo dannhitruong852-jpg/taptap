@@ -1,0 +1,212 @@
+{
+  "year": 2021,
+  "section_type": "translation",
+  "article_id": "translation",
+  "source_sha256": "b29aa8ed12fc42ed09c28f9a330df5ea3704ffefe260ee8f97ff4d80af39da6f",
+  "source_pages": [
+    13
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "15",
+  "article_context": "文章介绍研究发现：与陌生人交谈往往会改善情绪与归属感，而人们之所以回避，常是误以为陌生人不愿交流。",
+  "article": {
+    "year": 2021,
+    "section": "translation",
+    "title": "翻译 · 陌生人的短暂交流也能提升归属感",
+    "background": "文章介绍研究发现：与陌生人交谈往往会改善情绪与归属感，而人们之所以回避，常是误以为陌生人不愿交流。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "We tend to think that friends and family members are our biggest sources of connection, laughter, and warmth.",
+      "zh": "我们往往认为，朋友和家人是我们获得联结、欢笑与温暖的最大来源。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "We tend to think that friends and family members are our biggest sources of connection, laughter, and warmth.",
+          "speaker_role": "narrator",
+          "actor_id": "15",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2021/c-translation/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "While that may well be true, researchers have also recently found that interacting with strangers actually brings a boost in mood and feelings of belonging that we didn't expect.",
+      "zh": "这很可能确实如此，但研究人员最近还发现，与陌生人互动实际上会带来我们未曾预料的情绪改善和归属感提升。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "While that may well be true, researchers have also recently found that interacting with strangers actually brings a boost in mood and feelings of belonging that we didn't expect.",
+          "speaker_role": "narrator",
+          "actor_id": "15",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2021/c-translation/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 2,
+      "en": "In one series of studies, researchers instructed Chicago-area commuters using public transportation to strike up a conversation with someone near them.",
+      "zh": "在一系列研究中，研究人员让芝加哥地区乘坐公共交通的通勤者主动与身边的人交谈。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "In one series of studies, researchers instructed Chicago-area commuters using public transportation to strike up a conversation with someone near them.",
+          "speaker_role": "narrator",
+          "actor_id": "15",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2021/c-translation/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "On average, participants who followed this instruction felt better than those who had been told to stand or sit in silence.",
+      "zh": "平均而言，照做的参与者比那些被要求默默站着或坐着的人感觉更好。",
+      "vocab": [],
+      "discourse_function": "compare",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "On average, participants who followed this instruction felt better than those who had been told to stand or sit in silence.",
+          "speaker_role": "narrator",
+          "actor_id": "15",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2021/c-translation/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "The researchers also argued that when we shy away from casual interactions with strangers, it is often due to a misplaced anxiety that they might not want to talk to us.",
+      "zh": "研究人员还认为，我们之所以回避与陌生人的随意交流，往往源于一种错位的焦虑：担心对方不愿和我们说话。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "The researchers also argued that when we shy away from casual interactions with strangers, it is often due to a misplaced anxiety that they might not want to talk to us.",
+          "speaker_role": "narrator",
+          "actor_id": "15",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2021/c-translation/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "Much of the time, however, this belief is false.",
+      "zh": "然而很多时候，这种想法并不正确。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "Much of the time, however, this belief is false.",
+          "speaker_role": "narrator",
+          "actor_id": "15",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2021/c-translation/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "As it turns out, many people are actually perfectly willing to talk—and may even be flattered to receive your attention.",
+      "zh": "事实证明，许多人其实非常愿意交谈，甚至可能因为得到你的关注而感到受宠若惊。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "As it turns out, many people are actually perfectly willing to talk—and may even be flattered to receive your attention.",
+          "speaker_role": "narrator",
+          "actor_id": "15",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2021/c-translation/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}
