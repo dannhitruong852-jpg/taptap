@@ -1,0 +1,66 @@
+name: C Mode Rebuild 2017
+
+on:
+  push:
+    branches:
+      - c-mode-v2-2013-2018-production
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Restore reviewed 2017 rebuild script
+        shell: bash
+        run: |
+          base64 -d content-pipeline/rebuild_2017_source.py.gz.b64 | gzip -d > /tmp/rebuild_2017_source.py
+          python -m py_compile /tmp/rebuild_2017_source.py
+      - name: Rebuild complete 2017 canonical source
+        run: python /tmp/rebuild_2017_source.py .
+      - name: Compile canonical 2017 content
+        run: python content-pipeline/build_curated_year.py --year 2017
+      - name: Verify 2017 build
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('.')
+          expected=['cloze','text1','text2','text3','text4','partb','translation']
+          base=root/'kaoyan-reader-v1/content/2017/c'
+          docs=[]
+          for aid in expected:
+              p=base/f'{aid}.json'
+              assert p.exists(), p
+              d=json.loads(p.read_text(encoding='utf-8'))
+              assert d['article_id']==aid
+              assert d['source_sha256']=='88dc4ff8e9faa7bfca02a6361968200aec269c705a39bb66b7791fea95403aa4'
+              assert d['sentences']
+              assert all(s['en'].strip() and s['zh'].strip() for s in d['sentences'])
+              docs.append(d)
+          assert [d['primary_actor_id'] for d in docs]==['09','10','11','12','13','14','15']
+          assert 'a family-owned firm' in (base/'partb.json').read_text(encoding='utf-8')
+          assert 'Parents, he says, can get a lot out of using their devices to speak to a friend or get some work out of the way.' in (base/'text2.json').read_text(encoding='utf-8')
+          print('2017 verification: ok')
+          print('sentences:', {d['article_id']:len(d['sentences']) for d in docs})
+          PY
+      - name: Commit rebuilt 2017 source and compiled content
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content-pipeline/curated/2017.json.gz.b64.part* content-pipeline/voice_profiles/2017.json content-pipeline/direction/2017.json reports/extraction/2017.json kaoyan-reader-v1/content/2017 kaoyan-reader-v1/content/catalog.json
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "stage: complete rebuilt 2017 canonical source"
+            git push origin HEAD:c-mode-v2-2013-2018-production
+          fi

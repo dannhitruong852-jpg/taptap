@@ -1,0 +1,112 @@
+{
+  "year": 2015,
+  "article": {
+    "id": "translation",
+    "section_type": "translation",
+    "title": "翻译 · 为什么熟悉的路程感觉更短",
+    "pages": [
+      13
+    ],
+    "actor": "02",
+    "accent": "en-US",
+    "context": "解释“熟路效应”：熟悉路线需要的注意更少，事后记忆也更淡，因此人们会低估实际行程时间。",
+    "domain": "cognitive psychology / attention / time perception",
+    "rows": [
+      [
+        1,
+        "Think about driving a route that's very familiar.",
+        "想一想驾车走一条你非常熟悉的路线。",
+        "advance",
+        []
+      ],
+      [
+        1,
+        "It could be your commute to work, a trip into town or the way home.",
+        "它可能是你上下班的通勤路线、进城的路，或是回家的路。",
+        "example",
+        []
+      ],
+      [
+        1,
+        "Whichever it is, you know every twist and turn like the back of your hand.",
+        "无论是哪一条，你都对其中每一个弯道和转折了如指掌。",
+        "explain",
+        []
+      ],
+      [
+        1,
+        "On these sorts of trips it's easy to lose concentration on the driving and pay little attention to the passing scenery.",
+        "在这类行程中，人很容易不再专注于驾驶，也很少留意沿途掠过的景色。",
+        "explain",
+        []
+      ],
+      [
+        1,
+        "The consequence is that you perceive that the trip has taken less time than it actually has.",
+        "结果就是，你会觉得这段行程花的时间比实际所用时间更短。",
+        "conclude",
+        []
+      ],
+      [
+        2,
+        "This is the well-travelled road effect: People tend to underestimate the time it takes to travel a familiar route.",
+        "这就是“熟路效应”：人们往往会低估走完一条熟悉路线所需要的时间。",
+        "explain",
+        []
+      ],
+      [
+        3,
+        "The effect is caused by the way we allocate our attention.",
+        "这种效应源于我们分配注意力的方式。",
+        "advance",
+        []
+      ],
+      [
+        3,
+        "When we travel down a well-known route, because we don't have to concentrate much, time seems to flow more quickly.",
+        "当我们沿着熟悉的路线行进时，由于不必投入太多注意力，时间似乎流逝得更快。",
+        "explain",
+        []
+      ],
+      [
+        3,
+        "And afterwards, when we come to think back on it, we can't remember the journey well because we didn't pay much attention to it.",
+        "而事后回想时，由于当时没有投入多少注意，我们也无法清楚记住这段旅程。",
+        "explain",
+        []
+      ],
+      [
+        3,
+        "So we assume it was shorter.",
+        "于是，我们便认为它所花的时间更短。",
+        "conclude",
+        []
+      ]
+    ],
+    "author_stance": "analytical explanatory",
+    "narrativity": "medium",
+    "editorial_status": "reviewed_candidate",
+    "formality": "medium-high",
+    "humor_level": "none",
+    "rationality_emotionality": "rational",
+    "baseline_mood": "calm natural",
+    "preferred_age_impression": "adult"
+  },
+  "qa": {
+    "review_schema_version": "c-mode-v2-1",
+    "source_pdf": "2015年考研英语二真题（可复制搜索查词）.pdf",
+    "source_sha256": "9a1919b936cade4ea5b1567aa6102b7cb233d54c9f480795d100ce2e70f924ae",
+    "source_scope_verified": true,
+    "scope_exclusions_reviewed": true,
+    "text_fidelity_reviewed": true,
+    "translation_alignment_reviewed": true,
+    "sentence_alignment_reviewed": true,
+    "sentence_count": 10,
+    "expected_sentences": 10,
+    "actual_sentences": 10,
+    "status": "reviewed_candidate",
+    "review_method": "visual PDF review plus curated sentence-level manuscript",
+    "unresolved_sections": [],
+    "curated_payload_sha256": "976a0a60fcda711af2a5f43e0eebf8da25b249ccee8891bd1e1049766cf2012c"
+  }
+}

@@ -64,6 +64,52 @@ def _validate_review_evidence(year, full_id, qa, errors):
             errors.append(f'{full_id}: review evidence {flag} must be true')
 
 
+def _load_discourse_overrides(root, year, errors):
+    path=Path(root)/f'content-pipeline/curated/discourse-overrides/{year}.json'
+    if not path.is_file():
+        return {}
+    try:
+        document=_read_json(path)
+    except Exception as exc:
+        errors.append(f'year {year}: invalid discourse override sidecar: {exc}')
+        return {}
+    if int(document.get('year',-1)) != int(year):
+        errors.append(f'year {year}: discourse override year mismatch')
+        return {}
+    result={}
+    for item in document.get('overrides') or []:
+        article=item.get('article_id')
+        sentence_id=item.get('sentence_id')
+        before=item.get('from')
+        after=item.get('to')
+        if not article or not sentence_id or before is None or after is None or not item.get('reason'):
+            errors.append(f'year {year}: malformed discourse override entry')
+            continue
+        canonical_after=_canonical(after)
+        if canonical_after not in CANONICAL_DISCOURSE:
+            errors.append(f'{year}-{article}:{sentence_id}: unknown discourse override target {after}')
+            continue
+        key=(article,sentence_id)
+        if key in result:
+            errors.append(f'{year}-{article}:{sentence_id}: duplicate discourse override')
+            continue
+        result[key]=(before,after)
+    return result
+
+
+def _effective_candidate_discourse(year, article, sentence_id, raw_label, overrides, errors):
+    override=overrides.get((article,sentence_id))
+    if override is None:
+        return _canonical(raw_label)
+    before,after=override
+    if raw_label != before:
+        errors.append(
+            f'{year}-{article}:{sentence_id}: discourse override expected {before}, found {raw_label}'
+        )
+        return _canonical(raw_label)
+    return _canonical(after)
+
+
 def _validate_mapping(article_id, sentences, article_mapping, errors):
     sentence_by_id={sentence['id']:sentence for sentence in sentences}
     for sentence_id, mappings in article_mapping.items():
@@ -109,7 +155,10 @@ def validate_content_quality(manifest, catalog, root):
 
     bilingual_by_year={}
     voice_by_year={}
+    discourse_overrides_by_year={}
     for year in sorted(years):
+        discourse_overrides_by_year[year]=_load_discourse_overrides(root,year,errors)
+
         bilingual_path=root/f'kaoyan-reader-v1/content/{year}/bilingual-highlights.json'
         if not bilingual_path.is_file():
             errors.append(f'year {year}: missing bilingual-highlights.json')
@@ -173,19 +222,24 @@ def validate_content_quality(manifest, catalog, root):
         sentences=compiled.get('sentences') or []
         if len(rows) != len(sentences):
             errors.append(f'{full_id}: candidate/compiled sentence count mismatch')
+        effective_labels=[]
+        overrides=discourse_overrides_by_year.get(year,{})
         for index,(row,sentence) in enumerate(zip(rows,sentences),1):
             expected_en=row[1].replace('|',''); expected_zh=row[2]
             if sentence.get('en') != expected_en or sentence.get('zh') != expected_zh:
                 errors.append(f'{full_id}:s{index:02d}: candidate/compiled text mismatch')
-            expected_discourse=_canonical(row[3])
+            sentence_id=f's{index:02d}'
+            expected_discourse=_effective_candidate_discourse(
+                year,article,sentence_id,row[3],overrides,errors
+            )
+            effective_labels.append(expected_discourse)
             if expected_discourse not in CANONICAL_DISCOURSE:
-                errors.append(f'{full_id}:s{index:02d}: unknown discourse {row[3]}')
+                errors.append(f'{full_id}:{sentence_id}: unknown discourse {row[3]}')
             elif sentence.get('discourse_function') != expected_discourse:
-                errors.append(f'{full_id}:s{index:02d}: compiled discourse mismatch')
+                errors.append(f'{full_id}:{sentence_id}: compiled discourse mismatch')
 
-        canonical_labels=[_canonical(row[3]) for row in rows]
-        for i in range(max(0,len(canonical_labels)-2)):
-            window=canonical_labels[i:i+3]
+        for i in range(max(0,len(effective_labels)-2)):
+            window=effective_labels[i:i+3]
             if all(label in LOW_DENSITY_DISCOURSE for label in window):
                 errors.append(f'{full_id}: sentences {i+1}-{i+3} low-intensity discourse density violation')
 

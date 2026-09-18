@@ -25,6 +25,13 @@ class WorkflowContractTests(unittest.TestCase):
         self.assertIn('pages build and deployment', text)
         self.assertIn("data['state']='published'", text)
 
+    def test_release_guard_uses_artifact_relative_paths(self):
+        text = WORKFLOW.read_text()
+        self.assertIn("glob(f'**/audio/{year}/v4')", text)
+        self.assertIn("glob(f'**/reports/c-v4-{year}-merge.json')", text)
+        self.assertNotIn("glob(f'**/kaoyan-reader-v1/audio/{year}/v4')", text)
+        self.assertNotIn("glob(f'**/kaoyan-reader-v1/reports/c-v4-{year}-merge.json')", text)
+
     def test_ci_runs_after_merge_to_canonical_branch(self):
         text = CI_WORKFLOW.read_text()
         self.assertIn('- c-mode-production-v2', text)

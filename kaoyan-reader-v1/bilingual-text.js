@@ -42,7 +42,7 @@ function renderChineseSlice(sentence,ranges,start,end,{legacyTokens=false}={}){
     const active=clipped.filter(r=>r.start<=left&&r.end>=right);
     const raw=sentence.zh.slice(left,right);
     const content=legacyTokens
-      ? [...raw].map(c=>/\s/.test(c)?escapeHtml(c):`<span class="read-token">${escapeHtml(c)}</span>`).join('')
+      ? [...raw].map((c,index)=>/\s/.test(c)?escapeHtml(c):`<span class="read-token" data-zh-start="${left+index}" data-zh-end="${left+index+1}">${escapeHtml(c)}</span>`).join('')
       : escapeHtml(raw);
     html+=active.length?`<strong class="vocab zh-vocab" data-pair="${active.map(r=>r.pair).join(' ')}">${content}</strong>`:content;
   }
@@ -65,7 +65,7 @@ export function renderChinese(sentence, pairs = [], semanticGroups = []) {
   if(validSemanticGroups(sentence,semanticGroups)){
     return semanticGroups.map((group,index)=>{
       const content=renderChineseSlice(sentence,ranges,group.zh_char_start,group.zh_char_end);
-      return `<span class="semantic-group" data-semantic-index="${index}" data-en-word-start="${group.en_word_start}" data-en-word-end="${group.en_word_end}">${content}</span>`;
+      return `<span class="semantic-group" data-semantic-index="${index}" data-en-word-start="${group.en_word_start}" data-en-word-end="${group.en_word_end}" data-zh-start="${group.zh_char_start}" data-zh-end="${group.zh_char_end}">${content}</span>`;
     }).join('');
   }
   return renderChineseSlice(sentence,ranges,0,sentence.zh.length,{legacyTokens:true});

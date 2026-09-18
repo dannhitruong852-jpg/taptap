@@ -6,10 +6,10 @@
   <meta name="theme-color" content="#f5f1e8">
   <meta name="description" content="2002 考研英语 C 模式双语精读：预生成音频、逐句朗读、零运行时 TTS。">
   <title>2002 · 英语真题精读</title>
-  <link rel="stylesheet" href="./styles.css">
-  <link rel="stylesheet" href="./catalog.css">
-  <link rel="stylesheet" href="./readalong.css">
-  <link rel="stylesheet" href="./reader-controls.css">
+  <link rel="stylesheet" href="./styles.css?v=phrase-study-20260918-v2">
+  <link rel="stylesheet" href="./catalog.css?v=phrase-study-20260918-v2">
+  <link rel="stylesheet" href="./readalong.css?v=phrase-study-20260918-v2">
+  <link rel="stylesheet" href="./reader-controls.css?v=phrase-study-20260918-v2">
   <style>
     .transport-row{left:94px;right:10px;grid-template-columns:46px 56px 46px 68px;gap:12px;justify-content:end;align-items:center}
     .article-nav{width:46px;height:46px}
@@ -41,10 +41,13 @@
       </div>
       <div class="reader-settings">
         <span>先读英文，轻点查译文</span>
-        <button id="toggle-vocab" class="vocab-toggle" type="button" role="switch" aria-checked="true" aria-label="6级及以上难词双语标注"><span>难词 6+</span><i aria-hidden="true"></i></button>
+        <div class="reader-setting-actions">
+          <button id="phrase-book-open" class="phrase-book-open" type="button" aria-haspopup="dialog">2002 词群本</button>
+          <button id="toggle-vocab" class="vocab-toggle" type="button" role="switch" aria-checked="true" aria-label="6级及以上难词双语标注"><span>难词 6+</span><i aria-hidden="true"></i></button>
+        </div>
       </div>
     </header>
-    <section class="howto" aria-label="使用方法"><span>轻点句框查译文</span><b>·</b><span>长按文字复制</span><b>·</b><span>点序号播放</span></section>
+    <section class="howto" aria-label="使用方法"><span>轻点句框查译文</span><b>·</b><span>双击重播</span><b>·</b><span>长按选词群并标记</span></section>
     <section id="sentence-list" class="sentence-list" aria-label="2002 Text 1 双语精读"></section>
     <footer class="footer-note">只读真题正文，不含题目选项和作文。词汇使用本项目1—9级学习标尺，6级及以上突出显示，并非官方词汇分级。音频为预生成候选版，播放时不调用TTS。<a href="./THIRD_PARTY_AUDIO_NOTICE.txt" target="_blank" rel="noopener">音频来源与许可</a></footer>
   </main>
@@ -70,8 +73,31 @@
       </div>
     </div>
   </aside>
+  <div id="phrase-study-bar" class="phrase-study-bar" hidden>
+    <span class="phrase-study-label">已选择</span>
+    <strong id="phrase-highlight-selection"></strong>
+    <button id="phrase-highlight-action" class="phrase-highlight-action" type="button">标记词群</button>
+  </div>
+  <div id="phrase-book-backdrop" class="phrase-book-backdrop" hidden>
+    <aside class="phrase-book-panel" role="dialog" aria-modal="true" aria-labelledby="phrase-book-title">
+      <header class="phrase-book-header">
+        <div>
+          <p class="phrase-book-kicker">按年份自动归档</p>
+          <h2 id="phrase-book-title">词群本</h2>
+        </div>
+        <button id="phrase-book-close" class="phrase-book-close" type="button" aria-label="关闭词群本">×</button>
+      </header>
+      <div class="phrase-book-toolbar">
+        <label>年份 <select id="phrase-book-year" aria-label="词群本年份"></select></label>
+        <button id="phrase-book-blur" class="phrase-book-blur" type="button" aria-pressed="false">模糊译文</button>
+      </div>
+      <div class="phrase-book-columns" aria-hidden="true"><span>英文词群</span><span>对应中文</span></div>
+      <div id="phrase-book-list" class="phrase-book-list"></div>
+      <p id="phrase-book-empty" class="phrase-book-empty">这一年还没有标记词群。</p>
+    </aside>
+  </div>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script type="module" src="./app.js?v=x-player-a-prod-2"></script>
-  <script type="module" src="./full-library-bootstrap.js?v=full-cache-1"></script>
+  <script type="module" src="./app.js?v=phrase-study-20260918-v2"></script>
+  <script type="module" src="./full-library-bootstrap.js?v=phrase-study-20260918-v2"></script>
 </body>
 </html>

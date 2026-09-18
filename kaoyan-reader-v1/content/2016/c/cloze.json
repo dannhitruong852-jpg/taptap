@@ -1,0 +1,510 @@
+{
+  "year": 2016,
+  "section_type": "cloze",
+  "article_id": "cloze",
+  "source_sha256": "c94c7b78e597c98d3618d930f009d8d2fd494adc94421fc90e6cdd86eebfce8f",
+  "source_pages": [
+    2,
+    3
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "06",
+  "article_context": "介绍一项关于地区幸福感与企业投资、研发投入之间关系的研究，并讨论乐观情绪、管理者特征与长期决策的可能联系。",
+  "article": {
+    "year": 2016,
+    "section": "cloze",
+    "title": "完型 · 快乐如何影响企业投资",
+    "background": "介绍一项关于地区幸福感与企业投资、研发投入之间关系的研究，并讨论乐观情绪、管理者特征与长期决策的可能联系。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "Happy people work differently.",
+      "zh": "快乐的人工作方式有所不同。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "Happy people work differently.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-cloze/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "They're more productive, more creative, and willing to take greater risks.",
+      "zh": "他们往往更高效、更有创造力，也更愿意承担较大的风险。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "They're more productive, more creative, and willing to take greater risks.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-cloze/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "And new research suggests that happiness might influence how firms work, too.",
+      "zh": "新的研究还表明，幸福感甚至可能影响企业的运作方式。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "And new research suggests that happiness might influence how firms work, too.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-cloze/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "Companies located in places with happier people invest more, according to a recent research paper.",
+      "zh": "一篇近期研究论文指出，位于居民幸福感更高地区的企业会进行更多投资。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Companies located in places with happier people invest more, according to a recent research paper.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-cloze/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "In particular, firms in happy places spend more on R&D (research and development).",
+      "zh": "尤其是，这些地区的企业在研发上的投入更多。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "In particular, firms in happy places spend more on R&D (research and development).",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-cloze/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "That's because happiness is linked to the kind of longer-term thinking necessary for making investments for the future.",
+      "zh": "这是因为，幸福感与一种更着眼长远的思维方式相关，而这种思维正是为未来进行投资所必需的。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "That's because happiness is linked to the kind of longer-term thinking necessary for making investments for the future.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-cloze/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 3,
+      "en": "The researchers wanted to know if the optimism and inclination for risk-taking that come with happiness would change the way companies invested.",
+      "zh": "研究人员想知道，伴随幸福感而来的乐观情绪和冒险倾向，是否会改变企业的投资方式。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "The researchers wanted to know if the optimism and inclination for risk-taking that come with happiness would change the way companies invested.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-cloze/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 3,
+      "en": "So they compared U.S. cities' average happiness measured by Gallup polling with the investment activity of publicly traded firms in those areas.",
+      "zh": "因此，他们把盖洛普民调测得的美国各城市平均幸福感，与当地上市公司的投资活动进行了比较。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "So they compared U.S. cities' average happiness measured by Gallup polling with the investment activity of publicly traded firms in those areas.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-cloze/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 4,
+      "en": "Sure enough, firms' investment and R&D intensity were correlated with the happiness of the area in which they were headquartered.",
+      "zh": "果不其然，企业的投资强度和研发强度与其总部所在地的幸福感存在相关关系。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "Sure enough, firms' investment and R&D intensity were correlated with the happiness of the area in which they were headquartered.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-cloze/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 4,
+      "en": "But is it really happiness that's linked to investment, or could something else about happier cities explain why firms there spend more on R&D?",
+      "zh": "但真正与投资相联系的究竟是幸福感本身，还是幸福城市的其他特征解释了当地企业为何更愿意投入研发？",
+      "vocab": [],
+      "discourse_function": "ask",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "But is it really happiness that's linked to investment, or could something else about happier cities explain why firms there spend more on R&D?",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-cloze/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 4,
+      "en": "To find out, the researchers controlled for various factors that might make firms more likely to invest - like size, industry, and sales - and for indicators that a place was desirable to live in, like growth in wages or population.",
+      "zh": "为弄清这一点，研究人员控制了多种可能提高企业投资意愿的因素，如企业规模、所属行业和销售额，也控制了工资或人口增长等反映一地是否宜居的指标。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "To find out, the researchers controlled for various factors that might make firms more likely to invest - like size, industry, and sales - and for indicators that a place was desirable to live in, like growth in wages or population.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-cloze/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 4,
+      "en": "The link between happiness and investment generally held even after accounting for these things.",
+      "zh": "即便把这些因素考虑在内，幸福感与投资之间的联系总体上仍然存在。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "The link between happiness and investment generally held even after accounting for these things.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-cloze/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 5,
+      "en": "The correlation between happiness and investment was particularly strong for younger firms, which the authors attribute to \"less codified decision making process\" and the possible presence of \"younger and less experienced managers who are more likely to be influenced by sentiment.\"",
+      "zh": "幸福感与投资之间的相关性在年轻企业中尤其明显，作者把这归因于“较少程式化的决策过程”，以及企业中可能存在“更年轻、经验更少、因而更容易受情绪影响的管理者”。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "The correlation between happiness and investment was particularly strong for younger firms, which the authors attribute to \"less codified decision making process\" and the possible presence of \"younger and less experienced managers who are more likely to be influenced by sentiment.\"",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-cloze/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 5,
+      "en": "The relationship was also stronger in places where happiness was spread more equally.",
+      "zh": "在幸福感分布更均衡的地方，这种关系也更强。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "The relationship was also stronger in places where happiness was spread more equally.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-cloze/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 5,
+      "en": "Firms seem to invest more in places where most people are relatively happy, rather than in places with happiness inequality.",
+      "zh": "企业似乎更愿意在大多数人都相对幸福的地区增加投资，而不是在幸福感分布不均的地区。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "Firms seem to invest more in places where most people are relatively happy, rather than in places with happiness inequality.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-cloze/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 6,
+      "en": "While this doesn't prove that happiness causes firms to invest more or to take a longer-term view, the authors believe it at least hints at that possibility.",
+      "zh": "虽然这并不能证明幸福感会导致企业增加投资或采取更长远的眼光，但作者认为，它至少暗示了这种可能性。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "While this doesn't prove that happiness causes firms to invest more or to take a longer-term view, the authors believe it at least hints at that possibility.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-cloze/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 6,
+      "en": "It's not hard to imagine that local culture and sentiment would help shape how executives think about the future.",
+      "zh": "不难想象，当地文化与社会情绪会影响企业高管如何思考未来。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "It's not hard to imagine that local culture and sentiment would help shape how executives think about the future.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-cloze/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 6,
+      "en": "\"It surely seems plausible that happy people would be more forward-thinking and creative and lean towards R&D more than the average,\" said one researcher.",
+      "zh": "一位研究者表示：“幸福的人更有前瞻性、更具创造力，也比一般人更倾向于研发，这看起来完全合乎情理。”",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "\"It surely seems plausible that happy people would be more forward-thinking and creative and lean towards R&D more than the average,\" said one researcher.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-cloze/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

@@ -1,10 +1,51 @@
 .read-token {
   transition: color .08s linear, opacity .08s linear, background-color .08s linear;
 }
+
+/* The playing sentence is the strongest visual state: active, never disabled/dimmed. */
+.sentence-card.is-active {
+  border-color: rgba(37,99,235,.18);
+  background: rgba(37,99,235,.06);
+  box-shadow: 0 12px 30px rgba(37,99,235,.08);
+}
+.sentence-card::before {
+  content:"";
+  position:absolute;
+  left:0;
+  top:14px;
+  bottom:14px;
+  width:3px;
+  border-radius:0 3px 3px 0;
+  background:#2563eb;
+  opacity:0;
+  transform:scaleY(.72);
+  transform-origin:center;
+  transition:opacity .2s ease, transform .2s ease;
+  pointer-events:none;
+}
+.sentence-card.is-active::before {
+  opacity:1;
+  transform:scaleY(1);
+}
+.sentence-card.is-active .en {
+  color:#17191c;
+  font-weight:650;
+}
+.sentence-card.is-active .zh {
+  color:#5f6b78;
+}
+.sentence-card.is-active .sentence-number {
+  background:rgba(37,99,235,.10);
+  color:#2563eb;
+}
+.sentence-card.is-active .sentence-play-icon {
+  color:#2563eb;
+  opacity:1;
+}
 .sentence-card.is-active .en .read-token,
 .sentence-card.is-active .zh .read-token {
   color: inherit;
-  opacity: .42;
+  opacity: 1;
 }
 .sentence-card.is-active .en .read-token.is-read,
 .sentence-card.is-active .zh .read-token.is-read {
@@ -15,7 +56,7 @@
   text-shadow: 0 0 0 currentColor;
 }
 .sentence-card.is-active .zh .read-token.is-reading {
-  opacity: .9;
+  opacity: 1;
 }
 .sentence-card.is-active .en .vocab.read-token {
   background: linear-gradient(transparent 67%, rgba(215,181,110,.26) 0);
@@ -41,6 +82,6 @@
 
 /* C v4 Chinese follows reviewed semantic groups tied to real English word times. */
 .semantic-group { transition: color .08s linear, opacity .08s linear, background-color .08s linear; }
-.sentence-card.is-active .zh .semantic-group { opacity:.42; }
+.sentence-card.is-active .zh .semantic-group { opacity:1; }
 .sentence-card.is-active .zh .semantic-group.is-read,
 .sentence-card.is-active .zh .semantic-group.is-reading { opacity:1; }

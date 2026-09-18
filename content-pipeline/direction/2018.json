@@ -1,0 +1,104 @@
+{
+  "schema_version": "c-v4-director-plan-1",
+  "year": 2018,
+  "principle": "semantics and discourse first; model controls belong only to actor calibration",
+  "discourse_map": {
+    "compare": {
+      "director_intent": "qualification",
+      "intensity": 1
+    },
+    "contrast": {
+      "director_intent": "contrast",
+      "intensity": 1
+    },
+    "explain": {
+      "director_intent": "neutral_explain",
+      "intensity": 1
+    },
+    "sequence": {
+      "director_intent": "narrative_build",
+      "intensity": 1
+    },
+    "qualify": {
+      "director_intent": "qualification",
+      "intensity": 1
+    },
+    "emphasize": {
+      "director_intent": "information_peak",
+      "intensity": 1
+    },
+    "advance": {
+      "director_intent": "neutral_explain",
+      "intensity": 1
+    },
+    "conclude": {
+      "director_intent": "warm_explain",
+      "intensity": 1
+    },
+    "story": {
+      "director_intent": "narrative_build",
+      "intensity": 1
+    },
+    "settle": {
+      "director_intent": "warm_explain",
+      "intensity": 0
+    },
+    "action_turn": {
+      "director_intent": "contrast",
+      "intensity": 2
+    },
+    "dialogue": {
+      "director_intent": "quoted_character",
+      "intensity": 1
+    },
+    "irony": {
+      "director_intent": "restrained_irony",
+      "intensity": 2
+    },
+    "warning": {
+      "director_intent": "serious_analysis",
+      "intensity": 1
+    },
+    "resolve": {
+      "director_intent": "warm_explain",
+      "intensity": 1
+    },
+    "encourage": {
+      "director_intent": "warm_explain",
+      "intensity": 1
+    },
+    "playful": {
+      "director_intent": "restrained_irony",
+      "intensity": 1
+    },
+    "example": {
+      "director_intent": "neutral_explain",
+      "intensity": 0
+    },
+    "ask": {
+      "director_intent": "contrast",
+      "intensity": 1
+    },
+    "statistic": {
+      "director_intent": "serious_analysis",
+      "intensity": 1
+    },
+    "report": {
+      "director_intent": "neutral_explain",
+      "intensity": 0
+    },
+    "explain_quote": {
+      "director_intent": "quoted_character",
+      "intensity": 1
+    },
+    "qualify_quote": {
+      "director_intent": "quoted_character",
+      "intensity": 1
+    },
+    "evaluation_quote": {
+      "director_intent": "quoted_character",
+      "intensity": 2
+    }
+  },
+  "overrides": []
+}

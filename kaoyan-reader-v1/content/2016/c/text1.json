@@ -1,0 +1,510 @@
+{
+  "year": 2016,
+  "section_type": "reading",
+  "article_id": "text1",
+  "source_sha256": "c94c7b78e597c98d3618d930f009d8d2fd494adc94421fc90e6cdd86eebfce8f",
+  "source_pages": [
+    4,
+    5
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "03",
+  "article_context": "讨论中学生提前接触计算机科学与编程的价值：它未必直接造就程序员，却能训练问题分解与逻辑思维，并帮助学生适应数字化世界。",
+  "article": {
+    "year": 2016,
+    "section": "text1",
+    "title": "阅读 Text 1 · 为什么要让孩子尽早接触编程",
+    "background": "讨论中学生提前接触计算机科学与编程的价值：它未必直接造就程序员，却能训练问题分解与逻辑思维，并帮助学生适应数字化世界。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "It's true that high-school coding classes aren't essential for learning computer science in college.",
+      "zh": "诚然，要在大学学习计算机科学，高中阶段的编程课并非不可或缺。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "It's true that high-school coding classes aren't essential for learning computer science in college.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-text1/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Students without experience can catch up after a few introductory courses, said Tom Cortina, the assistant dean at Carnegie Mellon's School of Computer Science.",
+      "zh": "卡内基梅隆大学计算机科学学院副院长汤姆·科尔蒂纳表示，没有相关经验的学生在上过几门入门课程后也能赶上来。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Students without experience can catch up after a few introductory courses, said Tom Cortina, the assistant dean at Carnegie Mellon's School of Computer Science.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-text1/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 2,
+      "en": "However, Cortina said, early exposure is beneficial.",
+      "zh": "不过，科尔蒂纳认为，尽早接触计算机科学是有益的。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "However, Cortina said, early exposure is beneficial.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-text1/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "When younger kids learn computer science, they learn that it's not just a confusing, endless string of letters and numbers - but a tool to build apps, or create artwork, or test hypotheses.",
+      "zh": "孩子年纪较小时学习计算机科学，会明白它并不只是令人困惑、没完没了的字母和数字，而是一种可以用来开发应用、创作艺术作品或检验假设的工具。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "When younger kids learn computer science, they learn that it's not just a confusing, endless string of letters and numbers - but a tool to build apps, or create artwork, or test hypotheses.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-text1/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "It's not as hard for them to transform their thought processes as it is for older students.",
+      "zh": "相比年龄更大的学生，他们改变思维方式没那么困难。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "It's not as hard for them to transform their thought processes as it is for older students.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-text1/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "Breaking down problems into bite-sized chunks and using code to solve them becomes normal.",
+      "zh": "把问题拆成一个个小块，再用代码逐一解决，会逐渐成为自然的思考方式。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "Breaking down problems into bite-sized chunks and using code to solve them becomes normal.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-text1/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "Giving more children this training could increase the number of people interested in the field and help fill the jobs gap, Cortina said.",
+      "zh": "科尔蒂纳说，让更多孩子接受这种训练，可能会增加对这一领域感兴趣的人数，并有助于弥补就业岗位的人才缺口。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "Giving more children this training could increase the number of people interested in the field and help fill the jobs gap, Cortina said.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-text1/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 3,
+      "en": "Students also benefit from learning something about coding before they get to college, where introductory computer-science classes are packed to the brim, which can drive the less-experienced or -determined students away.",
+      "zh": "学生在进入大学前先了解一些编程也会受益，因为大学里的计算机科学入门课往往人满为患，这可能会把经验较少或意志不够坚定的学生挤出这个领域。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "Students also benefit from learning something about coding before they get to college, where introductory computer-science classes are packed to the brim, which can drive the less-experienced or -determined students away.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-text1/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 4,
+      "en": "The Flatiron School, where people pay to learn programming, started as one of the many coding bootcamps that's become popular for adults looking for a career change.",
+      "zh": "Flatiron School 是一所收费教授编程的学校，起初只是众多编程训练营中的一家，而这类训练营后来在寻求转行的成年人中日益流行。",
+      "vocab": [],
+      "discourse_function": "example",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "The Flatiron School, where people pay to learn programming, started as one of the many coding bootcamps that's become popular for adults looking for a career change.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-text1/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 4,
+      "en": "The high-schoolers get the same curriculum, but \"we try to gear lessons toward things they're interested in,\" said Victoria Friedman, an instructor.",
+      "zh": "高中生学习同样的课程，不过教师维多利亚·弗里德曼说：“我们会尽量让课程贴近他们感兴趣的东西。”",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "The high-schoolers get the same curriculum, but \"we try to gear lessons toward things they're interested in,\" said Victoria Friedman, an instructor.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-text1/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 4,
+      "en": "For instance, one of the apps the students are developing suggests movies based on your mood.",
+      "zh": "例如，学生正在开发的一款应用会根据用户的心情推荐电影。",
+      "vocab": [],
+      "discourse_function": "example",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "For instance, one of the apps the students are developing suggests movies based on your mood.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-text1/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 5,
+      "en": "The students in the Flatiron class probably won't drop out of high school and build the next Facebook.",
+      "zh": "Flatiron 课程里的学生大概不会因此高中辍学，然后打造出下一个 Facebook。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "The students in the Flatiron class probably won't drop out of high school and build the next Facebook.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-text1/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 5,
+      "en": "Programming languages have a quick turnover, so the \"Ruby on Rails\" language they learned may not even be relevant by the time they enter the job market.",
+      "zh": "编程语言更新换代很快，所以等他们进入就业市场时，所学的“Ruby on Rails”甚至可能已经不再重要。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "Programming languages have a quick turnover, so the \"Ruby on Rails\" language they learned may not even be relevant by the time they enter the job market.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-text1/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 5,
+      "en": "But the skills they learn - how to think logically through a problem and organize the results - apply to any coding language, said Deborah Seehorn, an education consultant for the state of North Carolina.",
+      "zh": "但北卡罗来纳州教育顾问德博拉·西霍恩表示，他们学到的能力——如何用逻辑思维分析问题、如何组织结果——适用于任何编程语言。",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "But the skills they learn - how to think logically through a problem and organize the results - apply to any coding language, said Deborah Seehorn, an education consultant for the state of North Carolina.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-text1/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 6,
+      "en": "Indeed, the Flatiron students might not go into IT at all.",
+      "zh": "事实上，Flatiron 的学生将来甚至可能根本不会进入信息技术行业。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "Indeed, the Flatiron students might not go into IT at all.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-text1/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 6,
+      "en": "But creating a future army of coders is not the sole purpose of the classes.",
+      "zh": "但培养一支未来的程序员大军并不是这些课程唯一的目的。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "But creating a future army of coders is not the sole purpose of the classes.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-text1/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 6,
+      "en": "These kids are going to be surrounded by computers - in their pockets, in their offices, in their homes - for the rest of their lives.",
+      "zh": "这些孩子余生都会被计算机包围——口袋里、办公室里、家里都会有。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "These kids are going to be surrounded by computers - in their pockets, in their offices, in their homes - for the rest of their lives.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-text1/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 6,
+      "en": "The younger they learn how computers think, how to coax the machine into producing what they want - the earlier they learn that they have the power to do that - the better.",
+      "zh": "越早学会理解计算机如何“思考”、如何引导机器做出自己想要的结果，越早意识到自己拥有这种驾驭机器的能力，就越好。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "The younger they learn how computers think, how to coax the machine into producing what they want - the earlier they learn that they have the power to do that - the better.",
+          "speaker_role": "narrator",
+          "actor_id": "03",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2016/c-text1/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

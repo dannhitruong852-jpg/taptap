@@ -1,0 +1,28 @@
+name: Launch C Mode Production V2 2013-2018 once
+
+on:
+  push:
+    branches:
+      - c-mode-v2-2013-2018-production
+    paths:
+      - '.github/workflows/c-mode-production-v2-launch-2013-2018-once.yml'
+
+permissions:
+  contents: read
+  actions: write
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch validated 2013-2018 production workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow run c-mode-production-v2.yml \
+            -R "$GITHUB_REPOSITORY" \
+            --ref c-mode-v2-2013-2018-production \
+            -f batch_manifest=batch-manifests/2013-2018.json \
+            -f publish=true \
+            -f shards=3
+          echo "Dispatched C Mode Production Pipeline V2 for 2013-2018 with publish=true."

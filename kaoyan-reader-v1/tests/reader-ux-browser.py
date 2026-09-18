@@ -45,6 +45,8 @@ class ReaderUX(unittest.TestCase):
             const nativePlay=a.play.bind(a); a.play=(...playArgs)=>{a.__playCalls++;return nativePlay(...playArgs);};
             window.__audio.push(a);return a; };
           window.Audio.prototype=NativeAudio.prototype;
+          try{Object.defineProperty(window,'AudioContext',{value:undefined,configurable:true});}catch(e){}
+          try{Object.defineProperty(window,'webkitAudioContext',{value:undefined,configurable:true});}catch(e){}
         })();''')
         self.page.goto(reader_url());self.page.wait_for_selector('.sentence-card')
 
@@ -54,8 +56,8 @@ class ReaderUX(unittest.TestCase):
 
     def test_01_hidden_by_default_single_tap_only_opens_its_own_translation(self):
         p=self.page;self.assertEqual(p.locator('.zh:visible').count(),0)
-        card=p.locator('.sentence-card').nth(0);card.locator('.en').tap();self.assertTrue(card.locator('.zh').is_visible());self.assertEqual(p.locator('.zh:visible').count(),1)
-        self.assertEqual(sum(p.evaluate('window.__audio.map(a=>a.__playCalls)')),0);p.wait_for_timeout(600);card.locator('.en').tap();self.assertFalse(card.locator('.zh').is_visible())
+        card=p.locator('.sentence-card').nth(0);card.locator('.en').tap();p.wait_for_timeout(340);self.assertTrue(card.locator('.zh').is_visible());self.assertEqual(p.locator('.zh:visible').count(),1)
+        self.assertEqual(sum(p.evaluate('window.__audio.map(a=>a.__playCalls)')),0);p.wait_for_timeout(600);card.locator('.en').tap();p.wait_for_timeout(340);self.assertFalse(card.locator('.zh').is_visible())
         p.select_option('#article-select','2002-cloze');p.wait_for_function("document.querySelectorAll('.sentence-card').length===13");self.assertEqual(p.locator('.zh:visible').count(),0)
         p.reload();p.wait_for_selector('.sentence-card');self.assertEqual(p.locator('.zh:visible').count(),0)
 
@@ -70,10 +72,41 @@ class ReaderUX(unittest.TestCase):
         p.mouse.move(x,y);p.mouse.down();p.mouse.move(x+70,y+20,steps=5);p.mouse.up();self.assertFalse(first.locator('.zh').is_visible());self.assertEqual(en.evaluate('el=>getComputedStyle(el).userSelect'),'text')
 
     def test_03_bilingual_highlights_and_single_global_switch(self):
-        p=self.page;self.assertEqual(p.locator('#toggle-chinese,#movie-mode').count(),0);self.assertEqual(p.locator('.reader-settings button').count(),1)
-        card=p.locator('.sentence-card').nth(1);card.locator('.en').tap();en=card.locator('.en .vocab').first;zh=card.locator('.zh .zh-vocab').first
+        p=self.page;self.assertEqual(p.locator('#toggle-chinese,#movie-mode').count(),0);self.assertEqual(p.locator('.reader-settings button').count(),2);self.assertEqual(p.locator('#phrase-book-open').count(),1)
+        card=p.locator('.sentence-card').nth(1);card.locator('.en').tap();p.wait_for_timeout(340);en=card.locator('.en .vocab').first;zh=card.locator('.zh .zh-vocab').first
         self.assertEqual(en.inner_text().strip(),'sympathy');self.assertEqual(zh.inner_text(),'认同');self.assertGreaterEqual(int(zh.evaluate('el=>getComputedStyle(el).fontWeight')),700)
         p.locator('#toggle-vocab').click();self.assertLess(int(en.evaluate('el=>getComputedStyle(el).fontWeight')),700);self.assertTrue(card.locator('.zh').is_visible());p.locator('#toggle-vocab').click();self.assertGreaterEqual(int(zh.evaluate('el=>getComputedStyle(el).fontWeight')),700)
+
+
+    def test_03b_phrase_selection_uses_bottom_bar_and_year_book(self):
+        p=self.page
+        card=p.locator('.sentence-card').nth(1)
+        token=card.locator('.en .vocab').first
+        self.assertEqual(token.inner_text().strip(),'sympathy')
+        p.evaluate("""(() => {
+          const node=document.querySelectorAll('.sentence-card')[1].querySelector('.en .vocab').firstChild;
+          const range=document.createRange();range.selectNodeContents(node);
+          const selection=getSelection();selection.removeAllRanges();selection.addRange(range);
+        })()""")
+        p.wait_for_selector('#phrase-study-bar:not([hidden])')
+        self.assertEqual(p.locator('#phrase-highlight-selection').inner_text().strip(),'sympathy')
+        bar=p.locator('#phrase-study-bar').bounding_box()
+        player=p.locator('#player-shell').bounding_box()
+        self.assertLessEqual(bar['y']+bar['height'],player['y']+1)
+        p.locator('#phrase-highlight-action').click()
+        p.wait_for_timeout(120)
+        self.assertEqual(card.locator('.en .phrase-mark-en').count(),1)
+        card.locator('.en').tap();p.wait_for_timeout(340);self.assertTrue(card.locator('.zh').is_visible())
+        self.assertGreaterEqual(card.locator('.zh .phrase-mark-zh').count(),1)
+        self.assertIn('2002 词群本',p.locator('#phrase-book-open').inner_text())
+        p.locator('#phrase-book-open').click();self.assertTrue(p.locator('#phrase-book-backdrop').is_visible())
+        self.assertEqual(p.locator('#phrase-book-year').input_value(),'2002')
+        self.assertEqual(p.locator('.phrase-book-item').count(),1)
+        self.assertEqual(p.locator('.phrase-book-en').inner_text().strip(),'sympathy')
+        self.assertTrue(p.locator('.phrase-book-zh').inner_text().strip())
+        p.locator('#phrase-book-blur').click()
+        self.assertEqual(p.locator('#phrase-book-blur').get_attribute('aria-pressed'),'true')
+        self.assertTrue(p.locator('.phrase-book-panel').evaluate("el=>el.classList.contains('is-blurred')"))
 
     def test_04_four_option_speed_menu_changes_live_audio_without_restart(self):
         p=self.page;p.locator('#play-toggle').click();p.wait_for_function('window.__audio.some(a=>!a.paused&&a.currentTime>.2)',timeout=15000)

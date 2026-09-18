@@ -1,0 +1,69 @@
+name: C Mode 2014-2018 vocabulary audit once
+
+on:
+  push:
+    branches:
+      - c-mode-v2-2013-2018-production
+    paths:
+      - '.github/workflows/c-mode-2014-2018-vocab-audit-once.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: c-mode-v2-2013-2018-production
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Audit curated vocabulary inventories
+        env:
+          PYTHONPATH: content-pipeline
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from build_curated_year import load_curated_source
+
+          rows=[]
+          for year in range(2014, 2019):
+              try:
+                  src=load_curated_source(Path('content-pipeline/curated'), year)
+                  vocab=src.get('vocabulary') or {}
+                  levels={str(i):0 for i in range(1,10)}
+                  for entry in vocab.values():
+                      if isinstance(entry, list) and entry and isinstance(entry[0], int):
+                          levels[str(entry[0])]=levels.get(str(entry[0]),0)+1
+                  rows.append({
+                      'year': year,
+                      'ok': True,
+                      'top_level_keys': sorted(src.keys()),
+                      'lexicon': len(vocab),
+                      'level6plus': sum(v for k,v in levels.items() if int(k)>=6),
+                      'levels': levels,
+                      'sample': list(vocab.items())[:20],
+                  })
+              except Exception as exc:
+                  rows.append({'year':year,'ok':False,'error':repr(exc)})
+          out=Path('reports/vocabulary-audit/2014-2018.json')
+          out.parent.mkdir(parents=True, exist_ok=True)
+          out.write_text(json.dumps(rows, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+          print(json.dumps(rows, ensure_ascii=False))
+          PY
+      - name: Commit audit report
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/vocabulary-audit/2014-2018.json
+          git diff --cached --check
+          if git diff --cached --quiet; then
+            echo 'No vocabulary audit changes.'
+          else
+            git commit -m '[skip ci] stage: audit 2014-2018 vocabulary inventories'
+            git push origin HEAD:c-mode-v2-2013-2018-production
+          fi

@@ -1,0 +1,73 @@
+name: C Mode 2018 bilingual occurrences once
+
+on:
+  push:
+    branches:
+      - c-mode-v2-2013-2018-production
+    paths:
+      - '.github/workflows/c-mode-2018-bilingual-occurrences-once.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  report-2018:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: c-mode-v2-2013-2018-production
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile reviewed 2018 article content
+        env:
+          PYTHONPATH: voice-pipeline:content-pipeline
+        run: python content-pipeline/build_curated_year.py --year 2018
+      - name: Emit exact level-6-plus occurrences
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          rows=[]
+          for path in sorted(Path('kaoyan-reader-v1/content/2018/c').glob('*.json')):
+              doc=json.loads(path.read_text(encoding='utf-8'))
+              for sentence in doc.get('sentences', []):
+                  for vocab in sentence.get('vocab', []):
+                      if int(vocab.get('level', 0)) < 6:
+                          continue
+                      start=vocab.get('start')
+                      end=vocab.get('end')
+                      if not isinstance(start, int) or not isinstance(end, int):
+                          continue
+                      rows.append({
+                          'year': 2018,
+                          'article_id': doc['article_id'],
+                          'sentence_id': sentence['id'],
+                          'en_start': start,
+                          'en_end': end,
+                          'en_text': sentence['en'][start:end],
+                          'level': int(vocab.get('level', 0)),
+                          'meaning': vocab.get('meaning', ''),
+                          'en': sentence['en'],
+                          'zh': sentence['zh'],
+                      })
+          out=Path('reports/bilingual-occurrences/2018.json')
+          out.parent.mkdir(parents=True, exist_ok=True)
+          out.write_text(json.dumps(rows, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+          print(json.dumps({'year': 2018, 'occurrences': len(rows)}, ensure_ascii=False))
+          PY
+      - name: Commit occurrence audit report
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/bilingual-occurrences/2018.json
+          git diff --cached --check
+          if git diff --cached --quiet; then
+            echo 'No occurrence report changes to commit.'
+          else
+            git commit -m '[skip ci] stage: emit 2018 bilingual occurrences'
+            git push origin HEAD:c-mode-v2-2013-2018-production
+          fi

@@ -512,12 +512,12 @@ jobs:
           from pathlib import Path
           batch=json.loads(Path('/tmp/frozen-input/batch-manifest.json').read_text())
           for year in batch['years']:
-              matches=list(Path('/tmp/merged').glob(f'**/kaoyan-reader-v1/audio/{year}/v4'))
+              matches=list(Path('/tmp/merged').glob(f'**/audio/{year}/v4'))
               assert len(matches)==1,(year,matches)
               target=Path(f'/tmp/production/kaoyan-reader-v1/audio/{year}/v4')
               target.parent.mkdir(parents=True,exist_ok=True)
               shutil.copytree(matches[0],target,dirs_exist_ok=True)
-              reports=list(Path('/tmp/merged').glob(f'**/kaoyan-reader-v1/reports/c-v4-{year}-merge.json'))
+              reports=list(Path('/tmp/merged').glob(f'**/reports/c-v4-{year}-merge.json'))
               assert len(reports)==1,(year,reports)
               dst=Path(f'/tmp/production/kaoyan-reader-v1/reports/c-v4-{year}-merge.json')
               dst.parent.mkdir(parents=True,exist_ok=True); shutil.copy2(reports[0],dst)

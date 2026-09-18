@@ -1,0 +1,63 @@
+name: C Mode 2016 density audit once
+
+on:
+  push:
+    branches:
+      - c-mode-v2-2013-2018-production
+    paths:
+      - '.github/workflows/c-mode-2016-density-audit-once.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: c-mode-v2-2013-2018-production
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Emit 2016 source density context
+        env:
+          PYTHONPATH: .:voice-pipeline:content-pipeline
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from build_curated_year import load_curated_source, canonical_discourse, PROFILES
+
+          source=load_curated_source(Path('content-pipeline/curated'),2016)
+          out={'year':2016,'articles':{}}
+          for item in source['articles']:
+              rows=[]
+              for n,row in enumerate(item['rows'],1):
+                  paragraph, marked, zh, raw_discourse, focus=row
+                  discourse=canonical_discourse(raw_discourse)
+                  rows.append({
+                      'sentence':n,
+                      'en':marked.replace('|',''),
+                      'zh':zh,
+                      'raw_discourse':raw_discourse,
+                      'canonical_discourse':discourse,
+                      'contrast_level':PROFILES[discourse][1],
+                      'focus':focus,
+                  })
+              out['articles'][item['id']]={'rows':rows,'segment_overrides':item.get('segment_overrides',{})}
+          path=Path('reports/content-freeze/2016/density-audit.json')
+          path.parent.mkdir(parents=True,exist_ok=True)
+          path.write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          PY
+      - name: Commit audit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/content-freeze/2016/density-audit.json
+          git diff --cached --check
+          if ! git diff --cached --quiet; then
+            git commit -m '[skip ci] audit: persist 2016 C Mode density context'
+            git push origin HEAD:c-mode-v2-2013-2018-production
+          fi

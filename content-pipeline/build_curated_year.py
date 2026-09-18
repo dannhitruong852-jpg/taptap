@@ -236,20 +236,55 @@ def build_year(source: dict) -> tuple[list[dict], list[dict]]:
     return docs, catalog_rows
 
 
+def apply_discourse_overrides(source: dict, override_path: Path) -> dict:
+    if not override_path.is_file():
+        return source
+    document = json.loads(override_path.read_text(encoding='utf-8'))
+    source_year = int(source['year'])
+    if int(document.get('year', source_year)) != source_year:
+        raise ValueError(f'discourse override year disagrees with source year {source_year}')
+    articles = {item['id']: item for item in source.get('articles', [])}
+    for override in document.get('overrides', []):
+        article_id = override['article_id']
+        sentence_id = override['sentence_id']
+        if article_id not in articles:
+            raise ValueError(f'{article_id}/{sentence_id}: discourse override article not found')
+        match = re.fullmatch(r's(\d+)', sentence_id)
+        if not match:
+            raise ValueError(f'{article_id}/{sentence_id}: invalid discourse override sentence id')
+        index = int(match.group(1)) - 1
+        rows = articles[article_id]['rows']
+        if index < 0 or index >= len(rows):
+            raise ValueError(f'{article_id}/{sentence_id}: discourse override sentence not found')
+        current = rows[index][3]
+        expected = override['from']
+        replacement = override['to']
+        if current != expected:
+            raise ValueError(f'{article_id}/{sentence_id}: discourse override expected {expected}, found {current}')
+        if canonical_discourse(replacement) not in PROFILES:
+            raise ValueError(f'{article_id}/{sentence_id}: unknown discourse override target {replacement}')
+        rows[index][3] = replacement
+    return source
+
+
 def load_curated_source(curated_dir: Path, year: int) -> dict:
     curated_dir = Path(curated_dir)
     source_path = curated_dir / f'{year}.json'
     if source_path.is_file():
-        return json.loads(source_path.read_text(encoding='utf-8'))
-    gzip_path = curated_dir / f'{year}.json.gz'
-    if gzip_path.is_file():
-        with gzip.open(gzip_path, 'rt', encoding='utf-8') as handle:
-            return json.load(handle)
-    parts = sorted(curated_dir.glob(f'{year}.json.gz.b64.part*'))
-    if not parts:
-        raise FileNotFoundError(f'no curated source for {year}')
-    encoded = ''.join(p.read_text(encoding='ascii').strip() for p in parts)
-    return json.loads(gzip.decompress(base64.b64decode(encoded)).decode('utf-8'))
+        source = json.loads(source_path.read_text(encoding='utf-8'))
+    else:
+        gzip_path = curated_dir / f'{year}.json.gz'
+        if gzip_path.is_file():
+            with gzip.open(gzip_path, 'rt', encoding='utf-8') as handle:
+                source = json.load(handle)
+        else:
+            parts = sorted(curated_dir.glob(f'{year}.json.gz.b64.part*'))
+            if not parts:
+                raise FileNotFoundError(f'no curated source for {year}')
+            encoded = ''.join(p.read_text(encoding='ascii').strip() for p in parts)
+            encoded += '=' * (-len(encoded) % 4)
+            source = json.loads(gzip.decompress(base64.b64decode(encoded)).decode('utf-8'))
+    return apply_discourse_overrides(source, curated_dir / 'discourse-overrides' / f'{year}.json')
 
 
 def main() -> None:

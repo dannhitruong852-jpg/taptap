@@ -1,4 +1,4 @@
-const DEFAULT_NAMESPACE='kaoyan-static-v1';
+const DEFAULT_NAMESPACE='kaoyan-static-phrase-study-20260918-v2';
 
 export function createStaticResourceCache({
   cacheStorage=typeof caches!=='undefined'?caches:null,

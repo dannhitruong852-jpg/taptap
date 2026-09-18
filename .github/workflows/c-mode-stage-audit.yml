@@ -1,0 +1,47 @@
+name: C Mode Stage Audit
+
+on:
+  push:
+    branches:
+      - c-mode-v2-2013-2018-production
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit-2017:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Diagnose staged 2017 source
+        run: |
+          python - <<'PY'
+          import base64
+          import re
+          import zlib
+          from pathlib import Path
+
+          parts = sorted(Path('content-pipeline/curated').glob('2017.json.gz.b64.part*'))
+          print('parts:', [(p.name, p.stat().st_size) for p in parts])
+          encoded = ''.join(p.read_text(encoding='ascii').strip() for p in parts)
+          raw = base64.b64decode(encoded)
+          dec = zlib.decompressobj(16 + zlib.MAX_WBITS)
+          prefix = dec.decompress(raw)
+          text = prefix.decode('utf-8', errors='replace')
+          print('compressed bytes:', len(raw))
+          print('recovered utf8 chars:', len(text))
+          print('gzip eof:', dec.eof)
+          print('article ids seen:', re.findall(r'"id"\s*:\s*"([^"]+)"', text))
+          print('--- RECOVERED TAIL START ---')
+          print(text[-12000:])
+          print('--- RECOVERED TAIL END ---')
+          Path('recovered-2017-prefix.json.txt').write_text(text, encoding='utf-8')
+      - name: Upload recovered prefix
+        uses: actions/upload-artifact@v4
+        with:
+          name: recovered-2017-prefix
+          path: recovered-2017-prefix.json.txt

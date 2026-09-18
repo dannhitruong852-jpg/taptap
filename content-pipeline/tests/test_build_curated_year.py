@@ -108,6 +108,54 @@ class BuildCuratedYearTests(unittest.TestCase):
             self.assertEqual(source['year'], 2006)
             self.assertEqual(source['articles'], [])
 
+    def test_load_curated_source_restores_missing_base64_padding(self):
+        import base64, gzip, json, tempfile
+        payload = json.dumps({'year': 2013, 'articles': []}, ensure_ascii=False).encode('utf-8')
+        encoded = base64.b64encode(gzip.compress(payload)).decode('ascii').rstrip('=')
+        self.assertNotEqual(len(encoded) % 4, 0)
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            cut = len(encoded) // 2
+            (root / '2013.json.gz.b64.part00').write_text(encoded[:cut], encoding='ascii')
+            (root / '2013.json.gz.b64.part01').write_text(encoded[cut:], encoding='ascii')
+            source = build_curated_year.load_curated_source(root, 2013)
+            self.assertEqual(source['year'], 2013)
+            self.assertEqual(source['articles'], [])
+
+    def test_load_curated_source_applies_reviewed_discourse_overrides(self):
+        import json, tempfile
+        source_doc = {
+            'year': 2016,
+            'articles': [
+                {
+                    'id': 'text2',
+                    'rows': [
+                        [1, 'Some environmentalists, however, were disappointed.', '然而，一些环保人士对此感到失望。', 'report', []],
+                    ],
+                },
+            ],
+        }
+        override_doc = {
+            'year': 2016,
+            'overrides': [
+                {
+                    'article_id': 'text2',
+                    'sentence_id': 's01',
+                    'from': 'report',
+                    'to': 'contrast',
+                    'reason': 'Explicit however contrast.',
+                },
+            ],
+        }
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            (root / '2016.json').write_text(json.dumps(source_doc, ensure_ascii=False), encoding='utf-8')
+            override_dir = root / 'discourse-overrides'
+            override_dir.mkdir()
+            (override_dir / '2016.json').write_text(json.dumps(override_doc, ensure_ascii=False), encoding='utf-8')
+            source = build_curated_year.load_curated_source(root, 2016)
+            self.assertEqual(source['articles'][0]['rows'][0][3], 'contrast')
+
 
 if __name__ == '__main__':
     unittest.main()

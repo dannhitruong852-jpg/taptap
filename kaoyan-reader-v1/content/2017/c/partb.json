@@ -1,0 +1,915 @@
+{
+  "year": 2017,
+  "section_type": "part_b",
+  "article_id": "partb",
+  "source_sha256": "88dc4ff8e9faa7bfca02a6361968200aec269c705a39bb66b7791fea95403aa4",
+  "source_pages": [
+    11,
+    12
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "14",
+  "article_context": "从“美国制造业衰退”的常见叙事转向劳动力短缺：婴儿潮一代退休、年轻人兴趣不足、父母对制造业衰退的记忆以及工作生活平衡诉求，共同造成制造企业招工困难。",
+  "article": {
+    "year": 2017,
+    "section": "partb",
+    "title": "新题型 Part B · 美国制造业的新难题：招不到年轻工人",
+    "background": "从“美国制造业衰退”的常见叙事转向劳动力短缺：婴儿潮一代退休、年轻人兴趣不足、父母对制造业衰退的记忆以及工作生活平衡诉求，共同造成制造企业招工困难。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "The decline in American manufacturing is a common refrain, particularly from Donald Trump.",
+      "zh": "美国制造业衰退是一个常被反复提起的话题，唐纳德·特朗普尤其如此。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "The decline in American manufacturing is a common refrain, particularly from Donald Trump.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "\"We don't make anything anymore,\" he told Fox News, while defending his own made-in-Mexico clothing line.",
+      "zh": "他一边为自己那条“墨西哥制造”的服装产品线辩护，一边对福克斯新闻说：“我们现在什么都不生产了。”",
+      "vocab": [],
+      "discourse_function": "irony",
+      "prosody_focus": [],
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "\"We don't make anything anymore,\" he told Fox News, while defending his own made-in-Mexico clothing line.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "ironic",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 2,
+      "en": "Without question, manufacturing has taken a significant hit during recent decades, and further trade deals raise questions about whether new shocks could hit manufacturing.",
+      "zh": "毫无疑问，过去几十年制造业遭受了重大冲击，而进一步的贸易协定也令人担心制造业是否还会受到新的冲击。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Without question, manufacturing has taken a significant hit during recent decades, and further trade deals raise questions about whether new shocks could hit manufacturing.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 3,
+      "en": "But there is also a different way to look at the data.",
+      "zh": "不过，这些数据也可以换一个角度来看。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "But there is also a different way to look at the data.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 4,
+      "en": "Across the country, factory owners are now grappling with a new challenge: Instead of having too many workers, they may end up with too few.",
+      "zh": "如今，全美各地的工厂主正面临一个新难题：他们的问题可能不再是工人太多，而是最终工人太少。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Across the country, factory owners are now grappling with a new challenge: Instead of having too many workers, they may end up with too few.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 4,
+      "en": "Despite trade competition and outsourcing, American manufacturing still needs to replace tens of thousands of retiring boomers every year.",
+      "zh": "尽管面临贸易竞争和外包，美国制造业每年仍需要补上数以万计退休婴儿潮一代留下的岗位。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "Despite trade competition and outsourcing, American manufacturing still needs to replace tens of thousands of retiring boomers every year.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 4,
+      "en": "Millennials may not be that interested in taking their place.",
+      "zh": "千禧一代未必有多大兴趣接替这些岗位。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "Millennials may not be that interested in taking their place.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 4,
+      "en": "Other industries are recruiting them with similar or better pay.",
+      "zh": "其他行业正用相近甚至更高的薪酬争抢这些年轻人。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "Other industries are recruiting them with similar or better pay.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 5,
+      "en": "For factory owners, it all adds up to stiff competition for workers - and upward pressure on wages.",
+      "zh": "对工厂主来说，这一切意味着对劳动力的激烈争夺，也意味着工资面临上涨压力。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "For factory owners, it all adds up to stiff competition for workers - and upward pressure on wages.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 5,
+      "en": "\"They're harder to find and they have job offers,\" says Jay Dunwell, president of Wolverine Coil Spring, a family-owned firm.",
+      "zh": "Wolverine Coil Spring 公司总裁杰伊·邓韦尔说：“他们更难找，而且手里都有工作邀约。”",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "\"They're harder to find and they have job offers,\" says Jay Dunwell, president of Wolverine Coil Spring, a family-owned firm.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 5,
+      "en": "\"They may be coming [into the workforce], but they've been plucked by other industries that are also doing as well as manufacturing.\"",
+      "zh": "“他们可能确实进入了劳动力市场，但那些同样发展不错的其他行业已经把他们抢走了。”",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "\"They may be coming [into the workforce], but they've been plucked by other industries that are also doing as well as manufacturing.\"",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 5,
+      "en": "Mr. Dunwell has begun bringing high school juniors to the factory so they can get exposed to its culture.",
+      "zh": "邓韦尔先生已经开始把高中三年级学生带到工厂，让他们接触工厂文化。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "Mr. Dunwell has begun bringing high school juniors to the factory so they can get exposed to its culture.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 6,
+      "en": "At RoMan Manufacturing, a maker of electrical transformers and welding equipment that his father cofounded in 1980, Robert Roth keeps a close eye on the age of his nearly 200 workers.",
+      "zh": "在 RoMan Manufacturing——一家由罗伯特·罗斯的父亲于1980年共同创办、生产变压器和焊接设备的企业——罗斯密切关注着公司近200名员工的年龄。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "At RoMan Manufacturing, a maker of electrical transformers and welding equipment that his father cofounded in 1980, Robert Roth keeps a close eye on the age of his nearly 200 workers.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 6,
+      "en": "Five are retiring this year.",
+      "zh": "其中有5人今年退休。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "Five are retiring this year.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 6,
+      "en": "Mr. Roth has three community-college students enrolled in a work-placement program, with a starting wage of $13 an hour that rises to $17 after two years.",
+      "zh": "罗斯先生让3名社区学院学生参加了一个实习就业项目，起薪为每小时13美元，两年后会涨到17美元。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "Mr. Roth has three community-college students enrolled in a work-placement program, with a starting wage of $13 an hour that rises to $17 after two years.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 7,
+      "en": "At a worktable inside the transformer plant, young Jason Stenquist looks flustered by the copper coils he's trying to assemble and the arrival of two visitors.",
+      "zh": "在变压器工厂的一张工作台前，年轻的杰森·斯滕奎斯特一边组装铜线圈，一边又遇到两位来访者，显得有些手忙脚乱。",
+      "vocab": [],
+      "discourse_function": "story",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "At a worktable inside the transformer plant, young Jason Stenquist looks flustered by the copper coils he's trying to assemble and the arrival of two visitors.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 7,
+      "en": "It's his first week on the job.",
+      "zh": "这是他上班的第一周。",
+      "vocab": [],
+      "discourse_function": "story",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "It's his first week on the job.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 7,
+      "en": "Asked about his choice of career, he says at high school he considered medical school before switching to electrical engineering.",
+      "zh": "谈到职业选择时，他说自己高中时曾考虑学医，后来转而选择电气工程。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "Asked about his choice of career, he says at high school he considered medical school before switching to electrical engineering.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 7,
+      "en": "\"I love working with tools.",
+      "zh": "“我喜欢和工具打交道。",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "\"I love working with tools.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "paragraph": 7,
+      "en": "I love creating,\" he says.",
+      "zh": "我喜欢创造东西。”他说。",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s20-01",
+          "text": "I love creating,\" he says.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s20-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "paragraph": 8,
+      "en": "But to win over these young workers, manufacturers have to clear another major hurdle: parents, who lived through the worst US economic downturn since the Great Depression, telling them to avoid the factory.",
+      "zh": "但要争取这些年轻工人，制造商还必须跨过另一道大坎：他们的父母经历过美国自大萧条以来最严重的经济衰退，因此会告诫孩子远离工厂。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s21-01",
+          "text": "But to win over these young workers, manufacturers have to clear another major hurdle: parents, who lived through the worst US economic downturn since the Great Depression, telling them to avoid the factory.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s21-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "paragraph": 8,
+      "en": "Millennials \"remember their father and mother both were laid off.",
+      "zh": "千禧一代“记得自己的父亲和母亲都曾被裁员。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s22-01",
+          "text": "Millennials \"remember their father and mother both were laid off.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s22-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "paragraph": 8,
+      "en": "They blame it on the manufacturing recession,\" says Birgit Klohs, chief executive of The Right Place, a business development agency for western Michigan.",
+      "zh": "他们把这归咎于制造业衰退。”密歇根州西部商业发展机构 The Right Place 的首席执行官比尔吉特·克洛斯说。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s23-01",
+          "text": "They blame it on the manufacturing recession,\" says Birgit Klohs, chief executive of The Right Place, a business development agency for western Michigan.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s23-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "paragraph": 9,
+      "en": "These concerns aren't misplaced: Employment in manufacturing has fallen from 17 million in 1970 to 12 million in 2015.",
+      "zh": "这种担忧并非毫无根据：制造业就业人数已从1970年的1700万降至2015年的1200万。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s24-01",
+          "text": "These concerns aren't misplaced: Employment in manufacturing has fallen from 17 million in 1970 to 12 million in 2015.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s24-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "paragraph": 9,
+      "en": "When the recovery began, worker shortages first appeared in the high-skilled trades.",
+      "zh": "经济开始复苏时，劳动力短缺最先出现在高技能工种。",
+      "vocab": [],
+      "discourse_function": "sequence",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s25-01",
+          "text": "When the recovery began, worker shortages first appeared in the high-skilled trades.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s25-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "paragraph": 9,
+      "en": "Now shortages are appearing at the mid-skill levels.",
+      "zh": "如今，中等技能岗位也开始出现短缺。",
+      "vocab": [],
+      "discourse_function": "sequence",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s26-01",
+          "text": "Now shortages are appearing at the mid-skill levels.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s26-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "paragraph": 10,
+      "en": "\"The gap is between the jobs that take no skills and those that require a lot of skill,\" says Rob Spohr, a business professor at Montcalm Community College.",
+      "zh": "蒙卡尔姆社区学院商学教授罗布·斯波尔说：“缺口出现在几乎不需要技能的岗位和要求很高技能的岗位之间。”",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s27-01",
+          "text": "\"The gap is between the jobs that take no skills and those that require a lot of skill,\" says Rob Spohr, a business professor at Montcalm Community College.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s27-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "paragraph": 10,
+      "en": "\"There're enough people to fill the jobs at McDonalds and other places where you don't need to have much skill.",
+      "zh": "“麦当劳以及其他不太需要技能的工作，有足够多的人可以去做。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s28-01",
+          "text": "\"There're enough people to fill the jobs at McDonalds and other places where you don't need to have much skill.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s28-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "paragraph": 10,
+      "en": "It's that gap in between, and that's where the problem is.",
+      "zh": "“问题就在两者之间的那一档岗位。”",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s29-01",
+          "text": "It's that gap in between, and that's where the problem is.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s29-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "paragraph": 11,
+      "en": "Julie Parks of Grand Rapids Community College points to another key to luring Millennials into manufacturing: a work/life balance.",
+      "zh": "大急流城社区学院的朱莉·帕克斯指出，吸引千禧一代进入制造业还有另一个关键：工作与生活的平衡。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s30-01",
+          "text": "Julie Parks of Grand Rapids Community College points to another key to luring Millennials into manufacturing: a work/life balance.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s30-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s31",
+      "paragraph": 11,
+      "en": "While their parents were content to work long hours, young people value flexibility.",
+      "zh": "他们的父母一代可以接受长时间工作，而年轻人更看重灵活性。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s31-01",
+          "text": "While their parents were content to work long hours, young people value flexibility.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s31-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s32",
+      "paragraph": 11,
+      "en": "\"Overtime is not attractive to this generation.",
+      "zh": "“加班对这一代人没有吸引力。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": [],
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s32-01",
+          "text": "\"Overtime is not attractive to this generation.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s32-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s33",
+      "paragraph": 11,
+      "en": "They really want to live their lives,\" she says.",
+      "zh": "他们真的想过自己的生活。”她说。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": [],
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s33-01",
+          "text": "They really want to live their lives,\" she says.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2017/c-partb/s33-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

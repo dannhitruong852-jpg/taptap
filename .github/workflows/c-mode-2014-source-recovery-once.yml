@@ -1,0 +1,102 @@
+name: C Mode 2014 source recovery once
+
+on:
+  push:
+    branches:
+      - c-mode-v2-2013-2018-production
+    paths:
+      - '.github/workflows/c-mode-2014-source-recovery-once.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: .:voice-pipeline:content-pipeline
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: c-mode-v2-2013-2018-production
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compare healthy neighboring source envelopes
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          import build_curated_year
+          root=Path('content-pipeline/curated')
+          for year in (2013, 2015):
+              try:
+                  doc=build_curated_year.load_curated_source(root, year)
+              except Exception as exc:
+                  print(year, 'LOAD_FAILED', type(exc).__name__, str(exc))
+                  continue
+              envelope={k:v for k,v in doc.items() if k not in ('articles','vocabulary')}
+              print(year, 'KEYS', list(doc.keys()))
+              print(year, 'ENVELOPE', json.dumps(envelope,ensure_ascii=False,sort_keys=True))
+              print(year, 'VOCAB_SIZE', len(doc.get('vocabulary',{})), 'ARTICLES', [a.get('id') for a in doc.get('articles',[])])
+          PY
+      - name: Verify 2014 reviewed evidence is reconstructable
+        run: |
+          python - <<'PY'
+          import base64, json, zlib
+          from pathlib import Path
+
+          root=Path('content-pipeline/curated')
+          parts=sorted(root.glob('2014.json.gz.b64.part*'))
+          encoded=''.join(p.read_text(encoding='ascii').strip() for p in parts)
+          encoded += '=' * (-len(encoded) % 4)
+          raw=base64.b64decode(encoded, validate=True)
+          dec=zlib.decompressobj(16 + zlib.MAX_WBITS)
+          out=[]
+          failure=None
+          for i, byte in enumerate(raw):
+              try:
+                  piece=dec.decompress(bytes([byte]))
+                  if piece:
+                      out.append(piece)
+              except zlib.error as exc:
+                  failure={'compressed_byte':i,'error':str(exc)}
+                  break
+          plaintext=b''.join(out).decode('utf-8')
+          marker='"articles"'
+          idx=plaintext.index(marker)
+          header=json.loads(plaintext[:idx] + '"articles": []\n}')
+          expected=['cloze','text1','text2','text3','text4','partb','translation']
+          evidence_root=Path('reports/content-freeze/2014')
+          articles=[]
+          evidence=[]
+          for article_id in expected:
+              path=evidence_root/f'{article_id}.candidate.json'
+              doc=json.loads(path.read_text(encoding='utf-8'))
+              qa=doc['qa']
+              article=doc['article']
+              assert doc['year'] == 2014
+              assert article['id'] == article_id
+              assert qa['source_sha256'] == header['source_sha256']
+              assert qa['source_scope_verified'] is True
+              assert qa['scope_exclusions_reviewed'] is True
+              assert qa['text_fidelity_reviewed'] is True
+              assert qa['translation_alignment_reviewed'] is True
+              assert qa['sentence_alignment_reviewed'] is True
+              assert qa['status'] == 'reviewed_candidate'
+              assert qa['expected_sentences'] == qa['actual_sentences'] == len(article['rows'])
+              articles.append(article)
+              evidence.append({'id':article_id,'sentences':len(article['rows']),'payload_sha256':qa.get('curated_payload_sha256')})
+          assert set(header) >= {'year','source_pdf','source_sha256','vocabulary','articles'}
+          assert header['year'] == 2014
+          assert len(header['vocabulary']) == 48, len(header['vocabulary'])
+          print(json.dumps({
+              'header_keys':list(header.keys()),
+              'source_pdf':header['source_pdf'],
+              'source_sha256':header['source_sha256'],
+              'vocabulary_size':len(header['vocabulary']),
+              'failure':failure,
+              'evidence':evidence,
+          },ensure_ascii=False,indent=2))
+          PY
