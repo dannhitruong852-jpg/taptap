@@ -3,13 +3,14 @@
   "pipeline_version": 2,
   "source_branch": "c-mode-v2-launch-release",
   "previous_production_sha": "c6701b755b4b85a7d5e1080c8e32a70fbc263fe3",
-  "state": "release_candidate",
+  "state": "published",
   "state_history": [
     "content_frozen",
     "audio_rendered",
     "merged",
     "validated",
-    "release_candidate"
+    "release_candidate",
+    "published"
   ],
   "years": [
     2019,
@@ -18,5 +19,6 @@
     2022,
     2023,
     2024
-  ]
+  ],
+  "content_commit_sha": "d8ead920aa6e9c5499c2c211157d4b2712a3309a"
 }
