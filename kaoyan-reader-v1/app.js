@@ -66,6 +66,7 @@ function selectionOffsets(range,enEl){
 function phraseSelectionFromWindow(){
  const selection=window.getSelection();if(!selection||selection.rangeCount!==1||selection.isCollapsed)return null;
  const range=selection.getRangeAt(0);const startEn=nodeElement(range.startContainer)?.closest('.en');const endEn=nodeElement(range.endContainer)?.closest('.en');
+ if(!startEn&&!endEn)return null;
  if(!startEn||!endEn||startEn!==endEn)return {invalid:'cross-sentence',key:selection.toString().slice(0,140)};
  const card=startEn.closest('.sentence-card');if(!card)return null;
  const offsets=selectionOffsets(range,startEn);if(!offsets.text)return null;
@@ -386,7 +387,7 @@ window.addEventListener('resize',hidePhraseSelectionAction,{passive:true});
 window.addEventListener('beforeunload',()=>{hybridAudioPlayer.stop();audioCache.clearMemory();decodedAudioStore?.clearDecoded();});
 
 async function openArticle(entry){
- if(!entry)return;hidePhraseSelectionAction();window.getSelection()?.removeAllRanges();const switchStarted=performance.now();const selectionToken=++selectionGeneration;tapGuard.cancel();tapArbiter.cancel();hidePhraseSelectionAction();loading=true;clearTimer();hybridAudioPlayer.stop();fallbackAudioPlayer.clearPreload();audioCache.clearMemory();setPlaying(false,false);playButton.disabled=true;statusEl.textContent='正在加载正文';
+ if(!entry)return;hidePhraseSelectionAction();window.getSelection()?.removeAllRanges();const switchStarted=performance.now();const selectionToken=++selectionGeneration;tapGuard.cancel();tapArbiter.cancel();loading=true;clearTimer();hybridAudioPlayer.stop();fallbackAudioPlayer.clearPreload();audioCache.clearMemory();setPlaying(false,false);playButton.disabled=true;statusEl.textContent='正在加载正文';
  articleBundleStore.cancelLowPriorityWork();
  try{
   const [loaded,semantic]=await Promise.all([articleBundleStore.get(entry),semanticMapPromise]);if(!loaded||selectionToken!==selectionGeneration)return;
