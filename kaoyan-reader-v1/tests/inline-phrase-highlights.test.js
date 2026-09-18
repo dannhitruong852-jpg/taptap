@@ -27,12 +27,11 @@ test('bilingual mapping links overlapping words to existing Chinese spans',()=>{
   assert.equal(result.source,'bilingual');
 });
 
-test('fallback links to a nearby Chinese clause instead of the full sentence',()=>{
+test('unmapped English stays English-only instead of guessing Chinese',()=>{
   const [enStart,enEnd]=span(en,'greater');
   const result=resolveLinkedHighlight({sentence:{en,zh},selectionStart:enStart,selectionEnd:enEnd,words:[],semanticGroups:[],bilingualPairs:[]});
-  assert.equal(result.source,'context-clause');
-  assert.ok(result.zhRanges[0].end-result.zhRanges[0].start<zh.length);
-  assert.match(zh.slice(result.zhRanges[0].start,result.zhRanges[0].end),/换取更高的效率/);
+  assert.equal(result.source,'none');
+  assert.deepEqual(result.zhRanges,[]);
 });
 
 function memoryStorage(){const map=new Map();return{getItem:k=>map.has(k)?map.get(k):null,setItem:(k,v)=>map.set(k,String(v))};}
