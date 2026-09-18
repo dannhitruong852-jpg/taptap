@@ -1,4 +1,4 @@
-const DEFAULT_KEY='kaoyan-inline-phrase-highlights-v2';
+const DEFAULT_KEY='kaoyan-inline-phrase-highlights-v1';
 const DEFAULT_PREFS_KEY='kaoyan-inline-phrase-prefs-v1';
 
 function clamp(value,min,max){return Math.max(min,Math.min(max,Number(value)||0));}
@@ -67,8 +67,9 @@ export function createInlineHighlightStore({storage=null,key=DEFAULT_KEY,prefsKe
     entries.push(saved);write(entries);return {added:true,entry:saved};
   }
   function list(articleId=null){const entries=read();return articleId?entries.filter(entry=>entry.articleId===articleId):entries;}
-  function listYear(year){const target=Number(year);return read().filter(entry=>Number(entry.year)===target).sort((a,b)=>Number(b.createdAt||0)-Number(a.createdAt||0));}
-  function years(){return [...new Set(read().map(entry=>Number(entry.year)).filter(Number.isFinite))].sort((a,b)=>a-b);}
+  function entryYear(entry){const direct=Number(entry.year);if(Number.isFinite(direct)&&direct>0)return direct;const match=String(entry.articleId||'').match(/^(20\\d{2})/);return match?Number(match[1]):null;}
+  function listYear(year){const target=Number(year);return read().filter(entry=>entryYear(entry)===target&&entry.selectedText).sort((a,b)=>Number(b.createdAt||0)-Number(a.createdAt||0));}
+  function years(){return [...new Set(read().map(entryYear).filter(Number.isFinite))].sort((a,b)=>a-b);}
   function remove(entry){
     const sig=typeof entry==='string'?entry:signature(entry);const entries=read();const next=entries.filter(item=>signature(item)!==sig&&item.id!==sig);
     if(next.length===entries.length)return false;write(next);return true;
