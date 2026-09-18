@@ -1,0 +1,43 @@
+name: Recover 2023 curated candidate once
+
+on:
+  push:
+    branches:
+      - c-mode-v2-2019-2024-production
+    paths:
+      - '.github/workflows/recover-2023-curated-candidate-once.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Recover compressed curated candidate without mutating repository
+        run: |
+          python - <<'PY'
+          import json, sys
+          from pathlib import Path
+          sys.path.insert(0, 'content-pipeline')
+          from build_curated_year import load_curated_source
+          source = load_curated_source(Path('content-pipeline/curated'), 2023)
+          out = Path('/tmp/2023.candidate.json')
+          out.write_text(json.dumps(source, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print(json.dumps({
+              'year': source.get('year'),
+              'articles': [a.get('id') for a in source.get('articles', [])],
+              'sentence_counts': {a.get('id'): len(a.get('rows', [])) for a in source.get('articles', [])},
+              'unresolved_sections': source.get('unresolved_sections', []),
+          }, ensure_ascii=False))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: c-mode-2023-curated-candidate
+          path: /tmp/2023.candidate.json
+          if-no-files-found: error
+          retention-days: 3
