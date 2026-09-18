@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "phase": "preflight",
+  "years": [
+    2025
+  ],
+  "articles_checked": 7,
+  "reviewed_candidates_checked": 7,
+  "level6_vocab_occurrences_checked": 35,
+  "mapped_occurrences": 35,
+  "errors": [],
+  "schema_version": "c-mode-v2-canary-evidence-1",
+  "branch": "c-mode-v2-2019-2024-production",
+  "sentence_counts": {
+    "cloze": 20,
+    "text1": 20,
+    "text2": 18,
+    "text3": 21,
+    "text4": 15,
+    "partb": 33,
+    "translation": 10
+  }
+}

@@ -1,0 +1,609 @@
+{
+  "year": 2025,
+  "section_type": "cloze",
+  "article_id": "cloze",
+  "source_sha256": "dfdb78c47d7810947b92effac2257365b9138689f92c4af8458ddf6b3892fc57",
+  "source_pages": [
+    2,
+    3
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "07",
+  "article_context": "文章解释人们为何常常不愿求助：暴露弱点、担心失去控制或被拒绝都会形成心理阻力；但研究显示，求助者往往比自己想象中更容易得到帮助，而且寻求建议反而可能让人显得更有能力。",
+  "article": {
+    "year": 2025,
+    "section": "cloze",
+    "title": "完形填空 · 为什么求助并不意味着无能",
+    "background": "文章解释人们为何常常不愿求助：暴露弱点、担心失去控制或被拒绝都会形成心理阻力；但研究显示，求助者往往比自己想象中更容易得到帮助，而且寻求建议反而可能让人显得更有能力。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "There are many understandable reasons why you might find it difficult to ask for help when you need it.",
+      "zh": "你在需要帮助时可能会觉得难以开口求助，这背后有许多可以理解的原因。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "There are many understandable reasons why you might find it difficult to ask for help when you need it.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-cloze/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Psychologists have been interested in this question for decades, not least because people's widespread reluctance to ask for help has led to some high-profile failures.",
+      "zh": "心理学家几十年来一直关注这个问题，尤其因为人们普遍不愿求助，曾导致一些引人注目的失败。",
+      "vocab": [
+        {
+          "word": "reluctance",
+          "lemma": "reluctance",
+          "level": 6,
+          "meaning": "不愿",
+          "start": 103,
+          "end": 113
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Psychologists have been interested in this question for decades, not least because people's widespread reluctance to ask for help has led to some high-profile failures.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-cloze/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 2,
+      "en": "Asking for help takes courage.",
+      "zh": "寻求帮助需要勇气。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Asking for help takes courage.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-cloze/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "It involves communicating a need on your part—there's something you can't do.",
+      "zh": "这意味着你要表达自己有某种需要——有些事情你无法独自完成。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "It involves communicating a need on your part—there's something you can't do.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-cloze/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "In other words, you're broadcasting your own weaknesses, which can be uncomfortable.",
+      "zh": "换句话说，你是在把自己的弱点展示出来，而这可能让人不舒服。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "In other words, you're broadcasting your own weaknesses, which can be uncomfortable.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-cloze/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "You might worry about coming across as incompetent.",
+      "zh": "你可能担心自己显得无能。",
+      "vocab": [
+        {
+          "word": "incompetent",
+          "lemma": "incompetent",
+          "level": 6,
+          "meaning": "无能",
+          "start": 39,
+          "end": 50
+        }
+      ],
+      "discourse_function": "warning",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "You might worry about coming across as incompetent.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-cloze/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "You might have concerns about losing control of whatever it is you're asking for help with.",
+      "zh": "你还可能担心，一旦求助，自己会失去对那件事情的控制。",
+      "vocab": [],
+      "discourse_function": "warning",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "You might have concerns about losing control of whatever it is you're asking for help with.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-cloze/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 2,
+      "en": "Once someone starts to help, perhaps they'll take over, or get credit for your earlier efforts.",
+      "zh": "一旦别人开始帮忙，也许他们会接手一切，或者把你此前付出的努力归到自己名下。",
+      "vocab": [],
+      "discourse_function": "example",
+      "prosody_focus": "",
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "Once someone starts to help, perhaps they'll take over, or get credit for your earlier efforts.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-cloze/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 2,
+      "en": "Yet another factor that you might be worried about is being a nuisance or inconveniencing the person you go to for help.",
+      "zh": "你可能担心的另一个因素，是自己会成为麻烦，或给你求助的那个人造成不便。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "Yet another factor that you might be worried about is being a nuisance or inconveniencing the person you go to for help.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-cloze/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 3,
+      "en": "If you struggle with low self-esteem, you might find it especially difficult to reach out for help because you have the added worry of the other person declining your request.",
+      "zh": "如果你本来自尊较低，主动求助可能尤其困难，因为你还会额外担心对方拒绝你的请求。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "If you struggle with low self-esteem, you might find it especially difficult to reach out for help because you have the added worry of the other person declining your request.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-cloze/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 3,
+      "en": "You might see such refusals as implying something negative about the status of your relationship with them.",
+      "zh": "你可能会把这种拒绝理解为：你们之间的关系出了某种负面问题。",
+      "vocab": [],
+      "discourse_function": "warning",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "You might see such refusals as implying something negative about the status of your relationship with them.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-cloze/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 3,
+      "en": "To overcome these difficulties, try to remind yourself that everyone needs help sometimes.",
+      "zh": "要克服这些困难，可以提醒自己：每个人都有需要帮助的时候。",
+      "vocab": [],
+      "discourse_function": "encourage",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "To overcome these difficulties, try to remind yourself that everyone needs help sometimes.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-cloze/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 3,
+      "en": "Nobody knows everything and can do everything all by themselves.",
+      "zh": "没有人什么都知道，也没有人能完全靠自己做好所有事情。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "Nobody knows everything and can do everything all by themselves.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-cloze/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 3,
+      "en": "And while you might fear coming across as incompetent, there's actually research that shows that advice-seekers are perceived as more competent, not less.",
+      "zh": "而且，虽然你可能害怕自己显得无能，但研究实际上表明，向别人寻求建议的人反而会被认为更有能力，而不是更差。",
+      "vocab": [
+        {
+          "word": "incompetent",
+          "lemma": "incompetent",
+          "level": 6,
+          "meaning": "无能",
+          "start": 42,
+          "end": 53
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "And while you might fear coming across as incompetent, there's actually research that shows that advice-seekers are perceived as more competent, not less.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-cloze/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 4,
+      "en": "Perhaps most encouraging of all is a paper from 2022 by researchers at Stanford University that involved a mix of contrived help-seeking interactions and asking people to recall times they'd sought help in the past.",
+      "zh": "也许最令人鼓舞的是，斯坦福大学研究人员2022年的一篇论文同时考察了人为设计的求助互动，并让人们回忆自己过去寻求帮助的经历。",
+      "vocab": [
+        {
+          "word": "contrived",
+          "lemma": "contrived",
+          "level": 7,
+          "meaning": "人为设计",
+          "start": 114,
+          "end": 123
+        }
+      ],
+      "discourse_function": "report",
+      "prosody_focus": "",
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "Perhaps most encouraging of all is a paper from 2022 by researchers at Stanford University that involved a mix of contrived help-seeking interactions and asking people to recall times they'd sought help in the past.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-cloze/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 4,
+      "en": "The findings showed that help-seekers generally underestimate how willing other people will be to help and how good it'll make the help-giver feel (for most people, having the chance to help someone is highly rewarding).",
+      "zh": "研究发现，求助者通常会低估别人愿意帮忙的程度，也会低估帮助别人给施助者带来的良好感受（对大多数人而言，有机会帮助别人是非常令人满足的）。",
+      "vocab": [
+        {
+          "word": "rewarding",
+          "lemma": "rewarding",
+          "level": 6,
+          "meaning": "令人满足",
+          "start": 209,
+          "end": 218
+        }
+      ],
+      "discourse_function": "report",
+      "prosody_focus": "",
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "The findings showed that help-seekers generally underestimate how willing other people will be to help and how good it'll make the help-giver feel (for most people, having the chance to help someone is highly rewarding).",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-cloze/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 5,
+      "en": "So, bear all this in mind the next time you need to ask for help.",
+      "zh": "所以，下次需要求助时，把这些都记在心里。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "So, bear all this in mind the next time you need to ask for help.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-cloze/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 5,
+      "en": "Also, take care over who you ask and when you ask them.",
+      "zh": "同时，也要注意向谁求助，以及何时开口。",
+      "vocab": [],
+      "discourse_function": "encourage",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "Also, take care over who you ask and when you ask them.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-cloze/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 5,
+      "en": "And if someone can't help right now, avoid taking it personally.",
+      "zh": "如果有人眼下无法帮助你，也不要把这件事理解成针对你个人。",
+      "vocab": [],
+      "discourse_function": "encourage",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "And if someone can't help right now, avoid taking it personally.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-cloze/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "paragraph": 5,
+      "en": "They might just be too busy, or they might not feel confident about their ability to help.",
+      "zh": "他们可能只是太忙，或者对自己能否帮上忙没有信心。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": "",
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s20-01",
+          "text": "They might just be too busy, or they might not feel confident about their ability to help.",
+          "speaker_role": "narrator",
+          "actor_id": "07",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-cloze/s20-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,499 @@
+{
+  "year": 2025,
+  "section_type": "reading",
+  "article_id": "text4",
+  "source_sha256": "dfdb78c47d7810947b92effac2257365b9138689f92c4af8458ddf6b3892fc57",
+  "source_pages": [
+    10
+  ],
+  "accent": "en-GB",
+  "primary_actor_id": "09",
+  "article_context": "文章把城市中被人们自行踩出的“欲望路径”视为规划与行为互动的证据：它们有时被正式规划吸收，有时与控制性的城市设计发生冲突，也反映了人和动物共同寻找高效路线的倾向。",
+  "article": {
+    "year": 2025,
+    "section": "text4",
+    "title": "阅读 Text 4 · “欲望路径”揭示真实的人类空间选择",
+    "background": "文章把城市中被人们自行踩出的“欲望路径”视为规划与行为互动的证据：它们有时被正式规划吸收，有时与控制性的城市设计发生冲突，也反映了人和动物共同寻找高效路线的倾向。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "Navigating beyond the organised pavements and parks of our urban spaces, desire paths are the unofficial footprints of a community, revealing the unspoken preferences, shared shortcuts and collective choices of humans.",
+      "zh": "在城市中规划好的道路和公园之外穿行时，我们会看到“欲望路径”——它们是一个社区的非正式足迹，显露出人们未明说的偏好、共享的捷径和集体选择。",
+      "vocab": [
+        {
+          "word": "unofficial",
+          "lemma": "unofficial",
+          "level": 6,
+          "meaning": "非正式",
+          "start": 94,
+          "end": 104
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "Navigating beyond the organised pavements and parks of our urban spaces, desire paths are the unofficial footprints of a community, revealing the unspoken preferences, shared shortcuts and collective choices of humans.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-text4/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Often appearing as trodden dirt tracks through otherwise neat green spaces, these routes of collective disobedience cut corners, bisect lawns and cross hills, representing the natural capability of people (and animals) to go from point A to point B most effectively.",
+      "zh": "这些体现集体不服从的路线，常以被踩出的土路出现在原本整洁的绿地中：它们抄近路、穿过草坪、越过坡地，展现了人类（以及动物）以最高效率从A点到B点的自然能力。",
+      "vocab": [
+        {
+          "word": "disobedience",
+          "lemma": "disobedience",
+          "level": 7,
+          "meaning": "不服从",
+          "start": 103,
+          "end": 115
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Often appearing as trodden dirt tracks through otherwise neat green spaces, these routes of collective disobedience cut corners, bisect lawns and cross hills, representing the natural capability of people (and animals) to go from point A to point B most effectively.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-text4/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 2,
+      "en": "Urban planners interpret desire paths as more than just convenient shortcuts; they offer valuable insights into the dynamics between planning and behaviour.",
+      "zh": "城市规划者认为，欲望路径不仅仅是方便的捷径，它们还能让人看到规划与行为之间的动态关系。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Urban planners interpret desire paths as more than just convenient shortcuts; they offer valuable insights into the dynamics between planning and behaviour.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-text4/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "Ohio State University allowed its students to navigate the Oval, a lawn in the centre of campus, freely, then proceeded to pave the desire paths, creating a web of effective routes students had established.",
+      "zh": "俄亥俄州立大学曾允许学生自由穿行校园中央的草坪 Oval，之后再把学生走出的欲望路径铺成正式道路，形成一张高效的路线网络。",
+      "vocab": [],
+      "discourse_function": "example",
+      "prosody_focus": "",
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Ohio State University allowed its students to navigate the Oval, a lawn in the centre of campus, freely, then proceeded to pave the desire paths, creating a web of effective routes students had established.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-text4/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 3,
+      "en": "Yet, reluctance persists among other planners to integrate desire paths into formal plans, citing concerns about safety, environmental impact, or primarily, aesthetics.",
+      "zh": "然而，其他一些规划者仍不愿把欲望路径纳入正式规划，理由包括安全、环境影响，以及最主要的美观问题。",
+      "vocab": [
+        {
+          "word": "reluctance",
+          "lemma": "reluctance",
+          "level": 6,
+          "meaning": "不愿",
+          "start": 5,
+          "end": 15
+        },
+        {
+          "word": "aesthetics",
+          "lemma": "aesthetics",
+          "level": 6,
+          "meaning": "美观",
+          "start": 157,
+          "end": 167
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Yet, reluctance persists among other planners to integrate desire paths into formal plans, citing concerns about safety, environmental impact, or primarily, aesthetics.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-text4/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 3,
+      "en": "A Reddit webpage devoted to the phenomenon, boasting nearly 50,000 members, showcases images of local desire paths adorned with signs instructing pedestrians to adhere to designated walkways, underscoring the rebellious nature inherent in these human-made tracks.",
+      "zh": "一个专门讨论这一现象、拥有近5万名成员的 Reddit 页面展示了许多当地欲望路径：旁边竖着要求行人走指定步道的标牌，反而凸显了这些人造小径内在的反叛意味。",
+      "vocab": [
+        {
+          "word": "rebellious",
+          "lemma": "rebellious",
+          "level": 6,
+          "meaning": "反叛",
+          "start": 209,
+          "end": 219
+        }
+      ],
+      "discourse_function": "example",
+      "prosody_focus": "",
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "A Reddit webpage devoted to the phenomenon, boasting nearly 50,000 members, showcases images of local desire paths adorned with signs instructing pedestrians to adhere to designated walkways, underscoring the rebellious nature inherent in these human-made tracks.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-text4/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 3,
+      "en": "This clash highlights an ongoing struggle between the organic, user-driven evolution of public spaces and the desire for a visually curated and controlled urban environment.",
+      "zh": "这种冲突凸显了一场持续的拉扯：一边是由使用者自然推动的公共空间演化，另一边是对视觉上精心整理、受到控制的城市环境的追求。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "This clash highlights an ongoing struggle between the organic, user-driven evolution of public spaces and the desire for a visually curated and controlled urban environment.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-text4/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 4,
+      "en": "The Wickquasgeck Trail is an example of a historical desire path, created by Native Americans to cross the forests of Manhattan and move between settlements quickly.",
+      "zh": "Wickquasgeck Trail 是一条历史上的欲望路径，最初由美洲原住民开辟，用来穿越曼哈顿森林并快速往返各个聚居地。",
+      "vocab": [],
+      "discourse_function": "story",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "The Wickquasgeck Trail is an example of a historical desire path, created by Native Americans to cross the forests of Manhattan and move between settlements quickly.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.01,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-text4/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 4,
+      "en": "This trail, when Dutch colonists arrived, was widened and made into one of the main trade roads across the island, known at the time as de Heere Straat, or Gentlemen's Street.",
+      "zh": "荷兰殖民者到来后，这条路被拓宽，成为横贯岛屿的主要贸易道路之一，当时称作 de Heere Straat，即“绅士街”。",
+      "vocab": [],
+      "discourse_function": "sequence",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "This trail, when Dutch colonists arrived, was widened and made into one of the main trade roads across the island, known at the time as de Heere Straat, or Gentlemen's Street.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-text4/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 4,
+      "en": "Following the British assumption of control in New York, the street was renamed Broadway.",
+      "zh": "英国接管纽约后，这条街被改名为 Broadway。",
+      "vocab": [],
+      "discourse_function": "sequence",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "Following the British assumption of control in New York, the street was renamed Broadway.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-text4/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 4,
+      "en": "Notably, Broadway stands out as one of the few areas in NYC that defies the grid-based system applied to the rest of the city, cutting a diagonal across parts of the city.",
+      "zh": "值得注意的是，Broadway 是纽约市少数不遵循全城网格系统的区域之一，它以斜线穿过城市的一部分。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "Notably, Broadway stands out as one of the few areas in NYC that defies the grid-based system applied to the rest of the city, cutting a diagonal across parts of the city.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-text4/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 5,
+      "en": "In online spaces, desire paths have sparked a fascination that can approach obsession, with the Reddit page serving as a hub.",
+      "zh": "在网络空间里，欲望路径激起的兴趣有时近乎痴迷，而这个 Reddit 页面就成了聚集地。",
+      "vocab": [
+        {
+          "word": "obsession",
+          "lemma": "obsession",
+          "level": 6,
+          "meaning": "痴迷",
+          "start": 76,
+          "end": 85
+        }
+      ],
+      "discourse_function": "advance",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "In online spaces, desire paths have sparked a fascination that can approach obsession, with the Reddit page serving as a hub.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-text4/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 5,
+      "en": "Contributors offer a wide array of stories, from little-known new shortcuts to long-established alternate routes.",
+      "zh": "参与者分享各种故事，从鲜为人知的新捷径到存在已久的替代路线都有。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "Contributors offer a wide array of stories, from little-known new shortcuts to long-established alternate routes.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-text4/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 6,
+      "en": "Animal desire paths, such as ducks forging trails through frozen ponds or dogs carving direct routes in gardens, highlight the adaptability of these trails in both human and animal experiences.",
+      "zh": "动物也会走出欲望路径，例如鸭子在结冰的池塘上踩出路线，或狗在花园里开出直路；这些例子凸显了这类路径在人类和动物经验中的适应性。",
+      "vocab": [
+        {
+          "word": "adaptability",
+          "lemma": "adaptability",
+          "level": 6,
+          "meaning": "适应性",
+          "start": 127,
+          "end": 139
+        }
+      ],
+      "discourse_function": "example",
+      "prosody_focus": "",
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "Animal desire paths, such as ducks forging trails through frozen ponds or dogs carving direct routes in gardens, highlight the adaptability of these trails in both human and animal experiences.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-text4/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 6,
+      "en": "As desire paths criss-cross through both physical and virtual landscapes, they stand as a proof of the collective insistence on forging unconventional routes and embracing the spirit of communal choice.",
+      "zh": "当欲望路径纵横于现实与虚拟空间，它们成为一种证明：群体始终坚持开辟非常规路线，并拥抱共同选择的精神。",
+      "vocab": [
+        {
+          "word": "unconventional",
+          "lemma": "unconventional",
+          "level": 6,
+          "meaning": "非常规",
+          "start": 136,
+          "end": 150
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "As desire paths criss-cross through both physical and virtual landscapes, they stand as a proof of the collective insistence on forging unconventional routes and embracing the spirit of communal choice.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2025/c-text4/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

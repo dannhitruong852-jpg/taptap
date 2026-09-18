@@ -1,0 +1,38 @@
+{
+  "year": 2025,
+  "source_filename": "2025年考研英语二真题.pdf",
+  "source_sha256": "dfdb78c47d7810947b92effac2257365b9138689f92c4af8458ddf6b3892fc57",
+  "method": "visual PDF review plus curated sentence-level bilingual manuscript; cloze restored deterministically from the answer key printed in the source PDF and cross-checked against independent answer keys",
+  "articles": [
+    {
+      "id": "cloze",
+      "sentences": 20
+    },
+    {
+      "id": "text1",
+      "sentences": 20
+    },
+    {
+      "id": "text2",
+      "sentences": 18
+    },
+    {
+      "id": "text3",
+      "sentences": 21
+    },
+    {
+      "id": "text4",
+      "sentences": 15
+    },
+    {
+      "id": "partb",
+      "sentences": 33
+    },
+    {
+      "id": "translation",
+      "sentences": 10
+    }
+  ],
+  "suspected_contamination": [],
+  "unresolved_sections": []
+}

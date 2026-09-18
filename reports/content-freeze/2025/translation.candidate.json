@@ -1,0 +1,103 @@
+{
+  "year": 2025,
+  "article": {
+    "id": "translation",
+    "section_type": "translation",
+    "title": "翻译 · 沉默在陌生人和朋友对话中的作用不同",
+    "actor": "15",
+    "context": "研究表明，谈话中的长停顿并不总是负面的：陌生人之间的长停顿往往削弱联系感并促使换话题，而朋友之间的长停顿反而可能提供反思和表达的自然空间。",
+    "pages": [
+      14
+    ],
+    "rows": [
+      [
+        1,
+        "You know the moment—the conversation slows, then there's a pause.",
+        "你一定熟悉这样的时刻——谈话慢了下来，随后出现一阵停顿。",
+        "story",
+        ""
+      ],
+      [
+        1,
+        "It's awkward, and so awkward that some people will panic and say anything.",
+        "场面很尴尬，甚至尴尬到有些人会慌起来，随便说点什么来填补空白。",
+        "emphasize",
+        ""
+      ],
+      [
+        1,
+        "Do we all find such silences so stressful?",
+        "我们都会觉得这样的沉默如此令人紧张吗？",
+        "ask",
+        ""
+      ],
+      [
+        2,
+        "Researchers analysed the frequency and impact of gaps greater than 2 seconds during conversations, including an overview of previous studies which indicate that the fear of awkward silences can be so extreme that people avoid talking to strangers, even though doing so is likely to be an enjoyable experience.",
+        "研究人员分析了谈话中超过2秒停顿的出现频率及其影响，并梳理了以往研究；这些研究表明，人们对尴尬沉默的恐惧有时会强烈到让他们避免与陌生人交谈，尽管这种交谈很可能是一种愉快的体验。",
+        "report",
+        ""
+      ],
+      [
+        3,
+        "During conversations with short gaps, people feel more connected to their conversation partners.",
+        "在只有短暂停顿的谈话中，人们会觉得自己与交谈对象联系得更紧密。",
+        "explain",
+        ""
+      ],
+      [
+        3,
+        "But such feelings of connection markedly dip when entering a long gap.",
+        "但一旦出现较长停顿，这种联系感就会明显下降。",
+        "contrast",
+        ""
+      ],
+      [
+        3,
+        "Long gaps between strangers are likely to be followed by a change in topic.",
+        "陌生人交谈时，较长的停顿之后往往会出现话题转换。",
+        "explain",
+        ""
+      ],
+      [
+        4,
+        "But the opposite seems to be true for conversations between friends.",
+        "但朋友之间的谈话似乎恰恰相反。",
+        "contrast",
+        ""
+      ],
+      [
+        4,
+        "Long gaps there saw increased connection.",
+        "在朋友之间，较长停顿反而伴随着更强的联系感。",
+        "contrast",
+        ""
+      ],
+      [
+        4,
+        "Between friends, longer gaps seem to provide natural moments for reflection and expression.",
+        "朋友之间，较长的停顿似乎为思考与表达提供了自然而然的时刻。",
+        "conclude",
+        ""
+      ]
+    ],
+    "accent": "en-GB",
+    "editorial_status": "reviewed_candidate"
+  },
+  "qa": {
+    "review_schema_version": "c-mode-v2-1",
+    "source_scope_verified": true,
+    "scope_exclusions_reviewed": true,
+    "text_fidelity_reviewed": true,
+    "translation_alignment_reviewed": true,
+    "sentence_alignment_reviewed": true,
+    "status": "reviewed_candidate",
+    "review_method": "visual PDF review plus reviewed sentence-level bilingual manuscript",
+    "unresolved_sections": [],
+    "source_pdf": "2025年考研英语二真题.pdf",
+    "source_sha256": "dfdb78c47d7810947b92effac2257365b9138689f92c4af8458ddf6b3892fc57",
+    "sentence_count": 10,
+    "expected_sentences": 10,
+    "actual_sentences": 10
+  }
+}

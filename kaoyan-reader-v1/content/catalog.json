@@ -21,7 +21,8 @@
     2021,
     2022,
     2023,
-    2024
+    2024,
+    2025
   ],
   "default_article": "2002-text1",
   "articles": [
@@ -1320,6 +1321,69 @@
       "content": "./content/2024/c/translation.json",
       "manifest": "./audio/2024/v4/c-translation/manifest.json",
       "sentences": 6
+    },
+    {
+      "id": "2025-cloze",
+      "year": 2025,
+      "section_type": "cloze",
+      "title": "完形填空 · 为什么求助并不意味着无能",
+      "content": "./content/2025/c/cloze.json",
+      "manifest": "./audio/2025/v4/c-cloze/manifest.json",
+      "sentences": 20
+    },
+    {
+      "id": "2025-partb",
+      "year": 2025,
+      "section_type": "part_b",
+      "title": "阅读 Part B · 让工作中的新建议真正被认真对待",
+      "content": "./content/2025/c/partb.json",
+      "manifest": "./audio/2025/v4/c-partb/manifest.json",
+      "sentences": 33
+    },
+    {
+      "id": "2025-text1",
+      "year": 2025,
+      "section_type": "reading",
+      "title": "阅读 Text 1 · 数字支付正在把小费推向更多场景",
+      "content": "./content/2025/c/text1.json",
+      "manifest": "./audio/2025/v4/c-text1/manifest.json",
+      "sentences": 20
+    },
+    {
+      "id": "2025-text2",
+      "year": 2025,
+      "section_type": "reading",
+      "title": "阅读 Text 2 · 英国医疗改革应从“修医院”转向提升全民健康",
+      "content": "./content/2025/c/text2.json",
+      "manifest": "./audio/2025/v4/c-text2/manifest.json",
+      "sentences": 18
+    },
+    {
+      "id": "2025-text3",
+      "year": 2025,
+      "section_type": "reading",
+      "title": "阅读 Text 3 · 印度高温行动计划需要更本地化、更长期",
+      "content": "./content/2025/c/text3.json",
+      "manifest": "./audio/2025/v4/c-text3/manifest.json",
+      "sentences": 21
+    },
+    {
+      "id": "2025-text4",
+      "year": 2025,
+      "section_type": "reading",
+      "title": "阅读 Text 4 · “欲望路径”揭示真实的人类空间选择",
+      "content": "./content/2025/c/text4.json",
+      "manifest": "./audio/2025/v4/c-text4/manifest.json",
+      "sentences": 15
+    },
+    {
+      "id": "2025-translation",
+      "year": 2025,
+      "section_type": "translation",
+      "title": "翻译 · 沉默在陌生人和朋友对话中的作用不同",
+      "content": "./content/2025/c/translation.json",
+      "manifest": "./audio/2025/v4/c-translation/manifest.json",
+      "sentences": 10
     }
   ]
 }
