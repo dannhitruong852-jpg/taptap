@@ -40,7 +40,7 @@ const playerShell=document.querySelector('#player-shell');
 const vocabButton=document.querySelector('#toggle-vocab');
 const toast=document.querySelector('#toast');
 const phraseStudyBar=document.querySelector('#phrase-study-bar');
-const phraseHighlightSelection=document.querySelector('#phrase-highlight-selection');
+const phraseHighlightSelectionText=document.querySelector('#phrase-highlight-selection');
 const phraseHighlightAction=document.querySelector('#phrase-highlight-action');
 const phraseBookOpenButton=document.querySelector('#phrase-book-open');
 const phraseBookBackdrop=document.querySelector('#phrase-book-backdrop');
@@ -84,7 +84,7 @@ function refreshPhraseHighlightAction(){
   if(snapshot.key!==phraseHighlightInvalidKey){phraseHighlightInvalidKey=snapshot.key;showToast(snapshot.invalid==='cross-sentence'?'请在同一句中选择词群':'词群请控制在 120 个英文字符以内');}
   return;
  }
- phraseHighlightInvalidKey='';phraseHighlightSelection=snapshot;tapGuard.cancel();tapArbiter.cancel();phraseHighlightSelection.textContent=snapshot.text;phraseStudyBar.hidden=false;
+ phraseHighlightInvalidKey='';phraseHighlightSelection=snapshot;tapGuard.cancel();tapArbiter.cancel();phraseHighlightSelectionText.textContent=snapshot.text;phraseStudyBar.hidden=false;
 }
 function schedulePhraseHighlightAction(){if(phraseHighlightFrame!==null)return;phraseHighlightFrame=window.requestAnimationFrame(refreshPhraseHighlightAction);}
 function highlightWords(sentence,enEl){
