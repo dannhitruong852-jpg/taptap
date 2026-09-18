@@ -33,7 +33,14 @@ test('saved phrase highlight renders as one continuous range including spaces', 
   ];
   const html=renderEnglish({en,vocab},[{start,end}]);
   assert.equal((html.match(/class="phrase-mark-en"/g)||[]).length,1);
-  assert.match(html,/class="phrase-mark-en"[^>]*>.*suggests<\/span> <span class="read-token"[^>]*>that<\/span> <span class="read-token"[^>]*>the<\/span>.*intelligence.* and .*diseases.* are .*intimately.* linked<\/span>/);
+  const marked=html.match(/<span class="phrase-mark-en"[^>]*>([\s\S]*?)<\/span>\./)?.[1]||'';
+  assert.equal(marked.replace(/<[^>]+>/g,''),phrase);
+  assert.match(marked,/suggests/);
+  assert.match(marked,/that/);
+  assert.match(marked,/intelligence/);
+  assert.match(marked,/diseases/);
+  assert.match(marked,/intimately/);
+  assert.match(marked,/linked/);
   assert.doesNotMatch(html,/class="read-token phrase-mark-en"/);
   assert.equal(html.replace(/<[^>]+>/g,''),en);
 });
