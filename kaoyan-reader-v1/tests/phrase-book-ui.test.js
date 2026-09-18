@@ -6,23 +6,28 @@ const app=readFileSync(new URL('../app.js',import.meta.url),'utf8');
 const html=readFileSync(new URL('../index.html',import.meta.url),'utf8');
 const css=readFileSync(new URL('../styles.css',import.meta.url),'utf8');
 
-test('reader exposes phrase-book selection action and phrase-book panel',()=>{
-  assert.match(html,/id="phrase-book-open"/);
-  assert.match(html,/id="phrase-selection-action"/);
-  assert.match(html,/id="phrase-book-panel"/);
-  assert.match(html,/id="phrase-book-blur"/);
+test('reader exposes phrase-book selection action and panel',()=>{
+  for(const id of ['phrase-book-open','phrase-selection-action','phrase-book-panel','phrase-book-blur','phrase-book-list']){
+    assert.match(html,new RegExp(`id="${id}"`));
+  }
 });
 
-test('reader reuses current selection and sentence data without translation API',()=>{
-  assert.match(app,/resolvePhraseSnippet/);
+test('reader maps selected English to existing sentence translation data',()=>{
+  assert.match(app,/from '\.\/phrase-book\.js'/);
+  assert.match(app,/addEventListener\('selectionchange'/);
+  assert.match(app,/closest\('\.en'\)/);
+  assert.match(app,/resolvePhraseSnippet\(/);
+  assert.match(app,/bilingualMappings\[snapshot\.sentence\.id\]/);
+  assert.match(app,/semanticMappings\[snapshot\.sentence\.id\]/);
   assert.match(app,/createPhraseBookStore/);
-  assert.match(app,/selectionchange/);
-  assert.match(app,/translationSnippet/);
+  assert.match(app,/window\.localStorage/);
   assert.doesNotMatch(app,/openai|anthropic|translate\.google|translation provider/i);
 });
 
-test('phrase-book blur is presentation-only and mobile text remains selectable',()=>{
-  assert.match(css,/\.phrase-translation\.is-blurred[^}]*filter\s*:\s*blur/s);
-  assert.match(css,/\.sentence-content[^}]*touch-action\s*:\s*manipulation/s);
-  assert.match(css,/\.en[^}]*user-select\s*:\s*text/s);
+test('phrase save uses pointer events and review blur is presentation-only',()=>{
+  assert.match(app,/phraseSelectionAction\.addEventListener\('pointerdown'/);
+  assert.match(app,/phraseSelectionAction\.addEventListener\('pointerup'/);
+  assert.match(css,/\.phrase-book-panel\.is-blurred \.phrase-book-zh/);
+  assert.match(css,/filter:blur\(/);
+  assert.match(css,/\.en\s*\{[^}]*user-select\s*:\s*text/s);
 });
