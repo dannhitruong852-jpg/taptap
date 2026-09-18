@@ -7,7 +7,7 @@ import { createHybridAudioPlayer } from './hybrid-audio-player.js';
 import { measureLatency } from './latency-metrics.js';
 import { sentenceProgress, isExplicitLegacyTimingVersion } from './progress.js';
 import { readStateAtTime, activeChineseGroups } from './time-index.js';
-import { renderEnglish, renderChinese } from './bilingual-text.js?v=phrase-study-20260918-v4';
+import { renderEnglish, renderChinese } from './bilingual-text.js?v=phrase-study-continuous-20260918-v1';
 import { createTapGuard, createTapArbiter, attachSpeedControl } from './reader-controls.js?v=phrase-study-20260918-v2';
 import { resolvePlayerScroll } from './scroll-behavior.js';
 import { pickArticle, selectArticles, adjacentArticle } from './catalog.js';

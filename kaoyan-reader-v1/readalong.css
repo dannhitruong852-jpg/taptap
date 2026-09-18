@@ -58,13 +58,6 @@
 .sentence-card.is-active .zh .read-token.is-reading {
   opacity: 1;
 }
-.sentence-card.is-active .en .vocab.read-token {
-  background: linear-gradient(transparent 67%, rgba(215,181,110,.26) 0);
-}
-.sentence-card.is-active .en .vocab.read-token.is-read,
-.sentence-card.is-active .en .vocab.read-token.is-reading {
-  background: linear-gradient(transparent 63%, rgba(215,181,110,.52) 0);
-}
 .sentence-card::after {
   content:"";
   position:absolute;

@@ -2,20 +2,42 @@ import { escapeHtml } from './catalog.js';
 
 const WORD_RE=/[A-Za-z]+(?:['’][A-Za-z]+)*(?:-[A-Za-z]+(?:['’][A-Za-z]+)*)*|\d+(?:\.\d+)?/g;
 
-export function renderEnglish(sentence) {
-  const vocabulary=(sentence.vocab||[]).filter(v=>v.level>=6);
+function renderTokenSlice(text, offset = 0) {
   let html='',at=0;
-  for(const match of sentence.en.matchAll(WORD_RE)){
-    const start=match.index,end=start+match[0].length;
-    html+=escapeHtml(sentence.en.slice(at,start));
-    const v=vocabulary.find(v=>start<v.end&&end>v.start);
-    const classes=['read-token'];if(v)classes.push('vocab');
-    let attrs=`class="${classes.join(' ')}" data-char-start="${start}" data-char-end="${end}"`;
-    if(v){const studyGloss=v.study_gloss||v.meaning||'';attrs+=` data-pair="${v.start}:${v.end}" data-level="${v.level}" data-meaning="${escapeHtml(studyGloss)}"`;}
-    html+=`<span ${attrs}>${escapeHtml(match[0])}</span>`;
-    at=end;
+  for(const match of text.matchAll(WORD_RE)){
+    const localStart=match.index,localEnd=localStart+match[0].length;
+    const start=offset+localStart,end=offset+localEnd;
+    html+=escapeHtml(text.slice(at,localStart));
+    html+=`<span class="read-token" data-char-start="${start}" data-char-end="${end}">${escapeHtml(match[0])}</span>`;
+    at=localEnd;
   }
-  return html+escapeHtml(sentence.en.slice(at));
+  return html+escapeHtml(text.slice(at));
+}
+
+function continuousVocabularyRanges(sentence) {
+  const candidates=(sentence.vocab||[])
+    .filter(v=>v.level>=6&&Number.isInteger(v.start)&&Number.isInteger(v.end)&&v.start>=0&&v.end>v.start&&v.end<=sentence.en.length)
+    .sort((a,b)=>a.start-b.start||(b.end-b.start)-(a.end-a.start));
+  const selected=[];
+  let coveredUntil=-1;
+  for(const vocab of candidates){
+    if(vocab.start<coveredUntil)continue;
+    selected.push(vocab);
+    coveredUntil=vocab.end;
+  }
+  return selected;
+}
+
+export function renderEnglish(sentence) {
+  const ranges=continuousVocabularyRanges(sentence);
+  let html='',at=0;
+  for(const vocab of ranges){
+    html+=renderTokenSlice(sentence.en.slice(at,vocab.start),at);
+    const studyGloss=vocab.study_gloss||vocab.meaning||'';
+    html+=`<span class="vocab vocab-range" data-pair="${vocab.start}:${vocab.end}" data-level="${vocab.level}" data-meaning="${escapeHtml(studyGloss)}">${renderTokenSlice(sentence.en.slice(vocab.start,vocab.end),vocab.start)}</span>`;
+    at=vocab.end;
+  }
+  return html+renderTokenSlice(sentence.en.slice(at),at);
 }
 
 export function validChineseRanges(sentence, pairs = []) {
