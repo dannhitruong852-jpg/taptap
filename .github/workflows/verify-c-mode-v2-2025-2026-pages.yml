@@ -1,0 +1,122 @@
+name: Verify C Mode V2 2025-2026 live Pages
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Verify live catalog, content, manifests, and sampled audio
+        env:
+          BASE_URL: https://dannhitruong852-jpg.github.io/taptap/kaoyan-reader-v1
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import time
+          import urllib.error
+          import urllib.request
+
+          base = os.environ["BASE_URL"].rstrip("/")
+          expected_articles = {"cloze", "text1", "text2", "text3", "text4", "partb", "translation"}
+
+          def get(url, binary=False):
+              req = urllib.request.Request(
+                  url,
+                  headers={
+                      "User-Agent": "kaoyan-reader-live-smoke/2025-2026",
+                      "Cache-Control": "no-cache",
+                  },
+              )
+              with urllib.request.urlopen(req, timeout=45) as response:
+                  body = response.read()
+                  if response.status != 200:
+                      raise RuntimeError(f"{url}: HTTP {response.status}")
+                  return body if binary else body.decode("utf-8")
+
+          last_error = None
+          for attempt in range(1, 31):
+              probe = f"?probe={os.environ.get('GITHUB_RUN_ID','manual')}-{attempt}"
+              try:
+                  catalog = json.loads(get(f"{base}/content/catalog.json{probe}"))
+                  rows = catalog["articles"]
+                  years = sorted({row["year"] for row in rows})
+                  assert years == list(range(2002, 2027)), years
+                  assert len(rows) == 172, len(rows)
+
+                  batch_rows = [row for row in rows if row["year"] in (2025, 2026)]
+                  assert len(batch_rows) == 14, len(batch_rows)
+                  for year in (2025, 2026):
+                      year_rows = [row for row in batch_rows if row["year"] == year]
+                      assert len(year_rows) == 7, (year, len(year_rows))
+                      article_names = {
+                          row["id"].split("-", 1)[1]
+                          for row in year_rows
+                      }
+                      assert article_names == expected_articles, (year, article_names)
+
+                  checked = []
+                  for row in batch_rows:
+                      content_rel = row["content"].removeprefix("./")
+                      manifest_rel = row["manifest"].removeprefix("./")
+                      content = json.loads(get(f"{base}/{content_rel}{probe}"))
+                      manifest = json.loads(get(f"{base}/{manifest_rel}{probe}"))
+
+                      article = row["id"].split("-", 1)[1]
+                      assert manifest["year"] == row["year"], row["id"]
+                      assert manifest["article"] == article, row["id"]
+                      assert manifest["c_mode_version"] == "v4", row["id"]
+                      assert manifest["qa"]["technical"] == "passed", row["id"]
+                      assert manifest.get("missing_segments") == [], row["id"]
+                      assert len(manifest["sentences"]) == row["sentences"], row["id"]
+
+                      # Reader content must be the published article that the catalog points to.
+                      assert content["year"] == row["year"], row["id"]
+                      assert content["article"] == article, row["id"]
+
+                      sentences = list(manifest["sentences"].values())
+                      assert sentences, row["id"]
+                      for sentence in sentences:
+                          assert sentence["artificial_pause_ms"] == 0, (row["id"], sentence["id"])
+                          assert sentence["post_tempo"] is False, (row["id"], sentence["id"])
+                          assert sentence["qa"]["technical"] == "passed", (row["id"], sentence["id"])
+
+                      # Live smoke: request one OPUS at the start and one MP3 at the end
+                      # of every article. Full local release validation already verifies
+                      # every referenced asset before publishing.
+                      first_opus = sentences[0]["path"].removeprefix("./")
+                      last_mp3 = sentences[-1]["mp3_path"].removeprefix("./")
+                      assert len(get(f"{base}/{first_opus}{probe}", binary=True)) > 1024, row["id"]
+                      assert len(get(f"{base}/{last_mp3}{probe}", binary=True)) > 1024, row["id"]
+                      checked.append({
+                          "id": row["id"],
+                          "sentences": len(sentences),
+                          "technical": manifest["qa"]["technical"],
+                      })
+
+                  print(json.dumps({
+                      "ok": True,
+                      "attempt": attempt,
+                      "years": years,
+                      "catalog_articles": len(rows),
+                      "batch_articles": len(batch_rows),
+                      "checked": checked,
+                      "errors": [],
+                  }, ensure_ascii=False, indent=2))
+                  break
+              except Exception as exc:
+                  last_error = exc
+                  print(f"attempt {attempt}/30 not ready: {exc}", flush=True)
+                  if attempt == 30:
+                      raise
+                  time.sleep(10)
+          PY
