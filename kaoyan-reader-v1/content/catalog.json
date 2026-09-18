@@ -20,7 +20,8 @@
     2020,
     2021,
     2022,
-    2023
+    2023,
+    2024
   ],
   "default_article": "2002-text1",
   "articles": [
@@ -1256,6 +1257,69 @@
       "content": "./content/2023/c/translation.json",
       "manifest": "./audio/2023/v4/c-translation/manifest.json",
       "sentences": 10
+    },
+    {
+      "id": "2024-cloze",
+      "year": 2024,
+      "section_type": "cloze",
+      "title": "完形填空 · 在社交不足与社交透支之间找到平衡",
+      "content": "./content/2024/c/cloze.json",
+      "manifest": "./audio/2024/v4/c-cloze/manifest.json",
+      "sentences": 19
+    },
+    {
+      "id": "2024-partb",
+      "year": 2024,
+      "section_type": "part_b",
+      "title": "阅读 Part B · 申请大学时，课外活动重在深度、独特性与真实影响",
+      "content": "./content/2024/c/partb.json",
+      "manifest": "./audio/2024/v4/c-partb/manifest.json",
+      "sentences": 16
+    },
+    {
+      "id": "2024-text1",
+      "year": 2024,
+      "section_type": "reading",
+      "title": "阅读 Text 1 · AI 的收益若分配不均，技术扩散本身也会受阻",
+      "content": "./content/2024/c/text1.json",
+      "manifest": "./audio/2024/v4/c-text1/manifest.json",
+      "sentences": 17
+    },
+    {
+      "id": "2024-text2",
+      "year": 2024,
+      "section_type": "reading",
+      "title": "阅读 Text 2 · 英国未来建筑木材危机与生产性植树不足",
+      "content": "./content/2024/c/text2.json",
+      "manifest": "./audio/2024/v4/c-text2/manifest.json",
+      "sentences": 14
+    },
+    {
+      "id": "2024-text3",
+      "year": 2024,
+      "section_type": "reading",
+      "title": "阅读 Text 3 · 老年驾驶安全不能只靠劝退，更需要系统证据与适老汽车",
+      "content": "./content/2024/c/text3.json",
+      "manifest": "./audio/2024/v4/c-text3/manifest.json",
+      "sentences": 17
+    },
+    {
+      "id": "2024-text4",
+      "year": 2024,
+      "section_type": "reading",
+      "title": "阅读 Text 4 · 健康 App 的数据正在跑到既有隐私法律保护范围之外",
+      "content": "./content/2024/c/text4.json",
+      "manifest": "./audio/2024/v4/c-text4/manifest.json",
+      "sentences": 16
+    },
+    {
+      "id": "2024-translation",
+      "year": 2024,
+      "section_type": "translation",
+      "title": "翻译 · 农贸市场如何同时连接感官、生产者、本地经济与时令食物",
+      "content": "./content/2024/c/translation.json",
+      "manifest": "./audio/2024/v4/c-translation/manifest.json",
+      "sentences": 6
     }
   ]
 }

@@ -1,0 +1,553 @@
+{
+  "year": 2024,
+  "section_type": "reading",
+  "article_id": "text3",
+  "source_sha256": "94b209362bfd0e33b8d7c52239522511bf499983e1046123c7a74c25c2c8ff78",
+  "source_pages": [
+    8,
+    9
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "12",
+  "article_context": "文章讨论高龄驾驶者安全管理：停止驾驶对个人生活影响巨大，各州医生报告规则不一，相关研究又分散在多个专业；面对百岁寿命社会，还需要更好的证据、现场换证与视力检测，以及真正适合高龄驾驶者的汽车。",
+  "article": {
+    "year": 2024,
+    "section": "text3",
+    "title": "阅读 Text 3 · 老年驾驶安全不能只靠劝退，更需要系统证据与适老汽车",
+    "background": "文章讨论高龄驾驶者安全管理：停止驾驶对个人生活影响巨大，各州医生报告规则不一，相关研究又分散在多个专业；面对百岁寿命社会，还需要更好的证据、现场换证与视力检测，以及真正适合高龄驾驶者的汽车。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "One of the biggest challenges in keeping unsafe aging drivers off the road is convincing them that it’s time to turn over the keys.",
+      "zh": "让存在安全风险的高龄驾驶者离开道路，最大的难题之一，是说服他们到了交出车钥匙的时候。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "One of the biggest challenges in keeping unsafe aging drivers off the road is convincing them that it’s time to turn over the keys.",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text3/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "“It’s a complete life-changer” when someone stops—or is forced to stop—driving, said former risk manager Anne M. Menke.",
+      "zh": "前风险经理安妮·M·门克说，一个人停止驾驶——或者被迫停止驾驶——“会彻底改变他的生活”。",
+      "vocab": [],
+      "discourse_function": "evaluation_quote",
+      "prosody_focus": "",
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "“It’s a complete life-changer” when someone stops—or is forced to stop—driving, said former risk manager Anne M. Menke.",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "serious",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text3/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 2,
+      "en": "“The American Medical Association advises physicians that ‘in situations where clear evidence of substantial driving impairment implies a strong threat to patient and public safety, and where the physician’s advice to discontinue driving privileges is ignored, it is desirable and ethical to notify the Department of Motor Vehicles,’” Menke wrote.",
+      "zh": "门克写道：“美国医学会建议医生，‘如果有明确证据表明严重的驾驶能力受损会对患者本人和公共安全构成重大威胁，而且患者无视医生停止驾驶的建议，那么通知机动车管理部门是合适且符合伦理的。’”",
+      "vocab": [
+        {
+          "word": "impairment",
+          "lemma": "impairment",
+          "level": 6,
+          "meaning": "能力受损",
+          "start": 117,
+          "end": 127
+        }
+      ],
+      "discourse_function": "dialogue",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "“The American Medical Association advises physicians that ‘in situations where clear evidence of substantial driving impairment implies a strong threat to patient and public safety, and where the physician’s advice to discontinue driving privileges is ignored, it is desirable and ethical to notify the Department of Motor Vehicles,’” Menke wrote.",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text3/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "“Some states require physicians to report, others allow but do not mandate reports, while a few consider a report a breach of confidentiality.",
+      "zh": "“有些州要求医生报告，有些州允许但不强制报告，还有少数州认为报告会违反保密义务。",
+      "vocab": [
+        {
+          "word": "confidentiality",
+          "lemma": "confidentiality",
+          "level": 7,
+          "meaning": "保密",
+          "start": 126,
+          "end": 141
+        }
+      ],
+      "discourse_function": "dialogue",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "“Some states require physicians to report, others allow but do not mandate reports, while a few consider a report a breach of confidentiality.",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text3/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "There could be liability and penalties if a physician does not act in accordance with state laws on reporting and confidentiality,” she counseled.",
+      "zh": "她提醒说，如果医生没有依照州法律处理报告和保密问题，可能要承担法律责任并受到处罚。”",
+      "vocab": [
+        {
+          "word": "confidentiality",
+          "lemma": "confidentiality",
+          "level": 7,
+          "meaning": "保密",
+          "start": 114,
+          "end": 129
+        }
+      ],
+      "discourse_function": "warning",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "There could be liability and penalties if a physician does not act in accordance with state laws on reporting and confidentiality,” she counseled.",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text3/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 3,
+      "en": "Part of the problem in keeping older drivers safe is that the difficulties are addressed piecemeal by different professions with different focuses, including gerontologists, highway administration officials, automotive engineers and others, said gerontologist Elizabeth Dugan.",
+      "zh": "老年学家伊丽莎白·杜根说，保障高龄驾驶者安全的部分难题在于，这些问题被不同专业以各自不同的重点零散处理，包括老年学家、公路管理官员、汽车工程师等。",
+      "vocab": [
+        {
+          "word": "piecemeal",
+          "lemma": "piecemeal",
+          "level": 7,
+          "meaning": "零散",
+          "start": 89,
+          "end": 98
+        },
+        {
+          "word": "gerontologists",
+          "lemma": "gerontologist",
+          "level": 8,
+          "meaning": "老年学家",
+          "start": 158,
+          "end": 172
+        },
+        {
+          "word": "gerontologist",
+          "lemma": "gerontologist",
+          "level": 8,
+          "meaning": "老年学家",
+          "start": 246,
+          "end": 259
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "Part of the problem in keeping older drivers safe is that the difficulties are addressed piecemeal by different professions with different focuses, including gerontologists, highway administration officials, automotive engineers and others, said gerontologist Elizabeth Dugan.",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text3/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 3,
+      "en": "“There’s not a National Institute of Older Driver Studies,” she said.",
+      "zh": "她说：“我们并没有一个‘国家老年驾驶研究所’。”",
+      "vocab": [],
+      "discourse_function": "dialogue",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "“There’s not a National Institute of Older Driver Studies,” she said.",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text3/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 3,
+      "en": "“We need better evidence on what makes drivers unsafe” and what can help, said Dugan.",
+      "zh": "杜根说：“我们需要更好的证据来说明什么会使驾驶者变得不安全”，以及什么办法能够真正起作用。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "“We need better evidence on what makes drivers unsafe” and what can help, said Dugan.",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text3/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 4,
+      "en": "One thing that does seem to work is requiring drivers to report in person for license renewal.",
+      "zh": "一项看起来确实有效的措施，是要求驾驶者本人到场办理驾照续期。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "One thing that does seem to work is requiring drivers to report in person for license renewal.",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text3/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 4,
+      "en": "Mandatory in-person renewal was associated with a 31 per cent reduction in fatal crashes involving drivers 85 or older, according to one study.",
+      "zh": "一项研究显示，强制本人到场续照与85岁及以上驾驶者致命事故减少31%相关。",
+      "vocab": [
+        {
+          "word": "Mandatory",
+          "lemma": "mandatory",
+          "level": 6,
+          "meaning": "强制",
+          "start": 0,
+          "end": 9
+        }
+      ],
+      "discourse_function": "statistic",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "Mandatory in-person renewal was associated with a 31 per cent reduction in fatal crashes involving drivers 85 or older, according to one study.",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text3/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 4,
+      "en": "Passing vision tests also produced a similar decline in fatal crashes for those drivers, although there appeared to be no benefit from combining the two.",
+      "zh": "通过视力测试也使这类驾驶者的致命事故出现相近幅度的下降，不过把两项措施结合起来似乎没有额外收益。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": "",
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "Passing vision tests also produced a similar decline in fatal crashes for those drivers, although there appeared to be no benefit from combining the two.",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text3/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 5,
+      "en": "Many older drivers don’t see eye doctors or can’t afford to.",
+      "zh": "许多高龄驾驶者不去看眼科医生，或者负担不起相关费用。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": "",
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "Many older drivers don’t see eye doctors or can’t afford to.",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text3/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 5,
+      "en": "Primary care providers have their hands full and may not be able to follow through with patients who have trouble driving because they can’t turn their heads or remember where they are going—or have gotten shorter and haven’t changed their seat settings sufficiently to reach car pedals easily.",
+      "zh": "基层医疗人员本就十分忙碌，可能无法持续跟进那些因无法转头、记不清目的地而驾驶困难的患者；还有些人随着身高变矮，却没有相应调整座椅，以至于难以轻松踩到踏板。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "Primary care providers have their hands full and may not be able to follow through with patients who have trouble driving because they can’t turn their heads or remember where they are going—or have gotten shorter and haven’t changed their seat settings sufficiently to reach car pedals easily.",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text3/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 6,
+      "en": "As long as there are other cars on the roads, self-driving cars won’t solve the problems of crashes, said Dugan.",
+      "zh": "杜根说，只要道路上还有其他汽车，自动驾驶汽车就无法解决碰撞事故问题。",
+      "vocab": [],
+      "discourse_function": "qualify",
+      "prosody_focus": "",
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "As long as there are other cars on the roads, self-driving cars won’t solve the problems of crashes, said Dugan.",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text3/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 6,
+      "en": "Avoiding dangers posed by all those human drivers would require too many algorithms, she said.",
+      "zh": "她说，要避开所有人类驾驶者带来的危险，需要数量过于庞大的算法。",
+      "vocab": [
+        {
+          "word": "algorithms",
+          "lemma": "algorithms",
+          "level": 6,
+          "meaning": "算法",
+          "start": 73,
+          "end": 83
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "Avoiding dangers posed by all those human drivers would require too many algorithms, she said.",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text3/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 6,
+      "en": "But we need to do more to improve safety, said Dugan.",
+      "zh": "但杜根认为，我们仍需要做更多事情来提升安全。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "But we need to do more to improve safety, said Dugan.",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text3/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 6,
+      "en": "“If we’re going to have 100-year lives, we need cars that a 90-year-old can drive comfortably.”",
+      "zh": "“如果人类将拥有百岁人生，我们就需要让90岁老人也能舒适驾驶的汽车。”",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "“If we’re going to have 100-year lives, we need cars that a 90-year-old can drive comfortably.”",
+          "speaker_role": "narrator",
+          "actor_id": "12",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text3/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

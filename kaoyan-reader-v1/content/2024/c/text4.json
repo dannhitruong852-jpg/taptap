@@ -1,0 +1,518 @@
+{
+  "year": 2024,
+  "section_type": "reading",
+  "article_id": "text4",
+  "source_sha256": "94b209362bfd0e33b8d7c52239522511bf499983e1046123c7a74c25c2c8ff78",
+  "source_pages": [
+    10,
+    11
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "14",
+  "article_context": "健康应用迅速普及，但其收集的消费者健康数据常不受传统医疗隐私法同等保护；美国联邦贸易委员会主要只能事后执法，因此部分州开始通过自己的消费者数据隐私立法填补空白。",
+  "article": {
+    "year": 2024,
+    "section": "text4",
+    "title": "阅读 Text 4 · 健康 App 的数据正在跑到既有隐私法律保护范围之外",
+    "background": "健康应用迅速普及，但其收集的消费者健康数据常不受传统医疗隐私法同等保护；美国联邦贸易委员会主要只能事后执法，因此部分州开始通过自己的消费者数据隐私立法填补空白。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "If you look at the apps on your phone, chances are you have at least one related to your health—and probably several.",
+      "zh": "如果看看手机里的应用，你很可能至少有一个与健康相关——而且多半不止一个。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "If you look at the apps on your phone, chances are you have at least one related to your health—and probably several.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text4/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Whether it is a mental health app, a fitness tracker, a connected health device or something else, many of us are taking advantage of this technology to keep better track of our health in some shape or form.",
+      "zh": "无论是心理健康应用、健身追踪器、联网健康设备还是其他工具，我们中的许多人都在借助这类技术，以某种方式更好地追踪自己的健康状况。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Whether it is a mental health app, a fitness tracker, a connected health device or something else, many of us are taking advantage of this technology to keep better track of our health in some shape or form.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text4/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "Recent research from the Organization for the Review of Care and Health Applications found that 350,000 health apps were available on the market, 90,000 of which launched in 2020 alone.",
+      "zh": "“护理与健康应用评审组织”的最新研究发现，市场上已有35万个健康应用，仅2020年就上线了9万个。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "Recent research from the Organization for the Review of Care and Health Applications found that 350,000 health apps were available on the market, 90,000 of which launched in 2020 alone.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text4/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "While these apps have a great deal to offer, it is not always clear how the personal information we input is collected, safeguarded and shared online.",
+      "zh": "尽管这些应用能提供很多帮助，但我们输入的个人信息究竟如何被收集、保护并在网上共享，并不总是清楚。",
+      "vocab": [
+        {
+          "word": "safeguarded",
+          "lemma": "safeguarded",
+          "level": 6,
+          "meaning": "保护",
+          "start": 120,
+          "end": 131
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "While these apps have a great deal to offer, it is not always clear how the personal information we input is collected, safeguarded and shared online.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text4/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "Existing health privacy law, such as the Health Insurance Portability and Accountability Act, is primarily focused on the way hospitals, doctors’ offices, clinics and insurance companies store health records online.",
+      "zh": "现有的健康隐私法律，例如《健康保险流通与责任法案》，主要关注医院、医生诊所、医疗机构和保险公司如何在线存储健康记录。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Existing health privacy law, such as the Health Insurance Portability and Accountability Act, is primarily focused on the way hospitals, doctors’ offices, clinics and insurance companies store health records online.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text4/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "The health information these apps and health data tracking wearables are collecting typically does not receive the same legal protections.",
+      "zh": "而这些应用和健康数据追踪可穿戴设备所收集的健康信息，通常得不到同等程度的法律保护。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "The health information these apps and health data tracking wearables are collecting typically does not receive the same legal protections.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text4/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 3,
+      "en": "Without additional protections in place, companies may share (and potentially monetize) personal health information in a way consumers may not have authorized or anticipated.",
+      "zh": "如果没有额外保护，公司可能会以消费者并未授权或预料的方式共享个人健康信息，甚至借此获利。",
+      "vocab": [
+        {
+          "word": "monetize",
+          "lemma": "monetize",
+          "level": 7,
+          "meaning": "获利",
+          "start": 78,
+          "end": 86
+        }
+      ],
+      "discourse_function": "warning",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "Without additional protections in place, companies may share (and potentially monetize) personal health information in a way consumers may not have authorized or anticipated.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text4/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 3,
+      "en": "In 2021, Flo Health faced a Federal Trade Commission (FTC) investigation.",
+      "zh": "2021年，Flo Health 接受了美国联邦贸易委员会（FTC）的调查。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": "",
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "In 2021, Flo Health faced a Federal Trade Commission (FTC) investigation.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text4/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 3,
+      "en": "The FTC alleged in a complaint that “despite express privacy claims, the company took control of users’ sensitive fertility data and shared it with third parties.”",
+      "zh": "FTC 在诉状中指称，“尽管公司明确作出隐私承诺，它仍掌控了用户敏感的生育数据，并将其分享给第三方。”",
+      "vocab": [
+        {
+          "word": "fertility",
+          "lemma": "fertility",
+          "level": 6,
+          "meaning": "生育",
+          "start": 114,
+          "end": 123
+        }
+      ],
+      "discourse_function": "evaluation_quote",
+      "prosody_focus": "",
+      "contrast_level": "strong",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "The FTC alleged in a complaint that “despite express privacy claims, the company took control of users’ sensitive fertility data and shared it with third parties.”",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "serious",
+          "intensity": 2,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text4/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 3,
+      "en": "Flo Health and the FTC settled the matter with a Consent Order requiring the company to get app users’ express affirmative consent before sharing their health information as well as to instruct the third parties to delete the data they had obtained.",
+      "zh": "Flo Health 与 FTC 通过一项同意令解决了此事：公司在共享应用用户的健康信息前，必须获得用户明确的肯定同意，并要求第三方删除此前取得的数据。",
+      "vocab": [],
+      "discourse_function": "sequence",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "Flo Health and the FTC settled the matter with a Consent Order requiring the company to get app users’ express affirmative consent before sharing their health information as well as to instruct the third parties to delete the data they had obtained.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text4/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 4,
+      "en": "Section 5 of the FTC Act empowers the FTC to initiate enforcement action against unfair or deceptive acts, meaning the FTC can only act after the fact if a company’s privacy practices are misleading or cause unjustified consumer harm.",
+      "zh": "《联邦贸易委员会法》第5条授权 FTC 对不公平或欺骗性行为采取执法行动，这意味着只有当公司的隐私做法具有误导性或造成不正当的消费者损害后，FTC 才能事后介入。",
+      "vocab": [
+        {
+          "word": "deceptive",
+          "lemma": "deceptive",
+          "level": 6,
+          "meaning": "欺骗性",
+          "start": 91,
+          "end": 100
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "Section 5 of the FTC Act empowers the FTC to initiate enforcement action against unfair or deceptive acts, meaning the FTC can only act after the fact if a company’s privacy practices are misleading or cause unjustified consumer harm.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text4/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 4,
+      "en": "While the FTC is doing what it can to ensure apps are keeping their promises to consumers around the handling of their sensitive health information, the rate at which these health apps are hitting the market demonstrates just how immense of a challenge this is.",
+      "zh": "尽管 FTC 正尽力确保应用在处理敏感健康信息时兑现对消费者的承诺，但健康应用涌入市场的速度表明，这项挑战规模极其巨大。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "While the FTC is doing what it can to ensure apps are keeping their promises to consumers around the handling of their sensitive health information, the rate at which these health apps are hitting the market demonstrates just how immense of a challenge this is.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text4/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 5,
+      "en": "As to the prospects for federal legislation, commentators suggest that comprehensive federal privacy legislation seems unlikely in the short term.",
+      "zh": "至于联邦立法前景，评论人士认为，短期内出台全面的联邦隐私立法似乎不太可能。",
+      "vocab": [
+        {
+          "word": "legislation",
+          "lemma": "legislation",
+          "level": 6,
+          "meaning": "立法",
+          "start": 32,
+          "end": 43
+        },
+        {
+          "word": "legislation",
+          "lemma": "legislation",
+          "level": 6,
+          "meaning": "立法",
+          "start": 101,
+          "end": 112
+        }
+      ],
+      "discourse_function": "qualify",
+      "prosody_focus": "",
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "As to the prospects for federal legislation, commentators suggest that comprehensive federal privacy legislation seems unlikely in the short term.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text4/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 5,
+      "en": "States have begun implementing their own solutions to shore up protections for consumer-generated health data.",
+      "zh": "各州已经开始实施自己的方案，以加强对消费者生成的健康数据的保护。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "States have begun implementing their own solutions to shore up protections for consumer-generated health data.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text4/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 5,
+      "en": "California has been at the forefront of state privacy efforts with the California Consumer Privacy Act of 2018.",
+      "zh": "加利福尼亚州凭借2018年《加州消费者隐私法案》一直走在州级隐私保护行动的前列。",
+      "vocab": [],
+      "discourse_function": "example",
+      "prosody_focus": "",
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "California has been at the forefront of state privacy efforts with the California Consumer Privacy Act of 2018.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text4/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 5,
+      "en": "Virginia, Colorado and Utah have also recently passed state consumer data privacy legislation.",
+      "zh": "弗吉尼亚州、科罗拉多州和犹他州近期也通过了州级消费者数据隐私立法。",
+      "vocab": [
+        {
+          "word": "legislation",
+          "lemma": "legislation",
+          "level": 6,
+          "meaning": "立法",
+          "start": 82,
+          "end": 93
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "Virginia, Colorado and Utah have also recently passed state consumer data privacy legislation.",
+          "speaker_role": "narrator",
+          "actor_id": "14",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2024/c-text4/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}
