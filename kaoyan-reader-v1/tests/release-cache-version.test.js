@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const html = readFileSync(join(root, 'index.html'), 'utf8');
 const staticCache = readFileSync(join(root, 'static-resource-cache.js'), 'utf8');
-const release = 'phrase-study-continuous-20260918-v2';
+const release = 'phrase-study-edit-20260919-v1';
 
 test('reader UI assets share a release cache-busting version', () => {
   for (const asset of ['styles.css', 'catalog.css', 'readalong.css', 'reader-controls.css', 'app.js', 'full-library-bootstrap.js']) {
