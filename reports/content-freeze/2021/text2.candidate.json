@@ -1,0 +1,146 @@
+{
+  "year": 2021,
+  "article": {
+    "id": "text2",
+    "section_type": "reading",
+    "title": "阅读 Text 2 · 英国粮食自给真的可行吗",
+    "pages": [
+      5,
+      6
+    ],
+    "actor": "03",
+    "accent": "en-GB",
+    "context": "文章评估脱欧背景下英国提高粮食自给率的主张，指出土地、气候、畜牧结构和耕地比例决定了完全自给并不现实。",
+    "editorial_status": "reviewed_candidate",
+    "rows": [
+      [
+        1,
+        "With the global population predicted to hit close to 10 billion by 2050, and forecasts that agricultural production in some regions will need to nearly double to keep pace, food security is increasingly making headlines.",
+        "预计到2050年全球人口将接近100亿，一些地区的农业产量需要接近翻番才能跟上需求，因此粮食安全越来越受到关注。",
+        "advance",
+        []
+      ],
+      [
+        1,
+        "In the UK, it has become a big talking point recently too, for a rather particular reason: Brexit.",
+        "在英国，粮食安全最近也成为热门话题，原因很特别：脱欧。",
+        "explain",
+        []
+      ],
+      [
+        2,
+        "Brexit is seen by some as an opportunity to reverse a recent trend towards the UK importing food.",
+        "一些人把脱欧视为扭转英国近年来食品进口趋势的机会。",
+        "report",
+        []
+      ],
+      [
+        2,
+        "The country produces only about 60 per cent of the food it eats, down from almost three-quarters in the late 1980s.",
+        "英国目前只生产本国消费食品的大约60%，低于20世纪80年代末接近四分之三的水平。",
+        "statistic",
+        []
+      ],
+      [
+        2,
+        "A move back to self-sufficiency, the argument goes, would boost the farming industry, political sovereignty and even the nation's health.",
+        "这种观点认为，重新走向自给自足会促进农业、政治主权，甚至改善国民健康。",
+        "explain",
+        []
+      ],
+      [
+        2,
+        "Sounds great—but how feasible is this vision?",
+        "听起来很美好——但这种愿景究竟有多可行？",
+        "ask",
+        []
+      ],
+      [
+        3,
+        "According to a report on UK food production from the University of Leeds, UK, 85 per cent of the country's total land area is associated with meat and dairy production.",
+        "英国利兹大学一份关于本国食品生产的报告称，全国85%的土地面积与肉类和乳制品生产有关。",
+        "report",
+        []
+      ],
+      [
+        3,
+        "That supplies 80 per cent of what is consumed, so even covering the whole country in livestock farms wouldn't allow us to cover all our meat and dairy needs.",
+        "这些土地供应了消费量的80%，因此即使把全国都变成畜牧场，也无法满足全部肉类和乳制品需求。",
+        "conclude",
+        []
+      ],
+      [
+        4,
+        "There are many caveats to those figures, but they are still grave.",
+        "这些数字有许多限制条件，但情况依然严峻。",
+        "qualify",
+        []
+      ],
+      [
+        4,
+        "To become much more self-sufficient, the UK would need to drastically reduce its consumption of animal foods, and probably also farm more intensively—meaning fewer green fields and more factory-style production.",
+        "要显著提高自给率，英国就必须大幅减少动物性食品消费，也可能需要更集约地耕作——这意味着更少的绿色田野和更多工厂化生产。",
+        "warning",
+        []
+      ],
+      [
+        5,
+        "But switching to a mainly plant-based diet wouldn't help.",
+        "但改成以植物为主的饮食也无济于事。",
+        "contrast",
+        []
+      ],
+      [
+        5,
+        "There is a good reason why the UK is dominated by animal husbandry: most of its terrain doesn't have the right soil or climate to grow crops on a commercial basis.",
+        "英国以畜牧业为主有充分理由：大部分地区的土壤或气候并不适合商业化种植农作物。",
+        "explain",
+        []
+      ],
+      [
+        5,
+        "Just 25 per cent of the country's land is suitable for crop-growing, most of which is already occupied by arable fields.",
+        "全国只有25%的土地适合种植作物，而且其中大部分已经是耕地。",
+        "statistic",
+        []
+      ],
+      [
+        5,
+        "Even if we converted all the suitable land to fields of fruit and veg—which would involve taking out all the nature reserves and removing thousands of people from their homes—we would achieve only a 30 per cent boost in crop production.",
+        "即使把所有适宜土地都改成果蔬田——这将意味着取消所有自然保护区并让数千人搬离家园——作物产量也只能提高30%。",
+        "statistic",
+        []
+      ],
+      [
+        6,
+        "Just 23 per cent of the fruit and vegetables consumed in the UK are currently home-grown, so even with the most extreme measures we could meet only 30 per cent of our fresh produce needs.",
+        "目前英国消费的果蔬只有23%是本土生产，因此即便采取最极端措施，也只能满足30%的新鲜农产品需求。",
+        "statistic",
+        []
+      ],
+      [
+        6,
+        "That is before we look for the space to grow the grains, sugars, seeds and oils that provide us with the vast bulk of our current calorie intake.",
+        "这还没有考虑要从哪里腾出土地，去种植构成我们当前绝大部分热量来源的谷物、糖料、种子和油料作物。",
+        "conclude",
+        []
+      ]
+    ]
+  },
+  "qa": {
+    "review_schema_version": "c-mode-v2-1",
+    "source_scope_verified": true,
+    "scope_exclusions_reviewed": true,
+    "text_fidelity_reviewed": true,
+    "translation_alignment_reviewed": true,
+    "sentence_alignment_reviewed": true,
+    "status": "reviewed_candidate",
+    "review_method": "visual PDF review plus reviewed sentence-level bilingual manuscript",
+    "unresolved_sections": [],
+    "source_pdf": "2021年考研英语二真题（可复制搜索查词）.pdf",
+    "source_sha256": "b29aa8ed12fc42ed09c28f9a330df5ea3704ffefe260ee8f97ff4d80af39da6f",
+    "sentence_count": 16,
+    "expected_sentences": 16,
+    "actual_sentences": 16
+  }
+}

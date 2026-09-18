@@ -1,0 +1,82 @@
+{
+  "year": 2021,
+  "article": {
+    "id": "translation",
+    "section_type": "translation",
+    "title": "翻译 · 陌生人的短暂交流也能提升归属感",
+    "pages": [
+      13
+    ],
+    "actor": "15",
+    "accent": "en-US",
+    "context": "文章介绍研究发现：与陌生人交谈往往会改善情绪与归属感，而人们之所以回避，常是误以为陌生人不愿交流。",
+    "editorial_status": "reviewed_candidate",
+    "rows": [
+      [
+        1,
+        "We tend to think that friends and family members are our biggest sources of connection, laughter, and warmth.",
+        "我们往往认为，朋友和家人是我们获得联结、欢笑与温暖的最大来源。",
+        "advance",
+        []
+      ],
+      [
+        1,
+        "While that may well be true, researchers have also recently found that interacting with strangers actually brings a boost in mood and feelings of belonging that we didn't expect.",
+        "这很可能确实如此，但研究人员最近还发现，与陌生人互动实际上会带来我们未曾预料的情绪改善和归属感提升。",
+        "contrast",
+        []
+      ],
+      [
+        2,
+        "In one series of studies, researchers instructed Chicago-area commuters using public transportation to strike up a conversation with someone near them.",
+        "在一系列研究中，研究人员让芝加哥地区乘坐公共交通的通勤者主动与身边的人交谈。",
+        "report",
+        []
+      ],
+      [
+        2,
+        "On average, participants who followed this instruction felt better than those who had been told to stand or sit in silence.",
+        "平均而言，照做的参与者比那些被要求默默站着或坐着的人感觉更好。",
+        "compare",
+        []
+      ],
+      [
+        2,
+        "The researchers also argued that when we shy away from casual interactions with strangers, it is often due to a misplaced anxiety that they might not want to talk to us.",
+        "研究人员还认为，我们之所以回避与陌生人的随意交流，往往源于一种错位的焦虑：担心对方不愿和我们说话。",
+        "explain",
+        []
+      ],
+      [
+        2,
+        "Much of the time, however, this belief is false.",
+        "然而很多时候，这种想法并不正确。",
+        "contrast",
+        []
+      ],
+      [
+        2,
+        "As it turns out, many people are actually perfectly willing to talk—and may even be flattered to receive your attention.",
+        "事实证明，许多人其实非常愿意交谈，甚至可能因为得到你的关注而感到受宠若惊。",
+        "conclude",
+        []
+      ]
+    ]
+  },
+  "qa": {
+    "review_schema_version": "c-mode-v2-1",
+    "source_scope_verified": true,
+    "scope_exclusions_reviewed": true,
+    "text_fidelity_reviewed": true,
+    "translation_alignment_reviewed": true,
+    "sentence_alignment_reviewed": true,
+    "status": "reviewed_candidate",
+    "review_method": "visual PDF review plus reviewed sentence-level bilingual manuscript",
+    "unresolved_sections": [],
+    "source_pdf": "2021年考研英语二真题（可复制搜索查词）.pdf",
+    "source_sha256": "b29aa8ed12fc42ed09c28f9a330df5ea3704ffefe260ee8f97ff4d80af39da6f",
+    "sentence_count": 7,
+    "expected_sentences": 7,
+    "actual_sentences": 7
+  }
+}
