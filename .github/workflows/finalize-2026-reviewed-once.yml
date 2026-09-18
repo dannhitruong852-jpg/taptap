@@ -3,7 +3,7 @@ name: Finalize reviewed 2026 curated once
 on:
   push:
     branches:
-      - c-mode-v2-2026-2026-production
+      - c-mode-v2-2025-2026-production
     paths:
       - '.github/workflows/finalize-2026-reviewed-once.yml'
 
