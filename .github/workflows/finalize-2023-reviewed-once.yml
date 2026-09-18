@@ -10,6 +10,9 @@ on:
 permissions:
   contents: write
 
+env:
+  PYTHONPATH: .:voice-pipeline:content-pipeline
+
 jobs:
   finalize:
     runs-on: ubuntu-latest
