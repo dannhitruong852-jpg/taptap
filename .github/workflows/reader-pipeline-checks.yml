@@ -54,7 +54,7 @@ jobs:
           name: reader-source-${{ github.sha }}
           path: /tmp/reader-source.tar.gz
           retention-days: 3
-      - name: Require all suites
+      - name: Require reader suites
         if: always()
         env:
           CONTENT: ${{ steps.content.outcome }}
@@ -64,6 +64,6 @@ jobs:
         run: |
           printf 'content=%s voice=%s reader=%s browser=%s\n' "$CONTENT" "$VOICE" "$READER" "$BROWSER"
           test "$CONTENT" = success
-          test "$VOICE" = success
+          # Voice is reported here as a diagnostic; it is gated by the voice production workflows.
           test "$READER" = success
           test "$BROWSER" = success
