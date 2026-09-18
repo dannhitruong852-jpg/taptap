@@ -6,10 +6,10 @@
   <meta name="theme-color" content="#f5f1e8">
   <meta name="description" content="2002 考研英语 C 模式双语精读：预生成音频、逐句朗读、零运行时 TTS。">
   <title>2002 · 英语真题精读</title>
-  <link rel="stylesheet" href="./styles.css?v=phrase-study-continuous-20260918-v2">
-  <link rel="stylesheet" href="./catalog.css?v=phrase-study-continuous-20260918-v2">
-  <link rel="stylesheet" href="./readalong.css?v=phrase-study-continuous-20260918-v2">
-  <link rel="stylesheet" href="./reader-controls.css?v=phrase-study-continuous-20260918-v2">
+  <link rel="stylesheet" href="./styles.css?v=phrase-study-edit-20260919-v1">
+  <link rel="stylesheet" href="./catalog.css?v=phrase-study-edit-20260919-v1">
+  <link rel="stylesheet" href="./readalong.css?v=phrase-study-edit-20260919-v1">
+  <link rel="stylesheet" href="./reader-controls.css?v=phrase-study-edit-20260919-v1">
   <style>
     .transport-row{left:94px;right:10px;grid-template-columns:46px 56px 46px 68px;gap:12px;justify-content:end;align-items:center}
     .article-nav{width:46px;height:46px}
@@ -17,7 +17,7 @@
     .article-nav::before{display:none}
     .transport-icon{position:absolute;z-index:2;left:50%;top:50%;width:20px;height:20px;transform:translate(-50%,-50%);fill:none;stroke:#55524c;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
     .play-button{width:56px;height:56px}.play-button::after{width:50px;height:50px}
-    @media(max-width:350px){.transport-row{left:76px;right:6px;grid-template-columns:42px 52px 42px 62px;gap:6px}.article-nav{width:42px;height:42px}.article-nav::after{width:36px;height:36px}.play-button{width:52px;height:52px}.play-button::after{width:46px;height:46px}.speed-control{width:62px}.speed-value{width:62px;min-width:62px}}
+    @media(max-width:350px){.transport-row{left:76px;right:6px;grid-template-columns:42px 52px 42px 62px;gap:6px}.article-nav{width:42px;height:42px}.article-nav::after{width:36px;height:36px}.play-button{width:52px;height:52px}.play-button::after{width:46px;height:46px}.player-phrase-book{width:62px;min-width:62px}}
   </style>
 </head>
 <body data-mood="warm" data-reader-ui="tap-translate-v1">
@@ -41,10 +41,7 @@
       </div>
       <div class="reader-settings">
         <span>先读英文，轻点查译文</span>
-        <div class="reader-setting-actions">
-          <button id="phrase-book-open" class="phrase-book-open" type="button" aria-haspopup="dialog">2002 词群本</button>
-          <button id="toggle-vocab" class="vocab-toggle" type="button" role="switch" aria-checked="true" aria-label="6级及以上难词双语标注"><span>难词 6+</span><i aria-hidden="true"></i></button>
-        </div>
+        <button id="toggle-vocab" class="vocab-toggle" type="button" role="switch" aria-checked="true" aria-label="6级及以上难词双语标注"><span>难词 6+</span><i aria-hidden="true"></i></button>
       </div>
     </header>
     <section class="howto" aria-label="使用方法"><span>轻点句框查译文</span><b>·</b><span>双击重播</span><b>·</b><span>长按选词群并标记</span></section>
@@ -62,15 +59,7 @@
       <button id="previous" class="icon-button article-nav previous-article" type="button" aria-label="上一篇" title="上一篇"><svg class="transport-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14.5 5.5 8 12l6.5 6.5"/></svg><span class="control-label">上一篇</span></button>
       <button id="play-toggle" class="play-button" type="button" aria-label="播放" title="播放暂停"><span class="control-label">播放</span></button>
       <button id="next" class="icon-button article-nav next-article" type="button" aria-label="下一篇" title="下一篇"><svg class="transport-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9.5 5.5 6.5 6.5-6.5 6.5"/></svg><span class="control-label">下一篇</span></button>
-      <div id="speed-control" class="speed-control">
-        <button id="speed-value" class="speed-value" type="button" aria-label="倍速 1.0×" aria-haspopup="menu" aria-expanded="false">1.0×</button>
-        <div class="speed-menu" role="menu" aria-label="选择播放倍速" hidden>
-          <button type="button" role="menuitemradio" aria-checked="false" data-speed="1.7">1.7×</button>
-          <button type="button" role="menuitemradio" aria-checked="false" data-speed="1.3">1.3×</button>
-          <button type="button" role="menuitemradio" aria-checked="true" data-speed="1">1.0×</button>
-          <button type="button" role="menuitemradio" aria-checked="false" data-speed="0.7">0.7×</button>
-        </div>
-      </div>
+      <button id="phrase-book-open" class="player-phrase-book" type="button" aria-haspopup="dialog">词群本</button>
     </div>
   </aside>
   <div id="phrase-study-bar" class="phrase-study-bar" hidden>
@@ -89,7 +78,10 @@
       </header>
       <div class="phrase-book-toolbar">
         <label>年份 <select id="phrase-book-year" aria-label="词群本年份"></select></label>
-        <button id="phrase-book-blur" class="phrase-book-blur" type="button" aria-pressed="false">模糊译文</button>
+        <div class="phrase-book-toolbar-actions">
+          <button id="phrase-book-blur" class="phrase-book-blur" type="button" aria-pressed="false">模糊译文</button>
+          <button id="phrase-book-edit" class="phrase-book-edit" type="button" aria-pressed="false">编辑</button>
+        </div>
       </div>
       <div class="phrase-book-columns" aria-hidden="true"><span>英文词群</span><span>对应中文</span></div>
       <div id="phrase-book-list" class="phrase-book-list"></div>
@@ -97,7 +89,7 @@
     </aside>
   </div>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script type="module" src="./app.js?v=phrase-study-continuous-20260918-v2"></script>
-  <script type="module" src="./full-library-bootstrap.js?v=phrase-study-continuous-20260918-v2"></script>
+  <script type="module" src="./app.js?v=phrase-study-edit-20260919-v1"></script>
+  <script type="module" src="./full-library-bootstrap.js?v=phrase-study-edit-20260919-v1"></script>
 </body>
 </html>
