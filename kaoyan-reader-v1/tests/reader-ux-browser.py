@@ -45,6 +45,8 @@ class ReaderUX(unittest.TestCase):
             const nativePlay=a.play.bind(a); a.play=(...playArgs)=>{a.__playCalls++;return nativePlay(...playArgs);};
             window.__audio.push(a);return a; };
           window.Audio.prototype=NativeAudio.prototype;
+          try{Object.defineProperty(window,'AudioContext',{value:undefined,configurable:true});}catch(e){}
+          try{Object.defineProperty(window,'webkitAudioContext',{value:undefined,configurable:true});}catch(e){}
         })();''')
         self.page.goto(reader_url());self.page.wait_for_selector('.sentence-card')
 
@@ -54,8 +56,8 @@ class ReaderUX(unittest.TestCase):
 
     def test_01_hidden_by_default_single_tap_only_opens_its_own_translation(self):
         p=self.page;self.assertEqual(p.locator('.zh:visible').count(),0)
-        card=p.locator('.sentence-card').nth(0);card.locator('.en').tap();self.assertTrue(card.locator('.zh').is_visible());self.assertEqual(p.locator('.zh:visible').count(),1)
-        self.assertEqual(sum(p.evaluate('window.__audio.map(a=>a.__playCalls)')),0);p.wait_for_timeout(600);card.locator('.en').tap();self.assertFalse(card.locator('.zh').is_visible())
+        card=p.locator('.sentence-card').nth(0);card.locator('.en').tap();p.wait_for_timeout(340);self.assertTrue(card.locator('.zh').is_visible());self.assertEqual(p.locator('.zh:visible').count(),1)
+        self.assertEqual(sum(p.evaluate('window.__audio.map(a=>a.__playCalls)')),0);p.wait_for_timeout(600);card.locator('.en').tap();p.wait_for_timeout(340);self.assertFalse(card.locator('.zh').is_visible())
         p.select_option('#article-select','2002-cloze');p.wait_for_function("document.querySelectorAll('.sentence-card').length===13");self.assertEqual(p.locator('.zh:visible').count(),0)
         p.reload();p.wait_for_selector('.sentence-card');self.assertEqual(p.locator('.zh:visible').count(),0)
 
@@ -94,7 +96,7 @@ class ReaderUX(unittest.TestCase):
         p.locator('#phrase-highlight-action').click()
         p.wait_for_timeout(120)
         self.assertEqual(card.locator('.en .phrase-mark-en').count(),1)
-        card.locator('.en').tap();self.assertTrue(card.locator('.zh').is_visible())
+        card.locator('.en').tap();p.wait_for_timeout(340);self.assertTrue(card.locator('.zh').is_visible())
         self.assertGreaterEqual(card.locator('.zh .phrase-mark-zh').count(),1)
         self.assertIn('2002 词群本',p.locator('#phrase-book-open').inner_text())
         p.locator('#phrase-book-open').click();self.assertTrue(p.locator('#phrase-book-backdrop').is_visible())
