@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {resolveLinkedHighlight, snippetFromRanges, semanticGroupsForYear} from '../inline-phrase-highlights.js';
+import {resolveLinkedHighlight, snippetFromRanges, semanticGroupsForYear, localStudyGloss, browserStudyGloss, createInlineHighlightStore} from '../inline-phrase-highlights.js';
 
 const sentence={
   en:'He helped popularize the idea that some diseases not previously thought to have a bacterial cause were actually infections, which aroused much controversy when it was first suggested.',
@@ -43,4 +43,41 @@ test('coarse semantic groups are rejected when they would paint much broader Chi
   const linked=resolveLinkedHighlight({sentence:s,selectionStart:14,selectionEnd:23,words,semanticGroups:groups});
   assert.equal(linked.source,'none');
   assert.deepEqual(linked.zhRanges,[]);
+});
+
+
+test('local study gloss uses vocabulary meaning without creating Chinese highlight ranges',()=>{
+  const en='The plan fell short of expectations.';
+  const phrase='fell short of expectations';const start=en.indexOf(phrase);
+  const sentence={en,zh:'这项计划的结果比人们原先设想的更差。',vocab:[{start,end:start+phrase.length,meaning:'未达到预期'}]};
+  const gloss=localStudyGloss({sentence,selectionStart:start,selectionEnd:start+phrase.length});
+  assert.deepEqual(gloss,{text:'未达到预期',source:'vocabulary'});
+  const linked=resolveLinkedHighlight({sentence,selectionStart:start,selectionEnd:start+phrase.length});
+  assert.deepEqual(linked.zhRanges,[]);
+});
+
+test('local study gloss can synthesize a contextual Chinese clause without promoting it to zhRanges',()=>{
+  const s={en:'alpha middle omega',zh:'甲，中间意思，乙'};
+  const gloss=localStudyGloss({sentence:s,selectionStart:6,selectionEnd:12});
+  assert.ok(gloss.text);
+  assert.equal(gloss.source,'sentence-context-generated');
+});
+
+test('browser study gloss uses the browser Translator API when available',async()=>{
+  let destroyed=false;
+  const TranslatorApi={create:async options=>{
+    assert.equal(options.sourceLanguage,'en');assert.equal(options.targetLanguage,'zh');
+    return {translate:async input=>input==='fall short of expectations'?'未达到预期':'',destroy:()=>{destroyed=true;}};
+  }};
+  const gloss=await browserStudyGloss('fall short of expectations',{TranslatorApi});
+  assert.equal(gloss,'未达到预期');assert.equal(destroyed,true);
+});
+
+test('marking the same phrase can upgrade an older entry with a generated study gloss',()=>{
+  const store=createInlineHighlightStore();
+  const base={year:2014,articleId:'2014-text1',sentenceId:'s03',enStart:1,enEnd:5,selectedText:'test'};
+  assert.equal(store.add(base).added,true);
+  const updated=store.add({...base,studyGloss:'测试',glossSource:'browser-translator'});
+  assert.equal(updated.added,false);assert.equal(updated.updated,true);
+  assert.equal(store.listYear(2014)[0].studyGloss,'测试');
 });
