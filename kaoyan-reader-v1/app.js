@@ -41,11 +41,7 @@ const vocabButton=document.querySelector('#toggle-vocab');
 const toast=document.querySelector('#toast');
 const phraseHighlightAction=document.querySelector('#phrase-highlight-action');
 let inlineHighlightStorage=null;
-try{
- inlineHighlightStorage=window.localStorage;
- inlineHighlightStorage.removeItem('kaoyan-phrase-book-v1');
- inlineHighlightStorage.removeItem('kaoyan-phrase-book-blur-v1');
-}catch{}
+try{inlineHighlightStorage=window.localStorage;}catch{}
 const inlineHighlightStore=createInlineHighlightStore({storage:inlineHighlightStorage});
 let phraseHighlightSelection=null,phraseHighlightFrame=null,phraseHighlightInvalidKey='';
 const state={current:0,speed:1,playing:false,paused:false,showVocab:true,timer:null,playerHidden:false,programmaticScrollUntil:0,scrollAnchorY:Math.max(0,window.scrollY||0),scrollFrame:null,playRequestedAt:null};
