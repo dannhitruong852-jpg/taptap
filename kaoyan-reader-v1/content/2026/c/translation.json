@@ -1,0 +1,293 @@
+{
+  "year": 2026,
+  "section_type": "translation",
+  "article_id": "translation",
+  "source_sha256": "28d1cd118a3744ff33a5f8ecd47fb733cf6127845a9fb31c81087288eff339a8",
+  "source_pages": [
+    14
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "11",
+  "article_context": "短文说明服装不仅用于遮蔽身体，还会影响人的思想、情绪、行为、自我表达、自信以及社会互动；个人穿衣选择既反映身份与心境，也受到文化和社会规范塑造。",
+  "article": {
+    "year": 2026,
+    "section": "translation",
+    "title": "翻译 · 穿着如何影响心理、自我表达与自信",
+    "background": "短文说明服装不仅用于遮蔽身体，还会影响人的思想、情绪、行为、自我表达、自信以及社会互动；个人穿衣选择既反映身份与心境，也受到文化和社会规范塑造。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "The influence of wearables on psychology refers to how the clothes we wear affect our thoughts, feelings, and behaviors.",
+      "zh": "所谓穿戴物对心理的影响，是指我们所穿的衣服如何影响我们的思想、情绪和行为。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "The influence of wearables on psychology refers to how the clothes we wear affect our thoughts, feelings, and behaviors.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-translation/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Clothing is not just about covering our bodies; it plays a significant role in shaping our self-perception and interactions with others.",
+      "zh": "服装并不只是用来遮蔽身体；它在塑造我们的自我认知以及与他人的互动方面发挥着重要作用。",
+      "vocab": [
+        {
+          "word": "self-perception",
+          "lemma": "self-perception",
+          "level": 7,
+          "meaning": "自我认知",
+          "start": 91,
+          "end": 106
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Clothing is not just about covering our bodies; it plays a significant role in shaping our self-perception and interactions with others.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-translation/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 2,
+      "en": "One aspect of this influence is self-expression.",
+      "zh": "这种影响的一个方面是自我表达。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "One aspect of this influence is self-expression.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-translation/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "The clothes we choose can reflect our personality, mood, and identity.",
+      "zh": "我们选择的衣服能够反映我们的个性、心情和身份认同。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "The clothes we choose can reflect our personality, mood, and identity.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-translation/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "Whether we opt for bold, colorful outfits or prefer more understated styles, our dress choices convey messages about who we are and how we want to be perceived.",
+      "zh": "无论我们选择大胆鲜艳的服装，还是偏爱更加低调的风格，穿衣选择都会传递信息，表明我们是谁，以及希望别人如何看待我们。",
+      "vocab": [
+        {
+          "word": "understated",
+          "lemma": "understated",
+          "level": 7,
+          "meaning": "低调的",
+          "start": 57,
+          "end": 68
+        }
+      ],
+      "discourse_function": "compare",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Whether we opt for bold, colorful outfits or prefer more understated styles, our dress choices convey messages about who we are and how we want to be perceived.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-translation/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 3,
+      "en": "Additionally, clothing can impact our confidence levels.",
+      "zh": "此外，服装还会影响我们的自信程度。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "Additionally, clothing can impact our confidence levels.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-translation/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 3,
+      "en": "When we wear clothes that make us feel comfortable and confident, it can positively affect our self-esteem and overall mood.",
+      "zh": "当我们穿着让自己感到舒适、自信的衣服时，它会对我们的自尊和整体情绪产生积极影响。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "When we wear clothes that make us feel comfortable and confident, it can positively affect our self-esteem and overall mood.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-translation/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 4,
+      "en": "Moreover, cultural and societal influences play a significant role in shaping our dress choices.",
+      "zh": "此外，文化和社会因素在塑造我们的穿衣选择方面也发挥着重要作用。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "Moreover, cultural and societal influences play a significant role in shaping our dress choices.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-translation/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 4,
+      "en": "Different cultures have their norms and expectations regarding dress, which can influence the types of clothing people wear and the meanings attributed to them.",
+      "zh": "不同文化对穿着有各自的规范和期待，这会影响人们选择何种服装，也会影响人们赋予这些服装的意义。",
+      "vocab": [
+        {
+          "word": "attributed",
+          "lemma": "attributed",
+          "level": 6,
+          "meaning": "赋予",
+          "start": 141,
+          "end": 151
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "Different cultures have their norms and expectations regarding dress, which can influence the types of clothing people wear and the meanings attributed to them.",
+          "speaker_role": "narrator",
+          "actor_id": "11",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-translation/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

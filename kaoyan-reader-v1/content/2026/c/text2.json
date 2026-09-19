@@ -1,0 +1,599 @@
+{
+  "year": 2026,
+  "section_type": "reading",
+  "article_id": "text2",
+  "source_sha256": "28d1cd118a3744ff33a5f8ecd47fb733cf6127845a9fb31c81087288eff339a8",
+  "source_pages": [
+    6,
+    7
+  ],
+  "accent": "en-GB",
+  "primary_actor_id": "06",
+  "article_context": "文章指出英国不少员工会像与朋友交谈一样向 AI 倾诉，这虽能带来情绪支持，却可能暴露个人与企业敏感信息。作者主张企业不应因风险而退回去，而应建立随技术演进的使用规范和数字责任文化。",
+  "article": {
+    "year": 2026,
+    "section": "text2",
+    "title": "阅读 Text 2 · 把 AI 当朋友时也要守住数据边界",
+    "background": "文章指出英国不少员工会像与朋友交谈一样向 AI 倾诉，这虽能带来情绪支持，却可能暴露个人与企业敏感信息。作者主张企业不应因风险而退回去，而应建立随技术演进的使用规范和数字责任文化。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "According to our research, around one in five workers in the UK talk to AI like a friend, looking for guidance on personal and professional problems.",
+      "zh": "根据我们的研究，英国大约每五名员工中就有一人会像与朋友交谈一样同AI交流，寻求个人问题和职业问题上的建议。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "According to our research, around one in five workers in the UK talk to AI like a friend, looking for guidance on personal and professional problems.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text2/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "Our data shows that engaging with AI like this can leave us feeling heard and less isolated.",
+      "zh": "数据显示，以这种方式与AI互动，会让我们觉得自己的声音被听见，也不那么孤立。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "Our data shows that engaging with AI like this can leave us feeling heard and less isolated.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text2/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "But, with this newfound connection, many of us share sensitive, sometimes highly confidential information, even though over a third of people don't realise that AI platforms may not be very good at keeping our secres...secret.",
+      "zh": "但伴随这种新建立的连接，许多人会分享敏感信息，有时甚至是高度机密的信息，尽管超过三分之一的人没有意识到AI平台可能并不擅长替我们保守秘密。",
+      "vocab": [
+        {
+          "word": "confidential",
+          "lemma": "confidential",
+          "level": 6,
+          "meaning": "机密的",
+          "start": 81,
+          "end": 93
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "But, with this newfound connection, many of us share sensitive, sometimes highly confidential information, even though over a third of people don't realise that AI platforms may not be very good at keeping our secres...secret.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text2/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "For businesses, the implications are worrying.",
+      "zh": "对企业而言，这种潜在影响令人担忧。",
+      "vocab": [],
+      "discourse_function": "warning",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "For businesses, the implications are worrying.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text2/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "Consider Microsoft Copilot, for example.",
+      "zh": "以Microsoft Copilot为例。",
+      "vocab": [],
+      "discourse_function": "example",
+      "prosody_focus": "",
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "Consider Microsoft Copilot, for example.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text2/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "It gains Microsoft broad rights to the data inputted or outputted by any user—rights to use this data in any way it sees fit; it can even share it with third parties.",
+      "zh": "它使微软对任何用户输入或输出的数据拥有广泛权利——可以按其认为合适的方式使用这些数据，甚至可以与第三方分享。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "It gains Microsoft broad rights to the data inputted or outputted by any user—rights to use this data in any way it sees fit; it can even share it with third parties.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text2/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "This means that any sensitive business information could potentially be exposed to the world.",
+      "zh": "这意味着，任何敏感的商业信息都有可能暴露在外界面前。",
+      "vocab": [],
+      "discourse_function": "warning",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "This means that any sensitive business information could potentially be exposed to the world.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text2/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 2,
+      "en": "Employers are taking note and taking action.",
+      "zh": "雇主已经注意到这一点，并开始采取行动。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "Employers are taking note and taking action.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text2/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 2,
+      "en": "According to our research, 25% have decided to either outright ban AI or regulate its use within their organisations.",
+      "zh": "根据我们的研究，25%的雇主已经决定，要么彻底禁止AI，要么对组织内部的AI使用加以规范。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "According to our research, 25% have decided to either outright ban AI or regulate its use within their organisations.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text2/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 2,
+      "en": "But even with these policies in place, some employees choose to break the rules.",
+      "zh": "但即使有这些政策，一些员工仍会选择违反规定。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "But even with these policies in place, some employees choose to break the rules.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text2/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 2,
+      "en": "They have their reasons—around 63% of them report that using AI increases their productivity, and some even feel AI offers more help than their human colleagues.",
+      "zh": "他们也有自己的理由——其中约63%的人表示，使用AI提高了生产率，还有些人甚至觉得AI比人类同事提供的帮助更多。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "They have their reasons—around 63% of them report that using AI increases their productivity, and some even feel AI offers more help than their human colleagues.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text2/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 3,
+      "en": "The situation presents a delicate balance between leveraging AI for its productivity gains and risking confidential data exposure.",
+      "zh": "这种局面要求在利用AI提高生产率与承担机密的数据泄露风险之间取得微妙平衡。",
+      "vocab": [
+        {
+          "word": "leveraging",
+          "lemma": "leveraging",
+          "level": 7,
+          "meaning": "利用",
+          "start": 50,
+          "end": 60
+        },
+        {
+          "word": "confidential",
+          "lemma": "confidential",
+          "level": 6,
+          "meaning": "机密的",
+          "start": 103,
+          "end": 115
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "The situation presents a delicate balance between leveraging AI for its productivity gains and risking confidential data exposure.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text2/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 3,
+      "en": "Employers need to manage AI tools with the same level of care as any other form of data sharing or storage.",
+      "zh": "雇主需要像管理其他任何数据共享或存储方式一样谨慎地管理AI工具。",
+      "vocab": [],
+      "discourse_function": "encourage",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "Employers need to manage AI tools with the same level of care as any other form of data sharing or storage.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text2/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 3,
+      "en": "There's also a knowledge gap that needs to be addressed—40% of individuals surveyed are unsure about who retains ownership over the content produced by AI.",
+      "zh": "此外还有一个必须弥补的知识缺口：40%的受访者并不清楚AI生成内容的所有权究竟归谁。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "There's also a knowledge gap that needs to be addressed—40% of individuals surveyed are unsure about who retains ownership over the content produced by AI.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text2/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 3,
+      "en": "By instilling best practices in AI engagement and creating policies that evolve with the technology, businesses can positively shift the AI landscape.",
+      "zh": "通过培养良好的AI使用实践，并制定能够随技术发展而演进的政策，企业可以推动AI使用环境向更积极的方向转变。",
+      "vocab": [],
+      "discourse_function": "encourage",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "By instilling best practices in AI engagement and creating policies that evolve with the technology, businesses can positively shift the AI landscape.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text2/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 4,
+      "en": "With AI's potential to simplify our professional lives, do the admin and enhance the work experience, it's up to us to navigate its usage cautiously so it supports us without compromising our privacy.",
+      "zh": "AI有潜力简化职业生活、处理行政事务并改善工作体验，因此关键在于我们要谨慎驾驭它的使用方式，让它帮助我们，同时不损害隐私。",
+      "vocab": [
+        {
+          "word": "compromising",
+          "lemma": "compromising",
+          "level": 7,
+          "meaning": "损害",
+          "start": 175,
+          "end": 187
+        }
+      ],
+      "discourse_function": "conclude",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "With AI's potential to simplify our professional lives, do the admin and enhance the work experience, it's up to us to navigate its usage cautiously so it supports us without compromising our privacy.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text2/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 4,
+      "en": "There's no need to back away from progress, as long as we're equipped with the knowledge and tools to make sure AI remains a friend.",
+      "zh": "只要我们具备必要的知识和工具，确保AI始终是朋友，就没有必要因风险而退避技术进步。",
+      "vocab": [],
+      "discourse_function": "encourage",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "There's no need to back away from progress, as long as we're equipped with the knowledge and tools to make sure AI remains a friend.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text2/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 4,
+      "en": "And this is where the challenge lies.",
+      "zh": "而挑战恰恰就在这里。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "And this is where the challenge lies.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text2/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "paragraph": 4,
+      "en": "There are so many products out there, being promoted with huge advertising and marketing budgets, that it's easy to fall victim.",
+      "zh": "市场上的产品如此之多，又有巨额广告和营销预算推动宣传，人们很容易因此成为受害者。",
+      "vocab": [],
+      "discourse_function": "warning",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s19-01",
+          "text": "There are so many products out there, being promoted with huge advertising and marketing budgets, that it's easy to fall victim.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text2/s19-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "paragraph": 4,
+      "en": "But by building a culture of digital responsibility within our businesses, we can create a future where AI can help us without spilling the beans.",
+      "zh": "但只要在企业内部建立数字责任文化，我们就能创造一种未来：AI可以帮助我们，而不会把秘密泄露出去。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s20-01",
+          "text": "But by building a culture of digital responsibility within our businesses, we can create a future where AI can help us without spilling the beans.",
+          "speaker_role": "narrator",
+          "actor_id": "06",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text2/s20-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

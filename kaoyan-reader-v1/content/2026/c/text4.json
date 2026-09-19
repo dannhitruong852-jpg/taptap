@@ -1,0 +1,546 @@
+{
+  "year": 2026,
+  "section_type": "reading",
+  "article_id": "text4",
+  "source_sha256": "28d1cd118a3744ff33a5f8ecd47fb733cf6127845a9fb31c81087288eff339a8",
+  "source_pages": [
+    10,
+    11
+  ],
+  "accent": "en-US",
+  "primary_actor_id": "09",
+  "article_context": "作者以芝加哥多个街头节庆为例说明制作成本上涨而现场捐款下降的困境。社区街头节庆没有市政府资助，却能带动本地商业和文化活力；其未来能否延续，取决于参与者是否愿意共同提供资金支持。",
+  "article": {
+    "year": 2026,
+    "section": "text4",
+    "title": "阅读 Text 4 · 芝加哥街头节庆需要社区共同买单",
+    "background": "作者以芝加哥多个街头节庆为例说明制作成本上涨而现场捐款下降的困境。社区街头节庆没有市政府资助，却能带动本地商业和文化活力；其未来能否延续，取决于参与者是否愿意共同提供资金支持。"
+  },
+  "editorial_status": "reviewed_candidate",
+  "audio_status": "not_rendered",
+  "vocabulary_scale": "project-curated-1-9-v1",
+  "sentences": [
+    {
+      "id": "s01",
+      "paragraph": 1,
+      "en": "In 2023, Chicago lost one of its most beloved street festivals.",
+      "zh": "2023年，芝加哥失去了最受喜爱的街头节庆之一。",
+      "vocab": [],
+      "discourse_function": "advance",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s01-01",
+          "text": "In 2023, Chicago lost one of its most beloved street festivals.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.02,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text4/s01-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "paragraph": 1,
+      "en": "The Silver Room Block Party, staged by Hyde Park community leader Eric Williams, announced it would not return in 2024.",
+      "zh": "由海德公园社区领袖Eric Williams主办的Silver Room Block Party宣布，2024年将不再举办。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": "",
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s02-01",
+          "text": "The Silver Room Block Party, staged by Hyde Park community leader Eric Williams, announced it would not return in 2024.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text4/s02-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "paragraph": 1,
+      "en": "What began as a small neighborhood gathering blossomed into a massive cultural event, welcoming tens of thousands of people each year over nearly two decades before abruptly shutting down.",
+      "zh": "这项活动最初只是一次小型社区聚会，后来发展成大型文化盛会，在近二十年里每年吸引数万人参加，最终却突然停办。",
+      "vocab": [],
+      "discourse_function": "sequence",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s03-01",
+          "text": "What began as a small neighborhood gathering blossomed into a massive cultural event, welcoming tens of thousands of people each year over nearly two decades before abruptly shutting down.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "lively",
+          "intensity": 1,
+          "rate": 1.03,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text4/s03-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "paragraph": 2,
+      "en": "Williams pointed to rising production costs and declining attendee donations as primary reasons the Silver Room Block Party could not continue, highlighting a reality that all street festival organizers face right now.",
+      "zh": "Williams指出，制作成本上升和参与者捐款下降，是Silver Room Block Party无法继续的主要原因，也揭示了当下所有街头节庆组织者都面对的现实。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s04-01",
+          "text": "Williams pointed to rising production costs and declining attendee donations as primary reasons the Silver Room Block Party could not continue, highlighting a reality that all street festival organizers face right now.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text4/s04-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "paragraph": 2,
+      "en": "The cost of producing a street festival in Chicago has skyrocketed.",
+      "zh": "在芝加哥举办街头节庆的成本已经暴涨。",
+      "vocab": [
+        {
+          "word": "skyrocketed",
+          "lemma": "skyrocketed",
+          "level": 7,
+          "meaning": "暴涨",
+          "start": 55,
+          "end": 66
+        }
+      ],
+      "discourse_function": "emphasize",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s05-01",
+          "text": "The cost of producing a street festival in Chicago has skyrocketed.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text4/s05-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "paragraph": 2,
+      "en": "Security, entertainment, portable restrooms, insurance and even basics such as fencing and staffing have all become significantly more expensive.",
+      "zh": "安保、娱乐、移动卫生间、保险，甚至围栏和人员配置等基础项目，都变得贵得多。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s06-01",
+          "text": "Security, entertainment, portable restrooms, insurance and even basics such as fencing and staffing have all become significantly more expensive.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text4/s06-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "paragraph": 2,
+      "en": "At the same time, donations at festival gates have dropped dramatically.",
+      "zh": "与此同时，节庆入口处收到的捐款却大幅下降。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s07-01",
+          "text": "At the same time, donations at festival gates have dropped dramatically.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text4/s07-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "paragraph": 3,
+      "en": "Chicago's summer festivals are about more than just entertainment; they are economic engines that directly benefit the neighborhoods they're in and the city of Chicago as whole.",
+      "zh": "芝加哥的夏季节庆不只是娱乐活动；它们还是经济引擎，会直接惠及举办活动的社区以及整个芝加哥市。",
+      "vocab": [],
+      "discourse_function": "emphasize",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s08-01",
+          "text": "Chicago's summer festivals are about more than just entertainment; they are economic engines that directly benefit the neighborhoods they're in and the city of Chicago as whole.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text4/s08-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "paragraph": 3,
+      "en": "Street festivals drive foot traffic to local businesses and foster the kind of cultural vibrancy that makes our city special.",
+      "zh": "街头节庆会把客流带到本地商家，并培育让这座城市独具特色的文化活力。",
+      "vocab": [
+        {
+          "word": "vibrancy",
+          "lemma": "vibrancy",
+          "level": 7,
+          "meaning": "活力",
+          "start": 88,
+          "end": 96
+        }
+      ],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s09-01",
+          "text": "Street festivals drive foot traffic to local businesses and foster the kind of cultural vibrancy that makes our city special.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text4/s09-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "paragraph": 4,
+      "en": "We often hear people ask why we solicit donations at our entry points, especially when the city's largest festivals like the Chicago Jazz Festival do not request donations.",
+      "zh": "我们经常听到有人问，为什么我们要在入口处募集捐款，尤其是芝加哥爵士音乐节这类全市最大的节庆并不要求捐款。",
+      "vocab": [
+        {
+          "word": "solicit",
+          "lemma": "solicit",
+          "level": 7,
+          "meaning": "募集",
+          "start": 32,
+          "end": 39
+        }
+      ],
+      "discourse_function": "ask",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s10-01",
+          "text": "We often hear people ask why we solicit donations at our entry points, especially when the city's largest festivals like the Chicago Jazz Festival do not request donations.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "curious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text4/s10-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "paragraph": 4,
+      "en": "The fact is, unlike those large, city-produced music festivals, your neighborhood street festivals receive no city funding and rely on a combination of sponsorships, vendor fees and gate donations to cover their costs.",
+      "zh": "事实是，与那些由市政府主办的大型音乐节不同，社区街头节庆得不到市政府资金，只能依靠赞助、摊贩费和入口捐款共同覆盖成本。",
+      "vocab": [
+        {
+          "word": "sponsorships",
+          "lemma": "sponsorships",
+          "level": 6,
+          "meaning": "赞助",
+          "start": 152,
+          "end": 164
+        }
+      ],
+      "discourse_function": "contrast",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s11-01",
+          "text": "The fact is, unlike those large, city-produced music festivals, your neighborhood street festivals receive no city funding and rely on a combination of sponsorships, vendor fees and gate donations to cover their costs.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text4/s11-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "paragraph": 5,
+      "en": "Wicker Park Fest has long been one of Chicago's most anticipated summer festivals, drawing upward of 70,000 attendees for a full weekend of live indie music, local art, small business vendors and, most importantly, community connection.",
+      "zh": "Wicker Park Fest长期以来一直是芝加哥最受期待的夏季节庆之一，一个周末就能吸引7万多名参与者，现场有独立音乐、本地艺术、小企业摊贩，而最重要的是社区联结。",
+      "vocab": [],
+      "discourse_function": "statistic",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s12-01",
+          "text": "Wicker Park Fest has long been one of Chicago's most anticipated summer festivals, drawing upward of 70,000 attendees for a full weekend of live indie music, local art, small business vendors and, most importantly, community connection.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 0.96,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text4/s12-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "paragraph": 5,
+      "en": "In 2024, Wicker Park Fest saw record-breaking attendance.",
+      "zh": "2024年，Wicker Park Fest的参与人数创下纪录。",
+      "vocab": [],
+      "discourse_function": "report",
+      "prosody_focus": "",
+      "contrast_level": "low",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s13-01",
+          "text": "In 2024, Wicker Park Fest saw record-breaking attendance.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text4/s13-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "paragraph": 5,
+      "en": "Despite the turnout, gate donations reached their lowest point in our history.",
+      "zh": "尽管到场人数众多，入口捐款却降到了活动历史最低点。",
+      "vocab": [],
+      "discourse_function": "contrast",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s14-01",
+          "text": "Despite the turnout, gate donations reached their lowest point in our history.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.98,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text4/s14-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "paragraph": 5,
+      "en": "This year, we've been forced to scale back the footprint of the fest.",
+      "zh": "今年，我们被迫缩小节庆规模。",
+      "vocab": [],
+      "discourse_function": "warning",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s15-01",
+          "text": "This year, we've been forced to scale back the footprint of the fest.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "serious",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text4/s15-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "paragraph": 5,
+      "en": "We are eliminating a stage, booking fewer performers and making additional cuts to reduce our costs, all while striving to keep the festival as vibrant as ever, as supportive of local artists and businesses, and as true to Wicker Park's unique spirit and reputation as festgoers have come to expect.",
+      "zh": "我们将取消一个舞台、减少表演者数量，并进一步削减开支；与此同时仍努力让节庆保持往日的活力，继续支持本地艺术家和商家，也继续忠于参与者所期待的Wicker Park独特精神与声誉。",
+      "vocab": [],
+      "discourse_function": "explain",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s16-01",
+          "text": "We are eliminating a stage, booking fewer performers and making additional cuts to reduce our costs, all while striving to keep the festival as vibrant as ever, as supportive of local artists and businesses, and as true to Wicker Park's unique spirit and reputation as festgoers have come to expect.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "neutral",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text4/s16-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "paragraph": 6,
+      "en": "This summer, as you enjoy your favorite neighborhood street festival, I hope you'll remember that they exist because of community support.",
+      "zh": "今年夏天，当你享受自己最喜欢的社区街头节庆时，希望你记得：这些活动之所以存在，是因为社区的支持。",
+      "vocab": [],
+      "discourse_function": "encourage",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s17-01",
+          "text": "This summer, as you enjoy your favorite neighborhood street festival, I hope you'll remember that they exist because of community support.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 1.0,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text4/s17-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "paragraph": 6,
+      "en": "A thriving summer festival season doesn't happen by accident; it happens when we all chip in.",
+      "zh": "一个繁荣的夏季节庆季不会凭空出现；只有大家都出一份力，它才会发生。",
+      "vocab": [],
+      "discourse_function": "conclude",
+      "prosody_focus": "",
+      "contrast_level": "micro",
+      "strong_evidence": null,
+      "segments": [
+        {
+          "id": "s18-01",
+          "text": "A thriving summer festival season doesn't happen by accident; it happens when we all chip in.",
+          "speaker_role": "narrator",
+          "actor_id": "09",
+          "emotion": "warm",
+          "intensity": 1,
+          "rate": 0.97,
+          "pause_before_ms": 0,
+          "pause_after_ms": 0,
+          "audio_path": "./audio/2026/c-text4/s18-01.opus",
+          "generation_fingerprint": "pending-render",
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

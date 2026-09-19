@@ -1,18 +1,17 @@
 {
-  "batch_id": "2013-2018",
+  "batch_id": "2025-2026",
   "pipeline_version": 2,
-  "source_ref": "b9c5fde97cd854383164031455f43857154b3bda",
-  "freeze_id": "6ab366587c9c892df47439c75153836c0db41cfe2c2a6d97ad681c3617caf8a6",
-  "previous_production_sha": "b56b6d5c89119ca36bc0a4459cc238125d2bc09e",
-  "state": "published",
+  "source_ref": "e5e2dcf94c40d5eadfe01624c5831553b9a5c385",
+  "freeze_id": "5893aa34e9b1141d0dcdb07d0615a168b1b9e74337258fa576347022364402f8",
+  "previous_production_sha": "fd31ce555ef93c890d15571322016554091950b1",
+  "state": "release_candidate",
   "state_history": [
     "draft",
     "validated",
     "frozen",
     "rendering",
     "merged",
-    "release_candidate",
-    "published"
+    "release_candidate"
   ],
-  "content_commit_sha": "5537cb29f6e09143f1a6136f182c58bc14470dbc"
+  "recovered_from_run_id": 35374706871
 }
