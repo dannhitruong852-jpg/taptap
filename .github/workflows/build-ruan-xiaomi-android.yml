@@ -40,16 +40,16 @@ jobs:
       - name: Build installable debug APK
         run: gradle --no-daemon :app:assembleDebug
 
-      - name: Verify five final PNG launcher icons
+      - name: Verify five final HD launcher icons
         shell: bash
         run: |
           APK=app/build/outputs/apk/debug/app-debug.apk
           rm -rf /tmp/ruan-icons
           mkdir -p /tmp/ruan-icons
           for i in 1 2 3 4 5; do
-            unzip -p "$APK" "res/mipmap-xxxhdpi-v4/icon_day_${i}.png" > "/tmp/ruan-icons/icon_day_${i}.png"
-            file "/tmp/ruan-icons/icon_day_${i}.png" | tee "/tmp/ruan-icons/icon_day_${i}.txt"
-            grep -Eq 'PNG image data, 192 x 192' "/tmp/ruan-icons/icon_day_${i}.txt"
+            unzip -p "$APK" "res/mipmap-xxxhdpi-v4/icon_day_${i}.jpg" > "/tmp/ruan-icons/icon_day_${i}.jpg"
+            file "/tmp/ruan-icons/icon_day_${i}.jpg" | tee "/tmp/ruan-icons/icon_day_${i}.txt"
+            grep -Eq 'JPEG image data.*192x192' "/tmp/ruan-icons/icon_day_${i}.txt"
           done
           if unzip -l "$APK" | grep -Eq 'res/mipmap-xxxhdpi-v4/icon_day_6\.(png|jpg)$'; then
             echo "Unexpected sixth launcher icon packaged"

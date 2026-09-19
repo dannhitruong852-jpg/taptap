@@ -16,8 +16,7 @@ public final class DailyIconManager {
             "com.ruanxiaomi.reader.IconDay2",
             "com.ruanxiaomi.reader.IconDay3",
             "com.ruanxiaomi.reader.IconDay4",
-            "com.ruanxiaomi.reader.IconDay5",
-            "com.ruanxiaomi.reader.IconDay6"
+            "com.ruanxiaomi.reader.IconDay5"
     };
 
     private DailyIconManager() {}
