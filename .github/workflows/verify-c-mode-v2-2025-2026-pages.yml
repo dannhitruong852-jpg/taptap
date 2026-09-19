@@ -2,6 +2,11 @@ name: Verify C Mode V2 2025-2026 live Pages
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - c-mode-v2-2025-2026-production
+    paths:
+      - '.github/workflows/verify-c-mode-v2-2025-2026-pages.yml'
 
 permissions:
   contents: read
@@ -81,7 +86,7 @@ jobs:
 
                       # Reader content must be the published article that the catalog points to.
                       assert content["year"] == row["year"], row["id"]
-                      assert content["article"] == article, row["id"]
+                      assert content["article_id"] == article, row["id"]
 
                       sentences = list(manifest["sentences"].values())
                       assert sentences, row["id"]
