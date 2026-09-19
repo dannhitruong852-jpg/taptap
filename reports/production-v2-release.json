@@ -4,14 +4,16 @@
   "source_ref": "e5e2dcf94c40d5eadfe01624c5831553b9a5c385",
   "freeze_id": "5893aa34e9b1141d0dcdb07d0615a168b1b9e74337258fa576347022364402f8",
   "previous_production_sha": "fd31ce555ef93c890d15571322016554091950b1",
-  "state": "release_candidate",
+  "state": "published",
   "state_history": [
     "draft",
     "validated",
     "frozen",
     "rendering",
     "merged",
-    "release_candidate"
+    "release_candidate",
+    "published"
   ],
-  "recovered_from_run_id": 35374706871
+  "recovered_from_run_id": 35374706871,
+  "content_commit_sha": "da67254c983b07ff6ee31ed46a093dd0151ca758"
 }
