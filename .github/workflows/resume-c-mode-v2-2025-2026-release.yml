@@ -1,0 +1,330 @@
+name: Resume C Mode V2 2025-2026 release
+
+on:
+  push:
+    branches:
+      - c-mode-v2-2025-2026-production
+    paths:
+      - '.github/workflows/resume-c-mode-v2-2025-2026-release.yml'
+
+permissions:
+  contents: write
+  actions: read
+
+env:
+  PYTHONPATH: .:voice-pipeline:content-pipeline
+  SOURCE_RUN_ID: '35374706871'
+  BATCH_ID: '2025-2026'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    outputs:
+      new_sha: ${{ steps.publish.outputs.new_sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Download frozen input from completed production run
+        uses: actions/download-artifact@v4
+        with:
+          name: c-mode-v2-frozen-2025-2026
+          path: /tmp/frozen-input
+          github-token: ${{ github.token }}
+          run-id: ${{ env.SOURCE_RUN_ID }}
+
+      - name: Download 2025 merged audio from completed production run
+        uses: actions/download-artifact@v4
+        with:
+          name: c-mode-v2-2025-2026-2025-merged
+          path: /tmp/merged/2025
+          github-token: ${{ github.token }}
+          run-id: ${{ env.SOURCE_RUN_ID }}
+
+      - name: Download 2026 merged audio from completed production run
+        uses: actions/download-artifact@v4
+        with:
+          name: c-mode-v2-2025-2026-2026-merged
+          path: /tmp/merged/2026
+          github-token: ${{ github.token }}
+          run-id: ${{ env.SOURCE_RUN_ID }}
+
+      - name: Build release candidate from current gh-pages baseline
+        id: baseline
+        run: |
+          set -euo pipefail
+          git fetch origin gh-pages
+          baseline=$(git rev-parse origin/gh-pages)
+          echo "sha=$baseline" >> "$GITHUB_OUTPUT"
+          git worktree add /tmp/production "$baseline"
+          cp /tmp/production/kaoyan-reader-v1/content/catalog.json /tmp/baseline-catalog.json
+
+          cp -a /tmp/frozen-input/kaoyan-reader-v1/. /tmp/production/kaoyan-reader-v1/
+
+          python - <<'PY'
+          import json, shutil
+          from pathlib import Path
+
+          batch=json.loads(Path('/tmp/frozen-input/batch-manifest.json').read_text())
+          for year in batch['years']:
+              root=Path(f'/tmp/merged/{year}')
+              matches=list(root.glob(f'**/audio/{year}/v4'))
+              assert len(matches)==1,(year,matches)
+              target=Path(f'/tmp/production/kaoyan-reader-v1/audio/{year}/v4')
+              target.parent.mkdir(parents=True,exist_ok=True)
+              shutil.copytree(matches[0],target,dirs_exist_ok=True)
+
+              reports=list(root.glob(f'**/reports/c-v4-{year}-merge.json'))
+              assert len(reports)==1,(year,reports)
+              dst=Path(f'/tmp/production/kaoyan-reader-v1/reports/c-v4-{year}-merge.json')
+              dst.parent.mkdir(parents=True,exist_ok=True)
+              shutil.copy2(reports[0],dst)
+          PY
+
+      - name: Rebuild catalog additively
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from production_v2.catalog_merge import merge_catalogs
+
+          baseline=json.loads(Path('/tmp/baseline-catalog.json').read_text())
+          source=json.loads(Path('/tmp/frozen-input/kaoyan-reader-v1/content/catalog.json').read_text())
+          batch=json.loads(Path('/tmp/frozen-input/batch-manifest.json').read_text())
+          years=set(batch['years'])
+          batch_catalog={
+              'version':source.get('version',1),
+              'articles':[x for x in source['articles'] if x['year'] in years],
+          }
+          candidate=merge_catalogs(baseline,batch_catalog)
+          Path('/tmp/production/kaoyan-reader-v1/content/catalog.json').write_text(
+              json.dumps(candidate,ensure_ascii=False,indent=2)+'\n'
+          )
+
+          final_years=sorted({x['year'] for x in candidate['articles']})
+          assert final_years == list(range(2002,2027)), final_years
+          assert len([x for x in candidate['articles'] if x['year']==2025]) == 7
+          assert len([x for x in candidate['articles'] if x['year']==2026]) == 7
+          PY
+
+      - name: Install current phrase-book UI regression baselines
+        run: |
+          cp kaoyan-reader-v1/tests/player-a-production.test.js /tmp/production/kaoyan-reader-v1/tests/player-a-production.test.js
+          cp kaoyan-reader-v1/tests/player-compact.test.js /tmp/production/kaoyan-reader-v1/tests/player-compact.test.js
+
+      - name: Run release guard and full release validation
+        run: |
+          python -m production_v2.cli_release_guard \
+            --old /tmp/baseline-catalog.json \
+            --new /tmp/production/kaoyan-reader-v1/content/catalog.json \
+            --report /tmp/release-guard.json
+
+          python -m production_v2.cli_validate_batch \
+            --manifest /tmp/frozen-input/batch-manifest.json \
+            --catalog /tmp/production/kaoyan-reader-v1/content/catalog.json \
+            --reader-root /tmp/production/kaoyan-reader-v1 \
+            --phase release \
+            --report /tmp/release-validation.json
+
+          cd /tmp/production/kaoyan-reader-v1
+          npm test
+
+      - name: Require release evidence
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          guard=json.loads(Path('/tmp/release-guard.json').read_text())
+          validation=json.loads(Path('/tmp/release-validation.json').read_text())
+          assert guard['ok'] is True, guard
+          assert guard.get('errors',[]) == [], guard
+          assert validation['ok'] is True, validation
+          assert validation.get('errors',[]) == [], validation
+          print(json.dumps({'release_guard':guard,'release_validation':validation},indent=2))
+          PY
+
+      - name: Build release metadata
+        env:
+          BASELINE_SHA: ${{ steps.baseline.outputs.sha }}
+        run: |
+          mkdir -p /tmp/production/reports
+          cp /tmp/release-guard.json /tmp/production/reports/release-guard.json
+          cp /tmp/release-validation.json /tmp/production/reports/release-validation.json
+
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+
+          batch=json.loads(Path('/tmp/frozen-input/batch-manifest.json').read_text())
+          freeze=json.loads(Path('/tmp/frozen-input/freeze-report.json').read_text())
+          meta={
+              'batch_id':batch['batch_id'],
+              'pipeline_version':batch['pipeline_version'],
+              'source_ref':batch['source_ref'],
+              'freeze_id':freeze['freeze_id'],
+              'previous_production_sha':os.environ['BASELINE_SHA'],
+              'state':'release_candidate',
+              'state_history':['draft','validated','frozen','rendering','merged','release_candidate'],
+              'recovered_from_run_id':35374706871,
+          }
+          Path('/tmp/production/reports/production-v2-release.json').write_text(
+              json.dumps(meta,indent=2)+'\n'
+          )
+          PY
+
+      - name: Refuse stale baseline immediately before publish
+        env:
+          BASELINE_SHA: ${{ steps.baseline.outputs.sha }}
+        run: |
+          git fetch origin gh-pages
+          current=$(git rev-parse origin/gh-pages)
+          test "$current" = "$BASELINE_SHA" || {
+            echo "production changed since validation: $BASELINE_SHA -> $current" >&2
+            exit 3
+          }
+
+      - name: Publish recovered 2025-2026 release to gh-pages
+        id: publish
+        working-directory: /tmp/production
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          git add kaoyan-reader-v1 reports
+          git diff --cached --check
+          git commit -m "feat: publish C Mode V2 batch 2025-2026 from validated Run #7"
+
+          content_sha=$(git rev-parse HEAD)
+          export CONTENT_SHA="$content_sha"
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+
+          path=Path('reports/production-v2-release.json')
+          data=json.loads(path.read_text())
+          data['state']='published'
+          data['state_history']=['draft','validated','frozen','rendering','merged','release_candidate','published']
+          data['content_commit_sha']=os.environ['CONTENT_SHA']
+          path.write_text(json.dumps(data,indent=2)+'\n')
+          PY
+
+          git add reports/production-v2-release.json
+          git commit -m "chore: finalize C Mode V2 batch 2025-2026 state"
+          new_sha=$(git rev-parse HEAD)
+          git push origin HEAD:gh-pages
+          echo "new_sha=$new_sha" >> "$GITHUB_OUTPUT"
+
+      - name: Wait for matching GitHub Pages deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARGET_SHA: ${{ steps.publish.outputs.new_sha }}
+        run: |
+          for attempt in $(seq 1 30); do
+            payload=$(gh api "/repos/$GITHUB_REPOSITORY/actions/runs?branch=gh-pages&per_page=30")
+            row=$(printf '%s' "$payload" | python -c 'import json,sys,os; d=json.load(sys.stdin); target=os.environ["TARGET_SHA"]; rows=[r for r in d.get("workflow_runs",[]) if r.get("head_sha")==target and r.get("name")=="pages build and deployment"]; print(json.dumps(rows[0]) if rows else "")')
+            if [ -n "$row" ]; then
+              status=$(printf '%s' "$row" | python -c 'import json,sys; print(json.load(sys.stdin).get("status",""))')
+              conclusion=$(printf '%s' "$row" | python -c 'import json,sys; print(json.load(sys.stdin).get("conclusion") or "")')
+              if [ "$status" = completed ]; then
+                test "$conclusion" = success
+                echo "Pages deployment succeeded for $TARGET_SHA"
+                exit 0
+              fi
+            fi
+            sleep 10
+          done
+          echo "timed out waiting for Pages deployment for $TARGET_SHA" >&2
+          exit 4
+
+      - name: Run live Pages smoke test
+        env:
+          BASE_URL: https://dannhitruong852-jpg.github.io/taptap/kaoyan-reader-v1
+        run: |
+          python - <<'PY'
+          import json, os, time, urllib.request
+
+          base=os.environ['BASE_URL'].rstrip('/')
+          expected={'cloze','text1','text2','text3','text4','partb','translation'}
+
+          def get(url,binary=False):
+              req=urllib.request.Request(url,headers={
+                  'User-Agent':'kaoyan-reader-live-smoke/2025-2026',
+                  'Cache-Control':'no-cache',
+              })
+              with urllib.request.urlopen(req,timeout=45) as response:
+                  body=response.read()
+                  assert response.status==200,(url,response.status)
+                  return body if binary else body.decode('utf-8')
+
+          for attempt in range(1,31):
+              probe=f'?probe={os.environ.get("GITHUB_RUN_ID","manual")}-{attempt}'
+              try:
+                  catalog=json.loads(get(f'{base}/content/catalog.json{probe}'))
+                  rows=catalog['articles']
+                  years=sorted({x['year'] for x in rows})
+                  assert years==list(range(2002,2027)),years
+                  assert len(rows)==172,len(rows)
+
+                  batch=[x for x in rows if x['year'] in (2025,2026)]
+                  assert len(batch)==14,len(batch)
+
+                  for year in (2025,2026):
+                      yr=[x for x in batch if x['year']==year]
+                      assert len(yr)==7,(year,len(yr))
+                      assert {x['id'].split('-',1)[1] for x in yr}==expected
+
+                  for row in batch:
+                      article=row['id'].split('-',1)[1]
+                      manifest_rel=row['manifest'].removeprefix('./')
+                      content_rel=row['content'].removeprefix('./')
+                      manifest=json.loads(get(f'{base}/{manifest_rel}{probe}'))
+                      content=json.loads(get(f'{base}/{content_rel}{probe}'))
+
+                      assert manifest['year']==row['year']
+                      assert manifest['article']==article
+                      assert manifest['c_mode_version']=='v4'
+                      assert manifest['qa']['technical']=='passed'
+                      assert manifest.get('missing_segments')==[]
+                      assert len(manifest['sentences'])==row['sentences']
+                      assert content['year']==row['year']
+                      assert content['article']==article
+
+                      sentences=list(manifest['sentences'].values())
+                      assert sentences
+                      for sentence in sentences:
+                          assert sentence['artificial_pause_ms']==0
+                          assert sentence['post_tempo'] is False
+                          assert sentence['qa']['technical']=='passed'
+
+                      first=sentences[0]['path'].removeprefix('./')
+                      last=sentences[-1]['mp3_path'].removeprefix('./')
+                      assert len(get(f'{base}/{first}{probe}',binary=True))>1024
+                      assert len(get(f'{base}/{last}{probe}',binary=True))>1024
+
+                  print(json.dumps({
+                      'ok':True,
+                      'attempt':attempt,
+                      'years':years,
+                      'catalog_articles':len(rows),
+                      'batch_articles':len(batch),
+                      'errors':[],
+                  },ensure_ascii=False,indent=2))
+                  break
+              except Exception as exc:
+                  print(f'attempt {attempt}/30 not ready: {exc}',flush=True)
+                  if attempt==30:
+                      raise
+                  time.sleep(10)
+          PY
