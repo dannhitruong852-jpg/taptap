@@ -12,7 +12,8 @@ import { createTapGuard, createTapArbiter } from './reader-controls.js?v=phrase-
 import { resolvePlayerScroll } from './scroll-behavior.js';
 import { pickArticle, selectArticles, adjacentArticle } from './catalog.js';
 import { createArticleBundleStore } from './article-bundle-store.js';
-import { resolveLinkedHighlight, createInlineHighlightStore, snippetFromRanges, semanticGroupsForYear, localStudyGloss, browserStudyGloss } from './inline-phrase-highlights.js?v=phrase-study-20260918-v4';
+import { resolveLinkedHighlight, createInlineHighlightStore, snippetFromRanges, semanticGroupsForYear, localStudyGloss, browserStudyGloss } from './inline-phrase-highlights.js?v=phrase-book-cloud-sync-20260921-v1';
+import { createPhraseBookCloudSync } from './phrase-book-cloud-sync.js?v=20260921-v1';
 
 let article={}, sentences=[], manifest={segments:{}};
 let catalog=null, loading=true, selectionGeneration=0, bilingualMappings={}, semanticMappings={};
@@ -49,9 +50,27 @@ const phraseBookList=document.querySelector('#phrase-book-list');
 const phraseBookEmpty=document.querySelector('#phrase-book-empty');
 const phraseBookBlurButton=document.querySelector('#phrase-book-blur');
 const phraseBookEditButton=document.querySelector('#phrase-book-edit');
+const phraseBookSyncStatus=document.querySelector('#phrase-book-sync-status');
+const phraseBookSyncCopy=document.querySelector('#phrase-book-sync-copy');
+const phraseBookSyncChange=document.querySelector('#phrase-book-sync-change');
 let inlineHighlightStorage=null;
 try{inlineHighlightStorage=window.localStorage;}catch{}
 const inlineHighlightStore=createInlineHighlightStore({storage:inlineHighlightStorage});
+const phraseBookCloudSync=createPhraseBookCloudSync({
+ store:inlineHighlightStore,
+ storage:inlineHighlightStorage,
+ onMerged:()=>{
+  applyAllInlineHighlights();
+  if(!phraseBookBackdrop.hidden)renderPhraseBook(currentPhraseBookYear());
+  updatePhraseBookButton();
+ },
+ onStatus:status=>{
+  if(!phraseBookSyncStatus)return;
+  const labels={syncing:'正在同步…',synced:'已同步',offline:'离线 · 本地已保存'};
+  phraseBookSyncStatus.textContent=labels[status]||'自动同步已开启';
+  phraseBookSyncStatus.dataset.state=status;
+ }
+});
 let phraseHighlightSelection=null,phraseHighlightFrame=null,phraseHighlightInvalidKey='',phraseHighlightSaving=false;
 let phraseBookEditing=false,phraseBookDrafts=new Map();
 const state={current:0,speed:1,playing:false,paused:false,showVocab:true,timer:null,playerHidden:false,programmaticScrollUntil:0,scrollAnchorY:Math.max(0,window.scrollY||0),scrollFrame:null,playRequestedAt:null};
@@ -133,7 +152,7 @@ function phraseBookItem(entry){
  const meta=document.createElement('div');meta.className='phrase-book-meta';
  const source=document.createElement('span');source.textContent=entry.articleTitle||entry.articleId||'';
  const remove=document.createElement('button');remove.className='phrase-book-delete';remove.type='button';remove.textContent='删除';
- remove.addEventListener('click',event=>{event.stopPropagation();inlineHighlightStore.remove(entry);applyAllInlineHighlights();renderPhraseBook(currentPhraseBookYear());updatePhraseBookButton();showToast('已删除标记');});
+ remove.addEventListener('click',event=>{event.stopPropagation();inlineHighlightStore.remove(entry);applyAllInlineHighlights();renderPhraseBook(currentPhraseBookYear());updatePhraseBookButton();phraseBookCloudSync.schedule();showToast('已删除标记');});
  meta.append(source,remove);detail.append(sourceEn,sourceZh,meta);
  row.addEventListener('click',event=>{if(phraseBookEditing||event.target.closest('[contenteditable="true"]'))return;detail.hidden=!detail.hidden;row.setAttribute('aria-expanded',String(!detail.hidden));});
  row.addEventListener('keydown',event=>{if(phraseBookEditing||!['Enter',' '].includes(event.key))return;event.preventDefault();row.click();});
@@ -159,7 +178,7 @@ function togglePhraseBookEdit(){
   if(!value)continue;
   inlineHighlightStore.add({...entry,studyGloss:value,glossSource:'user-edited'});
  }
- phraseBookDrafts.clear();setPhraseBookEditing(false);showToast('词群释义已保存');
+ phraseBookDrafts.clear();setPhraseBookEditing(false);phraseBookCloudSync.schedule();showToast('词群释义已保存');
 }
 function openPhraseBook(){
  hidePhraseHighlightAction();window.getSelection()?.removeAllRanges();
@@ -206,6 +225,7 @@ async function saveCurrentPhraseHighlight(){
   });
   applySentenceInlineHighlights(snapshot.card,snapshot.index);updatePhraseBookButton();
   window.getSelection()?.removeAllRanges();hidePhraseHighlightAction();
+  phraseBookCloudSync.schedule();
   showToast(result.added?(translationSnippet?'已标记词群':'已标记词群 · 已生成中文'):(result.updated?'词群释义已更新':'这个词群已经标记过'));
  }finally{
   phraseHighlightSaving=false;phraseHighlightAction.disabled=false;phraseHighlightAction.textContent=originalLabel||'标记词群';
@@ -396,6 +416,28 @@ phraseBookCloseButton.addEventListener('click',closePhraseBook);
 phraseBookYear.addEventListener('change',()=>renderPhraseBook(Number(phraseBookYear.value)));
 phraseBookBlurButton.addEventListener('click',()=>{const year=currentPhraseBookYear();setPhraseBookBlurred(year,!inlineHighlightStore.getYearBlurred(year));});
 phraseBookEditButton.addEventListener('click',togglePhraseBookEdit);
+phraseBookSyncCopy.addEventListener('click',async()=>{
+ const key=phraseBookCloudSync.getKey();
+ try{
+  await navigator.clipboard.writeText(key);
+  showToast('同步码已复制');
+ }catch{
+  window.prompt('复制这个同步码到另一台设备：',key);
+ }
+});
+phraseBookSyncChange.addEventListener('click',()=>{
+ const next=window.prompt('输入另一台设备的同步码。切换后会自动合并两边的词群本：','');
+ if(next===null)return;
+ try{
+  phraseBookCloudSync.setKey(next);
+  phraseBookSyncStatus.textContent='正在切换同步码…';
+  void phraseBookCloudSync.syncNow().then(result=>{
+   showToast(result.ok?'词群本已合并':'当前离线，稍后会自动同步');
+  });
+ }catch{
+  showToast('同步码格式不正确');
+ }
+});
 phraseBookBackdrop.addEventListener('click',event=>{if(event.target===phraseBookBackdrop)closePhraseBook();});
 document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!phraseBookBackdrop.hidden)closePhraseBook();});
 
@@ -461,3 +503,5 @@ yearSelect.addEventListener('change',()=>fillArticleOptions());
 try{
  const response=await fetch('./content/catalog.json',{cache:'no-cache'});if(!response.ok)throw new Error('catalog-load-failed');catalog=await response.json();yearSelect.replaceChildren(...catalog.years.map(year=>new Option(String(year),String(year))));const selected=pickArticle(catalog,location.hash.slice(1)||catalog.default_article);yearSelect.value=String(selected.year);fillArticleOptions(selected.id);
 }catch(error){statusEl.textContent='目录加载失败';showToast('目录加载失败，请刷新页面重试');}
+void phraseBookCloudSync.syncNow();
+window.addEventListener('online',()=>{void phraseBookCloudSync.syncNow();});
