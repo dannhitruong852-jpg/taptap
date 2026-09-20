@@ -174,40 +174,84 @@ export async function browserStudyGloss(text,{TranslatorApi=globalThis.Translato
   finally{try{translator?.destroy?.();}catch{}}
 }
 
-export function createInlineHighlightStore({storage=null,key=DEFAULT_KEY,prefsKey=DEFAULT_PREFS_KEY}={}){
+function entrySignature(entry){return [entry?.articleId,entry?.sentenceId,entry?.enStart,entry?.enEnd].join('|');}
+function entryYear(entry){
+  const direct=Number(entry?.year);if(Number.isFinite(direct)&&direct>0)return direct;
+  const match=String(entry?.articleId||'').match(/^(20\\d{2})/);return match?Number(match[1]):null;
+}
+function entryVersion(entry){
+  return Math.max(Number(entry?.updatedAt)||0,Number(entry?.deletedAt)||0,Number(entry?.createdAt)||0);
+}
+function normalizeSyncEntry(entry){
+  if(!entry||typeof entry!=='object'||Array.isArray(entry))return null;
+  const createdAt=Number(entry.createdAt)||0;
+  const updatedAt=Number(entry.updatedAt)||createdAt;
+  const deletedAt=Number(entry.deletedAt)||null;
+  return {...entry,year:entryYear(entry),createdAt,updatedAt,deletedAt};
+}
+function chooseSyncWinner(a,b){
+  const av=entryVersion(a),bv=entryVersion(b);
+  if(av!==bv)return av>bv?a:b;
+  const ad=Boolean(a?.deletedAt),bd=Boolean(b?.deletedAt);
+  if(ad!==bd)return ad?a:b;
+  return JSON.stringify(a)>=JSON.stringify(b)?a:b;
+}
+export function mergeInlineHighlightSnapshots(localEntries=[],remoteEntries=[]){
+  const merged=new Map();
+  for(const raw of [...localEntries,...remoteEntries]){
+    const entry=normalizeSyncEntry(raw);if(!entry)continue;
+    const sig=entrySignature(entry);if(!sig||sig==='|||')continue;
+    const existing=merged.get(sig);
+    merged.set(sig,existing?chooseSyncWinner(existing,entry):entry);
+  }
+  return [...merged.entries()].sort(([a],[b])=>a.localeCompare(b)).map(([,entry])=>entry);
+}
+
+export function createInlineHighlightStore({storage=null,key=DEFAULT_KEY,prefsKey=DEFAULT_PREFS_KEY,now=()=>Date.now()}={}){
   let memory=[],memoryPrefs={};
   function read(){
-    if(!storage)return [...memory];
-    try{return parseArray(storage.getItem(key)||'[]');}catch{return [...memory];}
+    const source=storage?(()=>{try{return parseArray(storage.getItem(key)||'[]');}catch{return [...memory];}})():[...memory];
+    return source.map(normalizeSyncEntry).filter(Boolean);
   }
-  function write(entries){memory=[...entries];if(storage){try{storage.setItem(key,JSON.stringify(entries));}catch{}}}
+  function write(entries){
+    const normalized=entries.map(normalizeSyncEntry).filter(Boolean);
+    memory=[...normalized];if(storage){try{storage.setItem(key,JSON.stringify(normalized));}catch{}}
+  }
   function readPrefs(){
     if(!storage)return {...memoryPrefs};
     try{return parseObject(storage.getItem(prefsKey)||'{}');}catch{return {...memoryPrefs};}
   }
   function writePrefs(prefs){memoryPrefs={...prefs};if(storage){try{storage.setItem(prefsKey,JSON.stringify(prefs));}catch{}}}
-  function signature(entry){return [entry.articleId,entry.sentenceId,entry.enStart,entry.enEnd].join('|');}
   function add(entry){
-    const entries=read(),sig=signature(entry),index=entries.findIndex(item=>signature(item)===sig);
+    const entries=read(),sig=entrySignature(entry),index=entries.findIndex(item=>entrySignature(item)===sig),timestamp=Number(now())||Date.now();
     if(index>=0){
       const existing=entries[index];
-      const saved={...existing,...entry,year:Number(entry.year)||existing.year||null,createdAt:Number(existing.createdAt)||Number(entry.createdAt)||Date.now()};
+      const saved=normalizeSyncEntry({...existing,...entry,year:Number(entry.year)||existing.year||null,createdAt:Number(existing.createdAt)||Number(entry.createdAt)||timestamp,updatedAt:timestamp,deletedAt:null});
       entries[index]=saved;write(entries);return {added:false,updated:true,entry:saved};
     }
-    const saved={...entry,year:Number(entry.year)||null,createdAt:Number(entry.createdAt)||Date.now()};
+    const saved=normalizeSyncEntry({...entry,year:Number(entry.year)||null,createdAt:Number(entry.createdAt)||timestamp,updatedAt:timestamp,deletedAt:null});
     entries.push(saved);write(entries);return {added:true,updated:false,entry:saved};
   }
-  function list(articleId=null){const entries=read();return articleId?entries.filter(entry=>entry.articleId===articleId):entries;}
-  function entryYear(entry){const direct=Number(entry.year);if(Number.isFinite(direct)&&direct>0)return direct;const match=String(entry.articleId||'').match(/^(20\\d{2})/);return match?Number(match[1]):null;}
-  function listYear(year){const target=Number(year);return read().filter(entry=>entryYear(entry)===target&&entry.selectedText).sort((a,b)=>Number(b.createdAt||0)-Number(a.createdAt||0));}
-  function years(){return [...new Set(read().map(entryYear).filter(Number.isFinite))].sort((a,b)=>a-b);}
+  function activeEntries(){return read().filter(entry=>!entry.deletedAt);}
+  function list(articleId=null){const entries=activeEntries();return articleId?entries.filter(entry=>entry.articleId===articleId):entries;}
+  function listYear(year){const target=Number(year);return activeEntries().filter(entry=>entryYear(entry)===target&&entry.selectedText).sort((a,b)=>Number(b.createdAt||0)-Number(a.createdAt||0));}
+  function years(){return [...new Set(activeEntries().map(entryYear).filter(Number.isFinite))].sort((a,b)=>a-b);}
   function remove(entry){
-    const sig=typeof entry==='string'?entry:signature(entry);const entries=read();const next=entries.filter(item=>signature(item)!==sig&&item.id!==sig);
-    if(next.length===entries.length)return false;write(next);return true;
+    const sig=typeof entry==='string'?entry:entrySignature(entry),entries=read(),index=entries.findIndex(item=>entrySignature(item)===sig||item.id===sig);
+    if(index<0||entries[index].deletedAt)return false;
+    const timestamp=Number(now())||Date.now();
+    entries[index]={...entries[index],updatedAt:timestamp,deletedAt:timestamp};write(entries);return true;
+  }
+  function snapshot(){return read();}
+  function merge(remoteEntries=[]){
+    const before=read(),merged=mergeInlineHighlightSnapshots(before,remoteEntries);
+    const changed=JSON.stringify(before)!==JSON.stringify(merged);
+    if(changed)write(merged);
+    return {changed,entries:merged};
   }
   function getYearBlurred(year){return Boolean(readPrefs()[String(Number(year))]?.blurred);}
   function setYearBlurred(year,value){
     const prefs=readPrefs(),id=String(Number(year));prefs[id]={...(prefs[id]||{}),blurred:Boolean(value)};writePrefs(prefs);return Boolean(value);
   }
-  return {add,list,listYear,years,remove,getYearBlurred,setYearBlurred};
+  return {add,list,listYear,years,remove,snapshot,merge,getYearBlurred,setYearBlurred};
 }
