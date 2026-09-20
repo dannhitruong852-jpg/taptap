@@ -50,7 +50,6 @@ const phraseBookList=document.querySelector('#phrase-book-list');
 const phraseBookEmpty=document.querySelector('#phrase-book-empty');
 const phraseBookBlurButton=document.querySelector('#phrase-book-blur');
 const phraseBookEditButton=document.querySelector('#phrase-book-edit');
-const phraseBookSyncStatus=document.querySelector('#phrase-book-sync-status');
 const phraseBookSyncCopy=document.querySelector('#phrase-book-sync-copy');
 const phraseBookSyncChange=document.querySelector('#phrase-book-sync-change');
 let inlineHighlightStorage=null;
@@ -63,12 +62,6 @@ const phraseBookCloudSync=createPhraseBookCloudSync({
   applyAllInlineHighlights();
   if(!phraseBookBackdrop.hidden)renderPhraseBook(currentPhraseBookYear());
   updatePhraseBookButton();
- },
- onStatus:status=>{
-  if(!phraseBookSyncStatus)return;
-  const labels={syncing:'正在同步…',synced:'已同步',offline:'离线 · 本地已保存'};
-  phraseBookSyncStatus.textContent=labels[status]||'自动同步已开启';
-  phraseBookSyncStatus.dataset.state=status;
  }
 });
 let phraseHighlightSelection=null,phraseHighlightFrame=null,phraseHighlightInvalidKey='',phraseHighlightSaving=false;
@@ -430,7 +423,6 @@ phraseBookSyncChange.addEventListener('click',()=>{
  if(next===null)return;
  try{
   phraseBookCloudSync.setKey(next);
-  phraseBookSyncStatus.textContent='正在切换同步码…';
   void phraseBookCloudSync.syncNow().then(result=>{
    showToast(result.ok?'词群本已合并':'当前离线，稍后会自动同步');
   });
