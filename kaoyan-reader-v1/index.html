@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="./styles.css?v=reader-cleanup-20260919-v1">
   <link rel="stylesheet" href="./catalog.css?v=reader-cleanup-20260919-v1">
   <link rel="stylesheet" href="./readalong.css?v=reader-cleanup-20260919-v1">
-  <link rel="stylesheet" href="./reader-controls.css?v=reader-cleanup-20260919-v1">
+  <link rel="stylesheet" href="./reader-controls.css?v=phrase-book-cloud-sync-20260921-v2">
   <style>
     .transport-row{left:94px;right:10px;grid-template-columns:46px 56px 46px 68px;gap:12px;justify-content:end;align-items:center}
     .article-nav{width:46px;height:46px}
@@ -31,6 +31,10 @@
         <label class="article-control">文章<select id="article-select" aria-label="选择文章"></select></label>
       </nav>
       <div class="reader-settings">
+        <div class="reader-sync-actions" aria-label="词群本跨设备同步">
+          <button id="phrase-book-sync-copy" class="reader-sync-button" type="button">复制同步码</button>
+          <button id="phrase-book-sync-change" class="reader-sync-button" type="button">输入同步码</button>
+        </div>
         <button id="toggle-vocab" class="vocab-toggle" type="button" role="switch" aria-checked="true" aria-label="6级及以上难词双语标注"><span>难词 6+</span><i aria-hidden="true"></i></button>
       </div>
     </header>
@@ -73,20 +77,13 @@
           <button id="phrase-book-edit" class="phrase-book-edit" type="button" aria-pressed="false">编辑</button>
         </div>
       </div>
-      <div class="phrase-book-sync" aria-label="跨设备同步">
-        <span id="phrase-book-sync-status" class="phrase-book-sync-status">自动同步已开启</span>
-        <div class="phrase-book-sync-actions">
-          <button id="phrase-book-sync-copy" class="phrase-book-sync-button" type="button">复制同步码</button>
-          <button id="phrase-book-sync-change" class="phrase-book-sync-button" type="button">输入同步码</button>
-        </div>
-      </div>
       <div class="phrase-book-columns" aria-hidden="true"><span>英文词群</span><span>对应中文</span></div>
       <div id="phrase-book-list" class="phrase-book-list"></div>
       <p id="phrase-book-empty" class="phrase-book-empty">这一年还没有标记词群。</p>
     </aside>
   </div>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script type="module" src="./app.js?v=phrase-book-cloud-sync-20260921-v1"></script>
+  <script type="module" src="./app.js?v=phrase-book-cloud-sync-20260921-v2"></script>
   <script type="module" src="./full-library-bootstrap.js?v=reader-cleanup-20260919-v1"></script>
 </body>
 </html>
