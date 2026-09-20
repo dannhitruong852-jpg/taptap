@@ -60,3 +60,15 @@ body.hide-vocab .sentence-card .vocab,body.hide-vocab .sentence-card .vocab.read
  .page-shell{padding-bottom:112px}
 }
 @media(prefers-reduced-motion:reduce){.player-shell,.player-phrase-book,.vocab-toggle i,.vocab-toggle i::after{transition:none}}
+
+
+/* Phrase book cross-device sync */
+.phrase-book-sync{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:10px 0 6px;padding:10px 12px;border:1px solid rgba(70,62,50,.08);border-radius:12px;background:rgba(245,241,232,.58)}
+.phrase-book-sync-status{font-size:11px;font-weight:750;color:#655d51;white-space:nowrap}
+.phrase-book-sync-status[data-state="synced"]::before{content:"✓ ";color:#5f6f55}
+.phrase-book-sync-status[data-state="syncing"]::before{content:"↻ "}
+.phrase-book-sync-status[data-state="offline"]::before{content:"· "}
+.phrase-book-sync-actions{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.phrase-book-sync-button{min-height:32px;padding:0 10px;border:0;border-radius:16px;background:#ece6db;color:#4b4337;font:700 11px/32px inherit;white-space:nowrap;cursor:pointer}
+.phrase-book-sync-button:active{transform:scale(.97)}
+@media(max-width:420px){.phrase-book-sync{align-items:flex-start;flex-direction:column}.phrase-book-sync-actions{width:100%;justify-content:flex-start}}
