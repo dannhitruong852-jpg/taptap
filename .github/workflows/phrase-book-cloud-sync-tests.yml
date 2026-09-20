@@ -1,0 +1,30 @@
+name: Phrase book cloud sync tests
+
+on:
+  push:
+    branches: ['feat/phrase-book-cloud-sync']
+    paths:
+      - 'kaoyan-reader-v1/**'
+      - '.github/workflows/phrase-book-cloud-sync-tests.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run reader tests
+        working-directory: kaoyan-reader-v1
+        run: npm test
+      - name: Syntax-check cloud sync modules
+        working-directory: kaoyan-reader-v1
+        run: |
+          node --check phrase-book-cloud-sync.js
+          node --check inline-phrase-highlights.js
+          node --check app.js
