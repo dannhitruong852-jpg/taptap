@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {resolveLinkedHighlight, snippetFromRanges, semanticGroupsForYear, localStudyGloss, browserStudyGloss, createInlineHighlightStore} from '../inline-phrase-highlights.js';
+import {resolveLinkedHighlight, snippetFromRanges, semanticGroupsForYear, localStudyGloss, browserStudyGloss, createInlineHighlightStore, mergeInlineHighlightSnapshots} from '../inline-phrase-highlights.js';
 
 const sentence={
   en:'He helped popularize the idea that some diseases not previously thought to have a bacterial cause were actually infections, which aroused much controversy when it was first suggested.',
@@ -80,4 +80,38 @@ test('marking the same phrase can upgrade an older entry with a generated study 
   const updated=store.add({...base,studyGloss:'测试',glossSource:'browser-translator'});
   assert.equal(updated.added,false);assert.equal(updated.updated,true);
   assert.equal(store.listYear(2014)[0].studyGloss,'测试');
+});
+
+
+test('cloud merge keeps the newer edit for the same phrase signature',()=>{
+  const base={year:2014,articleId:'2014-text1',sentenceId:'s03',enStart:1,enEnd:5,selectedText:'test',createdAt:10};
+  const merged=mergeInlineHighlightSnapshots(
+    [{...base,studyGloss:'旧释义',updatedAt:20}],
+    [{...base,studyGloss:'新释义',updatedAt:30}]
+  );
+  assert.equal(merged.length,1);
+  assert.equal(merged[0].studyGloss,'新释义');
+});
+
+test('cloud merge keeps a newer deletion tombstone so deleted phrases do not reappear',()=>{
+  const base={year:2014,articleId:'2014-text1',sentenceId:'s03',enStart:1,enEnd:5,selectedText:'test',createdAt:10};
+  const merged=mergeInlineHighlightSnapshots(
+    [{...base,studyGloss:'测试',updatedAt:20}],
+    [{...base,studyGloss:'测试',updatedAt:40,deletedAt:40}]
+  );
+  assert.equal(merged.length,1);
+  assert.equal(merged[0].deletedAt,40);
+});
+
+test('store merge preserves offline additions and hides tombstoned entries from the visible phrase book',()=>{
+  let clock=100;
+  const store=createInlineHighlightStore({now:()=>++clock});
+  const local={year:2014,articleId:'2014-text1',sentenceId:'s03',enStart:1,enEnd:5,selectedText:'local'};
+  const remote={year:2014,articleId:'2014-text2',sentenceId:'s04',enStart:2,enEnd:8,selectedText:'remote',createdAt:90,updatedAt:90};
+  store.add(local);
+  store.merge([remote]);
+  assert.deepEqual(store.listYear(2014).map(x=>x.selectedText).sort(),['local','remote']);
+  store.remove(local);
+  assert.deepEqual(store.listYear(2014).map(x=>x.selectedText),['remote']);
+  assert.equal(store.snapshot().some(x=>x.selectedText==='local'&&x.deletedAt),true);
 });
