@@ -6,7 +6,9 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.ViewGroup;
+import android.webkit.WebBackForwardList;
 import android.webkit.WebChromeClient;
+import android.webkit.WebHistoryItem;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -38,7 +40,11 @@ public final class MainActivity extends Activity {
         settings.setUseWideViewPort(true);
         settings.setBuiltInZoomControls(false);
         settings.setDisplayZoomControls(false);
+
+        // Keep the normal WebView cache for article/audio offline use.
+        // Only the top-level reader HTML is cache-busted on app launch below.
         settings.setCacheMode(WebSettings.LOAD_DEFAULT);
+
         settings.setAllowFileAccess(false);
         settings.setAllowContentAccess(false);
         settings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
@@ -63,11 +69,43 @@ public final class MainActivity extends Activity {
 
         setContentView(webView);
 
-        if (savedInstanceState == null) {
-            webView.loadUrl(BuildConfig.READER_URL);
-        } else {
-            webView.restoreState(savedInstanceState);
+        String fragment = null;
+        if (savedInstanceState != null) {
+            WebBackForwardList restored = webView.restoreState(savedInstanceState);
+            if (restored != null) {
+                WebHistoryItem current = restored.getCurrentItem();
+                if (current != null) {
+                    Uri restoredUri = Uri.parse(current.getUrl());
+                    if (isReaderUri(restoredUri)) {
+                        fragment = restoredUri.getFragment();
+                    }
+                }
+            }
         }
+
+        // Always fetch a fresh copy of the outer HTML on app creation.
+        // The changing query parameter bypasses stale WebView/GitHub Pages HTML cache,
+        // while versioned JS/CSS, article JSON and audio remain cacheable/offline.
+        webView.loadUrl(freshReaderUrl(fragment));
+    }
+
+    private boolean isReaderUri(Uri uri) {
+        String host = uri.getHost();
+        String path = uri.getPath();
+        return host != null
+                && host.equalsIgnoreCase("dannhitruong852-jpg.github.io")
+                && path != null
+                && path.startsWith("/taptap/kaoyan-reader-v1/");
+    }
+
+    private String freshReaderUrl(String fragment) {
+        Uri.Builder builder = Uri.parse(BuildConfig.READER_URL)
+                .buildUpon()
+                .appendQueryParameter("_app_refresh", String.valueOf(System.currentTimeMillis()));
+        if (fragment != null && !fragment.isEmpty()) {
+            builder.fragment(fragment);
+        }
+        return builder.build().toString();
     }
 
     @Override
