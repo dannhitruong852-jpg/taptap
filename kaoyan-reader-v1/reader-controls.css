@@ -1,5 +1,5 @@
 /* Learning controls; article text stays selectable and native. */
-.reader-settings{display:flex;align-items:center;justify-content:flex-end;margin:8px 2px 0;color:var(--ink-soft);font-size:12px}
+.reader-settings{display:flex;align-items:center;justify-content:flex-end;gap:6px;margin:8px 2px 0;color:var(--ink-soft);font-size:12px}
 .vocab-toggle{display:flex;align-items:center;gap:8px;min-height:44px;padding:4px 0 4px 10px;border:0;background:none;color:#4d483f;font-size:12px;font-weight:650;white-space:nowrap;cursor:pointer}
 .vocab-toggle i{display:block;width:30px;height:18px;border-radius:99px;background:#c9c4b9;position:relative;transition:background .15s}
 .vocab-toggle i::after{content:"";position:absolute;left:3px;top:3px;width:12px;height:12px;border-radius:50%;background:#fff;transition:transform .15s}
@@ -61,14 +61,14 @@ body.hide-vocab .sentence-card .vocab,body.hide-vocab .sentence-card .vocab.read
 }
 @media(prefers-reduced-motion:reduce){.player-shell,.player-phrase-book,.vocab-toggle i,.vocab-toggle i::after{transition:none}}
 
-
-/* Phrase book cross-device sync */
-.phrase-book-sync{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:10px 0 6px;padding:10px 12px;border:1px solid rgba(70,62,50,.08);border-radius:12px;background:rgba(245,241,232,.58)}
-.phrase-book-sync-status{font-size:11px;font-weight:750;color:#655d51;white-space:nowrap}
-.phrase-book-sync-status[data-state="synced"]::before{content:"✓ ";color:#5f6f55}
-.phrase-book-sync-status[data-state="syncing"]::before{content:"↻ "}
-.phrase-book-sync-status[data-state="offline"]::before{content:"· "}
-.phrase-book-sync-actions{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
-.phrase-book-sync-button{min-height:32px;padding:0 10px;border:0;border-radius:16px;background:#ece6db;color:#4b4337;font:700 11px/32px inherit;white-space:nowrap;cursor:pointer}
-.phrase-book-sync-button:active{transform:scale(.97)}
-@media(max-width:420px){.phrase-book-sync{align-items:flex-start;flex-direction:column}.phrase-book-sync-actions{width:100%;justify-content:flex-start}}
+/* Phrase book cross-device sync controls live on the main reader toolbar. */
+.reader-sync-actions{display:flex;align-items:center;gap:6px}
+.reader-sync-button{min-height:34px;padding:0 10px;border:0;border-radius:17px;background:#f0ece4;color:#4b4337;font:750 11px/34px inherit;white-space:nowrap;cursor:pointer;transition:transform .14s ease,background .14s ease}
+.reader-sync-button:active{transform:scale(.96);background:#e9e1d3}
+@media(max-width:380px){
+ .reader-settings{gap:4px}
+ .reader-sync-actions{gap:4px}
+ .reader-sync-button{padding:0 8px;font-size:10px}
+ .vocab-toggle{gap:6px;padding-left:6px;font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){.reader-sync-button{transition:none}}
