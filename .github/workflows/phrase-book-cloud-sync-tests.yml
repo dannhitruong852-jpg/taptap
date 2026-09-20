@@ -16,6 +16,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          sparse-checkout: |
+            kaoyan-reader-v1
+            .github/workflows/phrase-book-cloud-sync-tests.yml
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
