@@ -76,6 +76,6 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: ruan-xiaomi-debug-apk-v0.1.3-fixed-icons
+          name: ruan-xiaomi-debug-apk-v0.1.4-auto-refresh
           path: ruan-xiaomi-android/app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
