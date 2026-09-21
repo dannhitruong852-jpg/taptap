@@ -115,3 +115,22 @@ test('store merge preserves offline additions and hides tombstoned entries from 
   assert.deepEqual(store.listYear(2014).map(x=>x.selectedText),['remote']);
   assert.equal(store.snapshot().some(x=>x.selectedText==='local'&&x.deletedAt),true);
 });
+
+
+test('phrase book lists newly added phrases first and editing an older phrase does not reorder it',()=>{
+  let clock=1000;
+  const store=createInlineHighlightStore({now:()=>++clock});
+  const older={year:2026,articleId:'2026-text1',sentenceId:'s01',enStart:0,enEnd:5,selectedText:'older phrase',studyGloss:'旧释义'};
+  const newer={year:2026,articleId:'2026-text1',sentenceId:'s02',enStart:6,enEnd:11,selectedText:'newer phrase',studyGloss:'新释义'};
+  store.add(older);
+  store.add(newer);
+
+  assert.deepEqual(store.listYear(2026).map(x=>x.selectedText),['newer phrase','older phrase']);
+
+  store.add({...older,studyGloss:'修改后的旧释义',glossSource:'user-edited'});
+
+  const visible=store.listYear(2026);
+  assert.deepEqual(visible.map(x=>x.selectedText),['newer phrase','older phrase']);
+  assert.equal(visible[1].studyGloss,'修改后的旧释义');
+  assert.ok(visible[0].createdAt>visible[1].createdAt);
+});
