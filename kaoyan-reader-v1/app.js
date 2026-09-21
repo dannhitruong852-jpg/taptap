@@ -151,12 +151,14 @@ function phraseBookItem(entry){
  row.addEventListener('keydown',event=>{if(phraseBookEditing||!['Enter',' '].includes(event.key))return;event.preventDefault();row.click();});
  item.append(row,detail);return item;
 }
-function renderPhraseBook(year=currentPhraseBookYear()){
+function renderPhraseBook(year=currentPhraseBookYear(),{resetScroll=false}={}){
  const years=[...new Set([...inlineHighlightStore.years(),Number(currentEntry?.year)].filter(Number.isFinite))].sort((a,b)=>a-b);
  phraseBookYear.replaceChildren(...years.map(value=>new Option(String(value),String(value))));
  phraseBookYear.value=String(year);
- const entries=inlineHighlightStore.listYear(year);
+ // Render newest first by the original add time. Editing an old phrase must not move it upward.
+ const entries=[...inlineHighlightStore.listYear(year)].sort((a,b)=>Number(b.createdAt||0)-Number(a.createdAt||0));
  phraseBookList.replaceChildren(...entries.map(phraseBookItem));
+ if(resetScroll)phraseBookList.scrollTop=0;
  phraseBookEmpty.hidden=entries.length>0;
  setPhraseBookBlurred(year,inlineHighlightStore.getYearBlurred(year));
 }
@@ -177,7 +179,7 @@ function openPhraseBook(){
  hidePhraseHighlightAction();window.getSelection()?.removeAllRanges();
  const year=Number(currentEntry?.year)||Number(yearSelect.value)||inlineHighlightStore.years().at(-1)||2002;
  phraseBookEditing=false;phraseBookDrafts.clear();phraseBookEditButton.textContent='编辑';phraseBookEditButton.setAttribute('aria-pressed','false');phraseBookYear.disabled=false;
- renderPhraseBook(year);phraseBookBackdrop.hidden=false;document.body.classList.add('phrase-book-opened');phraseBookCloseButton.focus();
+ renderPhraseBook(year,{resetScroll:true});phraseBookBackdrop.hidden=false;document.body.classList.add('phrase-book-opened');phraseBookCloseButton.focus();
 }
 function closePhraseBook(){phraseBookEditing=false;phraseBookDrafts.clear();phraseBookEditButton.textContent='编辑';phraseBookEditButton.setAttribute('aria-pressed','false');phraseBookYear.disabled=false;phraseBookBackdrop.hidden=true;document.body.classList.remove('phrase-book-opened');phraseBookOpenButton.focus();}
 
@@ -406,7 +408,7 @@ phraseHighlightAction.addEventListener('pointerup',event=>{event.preventDefault(
 phraseHighlightAction.addEventListener('click',event=>{event.preventDefault();event.stopPropagation();if(event.detail===0)saveCurrentPhraseHighlight();});
 phraseBookOpenButton.addEventListener('click',openPhraseBook);
 phraseBookCloseButton.addEventListener('click',closePhraseBook);
-phraseBookYear.addEventListener('change',()=>renderPhraseBook(Number(phraseBookYear.value)));
+phraseBookYear.addEventListener('change',()=>renderPhraseBook(Number(phraseBookYear.value),{resetScroll:true}));
 phraseBookBlurButton.addEventListener('click',()=>{const year=currentPhraseBookYear();setPhraseBookBlurred(year,!inlineHighlightStore.getYearBlurred(year));});
 phraseBookEditButton.addEventListener('click',togglePhraseBookEdit);
 phraseBookSyncCopy.addEventListener('click',async()=>{
