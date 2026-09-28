@@ -2,7 +2,7 @@ name: Phrase book cloud sync tests
 
 on:
   push:
-    branches: ['feat/phrase-book-cloud-sync']
+    branches: ['feat/phrase-book-cloud-sync', 'feat/phrase-copy-on-save']
     paths:
       - 'kaoyan-reader-v1/**'
       - '.github/workflows/phrase-book-cloud-sync-tests.yml'
@@ -32,4 +32,5 @@ jobs:
         run: |
           node --check phrase-book-cloud-sync.js
           node --check inline-phrase-highlights.js
+          node --check clipboard-copy.js
           node --check app.js
