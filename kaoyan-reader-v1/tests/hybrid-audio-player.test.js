@@ -4,6 +4,14 @@ import {createHybridAudioPlayer} from '../hybrid-audio-player.js';
 
 function stub(extra={}){return {playSentence(){},stop(){},pause(){},resume(){},setPlaybackRate(){},getState(){return {};},...extra};}
 
+test('stopping a pending Web Audio start prevents late fallback playback',async()=>{
+ let reject;const played=[];
+ const web=stub({playSentence:()=>new Promise((_,r)=>{reject=r;})});
+ const player=createHybridAudioPlayer({getWebPlayer:()=>web,fallbackPlayer:stub({playSentence:()=>played.push('fallback')})});
+ const pending=player.playSentence([{id:'old'}]);player.stop();reject(new Error('decode failed'));
+ await pending;assert.deepEqual(played,[]);
+});
+
 test('hybrid player prefers Web Audio and falls back to HTMLAudio when Web Audio start rejects',async()=>{
   const events=[];
   const web=stub({async playSentence(){events.push('web');throw new Error('decode');}});

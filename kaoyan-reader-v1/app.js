@@ -3,7 +3,8 @@ import { createAudioPlayer } from './audio-player.js';
 import { createAudioCache } from './audio-cache.js';
 import { createDecodedAudioStore } from './decoded-audio-store.js';
 import { createWebAudioPlayer } from './web-audio-player.js';
-import { createHybridAudioPlayer } from './hybrid-audio-player.js';
+import { createHybridAudioPlayer } from './hybrid-audio-player.js?v=continuous-playback-20260928-v1';
+import { createContinuousPlayback } from './continuous-playback.js?v=20260928-v1';
 import { measureLatency } from './latency-metrics.js';
 import { sentenceProgress, isExplicitLegacyTimingVersion } from './progress.js';
 import { readStateAtTime, activeChineseGroups } from './time-index.js';
@@ -39,6 +40,11 @@ const moodEl=document.querySelector('#director-mood');
 const statusEl=document.querySelector('#player-status');
 const playerShell=document.querySelector('#player-shell');
 const vocabButton=document.querySelector('#toggle-vocab');
+const continuousButton=document.querySelector('#toggle-continuous');
+const continuousPreferenceKey='kaoyan-continuous-playback-v1';
+let continuousEnabled=false;
+try{continuousEnabled=window.localStorage.getItem(continuousPreferenceKey)==='true';}catch{}
+continuousButton.setAttribute('aria-checked',String(continuousEnabled));
 const toast=document.querySelector('#toast');
 const phraseStudyBar=document.querySelector('#phrase-study-bar');
 const phraseHighlightSelectionText=document.querySelector('#phrase-highlight-selection');
@@ -336,7 +342,12 @@ function onPlayerSegmentStart(segment){
  setPlaying(true,false);statusEl.textContent=`演员 ${segment.actor_id||primarySegment(sentences[state.current]).actor_id} · ${emotionLabels[segment.emotion||primarySegment(sentences[state.current]).emotion]||segment.emotion||'自然讲述'}`;
 }
 function onPlayerTimeUpdate({segment,currentTime,duration,ended}){paintPlaybackProgress(state.current,segment,currentTime,duration,Boolean(ended));}
-function onPlayerSentenceEnd(){markSentenceComplete(state.current);if(state.current<sentences.length-1){speak(state.current+1);}else{setPlaying(false,false);statusEl.textContent='这一篇读完了 ✓';}}
+function onPlayerSentenceEnd(){
+ if(loading||!state.playing)return;
+ markSentenceComplete(state.current);
+ if(state.current<sentences.length-1)speak(state.current+1);
+ else void continuousPlayback.finishArticle();
+}
 function onPlayerError(){setPlaying(false,false);statusEl.textContent='音频暂时不可用';showToast('这句音频尚未生成或加载失败');}
 const fallbackAudioPlayer=createAudioPlayer({
  createAudio:src=>new Audio(src),
@@ -357,6 +368,18 @@ function ensureWebAudio(){
  }catch{return null;}
 }
 const hybridAudioPlayer=createHybridAudioPlayer({getWebPlayer:ensureWebAudio,fallbackPlayer:fallbackAudioPlayer});
+const continuousPlayback=createContinuousPlayback({
+ enabled:continuousEnabled,
+ getNext:()=>catalog&&currentEntry?adjacentArticle(catalog,currentEntry.id,1):null,
+ open:entry=>{syncArticleSelectors(entry);return openArticle(entry,{automatic:true});},
+ play:()=>speak(0),
+ onWaiting:()=>{setPlaying(true,false);playButton.disabled=false;statusEl.textContent='正在接播下一篇…';},
+ onStop:reason=>{
+  setPlaying(false,false);
+  statusEl.textContent=reason==='end'?'全部文章读完了 ✓':reason==='failed'?'下一篇加载失败，请重试':'这一篇读完了 ✓';
+  if(reason==='failed')showToast('下一篇加载失败，请重新选择文章');
+ }
+});
 function prepareAudio(warm,articleId=currentEntry?.id||'unknown'){
  if(!warm.length)return;
  const web=ensureWebAudio();
@@ -396,11 +419,17 @@ function scheduleAdjacentWarm(entry,selectionToken){
 function speak(index,{scroll=true}={}){
  if(loading||!sentences.length)return;clearTimer();hybridAudioPlayer.stop();state.current=nextSentenceIndex(index,0,sentences.length);resetOtherProgress(state.current);resetSentenceProgress(state.current);updateActive(scroll);
  const queue=queueForSentence(state.current);if(queue.length===0||queue.some(item=>!item.path)){setPlaying(false,false);statusEl.textContent='音频尚未生成';showToast('这句音频尚未生成');return;}
- state.playRequestedAt=performance.now();void hybridAudioPlayer.playSentence(queue,state.speed);warmRange(state.current+1,3);
+ setPlaying(true,false);state.playRequestedAt=performance.now();void hybridAudioPlayer.playSentence(queue,state.speed);warmRange(state.current+1,3);
 }
 function togglePlay(){
+ if(continuousPlayback.isPending()){
+  continuousPlayback.cancel();setPlaying(false,false);playButton.disabled=loading;statusEl.textContent='已暂停';return;
+ }
  if(loading||!sentences.length)return;clearTimer();const playerState=hybridAudioPlayer.getState();
- if(playerState.playing||state.playing){hybridAudioPlayer.pause();setPlaying(false,true);statusEl.textContent='已暂停';return;}
+ if(playerState.playing||state.playing){
+  if(playerState.playing)hybridAudioPlayer.pause();else hybridAudioPlayer.stop();
+  setPlaying(false,Boolean(playerState.playing));statusEl.textContent='已暂停';return;
+ }
  if(state.paused&&playerState.paused){state.playRequestedAt=performance.now();Promise.resolve(hybridAudioPlayer.resume()).catch(()=>{setPlaying(false,false);statusEl.textContent='音频暂时不可用';});setPlaying(true,false);statusEl.textContent='继续朗读';return;}
  speak(state.current,{scroll:false});
 }
@@ -416,7 +445,8 @@ function updateArticleNavState(){
  if(!catalog||!currentEntry)return;previousButton.disabled=!adjacentArticle(catalog,currentEntry.id,-1);nextButton.disabled=!adjacentArticle(catalog,currentEntry.id,1);
 }
 function moveArticle(delta){
- if(loading||!catalog||!currentEntry)return;const target=adjacentArticle(catalog,currentEntry.id,delta);
+ if(!catalog||!currentEntry||(loading&&!continuousPlayback.isPending()))return;
+ const target=adjacentArticle(catalog,currentEntry.id,delta);
  if(!target){showToast(delta<0?'已经是第一篇':'已经是最后一篇');return;}
  syncArticleSelectors(target);openArticle(target);
 }
@@ -487,13 +517,21 @@ previousButton.addEventListener('click',()=>moveArticle(-1));
 nextButton.addEventListener('click',()=>moveArticle(1));
 playerShell.addEventListener('click',event=>{if(state.playerHidden&&!event.target.closest('button')){applyPlayerVisibility(false);state.scrollAnchorY=Math.max(0,window.scrollY||0);}});
 vocabButton.addEventListener('click',()=>{state.showVocab=!state.showVocab;document.body.classList.toggle('hide-vocab',!state.showVocab);vocabButton.setAttribute('aria-checked',String(state.showVocab));});
+continuousButton.addEventListener('click',()=>{
+ continuousEnabled=!continuousEnabled;const wasPending=continuousPlayback.isPending();
+ continuousPlayback.setEnabled(continuousEnabled);continuousButton.setAttribute('aria-checked',String(continuousEnabled));
+ try{window.localStorage.setItem(continuousPreferenceKey,String(continuousEnabled));}catch{}
+ if(wasPending&&!continuousEnabled){setPlaying(false,false);playButton.disabled=loading;}
+ showToast(continuousEnabled?'已开启连续播放，播完自动接下一篇':'已关闭连续播放');
+});
 window.addEventListener('wheel',()=>{state.programmaticScrollUntil=0;},{passive:true});
 window.addEventListener('touchmove',()=>{state.programmaticScrollUntil=0;},{passive:true});
 window.addEventListener('scrollend',()=>{state.programmaticScrollUntil=0;state.scrollAnchorY=Math.max(0,window.scrollY||0);},{passive:true});
 window.addEventListener('scroll',()=>{hidePhraseHighlightAction();queueViewportScroll();},{passive:true});
-window.addEventListener('beforeunload',()=>{hybridAudioPlayer.stop();audioCache.clearMemory();decodedAudioStore?.clearDecoded();});
+window.addEventListener('beforeunload',()=>{continuousPlayback.cancel();hybridAudioPlayer.stop();audioCache.clearMemory();decodedAudioStore?.clearDecoded();});
 
-async function openArticle(entry){
+async function openArticle(entry,{automatic=false}={}){
+ if(!automatic)continuousPlayback.cancel();
  if(!entry)return;hidePhraseHighlightAction();window.getSelection()?.removeAllRanges();const switchStarted=performance.now();const selectionToken=++selectionGeneration;tapGuard.cancel();tapArbiter.cancel();loading=true;clearTimer();hybridAudioPlayer.stop();fallbackAudioPlayer.clearPreload();audioCache.clearMemory();setPlaying(false,false);playButton.disabled=true;statusEl.textContent='正在加载正文';
  articleBundleStore.cancelLowPriorityWork();
  try{
@@ -504,7 +542,8 @@ async function openArticle(entry){
   statusEl.textContent=audioCount===sentences.length?'音频已就绪 · 双击句框可重播':'正文已就绪 · 音频生成中';
   history.replaceState(null,'',`#${entry.id}`);renderSentences();updatePhraseBookButton();updateActive(false);resetSentenceProgress(0);updateArticleNavState();applyPlayerVisibility(false);measureLatency('article-switch',switchStarted);warmRange(0,4);warmArticleRemainder();scheduleAdjacentWarm(entry,selectionToken);
   if(!globalArticlePreloadStarted&&catalog){globalArticlePreloadStarted=true;void articleBundleStore.preload(catalog.articles.filter(item=>item.id!==entry.id));}
- }catch(error){if(selectionToken!==selectionGeneration)return;loading=false;statusEl.textContent='正文加载失败';showToast('请重新选择文章或刷新页面');}
+  return true;
+ }catch(error){if(selectionToken!==selectionGeneration)return false;loading=false;setPlaying(false,false);playButton.disabled=true;statusEl.textContent='正文加载失败';showToast('请重新选择文章或刷新页面');return false;}
 }
 function fillArticleOptions(preferred){
  const entries=selectArticles(catalog,yearSelect.value,sectionSelect.value);articleSelect.replaceChildren(...entries.map(entry=>new Option(entry.title,entry.id)));if(entries.some(x=>x.id===preferred))articleSelect.value=preferred;openArticle(pickArticle(catalog,articleSelect.value));

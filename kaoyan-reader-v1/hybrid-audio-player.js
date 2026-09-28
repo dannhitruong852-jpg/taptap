@@ -3,20 +3,25 @@ export function createHybridAudioPlayer({getWebPlayer,fallbackPlayer}={}){
   if(!fallbackPlayer)throw new Error('fallback-player-required');
   let active=fallbackPlayer;
   let engine='fallback';
+  let generation=0;
 
   async function playSentence(queue,rate=1){
+    const token=++generation;
     const web=getWebPlayer();
     if(web){
       try{
         await web.playSentence(queue,rate);
+        if(token!==generation)return false;
         active=web;engine='web';return true;
       }catch{}
     }
+    if(token!==generation)return false;
     active=fallbackPlayer;engine='fallback';
     await Promise.resolve(fallbackPlayer.playSentence(queue,rate));
     return false;
   }
   function stop(){
+    generation+=1;
     const web=getWebPlayer();
     try{web?.stop?.();}catch{}
     try{fallbackPlayer.stop?.();}catch{}

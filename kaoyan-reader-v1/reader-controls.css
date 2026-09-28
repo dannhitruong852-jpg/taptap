@@ -1,5 +1,5 @@
 /* Learning controls; article text stays selectable and native. */
-.reader-settings{display:flex;align-items:center;justify-content:flex-end;gap:6px;margin:8px 2px 0;color:var(--ink-soft);font-size:12px}
+.reader-settings{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:6px;margin:8px 2px 0;color:var(--ink-soft);font-size:12px}
 .vocab-toggle{display:flex;align-items:center;gap:8px;min-height:44px;padding:4px 0 4px 10px;border:0;background:none;color:#4d483f;font-size:12px;font-weight:650;white-space:nowrap;cursor:pointer}
 .vocab-toggle i{display:block;width:30px;height:18px;border-radius:99px;background:#c9c4b9;position:relative;transition:background .15s}
 .vocab-toggle i::after{content:"";position:absolute;left:3px;top:3px;width:12px;height:12px;border-radius:50%;background:#fff;transition:transform .15s}

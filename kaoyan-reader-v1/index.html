@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="./styles.css?v=reader-cleanup-20260919-v1">
   <link rel="stylesheet" href="./catalog.css?v=reader-cleanup-20260919-v1">
   <link rel="stylesheet" href="./readalong.css?v=reader-cleanup-20260919-v1">
-  <link rel="stylesheet" href="./reader-controls.css?v=phrase-book-cloud-sync-20260921-v2">
+  <link rel="stylesheet" href="./reader-controls.css?v=continuous-playback-20260928-v1">
   <style>
     .transport-row{left:94px;right:10px;grid-template-columns:46px 56px 46px 68px;gap:12px;justify-content:end;align-items:center}
     .article-nav{width:46px;height:46px}
@@ -35,6 +35,7 @@
           <button id="phrase-book-sync-copy" class="reader-sync-button" type="button">复制同步码</button>
           <button id="phrase-book-sync-change" class="reader-sync-button" type="button">输入同步码</button>
         </div>
+        <button id="toggle-continuous" class="vocab-toggle" type="button" role="switch" aria-checked="false" aria-label="连续播放，播完自动接下一篇"><span>连续播放</span><i aria-hidden="true"></i></button>
         <button id="toggle-vocab" class="vocab-toggle" type="button" role="switch" aria-checked="true" aria-label="6级及以上难词双语标注"><span>难词 6+</span><i aria-hidden="true"></i></button>
       </div>
     </header>
@@ -83,7 +84,7 @@
     </aside>
   </div>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script type="module" src="./app.js?v=phrase-copy-on-save-20260922-v1"></script>
+  <script type="module" src="./app.js?v=continuous-playback-20260928-v1"></script>
   <script type="module" src="./full-library-bootstrap.js?v=reader-cleanup-20260919-v1"></script>
 </body>
 </html>
