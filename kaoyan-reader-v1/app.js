@@ -14,6 +14,7 @@ import { pickArticle, selectArticles, adjacentArticle } from './catalog.js';
 import { createArticleBundleStore } from './article-bundle-store.js';
 import { resolveLinkedHighlight, createInlineHighlightStore, snippetFromRanges, semanticGroupsForYear, localStudyGloss, browserStudyGloss } from './inline-phrase-highlights.js?v=phrase-book-cloud-sync-20260921-v1';
 import { createPhraseBookCloudSync } from './phrase-book-cloud-sync.js?v=20260921-v1';
+import { copyTextWithFallback } from './clipboard-copy.js?v=phrase-copy-on-save-20260922-v1';
 
 let article={}, sentences=[], manifest={segments:{}};
 let catalog=null, loading=true, selectionGeneration=0, bilingualMappings={}, semanticMappings={};
@@ -71,6 +72,19 @@ const emotionLabels={neutral:'自然讲述',warm:'温暖讲解',lively:'轻快�
 function hasSelectedText(){return Boolean(window.getSelection()?.toString());}
 function nodeElement(node){return node?.nodeType===Node.ELEMENT_NODE?node:node?.parentElement||null;}
 function hidePhraseHighlightAction(){phraseHighlightSelection=null;phraseStudyBar.hidden=true;}
+function legacyCopyPhraseText(text){
+ const textarea=document.createElement('textarea');
+ textarea.value=String(text||'');
+ textarea.setAttribute('readonly','');
+ textarea.style.position='fixed';textarea.style.left='-9999px';textarea.style.top='0';textarea.style.opacity='0';textarea.style.pointerEvents='none';
+ document.body.append(textarea);
+ try{textarea.focus({preventScroll:true});}catch{textarea.focus();}
+ textarea.select();textarea.setSelectionRange(0,textarea.value.length);
+ let copied=false;
+ try{copied=document.execCommand?.('copy')===true;}catch{}
+ textarea.remove();
+ return copied;
+}
 function selectionOffsets(range,enEl){
  const before=document.createRange();before.selectNodeContents(enEl);before.setEnd(range.startContainer,range.startOffset);
  const raw=range.toString();const leading=(raw.match(/^\s+/)||[''])[0].length;const trailing=(raw.match(/\s+$/)||[''])[0].length;
@@ -185,6 +199,8 @@ function closePhraseBook(){phraseBookEditing=false;phraseBookDrafts.clear();phra
 
 async function saveCurrentPhraseHighlight(){
  const snapshot=phraseHighlightSelection;if(!snapshot||loading||phraseHighlightSaving)return;
+ // Trigger clipboard access immediately from the user's click for mobile/WebView reliability.
+ const clipboardPromise=copyTextWithFallback(snapshot.text,{legacyCopy:legacyCopyPhraseText});
  const words=highlightWords(snapshot.sentence,snapshot.enEl);
  const semanticGroups=semanticMappings[snapshot.sentence.id]||[];
  const bilingualPairs=bilingualMappings[snapshot.sentence.id]||[];
@@ -221,7 +237,9 @@ async function saveCurrentPhraseHighlight(){
   applySentenceInlineHighlights(snapshot.card,snapshot.index);updatePhraseBookButton();
   window.getSelection()?.removeAllRanges();hidePhraseHighlightAction();
   phraseBookCloudSync.schedule();
-  showToast(result.added?(translationSnippet?'已标记词群':'已标记词群 · 已生成中文'):(result.updated?'词群释义已更新':'这个词群已经标记过'));
+  const copied=await clipboardPromise;
+  const saveMessage=result.added?(translationSnippet?'已加入词群本':'已加入词群本 · 已生成中文'):(result.updated?'词群释义已更新':'这个词群已经标记过');
+  showToast(`${saveMessage} · ${copied?'已复制':'复制失败'}`);
  }finally{
   phraseHighlightSaving=false;phraseHighlightAction.disabled=false;phraseHighlightAction.textContent=originalLabel||'标记词群';
  }
