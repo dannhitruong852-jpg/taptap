@@ -1,0 +1,148 @@
+name: Backfill word timings all years
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'word-alignment-all-years.trigger'
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: word-alignment-all-years
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.years.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+      - id: years
+        name: Discover production years from catalog
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          catalog=json.loads(Path('kaoyan-reader-v1/content/catalog.json').read_text())
+          years=sorted({int(x['year']) for x in catalog.get('articles',[])})
+          assert years, 'no production years found'
+          matrix=json.dumps({'year':years},separators=(',',':'))
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+              f.write('matrix='+matrix+'\n')
+          print('years:',years)
+          PY
+
+  align:
+    needs: discover
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix: ${{ fromJSON(needs.discover.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Restore alignment model cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/torch/hub/checkpoints
+          key: wav2vec2-asr-base-960h-word-align-v1
+      - name: Install CPU alignment runtime
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install numpy
+          python -m pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+      - name: Align one production year
+        env:
+          PYTHONPATH: voice-pipeline
+        run: |
+          python voice-pipeline/alignment/align_manifests.py             --year '${{ matrix.year }}'             --root kaoyan-reader-v1
+      - name: Validate alignment report
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          year='${{ matrix.year }}'
+          path=Path(f'kaoyan-reader-v1/reports/c-v4-{year}-alignment.json')
+          report=json.loads(path.read_text())
+          assert report['status']=='passed',report
+          assert report['sentences_total']>0,report
+          assert report['sentences_aligned']+report['sentences_skipped']==report['sentences_total'],report
+          print(report)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: word-timings-${{ matrix.year }}
+          path: |
+            kaoyan-reader-v1/audio/${{ matrix.year }}/**/manifest.json
+            kaoyan-reader-v1/reports/c-v4-${{ matrix.year }}-alignment.json
+          if-no-files-found: error
+          retention-days: 7
+
+  publish:
+    needs: [discover, align]
+    if: ${{ always() && needs.align.result == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          fetch-depth: 0
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: word-timings-*
+          path: /tmp/aligned
+          merge-multiple: true
+      - name: Overlay aligned manifests and reports
+        run: |
+          cp -a /tmp/aligned/kaoyan-reader-v1/. kaoyan-reader-v1/
+      - name: Validate every production year before publish
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          catalog=json.loads(Path('kaoyan-reader-v1/content/catalog.json').read_text())
+          years=sorted({int(x['year']) for x in catalog.get('articles',[])})
+          missing=[]
+          for year in years:
+              report_path=Path(f'kaoyan-reader-v1/reports/c-v4-{year}-alignment.json')
+              if not report_path.exists():
+                  missing.append(f'{year}: report missing')
+                  continue
+              report=json.loads(report_path.read_text())
+              if report.get('status')!='passed':
+                  missing.append(f'{year}: report failed')
+              for entry in [x for x in catalog['articles'] if int(x['year'])==year]:
+                  manifest_path=Path('kaoyan-reader-v1')/str(entry['manifest']).removeprefix('./')
+                  manifest=json.loads(manifest_path.read_text())
+                  for sid,sentence in manifest.get('sentences',{}).items():
+                      words=sentence.get('words')
+                      if sentence.get('alignment_status')!='passed' or not isinstance(words,list) or not words:
+                          missing.append(f"{entry['id']}/{sid}: missing word timings")
+          assert not missing, '\n'.join(missing[:100])
+          print({'years':years,'status':'passed'})
+          PY
+      - name: Commit all historical word timings in one fast-forward
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add kaoyan-reader-v1/audio kaoyan-reader-v1/reports
+          if git diff --cached --quiet; then
+            echo "All production years already aligned"
+            exit 0
+          fi
+          git commit -m "data: backfill word timings for all production years"
+          git push origin HEAD:gh-pages
