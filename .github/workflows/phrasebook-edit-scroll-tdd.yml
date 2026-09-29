@@ -21,6 +21,9 @@ jobs:
       - name: Install reader test dependencies
         working-directory: kaoyan-reader-v1
         run: npm ci
+      - name: Run reader unit tests
+        working-directory: kaoyan-reader-v1
+        run: npm test
       - name: Run phrasebook DOM regressions
         working-directory: kaoyan-reader-v1
         run: npm run test:dom
