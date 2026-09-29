@@ -256,7 +256,7 @@ body.movie .en { font-size:clamp(18px,4.6vw,22px); line-height:1.5; }
   padding:8px 18px; border-top:1px solid var(--line); border-bottom:1px solid var(--line);
   color:#a1988c; font-size:10px; font-weight:800;
 }
-.phrase-book-list { overflow:auto; overscroll-behavior:contain; padding:0 10px 16px; }
+.phrase-book-list { overflow:auto; overscroll-behavior:contain; padding:0 10px calc(16px + var(--phrase-book-tail-space,0px)); }
 .phrase-book-group h3 { margin:16px 8px 0; padding:8px 0; border-bottom:1px solid var(--line); color:#655538; font-size:12px; line-height:1.5; }
 .phrase-book-item { border-bottom:1px solid rgba(48,45,38,.09); padding:0 8px; }
 .phrase-book-row {
