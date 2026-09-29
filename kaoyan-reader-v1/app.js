@@ -13,7 +13,7 @@ import { createTapGuard, createTapArbiter } from './reader-controls.js?v=phrase-
 import { resolvePlayerScroll } from './scroll-behavior.js';
 import { pickArticle, selectArticles, adjacentArticle } from './catalog.js';
 import { createArticleBundleStore } from './article-bundle-store.js';
-import { resolveLinkedHighlight, createInlineHighlightStore, snippetFromRanges, semanticGroupsForYear, localStudyGloss, browserStudyGloss } from './inline-phrase-highlights.js?v=phrase-book-cloud-sync-20260921-v1';
+import { resolveLinkedHighlight, createInlineHighlightStore, snippetFromRanges, semanticGroupsForYear, localStudyGloss, browserStudyGloss } from './inline-phrase-highlights.js?v=phrasebook-row-swipe-blur-20260929-v1';
 import { createPhraseBookCloudSync } from './phrase-book-cloud-sync.js?v=20260921-v1';
 import { copyTextWithFallback } from './clipboard-copy.js?v=phrase-copy-on-save-20260922-v1';
 import { createUiLayerHistory } from './ui-history.js?v=system-back-20260929-v1';
