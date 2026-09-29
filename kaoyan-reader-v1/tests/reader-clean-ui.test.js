@@ -18,5 +18,5 @@ test('phrasebook hides edit and places blur control at the right edge',()=>{
 
 test('article title is thirty percent smaller and stylesheet cache is bumped',()=>{
   assert.match(css,/font-size:\s*clamp\(22px,\s*5\.6vw,\s*36px\)/);
-  assert.match(html,/styles\.css\?v=reader-clean-ui-20260929-v1/);
+  assert.match(html,/styles\.css\?v=phrasebook-row-swipe-blur-20260929-v1/);
 });
