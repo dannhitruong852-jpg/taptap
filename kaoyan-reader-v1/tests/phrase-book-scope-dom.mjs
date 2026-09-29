@@ -80,7 +80,8 @@ test('system/browser back closes the phrase book, preserves the current article,
   assert.equal(app.window.history.state?.__kaoyanUiLayer,'phrase-book');
   change(app,'#article-select','2002-b');await flush();
   assert.equal(app.window.history.state?.__kaoyanUiLayer,'phrase-book');
-  app.window.history.back();await flush();
+  const popped=new Promise(resolve=>app.window.addEventListener('popstate',resolve,{once:true}));
+  app.window.history.back();await popped;await flush();
   assert.equal(app.$('#phrase-book-backdrop').hidden,true);
   assert.equal(app.$('#article-select').value,'2002-b');
   assert.equal(app.window.location.hash,'#2002-b');
