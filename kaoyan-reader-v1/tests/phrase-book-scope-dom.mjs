@@ -73,3 +73,16 @@ test('editing, blur and deletion in one scope preserve other articles and years'
   change(app,'#phrase-book-year','2003');assert.deepEqual(visible(app),['third']);
  }finally{app.close();}
 });
+
+test('system/browser back closes the phrase book, preserves the current article, and does not exit the reader',async()=>{
+ const app=await setup({phrases});try{
+  app.$('#phrase-book-open').click();
+  assert.equal(app.window.history.state?.__kaoyanUiLayer,'phrase-book');
+  change(app,'#article-select','2002-b');await flush();
+  assert.equal(app.window.history.state?.__kaoyanUiLayer,'phrase-book');
+  app.window.history.back();await flush();
+  assert.equal(app.$('#phrase-book-backdrop').hidden,true);
+  assert.equal(app.$('#article-select').value,'2002-b');
+  assert.equal(app.window.location.hash,'#2002-b');
+ }finally{app.close();}
+});
