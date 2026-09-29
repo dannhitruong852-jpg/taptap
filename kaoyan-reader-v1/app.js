@@ -81,6 +81,7 @@ let phraseBookEditing=false,phraseBookDrafts=new Map(),phraseBookScope='article'
 let phraseBookQuickEditor=null,phraseBookPhraseAudio=null,phraseBookSpeech=null,phraseBookSpeakingNode=null,phraseBookSavedTimer=null;
 let phraseBookClipSource=null,phraseBookClipGain=null;
 const phraseBookManifestCache=new Map();
+const phraseBookAudioWarmInflight=new Map();
 const phraseBookHistory=createUiLayerHistory({
  history,
  location,
@@ -289,6 +290,53 @@ async function phraseBookSentenceDescriptor(entry){
  if(!path)return null;
  return {catalogEntry,sentence,item:{...sentence,path},duration:Number(sentence.duration_seconds)||0,words:Array.isArray(sentence.words)?sentence.words:[]};
 }
+function phraseBookWarmKey(entry){
+ return `${String(entry?.articleId||'')}|${String(entry?.sentenceId||'')}`;
+}
+function phraseBookIdle(){
+ return new Promise(resolve=>{
+  if(typeof window.requestIdleCallback==='function')window.requestIdleCallback(()=>resolve(),{timeout:700});
+  else window.setTimeout(resolve,80);
+ });
+}
+async function prewarmPhraseBookEntry(entry){
+ if(!entry?.articleId||!entry?.sentenceId)return false;
+ const key=phraseBookWarmKey(entry);
+ if(phraseBookAudioWarmInflight.has(key))return phraseBookAudioWarmInflight.get(key);
+ const task=(async()=>{
+  const web=ensureWebAudio();
+  if(!web||!audioContext||!decodedAudioStore)return false;
+  const descriptor=await phraseBookSentenceDescriptor(entry);
+  if(!descriptor)return false;
+  if(decodedAudioStore.has(descriptor.item))return true;
+  try{
+   const decoded=await decodedAudioStore.get(descriptor.item,{articleId:entry.articleId||'phrase-book'});
+   return Boolean(decoded?.buffer);
+  }catch{return false;}
+ })().finally(()=>phraseBookAudioWarmInflight.delete(key));
+ phraseBookAudioWarmInflight.set(key,task);
+ return task;
+}
+function warmPhraseBookEntries(entries,{eager=3,limit=24}={}){
+ const seen=new Set(),unique=[];
+ for(const entry of entries||[]){
+  if(!entry?.articleId||!entry?.sentenceId)continue;
+  const key=phraseBookWarmKey(entry);if(seen.has(key))continue;
+  seen.add(key);unique.push(entry);
+ }
+ if(!unique.length)return;
+ const activeArticle=currentEntry?.id||'';
+ unique.sort((a,b)=>Number(b.articleId===activeArticle)-Number(a.articleId===activeArticle));
+ const selected=unique.slice(0,Math.max(1,Number(limit)||24));
+ const eagerCount=Math.min(selected.length,Math.max(1,Number(eager)||1));
+ for(const entry of selected.slice(0,eagerCount))void prewarmPhraseBookEntry(entry);
+ void (async()=>{
+  for(const entry of selected.slice(eagerCount)){
+   await phraseBookIdle();
+   await prewarmPhraseBookEntry(entry);
+  }
+ })();
+}
 async function playPhraseBookWebAudioClip(entry,node,text){
  const web=ensureWebAudio();
  if(!web||!audioContext||!decodedAudioStore)return false;
@@ -455,6 +503,7 @@ function phraseBookItem(entry){
  remove.addEventListener('click',event=>{event.stopPropagation();finishQuickPhraseEdit({silent:true});inlineHighlightStore.remove(entry);phraseBookDrafts.delete(phraseEntryKey(entry));applyAllInlineHighlights();renderPhraseBook(currentPhraseBookYear());updatePhraseBookButton();phraseBookCloudSync.schedule();showToast('已删除标记');});
  meta.append(source,remove);detail.append(sourceEn,sourceZh,meta);
  const toggleDetail=()=>togglePhraseBookDetail(row,detail);
+ en.addEventListener('pointerdown',()=>{void prewarmPhraseBookEntry(entry);},{passive:true});
  bindPhraseBookCellGestures(en,{single:toggleDetail,double:()=>playPhraseBookEntry(entry,en)});
  bindPhraseBookCellGestures(zh,{single:toggleDetail,double:()=>beginQuickPhraseEdit(entry,zh)});
  bindPhraseBookSwipeBlur(row,entry,zh);
@@ -527,6 +576,7 @@ function openPhraseBook(){
  const year=phraseBookScope==='year'?currentPhraseBookYear():(Number(currentEntry?.year)||Number(yearSelect.value)||2002);
  phraseBookEditing=false;phraseBookDrafts.clear();phraseBookEditButton.textContent='编辑';phraseBookEditButton.setAttribute('aria-pressed','false');phraseBookYear.disabled=false;
  phraseBookHistory.open();const entries=renderPhraseBook(year,{resetScroll:true});phraseBookBackdrop.hidden=false;document.body.classList.add('phrase-book-opened');phraseBookCloseButton.focus();
+ warmPhraseBookEntries(entries,{eager:4,limit:24});
  if(hasPlaybackContext)scrollPhraseBookToEntry(currentPlaybackPhraseTarget(entries));
 }
 function closePhraseBookDirect(){finishQuickPhraseEdit({silent:true});stopPhraseBookAudio();phraseBookEditing=false;phraseBookDrafts.clear();phraseBookEditButton.textContent='编辑';phraseBookEditButton.setAttribute('aria-pressed','false');phraseBookYear.disabled=false;phraseBookBackdrop.hidden=true;document.body.classList.remove('phrase-book-opened');phraseBookOpenButton.focus();}
@@ -570,6 +620,7 @@ async function saveCurrentPhraseHighlight(){
    enStart:linked.enStart,enEnd:linked.enEnd,zhRanges:linked.zhRanges,source:linked.source,createdAt:Date.now()
   });
   applySentenceInlineHighlights(snapshot.card,snapshot.index);updatePhraseBookButton();
+  void prewarmPhraseBookEntry(result.entry);
   window.getSelection()?.removeAllRanges();hidePhraseHighlightAction();
   phraseBookCloudSync.schedule();
   const copied=await clipboardPromise;
@@ -879,7 +930,7 @@ async function openArticle(entry,{automatic=false}={}){
   state.current=0;loading=false;playButton.disabled=false;document.querySelector('#article-title').textContent=article.title;document.title=`${article.title} · ${entry.year} 英语精读`;listEl.setAttribute('aria-label',`${article.title} 双语精读`);
   const audioCount=sentences.filter(s=>manifest.sentences?.[s.id]?.path||s.segments.every(x=>manifest.segments?.[x.id]?.path)).length;
   statusEl.textContent=audioCount===sentences.length?'音频已就绪 · 双击句框可重播':'正文已就绪 · 音频生成中';
-  history.replaceState(history.state,'',`#${entry.id}`);renderSentences();updatePhraseBookButton();updateActive(false);resetSentenceProgress(0);updateArticleNavState();applyPlayerVisibility(false);measureLatency('article-switch',switchStarted);warmRange(0,4);warmArticleRemainder();scheduleAdjacentWarm(entry,selectionToken);
+  history.replaceState(history.state,'',`#${entry.id}`);renderSentences();updatePhraseBookButton();updateActive(false);resetSentenceProgress(0);updateArticleNavState();applyPlayerVisibility(false);measureLatency('article-switch',switchStarted);warmRange(0,4);warmArticleRemainder();warmPhraseBookEntries(inlineHighlightStore.list(currentEntry.id),{eager:3,limit:24});scheduleAdjacentWarm(entry,selectionToken);
   if(!globalArticlePreloadStarted&&catalog){globalArticlePreloadStarted=true;void articleBundleStore.preload(catalog.articles.filter(item=>item.id!==entry.id));}
   return true;
  }catch(error){if(selectionToken!==selectionGeneration)return false;loading=false;setPlaying(false,false);playButton.disabled=true;statusEl.textContent='正文加载失败';showToast('请重新选择文章或刷新页面');return false;}
