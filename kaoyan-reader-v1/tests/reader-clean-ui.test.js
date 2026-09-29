@@ -17,9 +17,14 @@ test('phrasebook hides edit and places blur control at the right edge',()=>{
   assert.match(css,/\.phrase-book-toolbar-actions\s*\{[^}]*margin-left:auto/s);
 });
 
+test('phrasebook swipe uses compositor transform follow and spring return',()=>{
+  assert.match(css,/\.phrase-book-row\s*\{[^}]*transform:\s*translate3d\(var\(--phrase-swipe-x,0px\),0,0\)[^}]*transition:\s*transform 220ms cubic-bezier\(\.22,\.9,\.28,1\.12\)/s);
+  assert.match(css,/\.phrase-book-row\.is-swipe-dragging\s*\{[^}]*transition:none[^}]*will-change:transform/s);
+});
+
 test('article title is thirty percent smaller and stylesheet cache is bumped',()=>{
   assert.match(css,/font-size:\s*clamp\(22px,\s*5\.6vw,\s*36px\)/);
-  assert.match(html,/styles\.css\?v=phrasebook-row-swipe-blur-20260929-v1/);
+  assert.match(html,/styles\.css\?v=phrasebook-swipe-motion-20260929-v1/);
 });
 
 

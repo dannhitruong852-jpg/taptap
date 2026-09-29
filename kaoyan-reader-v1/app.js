@@ -439,25 +439,48 @@ function beginQuickPhraseEdit(entry,node){
  selectPhraseBookText(node);
 }
 function bindPhraseBookSwipeBlur(row,entry,zh){
+ const trigger=56,intent=8,maxOffset=96;
  let gesture=null,suppressClickUntil=0;
+ const setOffset=value=>row.style.setProperty('--phrase-swipe-x',Math.max(0,value)+'px');
+ const settle=()=>{
+  row.classList.remove('is-swipe-dragging','is-swipe-ready');
+  setOffset(0);
+ };
  row.addEventListener('pointerdown',event=>{
   if(phraseBookEditing||event.button!==0||event.target.closest('button,[contenteditable="true"]'))return;
-  gesture={x:event.clientX,y:event.clientY,pointerId:event.pointerId,cancelled:false};
+  gesture={x:event.clientX,y:event.clientY,pointerId:event.pointerId,cancelled:false,dragging:false,ready:false};
+  row.classList.remove('is-swipe-ready');setOffset(0);
+  try{row.setPointerCapture?.(event.pointerId);}catch{}
  });
  row.addEventListener('pointermove',event=>{
   if(!gesture||event.pointerId!==gesture.pointerId)return;
   const dx=event.clientX-gesture.x,dy=event.clientY-gesture.y;
-  if(Math.abs(dy)>18&&Math.abs(dy)>Math.abs(dx)*1.1)gesture.cancelled=true;
+  if(!gesture.dragging){
+   if(Math.abs(dy)>18&&Math.abs(dy)>Math.abs(dx)*1.1){gesture.cancelled=true;return;}
+   if(gesture.cancelled||dx<=0||Math.abs(dx)<intent||Math.abs(dx)<=Math.abs(dy)*1.15)return;
+   gesture.dragging=true;row.classList.add('is-swipe-dragging');
+  }
+  event.preventDefault();
+  if(dx<=0){setOffset(0);gesture.ready=false;row.classList.remove('is-swipe-ready');return;}
+  const visual=dx<=trigger?dx:trigger+(dx-trigger)*.28;
+  setOffset(Math.min(maxOffset,visual));
+  const ready=dx>=trigger&&Math.abs(dx)>Math.abs(dy)*1.35;
+  if(ready!==gesture.ready){gesture.ready=ready;row.classList.toggle('is-swipe-ready',ready);}
  });
  row.addEventListener('pointerup',event=>{
   if(!gesture||event.pointerId!==gesture.pointerId)return;
   const start=gesture;gesture=null;
   const dx=event.clientX-start.x,dy=event.clientY-start.y;
-  if(start.cancelled||dx<56||Math.abs(dx)<=Math.abs(dy)*1.35)return;
-  event.preventDefault();event.stopPropagation();suppressClickUntil=performance.now()+420;
-  togglePhraseBookRowBlur(entry,zh);
+  try{if(row.hasPointerCapture?.(event.pointerId))row.releasePointerCapture(event.pointerId);}catch{}
+  const triggered=!start.cancelled&&start.dragging&&dx>=trigger&&Math.abs(dx)>Math.abs(dy)*1.35;
+  if(start.dragging){event.preventDefault();event.stopPropagation();suppressClickUntil=performance.now()+420;}
+  settle();
+  if(triggered)togglePhraseBookRowBlur(entry,zh);
  });
- row.addEventListener('pointercancel',()=>{gesture=null;});
+ row.addEventListener('pointercancel',event=>{
+  if(!gesture||event.pointerId!==gesture.pointerId)return;
+  gesture=null;settle();
+ });
  row.addEventListener('click',event=>{
   if(performance.now()<suppressClickUntil){event.preventDefault();event.stopImmediatePropagation();}
  },true);

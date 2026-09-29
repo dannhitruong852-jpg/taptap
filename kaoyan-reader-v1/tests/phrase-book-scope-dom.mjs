@@ -184,6 +184,26 @@ function swipePhraseRow(app,row,{fromX=20,fromY=20,toX=100,toY=22}={}){
  phrasePointer(app,row,'pointerup',toX,toY);
 }
 
+test('right swipe follows the pointer before release and springs back to rest',async()=>{
+ const app=await setup({phrases:[phrase('2002-a','only-row',1)]});try{
+  app.$('#phrase-book-open').click();
+  const row=app.$('.phrase-book-row'),zh=app.$('.phrase-book-zh');
+  phrasePointer(app,row,'pointerdown',20,20);
+  phrasePointer(app,row,'pointermove',60,22);
+  assert.equal(row.classList.contains('is-swipe-dragging'),true,'horizontal drag should enter live-follow state');
+  assert.equal(row.style.getPropertyValue('--phrase-swipe-x'),'40px','row should follow the finger before threshold');
+  phrasePointer(app,row,'pointermove',90,22);
+  const readyOffset=parseFloat(row.style.getPropertyValue('--phrase-swipe-x'));
+  assert.equal(row.classList.contains('is-swipe-ready'),true,'crossing the threshold should mark the swipe ready');
+  assert.ok(readyOffset>=56&&readyOffset<70,'movement beyond the threshold should gain resistance');
+  phrasePointer(app,row,'pointerup',90,22);
+  assert.equal(row.style.getPropertyValue('--phrase-swipe-x'),'0px','release should return the row to rest');
+  assert.equal(row.classList.contains('is-swipe-dragging'),false);
+  assert.equal(row.classList.contains('is-swipe-ready'),false);
+  assert.equal(zh.classList.contains('is-row-blurred'),true,'the existing blur action should still fire');
+ }finally{app.close();}
+});
+
 test('right swipe toggles only that phrase translation blur and a second right swipe restores it',async()=>{
  const local=[
   {...phrase('2002-a','first-row',1),enStart:0,enEnd:5},

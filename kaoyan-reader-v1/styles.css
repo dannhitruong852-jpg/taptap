@@ -258,11 +258,14 @@ body.movie .en { font-size:clamp(18px,4.6vw,22px); line-height:1.5; }
 }
 .phrase-book-list { overflow:auto; overscroll-behavior:contain; padding:0 10px calc(16px + var(--phrase-book-tail-space,0px)); }
 .phrase-book-group h3 { margin:16px 8px 0; padding:8px 0; border-bottom:1px solid var(--line); color:#655538; font-size:12px; line-height:1.5; }
-.phrase-book-item { border-bottom:1px solid rgba(48,45,38,.09); padding:0 8px; }
+.phrase-book-item { border-bottom:1px solid rgba(48,45,38,.09); padding:0 8px; overflow:hidden; }
 .phrase-book-row {
   width:100%; align-items:start; border:0; background:transparent; padding:15px 0 12px; text-align:left; cursor:pointer;
   touch-action:pan-y;
+  transform:translate3d(var(--phrase-swipe-x,0px),0,0);
+  transition:transform 220ms cubic-bezier(.22,.9,.28,1.12);
 }
+.phrase-book-row.is-swipe-dragging { transition:none; will-change:transform; }
 .phrase-book-en { font-family:ui-serif,Georgia,"Times New Roman",serif; font-size:15px; line-height:1.45; color:#25241f; font-weight:700; touch-action:manipulation; user-select:none; -webkit-user-select:none; }
 .phrase-book-en.is-speaking { background:rgba(120,96,54,.10); border-radius:8px; box-shadow:0 0 0 5px rgba(120,96,54,.06); }
 .phrase-book-zh { font-size:13px; line-height:1.55; color:#716b62; transition:filter .16s ease,opacity .16s ease,background .16s ease,box-shadow .16s ease; touch-action:manipulation; }
