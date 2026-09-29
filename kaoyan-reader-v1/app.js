@@ -53,6 +53,8 @@ const phraseBookOpenButton=document.querySelector('#phrase-book-open');
 const phraseBookBackdrop=document.querySelector('#phrase-book-backdrop');
 const phraseBookCloseButton=document.querySelector('#phrase-book-close');
 const phraseBookYear=document.querySelector('#phrase-book-year');
+const phraseBookScopeSelect=document.querySelector('#phrase-book-scope');
+const phraseBookContext=document.querySelector('#phrase-book-context');
 const phraseBookList=document.querySelector('#phrase-book-list');
 const phraseBookEmpty=document.querySelector('#phrase-book-empty');
 const phraseBookBlurButton=document.querySelector('#phrase-book-blur');
@@ -72,7 +74,7 @@ const phraseBookCloudSync=createPhraseBookCloudSync({
  }
 });
 let phraseHighlightSelection=null,phraseHighlightFrame=null,phraseHighlightInvalidKey='',phraseHighlightSaving=false;
-let phraseBookEditing=false,phraseBookDrafts=new Map();
+let phraseBookEditing=false,phraseBookDrafts=new Map(),phraseBookScope='article';
 const state={current:0,speed:1,playing:false,paused:false,showVocab:true,timer:null,playerHidden:false,programmaticScrollUntil:0,scrollAnchorY:Math.max(0,window.scrollY||0),scrollFrame:null,playRequestedAt:null};
 const emotionLabels={neutral:'自然讲述',warm:'温暖讲解',lively:'轻快生动',serious:'严肃克制',curious:'好奇追问',ironic:'冷幽默',tense:'紧张转折',emotional:'情绪加强'};
 function hasSelectedText(){return Boolean(window.getSelection()?.toString());}
@@ -150,7 +152,8 @@ function phraseBookItem(entry){
  const row=document.createElement('div');row.className='phrase-book-row';row.setAttribute('role','button');row.tabIndex=0;row.setAttribute('aria-expanded','false');
  const en=document.createElement('span');en.className='phrase-book-en';en.textContent=entry.selectedText||entry.sourceSentence?.slice(entry.enStart,entry.enEnd)||'已标记词群';
  const zh=document.createElement('span');zh.className='phrase-book-zh';
- const gloss=entry.studyGloss||entry.translationSnippet||'暂无中文释义';zh.textContent=gloss;
+ const gloss=entry.studyGloss||entry.translationSnippet||'暂无中文释义';
+ zh.textContent=phraseBookDrafts.get(phraseEntryKey(entry))?.value??gloss;
  if(entry.studyGloss||entry.translationSnippet)zh.classList.add('has-translation');
  if(entry.glossSource&&entry.glossSource!==entry.source)zh.title='系统生成学习释义，不参与正文中文高亮';
  if(phraseBookEditing){
@@ -165,21 +168,40 @@ function phraseBookItem(entry){
  const meta=document.createElement('div');meta.className='phrase-book-meta';
  const source=document.createElement('span');source.textContent=entry.articleTitle||entry.articleId||'';
  const remove=document.createElement('button');remove.className='phrase-book-delete';remove.type='button';remove.textContent='删除';
- remove.addEventListener('click',event=>{event.stopPropagation();inlineHighlightStore.remove(entry);applyAllInlineHighlights();renderPhraseBook(currentPhraseBookYear());updatePhraseBookButton();phraseBookCloudSync.schedule();showToast('已删除标记');});
+ remove.addEventListener('click',event=>{event.stopPropagation();inlineHighlightStore.remove(entry);phraseBookDrafts.delete(phraseEntryKey(entry));applyAllInlineHighlights();renderPhraseBook(currentPhraseBookYear());updatePhraseBookButton();phraseBookCloudSync.schedule();showToast('已删除标记');});
  meta.append(source,remove);detail.append(sourceEn,sourceZh,meta);
  row.addEventListener('click',event=>{if(phraseBookEditing||event.target.closest('[contenteditable="true"]'))return;detail.hidden=!detail.hidden;row.setAttribute('aria-expanded',String(!detail.hidden));});
  row.addEventListener('keydown',event=>{if(phraseBookEditing||!['Enter',' '].includes(event.key))return;event.preventDefault();row.click();});
  item.append(row,detail);return item;
 }
 function renderPhraseBook(year=currentPhraseBookYear(),{resetScroll=false}={}){
- const years=[...new Set([...inlineHighlightStore.years(),Number(currentEntry?.year)].filter(Number.isFinite))].sort((a,b)=>a-b);
+ const isArticle=phraseBookScope==='article';
+ if(isArticle)year=Number(currentEntry?.year)||year;
+ const years=[...new Set([...(catalog?.years||[]),...inlineHighlightStore.years(),year].map(Number).filter(Number.isFinite))].sort((a,b)=>a-b);
  phraseBookYear.replaceChildren(...years.map(value=>new Option(String(value),String(value))));
  phraseBookYear.value=String(year);
+ phraseBookYear.disabled=phraseBookEditing||isArticle;
+ phraseBookScopeSelect.value=phraseBookScope;phraseBookScopeSelect.disabled=phraseBookEditing;
+ phraseBookContext.textContent=isArticle?`${year} · ${currentEntry?.title||'当前文章'}`:`${year} · 全年词群`;
  // Render newest first by the original add time. Editing an old phrase must not move it upward.
- const entries=[...inlineHighlightStore.listYear(year)].sort((a,b)=>Number(b.createdAt||0)-Number(a.createdAt||0));
- phraseBookList.replaceChildren(...entries.map(phraseBookItem));
+ const entries=inlineHighlightStore.listYear(year).filter(entry=>!isArticle||entry.articleId===currentEntry?.id);
+ if(isArticle)phraseBookList.replaceChildren(...entries.map(phraseBookItem));
+ else{
+  const groups=new Map();
+  for(const entry of entries){if(!groups.has(entry.articleId))groups.set(entry.articleId,[]);groups.get(entry.articleId).push(entry);}
+  const catalogEntries=catalog?.articles||[];
+  const order=new Map(catalogEntries.map((entry,index)=>[entry.id,index]));
+  const sections=[...groups].sort(([a],[b])=>(order.get(a)??Infinity)-(order.get(b)??Infinity)||String(a).localeCompare(String(b))).map(([id,items])=>{
+   const title=catalogEntries.find(entry=>entry.id===id)?.title||items[0].articleTitle||id||'未标明文章';
+   const section=document.createElement('section');section.className='phrase-book-group';section.setAttribute('aria-label',title);
+   const heading=document.createElement('h3');heading.textContent=title;
+   section.append(heading,...items.map(phraseBookItem));return section;
+  });
+  phraseBookList.replaceChildren(...sections);
+ }
  if(resetScroll)phraseBookList.scrollTop=0;
  phraseBookEmpty.hidden=entries.length>0;
+ phraseBookEmpty.textContent=isArticle?'本篇还没有标记词群':'这一年还没有标记词群';
  setPhraseBookBlurred(year,inlineHighlightStore.getYearBlurred(year));
 }
 function setPhraseBookEditing(editing){
@@ -189,15 +211,26 @@ function setPhraseBookEditing(editing){
 }
 function togglePhraseBookEdit(){
  if(!phraseBookEditing){phraseBookDrafts.clear();setPhraseBookEditing(true);return;}
+ savePhraseBookDrafts();setPhraseBookEditing(false);showToast('词群释义已保存');
+}
+function savePhraseBookDrafts(){
+ const activeKeys=new Set(inlineHighlightStore.list().map(phraseEntryKey));
  for(const {entry,value} of phraseBookDrafts.values()){
-  if(!value)continue;
+  if(!value||!activeKeys.has(phraseEntryKey(entry)))continue;
   inlineHighlightStore.add({...entry,studyGloss:value,glossSource:'user-edited'});
  }
- phraseBookDrafts.clear();setPhraseBookEditing(false);phraseBookCloudSync.schedule();showToast('词群释义已保存');
+ if(phraseBookDrafts.size)phraseBookCloudSync.schedule();
+ phraseBookDrafts.clear();
+}
+function followPhraseBookArticle(){
+ // An automatic playback handoff must not discard a translation being edited.
+ if(phraseBookEditing)savePhraseBookDrafts();
+ phraseBookEditing=false;phraseBookEditButton.textContent='编辑';phraseBookEditButton.setAttribute('aria-pressed','false');
+ phraseBookScope='article';renderPhraseBook(Number(currentEntry?.year),{resetScroll:true});
 }
 function openPhraseBook(){
  hidePhraseHighlightAction();window.getSelection()?.removeAllRanges();
- const year=Number(currentEntry?.year)||Number(yearSelect.value)||inlineHighlightStore.years().at(-1)||2002;
+ const year=phraseBookScope==='year'?currentPhraseBookYear():(Number(currentEntry?.year)||Number(yearSelect.value)||2002);
  phraseBookEditing=false;phraseBookDrafts.clear();phraseBookEditButton.textContent='编辑';phraseBookEditButton.setAttribute('aria-pressed','false');phraseBookYear.disabled=false;
  renderPhraseBook(year,{resetScroll:true});phraseBookBackdrop.hidden=false;document.body.classList.add('phrase-book-opened');phraseBookCloseButton.focus();
 }
@@ -457,6 +490,9 @@ phraseHighlightAction.addEventListener('click',event=>{event.preventDefault();ev
 phraseBookOpenButton.addEventListener('click',openPhraseBook);
 phraseBookCloseButton.addEventListener('click',closePhraseBook);
 phraseBookYear.addEventListener('change',()=>renderPhraseBook(Number(phraseBookYear.value),{resetScroll:true}));
+phraseBookScopeSelect.addEventListener('change',()=>{
+ phraseBookScope=phraseBookScopeSelect.value==='year'?'year':'article';renderPhraseBook(currentPhraseBookYear(),{resetScroll:true});
+});
 phraseBookBlurButton.addEventListener('click',()=>{const year=currentPhraseBookYear();setPhraseBookBlurred(year,!inlineHighlightStore.getYearBlurred(year));});
 phraseBookEditButton.addEventListener('click',togglePhraseBookEdit);
 phraseBookSyncCopy.addEventListener('click',async()=>{
@@ -536,7 +572,9 @@ async function openArticle(entry,{automatic=false}={}){
  articleBundleStore.cancelLowPriorityWork();
  try{
   const [loaded,semantic]=await Promise.all([articleBundleStore.get(entry),semanticMapPromise]);if(!loaded||selectionToken!==selectionGeneration)return;
-  currentEntry=entry;const mapArticles=loaded.bilingual?.articles||{};bilingualMappings=mapArticles[loaded.content.article_id]||mapArticles[entry.id]||{};semanticMappings=semanticGroupsForYear(semantic,entry.year,loaded.content.article_id);({article,sentences}=loaded.content);manifest=loaded.manifest;
+  const articleChanged=currentEntry?.id!==entry.id;
+  currentEntry=entry;if(articleChanged)followPhraseBookArticle();
+  const mapArticles=loaded.bilingual?.articles||{};bilingualMappings=mapArticles[loaded.content.article_id]||mapArticles[entry.id]||{};semanticMappings=semanticGroupsForYear(semantic,entry.year,loaded.content.article_id);({article,sentences}=loaded.content);manifest=loaded.manifest;
   state.current=0;loading=false;playButton.disabled=false;document.querySelector('#article-title').textContent=article.title;document.title=`${article.title} · ${entry.year} 英语精读`;listEl.setAttribute('aria-label',`${article.title} 双语精读`);
   const audioCount=sentences.filter(s=>manifest.sentences?.[s.id]?.path||s.segments.every(x=>manifest.segments?.[x.id]?.path)).length;
   statusEl.textContent=audioCount===sentences.length?'音频已就绪 · 双击句框可重播':'正文已就绪 · 音频生成中';

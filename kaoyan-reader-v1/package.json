@@ -3,7 +3,7 @@
   "type": "module",
   "scripts": {
     "test": "node --test tests/*.test.js",
-    "test:dom": "node --test tests/continuous-playback-dom.mjs"
+    "test:dom": "node --test tests/*-dom.mjs"
   },
   "devDependencies": {
     "jsdom": "^26.1.0"
