@@ -1,0 +1,26 @@
+name: Phrasebook edit scroll TDD
+
+on:
+  push:
+    branches: ['fix-phrasebook-edit-scroll-20260929']
+    paths:
+      - 'kaoyan-reader-v1/**'
+      - '.github/workflows/phrasebook-edit-scroll-tdd.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install reader test dependencies
+        working-directory: kaoyan-reader-v1
+        run: npm ci
+      - name: Run phrasebook DOM regressions
+        working-directory: kaoyan-reader-v1
+        run: npm run test:dom
