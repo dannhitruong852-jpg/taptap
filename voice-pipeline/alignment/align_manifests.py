@@ -112,7 +112,7 @@ def main()->None:
                 entry['alignment_status']='failed'
                 continue
             try:
-                audio_rel=str(entry.get('path') or entry.get('mp3_path') or '').removeprefix('./')
+                audio_rel=str(entry.get('mp3_path') or entry.get('path') or '').removeprefix('./')
                 if not audio_rel:
                     raise ValueError('missing sentence audio path')
                 audio_path=root/audio_rel
