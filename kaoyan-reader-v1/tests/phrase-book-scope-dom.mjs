@@ -86,3 +86,22 @@ test('system/browser back closes the phrase book, preserves the current article,
   assert.equal(app.window.location.hash,'#2002-b');
  }finally{app.close();}
 });
+
+test('entering and leaving edit mode preserve the phrasebook scroll position',async()=>{
+ const extra=Array.from({length:24},(_,index)=>({...phrase('2002-a',`item-${index}`,index+10),enStart:index*6,enEnd:index*6+5}));
+ const app=await setup({phrases:extra});const proto=app.window.HTMLElement.prototype;const originalFocus=proto.focus;
+ try{
+  app.$('#phrase-book-open').click();
+  const list=app.$('#phrase-book-list');
+  proto.focus=function(...args){
+   if(this.classList?.contains('is-editing'))list.scrollTop=0;
+   return originalFocus.apply(this,args);
+  };
+  list.scrollTop=360;
+  app.$('#phrase-book-edit').click();
+  assert.equal(list.scrollTop,360,'entering edit mode must not jump to the first phrase');
+  list.scrollTop=520;
+  app.$('#phrase-book-edit').click();
+  assert.equal(list.scrollTop,520,'finishing edits must keep the current scroll position');
+ }finally{proto.focus=originalFocus;app.close();}
+});
