@@ -188,7 +188,15 @@ function scrollPhraseBookToEntry(entry){
  if(!entry)return false;const key=phraseEntryKey(entry);
  const item=[...phraseBookList.querySelectorAll('.phrase-book-item')].find(node=>node.dataset.phraseKey===key);
  if(!item)return false;
- item.scrollIntoView({behavior:'auto',block:'start',inline:'nearest'});return true;
+ const listRect=phraseBookList.getBoundingClientRect();
+ const itemRect=item.getBoundingClientRect();
+ const targetScrollTop=Math.max(0,phraseBookList.scrollTop+(itemRect.top-listRect.top));
+ const currentMax=Math.max(0,phraseBookList.scrollHeight-phraseBookList.clientHeight);
+ const tailSpace=Math.max(0,targetScrollTop-currentMax);
+ phraseBookList.style.setProperty('--phrase-book-tail-space',`${Math.ceil(tailSpace)}px`);
+ phraseBookList.getBoundingClientRect();
+ phraseBookList.scrollTop=targetScrollTop;
+ return true;
 }
 function togglePhraseBookDetail(row,detail){
  if(phraseBookEditing||phraseBookQuickEditor)return;
@@ -417,7 +425,7 @@ function renderPhraseBook(year=currentPhraseBookYear(),{resetScroll=false}={}){
   });
   phraseBookList.replaceChildren(...sections);
  }
- if(resetScroll)phraseBookList.scrollTop=0;
+ if(resetScroll){phraseBookList.style.removeProperty('--phrase-book-tail-space');phraseBookList.scrollTop=0;}
  phraseBookEmpty.hidden=entries.length>0;
  phraseBookEmpty.textContent=isArticle?'本篇还没有标记词群':'这一年还没有标记词群';
  setPhraseBookBlurred(year,inlineHighlightStore.getYearBlurred(year));
