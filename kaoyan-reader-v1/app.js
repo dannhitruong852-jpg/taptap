@@ -216,7 +216,6 @@ function renderPhraseBook(year=currentPhraseBookYear(),{resetScroll=false}={}){
 function setPhraseBookEditing(editing){
  phraseBookEditing=Boolean(editing);phraseBookEditButton.textContent=phraseBookEditing?'完成':'编辑';phraseBookEditButton.setAttribute('aria-pressed',String(phraseBookEditing));phraseBookYear.disabled=phraseBookEditing;
  renderPhraseBook(currentPhraseBookYear());
- if(phraseBookEditing)phraseBookList.querySelector('.phrase-book-zh.is-editing')?.focus();
 }
 function togglePhraseBookEdit(){
  if(!phraseBookEditing){phraseBookDrafts.clear();setPhraseBookEditing(true);return;}
