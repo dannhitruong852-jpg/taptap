@@ -45,7 +45,7 @@ h1 {
   margin: 0;
   max-width: 620px;
   font-family: ui-serif, Georgia, "Songti SC", "STSong", serif;
-  font-size: clamp(31px, 8vw, 52px);
+  font-size: clamp(22px, 5.6vw, 36px);
   line-height: 1.07;
   letter-spacing: -.04em;
   font-weight: 760;
@@ -240,7 +240,7 @@ body.movie .en { font-size:clamp(18px,4.6vw,22px); line-height:1.5; }
   border:1px solid var(--line); border-radius:999px; background:#fff; padding:7px 28px 7px 10px;
   color:#4e4a43; font-size:11px; font-weight:800;
 }
-.phrase-book-toolbar-actions { display:flex; align-items:center; gap:8px; }
+.phrase-book-toolbar-actions { display:flex; align-items:center; gap:8px; margin-left:auto; }
 .phrase-book-blur,
 .phrase-book-edit {
   border:1px solid var(--line); border-radius:999px; padding:8px 11px;
