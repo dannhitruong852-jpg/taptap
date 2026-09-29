@@ -14,11 +14,11 @@ test('defaults to current article, with one selector offering current article or
   assert.equal(app.$('#phrase-book-year').disabled,true);
  }finally{app.close();}
 });
-test('whole year groups by catalog article order and retains newest-first within each group',async()=>{
+test('whole year groups by catalog article order and keeps source order within each group',async()=>{
  const extra={...phrase('2002-a','newer',4),enStart:6,enEnd:11};
  const app=await setup({phrases:[...phrases,extra]});try{
   app.$('#phrase-book-open').click();change(app,'#phrase-book-scope','year');
-  assert.deepEqual(visible(app),['newer','first','second']);
+  assert.deepEqual(visible(app),['first','newer','second']);
   assert.deepEqual([...app.$('#phrase-book-list').querySelectorAll('h3')].map(el=>el.textContent),['a','b']);
   change(app,'#phrase-book-year','2003');assert.deepEqual(visible(app),['third']);
   change(app,'#phrase-book-scope','article');assert.deepEqual(visible(app),['newer','first']);
@@ -105,4 +105,36 @@ test('entering and leaving edit mode preserve the phrasebook scroll position',as
   app.$('#phrase-book-edit').click();
   assert.equal(list.scrollTop,520,'finishing edits must keep the current scroll position');
  }finally{proto.focus=originalFocus;app.close();}
+});
+
+test('phrasebook ignores add/edit time and orders phrases by sentence then source offset',async()=>{
+ const ordered=[
+  {...phrase('2002-a','sentence-two',50),sentenceId:'s02',enStart:0,enEnd:5},
+  {...phrase('2002-a','sentence-one-late',40),sentenceId:'s01',enStart:6,enEnd:11},
+  {...phrase('2002-a','sentence-one-early',30),sentenceId:'s01',enStart:0,enEnd:5}
+ ];
+ const app=await setup({phrases:ordered});try{
+  app.$('#phrase-book-open').click();
+  assert.deepEqual(visible(app),['sentence-one-early','sentence-one-late','sentence-two']);
+  app.$('#phrase-book-edit').click();
+  const editor=app.$('.phrase-book-zh.is-editing');editor.textContent='改过的释义';editor.dispatchEvent(new app.window.Event('input'));
+  app.$('#phrase-book-edit').click();
+  assert.deepEqual(visible(app),['sentence-one-early','sentence-one-late','sentence-two']);
+ }finally{app.close();}
+});
+
+test('opening phrasebook during playback scrolls to the first phrase of the active sentence',async()=>{
+ const activePhrases=[
+  {...phrase('2002-a','later-in-active',2),sentenceId:'s01',enStart:6,enEnd:11},
+  {...phrase('2002-a','first-in-active',1),sentenceId:'s01',enStart:0,enEnd:5}
+ ];
+ const app=await setup({phrases:activePhrases});const proto=app.window.HTMLElement.prototype;const original=proto.scrollIntoView;let scrolled=null;
+ try{
+  proto.scrollIntoView=function(){if(this.classList?.contains('phrase-book-item'))scrolled=this;};
+  await app.start();
+  app.$('#phrase-book-open').click();
+  assert.equal(app.$('#phrase-book-scope').value,'article');
+  assert.equal(scrolled?.dataset.sentenceId,'s01');
+  assert.equal(scrolled?.dataset.phraseKey,'2002-a|s01|0|5');
+ }finally{proto.scrollIntoView=original;app.close();}
 });
