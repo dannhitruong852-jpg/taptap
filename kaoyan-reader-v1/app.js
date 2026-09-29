@@ -154,11 +154,43 @@ function applySentenceInlineHighlights(card,index){
 function applyAllInlineHighlights(){listEl.querySelectorAll('.sentence-card').forEach(card=>applySentenceInlineHighlights(card,Number(card.dataset.index)));}
 function currentPhraseBookYear(){return Number(phraseBookYear.value)||Number(currentEntry?.year)||inlineHighlightStore.years().at(-1)||2002;}
 function updatePhraseBookButton(){phraseBookOpenButton.textContent='词群本';}
-function setPhraseBookBlurred(year,blurred){
- inlineHighlightStore.setYearBlurred(year,blurred);
- phraseBookBackdrop.querySelector('.phrase-book-panel')?.classList.toggle('is-blurred',blurred);
- phraseBookBlurButton.setAttribute('aria-pressed',String(blurred));
- phraseBookBlurButton.textContent=blurred?'显示译文':'模糊译文';
+function phraseEntryIsBlurred(entry,year=currentPhraseBookYear()){
+ return inlineHighlightStore.getYearBlurred(year)||inlineHighlightStore.getEntryBlurred(entry);
+}
+function applyPhraseBookBlurState(year,entries=sortedPhraseBookEntries(year)){
+ const rows=[...phraseBookList.querySelectorAll('.phrase-book-item')];
+ const byKey=new Map((entries||[]).map(entry=>[phraseEntryKey(entry),entry]));
+ let blurredCount=0;
+ for(const item of rows){
+  const entry=byKey.get(item.dataset.phraseKey);if(!entry)continue;
+  const blurred=phraseEntryIsBlurred(entry,year);
+  item.querySelector('.phrase-book-zh')?.classList.toggle('is-row-blurred',blurred);
+  if(blurred)blurredCount++;
+ }
+ const allBlurred=rows.length>0&&blurredCount===rows.length;
+ phraseBookBackdrop.querySelector('.phrase-book-panel')?.classList.toggle('is-blurred',allBlurred);
+ phraseBookBlurButton.setAttribute('aria-pressed',String(allBlurred));
+ phraseBookBlurButton.textContent=allBlurred?'显示译文':'模糊译文';
+ return allBlurred;
+}
+function materializeLegacyYearBlur(year){
+ if(!inlineHighlightStore.getYearBlurred(year))return;
+ inlineHighlightStore.setEntriesBlurred(inlineHighlightStore.listYear(year),true);
+ inlineHighlightStore.setYearBlurred(year,false);
+}
+function setPhraseBookBlurred(year,blurred,entries=sortedPhraseBookEntries(year)){
+ materializeLegacyYearBlur(year);
+ inlineHighlightStore.setYearBlurred(year,false);
+ inlineHighlightStore.setEntriesBlurred(entries,blurred);
+ applyPhraseBookBlurState(year,entries);
+}
+function togglePhraseBookRowBlur(entry,zh){
+ const year=Number(entry.year)||currentPhraseBookYear();
+ materializeLegacyYearBlur(year);
+ const next=!inlineHighlightStore.getEntryBlurred(entry);
+ inlineHighlightStore.setEntryBlurred(entry,next);
+ zh.classList.toggle('is-row-blurred',next);
+ applyPhraseBookBlurState(year,sortedPhraseBookEntries(year));
 }
 function phraseEntryKey(entry){return [entry.articleId,entry.sentenceId,entry.enStart,entry.enEnd].join('|');}
 function phraseBookArticleOrder(year){
@@ -352,6 +384,30 @@ function beginQuickPhraseEdit(entry,node){
  try{node.focus({preventScroll:true});}catch{node.focus();}
  selectPhraseBookText(node);
 }
+function bindPhraseBookSwipeBlur(row,entry,zh){
+ let gesture=null,suppressClickUntil=0;
+ row.addEventListener('pointerdown',event=>{
+  if(phraseBookEditing||event.button!==0||event.target.closest('button,[contenteditable="true"]'))return;
+  gesture={x:event.clientX,y:event.clientY,pointerId:event.pointerId,cancelled:false};
+ });
+ row.addEventListener('pointermove',event=>{
+  if(!gesture||event.pointerId!==gesture.pointerId)return;
+  const dx=event.clientX-gesture.x,dy=event.clientY-gesture.y;
+  if(Math.abs(dy)>18&&Math.abs(dy)>Math.abs(dx)*1.1)gesture.cancelled=true;
+ });
+ row.addEventListener('pointerup',event=>{
+  if(!gesture||event.pointerId!==gesture.pointerId)return;
+  const start=gesture;gesture=null;
+  const dx=event.clientX-start.x,dy=event.clientY-start.y;
+  if(start.cancelled||dx<56||Math.abs(dx)<=Math.abs(dy)*1.35)return;
+  event.preventDefault();event.stopPropagation();suppressClickUntil=performance.now()+420;
+  togglePhraseBookRowBlur(entry,zh);
+ });
+ row.addEventListener('pointercancel',()=>{gesture=null;});
+ row.addEventListener('click',event=>{
+  if(performance.now()<suppressClickUntil){event.preventDefault();event.stopImmediatePropagation();}
+ },true);
+}
 function bindPhraseBookCellGestures(node,{single,double}){
  let tapTimer=null,lastTapAt=0;
  node.addEventListener('click',event=>{
@@ -395,6 +451,7 @@ function phraseBookItem(entry){
  const toggleDetail=()=>togglePhraseBookDetail(row,detail);
  bindPhraseBookCellGestures(en,{single:toggleDetail,double:()=>playPhraseBookEntry(entry,en)});
  bindPhraseBookCellGestures(zh,{single:toggleDetail,double:()=>beginQuickPhraseEdit(entry,zh)});
+ bindPhraseBookSwipeBlur(row,entry,zh);
  row.addEventListener('click',event=>{if(phraseBookEditing||event.target.closest('[contenteditable="true"]'))return;toggleDetail();});
  row.addEventListener('keydown',event=>{if(phraseBookEditing||!['Enter',' '].includes(event.key))return;event.preventDefault();toggleDetail();});
  item.append(row,detail);return item;
@@ -428,7 +485,7 @@ function renderPhraseBook(year=currentPhraseBookYear(),{resetScroll=false}={}){
  if(resetScroll){phraseBookList.style.removeProperty('--phrase-book-tail-space');phraseBookList.scrollTop=0;}
  phraseBookEmpty.hidden=entries.length>0;
  phraseBookEmpty.textContent=isArticle?'本篇还没有标记词群':'这一年还没有标记词群';
- setPhraseBookBlurred(year,inlineHighlightStore.getYearBlurred(year));
+ applyPhraseBookBlurState(year,entries);
  return entries;
 }
 function setPhraseBookEditing(editing){
@@ -726,7 +783,11 @@ phraseBookYear.addEventListener('change',()=>renderPhraseBook(Number(phraseBookY
 phraseBookScopeSelect.addEventListener('change',()=>{
  phraseBookScope=phraseBookScopeSelect.value==='year'?'year':'article';renderPhraseBook(currentPhraseBookYear(),{resetScroll:true});
 });
-phraseBookBlurButton.addEventListener('click',()=>{const year=currentPhraseBookYear();setPhraseBookBlurred(year,!inlineHighlightStore.getYearBlurred(year));});
+phraseBookBlurButton.addEventListener('click',()=>{
+ const year=currentPhraseBookYear(),entries=sortedPhraseBookEntries(year);
+ const allBlurred=entries.length>0&&entries.every(entry=>phraseEntryIsBlurred(entry,year));
+ setPhraseBookBlurred(year,!allBlurred,entries);
+});
 phraseBookEditButton.addEventListener('click',togglePhraseBookEdit);
 phraseBookSyncCopy.addEventListener('click',async()=>{
  const key=phraseBookCloudSync.getKey();
