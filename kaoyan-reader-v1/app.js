@@ -188,7 +188,7 @@ function scrollPhraseBookToEntry(entry){
  if(!entry)return false;const key=phraseEntryKey(entry);
  const item=[...phraseBookList.querySelectorAll('.phrase-book-item')].find(node=>node.dataset.phraseKey===key);
  if(!item)return false;
- item.scrollIntoView({behavior:'auto',block:'center',inline:'nearest'});return true;
+ item.scrollIntoView({behavior:'auto',block:'start',inline:'nearest'});return true;
 }
 function togglePhraseBookDetail(row,detail){
  if(phraseBookEditing||phraseBookQuickEditor)return;
