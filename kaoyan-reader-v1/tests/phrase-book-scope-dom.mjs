@@ -169,3 +169,84 @@ test('opening phrasebook reserves enough tail space and scrolls the target to th
   assert.equal(list.scrollTop,300,'target phrase must align with the top edge of the scrollable list');
  }finally{proto.getBoundingClientRect=originalRect;app.close();}
 });
+
+
+function phrasePointer(app,node,type,x,y){
+ const event=new app.window.Event(type,{bubbles:true,cancelable:true});
+ Object.defineProperties(event,{
+  clientX:{value:x},clientY:{value:y},pointerId:{value:1},button:{value:0}
+ });
+ node.dispatchEvent(event);
+}
+function swipePhraseRow(app,row,{fromX=20,fromY=20,toX=100,toY=22}={}){
+ phrasePointer(app,row,'pointerdown',fromX,fromY);
+ phrasePointer(app,row,'pointermove',toX,toY);
+ phrasePointer(app,row,'pointerup',toX,toY);
+}
+
+test('right swipe toggles only that phrase translation blur and a second right swipe restores it',async()=>{
+ const local=[
+  {...phrase('2002-a','first-row',1),enStart:0,enEnd:5},
+  {...phrase('2002-a','second-row',2),enStart:6,enEnd:11}
+ ];
+ const app=await setup({phrases:local});try{
+  app.$('#phrase-book-open').click();
+  const rows=[...app.$('#phrase-book-list').querySelectorAll('.phrase-book-row')];
+  const zh=[...app.$('#phrase-book-list').querySelectorAll('.phrase-book-zh')];
+  swipePhraseRow(app,rows[0]);
+  assert.equal(zh[0].classList.contains('is-row-blurred'),true,'first row should blur after one right swipe');
+  assert.equal(zh[1].classList.contains('is-row-blurred'),false,'other rows must stay unchanged');
+  swipePhraseRow(app,rows[0]);
+  assert.equal(zh[0].classList.contains('is-row-blurred'),false,'second right swipe should restore the same row');
+ }finally{app.close();}
+});
+
+test('global blur button overrides a mixed row state, then restores all rows clear',async()=>{
+ const local=[
+  {...phrase('2002-a','first-row',1),enStart:0,enEnd:5},
+  {...phrase('2002-a','second-row',2),enStart:6,enEnd:11}
+ ];
+ const app=await setup({phrases:local});try{
+  app.$('#phrase-book-open').click();
+  const rows=[...app.$('#phrase-book-list').querySelectorAll('.phrase-book-row')];
+  const translations=()=>[...app.$('#phrase-book-list').querySelectorAll('.phrase-book-zh')];
+  swipePhraseRow(app,rows[0]);
+  assert.deepEqual(translations().map(node=>node.classList.contains('is-row-blurred')),[true,false]);
+  app.$('#phrase-book-blur').click();
+  assert.deepEqual(translations().map(node=>node.classList.contains('is-row-blurred')),[true,true],'mixed state should become all blurred');
+  assert.equal(app.$('#phrase-book-blur').textContent,'显示译文');
+  app.$('#phrase-book-blur').click();
+  assert.deepEqual(translations().map(node=>node.classList.contains('is-row-blurred')),[false,false],'next global click should make all clear');
+  assert.equal(app.$('#phrase-book-blur').textContent,'模糊译文');
+ }finally{app.close();}
+});
+
+test('vertical movement and left swipes do not toggle a phrase translation',async()=>{
+ const app=await setup({phrases:[phrase('2002-a','only-row',1)]});try{
+  app.$('#phrase-book-open').click();
+  const row=app.$('.phrase-book-row'),zh=app.$('.phrase-book-zh');
+  swipePhraseRow(app,row,{fromX:40,fromY:20,toX:52,toY:120});
+  assert.equal(zh.classList.contains('is-row-blurred'),false,'vertical scrolling gesture must not blur');
+  swipePhraseRow(app,row,{fromX:120,fromY:20,toX:30,toY:22});
+  assert.equal(zh.classList.contains('is-row-blurred'),false,'left swipe must not blur');
+ }finally{app.close();}
+});
+
+test('row blur state survives phrasebook rerender without changing scroll position',async()=>{
+ const local=[
+  {...phrase('2002-a','first-row',1),enStart:0,enEnd:5},
+  {...phrase('2002-a','second-row',2),enStart:6,enEnd:11}
+ ];
+ const app=await setup({phrases:local});try{
+  app.$('#phrase-book-open').click();
+  const list=app.$('#phrase-book-list');
+  const firstRow=app.$('.phrase-book-row');
+  swipePhraseRow(app,firstRow);
+  list.scrollTop=240;
+  app.$('#phrase-book-scope').value='year';
+  app.$('#phrase-book-scope').dispatchEvent(new app.window.Event('change'));
+  const firstZh=app.$('.phrase-book-zh');
+  assert.equal(firstZh.classList.contains('is-row-blurred'),true,'per-row blur should survive rerender');
+  assert.equal(list.scrollTop,0,'scope changes keep their existing reset-scroll behavior');
+ }finally{app.close();}
+});
