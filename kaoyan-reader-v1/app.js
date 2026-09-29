@@ -81,7 +81,11 @@ let phraseBookEditing=false,phraseBookDrafts=new Map(),phraseBookScope='article'
 let phraseBookQuickEditor=null,phraseBookPhraseAudio=null,phraseBookSpeech=null,phraseBookSpeakingNode=null,phraseBookSavedTimer=null;
 let phraseBookClipSource=null,phraseBookClipGain=null;
 const phraseBookManifestCache=new Map();
-const phraseBookAudioWarmInflight=new Map();
+const PHRASE_BOOK_CLIP_CACHE='kaoyan-phrase-clips-waveform-20260929-v2';
+const PHRASE_BOOK_CLIP_SCHEMA='prepared-waveform-v2';
+const phraseBookPreparedClips=new Map();
+const phraseBookClipPrepareInflight=new Map();
+let phraseBookClipCachePromise=null;
 const phraseBookHistory=createUiLayerHistory({
  history,
  location,
@@ -290,8 +294,26 @@ async function phraseBookSentenceDescriptor(entry){
  if(!path)return null;
  return {catalogEntry,sentence,item:{...sentence,path},duration:Number(sentence.duration_seconds)||0,words:Array.isArray(sentence.words)?sentence.words:[]};
 }
-function phraseBookWarmKey(entry){
- return `${String(entry?.articleId||'')}|${String(entry?.sentenceId||'')}`;
+function phraseBookClipKey(entry){
+ return [
+  PHRASE_BOOK_CLIP_SCHEMA,
+  Number(entry?.year)||'',
+  String(entry?.articleId||''),
+  String(entry?.sentenceId||''),
+  Number(entry?.enStart)||0,
+  Number(entry?.enEnd)||0
+ ].join('|');
+}
+function phraseBookWarmKey(entry){return phraseBookClipKey(entry);}
+function phraseBookClipCacheUrl(key){
+ return `https://kaoyan-phrase-clips.invalid/${encodeURIComponent(key)}`;
+}
+async function phraseBookClipCache(){
+ if(typeof caches==='undefined')return null;
+ if(!phraseBookClipCachePromise){
+  phraseBookClipCachePromise=Promise.resolve(caches.open(PHRASE_BOOK_CLIP_CACHE)).catch(()=>null);
+ }
+ return phraseBookClipCachePromise;
 }
 function phraseBookIdle(){
  return new Promise(resolve=>{
@@ -299,25 +321,94 @@ function phraseBookIdle(){
   else window.setTimeout(resolve,80);
  });
 }
-async function prewarmPhraseBookEntry(entry){
- if(!entry?.articleId||!entry?.sentenceId)return false;
- const key=phraseBookWarmKey(entry);
- if(phraseBookAudioWarmInflight.has(key))return phraseBookAudioWarmInflight.get(key);
+function extractPhraseBookClipBuffer(buffer,start,end){
+ if(!audioContext||!buffer)return null;
+ const sampleRate=Number(buffer.sampleRate)||0;
+ const channels=Math.max(1,Number(buffer.numberOfChannels)||1);
+ if(!sampleRate||typeof buffer.getChannelData!=='function')return null;
+ const first=Math.max(0,Math.floor(Math.max(0,start)*sampleRate));
+ const last=Math.min(Number(buffer.length)||0,Math.ceil(Math.max(start,end)*sampleRate));
+ if(last<=first)return null;
+ const clip=audioContext.createBuffer(channels,last-first,sampleRate);
+ for(let channel=0;channel<channels;channel++){
+  clip.getChannelData(channel).set(buffer.getChannelData(channel).subarray(first,last));
+ }
+ return clip;
+}
+function phraseBookClipWav(buffer){
+ const channels=Math.max(1,Number(buffer?.numberOfChannels)||1);
+ const sampleRate=Math.max(8000,Number(buffer?.sampleRate)||48000);
+ const frames=Math.max(0,Number(buffer?.length)||0);
+ if(!frames||typeof buffer?.getChannelData!=='function')return null;
+ const bytesPerSample=2,blockAlign=channels*bytesPerSample,dataBytes=frames*blockAlign;
+ const output=new ArrayBuffer(44+dataBytes),view=new DataView(output);
+ const write=(offset,text)=>{for(let i=0;i<text.length;i++)view.setUint8(offset+i,text.charCodeAt(i));};
+ write(0,'RIFF');view.setUint32(4,36+dataBytes,true);write(8,'WAVE');
+ write(12,'fmt ');view.setUint32(16,16,true);view.setUint16(20,1,true);view.setUint16(22,channels,true);
+ view.setUint32(24,sampleRate,true);view.setUint32(28,sampleRate*blockAlign,true);view.setUint16(32,blockAlign,true);view.setUint16(34,16,true);
+ write(36,'data');view.setUint32(40,dataBytes,true);
+ const data=Array.from({length:channels},(_,channel)=>buffer.getChannelData(channel));
+ let offset=44;
+ for(let frame=0;frame<frames;frame++){
+  for(let channel=0;channel<channels;channel++){
+   const sample=Math.max(-1,Math.min(1,Number(data[channel][frame])||0));
+   view.setInt16(offset,sample<0?sample*0x8000:sample*0x7fff,true);offset+=2;
+  }
+ }
+ return output;
+}
+async function persistPhraseBookClip(key,buffer){
+ const cache=await phraseBookClipCache();if(!cache)return false;
+ const wav=phraseBookClipWav(buffer);if(!wav)return false;
+ try{
+  await cache.put(phraseBookClipCacheUrl(key),new Response(wav,{headers:{'Content-Type':'audio/wav','X-Kaoyan-Phrase-Clip':'1'}}));
+  return true;
+ }catch{return false;}
+}
+async function restorePhraseBookClip(entry){
+ const key=phraseBookClipKey(entry);
+ const memory=phraseBookPreparedClips.get(key);if(memory)return memory;
+ const web=ensureWebAudio();if(!web||!audioContext)return null;
+ const cache=await phraseBookClipCache();if(!cache)return null;
+ try{
+  const response=await cache.match(phraseBookClipCacheUrl(key));if(!response)return null;
+  const bytes=await response.arrayBuffer();
+  const buffer=await audioContext.decodeAudioData(bytes.slice(0));
+  const prepared={key,buffer,source:'prepared-cache',persistent:true};
+  phraseBookPreparedClips.set(key,prepared);
+  return prepared;
+ }catch{return null;}
+}
+async function preparePhraseBookClip(entry){
+ if(!entry?.articleId||!entry?.sentenceId)return null;
+ const key=phraseBookClipKey(entry);
+ const memory=phraseBookPreparedClips.get(key);if(memory)return memory;
+ if(phraseBookClipPrepareInflight.has(key))return phraseBookClipPrepareInflight.get(key);
  const task=(async()=>{
-  const web=ensureWebAudio();
-  if(!web||!audioContext||!decodedAudioStore)return false;
-  const descriptor=await phraseBookSentenceDescriptor(entry);
-  if(!descriptor)return false;
-  if(decodedAudioStore.has(descriptor.item))return true;
+  const restored=await restorePhraseBookClip(entry);if(restored)return restored;
+  const web=ensureWebAudio();if(!web||!audioContext||!decodedAudioStore)return null;
+  const descriptor=await phraseBookSentenceDescriptor(entry);if(!descriptor)return null;
   try{
    const decoded=await decodedAudioStore.get(descriptor.item,{articleId:entry.articleId||'phrase-book'});
-   return Boolean(decoded?.buffer);
-  }catch{return false;}
- })().finally(()=>phraseBookAudioWarmInflight.delete(key));
- phraseBookAudioWarmInflight.set(key,task);
+   const sourceBuffer=decoded?.buffer;if(!sourceBuffer)return null;
+   const duration=Number(sourceBuffer.duration)||descriptor.duration;
+   const aligned=alignedPhraseWindow(descriptor.words,entry.enStart,entry.enEnd,duration);
+   const window=aligned?refinePhraseWindowWithWaveform(sourceBuffer,aligned):estimatedPhraseWindow(entry.sourceSentence,entry.enStart,entry.enEnd,duration);
+   if(!window||window.end<=window.start)return null;
+   const buffer=extractPhraseBookClipBuffer(sourceBuffer,window.start,window.end);if(!buffer)return null;
+   const prepared={key,buffer,source:`prepared-${window.source||'unknown'}`,persistent:false};
+   phraseBookPreparedClips.set(key,prepared);
+   prepared.persistent=await persistPhraseBookClip(key,buffer);
+   return prepared;
+  }catch{return null;}
+ })().finally(()=>phraseBookClipPrepareInflight.delete(key));
+ phraseBookClipPrepareInflight.set(key,task);
  return task;
 }
-function warmPhraseBookEntries(entries,{eager=3,limit=24}={}){
+async function prewarmPhraseBookEntry(entry){
+ return Boolean(await preparePhraseBookClip(entry));
+}
+function warmPhraseBookEntries(entries,{eager=6,limit=80}={}){
  const seen=new Set(),unique=[];
  for(const entry of entries||[]){
   if(!entry?.articleId||!entry?.sentenceId)continue;
@@ -327,7 +418,7 @@ function warmPhraseBookEntries(entries,{eager=3,limit=24}={}){
  if(!unique.length)return;
  const activeArticle=currentEntry?.id||'';
  unique.sort((a,b)=>Number(b.articleId===activeArticle)-Number(a.articleId===activeArticle));
- const selected=unique.slice(0,Math.max(1,Number(limit)||24));
+ const selected=unique.slice(0,Math.max(1,Number(limit)||80));
  const eagerCount=Math.min(selected.length,Math.max(1,Number(eager)||1));
  for(const entry of selected.slice(0,eagerCount))void prewarmPhraseBookEntry(entry);
  void (async()=>{
@@ -339,22 +430,15 @@ function warmPhraseBookEntries(entries,{eager=3,limit=24}={}){
 }
 async function playPhraseBookWebAudioClip(entry,node,text){
  const web=ensureWebAudio();
- if(!web||!audioContext||!decodedAudioStore)return false;
- const descriptor=await phraseBookSentenceDescriptor(entry);
- if(!descriptor)return false;
+ if(!web||!audioContext)return false;
  try{
   if(audioContext.state==='suspended'&&audioContext.resume)await audioContext.resume();
-  const decoded=await decodedAudioStore.get(descriptor.item,{articleId:entry.articleId||'phrase-book'});
-  const buffer=decoded?.buffer;if(!buffer)return false;
-  const duration=Number(buffer.duration)||descriptor.duration;
-  const aligned=alignedPhraseWindow(descriptor.words,entry.enStart,entry.enEnd,duration);
-  const clip=aligned?refinePhraseWindowWithWaveform(buffer,aligned):estimatedPhraseWindow(entry.sourceSentence,entry.enStart,entry.enEnd,duration);
-  if(!clip||clip.end<=clip.start)return false;
-  if(node?.dataset)node.dataset.audioClipSource=clip.source||'unknown';
-
+  const prepared=await preparePhraseBookClip(entry);
+  const buffer=prepared?.buffer;if(!buffer)return false;
+  if(node?.dataset)node.dataset.audioClipSource=prepared.source||'prepared';
   const source=audioContext.createBufferSource();
   const gain=audioContext.createGain();
-  const clipDuration=Math.max(.04,clip.end-clip.start);
+  const clipDuration=Math.max(.04,Number(buffer.duration)||0);
   const now=Number(audioContext.currentTime)||0;
   const fadeIn=Math.min(.012,clipDuration*.12);
   const fadeOut=Math.min(.022,clipDuration*.16);
@@ -364,14 +448,13 @@ async function playPhraseBookWebAudioClip(entry,node,text){
   gain.gain.linearRampToValueAtTime(1,now+fadeIn);
   gain.gain.setValueAtTime(1,Math.max(now+fadeIn,now+clipDuration-fadeOut));
   gain.gain.linearRampToValueAtTime(0,now+clipDuration);
-
   phraseBookClipSource=source;phraseBookClipGain=gain;
   source.onended=()=>{
    if(phraseBookClipSource!==source)return;
    try{source.disconnect();gain.disconnect();}catch{}
    phraseBookClipSource=null;phraseBookClipGain=null;clearPhraseBookSpeakingState();
   };
-  source.start(0,clip.start,clipDuration);
+  source.start(0,0,clipDuration);
   return true;
  }catch{return false;}
 }
@@ -599,7 +682,7 @@ function openPhraseBook(){
  const year=phraseBookScope==='year'?currentPhraseBookYear():(Number(currentEntry?.year)||Number(yearSelect.value)||2002);
  phraseBookEditing=false;phraseBookDrafts.clear();phraseBookEditButton.textContent='编辑';phraseBookEditButton.setAttribute('aria-pressed','false');phraseBookYear.disabled=false;
  phraseBookHistory.open();const entries=renderPhraseBook(year,{resetScroll:true});phraseBookBackdrop.hidden=false;document.body.classList.add('phrase-book-opened');phraseBookCloseButton.focus();
- warmPhraseBookEntries(entries,{eager:4,limit:24});
+ warmPhraseBookEntries(entries,{eager:10,limit:120});
  if(hasPlaybackContext)scrollPhraseBookToEntry(currentPlaybackPhraseTarget(entries));
 }
 function closePhraseBookDirect(){finishQuickPhraseEdit({silent:true});stopPhraseBookAudio();phraseBookEditing=false;phraseBookDrafts.clear();phraseBookEditButton.textContent='编辑';phraseBookEditButton.setAttribute('aria-pressed','false');phraseBookYear.disabled=false;phraseBookBackdrop.hidden=true;document.body.classList.remove('phrase-book-opened');phraseBookOpenButton.focus();}
@@ -953,7 +1036,7 @@ async function openArticle(entry,{automatic=false}={}){
   state.current=0;loading=false;playButton.disabled=false;document.querySelector('#article-title').textContent=article.title;document.title=`${article.title} · ${entry.year} 英语精读`;listEl.setAttribute('aria-label',`${article.title} 双语精读`);
   const audioCount=sentences.filter(s=>manifest.sentences?.[s.id]?.path||s.segments.every(x=>manifest.segments?.[x.id]?.path)).length;
   statusEl.textContent=audioCount===sentences.length?'音频已就绪 · 双击句框可重播':'正文已就绪 · 音频生成中';
-  history.replaceState(history.state,'',`#${entry.id}`);renderSentences();updatePhraseBookButton();updateActive(false);resetSentenceProgress(0);updateArticleNavState();applyPlayerVisibility(false);measureLatency('article-switch',switchStarted);warmRange(0,4);warmArticleRemainder();warmPhraseBookEntries(inlineHighlightStore.list(currentEntry.id),{eager:3,limit:24});scheduleAdjacentWarm(entry,selectionToken);
+  history.replaceState(history.state,'',`#${entry.id}`);renderSentences();updatePhraseBookButton();updateActive(false);resetSentenceProgress(0);updateArticleNavState();applyPlayerVisibility(false);measureLatency('article-switch',switchStarted);warmRange(0,4);warmArticleRemainder();warmPhraseBookEntries(inlineHighlightStore.list(currentEntry.id),{eager:10,limit:120});scheduleAdjacentWarm(entry,selectionToken);
   if(!globalArticlePreloadStarted&&catalog){globalArticlePreloadStarted=true;void articleBundleStore.preload(catalog.articles.filter(item=>item.id!==entry.id));}
   return true;
  }catch(error){if(selectionToken!==selectionGeneration)return false;loading=false;setPlaying(false,false);playButton.disabled=true;statusEl.textContent='正文加载失败';showToast('请重新选择文章或刷新页面');return false;}
