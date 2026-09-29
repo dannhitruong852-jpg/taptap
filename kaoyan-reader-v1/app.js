@@ -18,7 +18,7 @@ import { createPhraseBookCloudSync } from './phrase-book-cloud-sync.js?v=2026092
 import { copyTextWithFallback } from './clipboard-copy.js?v=phrase-copy-on-save-20260922-v1';
 import { createUiLayerHistory } from './ui-history.js?v=system-back-20260929-v1';
 import { sortPhraseEntries, findNearestPhraseEntry } from './phrase-book-position.js?v=source-order-20260929-v1';
-import { alignedPhraseWindow, estimatedPhraseWindow } from './phrase-audio-window.js?v=precise-phrase-audio-20260929-v1';
+import { alignedPhraseWindow, refinePhraseWindowWithWaveform, estimatedPhraseWindow } from './phrase-audio-window.js?v=phrasebook-waveform-boundary-20260929-v1';
 
 let article={}, sentences=[], manifest={segments:{}};
 let catalog=null, loading=true, selectionGeneration=0, bilingualMappings={}, semanticMappings={};
@@ -285,7 +285,7 @@ async function phraseBookSentenceDescriptor(entry){
  }
  const sentence=targetManifest?.sentences?.[entry.sentenceId];
  if(!sentence)return null;
- const path=String((!supportsOpus&&sentence.mp3_path)||sentence.path||sentence.mp3_path||'').trim();
+ const path=String(sentence.mp3_path||sentence.path||'').trim();
  if(!path)return null;
  return {catalogEntry,sentence,item:{...sentence,path},duration:Number(sentence.duration_seconds)||0,words:Array.isArray(sentence.words)?sentence.words:[]};
 }
@@ -300,8 +300,9 @@ async function playPhraseBookWebAudioClip(entry,node,text){
   const buffer=decoded?.buffer;if(!buffer)return false;
   const duration=Number(buffer.duration)||descriptor.duration;
   const aligned=alignedPhraseWindow(descriptor.words,entry.enStart,entry.enEnd,duration);
-  const clip=aligned||estimatedPhraseWindow(entry.sourceSentence,entry.enStart,entry.enEnd,duration);
+  const clip=aligned?refinePhraseWindowWithWaveform(buffer,aligned):estimatedPhraseWindow(entry.sourceSentence,entry.enStart,entry.enEnd,duration);
   if(!clip||clip.end<=clip.start)return false;
+  if(node?.dataset)node.dataset.audioClipSource=clip.source||'unknown';
 
   const source=audioContext.createBufferSource();
   const gain=audioContext.createGain();
@@ -326,6 +327,11 @@ async function playPhraseBookWebAudioClip(entry,node,text){
   return true;
  }catch{return false;}
 }
+function phraseBookOriginalAudioFailure(){
+ clearPhraseBookSpeakingState();
+ showToast('原声切片加载失败，请稍后重试');
+ return false;
+}
 async function playPhraseBookEntry(entry,node){
  const text=String(entry.selectedText||node?.textContent||'').trim();if(!text)return;
  continuousPlayback.cancel();clearTimer();hybridAudioPlayer.stop();setPlaying(false,false);stopPhraseBookAudio();
@@ -335,13 +341,13 @@ async function playPhraseBookEntry(entry,node){
   try{
    const audio=new Audio(directPath);phraseBookPhraseAudio=audio;
    audio.onended=()=>{if(phraseBookPhraseAudio===audio){phraseBookPhraseAudio=null;clearPhraseBookSpeakingState();}};
-   audio.onerror=async()=>{if(phraseBookPhraseAudio===audio){phraseBookPhraseAudio=null;if(!await playPhraseBookWebAudioClip(entry,node,text))phraseBookTts(text,node);}};
-   const started=audio.play();if(started?.catch)started.catch(async()=>{if(phraseBookPhraseAudio===audio){phraseBookPhraseAudio=null;if(!await playPhraseBookWebAudioClip(entry,node,text))phraseBookTts(text,node);}});
+   audio.onerror=async()=>{if(phraseBookPhraseAudio===audio){phraseBookPhraseAudio=null;if(!await playPhraseBookWebAudioClip(entry,node,text))phraseBookOriginalAudioFailure();}};
+   const started=audio.play();if(started?.catch)started.catch(async()=>{if(phraseBookPhraseAudio===audio){phraseBookPhraseAudio=null;if(!await playPhraseBookWebAudioClip(entry,node,text))phraseBookOriginalAudioFailure();}});
    return;
   }catch{}
  }
  if(await playPhraseBookWebAudioClip(entry,node,text))return;
- phraseBookTts(text,node);
+ phraseBookOriginalAudioFailure();
 }
 function selectPhraseBookText(node){
  try{
