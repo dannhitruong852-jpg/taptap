@@ -253,5 +253,25 @@ export function createInlineHighlightStore({storage=null,key=DEFAULT_KEY,prefsKe
   function setYearBlurred(year,value){
     const prefs=readPrefs(),id=String(Number(year));prefs[id]={...(prefs[id]||{}),blurred:Boolean(value)};writePrefs(prefs);return Boolean(value);
   }
-  return {add,list,listYear,years,remove,snapshot,merge,getYearBlurred,setYearBlurred};
+  function getEntryBlurred(entry){
+    const year=entryYear(entry),sig=entrySignature(entry);if(!year||!sig)return false;
+    return Boolean(readPrefs()[String(year)]?.rowBlurred?.[sig]);
+  }
+  function setEntryBlurred(entry,value){
+    const year=entryYear(entry),sig=entrySignature(entry);if(!year||!sig)return Boolean(value);
+    const prefs=readPrefs(),id=String(year),bucket={...(prefs[id]||{})},rows={...(bucket.rowBlurred||{})};
+    if(value)rows[sig]=true;else delete rows[sig];
+    bucket.rowBlurred=rows;prefs[id]=bucket;writePrefs(prefs);return Boolean(value);
+  }
+  function setEntriesBlurred(entries,value){
+    const prefs=readPrefs();
+    for(const entry of entries||[]){
+      const year=entryYear(entry),sig=entrySignature(entry);if(!year||!sig)continue;
+      const id=String(year),bucket={...(prefs[id]||{})},rows={...(bucket.rowBlurred||{})};
+      if(value)rows[sig]=true;else delete rows[sig];
+      bucket.rowBlurred=rows;prefs[id]=bucket;
+    }
+    writePrefs(prefs);return Boolean(value);
+  }
+  return {add,list,listYear,years,remove,snapshot,merge,getYearBlurred,setYearBlurred,getEntryBlurred,setEntryBlurred,setEntriesBlurred};
 }
