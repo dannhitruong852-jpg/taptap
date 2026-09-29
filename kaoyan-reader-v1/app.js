@@ -18,6 +18,7 @@ import { createPhraseBookCloudSync } from './phrase-book-cloud-sync.js?v=2026092
 import { copyTextWithFallback } from './clipboard-copy.js?v=phrase-copy-on-save-20260922-v1';
 import { createUiLayerHistory } from './ui-history.js?v=system-back-20260929-v1';
 import { sortPhraseEntries, findNearestPhraseEntry } from './phrase-book-position.js?v=source-order-20260929-v1';
+import { alignedPhraseWindow, estimatedPhraseWindow } from './phrase-audio-window.js?v=precise-phrase-audio-20260929-v1';
 
 let article={}, sentences=[], manifest={segments:{}};
 let catalog=null, loading=true, selectionGeneration=0, bilingualMappings={}, semanticMappings={};
@@ -78,6 +79,8 @@ const phraseBookCloudSync=createPhraseBookCloudSync({
 let phraseHighlightSelection=null,phraseHighlightFrame=null,phraseHighlightInvalidKey='',phraseHighlightSaving=false;
 let phraseBookEditing=false,phraseBookDrafts=new Map(),phraseBookScope='article';
 let phraseBookQuickEditor=null,phraseBookPhraseAudio=null,phraseBookSpeech=null,phraseBookSpeakingNode=null,phraseBookSavedTimer=null;
+let phraseBookClipSource=null,phraseBookClipGain=null;
+const phraseBookManifestCache=new Map();
 const phraseBookHistory=createUiLayerHistory({
  history,
  location,
@@ -200,6 +203,15 @@ function stopPhraseBookAudio(){
   try{phraseBookPhraseAudio.pause();phraseBookPhraseAudio.currentTime=0;}catch{}
   phraseBookPhraseAudio=null;
  }
+ if(phraseBookClipSource){
+  try{phraseBookClipSource.onended=null;phraseBookClipSource.stop();}catch{}
+  try{phraseBookClipSource.disconnect();}catch{}
+  phraseBookClipSource=null;
+ }
+ if(phraseBookClipGain){
+  try{phraseBookClipGain.disconnect();}catch{}
+  phraseBookClipGain=null;
+ }
  if(window.speechSynthesis){try{window.speechSynthesis.cancel();}catch{}}
  phraseBookSpeech=null;clearPhraseBookSpeakingState();
 }
@@ -218,80 +230,63 @@ function phraseBookTts(text,node){
  utterance.onerror=()=>{if(phraseBookSpeech===utterance){phraseBookSpeech=null;clearPhraseBookSpeakingState();showToast('词群朗读失败');}};
  phraseBookSpeech=utterance;window.speechSynthesis.speak(utterance);return true;
 }
-function phraseBookSentenceAudioMeta(entry){
- const sameArticle=entry.articleId===currentEntry?.id;
- const currentSentence=sameArticle?manifest.sentences?.[entry.sentenceId]:null;
- if(currentSentence){
-  return {
-   path:String(currentSentence.mp3_path||currentSentence.path||'').trim(),
-   duration:Number(currentSentence.duration_seconds)||0
-  };
- }
+async function phraseBookSentenceDescriptor(entry){
  const catalogEntry=(catalog?.articles||[]).find(item=>item.id===entry.articleId);
- const manifestPath=String(catalogEntry?.manifest||'');
- if(!catalogEntry||!manifestPath)return {path:'',duration:0};
- const base=manifestPath.replace(/manifest\.json(?:\?.*)?$/,'');
- const version=Number(catalogEntry.year)===2002?'v3':'v4';
- return {path:`${base}${version}-${entry.sentenceId}.mp3`,duration:0};
-}
-function phraseBookClipWindow(entry,duration){
- const source=String(entry.sourceSentence||'');
- const start=Math.max(0,Number(entry.enStart)||0),end=Math.max(start+1,Number(entry.enEnd)||start+1);
- const words=[...source.matchAll(/[A-Za-z]+(?:['’][A-Za-z]+)*(?:-[A-Za-z]+(?:['’][A-Za-z]+)*)*/g)];
- if(!words.length||!Number.isFinite(duration)||duration<=0)return null;
- const selected=[];
- for(let i=0;i<words.length;i++){
-  const left=Number(words[i].index)||0,right=left+words[i][0].length;
-  if(right>start&&left<end)selected.push(i);
+ if(!catalogEntry)return null;
+ let targetManifest;
+ if(entry.articleId===currentEntry?.id)targetManifest=manifest;
+ else if(phraseBookManifestCache.has(entry.articleId))targetManifest=phraseBookManifestCache.get(entry.articleId);
+ else{
+  try{
+   const response=await fetch(catalogEntry.manifest,{cache:'no-cache'});
+   if(!response.ok)return null;
+   targetManifest=await response.json();phraseBookManifestCache.set(entry.articleId,targetManifest);
+  }catch{return null;}
  }
- if(!selected.length)return null;
- const weights=words.map(word=>.8+Math.min(1.35,word[0].replace(/[^A-Za-z]/g,'').length*.085));
- const prefix=[0];for(const weight of weights)prefix.push(prefix.at(-1)+weight);
- const total=prefix.at(-1)||1;
- const first=selected[0],last=selected.at(-1)+1;
- const padBefore=.07,padAfter=.11;
- return {
-  start:Math.max(0,duration*(prefix[first]/total)-padBefore),
-  end:Math.min(duration,duration*(prefix[last]/total)+padAfter)
- };
+ const sentence=targetManifest?.sentences?.[entry.sentenceId];
+ if(!sentence)return null;
+ const path=String((!supportsOpus&&sentence.mp3_path)||sentence.path||sentence.mp3_path||'').trim();
+ if(!path)return null;
+ return {catalogEntry,sentence,item:{...sentence,path},duration:Number(sentence.duration_seconds)||0,words:Array.isArray(sentence.words)?sentence.words:[]};
 }
-function playPhraseBookSourceAudio(entry,node,text){
- const meta=phraseBookSentenceAudioMeta(entry);
- if(!meta.path||!meta.duration)return false;
- const clip=phraseBookClipWindow(entry,meta.duration);
- if(!clip||clip.end<=clip.start)return false;
+async function playPhraseBookWebAudioClip(entry,node,text){
+ const web=ensureWebAudio();
+ if(!web||!audioContext||!decodedAudioStore)return false;
+ const descriptor=await phraseBookSentenceDescriptor(entry);
+ if(!descriptor)return false;
  try{
-  const fragment=`#t=${clip.start.toFixed(3)},${clip.end.toFixed(3)}`;
-  const audio=new Audio(meta.path+fragment);phraseBookPhraseAudio=audio;
-  audio.preload='auto';
-  let stopped=false;
-  const finish=()=>{
-   if(stopped)return;stopped=true;
-   try{audio.pause();}catch{}
-   if(phraseBookPhraseAudio===audio)phraseBookPhraseAudio=null;
-   clearPhraseBookSpeakingState();
+  if(audioContext.state==='suspended'&&audioContext.resume)await audioContext.resume();
+  const decoded=await decodedAudioStore.get(descriptor.item,{articleId:entry.articleId||'phrase-book'});
+  const buffer=decoded?.buffer;if(!buffer)return false;
+  const duration=Number(buffer.duration)||descriptor.duration;
+  const aligned=alignedPhraseWindow(descriptor.words,entry.enStart,entry.enEnd,duration);
+  const clip=aligned||estimatedPhraseWindow(entry.sourceSentence,entry.enStart,entry.enEnd,duration);
+  if(!clip||clip.end<=clip.start)return false;
+
+  const source=audioContext.createBufferSource();
+  const gain=audioContext.createGain();
+  const clipDuration=Math.max(.04,clip.end-clip.start);
+  const now=Number(audioContext.currentTime)||0;
+  const fadeIn=Math.min(.012,clipDuration*.12);
+  const fadeOut=Math.min(.022,clipDuration*.16);
+  source.buffer=buffer;source.connect(gain);gain.connect(audioContext.destination);
+  gain.gain.cancelScheduledValues(now);
+  gain.gain.setValueAtTime(0,now);
+  gain.gain.linearRampToValueAtTime(1,now+fadeIn);
+  gain.gain.setValueAtTime(1,Math.max(now+fadeIn,now+clipDuration-fadeOut));
+  gain.gain.linearRampToValueAtTime(0,now+clipDuration);
+
+  phraseBookClipSource=source;phraseBookClipGain=gain;
+  source.onended=()=>{
+   if(phraseBookClipSource!==source)return;
+   try{source.disconnect();gain.disconnect();}catch{}
+   phraseBookClipSource=null;phraseBookClipGain=null;clearPhraseBookSpeakingState();
   };
-  const fallback=()=>{
-   if(stopped)return;stopped=true;
-   try{audio.pause();}catch{}
-   if(phraseBookPhraseAudio===audio)phraseBookPhraseAudio=null;
-   phraseBookTts(text,node);
-  };
-  audio.addEventListener('loadedmetadata',()=>{
-   if(stopped)return;
-   try{
-    if(Math.abs((Number(audio.currentTime)||0)-clip.start)>.12)audio.currentTime=clip.start;
-   }catch{}
-  },{once:true});
-  audio.addEventListener('timeupdate',()=>{if(!stopped&&Number(audio.currentTime)>=clip.end-.025)finish();});
-  audio.addEventListener('ended',finish,{once:true});
-  audio.addEventListener('error',fallback,{once:true});
-  const started=audio.play();
-  if(started?.catch)started.catch(fallback);
+  source.start(0,clip.start,clipDuration);
   return true;
  }catch{return false;}
 }
-function playPhraseBookEntry(entry,node){
+async function playPhraseBookEntry(entry,node){
  const text=String(entry.selectedText||node?.textContent||'').trim();if(!text)return;
  continuousPlayback.cancel();clearTimer();hybridAudioPlayer.stop();setPlaying(false,false);stopPhraseBookAudio();
  phraseBookSpeakingNode=node;node.classList.add('is-speaking');
@@ -300,12 +295,12 @@ function playPhraseBookEntry(entry,node){
   try{
    const audio=new Audio(directPath);phraseBookPhraseAudio=audio;
    audio.onended=()=>{if(phraseBookPhraseAudio===audio){phraseBookPhraseAudio=null;clearPhraseBookSpeakingState();}};
-   audio.onerror=()=>{if(phraseBookPhraseAudio===audio){phraseBookPhraseAudio=null;if(!playPhraseBookSourceAudio(entry,node,text))phraseBookTts(text,node);}};
-   const started=audio.play();if(started?.catch)started.catch(()=>{if(phraseBookPhraseAudio===audio){phraseBookPhraseAudio=null;if(!playPhraseBookSourceAudio(entry,node,text))phraseBookTts(text,node);}});
+   audio.onerror=async()=>{if(phraseBookPhraseAudio===audio){phraseBookPhraseAudio=null;if(!await playPhraseBookWebAudioClip(entry,node,text))phraseBookTts(text,node);}};
+   const started=audio.play();if(started?.catch)started.catch(async()=>{if(phraseBookPhraseAudio===audio){phraseBookPhraseAudio=null;if(!await playPhraseBookWebAudioClip(entry,node,text))phraseBookTts(text,node);}});
    return;
   }catch{}
  }
- if(playPhraseBookSourceAudio(entry,node,text))return;
+ if(await playPhraseBookWebAudioClip(entry,node,text))return;
  phraseBookTts(text,node);
 }
 function selectPhraseBookText(node){
