@@ -16,4 +16,5 @@ jobs:
           cache: npm
           cache-dependency-path: kaoyan-reader-v1/package-lock.json
       - run: npm ci
-      - run: node --test tests/reader-clean-ui.test.js
+      - run: npm test
+      - run: npm run test:dom
