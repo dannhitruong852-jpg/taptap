@@ -21,7 +21,7 @@ test('whole year groups by catalog article order and keeps source order within e
   assert.deepEqual(visible(app),['first','newer','second']);
   assert.deepEqual([...app.$('#phrase-book-list').querySelectorAll('h3')].map(el=>el.textContent),['a','b']);
   change(app,'#phrase-book-year','2003');assert.deepEqual(visible(app),['third']);
-  change(app,'#phrase-book-scope','article');assert.deepEqual(visible(app),['newer','first']);
+  change(app,'#phrase-book-scope','article');assert.deepEqual(visible(app),['first','newer']);
   assert.equal(app.$('#phrase-book-year').value,'2002');
  }finally{app.close();}
 });
@@ -57,8 +57,8 @@ test('remote sync respects current scope and retains unsaved edit text during re
   app.$('#phrase-book-open').click();app.$('#phrase-book-edit').click();
   const editor=app.$('.phrase-book-zh.is-editing');editor.textContent='编辑中';editor.dispatchEvent(new app.window.Event('input'));
   await app.remote([{...phrase('2002-b','remote other',9)}, {...phrase('2002-a','remote current',8),enStart:6,enEnd:11}]);
-  assert.deepEqual(visible(app),['remote current','first']);
-  assert.equal([...app.$('#phrase-book-list').querySelectorAll('.phrase-book-zh')].at(-1).textContent,'编辑中');
+  assert.deepEqual(visible(app),['first','remote current']);
+  assert.equal([...app.$('#phrase-book-list').querySelectorAll('.phrase-book-zh')][0].textContent,'编辑中');
  }finally{app.close();}
 });
 test('editing, blur and deletion in one scope preserve other articles and years',async()=>{
