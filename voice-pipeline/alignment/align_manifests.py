@@ -4,6 +4,9 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import subprocess
+import sys
+from array import array
 from functools import lru_cache
 from pathlib import Path
 
@@ -59,12 +62,26 @@ def alignment_runtime():
     return torch,torchaudio,bundle,model,{label:i for i,label in enumerate(labels)}
 
 
+def decode_audio_ffmpeg(audio_path:Path, sample_rate:int, torch):
+    command=[
+        'ffmpeg','-nostdin','-v','error','-i',str(audio_path),
+        '-f','s16le','-ac','1','-ar',str(sample_rate),'pipe:1'
+    ]
+    result=subprocess.run(command,stdout=subprocess.PIPE,stderr=subprocess.PIPE,check=False)
+    if result.returncode!=0 or not result.stdout:
+        message=result.stderr.decode('utf-8','replace').strip()[-800:]
+        raise ValueError(f'ffmpeg decode failed for {audio_path.name}: {message}')
+    samples=array('h')
+    samples.frombytes(result.stdout)
+    if sys.byteorder=='big':
+        samples.byteswap()
+    waveform=torch.tensor(samples,dtype=torch.float32).div_(32768.0).unsqueeze(0)
+    return waveform
+
+
 def align_sentence_audio(audio_path:Path, transcript:str)->list[dict]:
     torch,torchaudio,bundle,model,label_to_id=alignment_runtime()
-    waveform,sr=torchaudio.load(str(audio_path))
-    waveform=waveform.mean(dim=0,keepdim=True)
-    if sr!=bundle.sample_rate:
-        waveform=torchaudio.functional.resample(waveform,sr,bundle.sample_rate)
+    waveform=decode_audio_ffmpeg(audio_path,bundle.sample_rate,torch)
     with torch.inference_mode():
         emission,_=model(waveform)
         logp=torch.log_softmax(emission[0],dim=-1).cpu()
