@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import json
 import math
+from functools import lru_cache
 from pathlib import Path
 
 from alignment.ctc_align import align_tokens
@@ -48,11 +49,18 @@ def validate_word_timeline(words:list[dict], audio_duration:float)->list[str]:
     return errors
 
 
-def align_sentence_audio(audio_path:Path, transcript:str)->list[dict]:
+@lru_cache(maxsize=1)
+def alignment_runtime():
     import torch
     import torchaudio
     bundle=torchaudio.pipelines.WAV2VEC2_ASR_BASE_960H
     model=bundle.get_model().eval()
+    labels=list(bundle.get_labels())
+    return torch,torchaudio,bundle,model,{label:i for i,label in enumerate(labels)}
+
+
+def align_sentence_audio(audio_path:Path, transcript:str)->list[dict]:
+    torch,torchaudio,bundle,model,label_to_id=alignment_runtime()
     waveform,sr=torchaudio.load(str(audio_path))
     waveform=waveform.mean(dim=0,keepdim=True)
     if sr!=bundle.sample_rate:
@@ -60,8 +68,6 @@ def align_sentence_audio(audio_path:Path, transcript:str)->list[dict]:
     with torch.inference_mode():
         emission,_=model(waveform)
         logp=torch.log_softmax(emission[0],dim=-1).cpu()
-    labels=list(bundle.get_labels())
-    label_to_id={label:i for i,label in enumerate(labels)}
     blank_id=0
     words=normalize_transcript(transcript)
     target=ctc_text(words)
@@ -96,7 +102,7 @@ def main()->None:
     year_entries=[entry for entry in catalog.get('articles',[]) if int(entry.get('year',-1))==args.year]
     if not year_entries:
         raise ValueError(f'no catalog entries found for {args.year}')
-    failures=[]
+    failures=[];total=0;aligned=0;skipped=0
     for catalog_entry in year_entries:
         article_id=str(catalog_entry.get('id',''))
         article=article_id.removeprefix(f'{args.year}-') or article_id
@@ -106,26 +112,30 @@ def main()->None:
         by_id={s['id']:s for s in content.get('sentences',[])}
         manifest=json.loads(manifest_path.read_text(encoding='utf-8'))
         for sid,entry in manifest.get('sentences',{}).items():
+            total+=1
             source=by_id.get(sid)
             if source is None:
                 failures.append(f'{article}/{sid}: missing source sentence')
                 entry['alignment_status']='failed'
                 continue
             try:
-                audio_rel=str(entry.get('mp3_path') or entry.get('path') or '').removeprefix('./')
-                if not audio_rel:
-                    raise ValueError('missing sentence audio path')
-                audio_path=root/audio_rel
-                if not audio_path.exists():
-                    alt=str(entry.get('mp3_path') or '').removeprefix('./')
-                    if alt and (root/alt).exists():
-                        audio_path=root/alt
-                    else:
-                        raise ValueError(f'audio file not found: {audio_rel}')
+                fingerprint=entry.get('generation_fingerprint')
+                if (entry.get('alignment_status')=='passed' and isinstance(entry.get('words'),list)
+                        and entry.get('words') and entry.get('aligned_generation_fingerprint')==fingerprint):
+                    skipped+=1
+                    continue
+                candidates=[
+                    str(entry.get('mp3_path') or '').removeprefix('./'),
+                    str(entry.get('path') or '').removeprefix('./'),
+                ]
+                audio_path=next((root/rel for rel in candidates if rel and (root/rel).exists()),None)
+                if audio_path is None:
+                    raise ValueError('audio file not found: '+', '.join(rel for rel in candidates if rel))
                 entry['words']=align_sentence_audio(audio_path,source['en'])
                 entry['alignment_status']='passed'
                 entry['alignment_model']='torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1'
-                entry['aligned_generation_fingerprint']=entry.get('generation_fingerprint')
+                entry['aligned_generation_fingerprint']=fingerprint
+                aligned+=1
             except Exception as exc:
                 entry['alignment_status']='failed';entry.pop('words',None)
                 failures.append(f'{article}/{sid}: {exc}')
@@ -133,8 +143,19 @@ def main()->None:
         manifest_path.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     report=root/f'reports/c-v4-{args.year}-alignment.json'
     report.parent.mkdir(parents=True,exist_ok=True)
-    report.write_text(json.dumps({'year':args.year,'status':'passed' if not failures else 'failed','failures':failures},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    payload={
+        'year':args.year,
+        'status':'passed' if not failures else 'failed',
+        'sentences_total':total,
+        'sentences_aligned':aligned,
+        'sentences_skipped':skipped,
+        'failures':failures,
+    }
+    report.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    print(json.dumps(payload,ensure_ascii=False))
     if failures:
+        for failure in failures:
+            print(f'ALIGNMENT_FAILURE {failure}')
         raise SystemExit(2)
 
 
