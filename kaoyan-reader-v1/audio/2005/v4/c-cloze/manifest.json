@@ -25,7 +25,68 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "The",
+          "char_start": 0,
+          "char_end": 3,
+          "start": 0.081,
+          "end": 0.141,
+          "score": 0.9995
+        },
+        {
+          "word": "human",
+          "char_start": 4,
+          "char_end": 9,
+          "start": 0.202,
+          "end": 0.465,
+          "score": 0.9999
+        },
+        {
+          "word": "nose",
+          "char_start": 10,
+          "char_end": 14,
+          "start": 0.566,
+          "end": 0.808,
+          "score": 0.999
+        },
+        {
+          "word": "is",
+          "char_start": 15,
+          "char_end": 17,
+          "start": 1.091,
+          "end": 1.132,
+          "score": 0.9998
+        },
+        {
+          "word": "an",
+          "char_start": 18,
+          "char_end": 20,
+          "start": 1.213,
+          "end": 1.253,
+          "score": 0.9989
+        },
+        {
+          "word": "underrated",
+          "char_start": 21,
+          "char_end": 31,
+          "start": 1.354,
+          "end": 1.779,
+          "score": 0.9607
+        },
+        {
+          "word": "tool",
+          "char_start": 32,
+          "char_end": 36,
+          "start": 1.86,
+          "end": 2.082,
+          "score": 0.9998
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "09470d34be4ee1566163304873df40aec27143ad5550ea7b1cf556b6f1ea4d76"
     },
     "s02": {
       "id": "s02",
@@ -49,7 +110,180 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "Humans",
+          "char_start": 0,
+          "char_end": 6,
+          "start": 0.221,
+          "end": 0.622,
+          "score": 0.9992
+        },
+        {
+          "word": "are",
+          "char_start": 7,
+          "char_end": 10,
+          "start": 0.722,
+          "end": 0.802,
+          "score": 1.0
+        },
+        {
+          "word": "often",
+          "char_start": 11,
+          "char_end": 16,
+          "start": 0.942,
+          "end": 1.163,
+          "score": 1.0
+        },
+        {
+          "word": "thought",
+          "char_start": 17,
+          "char_end": 24,
+          "start": 1.223,
+          "end": 1.424,
+          "score": 1.0
+        },
+        {
+          "word": "to",
+          "char_start": 25,
+          "char_end": 27,
+          "start": 1.484,
+          "end": 1.544,
+          "score": 0.9996
+        },
+        {
+          "word": "be",
+          "char_start": 28,
+          "char_end": 30,
+          "start": 1.584,
+          "end": 1.664,
+          "score": 1.0
+        },
+        {
+          "word": "insensitive",
+          "char_start": 31,
+          "char_end": 42,
+          "start": 1.845,
+          "end": 2.466,
+          "score": 0.9997
+        },
+        {
+          "word": "smellers",
+          "char_start": 43,
+          "char_end": 51,
+          "start": 2.546,
+          "end": 2.968,
+          "score": 0.992
+        },
+        {
+          "word": "compared",
+          "char_start": 52,
+          "char_end": 60,
+          "start": 3.048,
+          "end": 3.369,
+          "score": 1.0
+        },
+        {
+          "word": "with",
+          "char_start": 61,
+          "char_end": 65,
+          "start": 3.389,
+          "end": 3.489,
+          "score": 0.9999
+        },
+        {
+          "word": "animals",
+          "char_start": 66,
+          "char_end": 73,
+          "start": 3.629,
+          "end": 3.97,
+          "score": 1.0
+        },
+        {
+          "word": "but",
+          "char_start": 75,
+          "char_end": 78,
+          "start": 4.632,
+          "end": 4.732,
+          "score": 0.9997
+        },
+        {
+          "word": "this",
+          "char_start": 79,
+          "char_end": 83,
+          "start": 4.812,
+          "end": 4.953,
+          "score": 0.9994
+        },
+        {
+          "word": "is",
+          "char_start": 84,
+          "char_end": 86,
+          "start": 5.053,
+          "end": 5.093,
+          "score": 0.9995
+        },
+        {
+          "word": "largely",
+          "char_start": 87,
+          "char_end": 94,
+          "start": 5.193,
+          "end": 5.574,
+          "score": 0.9999
+        },
+        {
+          "word": "because",
+          "char_start": 95,
+          "char_end": 102,
+          "start": 5.634,
+          "end": 5.995,
+          "score": 1.0
+        },
+        {
+          "word": "unlike",
+          "char_start": 104,
+          "char_end": 110,
+          "start": 6.236,
+          "end": 6.496,
+          "score": 1.0
+        },
+        {
+          "word": "animals",
+          "char_start": 111,
+          "char_end": 118,
+          "start": 6.637,
+          "end": 6.958,
+          "score": 0.9999
+        },
+        {
+          "word": "we",
+          "char_start": 120,
+          "char_end": 122,
+          "start": 7.058,
+          "end": 7.138,
+          "score": 1.0
+        },
+        {
+          "word": "stand",
+          "char_start": 123,
+          "char_end": 128,
+          "start": 7.218,
+          "end": 7.459,
+          "score": 1.0
+        },
+        {
+          "word": "upright",
+          "char_start": 129,
+          "char_end": 136,
+          "start": 7.619,
+          "end": 7.96,
+          "score": 1.0
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "36fb6949f031a0484d64051b791c49a13ad43c8aed65d677ef608616a8687fd6"
     },
     "s03": {
       "id": "s03",
@@ -73,7 +307,212 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "This",
+          "char_start": 0,
+          "char_end": 4,
+          "start": 0.08,
+          "end": 0.221,
+          "score": 0.9999
+        },
+        {
+          "word": "means",
+          "char_start": 5,
+          "char_end": 10,
+          "start": 0.321,
+          "end": 0.581,
+          "score": 0.9999
+        },
+        {
+          "word": "that",
+          "char_start": 11,
+          "char_end": 15,
+          "start": 0.682,
+          "end": 0.782,
+          "score": 0.9999
+        },
+        {
+          "word": "our",
+          "char_start": 16,
+          "char_end": 19,
+          "start": 0.842,
+          "end": 0.922,
+          "score": 0.9998
+        },
+        {
+          "word": "noses",
+          "char_start": 20,
+          "char_end": 25,
+          "start": 1.002,
+          "end": 1.343,
+          "score": 0.9998
+        },
+        {
+          "word": "are",
+          "char_start": 26,
+          "char_end": 29,
+          "start": 1.423,
+          "end": 1.503,
+          "score": 0.9997
+        },
+        {
+          "word": "limited",
+          "char_start": 30,
+          "char_end": 37,
+          "start": 1.564,
+          "end": 1.844,
+          "score": 0.9999
+        },
+        {
+          "word": "to",
+          "char_start": 38,
+          "char_end": 40,
+          "start": 1.945,
+          "end": 2.005,
+          "score": 1.0
+        },
+        {
+          "word": "perceiving",
+          "char_start": 41,
+          "char_end": 51,
+          "start": 2.085,
+          "end": 2.526,
+          "score": 1.0
+        },
+        {
+          "word": "those",
+          "char_start": 52,
+          "char_end": 57,
+          "start": 2.586,
+          "end": 2.746,
+          "score": 1.0
+        },
+        {
+          "word": "smells",
+          "char_start": 58,
+          "char_end": 64,
+          "start": 2.847,
+          "end": 3.187,
+          "score": 1.0
+        },
+        {
+          "word": "which",
+          "char_start": 65,
+          "char_end": 70,
+          "start": 3.248,
+          "end": 3.368,
+          "score": 1.0
+        },
+        {
+          "word": "float",
+          "char_start": 71,
+          "char_end": 76,
+          "start": 3.448,
+          "end": 3.628,
+          "score": 0.9998
+        },
+        {
+          "word": "through",
+          "char_start": 77,
+          "char_end": 84,
+          "start": 3.669,
+          "end": 3.849,
+          "score": 0.9998
+        },
+        {
+          "word": "the",
+          "char_start": 85,
+          "char_end": 88,
+          "start": 3.869,
+          "end": 3.949,
+          "score": 1.0
+        },
+        {
+          "word": "air",
+          "char_start": 89,
+          "char_end": 92,
+          "start": 4.09,
+          "end": 4.17,
+          "score": 1.0
+        },
+        {
+          "word": "missing",
+          "char_start": 94,
+          "char_end": 101,
+          "start": 4.631,
+          "end": 4.911,
+          "score": 0.9999
+        },
+        {
+          "word": "the",
+          "char_start": 102,
+          "char_end": 105,
+          "start": 4.972,
+          "end": 5.032,
+          "score": 0.9998
+        },
+        {
+          "word": "majority",
+          "char_start": 106,
+          "char_end": 114,
+          "start": 5.072,
+          "end": 5.473,
+          "score": 1.0
+        },
+        {
+          "word": "of",
+          "char_start": 115,
+          "char_end": 117,
+          "start": 5.513,
+          "end": 5.553,
+          "score": 0.9999
+        },
+        {
+          "word": "smells",
+          "char_start": 118,
+          "char_end": 124,
+          "start": 5.653,
+          "end": 6.014,
+          "score": 1.0
+        },
+        {
+          "word": "which",
+          "char_start": 125,
+          "char_end": 130,
+          "start": 6.074,
+          "end": 6.214,
+          "score": 1.0
+        },
+        {
+          "word": "stick",
+          "char_start": 131,
+          "char_end": 136,
+          "start": 6.275,
+          "end": 6.435,
+          "score": 1.0
+        },
+        {
+          "word": "to",
+          "char_start": 137,
+          "char_end": 139,
+          "start": 6.515,
+          "end": 6.575,
+          "score": 0.9999
+        },
+        {
+          "word": "surfaces",
+          "char_start": 140,
+          "char_end": 148,
+          "start": 6.635,
+          "end": 7.117,
+          "score": 1.0
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "42dc35608b6c1cda157f96819f3345b1c888dae0bc04f11b23fe9224f74da999"
     },
     "s04": {
       "id": "s04",
@@ -97,7 +536,148 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "In",
+          "char_start": 0,
+          "char_end": 2,
+          "start": 0.201,
+          "end": 0.241,
+          "score": 1.0
+        },
+        {
+          "word": "fact",
+          "char_start": 3,
+          "char_end": 7,
+          "start": 0.381,
+          "end": 0.622,
+          "score": 1.0
+        },
+        {
+          "word": "though",
+          "char_start": 9,
+          "char_end": 15,
+          "start": 0.722,
+          "end": 0.902,
+          "score": 0.9995
+        },
+        {
+          "word": "we",
+          "char_start": 17,
+          "char_end": 19,
+          "start": 1.384,
+          "end": 1.424,
+          "score": 0.9993
+        },
+        {
+          "word": "are",
+          "char_start": 20,
+          "char_end": 23,
+          "start": 1.504,
+          "end": 1.564,
+          "score": 0.9999
+        },
+        {
+          "word": "extremely",
+          "char_start": 24,
+          "char_end": 33,
+          "start": 1.624,
+          "end": 2.025,
+          "score": 1.0
+        },
+        {
+          "word": "sensitive",
+          "char_start": 34,
+          "char_end": 43,
+          "start": 2.086,
+          "end": 2.487,
+          "score": 0.9999
+        },
+        {
+          "word": "to",
+          "char_start": 44,
+          "char_end": 46,
+          "start": 2.527,
+          "end": 2.587,
+          "score": 0.9636
+        },
+        {
+          "word": "smells",
+          "char_start": 47,
+          "char_end": 53,
+          "start": 2.647,
+          "end": 2.928,
+          "score": 0.9987
+        },
+        {
+          "word": "even",
+          "char_start": 55,
+          "char_end": 59,
+          "start": 3.369,
+          "end": 3.509,
+          "score": 0.9999
+        },
+        {
+          "word": "if",
+          "char_start": 60,
+          "char_end": 62,
+          "start": 3.549,
+          "end": 3.59,
+          "score": 1.0
+        },
+        {
+          "word": "we",
+          "char_start": 63,
+          "char_end": 65,
+          "start": 3.65,
+          "end": 3.69,
+          "score": 0.9945
+        },
+        {
+          "word": "do",
+          "char_start": 66,
+          "char_end": 68,
+          "start": 3.75,
+          "end": 3.81,
+          "score": 0.9999
+        },
+        {
+          "word": "not",
+          "char_start": 69,
+          "char_end": 72,
+          "start": 3.87,
+          "end": 3.971,
+          "score": 1.0
+        },
+        {
+          "word": "generally",
+          "char_start": 73,
+          "char_end": 82,
+          "start": 4.031,
+          "end": 4.392,
+          "score": 1.0
+        },
+        {
+          "word": "realize",
+          "char_start": 83,
+          "char_end": 90,
+          "start": 4.452,
+          "end": 4.813,
+          "score": 0.9851
+        },
+        {
+          "word": "it",
+          "char_start": 91,
+          "char_end": 93,
+          "start": 4.933,
+          "end": 4.973,
+          "score": 0.9999
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "349ef4be894da61195502163c7baefcae85ddc9d0da9d8b2906b47159fbfc549"
     },
     "s05": {
       "id": "s05",
@@ -121,7 +701,180 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "Our",
+          "char_start": 0,
+          "char_end": 3,
+          "start": 0.221,
+          "end": 0.301,
+          "score": 0.9999
+        },
+        {
+          "word": "noses",
+          "char_start": 4,
+          "char_end": 9,
+          "start": 0.361,
+          "end": 0.622,
+          "score": 0.9998
+        },
+        {
+          "word": "are",
+          "char_start": 10,
+          "char_end": 13,
+          "start": 0.702,
+          "end": 0.782,
+          "score": 1.0
+        },
+        {
+          "word": "capable",
+          "char_start": 14,
+          "char_end": 21,
+          "start": 0.822,
+          "end": 1.163,
+          "score": 0.9999
+        },
+        {
+          "word": "of",
+          "char_start": 22,
+          "char_end": 24,
+          "start": 1.224,
+          "end": 1.264,
+          "score": 0.9999
+        },
+        {
+          "word": "detecting",
+          "char_start": 25,
+          "char_end": 34,
+          "start": 1.324,
+          "end": 1.705,
+          "score": 1.0
+        },
+        {
+          "word": "human",
+          "char_start": 35,
+          "char_end": 40,
+          "start": 1.765,
+          "end": 1.966,
+          "score": 1.0
+        },
+        {
+          "word": "smells",
+          "char_start": 41,
+          "char_end": 47,
+          "start": 2.046,
+          "end": 2.367,
+          "score": 0.9999
+        },
+        {
+          "word": "even",
+          "char_start": 48,
+          "char_end": 52,
+          "start": 2.808,
+          "end": 2.948,
+          "score": 1.0
+        },
+        {
+          "word": "when",
+          "char_start": 53,
+          "char_end": 57,
+          "start": 3.009,
+          "end": 3.109,
+          "score": 1.0
+        },
+        {
+          "word": "these",
+          "char_start": 58,
+          "char_end": 63,
+          "start": 3.169,
+          "end": 3.289,
+          "score": 0.9999
+        },
+        {
+          "word": "are",
+          "char_start": 64,
+          "char_end": 67,
+          "start": 3.35,
+          "end": 3.43,
+          "score": 1.0
+        },
+        {
+          "word": "diluted",
+          "char_start": 68,
+          "char_end": 75,
+          "start": 3.47,
+          "end": 3.891,
+          "score": 0.9991
+        },
+        {
+          "word": "to",
+          "char_start": 76,
+          "char_end": 78,
+          "start": 4.012,
+          "end": 4.112,
+          "score": 1.0
+        },
+        {
+          "word": "far",
+          "char_start": 79,
+          "char_end": 82,
+          "start": 4.192,
+          "end": 4.352,
+          "score": 1.0
+        },
+        {
+          "word": "below",
+          "char_start": 83,
+          "char_end": 88,
+          "start": 4.453,
+          "end": 4.673,
+          "score": 1.0
+        },
+        {
+          "word": "one",
+          "char_start": 89,
+          "char_end": 92,
+          "start": 4.874,
+          "end": 4.974,
+          "score": 1.0
+        },
+        {
+          "word": "part",
+          "char_start": 93,
+          "char_end": 97,
+          "start": 5.075,
+          "end": 5.355,
+          "score": 1.0
+        },
+        {
+          "word": "in",
+          "char_start": 98,
+          "char_end": 100,
+          "start": 5.596,
+          "end": 5.636,
+          "score": 0.9976
+        },
+        {
+          "word": "one",
+          "char_start": 101,
+          "char_end": 104,
+          "start": 5.777,
+          "end": 5.877,
+          "score": 1.0
+        },
+        {
+          "word": "million",
+          "char_start": 105,
+          "char_end": 112,
+          "start": 5.937,
+          "end": 6.258,
+          "score": 1.0
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "2f0152d0d55a4e035a20581d0cdec011d02de3863d7b3ad2a7860dd68200e6e5"
     },
     "s06": {
       "id": "s06",
@@ -145,7 +898,212 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "Strangely",
+          "char_start": 0,
+          "char_end": 9,
+          "start": 0.2,
+          "end": 0.661,
+          "score": 1.0
+        },
+        {
+          "word": "some",
+          "char_start": 11,
+          "char_end": 15,
+          "start": 0.841,
+          "end": 1.001,
+          "score": 1.0
+        },
+        {
+          "word": "people",
+          "char_start": 16,
+          "char_end": 22,
+          "start": 1.041,
+          "end": 1.242,
+          "score": 0.9999
+        },
+        {
+          "word": "find",
+          "char_start": 23,
+          "char_end": 27,
+          "start": 1.342,
+          "end": 1.602,
+          "score": 1.0
+        },
+        {
+          "word": "that",
+          "char_start": 28,
+          "char_end": 32,
+          "start": 1.702,
+          "end": 1.823,
+          "score": 0.9996
+        },
+        {
+          "word": "they",
+          "char_start": 33,
+          "char_end": 37,
+          "start": 1.863,
+          "end": 1.983,
+          "score": 0.9999
+        },
+        {
+          "word": "can",
+          "char_start": 38,
+          "char_end": 41,
+          "start": 2.023,
+          "end": 2.103,
+          "score": 0.9998
+        },
+        {
+          "word": "smell",
+          "char_start": 42,
+          "char_end": 47,
+          "start": 2.203,
+          "end": 2.423,
+          "score": 1.0
+        },
+        {
+          "word": "one",
+          "char_start": 48,
+          "char_end": 51,
+          "start": 2.604,
+          "end": 2.684,
+          "score": 1.0
+        },
+        {
+          "word": "type",
+          "char_start": 52,
+          "char_end": 56,
+          "start": 2.744,
+          "end": 2.884,
+          "score": 0.9999
+        },
+        {
+          "word": "of",
+          "char_start": 57,
+          "char_end": 59,
+          "start": 2.944,
+          "end": 2.984,
+          "score": 0.9915
+        },
+        {
+          "word": "flower",
+          "char_start": 60,
+          "char_end": 66,
+          "start": 3.024,
+          "end": 3.285,
+          "score": 0.9998
+        },
+        {
+          "word": "but",
+          "char_start": 67,
+          "char_end": 70,
+          "start": 3.425,
+          "end": 3.545,
+          "score": 0.9994
+        },
+        {
+          "word": "not",
+          "char_start": 71,
+          "char_end": 74,
+          "start": 3.605,
+          "end": 3.725,
+          "score": 0.9999
+        },
+        {
+          "word": "another",
+          "char_start": 75,
+          "char_end": 82,
+          "start": 3.805,
+          "end": 4.086,
+          "score": 1.0
+        },
+        {
+          "word": "whereas",
+          "char_start": 84,
+          "char_end": 91,
+          "start": 4.506,
+          "end": 4.767,
+          "score": 0.9999
+        },
+        {
+          "word": "others",
+          "char_start": 92,
+          "char_end": 98,
+          "start": 4.907,
+          "end": 5.167,
+          "score": 1.0
+        },
+        {
+          "word": "are",
+          "char_start": 99,
+          "char_end": 102,
+          "start": 5.288,
+          "end": 5.368,
+          "score": 0.9999
+        },
+        {
+          "word": "sensitive",
+          "char_start": 103,
+          "char_end": 112,
+          "start": 5.448,
+          "end": 5.828,
+          "score": 1.0
+        },
+        {
+          "word": "to",
+          "char_start": 113,
+          "char_end": 115,
+          "start": 5.868,
+          "end": 5.929,
+          "score": 0.9999
+        },
+        {
+          "word": "the",
+          "char_start": 116,
+          "char_end": 119,
+          "start": 5.989,
+          "end": 6.049,
+          "score": 0.9999
+        },
+        {
+          "word": "smells",
+          "char_start": 120,
+          "char_end": 126,
+          "start": 6.109,
+          "end": 6.409,
+          "score": 1.0
+        },
+        {
+          "word": "of",
+          "char_start": 127,
+          "char_end": 129,
+          "start": 6.509,
+          "end": 6.549,
+          "score": 1.0
+        },
+        {
+          "word": "both",
+          "char_start": 130,
+          "char_end": 134,
+          "start": 6.65,
+          "end": 6.83,
+          "score": 1.0
+        },
+        {
+          "word": "flowers",
+          "char_start": 135,
+          "char_end": 142,
+          "start": 6.91,
+          "end": 7.311,
+          "score": 0.9999
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "2af3ff4fe6aef17f1625b0b35e501474f261d1ef0b1556cafa487e622a171027"
     },
     "s07": {
       "id": "s07",
@@ -169,7 +1127,172 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "This",
+          "char_start": 0,
+          "char_end": 4,
+          "start": 0.2,
+          "end": 0.341,
+          "score": 0.9998
+        },
+        {
+          "word": "may",
+          "char_start": 5,
+          "char_end": 8,
+          "start": 0.441,
+          "end": 0.561,
+          "score": 1.0
+        },
+        {
+          "word": "be",
+          "char_start": 9,
+          "char_end": 11,
+          "start": 0.621,
+          "end": 0.681,
+          "score": 1.0
+        },
+        {
+          "word": "because",
+          "char_start": 12,
+          "char_end": 19,
+          "start": 0.761,
+          "end": 1.102,
+          "score": 1.0
+        },
+        {
+          "word": "some",
+          "char_start": 20,
+          "char_end": 24,
+          "start": 1.222,
+          "end": 1.362,
+          "score": 1.0
+        },
+        {
+          "word": "people",
+          "char_start": 25,
+          "char_end": 31,
+          "start": 1.422,
+          "end": 1.663,
+          "score": 0.9998
+        },
+        {
+          "word": "do",
+          "char_start": 32,
+          "char_end": 34,
+          "start": 1.763,
+          "end": 1.823,
+          "score": 1.0
+        },
+        {
+          "word": "not",
+          "char_start": 35,
+          "char_end": 38,
+          "start": 1.903,
+          "end": 2.003,
+          "score": 0.9999
+        },
+        {
+          "word": "have",
+          "char_start": 39,
+          "char_end": 43,
+          "start": 2.083,
+          "end": 2.244,
+          "score": 0.9999
+        },
+        {
+          "word": "the",
+          "char_start": 44,
+          "char_end": 47,
+          "start": 2.304,
+          "end": 2.364,
+          "score": 0.9975
+        },
+        {
+          "word": "genes",
+          "char_start": 48,
+          "char_end": 53,
+          "start": 2.424,
+          "end": 2.684,
+          "score": 0.9603
+        },
+        {
+          "word": "necessary",
+          "char_start": 54,
+          "char_end": 63,
+          "start": 2.764,
+          "end": 3.285,
+          "score": 0.9999
+        },
+        {
+          "word": "to",
+          "char_start": 64,
+          "char_end": 66,
+          "start": 3.425,
+          "end": 3.506,
+          "score": 0.9998
+        },
+        {
+          "word": "generate",
+          "char_start": 67,
+          "char_end": 75,
+          "start": 3.566,
+          "end": 3.866,
+          "score": 0.9998
+        },
+        {
+          "word": "particular",
+          "char_start": 76,
+          "char_end": 86,
+          "start": 3.946,
+          "end": 4.387,
+          "score": 0.9923
+        },
+        {
+          "word": "smell",
+          "char_start": 87,
+          "char_end": 92,
+          "start": 4.487,
+          "end": 4.687,
+          "score": 0.9998
+        },
+        {
+          "word": "receptors",
+          "char_start": 93,
+          "char_end": 102,
+          "start": 4.748,
+          "end": 5.168,
+          "score": 0.9974
+        },
+        {
+          "word": "in",
+          "char_start": 103,
+          "char_end": 105,
+          "start": 5.228,
+          "end": 5.268,
+          "score": 0.9902
+        },
+        {
+          "word": "the",
+          "char_start": 106,
+          "char_end": 109,
+          "start": 5.328,
+          "end": 5.389,
+          "score": 0.9998
+        },
+        {
+          "word": "nose",
+          "char_start": 110,
+          "char_end": 114,
+          "start": 5.449,
+          "end": 5.709,
+          "score": 0.9995
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "59b094152d5d699a1964132de141650c2551b17b75b8492a78f9a07920d9d295"
     },
     "s08": {
       "id": "s08",
@@ -193,7 +1316,124 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "These",
+          "char_start": 0,
+          "char_end": 5,
+          "start": 0.08,
+          "end": 0.261,
+          "score": 0.9999
+        },
+        {
+          "word": "receptors",
+          "char_start": 6,
+          "char_end": 15,
+          "start": 0.341,
+          "end": 0.883,
+          "score": 0.9591
+        },
+        {
+          "word": "are",
+          "char_start": 16,
+          "char_end": 19,
+          "start": 1.104,
+          "end": 1.165,
+          "score": 0.9996
+        },
+        {
+          "word": "the",
+          "char_start": 20,
+          "char_end": 23,
+          "start": 1.225,
+          "end": 1.305,
+          "score": 0.9999
+        },
+        {
+          "word": "cells",
+          "char_start": 24,
+          "char_end": 29,
+          "start": 1.385,
+          "end": 1.747,
+          "score": 0.9989
+        },
+        {
+          "word": "which",
+          "char_start": 30,
+          "char_end": 35,
+          "start": 1.847,
+          "end": 1.988,
+          "score": 1.0
+        },
+        {
+          "word": "sense",
+          "char_start": 36,
+          "char_end": 41,
+          "start": 2.128,
+          "end": 2.389,
+          "score": 0.6064
+        },
+        {
+          "word": "smells",
+          "char_start": 42,
+          "char_end": 48,
+          "start": 2.47,
+          "end": 2.891,
+          "score": 0.9993
+        },
+        {
+          "word": "and",
+          "char_start": 49,
+          "char_end": 52,
+          "start": 3.273,
+          "end": 3.333,
+          "score": 0.9999
+        },
+        {
+          "word": "send",
+          "char_start": 53,
+          "char_end": 57,
+          "start": 3.434,
+          "end": 3.614,
+          "score": 0.9999
+        },
+        {
+          "word": "messages",
+          "char_start": 58,
+          "char_end": 66,
+          "start": 3.675,
+          "end": 4.076,
+          "score": 0.9999
+        },
+        {
+          "word": "to",
+          "char_start": 67,
+          "char_end": 69,
+          "start": 4.156,
+          "end": 4.217,
+          "score": 0.9999
+        },
+        {
+          "word": "the",
+          "char_start": 70,
+          "char_end": 73,
+          "start": 4.277,
+          "end": 4.337,
+          "score": 0.9992
+        },
+        {
+          "word": "brain",
+          "char_start": 74,
+          "char_end": 79,
+          "start": 4.377,
+          "end": 4.739,
+          "score": 0.8
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "a23b79c953dfbe2b6976ddc4e2079e8728d49b33f50b6988b9d595b8919b3276"
     },
     "s09": {
       "id": "s09",
@@ -217,7 +1457,228 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "However",
+          "char_start": 0,
+          "char_end": 7,
+          "start": 0.06,
+          "end": 0.361,
+          "score": 1.0
+        },
+        {
+          "word": "it",
+          "char_start": 9,
+          "char_end": 11,
+          "start": 0.781,
+          "end": 0.821,
+          "score": 0.9997
+        },
+        {
+          "word": "has",
+          "char_start": 12,
+          "char_end": 15,
+          "start": 0.881,
+          "end": 0.961,
+          "score": 0.9998
+        },
+        {
+          "word": "been",
+          "char_start": 16,
+          "char_end": 20,
+          "start": 1.021,
+          "end": 1.142,
+          "score": 1.0
+        },
+        {
+          "word": "found",
+          "char_start": 21,
+          "char_end": 26,
+          "start": 1.202,
+          "end": 1.502,
+          "score": 1.0
+        },
+        {
+          "word": "that",
+          "char_start": 27,
+          "char_end": 31,
+          "start": 1.863,
+          "end": 1.963,
+          "score": 1.0
+        },
+        {
+          "word": "even",
+          "char_start": 32,
+          "char_end": 36,
+          "start": 2.083,
+          "end": 2.223,
+          "score": 1.0
+        },
+        {
+          "word": "people",
+          "char_start": 37,
+          "char_end": 43,
+          "start": 2.283,
+          "end": 2.544,
+          "score": 1.0
+        },
+        {
+          "word": "insensitive",
+          "char_start": 44,
+          "char_end": 55,
+          "start": 2.664,
+          "end": 3.165,
+          "score": 0.9998
+        },
+        {
+          "word": "to",
+          "char_start": 56,
+          "char_end": 58,
+          "start": 3.225,
+          "end": 3.285,
+          "score": 1.0
+        },
+        {
+          "word": "a",
+          "char_start": 59,
+          "char_end": 60,
+          "start": 3.365,
+          "end": 3.385,
+          "score": 0.9994
+        },
+        {
+          "word": "certain",
+          "char_start": 61,
+          "char_end": 68,
+          "start": 3.445,
+          "end": 3.665,
+          "score": 1.0
+        },
+        {
+          "word": "smell",
+          "char_start": 69,
+          "char_end": 74,
+          "start": 3.745,
+          "end": 3.986,
+          "score": 1.0
+        },
+        {
+          "word": "at",
+          "char_start": 75,
+          "char_end": 77,
+          "start": 4.046,
+          "end": 4.086,
+          "score": 0.9994
+        },
+        {
+          "word": "first",
+          "char_start": 78,
+          "char_end": 83,
+          "start": 4.166,
+          "end": 4.446,
+          "score": 1.0
+        },
+        {
+          "word": "can",
+          "char_start": 84,
+          "char_end": 87,
+          "start": 4.787,
+          "end": 4.867,
+          "score": 0.9998
+        },
+        {
+          "word": "suddenly",
+          "char_start": 88,
+          "char_end": 96,
+          "start": 4.967,
+          "end": 5.248,
+          "score": 0.9999
+        },
+        {
+          "word": "become",
+          "char_start": 97,
+          "char_end": 103,
+          "start": 5.308,
+          "end": 5.548,
+          "score": 0.9999
+        },
+        {
+          "word": "sensitive",
+          "char_start": 104,
+          "char_end": 113,
+          "start": 5.628,
+          "end": 6.009,
+          "score": 0.9999
+        },
+        {
+          "word": "to",
+          "char_start": 114,
+          "char_end": 116,
+          "start": 6.069,
+          "end": 6.129,
+          "score": 1.0
+        },
+        {
+          "word": "it",
+          "char_start": 117,
+          "char_end": 119,
+          "start": 6.229,
+          "end": 6.289,
+          "score": 0.9998
+        },
+        {
+          "word": "when",
+          "char_start": 120,
+          "char_end": 124,
+          "start": 6.489,
+          "end": 6.589,
+          "score": 0.9999
+        },
+        {
+          "word": "exposed",
+          "char_start": 125,
+          "char_end": 132,
+          "start": 6.65,
+          "end": 7.01,
+          "score": 1.0
+        },
+        {
+          "word": "to",
+          "char_start": 133,
+          "char_end": 135,
+          "start": 7.05,
+          "end": 7.09,
+          "score": 1.0
+        },
+        {
+          "word": "it",
+          "char_start": 136,
+          "char_end": 138,
+          "start": 7.15,
+          "end": 7.19,
+          "score": 0.9997
+        },
+        {
+          "word": "often",
+          "char_start": 139,
+          "char_end": 144,
+          "start": 7.25,
+          "end": 7.431,
+          "score": 0.9999
+        },
+        {
+          "word": "enough",
+          "char_start": 145,
+          "char_end": 151,
+          "start": 7.471,
+          "end": 7.671,
+          "score": 0.9999
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "e05c2457f247029d37b1960583bec56ab048518982a5027257f5a6761a686fd8"
     },
     "s10": {
       "id": "s10",
@@ -241,7 +1702,260 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "The",
+          "char_start": 0,
+          "char_end": 3,
+          "start": 0.14,
+          "end": 0.2,
+          "score": 0.9996
+        },
+        {
+          "word": "explanation",
+          "char_start": 4,
+          "char_end": 15,
+          "start": 0.28,
+          "end": 0.821,
+          "score": 0.9969
+        },
+        {
+          "word": "for",
+          "char_start": 16,
+          "char_end": 19,
+          "start": 0.921,
+          "end": 1.022,
+          "score": 1.0
+        },
+        {
+          "word": "insensitivity",
+          "char_start": 20,
+          "char_end": 33,
+          "start": 1.122,
+          "end": 1.783,
+          "score": 0.9996
+        },
+        {
+          "word": "to",
+          "char_start": 34,
+          "char_end": 36,
+          "start": 1.843,
+          "end": 1.923,
+          "score": 0.9972
+        },
+        {
+          "word": "smell",
+          "char_start": 37,
+          "char_end": 42,
+          "start": 1.963,
+          "end": 2.223,
+          "score": 0.9936
+        },
+        {
+          "word": "seems",
+          "char_start": 43,
+          "char_end": 48,
+          "start": 2.764,
+          "end": 2.985,
+          "score": 0.9999
+        },
+        {
+          "word": "to",
+          "char_start": 49,
+          "char_end": 51,
+          "start": 3.045,
+          "end": 3.125,
+          "score": 1.0
+        },
+        {
+          "word": "be",
+          "char_start": 52,
+          "char_end": 54,
+          "start": 3.165,
+          "end": 3.225,
+          "score": 1.0
+        },
+        {
+          "word": "that",
+          "char_start": 55,
+          "char_end": 59,
+          "start": 3.305,
+          "end": 3.405,
+          "score": 0.9999
+        },
+        {
+          "word": "the",
+          "char_start": 60,
+          "char_end": 63,
+          "start": 3.445,
+          "end": 3.505,
+          "score": 0.9998
+        },
+        {
+          "word": "brain",
+          "char_start": 64,
+          "char_end": 69,
+          "start": 3.566,
+          "end": 3.746,
+          "score": 1.0
+        },
+        {
+          "word": "finds",
+          "char_start": 70,
+          "char_end": 75,
+          "start": 3.866,
+          "end": 4.086,
+          "score": 0.9999
+        },
+        {
+          "word": "it",
+          "char_start": 76,
+          "char_end": 78,
+          "start": 4.167,
+          "end": 4.207,
+          "score": 0.9999
+        },
+        {
+          "word": "inefficient",
+          "char_start": 79,
+          "char_end": 90,
+          "start": 4.287,
+          "end": 4.787,
+          "score": 0.9999
+        },
+        {
+          "word": "to",
+          "char_start": 91,
+          "char_end": 93,
+          "start": 4.868,
+          "end": 4.928,
+          "score": 1.0
+        },
+        {
+          "word": "keep",
+          "char_start": 94,
+          "char_end": 98,
+          "start": 4.988,
+          "end": 5.168,
+          "score": 1.0
+        },
+        {
+          "word": "all",
+          "char_start": 99,
+          "char_end": 102,
+          "start": 5.308,
+          "end": 5.408,
+          "score": 0.9999
+        },
+        {
+          "word": "smell",
+          "char_start": 103,
+          "char_end": 108,
+          "start": 5.469,
+          "end": 5.669,
+          "score": 0.9984
+        },
+        {
+          "word": "receptors",
+          "char_start": 109,
+          "char_end": 118,
+          "start": 5.709,
+          "end": 6.13,
+          "score": 0.9991
+        },
+        {
+          "word": "working",
+          "char_start": 119,
+          "char_end": 126,
+          "start": 6.19,
+          "end": 6.45,
+          "score": 1.0
+        },
+        {
+          "word": "all",
+          "char_start": 127,
+          "char_end": 130,
+          "start": 6.49,
+          "end": 6.59,
+          "score": 1.0
+        },
+        {
+          "word": "the",
+          "char_start": 131,
+          "char_end": 134,
+          "start": 6.63,
+          "end": 6.69,
+          "score": 0.9995
+        },
+        {
+          "word": "time",
+          "char_start": 135,
+          "char_end": 139,
+          "start": 6.751,
+          "end": 6.951,
+          "score": 1.0
+        },
+        {
+          "word": "but",
+          "char_start": 140,
+          "char_end": 143,
+          "start": 7.452,
+          "end": 7.552,
+          "score": 0.9999
+        },
+        {
+          "word": "can",
+          "char_start": 144,
+          "char_end": 147,
+          "start": 7.612,
+          "end": 7.692,
+          "score": 0.9999
+        },
+        {
+          "word": "create",
+          "char_start": 148,
+          "char_end": 154,
+          "start": 7.772,
+          "end": 8.053,
+          "score": 0.9996
+        },
+        {
+          "word": "new",
+          "char_start": 155,
+          "char_end": 158,
+          "start": 8.133,
+          "end": 8.233,
+          "score": 0.9995
+        },
+        {
+          "word": "receptors",
+          "char_start": 159,
+          "char_end": 168,
+          "start": 8.293,
+          "end": 8.714,
+          "score": 0.9992
+        },
+        {
+          "word": "if",
+          "char_start": 169,
+          "char_end": 171,
+          "start": 8.794,
+          "end": 8.834,
+          "score": 0.9677
+        },
+        {
+          "word": "necessary",
+          "char_start": 172,
+          "char_end": 181,
+          "start": 8.894,
+          "end": 9.415,
+          "score": 1.0
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "b15942bc5daed28ef8be7ca3c6314f6b3abfb6e8602ac0ea641a13e5fdf31073"
     },
     "s11": {
       "id": "s11",
@@ -265,7 +1979,180 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "This",
+          "char_start": 0,
+          "char_end": 4,
+          "start": 0.22,
+          "end": 0.34,
+          "score": 0.9998
+        },
+        {
+          "word": "may",
+          "char_start": 5,
+          "char_end": 8,
+          "start": 0.4,
+          "end": 0.52,
+          "score": 1.0
+        },
+        {
+          "word": "also",
+          "char_start": 9,
+          "char_end": 13,
+          "start": 0.621,
+          "end": 0.801,
+          "score": 1.0
+        },
+        {
+          "word": "explain",
+          "char_start": 14,
+          "char_end": 21,
+          "start": 0.901,
+          "end": 1.261,
+          "score": 1.0
+        },
+        {
+          "word": "why",
+          "char_start": 22,
+          "char_end": 25,
+          "start": 1.401,
+          "end": 1.541,
+          "score": 1.0
+        },
+        {
+          "word": "we",
+          "char_start": 26,
+          "char_end": 28,
+          "start": 1.642,
+          "end": 1.702,
+          "score": 1.0
+        },
+        {
+          "word": "are",
+          "char_start": 29,
+          "char_end": 32,
+          "start": 1.762,
+          "end": 1.842,
+          "score": 0.9999
+        },
+        {
+          "word": "not",
+          "char_start": 33,
+          "char_end": 36,
+          "start": 1.942,
+          "end": 2.102,
+          "score": 1.0
+        },
+        {
+          "word": "usually",
+          "char_start": 37,
+          "char_end": 44,
+          "start": 2.242,
+          "end": 2.502,
+          "score": 0.9997
+        },
+        {
+          "word": "sensitive",
+          "char_start": 45,
+          "char_end": 54,
+          "start": 2.562,
+          "end": 2.963,
+          "score": 1.0
+        },
+        {
+          "word": "to",
+          "char_start": 55,
+          "char_end": 57,
+          "start": 3.023,
+          "end": 3.083,
+          "score": 1.0
+        },
+        {
+          "word": "our",
+          "char_start": 58,
+          "char_end": 61,
+          "start": 3.163,
+          "end": 3.243,
+          "score": 1.0
+        },
+        {
+          "word": "own",
+          "char_start": 62,
+          "char_end": 65,
+          "start": 3.303,
+          "end": 3.383,
+          "score": 1.0
+        },
+        {
+          "word": "smells",
+          "char_start": 66,
+          "char_end": 72,
+          "start": 3.483,
+          "end": 3.783,
+          "score": 1.0
+        },
+        {
+          "word": "we",
+          "char_start": 75,
+          "char_end": 77,
+          "start": 4.364,
+          "end": 4.444,
+          "score": 1.0
+        },
+        {
+          "word": "simply",
+          "char_start": 78,
+          "char_end": 84,
+          "start": 4.504,
+          "end": 4.764,
+          "score": 1.0
+        },
+        {
+          "word": "do",
+          "char_start": 85,
+          "char_end": 87,
+          "start": 4.824,
+          "end": 4.884,
+          "score": 1.0
+        },
+        {
+          "word": "not",
+          "char_start": 88,
+          "char_end": 91,
+          "start": 4.965,
+          "end": 5.085,
+          "score": 0.9999
+        },
+        {
+          "word": "need",
+          "char_start": 92,
+          "char_end": 96,
+          "start": 5.125,
+          "end": 5.265,
+          "score": 0.9999
+        },
+        {
+          "word": "to",
+          "char_start": 97,
+          "char_end": 99,
+          "start": 5.305,
+          "end": 5.365,
+          "score": 0.9999
+        },
+        {
+          "word": "be",
+          "char_start": 100,
+          "char_end": 102,
+          "start": 5.405,
+          "end": 5.485,
+          "score": 1.0
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "e0411f1ce39f4ca717b2cb5710b389bd585c1a17eef3b94099ae02899585581c"
     },
     "s12": {
       "id": "s12",
@@ -289,7 +2176,188 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "We",
+          "char_start": 0,
+          "char_end": 2,
+          "start": 0.161,
+          "end": 0.221,
+          "score": 1.0
+        },
+        {
+          "word": "are",
+          "char_start": 3,
+          "char_end": 6,
+          "start": 0.301,
+          "end": 0.361,
+          "score": 1.0
+        },
+        {
+          "word": "not",
+          "char_start": 7,
+          "char_end": 10,
+          "start": 0.422,
+          "end": 0.522,
+          "score": 1.0
+        },
+        {
+          "word": "aware",
+          "char_start": 11,
+          "char_end": 16,
+          "start": 0.602,
+          "end": 0.863,
+          "score": 1.0
+        },
+        {
+          "word": "of",
+          "char_start": 17,
+          "char_end": 19,
+          "start": 0.964,
+          "end": 1.004,
+          "score": 0.9999
+        },
+        {
+          "word": "the",
+          "char_start": 20,
+          "char_end": 23,
+          "start": 1.064,
+          "end": 1.124,
+          "score": 0.9999
+        },
+        {
+          "word": "usual",
+          "char_start": 24,
+          "char_end": 29,
+          "start": 1.225,
+          "end": 1.445,
+          "score": 1.0
+        },
+        {
+          "word": "smell",
+          "char_start": 30,
+          "char_end": 35,
+          "start": 1.546,
+          "end": 1.767,
+          "score": 0.9998
+        },
+        {
+          "word": "of",
+          "char_start": 36,
+          "char_end": 38,
+          "start": 1.807,
+          "end": 1.847,
+          "score": 0.9998
+        },
+        {
+          "word": "our",
+          "char_start": 39,
+          "char_end": 42,
+          "start": 1.927,
+          "end": 1.987,
+          "score": 0.9998
+        },
+        {
+          "word": "own",
+          "char_start": 43,
+          "char_end": 46,
+          "start": 2.068,
+          "end": 2.148,
+          "score": 1.0
+        },
+        {
+          "word": "house",
+          "char_start": 47,
+          "char_end": 52,
+          "start": 2.228,
+          "end": 2.509,
+          "score": 1.0
+        },
+        {
+          "word": "but",
+          "char_start": 54,
+          "char_end": 57,
+          "start": 2.951,
+          "end": 3.052,
+          "score": 0.9997
+        },
+        {
+          "word": "we",
+          "char_start": 58,
+          "char_end": 60,
+          "start": 3.092,
+          "end": 3.152,
+          "score": 1.0
+        },
+        {
+          "word": "notice",
+          "char_start": 61,
+          "char_end": 67,
+          "start": 3.252,
+          "end": 3.493,
+          "score": 0.9999
+        },
+        {
+          "word": "new",
+          "char_start": 68,
+          "char_end": 71,
+          "start": 3.594,
+          "end": 3.694,
+          "score": 0.9998
+        },
+        {
+          "word": "smells",
+          "char_start": 72,
+          "char_end": 78,
+          "start": 3.794,
+          "end": 4.116,
+          "score": 1.0
+        },
+        {
+          "word": "when",
+          "char_start": 79,
+          "char_end": 83,
+          "start": 4.196,
+          "end": 4.296,
+          "score": 1.0
+        },
+        {
+          "word": "we",
+          "char_start": 84,
+          "char_end": 86,
+          "start": 4.336,
+          "end": 4.377,
+          "score": 0.9999
+        },
+        {
+          "word": "visit",
+          "char_start": 87,
+          "char_end": 92,
+          "start": 4.457,
+          "end": 4.658,
+          "score": 0.9999
+        },
+        {
+          "word": "someone",
+          "char_start": 93,
+          "char_end": 100,
+          "start": 4.738,
+          "end": 4.979,
+          "score": 0.9925
+        },
+        {
+          "word": "else’s",
+          "char_start": 101,
+          "char_end": 107,
+          "start": 5.039,
+          "end": 5.34,
+          "score": 0.9999
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "fa55ff4c4da1bfaf91678ca7ab1d1a01687ec8298d7ca10b67f20eeebe573993"
     },
     "s13": {
       "id": "s13",
@@ -313,7 +2381,236 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "The",
+          "char_start": 0,
+          "char_end": 3,
+          "start": 0.18,
+          "end": 0.241,
+          "score": 0.9998
+        },
+        {
+          "word": "brain",
+          "char_start": 4,
+          "char_end": 9,
+          "start": 0.281,
+          "end": 0.481,
+          "score": 0.9998
+        },
+        {
+          "word": "finds",
+          "char_start": 10,
+          "char_end": 15,
+          "start": 0.561,
+          "end": 0.762,
+          "score": 0.9998
+        },
+        {
+          "word": "it",
+          "char_start": 16,
+          "char_end": 18,
+          "start": 0.842,
+          "end": 0.882,
+          "score": 0.9958
+        },
+        {
+          "word": "best",
+          "char_start": 19,
+          "char_end": 23,
+          "start": 0.922,
+          "end": 1.122,
+          "score": 1.0
+        },
+        {
+          "word": "to",
+          "char_start": 24,
+          "char_end": 26,
+          "start": 1.203,
+          "end": 1.263,
+          "score": 0.9999
+        },
+        {
+          "word": "keep",
+          "char_start": 27,
+          "char_end": 31,
+          "start": 1.303,
+          "end": 1.463,
+          "score": 1.0
+        },
+        {
+          "word": "smell",
+          "char_start": 32,
+          "char_end": 37,
+          "start": 1.563,
+          "end": 1.784,
+          "score": 0.9999
+        },
+        {
+          "word": "receptors",
+          "char_start": 38,
+          "char_end": 47,
+          "start": 1.844,
+          "end": 2.245,
+          "score": 0.9891
+        },
+        {
+          "word": "available",
+          "char_start": 48,
+          "char_end": 57,
+          "start": 2.305,
+          "end": 2.726,
+          "score": 1.0
+        },
+        {
+          "word": "for",
+          "char_start": 58,
+          "char_end": 61,
+          "start": 2.786,
+          "end": 2.886,
+          "score": 0.9999
+        },
+        {
+          "word": "unfamiliar",
+          "char_start": 62,
+          "char_end": 72,
+          "start": 3.006,
+          "end": 3.548,
+          "score": 1.0
+        },
+        {
+          "word": "and",
+          "char_start": 73,
+          "char_end": 76,
+          "start": 3.928,
+          "end": 3.989,
+          "score": 0.9597
+        },
+        {
+          "word": "emergency",
+          "char_start": 77,
+          "char_end": 86,
+          "start": 4.049,
+          "end": 4.49,
+          "score": 1.0
+        },
+        {
+          "word": "signals",
+          "char_start": 87,
+          "char_end": 94,
+          "start": 4.57,
+          "end": 4.911,
+          "score": 0.9998
+        },
+        {
+          "word": "such",
+          "char_start": 95,
+          "char_end": 99,
+          "start": 4.991,
+          "end": 5.131,
+          "score": 1.0
+        },
+        {
+          "word": "as",
+          "char_start": 100,
+          "char_end": 102,
+          "start": 5.211,
+          "end": 5.251,
+          "score": 0.9999
+        },
+        {
+          "word": "the",
+          "char_start": 103,
+          "char_end": 106,
+          "start": 5.351,
+          "end": 5.412,
+          "score": 0.9973
+        },
+        {
+          "word": "smell",
+          "char_start": 107,
+          "char_end": 112,
+          "start": 5.472,
+          "end": 5.692,
+          "score": 0.9999
+        },
+        {
+          "word": "of",
+          "char_start": 113,
+          "char_end": 115,
+          "start": 5.752,
+          "end": 5.792,
+          "score": 0.9999
+        },
+        {
+          "word": "smoke",
+          "char_start": 116,
+          "char_end": 121,
+          "start": 5.873,
+          "end": 6.133,
+          "score": 0.9998
+        },
+        {
+          "word": "which",
+          "char_start": 123,
+          "char_end": 128,
+          "start": 6.514,
+          "end": 6.634,
+          "score": 1.0
+        },
+        {
+          "word": "might",
+          "char_start": 129,
+          "char_end": 134,
+          "start": 6.694,
+          "end": 6.835,
+          "score": 0.9929
+        },
+        {
+          "word": "indicate",
+          "char_start": 135,
+          "char_end": 143,
+          "start": 6.915,
+          "end": 7.256,
+          "score": 0.9998
+        },
+        {
+          "word": "the",
+          "char_start": 144,
+          "char_end": 147,
+          "start": 7.316,
+          "end": 7.376,
+          "score": 0.9962
+        },
+        {
+          "word": "danger",
+          "char_start": 148,
+          "char_end": 154,
+          "start": 7.416,
+          "end": 7.656,
+          "score": 0.9998
+        },
+        {
+          "word": "of",
+          "char_start": 155,
+          "char_end": 157,
+          "start": 7.737,
+          "end": 7.777,
+          "score": 0.9999
+        },
+        {
+          "word": "fire",
+          "char_start": 158,
+          "char_end": 162,
+          "start": 7.837,
+          "end": 8.117,
+          "score": 1.0
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "1e2612128d0614711cceb60dd9f7dabe2649296279ba67709e6b35de83cb908e"
     }
   },
   "missing_segments": [],
@@ -321,5 +2618,6 @@
     "technical": "passed",
     "voice": "pending",
     "c_direction": "pending"
-  }
+  },
+  "alignment_status": "passed"
 }

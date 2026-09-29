@@ -25,7 +25,156 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "In",
+          "char_start": 0,
+          "char_end": 2,
+          "start": 0.18,
+          "end": 0.22,
+          "score": 0.9999
+        },
+        {
+          "word": "our",
+          "char_start": 3,
+          "char_end": 6,
+          "start": 0.281,
+          "end": 0.361,
+          "score": 0.9999
+        },
+        {
+          "word": "contemporary",
+          "char_start": 7,
+          "char_end": 19,
+          "start": 0.401,
+          "end": 0.942,
+          "score": 1.0
+        },
+        {
+          "word": "culture",
+          "char_start": 20,
+          "char_end": 27,
+          "start": 1.002,
+          "end": 1.363,
+          "score": 1.0
+        },
+        {
+          "word": "the",
+          "char_start": 29,
+          "char_end": 32,
+          "start": 1.523,
+          "end": 1.603,
+          "score": 0.9999
+        },
+        {
+          "word": "prospect",
+          "char_start": 33,
+          "char_end": 41,
+          "start": 1.663,
+          "end": 2.104,
+          "score": 1.0
+        },
+        {
+          "word": "of",
+          "char_start": 42,
+          "char_end": 44,
+          "start": 2.164,
+          "end": 2.204,
+          "score": 0.9999
+        },
+        {
+          "word": "communicating",
+          "char_start": 45,
+          "char_end": 58,
+          "start": 2.284,
+          "end": 2.926,
+          "score": 1.0
+        },
+        {
+          "word": "with",
+          "char_start": 59,
+          "char_end": 63,
+          "start": 2.986,
+          "end": 3.146,
+          "score": 0.9998
+        },
+        {
+          "word": "or",
+          "char_start": 66,
+          "char_end": 68,
+          "start": 3.387,
+          "end": 3.447,
+          "score": 0.9999
+        },
+        {
+          "word": "even",
+          "char_start": 69,
+          "char_end": 73,
+          "start": 3.527,
+          "end": 3.667,
+          "score": 0.9999
+        },
+        {
+          "word": "looking",
+          "char_start": 74,
+          "char_end": 81,
+          "start": 3.747,
+          "end": 4.028,
+          "score": 1.0
+        },
+        {
+          "word": "at",
+          "char_start": 82,
+          "char_end": 84,
+          "start": 4.168,
+          "end": 4.228,
+          "score": 0.9999
+        },
+        {
+          "word": "a",
+          "char_start": 87,
+          "char_end": 88,
+          "start": 4.389,
+          "end": 4.409,
+          "score": 0.9981
+        },
+        {
+          "word": "stranger",
+          "char_start": 89,
+          "char_end": 97,
+          "start": 4.469,
+          "end": 4.849,
+          "score": 1.0
+        },
+        {
+          "word": "is",
+          "char_start": 98,
+          "char_end": 100,
+          "start": 5.09,
+          "end": 5.13,
+          "score": 0.9999
+        },
+        {
+          "word": "virtually",
+          "char_start": 101,
+          "char_end": 110,
+          "start": 5.27,
+          "end": 5.791,
+          "score": 0.9999
+        },
+        {
+          "word": "unbearable",
+          "char_start": 111,
+          "char_end": 121,
+          "start": 6.012,
+          "end": 6.553,
+          "score": 1.0
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "5a90b1e63abd350bd78b63ca28c6079b5baf99767c33d3b7908fc9611e1b932d"
     },
     "s02": {
       "id": "s02",
@@ -49,7 +198,180 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "Everyone",
+          "char_start": 0,
+          "char_end": 8,
+          "start": 0.28,
+          "end": 0.581,
+          "score": 0.9982
+        },
+        {
+          "word": "around",
+          "char_start": 9,
+          "char_end": 15,
+          "start": 0.641,
+          "end": 0.861,
+          "score": 0.9984
+        },
+        {
+          "word": "us",
+          "char_start": 16,
+          "char_end": 18,
+          "start": 0.941,
+          "end": 0.981,
+          "score": 0.9998
+        },
+        {
+          "word": "seems",
+          "char_start": 19,
+          "char_end": 24,
+          "start": 1.061,
+          "end": 1.281,
+          "score": 0.9999
+        },
+        {
+          "word": "to",
+          "char_start": 25,
+          "char_end": 27,
+          "start": 1.342,
+          "end": 1.422,
+          "score": 1.0
+        },
+        {
+          "word": "agree",
+          "char_start": 28,
+          "char_end": 33,
+          "start": 1.502,
+          "end": 1.722,
+          "score": 1.0
+        },
+        {
+          "word": "by",
+          "char_start": 34,
+          "char_end": 36,
+          "start": 1.802,
+          "end": 1.902,
+          "score": 1.0
+        },
+        {
+          "word": "the",
+          "char_start": 37,
+          "char_end": 40,
+          "start": 1.942,
+          "end": 2.022,
+          "score": 0.9995
+        },
+        {
+          "word": "way",
+          "char_start": 41,
+          "char_end": 44,
+          "start": 2.062,
+          "end": 2.162,
+          "score": 1.0
+        },
+        {
+          "word": "they",
+          "char_start": 45,
+          "char_end": 49,
+          "start": 2.222,
+          "end": 2.343,
+          "score": 0.9999
+        },
+        {
+          "word": "cling",
+          "char_start": 50,
+          "char_end": 55,
+          "start": 2.463,
+          "end": 2.643,
+          "score": 0.9998
+        },
+        {
+          "word": "to",
+          "char_start": 56,
+          "char_end": 58,
+          "start": 2.723,
+          "end": 2.763,
+          "score": 0.9996
+        },
+        {
+          "word": "their",
+          "char_start": 59,
+          "char_end": 64,
+          "start": 2.823,
+          "end": 2.963,
+          "score": 0.9997
+        },
+        {
+          "word": "phones",
+          "char_start": 65,
+          "char_end": 71,
+          "start": 3.023,
+          "end": 3.344,
+          "score": 0.94
+        },
+        {
+          "word": "even",
+          "char_start": 73,
+          "char_end": 77,
+          "start": 3.824,
+          "end": 3.964,
+          "score": 0.9999
+        },
+        {
+          "word": "without",
+          "char_start": 78,
+          "char_end": 85,
+          "start": 4.025,
+          "end": 4.285,
+          "score": 0.9999
+        },
+        {
+          "word": "a",
+          "char_start": 86,
+          "char_end": 87,
+          "start": 4.365,
+          "end": 4.385,
+          "score": 0.9989
+        },
+        {
+          "word": "ticket",
+          "char_start": 88,
+          "char_end": 94,
+          "start": 4.445,
+          "end": 4.725,
+          "score": 0.9999
+        },
+        {
+          "word": "on",
+          "char_start": 95,
+          "char_end": 97,
+          "start": 4.805,
+          "end": 4.845,
+          "score": 0.9996
+        },
+        {
+          "word": "a",
+          "char_start": 98,
+          "char_end": 99,
+          "start": 4.926,
+          "end": 4.946,
+          "score": 0.9961
+        },
+        {
+          "word": "subway",
+          "char_start": 100,
+          "char_end": 106,
+          "start": 4.986,
+          "end": 5.366,
+          "score": 0.9989
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "3470d04bd2ebd7d37ee346c489ee88a5943c03d70d55366f8bf089c09d0c09ea"
     },
     "s03": {
       "id": "s03",
@@ -73,7 +395,228 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "It's",
+          "char_start": 0,
+          "char_end": 4,
+          "start": 0.1,
+          "end": 0.201,
+          "score": 0.9991
+        },
+        {
+          "word": "a",
+          "char_start": 5,
+          "char_end": 6,
+          "start": 0.261,
+          "end": 0.281,
+          "score": 0.9912
+        },
+        {
+          "word": "sad",
+          "char_start": 7,
+          "char_end": 10,
+          "start": 0.321,
+          "end": 0.562,
+          "score": 1.0
+        },
+        {
+          "word": "reality",
+          "char_start": 11,
+          "char_end": 18,
+          "start": 0.622,
+          "end": 1.103,
+          "score": 0.9999
+        },
+        {
+          "word": "our",
+          "char_start": 21,
+          "char_end": 24,
+          "start": 1.545,
+          "end": 1.625,
+          "score": 0.996
+        },
+        {
+          "word": "desire",
+          "char_start": 25,
+          "char_end": 31,
+          "start": 1.665,
+          "end": 2.006,
+          "score": 0.9999
+        },
+        {
+          "word": "to",
+          "char_start": 32,
+          "char_end": 34,
+          "start": 2.086,
+          "end": 2.126,
+          "score": 0.9999
+        },
+        {
+          "word": "avoid",
+          "char_start": 35,
+          "char_end": 40,
+          "start": 2.206,
+          "end": 2.487,
+          "score": 1.0
+        },
+        {
+          "word": "interacting",
+          "char_start": 41,
+          "char_end": 52,
+          "start": 2.588,
+          "end": 3.029,
+          "score": 0.9937
+        },
+        {
+          "word": "with",
+          "char_start": 53,
+          "char_end": 57,
+          "start": 3.069,
+          "end": 3.169,
+          "score": 0.9998
+        },
+        {
+          "word": "other",
+          "char_start": 58,
+          "char_end": 63,
+          "start": 3.25,
+          "end": 3.39,
+          "score": 0.9996
+        },
+        {
+          "word": "human",
+          "char_start": 64,
+          "char_end": 69,
+          "start": 3.43,
+          "end": 3.671,
+          "score": 0.9998
+        },
+        {
+          "word": "beings",
+          "char_start": 70,
+          "char_end": 76,
+          "start": 3.731,
+          "end": 4.072,
+          "score": 1.0
+        },
+        {
+          "word": "because",
+          "char_start": 79,
+          "char_end": 86,
+          "start": 4.473,
+          "end": 4.694,
+          "score": 0.9997
+        },
+        {
+          "word": "there's",
+          "char_start": 87,
+          "char_end": 94,
+          "start": 4.714,
+          "end": 4.894,
+          "score": 0.9971
+        },
+        {
+          "word": "much",
+          "char_start": 95,
+          "char_end": 99,
+          "start": 4.955,
+          "end": 5.095,
+          "score": 0.9994
+        },
+        {
+          "word": "to",
+          "char_start": 100,
+          "char_end": 102,
+          "start": 5.195,
+          "end": 5.255,
+          "score": 0.9999
+        },
+        {
+          "word": "be",
+          "char_start": 103,
+          "char_end": 105,
+          "start": 5.296,
+          "end": 5.356,
+          "score": 1.0
+        },
+        {
+          "word": "gained",
+          "char_start": 106,
+          "char_end": 112,
+          "start": 5.456,
+          "end": 5.757,
+          "score": 0.9901
+        },
+        {
+          "word": "from",
+          "char_start": 113,
+          "char_end": 117,
+          "start": 5.817,
+          "end": 5.917,
+          "score": 0.9998
+        },
+        {
+          "word": "talking",
+          "char_start": 118,
+          "char_end": 125,
+          "start": 5.998,
+          "end": 6.298,
+          "score": 0.9999
+        },
+        {
+          "word": "to",
+          "char_start": 126,
+          "char_end": 128,
+          "start": 6.359,
+          "end": 6.399,
+          "score": 0.9998
+        },
+        {
+          "word": "the",
+          "char_start": 129,
+          "char_end": 132,
+          "start": 6.459,
+          "end": 6.519,
+          "score": 0.992
+        },
+        {
+          "word": "stranger",
+          "char_start": 133,
+          "char_end": 141,
+          "start": 6.559,
+          "end": 6.84,
+          "score": 0.9996
+        },
+        {
+          "word": "standing",
+          "char_start": 142,
+          "char_end": 150,
+          "start": 6.92,
+          "end": 7.221,
+          "score": 0.9999
+        },
+        {
+          "word": "by",
+          "char_start": 151,
+          "char_end": 153,
+          "start": 7.261,
+          "end": 7.402,
+          "score": 1.0
+        },
+        {
+          "word": "you",
+          "char_start": 154,
+          "char_end": 157,
+          "start": 7.502,
+          "end": 7.723,
+          "score": 0.6666
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "dc43f333dc0a6c72928d373c1b796ca212fad3067742e1c2ba9a08997f3bb8d7"
     },
     "s04": {
       "id": "s04",
@@ -97,7 +640,84 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "But",
+          "char_start": 0,
+          "char_end": 3,
+          "start": 0.02,
+          "end": 0.101,
+          "score": 0.9461
+        },
+        {
+          "word": "you",
+          "char_start": 4,
+          "char_end": 7,
+          "start": 0.182,
+          "end": 0.242,
+          "score": 0.999
+        },
+        {
+          "word": "wouldn't",
+          "char_start": 8,
+          "char_end": 16,
+          "start": 0.303,
+          "end": 0.565,
+          "score": 0.9927
+        },
+        {
+          "word": "know",
+          "char_start": 17,
+          "char_end": 21,
+          "start": 0.605,
+          "end": 0.746,
+          "score": 0.9958
+        },
+        {
+          "word": "it",
+          "char_start": 22,
+          "char_end": 24,
+          "start": 0.867,
+          "end": 0.908,
+          "score": 0.9965
+        },
+        {
+          "word": "plugged",
+          "char_start": 26,
+          "char_end": 33,
+          "start": 1.089,
+          "end": 1.311,
+          "score": 0.9668
+        },
+        {
+          "word": "into",
+          "char_start": 34,
+          "char_end": 38,
+          "start": 1.351,
+          "end": 1.492,
+          "score": 0.9961
+        },
+        {
+          "word": "your",
+          "char_start": 39,
+          "char_end": 43,
+          "start": 1.533,
+          "end": 1.634,
+          "score": 0.9971
+        },
+        {
+          "word": "phone",
+          "char_start": 44,
+          "char_end": 49,
+          "start": 1.694,
+          "end": 1.936,
+          "score": 0.9698
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "b119255dcf4398166639aed115498c3e1e8dff9ff08ab4e55560d47fbda67b9f"
     },
     "s05": {
       "id": "s05",
@@ -121,7 +741,92 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "This",
+          "char_start": 0,
+          "char_end": 4,
+          "start": 0.201,
+          "end": 0.321,
+          "score": 0.9995
+        },
+        {
+          "word": "universal",
+          "char_start": 5,
+          "char_end": 14,
+          "start": 0.462,
+          "end": 0.883,
+          "score": 1.0
+        },
+        {
+          "word": "protection",
+          "char_start": 15,
+          "char_end": 25,
+          "start": 0.963,
+          "end": 1.425,
+          "score": 0.9997
+        },
+        {
+          "word": "sends",
+          "char_start": 26,
+          "char_end": 31,
+          "start": 1.566,
+          "end": 1.786,
+          "score": 0.9992
+        },
+        {
+          "word": "the",
+          "char_start": 32,
+          "char_end": 35,
+          "start": 1.867,
+          "end": 1.947,
+          "score": 0.9988
+        },
+        {
+          "word": "message",
+          "char_start": 36,
+          "char_end": 43,
+          "start": 1.987,
+          "end": 2.368,
+          "score": 1.0
+        },
+        {
+          "word": "Please",
+          "char_start": 46,
+          "char_end": 52,
+          "start": 2.77,
+          "end": 2.991,
+          "score": 0.9999
+        },
+        {
+          "word": "don't",
+          "char_start": 53,
+          "char_end": 58,
+          "start": 3.051,
+          "end": 3.211,
+          "score": 0.9999
+        },
+        {
+          "word": "approach",
+          "char_start": 59,
+          "char_end": 67,
+          "start": 3.272,
+          "end": 3.553,
+          "score": 0.9999
+        },
+        {
+          "word": "me",
+          "char_start": 68,
+          "char_end": 70,
+          "start": 3.653,
+          "end": 3.733,
+          "score": 1.0
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "91bd8372d25f304815054f792e2e87f9564dd144958d46b60f0eb691319f6053"
     },
     "s06": {
       "id": "s06",
@@ -145,7 +850,124 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "What",
+          "char_start": 0,
+          "char_end": 4,
+          "start": 0.141,
+          "end": 0.261,
+          "score": 0.9996
+        },
+        {
+          "word": "is",
+          "char_start": 5,
+          "char_end": 7,
+          "start": 0.321,
+          "end": 0.381,
+          "score": 0.9997
+        },
+        {
+          "word": "it",
+          "char_start": 8,
+          "char_end": 10,
+          "start": 0.442,
+          "end": 0.482,
+          "score": 0.9968
+        },
+        {
+          "word": "that",
+          "char_start": 11,
+          "char_end": 15,
+          "start": 0.522,
+          "end": 0.622,
+          "score": 0.9972
+        },
+        {
+          "word": "makes",
+          "char_start": 16,
+          "char_end": 21,
+          "start": 0.662,
+          "end": 0.783,
+          "score": 0.9988
+        },
+        {
+          "word": "us",
+          "char_start": 22,
+          "char_end": 24,
+          "start": 0.863,
+          "end": 0.903,
+          "score": 0.9992
+        },
+        {
+          "word": "feel",
+          "char_start": 25,
+          "char_end": 29,
+          "start": 0.984,
+          "end": 1.164,
+          "score": 0.9989
+        },
+        {
+          "word": "we",
+          "char_start": 30,
+          "char_end": 32,
+          "start": 1.204,
+          "end": 1.265,
+          "score": 0.9999
+        },
+        {
+          "word": "need",
+          "char_start": 33,
+          "char_end": 37,
+          "start": 1.345,
+          "end": 1.465,
+          "score": 0.9996
+        },
+        {
+          "word": "to",
+          "char_start": 38,
+          "char_end": 40,
+          "start": 1.506,
+          "end": 1.566,
+          "score": 0.9979
+        },
+        {
+          "word": "hide",
+          "char_start": 41,
+          "char_end": 45,
+          "start": 1.626,
+          "end": 1.847,
+          "score": 0.9984
+        },
+        {
+          "word": "behind",
+          "char_start": 46,
+          "char_end": 52,
+          "start": 1.907,
+          "end": 2.148,
+          "score": 0.9993
+        },
+        {
+          "word": "our",
+          "char_start": 53,
+          "char_end": 56,
+          "start": 2.228,
+          "end": 2.288,
+          "score": 0.9991
+        },
+        {
+          "word": "screens",
+          "char_start": 57,
+          "char_end": 64,
+          "start": 2.369,
+          "end": 2.77,
+          "score": 0.9998
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "83dfcec4d5c80b2e06f12687006359563862757dfd9b40ea6e9e1cdd669f26d9"
     },
     "s07": {
       "id": "s07",
@@ -169,7 +991,108 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "One",
+          "char_start": 0,
+          "char_end": 3,
+          "start": 0.281,
+          "end": 0.361,
+          "score": 1.0
+        },
+        {
+          "word": "answer",
+          "char_start": 4,
+          "char_end": 10,
+          "start": 0.462,
+          "end": 0.682,
+          "score": 1.0
+        },
+        {
+          "word": "is",
+          "char_start": 11,
+          "char_end": 13,
+          "start": 0.843,
+          "end": 0.903,
+          "score": 0.9997
+        },
+        {
+          "word": "fear",
+          "char_start": 14,
+          "char_end": 18,
+          "start": 1.044,
+          "end": 1.244,
+          "score": 0.9823
+        },
+        {
+          "word": "according",
+          "char_start": 20,
+          "char_end": 29,
+          "start": 1.586,
+          "end": 1.927,
+          "score": 0.9999
+        },
+        {
+          "word": "to",
+          "char_start": 30,
+          "char_end": 32,
+          "start": 1.987,
+          "end": 2.047,
+          "score": 0.9999
+        },
+        {
+          "word": "Jon",
+          "char_start": 33,
+          "char_end": 36,
+          "start": 2.128,
+          "end": 2.328,
+          "score": 1.0
+        },
+        {
+          "word": "Wortmann",
+          "char_start": 37,
+          "char_end": 45,
+          "start": 2.429,
+          "end": 2.85,
+          "score": 0.8193
+        },
+        {
+          "word": "an",
+          "char_start": 47,
+          "char_end": 49,
+          "start": 3.191,
+          "end": 3.232,
+          "score": 0.9983
+        },
+        {
+          "word": "executive",
+          "char_start": 50,
+          "char_end": 59,
+          "start": 3.332,
+          "end": 3.834,
+          "score": 0.9998
+        },
+        {
+          "word": "mental",
+          "char_start": 60,
+          "char_end": 66,
+          "start": 3.894,
+          "end": 4.155,
+          "score": 0.9995
+        },
+        {
+          "word": "coach",
+          "char_start": 67,
+          "char_end": 72,
+          "start": 4.255,
+          "end": 4.536,
+          "score": 0.9987
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "c695694ddcfc33589c7c3701c5c87fcd76d12a1941cee3c475fa273dd80e088f"
     },
     "s08": {
       "id": "s08",
@@ -193,7 +1116,124 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "We",
+          "char_start": 0,
+          "char_end": 2,
+          "start": 0.201,
+          "end": 0.281,
+          "score": 1.0
+        },
+        {
+          "word": "fear",
+          "char_start": 3,
+          "char_end": 7,
+          "start": 0.402,
+          "end": 0.562,
+          "score": 0.9995
+        },
+        {
+          "word": "rejection",
+          "char_start": 8,
+          "char_end": 17,
+          "start": 0.663,
+          "end": 1.145,
+          "score": 0.9999
+        },
+        {
+          "word": "or",
+          "char_start": 19,
+          "char_end": 21,
+          "start": 1.527,
+          "end": 1.567,
+          "score": 0.9998
+        },
+        {
+          "word": "that",
+          "char_start": 22,
+          "char_end": 26,
+          "start": 1.647,
+          "end": 1.768,
+          "score": 0.9998
+        },
+        {
+          "word": "our",
+          "char_start": 27,
+          "char_end": 30,
+          "start": 1.848,
+          "end": 1.928,
+          "score": 0.9999
+        },
+        {
+          "word": "innocent",
+          "char_start": 31,
+          "char_end": 39,
+          "start": 2.009,
+          "end": 2.391,
+          "score": 1.0
+        },
+        {
+          "word": "social",
+          "char_start": 40,
+          "char_end": 46,
+          "start": 2.471,
+          "end": 2.732,
+          "score": 1.0
+        },
+        {
+          "word": "advances",
+          "char_start": 47,
+          "char_end": 55,
+          "start": 2.832,
+          "end": 3.274,
+          "score": 0.9997
+        },
+        {
+          "word": "will",
+          "char_start": 56,
+          "char_end": 60,
+          "start": 3.315,
+          "end": 3.455,
+          "score": 0.9999
+        },
+        {
+          "word": "be",
+          "char_start": 61,
+          "char_end": 63,
+          "start": 3.495,
+          "end": 3.556,
+          "score": 1.0
+        },
+        {
+          "word": "misinterpreted",
+          "char_start": 64,
+          "char_end": 78,
+          "start": 3.616,
+          "end": 4.339,
+          "score": 0.9999
+        },
+        {
+          "word": "as",
+          "char_start": 79,
+          "char_end": 81,
+          "start": 4.6,
+          "end": 4.64,
+          "score": 0.9999
+        },
+        {
+          "word": "weird",
+          "char_start": 83,
+          "char_end": 88,
+          "start": 4.861,
+          "end": 5.102,
+          "score": 0.9993
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "efd526ff9490ecb72e5714453f7674bb661c875f27a1511d5403d2483fcf6a05"
     },
     "s09": {
       "id": "s09",
@@ -217,7 +1257,52 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "We",
+          "char_start": 0,
+          "char_end": 2,
+          "start": 0.02,
+          "end": 0.101,
+          "score": 0.9993
+        },
+        {
+          "word": "fear",
+          "char_start": 3,
+          "char_end": 7,
+          "start": 0.263,
+          "end": 0.465,
+          "score": 0.9999
+        },
+        {
+          "word": "we'll",
+          "char_start": 8,
+          "char_end": 13,
+          "start": 0.606,
+          "end": 0.768,
+          "score": 0.7502
+        },
+        {
+          "word": "be",
+          "char_start": 14,
+          "char_end": 16,
+          "start": 0.829,
+          "end": 0.909,
+          "score": 1.0
+        },
+        {
+          "word": "judged",
+          "char_start": 17,
+          "char_end": 23,
+          "start": 1.011,
+          "end": 1.374,
+          "score": 0.9995
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "08fd04a01e1ce848357c543a7a7dd9a3bd61f3c81476d093089f54053828c412"
     },
     "s10": {
       "id": "s10",
@@ -241,7 +1326,52 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "We",
+          "char_start": 0,
+          "char_end": 2,
+          "start": 0.041,
+          "end": 0.101,
+          "score": 1.0
+        },
+        {
+          "word": "fear",
+          "char_start": 3,
+          "char_end": 7,
+          "start": 0.203,
+          "end": 0.365,
+          "score": 0.9999
+        },
+        {
+          "word": "we'll",
+          "char_start": 8,
+          "char_end": 13,
+          "start": 0.467,
+          "end": 0.609,
+          "score": 0.7499
+        },
+        {
+          "word": "be",
+          "char_start": 14,
+          "char_end": 16,
+          "start": 0.649,
+          "end": 0.69,
+          "score": 1.0
+        },
+        {
+          "word": "disruptive",
+          "char_start": 17,
+          "char_end": 27,
+          "start": 0.751,
+          "end": 1.339,
+          "score": 0.8746
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "de453f4ea67f8747f122c29140f5f83af5ba34a9fb9b30fda3425f88f53a070e"
     },
     "s11": {
       "id": "s11",
@@ -265,7 +1395,204 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "Strangers",
+          "char_start": 0,
+          "char_end": 9,
+          "start": 0.261,
+          "end": 0.722,
+          "score": 1.0
+        },
+        {
+          "word": "are",
+          "char_start": 10,
+          "char_end": 13,
+          "start": 0.843,
+          "end": 0.923,
+          "score": 0.9999
+        },
+        {
+          "word": "inherently",
+          "char_start": 14,
+          "char_end": 24,
+          "start": 1.003,
+          "end": 1.464,
+          "score": 0.9999
+        },
+        {
+          "word": "unfamiliar",
+          "char_start": 25,
+          "char_end": 35,
+          "start": 1.605,
+          "end": 2.126,
+          "score": 0.9999
+        },
+        {
+          "word": "to",
+          "char_start": 36,
+          "char_end": 38,
+          "start": 2.207,
+          "end": 2.267,
+          "score": 1.0
+        },
+        {
+          "word": "us",
+          "char_start": 39,
+          "char_end": 41,
+          "start": 2.407,
+          "end": 2.468,
+          "score": 1.0
+        },
+        {
+          "word": "so",
+          "char_start": 43,
+          "char_end": 45,
+          "start": 2.909,
+          "end": 2.989,
+          "score": 0.9998
+        },
+        {
+          "word": "we",
+          "char_start": 46,
+          "char_end": 48,
+          "start": 3.069,
+          "end": 3.13,
+          "score": 0.9998
+        },
+        {
+          "word": "are",
+          "char_start": 49,
+          "char_end": 52,
+          "start": 3.19,
+          "end": 3.25,
+          "score": 0.9998
+        },
+        {
+          "word": "more",
+          "char_start": 53,
+          "char_end": 57,
+          "start": 3.33,
+          "end": 3.491,
+          "score": 1.0
+        },
+        {
+          "word": "likely",
+          "char_start": 58,
+          "char_end": 64,
+          "start": 3.571,
+          "end": 3.852,
+          "score": 1.0
+        },
+        {
+          "word": "to",
+          "char_start": 65,
+          "char_end": 67,
+          "start": 3.932,
+          "end": 3.972,
+          "score": 0.9986
+        },
+        {
+          "word": "feel",
+          "char_start": 68,
+          "char_end": 72,
+          "start": 4.032,
+          "end": 4.193,
+          "score": 0.9999
+        },
+        {
+          "word": "anxious",
+          "char_start": 73,
+          "char_end": 80,
+          "start": 4.353,
+          "end": 4.634,
+          "score": 1.0
+        },
+        {
+          "word": "when",
+          "char_start": 81,
+          "char_end": 85,
+          "start": 4.714,
+          "end": 4.815,
+          "score": 0.9992
+        },
+        {
+          "word": "communicating",
+          "char_start": 86,
+          "char_end": 99,
+          "start": 4.895,
+          "end": 5.477,
+          "score": 0.9999
+        },
+        {
+          "word": "with",
+          "char_start": 100,
+          "char_end": 104,
+          "start": 5.537,
+          "end": 5.637,
+          "score": 1.0
+        },
+        {
+          "word": "them",
+          "char_start": 105,
+          "char_end": 109,
+          "start": 5.697,
+          "end": 5.838,
+          "score": 0.9995
+        },
+        {
+          "word": "compared",
+          "char_start": 110,
+          "char_end": 118,
+          "start": 5.978,
+          "end": 6.299,
+          "score": 0.9998
+        },
+        {
+          "word": "with",
+          "char_start": 119,
+          "char_end": 123,
+          "start": 6.339,
+          "end": 6.44,
+          "score": 0.9997
+        },
+        {
+          "word": "our",
+          "char_start": 124,
+          "char_end": 127,
+          "start": 6.5,
+          "end": 6.58,
+          "score": 0.9999
+        },
+        {
+          "word": "friends",
+          "char_start": 128,
+          "char_end": 135,
+          "start": 6.64,
+          "end": 6.881,
+          "score": 0.9996
+        },
+        {
+          "word": "and",
+          "char_start": 136,
+          "char_end": 139,
+          "start": 6.941,
+          "end": 7.001,
+          "score": 0.9987
+        },
+        {
+          "word": "acquaintances",
+          "char_start": 140,
+          "char_end": 153,
+          "start": 7.041,
+          "end": 7.583,
+          "score": 0.9998
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "44709dcb883c4c1c3ef224164266c05538091630f98f9defff0d8703f7a3d552"
     },
     "s12": {
       "id": "s12",
@@ -289,7 +1616,84 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "To",
+          "char_start": 0,
+          "char_end": 2,
+          "start": 0.441,
+          "end": 0.541,
+          "score": 0.9997
+        },
+        {
+          "word": "avoid",
+          "char_start": 3,
+          "char_end": 8,
+          "start": 0.601,
+          "end": 0.842,
+          "score": 0.9999
+        },
+        {
+          "word": "this",
+          "char_start": 9,
+          "char_end": 13,
+          "start": 0.902,
+          "end": 1.022,
+          "score": 0.9995
+        },
+        {
+          "word": "uneasiness",
+          "char_start": 14,
+          "char_end": 24,
+          "start": 1.122,
+          "end": 1.603,
+          "score": 0.9999
+        },
+        {
+          "word": "we",
+          "char_start": 26,
+          "char_end": 28,
+          "start": 1.984,
+          "end": 2.064,
+          "score": 0.9999
+        },
+        {
+          "word": "turn",
+          "char_start": 29,
+          "char_end": 33,
+          "start": 2.144,
+          "end": 2.304,
+          "score": 0.9993
+        },
+        {
+          "word": "to",
+          "char_start": 34,
+          "char_end": 36,
+          "start": 2.384,
+          "end": 2.424,
+          "score": 0.9996
+        },
+        {
+          "word": "our",
+          "char_start": 37,
+          "char_end": 40,
+          "start": 2.504,
+          "end": 2.565,
+          "score": 0.9997
+        },
+        {
+          "word": "phones",
+          "char_start": 41,
+          "char_end": 47,
+          "start": 2.625,
+          "end": 2.925,
+          "score": 0.999
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "96a202a66594b0d2d2916980cd37faad3761d690f08db030f00b32d6f3933669"
     },
     "s13": {
       "id": "s13",
@@ -313,7 +1717,68 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "Phones",
+          "char_start": 1,
+          "char_end": 7,
+          "start": 0.321,
+          "end": 0.642,
+          "score": 0.9557
+        },
+        {
+          "word": "become",
+          "char_start": 8,
+          "char_end": 14,
+          "start": 0.723,
+          "end": 1.004,
+          "score": 0.9993
+        },
+        {
+          "word": "our",
+          "char_start": 15,
+          "char_end": 18,
+          "start": 1.084,
+          "end": 1.164,
+          "score": 0.9994
+        },
+        {
+          "word": "security",
+          "char_start": 19,
+          "char_end": 27,
+          "start": 1.244,
+          "end": 1.827,
+          "score": 0.9991
+        },
+        {
+          "word": "blanket",
+          "char_start": 28,
+          "char_end": 35,
+          "start": 1.907,
+          "end": 2.348,
+          "score": 0.9987
+        },
+        {
+          "word": "Wortmann",
+          "char_start": 38,
+          "char_end": 46,
+          "start": 3.051,
+          "end": 3.432,
+          "score": 0.7462
+        },
+        {
+          "word": "says",
+          "char_start": 47,
+          "char_end": 51,
+          "start": 3.472,
+          "end": 3.713,
+          "score": 0.9999
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "458efeb792b0391d74d33cc46ad3311880e9f47ff4b002c1ae3a8db6fa2c818b"
     },
     "s14": {
       "id": "s14",
@@ -337,7 +1802,156 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "They",
+          "char_start": 1,
+          "char_end": 5,
+          "start": 0.02,
+          "end": 0.12,
+          "score": 0.9998
+        },
+        {
+          "word": "are",
+          "char_start": 6,
+          "char_end": 9,
+          "start": 0.241,
+          "end": 0.321,
+          "score": 0.9985
+        },
+        {
+          "word": "our",
+          "char_start": 10,
+          "char_end": 13,
+          "start": 0.481,
+          "end": 0.561,
+          "score": 0.999
+        },
+        {
+          "word": "happy",
+          "char_start": 14,
+          "char_end": 19,
+          "start": 0.621,
+          "end": 0.842,
+          "score": 0.9999
+        },
+        {
+          "word": "glasses",
+          "char_start": 20,
+          "char_end": 27,
+          "start": 0.902,
+          "end": 1.303,
+          "score": 0.9907
+        },
+        {
+          "word": "that",
+          "char_start": 28,
+          "char_end": 32,
+          "start": 1.363,
+          "end": 1.483,
+          "score": 0.9999
+        },
+        {
+          "word": "protect",
+          "char_start": 33,
+          "char_end": 40,
+          "start": 1.543,
+          "end": 1.864,
+          "score": 0.9999
+        },
+        {
+          "word": "us",
+          "char_start": 41,
+          "char_end": 43,
+          "start": 1.944,
+          "end": 2.004,
+          "score": 1.0
+        },
+        {
+          "word": "from",
+          "char_start": 44,
+          "char_end": 48,
+          "start": 2.064,
+          "end": 2.185,
+          "score": 0.9997
+        },
+        {
+          "word": "what",
+          "char_start": 49,
+          "char_end": 53,
+          "start": 2.225,
+          "end": 2.345,
+          "score": 0.999
+        },
+        {
+          "word": "we",
+          "char_start": 54,
+          "char_end": 56,
+          "start": 2.385,
+          "end": 2.445,
+          "score": 1.0
+        },
+        {
+          "word": "perceive",
+          "char_start": 57,
+          "char_end": 65,
+          "start": 2.545,
+          "end": 2.946,
+          "score": 0.9999
+        },
+        {
+          "word": "is",
+          "char_start": 66,
+          "char_end": 68,
+          "start": 3.066,
+          "end": 3.107,
+          "score": 0.9815
+        },
+        {
+          "word": "going",
+          "char_start": 69,
+          "char_end": 74,
+          "start": 3.187,
+          "end": 3.367,
+          "score": 0.9999
+        },
+        {
+          "word": "to",
+          "char_start": 75,
+          "char_end": 77,
+          "start": 3.427,
+          "end": 3.487,
+          "score": 0.9999
+        },
+        {
+          "word": "be",
+          "char_start": 78,
+          "char_end": 80,
+          "start": 3.547,
+          "end": 3.608,
+          "score": 0.9999
+        },
+        {
+          "word": "more",
+          "char_start": 81,
+          "char_end": 85,
+          "start": 3.748,
+          "end": 3.928,
+          "score": 1.0
+        },
+        {
+          "word": "dangerous",
+          "char_start": 86,
+          "char_end": 95,
+          "start": 4.029,
+          "end": 4.489,
+          "score": 1.0
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "17ff0d1be054fc7affefbaaaee9a2f3651f0a5ed7a561e33569c3b08974264b5"
     },
     "s15": {
       "id": "s15",
@@ -361,7 +1975,180 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "But",
+          "char_start": 0,
+          "char_end": 3,
+          "start": 0.0,
+          "end": 0.08,
+          "score": 0.9968
+        },
+        {
+          "word": "once",
+          "char_start": 4,
+          "char_end": 8,
+          "start": 0.18,
+          "end": 0.281,
+          "score": 0.9969
+        },
+        {
+          "word": "we",
+          "char_start": 9,
+          "char_end": 11,
+          "start": 0.321,
+          "end": 0.381,
+          "score": 0.9998
+        },
+        {
+          "word": "rip",
+          "char_start": 12,
+          "char_end": 15,
+          "start": 0.461,
+          "end": 0.581,
+          "score": 0.9872
+        },
+        {
+          "word": "off",
+          "char_start": 16,
+          "char_end": 19,
+          "start": 0.661,
+          "end": 0.762,
+          "score": 0.9954
+        },
+        {
+          "word": "the",
+          "char_start": 20,
+          "char_end": 23,
+          "start": 0.822,
+          "end": 0.882,
+          "score": 0.9982
+        },
+        {
+          "word": "band-aid",
+          "char_start": 24,
+          "char_end": 32,
+          "start": 0.922,
+          "end": 1.383,
+          "score": 0.9859
+        },
+        {
+          "word": "tuck",
+          "char_start": 34,
+          "char_end": 38,
+          "start": 1.804,
+          "end": 1.944,
+          "score": 0.9992
+        },
+        {
+          "word": "our",
+          "char_start": 39,
+          "char_end": 42,
+          "start": 2.024,
+          "end": 2.084,
+          "score": 0.9984
+        },
+        {
+          "word": "smartphones",
+          "char_start": 43,
+          "char_end": 54,
+          "start": 2.164,
+          "end": 2.645,
+          "score": 0.637
+        },
+        {
+          "word": "in",
+          "char_start": 55,
+          "char_end": 57,
+          "start": 2.706,
+          "end": 2.746,
+          "score": 0.9953
+        },
+        {
+          "word": "our",
+          "char_start": 58,
+          "char_end": 61,
+          "start": 2.806,
+          "end": 2.886,
+          "score": 0.9987
+        },
+        {
+          "word": "pockets",
+          "char_start": 62,
+          "char_end": 69,
+          "start": 2.926,
+          "end": 3.267,
+          "score": 0.9998
+        },
+        {
+          "word": "and",
+          "char_start": 70,
+          "char_end": 73,
+          "start": 3.327,
+          "end": 3.387,
+          "score": 0.9957
+        },
+        {
+          "word": "look",
+          "char_start": 74,
+          "char_end": 78,
+          "start": 3.427,
+          "end": 3.567,
+          "score": 0.9997
+        },
+        {
+          "word": "up",
+          "char_start": 79,
+          "char_end": 81,
+          "start": 3.708,
+          "end": 3.768,
+          "score": 0.9993
+        },
+        {
+          "word": "it",
+          "char_start": 83,
+          "char_end": 85,
+          "start": 4.068,
+          "end": 4.108,
+          "score": 0.9996
+        },
+        {
+          "word": "doesn't",
+          "char_start": 86,
+          "char_end": 93,
+          "start": 4.149,
+          "end": 4.409,
+          "score": 0.9998
+        },
+        {
+          "word": "hurt",
+          "char_start": 94,
+          "char_end": 98,
+          "start": 4.449,
+          "end": 4.589,
+          "score": 0.9993
+        },
+        {
+          "word": "so",
+          "char_start": 99,
+          "char_end": 101,
+          "start": 4.67,
+          "end": 4.75,
+          "score": 0.9999
+        },
+        {
+          "word": "bad",
+          "char_start": 102,
+          "char_end": 105,
+          "start": 4.83,
+          "end": 5.03,
+          "score": 1.0
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "9d10690a1ce257629e10fc593e6eb1829a27df9d1038a772f74cbc5c00891323"
     },
     "s16": {
       "id": "s16",
@@ -385,7 +2172,172 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "In",
+          "char_start": 0,
+          "char_end": 2,
+          "start": 0.24,
+          "end": 0.28,
+          "score": 0.9987
+        },
+        {
+          "word": "one",
+          "char_start": 3,
+          "char_end": 6,
+          "start": 0.441,
+          "end": 0.541,
+          "score": 0.9984
+        },
+        {
+          "word": "2011",
+          "char_start": 7,
+          "char_end": 11,
+          "start": 0.621,
+          "end": 1.442,
+          "score": 0.7487
+        },
+        {
+          "word": "experiment",
+          "char_start": 12,
+          "char_end": 22,
+          "start": 1.503,
+          "end": 2.063,
+          "score": 0.9998
+        },
+        {
+          "word": "behavioral",
+          "char_start": 24,
+          "char_end": 34,
+          "start": 2.244,
+          "end": 2.664,
+          "score": 0.8808
+        },
+        {
+          "word": "scientists",
+          "char_start": 35,
+          "char_end": 45,
+          "start": 2.745,
+          "end": 3.265,
+          "score": 0.9018
+        },
+        {
+          "word": "Nicholas",
+          "char_start": 46,
+          "char_end": 54,
+          "start": 3.386,
+          "end": 3.686,
+          "score": 0.9927
+        },
+        {
+          "word": "Epley",
+          "char_start": 55,
+          "char_end": 60,
+          "start": 3.806,
+          "end": 4.087,
+          "score": 0.8082
+        },
+        {
+          "word": "and",
+          "char_start": 61,
+          "char_end": 64,
+          "start": 4.247,
+          "end": 4.307,
+          "score": 0.9986
+        },
+        {
+          "word": "Juliana",
+          "char_start": 65,
+          "char_end": 72,
+          "start": 4.387,
+          "end": 4.848,
+          "score": 0.9152
+        },
+        {
+          "word": "Schroeder",
+          "char_start": 73,
+          "char_end": 82,
+          "start": 4.888,
+          "end": 5.229,
+          "score": 0.7373
+        },
+        {
+          "word": "asked",
+          "char_start": 83,
+          "char_end": 88,
+          "start": 5.489,
+          "end": 5.69,
+          "score": 0.6354
+        },
+        {
+          "word": "commuters",
+          "char_start": 89,
+          "char_end": 98,
+          "start": 5.71,
+          "end": 6.11,
+          "score": 0.7734
+        },
+        {
+          "word": "to",
+          "char_start": 99,
+          "char_end": 101,
+          "start": 6.19,
+          "end": 6.271,
+          "score": 0.9995
+        },
+        {
+          "word": "do",
+          "char_start": 102,
+          "char_end": 104,
+          "start": 6.331,
+          "end": 6.411,
+          "score": 0.995
+        },
+        {
+          "word": "the",
+          "char_start": 105,
+          "char_end": 108,
+          "start": 6.471,
+          "end": 6.551,
+          "score": 0.6727
+        },
+        {
+          "word": "unthinkable",
+          "char_start": 109,
+          "char_end": 120,
+          "start": 6.691,
+          "end": 7.252,
+          "score": 0.9995
+        },
+        {
+          "word": "Start",
+          "char_start": 122,
+          "char_end": 127,
+          "start": 7.693,
+          "end": 7.933,
+          "score": 0.9992
+        },
+        {
+          "word": "a",
+          "char_start": 128,
+          "char_end": 129,
+          "start": 8.033,
+          "end": 8.054,
+          "score": 0.9963
+        },
+        {
+          "word": "conversation",
+          "char_start": 130,
+          "char_end": 142,
+          "start": 8.094,
+          "end": 8.715,
+          "score": 1.0
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "56293ab925c4e1899b1bca350cf905223b39b99550b102efe1711629037ae7bb"
     },
     "s17": {
       "id": "s17",
@@ -409,7 +2361,92 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "They",
+          "char_start": 0,
+          "char_end": 4,
+          "start": 0.16,
+          "end": 0.281,
+          "score": 0.9996
+        },
+        {
+          "word": "had",
+          "char_start": 5,
+          "char_end": 8,
+          "start": 0.341,
+          "end": 0.461,
+          "score": 0.9989
+        },
+        {
+          "word": "Chicago",
+          "char_start": 9,
+          "char_end": 16,
+          "start": 0.541,
+          "end": 0.922,
+          "score": 1.0
+        },
+        {
+          "word": "train",
+          "char_start": 17,
+          "char_end": 22,
+          "start": 1.062,
+          "end": 1.243,
+          "score": 0.9993
+        },
+        {
+          "word": "commuters",
+          "char_start": 23,
+          "char_end": 32,
+          "start": 1.343,
+          "end": 1.784,
+          "score": 0.8552
+        },
+        {
+          "word": "talk",
+          "char_start": 33,
+          "char_end": 37,
+          "start": 1.964,
+          "end": 2.185,
+          "score": 0.5
+        },
+        {
+          "word": "to",
+          "char_start": 38,
+          "char_end": 40,
+          "start": 2.245,
+          "end": 2.305,
+          "score": 0.9991
+        },
+        {
+          "word": "their",
+          "char_start": 41,
+          "char_end": 46,
+          "start": 2.345,
+          "end": 2.485,
+          "score": 0.9995
+        },
+        {
+          "word": "fellow",
+          "char_start": 47,
+          "char_end": 53,
+          "start": 2.505,
+          "end": 2.726,
+          "score": 0.9998
+        },
+        {
+          "word": "passengers",
+          "char_start": 54,
+          "char_end": 64,
+          "start": 2.826,
+          "end": 3.387,
+          "score": 0.9999
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "63c986c1f10aedbb616c2f33586d367e96d95d9eb7eab4331233af51721c1d75"
     },
     "s18": {
       "id": "s18",
@@ -433,7 +2470,372 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "When",
+          "char_start": 1,
+          "char_end": 5,
+          "start": 0.16,
+          "end": 0.26,
+          "score": 0.9998
+        },
+        {
+          "word": "Dr",
+          "char_start": 6,
+          "char_end": 8,
+          "start": 0.32,
+          "end": 0.581,
+          "score": 1.0
+        },
+        {
+          "word": "Epley",
+          "char_start": 10,
+          "char_end": 15,
+          "start": 0.721,
+          "end": 0.941,
+          "score": 0.887
+        },
+        {
+          "word": "and",
+          "char_start": 16,
+          "char_end": 19,
+          "start": 1.021,
+          "end": 1.081,
+          "score": 0.9991
+        },
+        {
+          "word": "Ms",
+          "char_start": 20,
+          "char_end": 22,
+          "start": 1.121,
+          "end": 1.301,
+          "score": 0.9969
+        },
+        {
+          "word": "Schroeder",
+          "char_start": 24,
+          "char_end": 33,
+          "start": 1.321,
+          "end": 1.642,
+          "score": 0.6623
+        },
+        {
+          "word": "asked",
+          "char_start": 34,
+          "char_end": 39,
+          "start": 1.762,
+          "end": 1.922,
+          "score": 0.9891
+        },
+        {
+          "word": "other",
+          "char_start": 40,
+          "char_end": 45,
+          "start": 2.002,
+          "end": 2.162,
+          "score": 0.9999
+        },
+        {
+          "word": "people",
+          "char_start": 46,
+          "char_end": 52,
+          "start": 2.223,
+          "end": 2.483,
+          "score": 1.0
+        },
+        {
+          "word": "in",
+          "char_start": 53,
+          "char_end": 55,
+          "start": 2.543,
+          "end": 2.583,
+          "score": 0.8273
+        },
+        {
+          "word": "the",
+          "char_start": 56,
+          "char_end": 59,
+          "start": 2.643,
+          "end": 2.723,
+          "score": 0.9999
+        },
+        {
+          "word": "same",
+          "char_start": 60,
+          "char_end": 64,
+          "start": 2.763,
+          "end": 2.963,
+          "score": 0.9999
+        },
+        {
+          "word": "train",
+          "char_start": 65,
+          "char_end": 70,
+          "start": 3.063,
+          "end": 3.224,
+          "score": 0.9991
+        },
+        {
+          "word": "station",
+          "char_start": 71,
+          "char_end": 78,
+          "start": 3.324,
+          "end": 3.644,
+          "score": 0.9999
+        },
+        {
+          "word": "to",
+          "char_start": 79,
+          "char_end": 81,
+          "start": 3.724,
+          "end": 3.784,
+          "score": 0.9998
+        },
+        {
+          "word": "predict",
+          "char_start": 82,
+          "char_end": 89,
+          "start": 3.864,
+          "end": 4.185,
+          "score": 0.9998
+        },
+        {
+          "word": "how",
+          "char_start": 90,
+          "char_end": 93,
+          "start": 4.265,
+          "end": 4.365,
+          "score": 1.0
+        },
+        {
+          "word": "they",
+          "char_start": 94,
+          "char_end": 98,
+          "start": 4.465,
+          "end": 4.565,
+          "score": 1.0
+        },
+        {
+          "word": "would",
+          "char_start": 99,
+          "char_end": 104,
+          "start": 4.605,
+          "end": 4.725,
+          "score": 0.9999
+        },
+        {
+          "word": "feel",
+          "char_start": 105,
+          "char_end": 109,
+          "start": 4.805,
+          "end": 5.046,
+          "score": 0.9997
+        },
+        {
+          "word": "after",
+          "char_start": 110,
+          "char_end": 115,
+          "start": 5.206,
+          "end": 5.386,
+          "score": 1.0
+        },
+        {
+          "word": "talking",
+          "char_start": 116,
+          "char_end": 123,
+          "start": 5.466,
+          "end": 5.767,
+          "score": 0.9992
+        },
+        {
+          "word": "to",
+          "char_start": 124,
+          "char_end": 126,
+          "start": 5.827,
+          "end": 5.887,
+          "score": 1.0
+        },
+        {
+          "word": "a",
+          "char_start": 127,
+          "char_end": 128,
+          "start": 5.967,
+          "end": 5.987,
+          "score": 0.9795
+        },
+        {
+          "word": "stranger",
+          "char_start": 129,
+          "char_end": 137,
+          "start": 6.047,
+          "end": 6.447,
+          "score": 0.9998
+        },
+        {
+          "word": "the",
+          "char_start": 139,
+          "char_end": 142,
+          "start": 6.928,
+          "end": 7.008,
+          "score": 0.9998
+        },
+        {
+          "word": "commuters",
+          "char_start": 143,
+          "char_end": 152,
+          "start": 7.048,
+          "end": 7.428,
+          "score": 0.9988
+        },
+        {
+          "word": "thought",
+          "char_start": 153,
+          "char_end": 160,
+          "start": 7.488,
+          "end": 7.669,
+          "score": 0.9999
+        },
+        {
+          "word": "their",
+          "char_start": 161,
+          "char_end": 166,
+          "start": 7.729,
+          "end": 7.869,
+          "score": 0.9985
+        },
+        {
+          "word": "ride",
+          "char_start": 167,
+          "char_end": 171,
+          "start": 7.949,
+          "end": 8.149,
+          "score": 0.9998
+        },
+        {
+          "word": "would",
+          "char_start": 172,
+          "char_end": 177,
+          "start": 8.209,
+          "end": 8.349,
+          "score": 0.999
+        },
+        {
+          "word": "be",
+          "char_start": 178,
+          "char_end": 180,
+          "start": 8.39,
+          "end": 8.45,
+          "score": 0.9999
+        },
+        {
+          "word": "more",
+          "char_start": 181,
+          "char_end": 185,
+          "start": 8.53,
+          "end": 8.67,
+          "score": 1.0
+        },
+        {
+          "word": "pleasant",
+          "char_start": 186,
+          "char_end": 194,
+          "start": 8.73,
+          "end": 9.07,
+          "score": 1.0
+        },
+        {
+          "word": "if",
+          "char_start": 195,
+          "char_end": 197,
+          "start": 9.15,
+          "end": 9.19,
+          "score": 0.9999
+        },
+        {
+          "word": "they",
+          "char_start": 198,
+          "char_end": 202,
+          "start": 9.25,
+          "end": 9.351,
+          "score": 1.0
+        },
+        {
+          "word": "sat",
+          "char_start": 203,
+          "char_end": 206,
+          "start": 9.411,
+          "end": 9.571,
+          "score": 0.9993
+        },
+        {
+          "word": "on",
+          "char_start": 207,
+          "char_end": 209,
+          "start": 9.631,
+          "end": 9.671,
+          "score": 0.9909
+        },
+        {
+          "word": "their",
+          "char_start": 210,
+          "char_end": 215,
+          "start": 9.731,
+          "end": 9.851,
+          "score": 0.9998
+        },
+        {
+          "word": "own",
+          "char_start": 216,
+          "char_end": 219,
+          "start": 9.971,
+          "end": 10.071,
+          "score": 1.0
+        },
+        {
+          "word": "The",
+          "char_start": 222,
+          "char_end": 225,
+          "start": 10.332,
+          "end": 10.412,
+          "score": 0.9946
+        },
+        {
+          "word": "New",
+          "char_start": 226,
+          "char_end": 229,
+          "start": 10.452,
+          "end": 10.532,
+          "score": 0.9478
+        },
+        {
+          "word": "York",
+          "char_start": 230,
+          "char_end": 234,
+          "start": 10.552,
+          "end": 10.672,
+          "score": 0.9618
+        },
+        {
+          "word": "Times",
+          "char_start": 235,
+          "char_end": 240,
+          "start": 10.732,
+          "end": 10.952,
+          "score": 0.8116
+        },
+        {
+          "word": "summarizes",
+          "char_start": 241,
+          "char_end": 251,
+          "start": 10.992,
+          "end": 11.573,
+          "score": 0.6912
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "b682d7d02f0266f39a29fd988140051df09d24d36d98df81801ec3694d8a3bdd"
     },
     "s19": {
       "id": "s19",
@@ -457,7 +2859,196 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "Though",
+          "char_start": 0,
+          "char_end": 6,
+          "start": 0.12,
+          "end": 0.261,
+          "score": 0.9997
+        },
+        {
+          "word": "the",
+          "char_start": 7,
+          "char_end": 10,
+          "start": 0.321,
+          "end": 0.381,
+          "score": 0.9989
+        },
+        {
+          "word": "participants",
+          "char_start": 11,
+          "char_end": 23,
+          "start": 0.441,
+          "end": 1.043,
+          "score": 0.9996
+        },
+        {
+          "word": "didn't",
+          "char_start": 24,
+          "char_end": 30,
+          "start": 1.083,
+          "end": 1.284,
+          "score": 0.9997
+        },
+        {
+          "word": "expect",
+          "char_start": 31,
+          "char_end": 37,
+          "start": 1.344,
+          "end": 1.625,
+          "score": 0.9999
+        },
+        {
+          "word": "a",
+          "char_start": 38,
+          "char_end": 39,
+          "start": 1.705,
+          "end": 1.725,
+          "score": 0.9945
+        },
+        {
+          "word": "positive",
+          "char_start": 40,
+          "char_end": 48,
+          "start": 1.765,
+          "end": 2.146,
+          "score": 0.9999
+        },
+        {
+          "word": "experience",
+          "char_start": 49,
+          "char_end": 59,
+          "start": 2.206,
+          "end": 2.828,
+          "score": 0.9999
+        },
+        {
+          "word": "after",
+          "char_start": 61,
+          "char_end": 66,
+          "start": 3.249,
+          "end": 3.43,
+          "score": 0.9999
+        },
+        {
+          "word": "they",
+          "char_start": 67,
+          "char_end": 71,
+          "start": 3.47,
+          "end": 3.57,
+          "score": 0.9997
+        },
+        {
+          "word": "went",
+          "char_start": 72,
+          "char_end": 76,
+          "start": 3.61,
+          "end": 3.71,
+          "score": 0.9963
+        },
+        {
+          "word": "through",
+          "char_start": 77,
+          "char_end": 84,
+          "start": 3.75,
+          "end": 3.911,
+          "score": 0.8981
+        },
+        {
+          "word": "with",
+          "char_start": 85,
+          "char_end": 89,
+          "start": 3.931,
+          "end": 4.011,
+          "score": 0.9879
+        },
+        {
+          "word": "the",
+          "char_start": 90,
+          "char_end": 93,
+          "start": 4.051,
+          "end": 4.111,
+          "score": 0.9988
+        },
+        {
+          "word": "experiment",
+          "char_start": 94,
+          "char_end": 104,
+          "start": 4.152,
+          "end": 4.653,
+          "score": 0.9996
+        },
+        {
+          "word": "not",
+          "char_start": 107,
+          "char_end": 110,
+          "start": 5.014,
+          "end": 5.134,
+          "score": 0.9999
+        },
+        {
+          "word": "a",
+          "char_start": 111,
+          "char_end": 112,
+          "start": 5.235,
+          "end": 5.255,
+          "score": 0.9975
+        },
+        {
+          "word": "single",
+          "char_start": 113,
+          "char_end": 119,
+          "start": 5.355,
+          "end": 5.676,
+          "score": 1.0
+        },
+        {
+          "word": "person",
+          "char_start": 120,
+          "char_end": 126,
+          "start": 5.736,
+          "end": 5.997,
+          "score": 1.0
+        },
+        {
+          "word": "reported",
+          "char_start": 127,
+          "char_end": 135,
+          "start": 6.097,
+          "end": 6.438,
+          "score": 0.9678
+        },
+        {
+          "word": "having",
+          "char_start": 136,
+          "char_end": 142,
+          "start": 6.518,
+          "end": 6.719,
+          "score": 0.9999
+        },
+        {
+          "word": "been",
+          "char_start": 143,
+          "char_end": 147,
+          "start": 6.759,
+          "end": 6.899,
+          "score": 0.9999
+        },
+        {
+          "word": "embarrassed",
+          "char_start": 148,
+          "char_end": 159,
+          "start": 6.959,
+          "end": 7.501,
+          "score": 1.0
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "f41342b6b8ef836ea42f84488a92930c24ca834e6eeafadab9f3666f92f7a3d8"
     },
     "s20": {
       "id": "s20",
@@ -481,7 +3072,212 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "In",
+          "char_start": 0,
+          "char_end": 2,
+          "start": 0.5,
+          "end": 0.54,
+          "score": 1.0
+        },
+        {
+          "word": "fact",
+          "char_start": 3,
+          "char_end": 7,
+          "start": 0.68,
+          "end": 0.961,
+          "score": 1.0
+        },
+        {
+          "word": "these",
+          "char_start": 9,
+          "char_end": 14,
+          "start": 1.381,
+          "end": 1.541,
+          "score": 0.9998
+        },
+        {
+          "word": "commutes",
+          "char_start": 15,
+          "char_end": 23,
+          "start": 1.641,
+          "end": 2.001,
+          "score": 0.9991
+        },
+        {
+          "word": "were",
+          "char_start": 24,
+          "char_end": 28,
+          "start": 2.061,
+          "end": 2.181,
+          "score": 0.9968
+        },
+        {
+          "word": "reportedly",
+          "char_start": 29,
+          "char_end": 39,
+          "start": 2.241,
+          "end": 2.762,
+          "score": 0.9987
+        },
+        {
+          "word": "more",
+          "char_start": 40,
+          "char_end": 44,
+          "start": 2.862,
+          "end": 3.042,
+          "score": 1.0
+        },
+        {
+          "word": "enjoyable",
+          "char_start": 45,
+          "char_end": 54,
+          "start": 3.122,
+          "end": 3.602,
+          "score": 0.9999
+        },
+        {
+          "word": "compared",
+          "char_start": 55,
+          "char_end": 63,
+          "start": 3.682,
+          "end": 4.022,
+          "score": 1.0
+        },
+        {
+          "word": "with",
+          "char_start": 64,
+          "char_end": 68,
+          "start": 4.062,
+          "end": 4.163,
+          "score": 1.0
+        },
+        {
+          "word": "those",
+          "char_start": 69,
+          "char_end": 74,
+          "start": 4.223,
+          "end": 4.403,
+          "score": 0.9998
+        },
+        {
+          "word": "without",
+          "char_start": 75,
+          "char_end": 82,
+          "start": 4.443,
+          "end": 4.703,
+          "score": 0.9999
+        },
+        {
+          "word": "communication",
+          "char_start": 83,
+          "char_end": 96,
+          "start": 4.743,
+          "end": 5.383,
+          "score": 1.0
+        },
+        {
+          "word": "which",
+          "char_start": 98,
+          "char_end": 103,
+          "start": 5.784,
+          "end": 5.904,
+          "score": 0.9999
+        },
+        {
+          "word": "makes",
+          "char_start": 104,
+          "char_end": 109,
+          "start": 5.984,
+          "end": 6.164,
+          "score": 0.9997
+        },
+        {
+          "word": "absolute",
+          "char_start": 110,
+          "char_end": 118,
+          "start": 6.384,
+          "end": 6.784,
+          "score": 1.0
+        },
+        {
+          "word": "sense",
+          "char_start": 119,
+          "char_end": 124,
+          "start": 6.864,
+          "end": 7.144,
+          "score": 0.9998
+        },
+        {
+          "word": "since",
+          "char_start": 126,
+          "char_end": 131,
+          "start": 7.545,
+          "end": 7.705,
+          "score": 0.9998
+        },
+        {
+          "word": "human",
+          "char_start": 132,
+          "char_end": 137,
+          "start": 7.765,
+          "end": 7.985,
+          "score": 1.0
+        },
+        {
+          "word": "beings",
+          "char_start": 138,
+          "char_end": 144,
+          "start": 8.065,
+          "end": 8.305,
+          "score": 0.9998
+        },
+        {
+          "word": "thrive",
+          "char_start": 145,
+          "char_end": 151,
+          "start": 8.405,
+          "end": 8.745,
+          "score": 0.9999
+        },
+        {
+          "word": "off",
+          "char_start": 152,
+          "char_end": 155,
+          "start": 8.825,
+          "end": 8.925,
+          "score": 0.9997
+        },
+        {
+          "word": "of",
+          "char_start": 156,
+          "char_end": 158,
+          "start": 8.985,
+          "end": 9.025,
+          "score": 0.7157
+        },
+        {
+          "word": "social",
+          "char_start": 159,
+          "char_end": 165,
+          "start": 9.106,
+          "end": 9.366,
+          "score": 1.0
+        },
+        {
+          "word": "connections",
+          "char_start": 166,
+          "char_end": 177,
+          "start": 9.426,
+          "end": 9.906,
+          "score": 0.9159
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "07b766dc2c098a4879e4f6bca80608c09016e957a0bb08d3ec92dcfbf9f6d659"
     },
     "s21": {
       "id": "s21",
@@ -505,7 +3301,100 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "It's",
+          "char_start": 0,
+          "char_end": 4,
+          "start": 0.442,
+          "end": 0.522,
+          "score": 0.728
+        },
+        {
+          "word": "that",
+          "char_start": 5,
+          "char_end": 9,
+          "start": 0.582,
+          "end": 0.743,
+          "score": 0.9994
+        },
+        {
+          "word": "simple",
+          "char_start": 10,
+          "char_end": 16,
+          "start": 0.844,
+          "end": 1.145,
+          "score": 0.9999
+        },
+        {
+          "word": "Talking",
+          "char_start": 18,
+          "char_end": 25,
+          "start": 1.767,
+          "end": 2.069,
+          "score": 0.9726
+        },
+        {
+          "word": "to",
+          "char_start": 26,
+          "char_end": 28,
+          "start": 2.109,
+          "end": 2.169,
+          "score": 0.9993
+        },
+        {
+          "word": "strangers",
+          "char_start": 29,
+          "char_end": 38,
+          "start": 2.209,
+          "end": 2.631,
+          "score": 0.9999
+        },
+        {
+          "word": "can",
+          "char_start": 39,
+          "char_end": 42,
+          "start": 2.711,
+          "end": 2.792,
+          "score": 0.9991
+        },
+        {
+          "word": "make",
+          "char_start": 43,
+          "char_end": 47,
+          "start": 2.852,
+          "end": 2.972,
+          "score": 1.0
+        },
+        {
+          "word": "you",
+          "char_start": 48,
+          "char_end": 51,
+          "start": 3.013,
+          "end": 3.073,
+          "score": 0.9997
+        },
+        {
+          "word": "feel",
+          "char_start": 52,
+          "char_end": 56,
+          "start": 3.133,
+          "end": 3.274,
+          "score": 0.9999
+        },
+        {
+          "word": "connected",
+          "char_start": 57,
+          "char_end": 66,
+          "start": 3.354,
+          "end": 3.756,
+          "score": 0.9996
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "d33b10cd155c7eafea6cd674e218f8ee953ab9eae762dd42785017eb701d8ffa"
     }
   },
   "missing_segments": [],
@@ -513,5 +3402,6 @@
     "technical": "passed",
     "voice": "pending",
     "c_direction": "pending"
-  }
+  },
+  "alignment_status": "passed"
 }

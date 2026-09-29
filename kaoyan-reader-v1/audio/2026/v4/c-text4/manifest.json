@@ -25,7 +25,100 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "In",
+          "char_start": 0,
+          "char_end": 2,
+          "start": 0.04,
+          "end": 0.08,
+          "score": 0.7172
+        },
+        {
+          "word": "2023",
+          "char_start": 3,
+          "char_end": 7,
+          "start": 0.161,
+          "end": 1.104,
+          "score": 0.9999
+        },
+        {
+          "word": "Chicago",
+          "char_start": 9,
+          "char_end": 16,
+          "start": 1.265,
+          "end": 1.767,
+          "score": 1.0
+        },
+        {
+          "word": "lost",
+          "char_start": 17,
+          "char_end": 21,
+          "start": 1.867,
+          "end": 2.148,
+          "score": 0.9998
+        },
+        {
+          "word": "one",
+          "char_start": 22,
+          "char_end": 25,
+          "start": 2.289,
+          "end": 2.369,
+          "score": 1.0
+        },
+        {
+          "word": "of",
+          "char_start": 26,
+          "char_end": 28,
+          "start": 2.409,
+          "end": 2.449,
+          "score": 0.9998
+        },
+        {
+          "word": "its",
+          "char_start": 29,
+          "char_end": 32,
+          "start": 2.53,
+          "end": 2.63,
+          "score": 0.9976
+        },
+        {
+          "word": "most",
+          "char_start": 33,
+          "char_end": 37,
+          "start": 2.731,
+          "end": 2.951,
+          "score": 0.9996
+        },
+        {
+          "word": "beloved",
+          "char_start": 38,
+          "char_end": 45,
+          "start": 3.072,
+          "end": 3.494,
+          "score": 1.0
+        },
+        {
+          "word": "street",
+          "char_start": 46,
+          "char_end": 52,
+          "start": 3.634,
+          "end": 3.895,
+          "score": 0.9995
+        },
+        {
+          "word": "festivals",
+          "char_start": 53,
+          "char_end": 62,
+          "start": 3.995,
+          "end": 4.578,
+          "score": 0.9998
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "605c733aa5b6a3710c0232957799ffb95eda4c0b51cb8c02d99651d1e06ff142"
     },
     "s02": {
       "id": "s02",
@@ -49,7 +142,172 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "The",
+          "char_start": 0,
+          "char_end": 3,
+          "start": 0.16,
+          "end": 0.22,
+          "score": 0.9962
+        },
+        {
+          "word": "Silver",
+          "char_start": 4,
+          "char_end": 10,
+          "start": 0.301,
+          "end": 0.621,
+          "score": 0.9995
+        },
+        {
+          "word": "Room",
+          "char_start": 11,
+          "char_end": 15,
+          "start": 0.681,
+          "end": 0.922,
+          "score": 0.9876
+        },
+        {
+          "word": "Block",
+          "char_start": 16,
+          "char_end": 21,
+          "start": 1.082,
+          "end": 1.343,
+          "score": 0.9867
+        },
+        {
+          "word": "Party",
+          "char_start": 22,
+          "char_end": 27,
+          "start": 1.463,
+          "end": 1.843,
+          "score": 0.9997
+        },
+        {
+          "word": "staged",
+          "char_start": 29,
+          "char_end": 35,
+          "start": 2.364,
+          "end": 2.685,
+          "score": 0.5003
+        },
+        {
+          "word": "by",
+          "char_start": 36,
+          "char_end": 38,
+          "start": 2.765,
+          "end": 2.905,
+          "score": 0.9999
+        },
+        {
+          "word": "Hyde",
+          "char_start": 39,
+          "char_end": 43,
+          "start": 3.006,
+          "end": 3.226,
+          "score": 0.9867
+        },
+        {
+          "word": "Park",
+          "char_start": 44,
+          "char_end": 48,
+          "start": 3.286,
+          "end": 3.487,
+          "score": 0.984
+        },
+        {
+          "word": "community",
+          "char_start": 49,
+          "char_end": 58,
+          "start": 3.587,
+          "end": 3.988,
+          "score": 0.9971
+        },
+        {
+          "word": "leader",
+          "char_start": 59,
+          "char_end": 65,
+          "start": 4.088,
+          "end": 4.328,
+          "score": 0.9988
+        },
+        {
+          "word": "Eric",
+          "char_start": 66,
+          "char_end": 70,
+          "start": 4.468,
+          "end": 4.649,
+          "score": 0.9221
+        },
+        {
+          "word": "Williams",
+          "char_start": 71,
+          "char_end": 79,
+          "start": 4.729,
+          "end": 5.19,
+          "score": 0.9987
+        },
+        {
+          "word": "announced",
+          "char_start": 81,
+          "char_end": 90,
+          "start": 5.811,
+          "end": 6.132,
+          "score": 0.9988
+        },
+        {
+          "word": "it",
+          "char_start": 91,
+          "char_end": 93,
+          "start": 6.232,
+          "end": 6.272,
+          "score": 0.9848
+        },
+        {
+          "word": "would",
+          "char_start": 94,
+          "char_end": 99,
+          "start": 6.312,
+          "end": 6.452,
+          "score": 0.9998
+        },
+        {
+          "word": "not",
+          "char_start": 100,
+          "char_end": 103,
+          "start": 6.492,
+          "end": 6.633,
+          "score": 0.9999
+        },
+        {
+          "word": "return",
+          "char_start": 104,
+          "char_end": 110,
+          "start": 6.693,
+          "end": 7.013,
+          "score": 0.9997
+        },
+        {
+          "word": "in",
+          "char_start": 111,
+          "char_end": 113,
+          "start": 7.113,
+          "end": 7.154,
+          "score": 0.9934
+        },
+        {
+          "word": "2024",
+          "char_start": 114,
+          "char_end": 118,
+          "start": 7.234,
+          "end": 8.075,
+          "score": 0.9998
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "55779d7e3e0fee2f110cf5b03a3441d46733205cbb92a3ce2964c27cb33a1b8d"
     },
     "s03": {
       "id": "s03",
@@ -73,7 +331,244 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "What",
+          "char_start": 0,
+          "char_end": 4,
+          "start": 0.0,
+          "end": 0.12,
+          "score": 0.9998
+        },
+        {
+          "word": "began",
+          "char_start": 5,
+          "char_end": 10,
+          "start": 0.2,
+          "end": 0.601,
+          "score": 0.9999
+        },
+        {
+          "word": "as",
+          "char_start": 11,
+          "char_end": 13,
+          "start": 0.721,
+          "end": 0.761,
+          "score": 0.5254
+        },
+        {
+          "word": "a",
+          "char_start": 14,
+          "char_end": 15,
+          "start": 0.882,
+          "end": 0.902,
+          "score": 0.1545
+        },
+        {
+          "word": "small",
+          "char_start": 16,
+          "char_end": 21,
+          "start": 0.962,
+          "end": 1.242,
+          "score": 1.0
+        },
+        {
+          "word": "neighborhood",
+          "char_start": 22,
+          "char_end": 34,
+          "start": 1.363,
+          "end": 1.783,
+          "score": 1.0
+        },
+        {
+          "word": "gathering",
+          "char_start": 35,
+          "char_end": 44,
+          "start": 1.864,
+          "end": 2.324,
+          "score": 0.9999
+        },
+        {
+          "word": "blossomed",
+          "char_start": 45,
+          "char_end": 54,
+          "start": 2.445,
+          "end": 2.946,
+          "score": 0.9997
+        },
+        {
+          "word": "into",
+          "char_start": 55,
+          "char_end": 59,
+          "start": 3.026,
+          "end": 3.186,
+          "score": 0.9994
+        },
+        {
+          "word": "a",
+          "char_start": 60,
+          "char_end": 61,
+          "start": 3.266,
+          "end": 3.286,
+          "score": 0.9835
+        },
+        {
+          "word": "massive",
+          "char_start": 62,
+          "char_end": 69,
+          "start": 3.427,
+          "end": 3.847,
+          "score": 0.8736
+        },
+        {
+          "word": "cultural",
+          "char_start": 70,
+          "char_end": 78,
+          "start": 3.948,
+          "end": 4.368,
+          "score": 0.9999
+        },
+        {
+          "word": "event",
+          "char_start": 79,
+          "char_end": 84,
+          "start": 4.489,
+          "end": 4.769,
+          "score": 0.9999
+        },
+        {
+          "word": "welcoming",
+          "char_start": 86,
+          "char_end": 95,
+          "start": 5.21,
+          "end": 5.671,
+          "score": 0.9999
+        },
+        {
+          "word": "tens",
+          "char_start": 96,
+          "char_end": 100,
+          "start": 5.831,
+          "end": 6.152,
+          "score": 0.9998
+        },
+        {
+          "word": "of",
+          "char_start": 101,
+          "char_end": 103,
+          "start": 6.232,
+          "end": 6.292,
+          "score": 0.9999
+        },
+        {
+          "word": "thousands",
+          "char_start": 104,
+          "char_end": 113,
+          "start": 6.392,
+          "end": 6.873,
+          "score": 0.9998
+        },
+        {
+          "word": "of",
+          "char_start": 114,
+          "char_end": 116,
+          "start": 6.953,
+          "end": 6.993,
+          "score": 0.9999
+        },
+        {
+          "word": "people",
+          "char_start": 117,
+          "char_end": 123,
+          "start": 7.074,
+          "end": 7.414,
+          "score": 1.0
+        },
+        {
+          "word": "each",
+          "char_start": 124,
+          "char_end": 128,
+          "start": 7.574,
+          "end": 7.715,
+          "score": 1.0
+        },
+        {
+          "word": "year",
+          "char_start": 129,
+          "char_end": 133,
+          "start": 7.775,
+          "end": 7.955,
+          "score": 1.0
+        },
+        {
+          "word": "over",
+          "char_start": 134,
+          "char_end": 138,
+          "start": 8.075,
+          "end": 8.216,
+          "score": 0.9999
+        },
+        {
+          "word": "nearly",
+          "char_start": 139,
+          "char_end": 145,
+          "start": 8.296,
+          "end": 8.556,
+          "score": 0.9999
+        },
+        {
+          "word": "two",
+          "char_start": 146,
+          "char_end": 149,
+          "start": 8.677,
+          "end": 8.797,
+          "score": 1.0
+        },
+        {
+          "word": "decades",
+          "char_start": 150,
+          "char_end": 157,
+          "start": 8.917,
+          "end": 9.358,
+          "score": 0.9924
+        },
+        {
+          "word": "before",
+          "char_start": 158,
+          "char_end": 164,
+          "start": 9.458,
+          "end": 9.739,
+          "score": 1.0
+        },
+        {
+          "word": "abruptly",
+          "char_start": 165,
+          "char_end": 173,
+          "start": 9.819,
+          "end": 10.24,
+          "score": 0.9999
+        },
+        {
+          "word": "shutting",
+          "char_start": 174,
+          "char_end": 182,
+          "start": 10.32,
+          "end": 10.64,
+          "score": 0.9999
+        },
+        {
+          "word": "down",
+          "char_start": 183,
+          "char_end": 187,
+          "start": 10.721,
+          "end": 11.001,
+          "score": 1.0
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "6e6893867fdedc311241d79cc1fcde6b919a57d3ac58fb6fdacad97f55088242"
     },
     "s04": {
       "id": "s04",
@@ -97,7 +592,268 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "Williams",
+          "char_start": 0,
+          "char_end": 8,
+          "start": 0.02,
+          "end": 0.34,
+          "score": 0.9988
+        },
+        {
+          "word": "pointed",
+          "char_start": 9,
+          "char_end": 16,
+          "start": 0.46,
+          "end": 0.761,
+          "score": 0.9996
+        },
+        {
+          "word": "to",
+          "char_start": 17,
+          "char_end": 19,
+          "start": 0.841,
+          "end": 0.921,
+          "score": 0.9997
+        },
+        {
+          "word": "rising",
+          "char_start": 20,
+          "char_end": 26,
+          "start": 1.001,
+          "end": 1.361,
+          "score": 0.999
+        },
+        {
+          "word": "production",
+          "char_start": 27,
+          "char_end": 37,
+          "start": 1.441,
+          "end": 1.862,
+          "score": 0.9999
+        },
+        {
+          "word": "costs",
+          "char_start": 38,
+          "char_end": 43,
+          "start": 1.962,
+          "end": 2.302,
+          "score": 0.9427
+        },
+        {
+          "word": "and",
+          "char_start": 44,
+          "char_end": 47,
+          "start": 2.402,
+          "end": 2.462,
+          "score": 0.6528
+        },
+        {
+          "word": "declining",
+          "char_start": 48,
+          "char_end": 57,
+          "start": 2.522,
+          "end": 3.003,
+          "score": 0.9998
+        },
+        {
+          "word": "attendee",
+          "char_start": 58,
+          "char_end": 66,
+          "start": 3.063,
+          "end": 3.503,
+          "score": 0.6867
+        },
+        {
+          "word": "donations",
+          "char_start": 67,
+          "char_end": 76,
+          "start": 3.543,
+          "end": 4.124,
+          "score": 0.9994
+        },
+        {
+          "word": "as",
+          "char_start": 77,
+          "char_end": 79,
+          "start": 4.224,
+          "end": 4.264,
+          "score": 0.8065
+        },
+        {
+          "word": "primary",
+          "char_start": 80,
+          "char_end": 87,
+          "start": 4.364,
+          "end": 4.845,
+          "score": 0.9999
+        },
+        {
+          "word": "reasons",
+          "char_start": 88,
+          "char_end": 95,
+          "start": 4.925,
+          "end": 5.305,
+          "score": 0.9998
+        },
+        {
+          "word": "the",
+          "char_start": 96,
+          "char_end": 99,
+          "start": 5.966,
+          "end": 6.066,
+          "score": 0.9937
+        },
+        {
+          "word": "Silver",
+          "char_start": 100,
+          "char_end": 106,
+          "start": 6.146,
+          "end": 6.466,
+          "score": 0.9999
+        },
+        {
+          "word": "Room",
+          "char_start": 107,
+          "char_end": 111,
+          "start": 6.546,
+          "end": 6.707,
+          "score": 0.9983
+        },
+        {
+          "word": "Block",
+          "char_start": 112,
+          "char_end": 117,
+          "start": 6.807,
+          "end": 7.027,
+          "score": 0.9999
+        },
+        {
+          "word": "Party",
+          "char_start": 118,
+          "char_end": 123,
+          "start": 7.147,
+          "end": 7.427,
+          "score": 0.9999
+        },
+        {
+          "word": "could",
+          "char_start": 124,
+          "char_end": 129,
+          "start": 7.507,
+          "end": 7.647,
+          "score": 0.9999
+        },
+        {
+          "word": "not",
+          "char_start": 130,
+          "char_end": 133,
+          "start": 7.708,
+          "end": 7.848,
+          "score": 0.9999
+        },
+        {
+          "word": "continue",
+          "char_start": 134,
+          "char_end": 142,
+          "start": 7.908,
+          "end": 8.408,
+          "score": 0.9994
+        },
+        {
+          "word": "highlighting",
+          "char_start": 144,
+          "char_end": 156,
+          "start": 8.508,
+          "end": 8.969,
+          "score": 0.9992
+        },
+        {
+          "word": "a",
+          "char_start": 157,
+          "char_end": 158,
+          "start": 9.049,
+          "end": 9.069,
+          "score": 0.9784
+        },
+        {
+          "word": "reality",
+          "char_start": 159,
+          "char_end": 166,
+          "start": 9.129,
+          "end": 9.609,
+          "score": 0.9999
+        },
+        {
+          "word": "that",
+          "char_start": 167,
+          "char_end": 171,
+          "start": 9.669,
+          "end": 9.75,
+          "score": 0.9988
+        },
+        {
+          "word": "all",
+          "char_start": 172,
+          "char_end": 175,
+          "start": 9.85,
+          "end": 9.97,
+          "score": 0.9997
+        },
+        {
+          "word": "street",
+          "char_start": 176,
+          "char_end": 182,
+          "start": 10.05,
+          "end": 10.29,
+          "score": 0.9994
+        },
+        {
+          "word": "festival",
+          "char_start": 183,
+          "char_end": 191,
+          "start": 10.35,
+          "end": 10.73,
+          "score": 0.9981
+        },
+        {
+          "word": "organizers",
+          "char_start": 192,
+          "char_end": 202,
+          "start": 10.811,
+          "end": 11.351,
+          "score": 0.9526
+        },
+        {
+          "word": "face",
+          "char_start": 203,
+          "char_end": 207,
+          "start": 11.431,
+          "end": 11.651,
+          "score": 0.9997
+        },
+        {
+          "word": "right",
+          "char_start": 208,
+          "char_end": 213,
+          "start": 11.751,
+          "end": 11.912,
+          "score": 0.9998
+        },
+        {
+          "word": "now",
+          "char_start": 214,
+          "char_end": 217,
+          "start": 11.992,
+          "end": 12.132,
+          "score": 0.9995
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "6fc20979079f9431de0bab19dc11bb38f148a2382bcb3f16075570e98e85be0f"
     },
     "s05": {
       "id": "s05",
@@ -121,7 +877,100 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "The",
+          "char_start": 0,
+          "char_end": 3,
+          "start": 0.12,
+          "end": 0.18,
+          "score": 0.9974
+        },
+        {
+          "word": "cost",
+          "char_start": 4,
+          "char_end": 8,
+          "start": 0.24,
+          "end": 0.481,
+          "score": 0.9998
+        },
+        {
+          "word": "of",
+          "char_start": 9,
+          "char_end": 11,
+          "start": 0.561,
+          "end": 0.601,
+          "score": 0.9993
+        },
+        {
+          "word": "producing",
+          "char_start": 12,
+          "char_end": 21,
+          "start": 0.661,
+          "end": 1.002,
+          "score": 0.9999
+        },
+        {
+          "word": "a",
+          "char_start": 22,
+          "char_end": 23,
+          "start": 1.062,
+          "end": 1.082,
+          "score": 0.9903
+        },
+        {
+          "word": "street",
+          "char_start": 24,
+          "char_end": 30,
+          "start": 1.122,
+          "end": 1.322,
+          "score": 0.999
+        },
+        {
+          "word": "festival",
+          "char_start": 31,
+          "char_end": 39,
+          "start": 1.382,
+          "end": 1.703,
+          "score": 0.8957
+        },
+        {
+          "word": "in",
+          "char_start": 40,
+          "char_end": 42,
+          "start": 1.743,
+          "end": 1.783,
+          "score": 0.7715
+        },
+        {
+          "word": "Chicago",
+          "char_start": 43,
+          "char_end": 50,
+          "start": 1.843,
+          "end": 2.243,
+          "score": 0.9996
+        },
+        {
+          "word": "has",
+          "char_start": 51,
+          "char_end": 54,
+          "start": 2.324,
+          "end": 2.424,
+          "score": 0.9933
+        },
+        {
+          "word": "skyrocketed",
+          "char_start": 55,
+          "char_end": 66,
+          "start": 2.504,
+          "end": 3.245,
+          "score": 0.9047
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "97b17817d8910444d6ad14ec72f72f040b53d75174f40d388e10ea26b56e852f"
     },
     "s06": {
       "id": "s06",
@@ -145,7 +994,164 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "Security",
+          "char_start": 0,
+          "char_end": 8,
+          "start": 0.02,
+          "end": 0.561,
+          "score": 0.7169
+        },
+        {
+          "word": "entertainment",
+          "char_start": 10,
+          "char_end": 23,
+          "start": 0.661,
+          "end": 1.302,
+          "score": 0.9998
+        },
+        {
+          "word": "portable",
+          "char_start": 25,
+          "char_end": 33,
+          "start": 1.382,
+          "end": 1.803,
+          "score": 0.997
+        },
+        {
+          "word": "restrooms",
+          "char_start": 34,
+          "char_end": 43,
+          "start": 1.883,
+          "end": 2.424,
+          "score": 0.9926
+        },
+        {
+          "word": "insurance",
+          "char_start": 45,
+          "char_end": 54,
+          "start": 2.504,
+          "end": 2.965,
+          "score": 0.9832
+        },
+        {
+          "word": "and",
+          "char_start": 55,
+          "char_end": 58,
+          "start": 3.045,
+          "end": 3.125,
+          "score": 0.9576
+        },
+        {
+          "word": "even",
+          "char_start": 59,
+          "char_end": 63,
+          "start": 3.185,
+          "end": 3.346,
+          "score": 0.9996
+        },
+        {
+          "word": "basics",
+          "char_start": 64,
+          "char_end": 70,
+          "start": 3.446,
+          "end": 3.906,
+          "score": 0.8899
+        },
+        {
+          "word": "such",
+          "char_start": 71,
+          "char_end": 75,
+          "start": 3.967,
+          "end": 4.127,
+          "score": 0.9992
+        },
+        {
+          "word": "as",
+          "char_start": 76,
+          "char_end": 78,
+          "start": 4.207,
+          "end": 4.267,
+          "score": 0.9969
+        },
+        {
+          "word": "fencing",
+          "char_start": 79,
+          "char_end": 86,
+          "start": 4.367,
+          "end": 4.768,
+          "score": 0.9746
+        },
+        {
+          "word": "and",
+          "char_start": 87,
+          "char_end": 90,
+          "start": 4.828,
+          "end": 4.888,
+          "score": 0.9955
+        },
+        {
+          "word": "staffing",
+          "char_start": 91,
+          "char_end": 99,
+          "start": 4.948,
+          "end": 5.409,
+          "score": 0.9999
+        },
+        {
+          "word": "have",
+          "char_start": 100,
+          "char_end": 104,
+          "start": 5.489,
+          "end": 5.609,
+          "score": 0.9992
+        },
+        {
+          "word": "all",
+          "char_start": 105,
+          "char_end": 108,
+          "start": 5.709,
+          "end": 5.83,
+          "score": 0.9999
+        },
+        {
+          "word": "become",
+          "char_start": 109,
+          "char_end": 115,
+          "start": 5.89,
+          "end": 6.19,
+          "score": 0.9997
+        },
+        {
+          "word": "significantly",
+          "char_start": 116,
+          "char_end": 129,
+          "start": 6.29,
+          "end": 7.092,
+          "score": 0.9999
+        },
+        {
+          "word": "more",
+          "char_start": 130,
+          "char_end": 134,
+          "start": 7.192,
+          "end": 7.352,
+          "score": 1.0
+        },
+        {
+          "word": "expensive",
+          "char_start": 135,
+          "char_end": 144,
+          "start": 7.432,
+          "end": 7.973,
+          "score": 0.9999
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "80d4a413b37e891f5a6997af748586eea160ea27a5b5f1f5c86ac045da8a437e"
     },
     "s07": {
       "id": "s07",
@@ -169,7 +1175,100 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "At",
+          "char_start": 0,
+          "char_end": 2,
+          "start": 0.08,
+          "end": 0.12,
+          "score": 0.9981
+        },
+        {
+          "word": "the",
+          "char_start": 3,
+          "char_end": 6,
+          "start": 0.181,
+          "end": 0.261,
+          "score": 0.9989
+        },
+        {
+          "word": "same",
+          "char_start": 7,
+          "char_end": 11,
+          "start": 0.321,
+          "end": 0.502,
+          "score": 1.0
+        },
+        {
+          "word": "time",
+          "char_start": 12,
+          "char_end": 16,
+          "start": 0.602,
+          "end": 0.883,
+          "score": 1.0
+        },
+        {
+          "word": "donations",
+          "char_start": 18,
+          "char_end": 27,
+          "start": 1.164,
+          "end": 1.686,
+          "score": 0.9
+        },
+        {
+          "word": "at",
+          "char_start": 28,
+          "char_end": 30,
+          "start": 1.767,
+          "end": 1.807,
+          "score": 0.4573
+        },
+        {
+          "word": "festival",
+          "char_start": 31,
+          "char_end": 39,
+          "start": 1.867,
+          "end": 2.249,
+          "score": 0.9462
+        },
+        {
+          "word": "gates",
+          "char_start": 40,
+          "char_end": 45,
+          "start": 2.309,
+          "end": 2.55,
+          "score": 0.9856
+        },
+        {
+          "word": "have",
+          "char_start": 46,
+          "char_end": 50,
+          "start": 2.61,
+          "end": 2.71,
+          "score": 0.9993
+        },
+        {
+          "word": "dropped",
+          "char_start": 51,
+          "char_end": 58,
+          "start": 2.811,
+          "end": 3.092,
+          "score": 0.9956
+        },
+        {
+          "word": "dramatically",
+          "char_start": 59,
+          "char_end": 71,
+          "start": 3.132,
+          "end": 3.795,
+          "score": 0.9997
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "babdc192f0655ca58407bfd065550a0fc7f34c85917d23ae3362ac5a796e6774"
     },
     "s08": {
       "id": "s08",
@@ -193,7 +1292,228 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "Chicago's",
+          "char_start": 0,
+          "char_end": 9,
+          "start": 0.261,
+          "end": 0.802,
+          "score": 0.991
+        },
+        {
+          "word": "summer",
+          "char_start": 10,
+          "char_end": 16,
+          "start": 0.862,
+          "end": 1.103,
+          "score": 0.9942
+        },
+        {
+          "word": "festivals",
+          "char_start": 17,
+          "char_end": 26,
+          "start": 1.183,
+          "end": 1.624,
+          "score": 0.9995
+        },
+        {
+          "word": "are",
+          "char_start": 27,
+          "char_end": 30,
+          "start": 1.705,
+          "end": 1.785,
+          "score": 0.9988
+        },
+        {
+          "word": "about",
+          "char_start": 31,
+          "char_end": 36,
+          "start": 1.845,
+          "end": 2.045,
+          "score": 0.9998
+        },
+        {
+          "word": "more",
+          "char_start": 37,
+          "char_end": 41,
+          "start": 2.226,
+          "end": 2.426,
+          "score": 0.9999
+        },
+        {
+          "word": "than",
+          "char_start": 42,
+          "char_end": 46,
+          "start": 2.507,
+          "end": 2.627,
+          "score": 0.9994
+        },
+        {
+          "word": "just",
+          "char_start": 47,
+          "char_end": 51,
+          "start": 2.687,
+          "end": 2.848,
+          "score": 0.9999
+        },
+        {
+          "word": "entertainment",
+          "char_start": 52,
+          "char_end": 65,
+          "start": 2.928,
+          "end": 3.449,
+          "score": 0.9995
+        },
+        {
+          "word": "they",
+          "char_start": 67,
+          "char_end": 71,
+          "start": 3.509,
+          "end": 3.61,
+          "score": 0.9715
+        },
+        {
+          "word": "are",
+          "char_start": 72,
+          "char_end": 75,
+          "start": 3.65,
+          "end": 3.73,
+          "score": 0.8397
+        },
+        {
+          "word": "economic",
+          "char_start": 76,
+          "char_end": 84,
+          "start": 3.87,
+          "end": 4.311,
+          "score": 0.9999
+        },
+        {
+          "word": "engines",
+          "char_start": 85,
+          "char_end": 92,
+          "start": 4.472,
+          "end": 4.733,
+          "score": 0.9473
+        },
+        {
+          "word": "that",
+          "char_start": 93,
+          "char_end": 97,
+          "start": 4.793,
+          "end": 4.913,
+          "score": 0.9858
+        },
+        {
+          "word": "directly",
+          "char_start": 98,
+          "char_end": 106,
+          "start": 4.973,
+          "end": 5.414,
+          "score": 1.0
+        },
+        {
+          "word": "benefit",
+          "char_start": 107,
+          "char_end": 114,
+          "start": 5.535,
+          "end": 5.876,
+          "score": 0.9999
+        },
+        {
+          "word": "the",
+          "char_start": 115,
+          "char_end": 118,
+          "start": 5.956,
+          "end": 6.016,
+          "score": 0.9992
+        },
+        {
+          "word": "neighborhoods",
+          "char_start": 119,
+          "char_end": 132,
+          "start": 6.076,
+          "end": 6.477,
+          "score": 0.9917
+        },
+        {
+          "word": "they're",
+          "char_start": 133,
+          "char_end": 140,
+          "start": 6.517,
+          "end": 6.698,
+          "score": 0.832
+        },
+        {
+          "word": "in",
+          "char_start": 141,
+          "char_end": 143,
+          "start": 6.778,
+          "end": 6.838,
+          "score": 0.9978
+        },
+        {
+          "word": "and",
+          "char_start": 144,
+          "char_end": 147,
+          "start": 7.54,
+          "end": 7.64,
+          "score": 0.9997
+        },
+        {
+          "word": "the",
+          "char_start": 148,
+          "char_end": 151,
+          "start": 7.74,
+          "end": 7.821,
+          "score": 0.9998
+        },
+        {
+          "word": "city",
+          "char_start": 152,
+          "char_end": 156,
+          "start": 7.861,
+          "end": 8.061,
+          "score": 1.0
+        },
+        {
+          "word": "of",
+          "char_start": 157,
+          "char_end": 159,
+          "start": 8.101,
+          "end": 8.142,
+          "score": 0.9997
+        },
+        {
+          "word": "Chicago",
+          "char_start": 160,
+          "char_end": 167,
+          "start": 8.182,
+          "end": 8.623,
+          "score": 1.0
+        },
+        {
+          "word": "as",
+          "char_start": 168,
+          "char_end": 170,
+          "start": 8.723,
+          "end": 8.783,
+          "score": 0.5298
+        },
+        {
+          "word": "whole",
+          "char_start": 171,
+          "char_end": 176,
+          "start": 8.823,
+          "end": 9.064,
+          "score": 0.9202
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "6c8eb36f4cb595e37850527c08e734d903804e478b7a539c3ecd1e576dc64fd1"
     },
     "s09": {
       "id": "s09",
@@ -217,7 +1537,172 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "Street",
+          "char_start": 0,
+          "char_end": 6,
+          "start": 0.04,
+          "end": 0.261,
+          "score": 0.9366
+        },
+        {
+          "word": "festivals",
+          "char_start": 7,
+          "char_end": 16,
+          "start": 0.321,
+          "end": 0.802,
+          "score": 0.9986
+        },
+        {
+          "word": "drive",
+          "char_start": 17,
+          "char_end": 22,
+          "start": 0.882,
+          "end": 1.103,
+          "score": 0.7683
+        },
+        {
+          "word": "foot",
+          "char_start": 23,
+          "char_end": 27,
+          "start": 1.163,
+          "end": 1.324,
+          "score": 0.999
+        },
+        {
+          "word": "traffic",
+          "char_start": 28,
+          "char_end": 35,
+          "start": 1.384,
+          "end": 1.725,
+          "score": 0.9995
+        },
+        {
+          "word": "to",
+          "char_start": 36,
+          "char_end": 38,
+          "start": 1.805,
+          "end": 1.865,
+          "score": 0.9996
+        },
+        {
+          "word": "local",
+          "char_start": 39,
+          "char_end": 44,
+          "start": 1.945,
+          "end": 2.146,
+          "score": 0.9998
+        },
+        {
+          "word": "businesses",
+          "char_start": 45,
+          "char_end": 55,
+          "start": 2.246,
+          "end": 2.728,
+          "score": 0.999
+        },
+        {
+          "word": "and",
+          "char_start": 56,
+          "char_end": 59,
+          "start": 3.189,
+          "end": 3.269,
+          "score": 0.9998
+        },
+        {
+          "word": "foster",
+          "char_start": 60,
+          "char_end": 66,
+          "start": 3.349,
+          "end": 3.65,
+          "score": 0.9907
+        },
+        {
+          "word": "the",
+          "char_start": 67,
+          "char_end": 70,
+          "start": 3.731,
+          "end": 3.791,
+          "score": 0.7954
+        },
+        {
+          "word": "kind",
+          "char_start": 71,
+          "char_end": 75,
+          "start": 3.831,
+          "end": 4.011,
+          "score": 0.9994
+        },
+        {
+          "word": "of",
+          "char_start": 76,
+          "char_end": 78,
+          "start": 4.071,
+          "end": 4.112,
+          "score": 0.9958
+        },
+        {
+          "word": "cultural",
+          "char_start": 79,
+          "char_end": 87,
+          "start": 4.172,
+          "end": 4.513,
+          "score": 0.9998
+        },
+        {
+          "word": "vibrancy",
+          "char_start": 88,
+          "char_end": 96,
+          "start": 4.613,
+          "end": 5.094,
+          "score": 0.9904
+        },
+        {
+          "word": "that",
+          "char_start": 97,
+          "char_end": 101,
+          "start": 5.155,
+          "end": 5.255,
+          "score": 0.9997
+        },
+        {
+          "word": "makes",
+          "char_start": 102,
+          "char_end": 107,
+          "start": 5.315,
+          "end": 5.495,
+          "score": 0.9991
+        },
+        {
+          "word": "our",
+          "char_start": 108,
+          "char_end": 111,
+          "start": 5.556,
+          "end": 5.636,
+          "score": 1.0
+        },
+        {
+          "word": "city",
+          "char_start": 112,
+          "char_end": 116,
+          "start": 5.676,
+          "end": 5.897,
+          "score": 0.9999
+        },
+        {
+          "word": "special",
+          "char_start": 117,
+          "char_end": 124,
+          "start": 5.957,
+          "end": 6.298,
+          "score": 0.9999
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "e8dac9708586d456b898a9af6b23972a2c7af93ab317ac2469cc133d5fad7bf8"
     },
     "s10": {
       "id": "s10",
@@ -241,7 +1726,236 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "We",
+          "char_start": 0,
+          "char_end": 2,
+          "start": 0.16,
+          "end": 0.22,
+          "score": 1.0
+        },
+        {
+          "word": "often",
+          "char_start": 3,
+          "char_end": 8,
+          "start": 0.34,
+          "end": 0.54,
+          "score": 1.0
+        },
+        {
+          "word": "hear",
+          "char_start": 9,
+          "char_end": 13,
+          "start": 0.58,
+          "end": 0.7,
+          "score": 0.9997
+        },
+        {
+          "word": "people",
+          "char_start": 14,
+          "char_end": 20,
+          "start": 0.78,
+          "end": 1.001,
+          "score": 0.9999
+        },
+        {
+          "word": "ask",
+          "char_start": 21,
+          "char_end": 24,
+          "start": 1.141,
+          "end": 1.261,
+          "score": 1.0
+        },
+        {
+          "word": "why",
+          "char_start": 25,
+          "char_end": 28,
+          "start": 1.381,
+          "end": 1.521,
+          "score": 0.9997
+        },
+        {
+          "word": "we",
+          "char_start": 29,
+          "char_end": 31,
+          "start": 1.601,
+          "end": 1.681,
+          "score": 0.9999
+        },
+        {
+          "word": "solicit",
+          "char_start": 32,
+          "char_end": 39,
+          "start": 1.781,
+          "end": 2.161,
+          "score": 0.9999
+        },
+        {
+          "word": "donations",
+          "char_start": 40,
+          "char_end": 49,
+          "start": 2.221,
+          "end": 2.722,
+          "score": 0.9999
+        },
+        {
+          "word": "at",
+          "char_start": 50,
+          "char_end": 52,
+          "start": 2.802,
+          "end": 2.842,
+          "score": 0.9963
+        },
+        {
+          "word": "our",
+          "char_start": 53,
+          "char_end": 56,
+          "start": 2.922,
+          "end": 3.002,
+          "score": 0.9996
+        },
+        {
+          "word": "entry",
+          "char_start": 57,
+          "char_end": 62,
+          "start": 3.102,
+          "end": 3.302,
+          "score": 0.9996
+        },
+        {
+          "word": "points",
+          "char_start": 63,
+          "char_end": 69,
+          "start": 3.382,
+          "end": 3.642,
+          "score": 0.9998
+        },
+        {
+          "word": "especially",
+          "char_start": 71,
+          "char_end": 81,
+          "start": 4.142,
+          "end": 4.543,
+          "score": 0.9997
+        },
+        {
+          "word": "when",
+          "char_start": 82,
+          "char_end": 86,
+          "start": 4.583,
+          "end": 4.683,
+          "score": 0.9997
+        },
+        {
+          "word": "the",
+          "char_start": 87,
+          "char_end": 90,
+          "start": 4.743,
+          "end": 4.803,
+          "score": 0.9996
+        },
+        {
+          "word": "city's",
+          "char_start": 91,
+          "char_end": 97,
+          "start": 4.843,
+          "end": 5.123,
+          "score": 0.9991
+        },
+        {
+          "word": "largest",
+          "char_start": 98,
+          "char_end": 105,
+          "start": 5.183,
+          "end": 5.543,
+          "score": 0.9988
+        },
+        {
+          "word": "festivals",
+          "char_start": 106,
+          "char_end": 115,
+          "start": 5.603,
+          "end": 6.084,
+          "score": 0.9998
+        },
+        {
+          "word": "like",
+          "char_start": 116,
+          "char_end": 120,
+          "start": 6.164,
+          "end": 6.304,
+          "score": 0.9998
+        },
+        {
+          "word": "the",
+          "char_start": 121,
+          "char_end": 124,
+          "start": 6.364,
+          "end": 6.424,
+          "score": 0.9879
+        },
+        {
+          "word": "Chicago",
+          "char_start": 125,
+          "char_end": 132,
+          "start": 6.464,
+          "end": 6.844,
+          "score": 0.9995
+        },
+        {
+          "word": "Jazz",
+          "char_start": 133,
+          "char_end": 137,
+          "start": 6.904,
+          "end": 7.164,
+          "score": 0.6802
+        },
+        {
+          "word": "Festival",
+          "char_start": 138,
+          "char_end": 146,
+          "start": 7.244,
+          "end": 7.645,
+          "score": 0.9997
+        },
+        {
+          "word": "do",
+          "char_start": 147,
+          "char_end": 149,
+          "start": 7.905,
+          "end": 7.985,
+          "score": 0.9999
+        },
+        {
+          "word": "not",
+          "char_start": 150,
+          "char_end": 153,
+          "start": 8.085,
+          "end": 8.245,
+          "score": 0.9998
+        },
+        {
+          "word": "request",
+          "char_start": 154,
+          "char_end": 161,
+          "start": 8.305,
+          "end": 8.645,
+          "score": 0.9997
+        },
+        {
+          "word": "donations",
+          "char_start": 162,
+          "char_end": 171,
+          "start": 8.725,
+          "end": 9.245,
+          "score": 0.9998
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "22d7959c4868320e48e20c77494d0246789429c4006ee265fc7cda87abf64657"
     },
     "s11": {
       "id": "s11",
@@ -265,7 +1979,276 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "The",
+          "char_start": 0,
+          "char_end": 3,
+          "start": 0.04,
+          "end": 0.12,
+          "score": 0.9996
+        },
+        {
+          "word": "fact",
+          "char_start": 4,
+          "char_end": 8,
+          "start": 0.18,
+          "end": 0.38,
+          "score": 1.0
+        },
+        {
+          "word": "is",
+          "char_start": 9,
+          "char_end": 11,
+          "start": 0.621,
+          "end": 0.741,
+          "score": 1.0
+        },
+        {
+          "word": "unlike",
+          "char_start": 13,
+          "char_end": 19,
+          "start": 1.021,
+          "end": 1.301,
+          "score": 0.9997
+        },
+        {
+          "word": "those",
+          "char_start": 20,
+          "char_end": 25,
+          "start": 1.381,
+          "end": 1.542,
+          "score": 0.9998
+        },
+        {
+          "word": "large",
+          "char_start": 26,
+          "char_end": 31,
+          "start": 1.642,
+          "end": 1.942,
+          "score": 0.9997
+        },
+        {
+          "word": "city-produced",
+          "char_start": 33,
+          "char_end": 46,
+          "start": 2.002,
+          "end": 2.603,
+          "score": 0.9204
+        },
+        {
+          "word": "music",
+          "char_start": 47,
+          "char_end": 52,
+          "start": 2.663,
+          "end": 2.923,
+          "score": 1.0
+        },
+        {
+          "word": "festivals",
+          "char_start": 53,
+          "char_end": 62,
+          "start": 2.983,
+          "end": 3.464,
+          "score": 0.9993
+        },
+        {
+          "word": "your",
+          "char_start": 64,
+          "char_end": 68,
+          "start": 3.704,
+          "end": 3.844,
+          "score": 0.9996
+        },
+        {
+          "word": "neighborhood",
+          "char_start": 69,
+          "char_end": 81,
+          "start": 3.924,
+          "end": 4.325,
+          "score": 1.0
+        },
+        {
+          "word": "street",
+          "char_start": 82,
+          "char_end": 88,
+          "start": 4.385,
+          "end": 4.605,
+          "score": 0.9997
+        },
+        {
+          "word": "festivals",
+          "char_start": 89,
+          "char_end": 98,
+          "start": 4.665,
+          "end": 5.165,
+          "score": 0.9997
+        },
+        {
+          "word": "receive",
+          "char_start": 99,
+          "char_end": 106,
+          "start": 5.245,
+          "end": 5.566,
+          "score": 0.9995
+        },
+        {
+          "word": "no",
+          "char_start": 107,
+          "char_end": 109,
+          "start": 5.706,
+          "end": 5.826,
+          "score": 1.0
+        },
+        {
+          "word": "city",
+          "char_start": 110,
+          "char_end": 114,
+          "start": 5.926,
+          "end": 6.146,
+          "score": 0.9999
+        },
+        {
+          "word": "funding",
+          "char_start": 115,
+          "char_end": 122,
+          "start": 6.206,
+          "end": 6.567,
+          "score": 0.9995
+        },
+        {
+          "word": "and",
+          "char_start": 123,
+          "char_end": 126,
+          "start": 6.747,
+          "end": 6.807,
+          "score": 0.9999
+        },
+        {
+          "word": "rely",
+          "char_start": 127,
+          "char_end": 131,
+          "start": 6.867,
+          "end": 7.127,
+          "score": 0.9999
+        },
+        {
+          "word": "on",
+          "char_start": 132,
+          "char_end": 134,
+          "start": 7.228,
+          "end": 7.268,
+          "score": 0.9989
+        },
+        {
+          "word": "a",
+          "char_start": 135,
+          "char_end": 136,
+          "start": 7.308,
+          "end": 7.328,
+          "score": 0.975
+        },
+        {
+          "word": "combination",
+          "char_start": 137,
+          "char_end": 148,
+          "start": 7.408,
+          "end": 7.948,
+          "score": 0.9997
+        },
+        {
+          "word": "of",
+          "char_start": 149,
+          "char_end": 151,
+          "start": 8.008,
+          "end": 8.048,
+          "score": 0.9908
+        },
+        {
+          "word": "sponsorships",
+          "char_start": 152,
+          "char_end": 164,
+          "start": 8.128,
+          "end": 8.809,
+          "score": 0.9967
+        },
+        {
+          "word": "vendor",
+          "char_start": 166,
+          "char_end": 172,
+          "start": 9.009,
+          "end": 9.27,
+          "score": 0.8292
+        },
+        {
+          "word": "fees",
+          "char_start": 173,
+          "char_end": 177,
+          "start": 9.33,
+          "end": 9.61,
+          "score": 0.9151
+        },
+        {
+          "word": "and",
+          "char_start": 178,
+          "char_end": 181,
+          "start": 9.75,
+          "end": 9.83,
+          "score": 0.9996
+        },
+        {
+          "word": "gate",
+          "char_start": 182,
+          "char_end": 186,
+          "start": 9.89,
+          "end": 10.111,
+          "score": 0.7582
+        },
+        {
+          "word": "donations",
+          "char_start": 187,
+          "char_end": 196,
+          "start": 10.151,
+          "end": 10.651,
+          "score": 0.9992
+        },
+        {
+          "word": "to",
+          "char_start": 197,
+          "char_end": 199,
+          "start": 10.731,
+          "end": 10.811,
+          "score": 0.9999
+        },
+        {
+          "word": "cover",
+          "char_start": 200,
+          "char_end": 205,
+          "start": 10.871,
+          "end": 11.092,
+          "score": 1.0
+        },
+        {
+          "word": "their",
+          "char_start": 206,
+          "char_end": 211,
+          "start": 11.172,
+          "end": 11.312,
+          "score": 0.9997
+        },
+        {
+          "word": "costs",
+          "char_start": 212,
+          "char_end": 217,
+          "start": 11.352,
+          "end": 11.732,
+          "score": 0.9879
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "eae0f3cc93e8daad10ed1ea1be37f22d2bbd7fdc980c84a9ef95293576f18930"
     },
     "s12": {
       "id": "s12",
@@ -289,7 +2272,308 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "Wicker",
+          "char_start": 0,
+          "char_end": 6,
+          "start": 0.24,
+          "end": 0.46,
+          "score": 0.9769
+        },
+        {
+          "word": "Park",
+          "char_start": 7,
+          "char_end": 11,
+          "start": 0.52,
+          "end": 0.721,
+          "score": 0.7499
+        },
+        {
+          "word": "Fest",
+          "char_start": 12,
+          "char_end": 16,
+          "start": 0.841,
+          "end": 1.121,
+          "score": 0.998
+        },
+        {
+          "word": "has",
+          "char_start": 17,
+          "char_end": 20,
+          "start": 1.201,
+          "end": 1.301,
+          "score": 0.9969
+        },
+        {
+          "word": "long",
+          "char_start": 21,
+          "char_end": 25,
+          "start": 1.401,
+          "end": 1.621,
+          "score": 1.0
+        },
+        {
+          "word": "been",
+          "char_start": 26,
+          "char_end": 30,
+          "start": 1.701,
+          "end": 1.862,
+          "score": 1.0
+        },
+        {
+          "word": "one",
+          "char_start": 31,
+          "char_end": 34,
+          "start": 1.982,
+          "end": 2.062,
+          "score": 0.9954
+        },
+        {
+          "word": "of",
+          "char_start": 35,
+          "char_end": 37,
+          "start": 2.122,
+          "end": 2.162,
+          "score": 0.9994
+        },
+        {
+          "word": "Chicago's",
+          "char_start": 38,
+          "char_end": 47,
+          "start": 2.202,
+          "end": 2.722,
+          "score": 0.9999
+        },
+        {
+          "word": "most",
+          "char_start": 48,
+          "char_end": 52,
+          "start": 2.782,
+          "end": 2.962,
+          "score": 1.0
+        },
+        {
+          "word": "anticipated",
+          "char_start": 53,
+          "char_end": 64,
+          "start": 3.083,
+          "end": 3.763,
+          "score": 0.9997
+        },
+        {
+          "word": "summer",
+          "char_start": 65,
+          "char_end": 71,
+          "start": 3.843,
+          "end": 4.063,
+          "score": 0.9999
+        },
+        {
+          "word": "festivals",
+          "char_start": 72,
+          "char_end": 81,
+          "start": 4.143,
+          "end": 4.684,
+          "score": 0.9998
+        },
+        {
+          "word": "drawing",
+          "char_start": 83,
+          "char_end": 90,
+          "start": 5.264,
+          "end": 5.565,
+          "score": 0.9998
+        },
+        {
+          "word": "upward",
+          "char_start": 91,
+          "char_end": 97,
+          "start": 5.705,
+          "end": 6.005,
+          "score": 0.9998
+        },
+        {
+          "word": "of",
+          "char_start": 98,
+          "char_end": 100,
+          "start": 6.105,
+          "end": 6.145,
+          "score": 0.9988
+        },
+        {
+          "word": "70",
+          "char_start": 101,
+          "char_end": 103,
+          "start": 6.205,
+          "end": 6.505,
+          "score": 0.9999
+        },
+        {
+          "word": "000",
+          "char_start": 104,
+          "char_end": 107,
+          "start": 6.826,
+          "end": 6.966,
+          "score": 0.0
+        },
+        {
+          "word": "attendees",
+          "char_start": 108,
+          "char_end": 117,
+          "start": 7.046,
+          "end": 7.626,
+          "score": 0.9233
+        },
+        {
+          "word": "for",
+          "char_start": 118,
+          "char_end": 121,
+          "start": 8.087,
+          "end": 8.187,
+          "score": 1.0
+        },
+        {
+          "word": "a",
+          "char_start": 122,
+          "char_end": 123,
+          "start": 8.267,
+          "end": 8.287,
+          "score": 0.9987
+        },
+        {
+          "word": "full",
+          "char_start": 124,
+          "char_end": 128,
+          "start": 8.367,
+          "end": 8.547,
+          "score": 1.0
+        },
+        {
+          "word": "weekend",
+          "char_start": 129,
+          "char_end": 136,
+          "start": 8.607,
+          "end": 8.988,
+          "score": 0.9545
+        },
+        {
+          "word": "of",
+          "char_start": 137,
+          "char_end": 139,
+          "start": 9.068,
+          "end": 9.108,
+          "score": 0.9986
+        },
+        {
+          "word": "live",
+          "char_start": 140,
+          "char_end": 144,
+          "start": 9.208,
+          "end": 9.488,
+          "score": 0.9994
+        },
+        {
+          "word": "indie",
+          "char_start": 145,
+          "char_end": 150,
+          "start": 9.608,
+          "end": 9.788,
+          "score": 0.6552
+        },
+        {
+          "word": "music",
+          "char_start": 151,
+          "char_end": 156,
+          "start": 9.848,
+          "end": 10.189,
+          "score": 0.9999
+        },
+        {
+          "word": "local",
+          "char_start": 158,
+          "char_end": 163,
+          "start": 10.669,
+          "end": 10.929,
+          "score": 0.9998
+        },
+        {
+          "word": "art",
+          "char_start": 164,
+          "char_end": 167,
+          "start": 11.089,
+          "end": 11.249,
+          "score": 0.9999
+        },
+        {
+          "word": "small",
+          "char_start": 169,
+          "char_end": 174,
+          "start": 11.65,
+          "end": 11.89,
+          "score": 1.0
+        },
+        {
+          "word": "business",
+          "char_start": 175,
+          "char_end": 183,
+          "start": 11.97,
+          "end": 12.27,
+          "score": 0.9999
+        },
+        {
+          "word": "vendors",
+          "char_start": 184,
+          "char_end": 191,
+          "start": 12.33,
+          "end": 12.751,
+          "score": 0.9787
+        },
+        {
+          "word": "and",
+          "char_start": 192,
+          "char_end": 195,
+          "start": 13.071,
+          "end": 13.171,
+          "score": 0.9996
+        },
+        {
+          "word": "most",
+          "char_start": 197,
+          "char_end": 201,
+          "start": 13.571,
+          "end": 13.752,
+          "score": 1.0
+        },
+        {
+          "word": "importantly",
+          "char_start": 202,
+          "char_end": 213,
+          "start": 13.852,
+          "end": 14.432,
+          "score": 0.9998
+        },
+        {
+          "word": "community",
+          "char_start": 215,
+          "char_end": 224,
+          "start": 14.812,
+          "end": 15.313,
+          "score": 0.9999
+        },
+        {
+          "word": "connection",
+          "char_start": 225,
+          "char_end": 235,
+          "start": 15.373,
+          "end": 15.953,
+          "score": 0.8494
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "3a3501c6923a83d625285c1f20b6f855201c5fb20397c5b698b1811892980631"
     },
     "s13": {
       "id": "s13",
@@ -313,7 +2597,76 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "In",
+          "char_start": 0,
+          "char_end": 2,
+          "start": 0.221,
+          "end": 0.261,
+          "score": 0.9297
+        },
+        {
+          "word": "2024",
+          "char_start": 3,
+          "char_end": 7,
+          "start": 0.361,
+          "end": 1.344,
+          "score": 0.9998
+        },
+        {
+          "word": "Wicker",
+          "char_start": 9,
+          "char_end": 15,
+          "start": 1.565,
+          "end": 1.826,
+          "score": 0.9363
+        },
+        {
+          "word": "Park",
+          "char_start": 16,
+          "char_end": 20,
+          "start": 1.926,
+          "end": 2.107,
+          "score": 0.7804
+        },
+        {
+          "word": "Fest",
+          "char_start": 21,
+          "char_end": 25,
+          "start": 2.227,
+          "end": 2.488,
+          "score": 0.931
+        },
+        {
+          "word": "saw",
+          "char_start": 26,
+          "char_end": 29,
+          "start": 2.568,
+          "end": 2.709,
+          "score": 0.8441
+        },
+        {
+          "word": "record-breaking",
+          "char_start": 30,
+          "char_end": 45,
+          "start": 2.869,
+          "end": 3.551,
+          "score": 0.953
+        },
+        {
+          "word": "attendance",
+          "char_start": 46,
+          "char_end": 56,
+          "start": 3.632,
+          "end": 4.153,
+          "score": 0.9744
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "ee56d45584c651e8f325201422d3bd1112c467c8cdd38a3179f9306dc8ae1c4b"
     },
     "s14": {
       "id": "s14",
@@ -337,7 +2690,108 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "Despite",
+          "char_start": 0,
+          "char_end": 7,
+          "start": 0.2,
+          "end": 0.581,
+          "score": 0.9999
+        },
+        {
+          "word": "the",
+          "char_start": 8,
+          "char_end": 11,
+          "start": 0.661,
+          "end": 0.722,
+          "score": 0.9996
+        },
+        {
+          "word": "turnout",
+          "char_start": 12,
+          "char_end": 19,
+          "start": 0.782,
+          "end": 1.183,
+          "score": 0.9997
+        },
+        {
+          "word": "gate",
+          "char_start": 21,
+          "char_end": 25,
+          "start": 1.423,
+          "end": 1.643,
+          "score": 0.9921
+        },
+        {
+          "word": "donations",
+          "char_start": 26,
+          "char_end": 35,
+          "start": 1.684,
+          "end": 2.185,
+          "score": 0.7804
+        },
+        {
+          "word": "reached",
+          "char_start": 36,
+          "char_end": 43,
+          "start": 2.265,
+          "end": 2.465,
+          "score": 0.997
+        },
+        {
+          "word": "their",
+          "char_start": 44,
+          "char_end": 49,
+          "start": 2.505,
+          "end": 2.626,
+          "score": 0.9191
+        },
+        {
+          "word": "lowest",
+          "char_start": 50,
+          "char_end": 56,
+          "start": 2.686,
+          "end": 2.966,
+          "score": 1.0
+        },
+        {
+          "word": "point",
+          "char_start": 57,
+          "char_end": 62,
+          "start": 3.046,
+          "end": 3.267,
+          "score": 0.9999
+        },
+        {
+          "word": "in",
+          "char_start": 63,
+          "char_end": 65,
+          "start": 3.347,
+          "end": 3.387,
+          "score": 0.9995
+        },
+        {
+          "word": "our",
+          "char_start": 66,
+          "char_end": 69,
+          "start": 3.507,
+          "end": 3.588,
+          "score": 1.0
+        },
+        {
+          "word": "history",
+          "char_start": 70,
+          "char_end": 77,
+          "start": 3.668,
+          "end": 3.988,
+          "score": 1.0
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "53016ffa926582eb59d035cf0a0539c43398d60d19540b41eaecdd39f1363282"
     },
     "s15": {
       "id": "s15",
@@ -361,7 +2815,116 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "This",
+          "char_start": 0,
+          "char_end": 4,
+          "start": 0.221,
+          "end": 0.361,
+          "score": 0.9977
+        },
+        {
+          "word": "year",
+          "char_start": 5,
+          "char_end": 9,
+          "start": 0.481,
+          "end": 0.682,
+          "score": 0.9946
+        },
+        {
+          "word": "we've",
+          "char_start": 11,
+          "char_end": 16,
+          "start": 1.263,
+          "end": 1.444,
+          "score": 0.8955
+        },
+        {
+          "word": "been",
+          "char_start": 17,
+          "char_end": 21,
+          "start": 1.484,
+          "end": 1.584,
+          "score": 0.9829
+        },
+        {
+          "word": "forced",
+          "char_start": 22,
+          "char_end": 28,
+          "start": 1.664,
+          "end": 1.905,
+          "score": 0.9428
+        },
+        {
+          "word": "to",
+          "char_start": 29,
+          "char_end": 31,
+          "start": 1.965,
+          "end": 2.025,
+          "score": 0.5194
+        },
+        {
+          "word": "scale",
+          "char_start": 32,
+          "char_end": 37,
+          "start": 2.085,
+          "end": 2.366,
+          "score": 0.9998
+        },
+        {
+          "word": "back",
+          "char_start": 38,
+          "char_end": 42,
+          "start": 2.466,
+          "end": 2.627,
+          "score": 0.9999
+        },
+        {
+          "word": "the",
+          "char_start": 43,
+          "char_end": 46,
+          "start": 2.707,
+          "end": 2.787,
+          "score": 0.9054
+        },
+        {
+          "word": "footprint",
+          "char_start": 47,
+          "char_end": 56,
+          "start": 2.847,
+          "end": 3.288,
+          "score": 0.9251
+        },
+        {
+          "word": "of",
+          "char_start": 57,
+          "char_end": 59,
+          "start": 3.329,
+          "end": 3.409,
+          "score": 0.5418
+        },
+        {
+          "word": "the",
+          "char_start": 60,
+          "char_end": 63,
+          "start": 3.449,
+          "end": 3.509,
+          "score": 0.3265
+        },
+        {
+          "word": "fest",
+          "char_start": 64,
+          "char_end": 68,
+          "start": 3.569,
+          "end": 3.91,
+          "score": 0.9937
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "39cf9edbe5ebbf1a258ad70890459256fec878c38c7ce995debc2e6e1420f656"
     },
     "s16": {
       "id": "s16",
@@ -385,7 +2948,412 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "We",
+          "char_start": 0,
+          "char_end": 2,
+          "start": 0.02,
+          "end": 0.1,
+          "score": 0.9999
+        },
+        {
+          "word": "are",
+          "char_start": 3,
+          "char_end": 6,
+          "start": 0.18,
+          "end": 0.26,
+          "score": 0.9997
+        },
+        {
+          "word": "eliminating",
+          "char_start": 7,
+          "char_end": 18,
+          "start": 0.36,
+          "end": 0.961,
+          "score": 0.9995
+        },
+        {
+          "word": "a",
+          "char_start": 19,
+          "char_end": 20,
+          "start": 1.041,
+          "end": 1.061,
+          "score": 0.9926
+        },
+        {
+          "word": "stage",
+          "char_start": 21,
+          "char_end": 26,
+          "start": 1.121,
+          "end": 1.481,
+          "score": 1.0
+        },
+        {
+          "word": "booking",
+          "char_start": 28,
+          "char_end": 35,
+          "start": 1.601,
+          "end": 1.921,
+          "score": 0.9878
+        },
+        {
+          "word": "fewer",
+          "char_start": 36,
+          "char_end": 41,
+          "start": 2.021,
+          "end": 2.261,
+          "score": 0.9971
+        },
+        {
+          "word": "performers",
+          "char_start": 42,
+          "char_end": 52,
+          "start": 2.341,
+          "end": 2.882,
+          "score": 0.9998
+        },
+        {
+          "word": "and",
+          "char_start": 53,
+          "char_end": 56,
+          "start": 2.982,
+          "end": 3.042,
+          "score": 0.9899
+        },
+        {
+          "word": "making",
+          "char_start": 57,
+          "char_end": 63,
+          "start": 3.102,
+          "end": 3.382,
+          "score": 0.9999
+        },
+        {
+          "word": "additional",
+          "char_start": 64,
+          "char_end": 74,
+          "start": 3.462,
+          "end": 3.842,
+          "score": 0.9998
+        },
+        {
+          "word": "cuts",
+          "char_start": 75,
+          "char_end": 79,
+          "start": 3.942,
+          "end": 4.182,
+          "score": 0.9974
+        },
+        {
+          "word": "to",
+          "char_start": 80,
+          "char_end": 82,
+          "start": 4.242,
+          "end": 4.323,
+          "score": 1.0
+        },
+        {
+          "word": "reduce",
+          "char_start": 83,
+          "char_end": 89,
+          "start": 4.403,
+          "end": 4.703,
+          "score": 0.9999
+        },
+        {
+          "word": "our",
+          "char_start": 90,
+          "char_end": 93,
+          "start": 4.803,
+          "end": 4.883,
+          "score": 0.9999
+        },
+        {
+          "word": "costs",
+          "char_start": 94,
+          "char_end": 99,
+          "start": 4.983,
+          "end": 5.363,
+          "score": 0.9824
+        },
+        {
+          "word": "all",
+          "char_start": 101,
+          "char_end": 104,
+          "start": 5.923,
+          "end": 6.064,
+          "score": 0.9997
+        },
+        {
+          "word": "while",
+          "char_start": 105,
+          "char_end": 110,
+          "start": 6.124,
+          "end": 6.324,
+          "score": 0.9833
+        },
+        {
+          "word": "striving",
+          "char_start": 111,
+          "char_end": 119,
+          "start": 6.404,
+          "end": 6.804,
+          "score": 0.9998
+        },
+        {
+          "word": "to",
+          "char_start": 120,
+          "char_end": 122,
+          "start": 6.864,
+          "end": 6.924,
+          "score": 0.9999
+        },
+        {
+          "word": "keep",
+          "char_start": 123,
+          "char_end": 127,
+          "start": 6.964,
+          "end": 7.124,
+          "score": 0.9999
+        },
+        {
+          "word": "the",
+          "char_start": 128,
+          "char_end": 131,
+          "start": 7.184,
+          "end": 7.264,
+          "score": 0.9973
+        },
+        {
+          "word": "festival",
+          "char_start": 132,
+          "char_end": 140,
+          "start": 7.324,
+          "end": 7.785,
+          "score": 0.9994
+        },
+        {
+          "word": "as",
+          "char_start": 141,
+          "char_end": 143,
+          "start": 7.905,
+          "end": 7.965,
+          "score": 0.9999
+        },
+        {
+          "word": "vibrant",
+          "char_start": 144,
+          "char_end": 151,
+          "start": 8.045,
+          "end": 8.405,
+          "score": 0.8419
+        },
+        {
+          "word": "as",
+          "char_start": 152,
+          "char_end": 154,
+          "start": 8.485,
+          "end": 8.525,
+          "score": 1.0
+        },
+        {
+          "word": "ever",
+          "char_start": 155,
+          "char_end": 159,
+          "start": 8.645,
+          "end": 8.805,
+          "score": 1.0
+        },
+        {
+          "word": "as",
+          "char_start": 161,
+          "char_end": 163,
+          "start": 9.225,
+          "end": 9.265,
+          "score": 0.9968
+        },
+        {
+          "word": "supportive",
+          "char_start": 164,
+          "char_end": 174,
+          "start": 9.365,
+          "end": 9.806,
+          "score": 0.999
+        },
+        {
+          "word": "of",
+          "char_start": 175,
+          "char_end": 177,
+          "start": 9.906,
+          "end": 9.946,
+          "score": 0.9997
+        },
+        {
+          "word": "local",
+          "char_start": 178,
+          "char_end": 183,
+          "start": 10.026,
+          "end": 10.286,
+          "score": 0.9998
+        },
+        {
+          "word": "artists",
+          "char_start": 184,
+          "char_end": 191,
+          "start": 10.406,
+          "end": 10.666,
+          "score": 0.7281
+        },
+        {
+          "word": "and",
+          "char_start": 192,
+          "char_end": 195,
+          "start": 10.706,
+          "end": 10.786,
+          "score": 0.6699
+        },
+        {
+          "word": "businesses",
+          "char_start": 196,
+          "char_end": 206,
+          "start": 10.826,
+          "end": 11.347,
+          "score": 0.9984
+        },
+        {
+          "word": "and",
+          "char_start": 208,
+          "char_end": 211,
+          "start": 11.767,
+          "end": 11.847,
+          "score": 0.9992
+        },
+        {
+          "word": "as",
+          "char_start": 212,
+          "char_end": 214,
+          "start": 11.947,
+          "end": 12.007,
+          "score": 0.9992
+        },
+        {
+          "word": "true",
+          "char_start": 215,
+          "char_end": 219,
+          "start": 12.107,
+          "end": 12.307,
+          "score": 0.9987
+        },
+        {
+          "word": "to",
+          "char_start": 220,
+          "char_end": 222,
+          "start": 12.367,
+          "end": 12.427,
+          "score": 0.995
+        },
+        {
+          "word": "Wicker",
+          "char_start": 223,
+          "char_end": 229,
+          "start": 12.487,
+          "end": 12.727,
+          "score": 0.9927
+        },
+        {
+          "word": "Park's",
+          "char_start": 230,
+          "char_end": 236,
+          "start": 12.787,
+          "end": 13.068,
+          "score": 0.8859
+        },
+        {
+          "word": "unique",
+          "char_start": 237,
+          "char_end": 243,
+          "start": 13.188,
+          "end": 13.448,
+          "score": 0.999
+        },
+        {
+          "word": "spirit",
+          "char_start": 244,
+          "char_end": 250,
+          "start": 13.508,
+          "end": 13.848,
+          "score": 0.9998
+        },
+        {
+          "word": "and",
+          "char_start": 251,
+          "char_end": 254,
+          "start": 13.928,
+          "end": 13.988,
+          "score": 0.8342
+        },
+        {
+          "word": "reputation",
+          "char_start": 255,
+          "char_end": 265,
+          "start": 14.048,
+          "end": 14.629,
+          "score": 1.0
+        },
+        {
+          "word": "as",
+          "char_start": 266,
+          "char_end": 268,
+          "start": 14.709,
+          "end": 14.749,
+          "score": 0.9356
+        },
+        {
+          "word": "festgoers",
+          "char_start": 269,
+          "char_end": 278,
+          "start": 14.849,
+          "end": 15.449,
+          "score": 0.8502
+        },
+        {
+          "word": "have",
+          "char_start": 279,
+          "char_end": 283,
+          "start": 15.489,
+          "end": 15.589,
+          "score": 0.9945
+        },
+        {
+          "word": "come",
+          "char_start": 284,
+          "char_end": 288,
+          "start": 15.649,
+          "end": 15.809,
+          "score": 0.9997
+        },
+        {
+          "word": "to",
+          "char_start": 289,
+          "char_end": 291,
+          "start": 15.869,
+          "end": 15.929,
+          "score": 0.9996
+        },
+        {
+          "word": "expect",
+          "char_start": 292,
+          "char_end": 298,
+          "start": 16.029,
+          "end": 16.39,
+          "score": 0.9995
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "6a1e475dd9cd5e2842e23478df1c4bffa8ce09fb0db26c02d03ae6fb5dc89152"
     },
     "s17": {
       "id": "s17",
@@ -409,7 +3377,180 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "This",
+          "char_start": 0,
+          "char_end": 4,
+          "start": 0.221,
+          "end": 0.361,
+          "score": 0.999
+        },
+        {
+          "word": "summer",
+          "char_start": 5,
+          "char_end": 11,
+          "start": 0.441,
+          "end": 0.702,
+          "score": 1.0
+        },
+        {
+          "word": "as",
+          "char_start": 13,
+          "char_end": 15,
+          "start": 1.344,
+          "end": 1.384,
+          "score": 0.9999
+        },
+        {
+          "word": "you",
+          "char_start": 16,
+          "char_end": 19,
+          "start": 1.444,
+          "end": 1.504,
+          "score": 0.9989
+        },
+        {
+          "word": "enjoy",
+          "char_start": 20,
+          "char_end": 25,
+          "start": 1.584,
+          "end": 1.785,
+          "score": 0.9991
+        },
+        {
+          "word": "your",
+          "char_start": 26,
+          "char_end": 30,
+          "start": 1.845,
+          "end": 1.925,
+          "score": 0.9967
+        },
+        {
+          "word": "favorite",
+          "char_start": 31,
+          "char_end": 39,
+          "start": 1.985,
+          "end": 2.226,
+          "score": 0.9879
+        },
+        {
+          "word": "neighborhood",
+          "char_start": 40,
+          "char_end": 52,
+          "start": 2.246,
+          "end": 2.567,
+          "score": 0.9996
+        },
+        {
+          "word": "street",
+          "char_start": 53,
+          "char_end": 59,
+          "start": 2.607,
+          "end": 2.808,
+          "score": 0.9636
+        },
+        {
+          "word": "festival",
+          "char_start": 60,
+          "char_end": 68,
+          "start": 2.848,
+          "end": 3.249,
+          "score": 0.9995
+        },
+        {
+          "word": "I",
+          "char_start": 70,
+          "char_end": 71,
+          "start": 3.79,
+          "end": 3.811,
+          "score": 0.9997
+        },
+        {
+          "word": "hope",
+          "char_start": 72,
+          "char_end": 76,
+          "start": 3.871,
+          "end": 3.991,
+          "score": 0.9999
+        },
+        {
+          "word": "you'll",
+          "char_start": 77,
+          "char_end": 83,
+          "start": 4.011,
+          "end": 4.212,
+          "score": 0.9844
+        },
+        {
+          "word": "remember",
+          "char_start": 84,
+          "char_end": 92,
+          "start": 4.232,
+          "end": 4.532,
+          "score": 1.0
+        },
+        {
+          "word": "that",
+          "char_start": 93,
+          "char_end": 97,
+          "start": 4.653,
+          "end": 4.773,
+          "score": 0.9997
+        },
+        {
+          "word": "they",
+          "char_start": 98,
+          "char_end": 102,
+          "start": 4.833,
+          "end": 4.954,
+          "score": 0.9997
+        },
+        {
+          "word": "exist",
+          "char_start": 103,
+          "char_end": 108,
+          "start": 5.034,
+          "end": 5.355,
+          "score": 0.9999
+        },
+        {
+          "word": "because",
+          "char_start": 109,
+          "char_end": 116,
+          "start": 5.475,
+          "end": 5.776,
+          "score": 1.0
+        },
+        {
+          "word": "of",
+          "char_start": 117,
+          "char_end": 119,
+          "start": 5.856,
+          "end": 5.896,
+          "score": 0.9976
+        },
+        {
+          "word": "community",
+          "char_start": 120,
+          "char_end": 129,
+          "start": 5.976,
+          "end": 6.337,
+          "score": 0.997
+        },
+        {
+          "word": "support",
+          "char_start": 130,
+          "char_end": 137,
+          "start": 6.418,
+          "end": 6.739,
+          "score": 0.9998
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "2d4ba51aa63549b4888fafe448e02b3b1755e8c268d5f4d45851ac04b79074a8"
     },
     "s18": {
       "id": "s18",
@@ -433,7 +3574,140 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "A",
+          "char_start": 0,
+          "char_end": 1,
+          "start": 0.24,
+          "end": 0.26,
+          "score": 0.9791
+        },
+        {
+          "word": "thriving",
+          "char_start": 2,
+          "char_end": 10,
+          "start": 0.32,
+          "end": 0.741,
+          "score": 0.9987
+        },
+        {
+          "word": "summer",
+          "char_start": 11,
+          "char_end": 17,
+          "start": 0.821,
+          "end": 1.021,
+          "score": 0.8537
+        },
+        {
+          "word": "festival",
+          "char_start": 18,
+          "char_end": 26,
+          "start": 1.102,
+          "end": 1.442,
+          "score": 0.8699
+        },
+        {
+          "word": "season",
+          "char_start": 27,
+          "char_end": 33,
+          "start": 1.522,
+          "end": 1.843,
+          "score": 0.9999
+        },
+        {
+          "word": "doesn't",
+          "char_start": 34,
+          "char_end": 41,
+          "start": 2.203,
+          "end": 2.423,
+          "score": 0.6538
+        },
+        {
+          "word": "happen",
+          "char_start": 42,
+          "char_end": 48,
+          "start": 2.484,
+          "end": 2.684,
+          "score": 0.9535
+        },
+        {
+          "word": "by",
+          "char_start": 49,
+          "char_end": 51,
+          "start": 2.764,
+          "end": 2.844,
+          "score": 0.9993
+        },
+        {
+          "word": "accident",
+          "char_start": 52,
+          "char_end": 60,
+          "start": 2.984,
+          "end": 3.345,
+          "score": 0.9993
+        },
+        {
+          "word": "it",
+          "char_start": 62,
+          "char_end": 64,
+          "start": 3.845,
+          "end": 3.886,
+          "score": 0.9994
+        },
+        {
+          "word": "happens",
+          "char_start": 65,
+          "char_end": 72,
+          "start": 3.946,
+          "end": 4.206,
+          "score": 0.9998
+        },
+        {
+          "word": "when",
+          "char_start": 73,
+          "char_end": 77,
+          "start": 4.246,
+          "end": 4.346,
+          "score": 0.9969
+        },
+        {
+          "word": "we",
+          "char_start": 78,
+          "char_end": 80,
+          "start": 4.386,
+          "end": 4.446,
+          "score": 0.9994
+        },
+        {
+          "word": "all",
+          "char_start": 81,
+          "char_end": 84,
+          "start": 4.526,
+          "end": 4.647,
+          "score": 0.9984
+        },
+        {
+          "word": "chip",
+          "char_start": 85,
+          "char_end": 89,
+          "start": 4.707,
+          "end": 4.867,
+          "score": 0.9949
+        },
+        {
+          "word": "in",
+          "char_start": 90,
+          "char_end": 92,
+          "start": 4.987,
+          "end": 5.107,
+          "score": 0.4943
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "3e54f8822b6b2bf6d1eb3319b5f4f6abfade77c2a10dede082365ec05746768e"
     }
   },
   "missing_segments": [],
@@ -441,5 +3715,6 @@
     "technical": "passed",
     "voice": "pending",
     "c_direction": "pending"
-  }
+  },
+  "alignment_status": "passed"
 }

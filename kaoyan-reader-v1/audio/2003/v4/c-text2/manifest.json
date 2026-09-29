@@ -27,7 +27,204 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "To",
+          "char_start": 0,
+          "char_end": 2,
+          "start": 0.18,
+          "end": 0.421,
+          "score": 0.9988
+        },
+        {
+          "word": "paraphrase",
+          "char_start": 3,
+          "char_end": 13,
+          "start": 0.941,
+          "end": 1.502,
+          "score": 0.9975
+        },
+        {
+          "word": "18",
+          "char_start": 14,
+          "char_end": 16,
+          "start": 1.983,
+          "end": 2.263,
+          "score": 0.9999
+        },
+        {
+          "word": "th-century",
+          "char_start": 16,
+          "char_end": 26,
+          "start": 2.283,
+          "end": 2.724,
+          "score": 0.9997
+        },
+        {
+          "word": "statesman",
+          "char_start": 27,
+          "char_end": 36,
+          "start": 2.804,
+          "end": 3.204,
+          "score": 0.98
+        },
+        {
+          "word": "Edmund",
+          "char_start": 37,
+          "char_end": 43,
+          "start": 3.405,
+          "end": 3.665,
+          "score": 0.9057
+        },
+        {
+          "word": "Burke",
+          "char_start": 44,
+          "char_end": 49,
+          "start": 3.705,
+          "end": 3.985,
+          "score": 0.5976
+        },
+        {
+          "word": "all",
+          "char_start": 52,
+          "char_end": 55,
+          "start": 4.366,
+          "end": 4.486,
+          "score": 0.9999
+        },
+        {
+          "word": "that",
+          "char_start": 56,
+          "char_end": 60,
+          "start": 4.566,
+          "end": 4.746,
+          "score": 0.9998
+        },
+        {
+          "word": "is",
+          "char_start": 61,
+          "char_end": 63,
+          "start": 4.947,
+          "end": 4.987,
+          "score": 0.9999
+        },
+        {
+          "word": "needed",
+          "char_start": 64,
+          "char_end": 70,
+          "start": 5.107,
+          "end": 5.367,
+          "score": 0.9999
+        },
+        {
+          "word": "for",
+          "char_start": 71,
+          "char_end": 74,
+          "start": 5.467,
+          "end": 5.547,
+          "score": 0.9993
+        },
+        {
+          "word": "the",
+          "char_start": 75,
+          "char_end": 78,
+          "start": 5.587,
+          "end": 5.648,
+          "score": 0.9996
+        },
+        {
+          "word": "triumph",
+          "char_start": 79,
+          "char_end": 86,
+          "start": 5.728,
+          "end": 6.088,
+          "score": 0.9999
+        },
+        {
+          "word": "of",
+          "char_start": 87,
+          "char_end": 89,
+          "start": 6.188,
+          "end": 6.228,
+          "score": 0.9992
+        },
+        {
+          "word": "a",
+          "char_start": 90,
+          "char_end": 91,
+          "start": 6.288,
+          "end": 6.308,
+          "score": 0.9705
+        },
+        {
+          "word": "misguided",
+          "char_start": 92,
+          "char_end": 101,
+          "start": 6.369,
+          "end": 6.829,
+          "score": 0.9904
+        },
+        {
+          "word": "cause",
+          "char_start": 102,
+          "char_end": 107,
+          "start": 6.909,
+          "end": 7.21,
+          "score": 0.9994
+        },
+        {
+          "word": "is",
+          "char_start": 108,
+          "char_end": 110,
+          "start": 7.63,
+          "end": 7.67,
+          "score": 0.9994
+        },
+        {
+          "word": "that",
+          "char_start": 111,
+          "char_end": 115,
+          "start": 7.75,
+          "end": 7.871,
+          "score": 0.9996
+        },
+        {
+          "word": "good",
+          "char_start": 116,
+          "char_end": 120,
+          "start": 7.971,
+          "end": 8.131,
+          "score": 0.9998
+        },
+        {
+          "word": "people",
+          "char_start": 121,
+          "char_end": 127,
+          "start": 8.231,
+          "end": 8.551,
+          "score": 1.0
+        },
+        {
+          "word": "do",
+          "char_start": 128,
+          "char_end": 130,
+          "start": 8.912,
+          "end": 9.052,
+          "score": 0.9985
+        },
+        {
+          "word": "nothing",
+          "char_start": 131,
+          "char_end": 138,
+          "start": 9.433,
+          "end": 9.753,
+          "score": 0.9999
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "dcca59b0d90d91d6dd1fda46e1b5b0fb95224967edb658a06b90d771b0e1c091"
     },
     "s02": {
       "id": "s02",
@@ -51,7 +248,196 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "One",
+          "char_start": 0,
+          "char_end": 3,
+          "start": 0.12,
+          "end": 0.221,
+          "score": 0.9432
+        },
+        {
+          "word": "such",
+          "char_start": 4,
+          "char_end": 8,
+          "start": 0.341,
+          "end": 0.541,
+          "score": 1.0
+        },
+        {
+          "word": "cause",
+          "char_start": 9,
+          "char_end": 14,
+          "start": 0.662,
+          "end": 1.023,
+          "score": 1.0
+        },
+        {
+          "word": "now",
+          "char_start": 15,
+          "char_end": 18,
+          "start": 1.203,
+          "end": 1.363,
+          "score": 1.0
+        },
+        {
+          "word": "seeks",
+          "char_start": 19,
+          "char_end": 24,
+          "start": 1.524,
+          "end": 1.824,
+          "score": 0.9999
+        },
+        {
+          "word": "to",
+          "char_start": 25,
+          "char_end": 27,
+          "start": 1.925,
+          "end": 2.025,
+          "score": 1.0
+        },
+        {
+          "word": "end",
+          "char_start": 28,
+          "char_end": 31,
+          "start": 2.225,
+          "end": 2.326,
+          "score": 1.0
+        },
+        {
+          "word": "biomedical",
+          "char_start": 32,
+          "char_end": 42,
+          "start": 2.506,
+          "end": 3.108,
+          "score": 0.9977
+        },
+        {
+          "word": "research",
+          "char_start": 43,
+          "char_end": 51,
+          "start": 3.228,
+          "end": 3.629,
+          "score": 1.0
+        },
+        {
+          "word": "because",
+          "char_start": 52,
+          "char_end": 59,
+          "start": 3.729,
+          "end": 4.03,
+          "score": 1.0
+        },
+        {
+          "word": "of",
+          "char_start": 60,
+          "char_end": 62,
+          "start": 4.11,
+          "end": 4.15,
+          "score": 0.9998
+        },
+        {
+          "word": "the",
+          "char_start": 63,
+          "char_end": 66,
+          "start": 4.21,
+          "end": 4.291,
+          "score": 0.9994
+        },
+        {
+          "word": "theory",
+          "char_start": 67,
+          "char_end": 73,
+          "start": 4.371,
+          "end": 4.692,
+          "score": 1.0
+        },
+        {
+          "word": "that",
+          "char_start": 74,
+          "char_end": 78,
+          "start": 4.832,
+          "end": 4.952,
+          "score": 0.9999
+        },
+        {
+          "word": "animals",
+          "char_start": 79,
+          "char_end": 86,
+          "start": 5.133,
+          "end": 5.494,
+          "score": 1.0
+        },
+        {
+          "word": "have",
+          "char_start": 87,
+          "char_end": 91,
+          "start": 5.574,
+          "end": 5.714,
+          "score": 1.0
+        },
+        {
+          "word": "rights",
+          "char_start": 92,
+          "char_end": 98,
+          "start": 5.834,
+          "end": 6.135,
+          "score": 0.9983
+        },
+        {
+          "word": "ruling",
+          "char_start": 99,
+          "char_end": 105,
+          "start": 6.295,
+          "end": 6.596,
+          "score": 0.9996
+        },
+        {
+          "word": "out",
+          "char_start": 106,
+          "char_end": 109,
+          "start": 6.696,
+          "end": 6.777,
+          "score": 0.9999
+        },
+        {
+          "word": "their",
+          "char_start": 110,
+          "char_end": 115,
+          "start": 6.857,
+          "end": 6.997,
+          "score": 0.9993
+        },
+        {
+          "word": "use",
+          "char_start": 116,
+          "char_end": 119,
+          "start": 7.218,
+          "end": 7.378,
+          "score": 1.0
+        },
+        {
+          "word": "in",
+          "char_start": 120,
+          "char_end": 122,
+          "start": 7.539,
+          "end": 7.579,
+          "score": 0.9999
+        },
+        {
+          "word": "research",
+          "char_start": 123,
+          "char_end": 131,
+          "start": 7.699,
+          "end": 8.1,
+          "score": 1.0
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "122a1ba038097f02f09e4fd310b2214024e20683cf656799a85b09373948835f"
     },
     "s03": {
       "id": "s03",
@@ -77,7 +463,196 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "Scientists",
+          "char_start": 0,
+          "char_end": 10,
+          "start": 0.18,
+          "end": 0.62,
+          "score": 0.9989
+        },
+        {
+          "word": "need",
+          "char_start": 11,
+          "char_end": 15,
+          "start": 0.68,
+          "end": 0.821,
+          "score": 0.9999
+        },
+        {
+          "word": "to",
+          "char_start": 16,
+          "char_end": 18,
+          "start": 0.861,
+          "end": 0.921,
+          "score": 0.998
+        },
+        {
+          "word": "respond",
+          "char_start": 19,
+          "char_end": 26,
+          "start": 0.981,
+          "end": 1.341,
+          "score": 1.0
+        },
+        {
+          "word": "forcefully",
+          "char_start": 27,
+          "char_end": 37,
+          "start": 1.501,
+          "end": 2.021,
+          "score": 0.9855
+        },
+        {
+          "word": "to",
+          "char_start": 38,
+          "char_end": 40,
+          "start": 2.121,
+          "end": 2.182,
+          "score": 0.9999
+        },
+        {
+          "word": "animal-rights",
+          "char_start": 41,
+          "char_end": 54,
+          "start": 2.322,
+          "end": 2.822,
+          "score": 0.9035
+        },
+        {
+          "word": "advocates",
+          "char_start": 55,
+          "char_end": 64,
+          "start": 2.922,
+          "end": 3.362,
+          "score": 0.9993
+        },
+        {
+          "word": "whose",
+          "char_start": 66,
+          "char_end": 71,
+          "start": 3.703,
+          "end": 3.923,
+          "score": 1.0
+        },
+        {
+          "word": "arguments",
+          "char_start": 72,
+          "char_end": 81,
+          "start": 4.063,
+          "end": 4.403,
+          "score": 0.9999
+        },
+        {
+          "word": "are",
+          "char_start": 82,
+          "char_end": 85,
+          "start": 4.463,
+          "end": 4.543,
+          "score": 0.9994
+        },
+        {
+          "word": "confusing",
+          "char_start": 86,
+          "char_end": 95,
+          "start": 4.583,
+          "end": 5.064,
+          "score": 0.9998
+        },
+        {
+          "word": "the",
+          "char_start": 96,
+          "char_end": 99,
+          "start": 5.124,
+          "end": 5.184,
+          "score": 0.9994
+        },
+        {
+          "word": "public",
+          "char_start": 100,
+          "char_end": 106,
+          "start": 5.224,
+          "end": 5.524,
+          "score": 1.0
+        },
+        {
+          "word": "and",
+          "char_start": 107,
+          "char_end": 110,
+          "start": 5.924,
+          "end": 6.004,
+          "score": 0.9998
+        },
+        {
+          "word": "thereby",
+          "char_start": 111,
+          "char_end": 118,
+          "start": 6.064,
+          "end": 6.424,
+          "score": 0.9998
+        },
+        {
+          "word": "threatening",
+          "char_start": 119,
+          "char_end": 130,
+          "start": 6.585,
+          "end": 6.965,
+          "score": 0.9993
+        },
+        {
+          "word": "advances",
+          "char_start": 131,
+          "char_end": 139,
+          "start": 7.025,
+          "end": 7.485,
+          "score": 0.9997
+        },
+        {
+          "word": "in",
+          "char_start": 140,
+          "char_end": 142,
+          "start": 7.585,
+          "end": 7.625,
+          "score": 0.9989
+        },
+        {
+          "word": "health",
+          "char_start": 143,
+          "char_end": 149,
+          "start": 7.725,
+          "end": 7.906,
+          "score": 0.9999
+        },
+        {
+          "word": "knowledge",
+          "char_start": 150,
+          "char_end": 159,
+          "start": 8.026,
+          "end": 8.366,
+          "score": 1.0
+        },
+        {
+          "word": "and",
+          "char_start": 160,
+          "char_end": 163,
+          "start": 8.586,
+          "end": 8.666,
+          "score": 0.9998
+        },
+        {
+          "word": "care",
+          "char_start": 164,
+          "char_end": 168,
+          "start": 8.726,
+          "end": 8.986,
+          "score": 1.0
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "a33cd3882a215130aedef3d0103fb6dadf3a8b786d66b29ffa0a1b5908d22ba0"
     },
     "s04": {
       "id": "s04",
@@ -103,7 +678,196 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "Leaders",
+          "char_start": 0,
+          "char_end": 7,
+          "start": 0.28,
+          "end": 0.601,
+          "score": 0.9998
+        },
+        {
+          "word": "of",
+          "char_start": 8,
+          "char_end": 10,
+          "start": 0.681,
+          "end": 0.721,
+          "score": 0.9998
+        },
+        {
+          "word": "the",
+          "char_start": 11,
+          "char_end": 14,
+          "start": 0.781,
+          "end": 0.862,
+          "score": 0.9999
+        },
+        {
+          "word": "animal-rights",
+          "char_start": 15,
+          "char_end": 28,
+          "start": 1.002,
+          "end": 1.563,
+          "score": 0.9548
+        },
+        {
+          "word": "movement",
+          "char_start": 29,
+          "char_end": 37,
+          "start": 1.643,
+          "end": 2.004,
+          "score": 0.9983
+        },
+        {
+          "word": "target",
+          "char_start": 38,
+          "char_end": 44,
+          "start": 2.184,
+          "end": 2.504,
+          "score": 0.9996
+        },
+        {
+          "word": "biomedical",
+          "char_start": 45,
+          "char_end": 55,
+          "start": 2.605,
+          "end": 3.105,
+          "score": 0.9497
+        },
+        {
+          "word": "research",
+          "char_start": 56,
+          "char_end": 64,
+          "start": 3.206,
+          "end": 3.606,
+          "score": 1.0
+        },
+        {
+          "word": "because",
+          "char_start": 65,
+          "char_end": 72,
+          "start": 3.727,
+          "end": 3.947,
+          "score": 1.0
+        },
+        {
+          "word": "it",
+          "char_start": 73,
+          "char_end": 75,
+          "start": 4.007,
+          "end": 4.047,
+          "score": 0.9998
+        },
+        {
+          "word": "depends",
+          "char_start": 76,
+          "char_end": 83,
+          "start": 4.107,
+          "end": 4.488,
+          "score": 0.9997
+        },
+        {
+          "word": "on",
+          "char_start": 84,
+          "char_end": 86,
+          "start": 4.568,
+          "end": 4.608,
+          "score": 0.9999
+        },
+        {
+          "word": "public",
+          "char_start": 87,
+          "char_end": 93,
+          "start": 4.728,
+          "end": 4.969,
+          "score": 1.0
+        },
+        {
+          "word": "funding",
+          "char_start": 94,
+          "char_end": 101,
+          "start": 5.049,
+          "end": 5.39,
+          "score": 0.9999
+        },
+        {
+          "word": "and",
+          "char_start": 103,
+          "char_end": 106,
+          "start": 5.71,
+          "end": 5.77,
+          "score": 0.9999
+        },
+        {
+          "word": "few",
+          "char_start": 107,
+          "char_end": 110,
+          "start": 5.83,
+          "end": 5.971,
+          "score": 0.9999
+        },
+        {
+          "word": "people",
+          "char_start": 111,
+          "char_end": 117,
+          "start": 6.031,
+          "end": 6.291,
+          "score": 1.0
+        },
+        {
+          "word": "understand",
+          "char_start": 118,
+          "char_end": 128,
+          "start": 6.411,
+          "end": 6.912,
+          "score": 1.0
+        },
+        {
+          "word": "the",
+          "char_start": 129,
+          "char_end": 132,
+          "start": 6.992,
+          "end": 7.072,
+          "score": 0.9999
+        },
+        {
+          "word": "process",
+          "char_start": 133,
+          "char_end": 140,
+          "start": 7.113,
+          "end": 7.553,
+          "score": 0.9995
+        },
+        {
+          "word": "of",
+          "char_start": 141,
+          "char_end": 143,
+          "start": 7.633,
+          "end": 7.674,
+          "score": 0.9994
+        },
+        {
+          "word": "health-care",
+          "char_start": 144,
+          "char_end": 155,
+          "start": 7.734,
+          "end": 8.114,
+          "score": 0.9537
+        },
+        {
+          "word": "research",
+          "char_start": 156,
+          "char_end": 164,
+          "start": 8.174,
+          "end": 8.555,
+          "score": 0.9999
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "ee12a56ad7d57fbe6de8e956343289c6adab2b53ca6c1048ea2dce567ab864db"
     },
     "s05": {
       "id": "s05",
@@ -129,7 +893,164 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "Hearing",
+          "char_start": 0,
+          "char_end": 7,
+          "start": 0.28,
+          "end": 0.601,
+          "score": 0.9972
+        },
+        {
+          "word": "allegations",
+          "char_start": 8,
+          "char_end": 19,
+          "start": 0.761,
+          "end": 1.362,
+          "score": 0.934
+        },
+        {
+          "word": "of",
+          "char_start": 20,
+          "char_end": 22,
+          "start": 1.442,
+          "end": 1.482,
+          "score": 0.9999
+        },
+        {
+          "word": "cruelty",
+          "char_start": 23,
+          "char_end": 30,
+          "start": 1.603,
+          "end": 2.003,
+          "score": 0.9999
+        },
+        {
+          "word": "to",
+          "char_start": 31,
+          "char_end": 33,
+          "start": 2.103,
+          "end": 2.164,
+          "score": 1.0
+        },
+        {
+          "word": "animals",
+          "char_start": 34,
+          "char_end": 41,
+          "start": 2.324,
+          "end": 2.604,
+          "score": 0.9999
+        },
+        {
+          "word": "in",
+          "char_start": 42,
+          "char_end": 44,
+          "start": 2.684,
+          "end": 2.724,
+          "score": 0.5242
+        },
+        {
+          "word": "research",
+          "char_start": 45,
+          "char_end": 53,
+          "start": 2.805,
+          "end": 3.145,
+          "score": 0.9993
+        },
+        {
+          "word": "settings",
+          "char_start": 54,
+          "char_end": 62,
+          "start": 3.225,
+          "end": 3.586,
+          "score": 0.9999
+        },
+        {
+          "word": "many",
+          "char_start": 64,
+          "char_end": 68,
+          "start": 4.187,
+          "end": 4.447,
+          "score": 0.9999
+        },
+        {
+          "word": "are",
+          "char_start": 69,
+          "char_end": 72,
+          "start": 4.628,
+          "end": 4.708,
+          "score": 0.9996
+        },
+        {
+          "word": "perplexed",
+          "char_start": 73,
+          "char_end": 82,
+          "start": 4.748,
+          "end": 5.289,
+          "score": 0.9998
+        },
+        {
+          "word": "that",
+          "char_start": 83,
+          "char_end": 87,
+          "start": 5.409,
+          "end": 5.509,
+          "score": 0.9998
+        },
+        {
+          "word": "anyone",
+          "char_start": 88,
+          "char_end": 94,
+          "start": 5.649,
+          "end": 5.97,
+          "score": 0.9987
+        },
+        {
+          "word": "would",
+          "char_start": 95,
+          "char_end": 100,
+          "start": 6.01,
+          "end": 6.15,
+          "score": 0.9998
+        },
+        {
+          "word": "deliberately",
+          "char_start": 101,
+          "char_end": 113,
+          "start": 6.19,
+          "end": 6.691,
+          "score": 0.9999
+        },
+        {
+          "word": "harm",
+          "char_start": 114,
+          "char_end": 118,
+          "start": 6.791,
+          "end": 7.031,
+          "score": 0.9999
+        },
+        {
+          "word": "an",
+          "char_start": 119,
+          "char_end": 121,
+          "start": 7.112,
+          "end": 7.152,
+          "score": 0.9968
+        },
+        {
+          "word": "animal",
+          "char_start": 122,
+          "char_end": 128,
+          "start": 7.292,
+          "end": 7.532,
+          "score": 1.0
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "bd795fd1640349130dac1ce4a099b869e9cb3f39d6f7b665a8004e263de3c316"
     },
     "s06": {
       "id": "s06",
@@ -155,7 +1076,324 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "For",
+          "char_start": 0,
+          "char_end": 3,
+          "start": 0.16,
+          "end": 0.28,
+          "score": 1.0
+        },
+        {
+          "word": "example",
+          "char_start": 4,
+          "char_end": 11,
+          "start": 0.381,
+          "end": 0.841,
+          "score": 0.9999
+        },
+        {
+          "word": "a",
+          "char_start": 13,
+          "char_end": 14,
+          "start": 1.382,
+          "end": 1.402,
+          "score": 0.9993
+        },
+        {
+          "word": "grandmotherly",
+          "char_start": 15,
+          "char_end": 28,
+          "start": 1.482,
+          "end": 2.123,
+          "score": 0.9996
+        },
+        {
+          "word": "woman",
+          "char_start": 29,
+          "char_end": 34,
+          "start": 2.183,
+          "end": 2.444,
+          "score": 0.9993
+        },
+        {
+          "word": "staffing",
+          "char_start": 35,
+          "char_end": 43,
+          "start": 2.564,
+          "end": 2.945,
+          "score": 0.9997
+        },
+        {
+          "word": "an",
+          "char_start": 44,
+          "char_end": 46,
+          "start": 3.005,
+          "end": 3.045,
+          "score": 0.6786
+        },
+        {
+          "word": "animal-rights",
+          "char_start": 47,
+          "char_end": 60,
+          "start": 3.185,
+          "end": 3.746,
+          "score": 0.8537
+        },
+        {
+          "word": "booth",
+          "char_start": 61,
+          "char_end": 66,
+          "start": 3.806,
+          "end": 4.026,
+          "score": 0.9997
+        },
+        {
+          "word": "at",
+          "char_start": 67,
+          "char_end": 69,
+          "start": 4.147,
+          "end": 4.187,
+          "score": 0.9983
+        },
+        {
+          "word": "a",
+          "char_start": 70,
+          "char_end": 71,
+          "start": 4.247,
+          "end": 4.267,
+          "score": 0.9934
+        },
+        {
+          "word": "recent",
+          "char_start": 72,
+          "char_end": 78,
+          "start": 4.307,
+          "end": 4.607,
+          "score": 0.9999
+        },
+        {
+          "word": "street",
+          "char_start": 79,
+          "char_end": 85,
+          "start": 4.687,
+          "end": 4.948,
+          "score": 0.9999
+        },
+        {
+          "word": "fair",
+          "char_start": 86,
+          "char_end": 90,
+          "start": 5.028,
+          "end": 5.228,
+          "score": 0.8939
+        },
+        {
+          "word": "was",
+          "char_start": 91,
+          "char_end": 94,
+          "start": 5.409,
+          "end": 5.509,
+          "score": 0.9998
+        },
+        {
+          "word": "distributing",
+          "char_start": 95,
+          "char_end": 107,
+          "start": 5.589,
+          "end": 6.11,
+          "score": 0.9986
+        },
+        {
+          "word": "a",
+          "char_start": 108,
+          "char_end": 109,
+          "start": 6.17,
+          "end": 6.19,
+          "score": 0.9723
+        },
+        {
+          "word": "brochure",
+          "char_start": 110,
+          "char_end": 118,
+          "start": 6.23,
+          "end": 6.691,
+          "score": 0.732
+        },
+        {
+          "word": "that",
+          "char_start": 119,
+          "char_end": 123,
+          "start": 6.831,
+          "end": 6.951,
+          "score": 0.9994
+        },
+        {
+          "word": "encouraged",
+          "char_start": 124,
+          "char_end": 134,
+          "start": 7.011,
+          "end": 7.472,
+          "score": 0.9993
+        },
+        {
+          "word": "readers",
+          "char_start": 135,
+          "char_end": 142,
+          "start": 7.552,
+          "end": 7.812,
+          "score": 0.9994
+        },
+        {
+          "word": "not",
+          "char_start": 143,
+          "char_end": 146,
+          "start": 7.893,
+          "end": 8.053,
+          "score": 0.9999
+        },
+        {
+          "word": "to",
+          "char_start": 147,
+          "char_end": 149,
+          "start": 8.093,
+          "end": 8.153,
+          "score": 1.0
+        },
+        {
+          "word": "use",
+          "char_start": 150,
+          "char_end": 153,
+          "start": 8.273,
+          "end": 8.353,
+          "score": 1.0
+        },
+        {
+          "word": "anything",
+          "char_start": 154,
+          "char_end": 162,
+          "start": 8.534,
+          "end": 8.874,
+          "score": 0.9998
+        },
+        {
+          "word": "that",
+          "char_start": 163,
+          "char_end": 167,
+          "start": 8.934,
+          "end": 9.034,
+          "score": 0.9995
+        },
+        {
+          "word": "comes",
+          "char_start": 168,
+          "char_end": 173,
+          "start": 9.114,
+          "end": 9.355,
+          "score": 0.9999
+        },
+        {
+          "word": "from",
+          "char_start": 174,
+          "char_end": 178,
+          "start": 9.455,
+          "end": 9.655,
+          "score": 0.9998
+        },
+        {
+          "word": "or",
+          "char_start": 179,
+          "char_end": 181,
+          "start": 9.876,
+          "end": 9.916,
+          "score": 0.9999
+        },
+        {
+          "word": "is",
+          "char_start": 182,
+          "char_end": 184,
+          "start": 10.076,
+          "end": 10.136,
+          "score": 0.9998
+        },
+        {
+          "word": "tested",
+          "char_start": 185,
+          "char_end": 191,
+          "start": 10.236,
+          "end": 10.657,
+          "score": 0.9999
+        },
+        {
+          "word": "in",
+          "char_start": 192,
+          "char_end": 194,
+          "start": 10.797,
+          "end": 10.837,
+          "score": 0.9999
+        },
+        {
+          "word": "animals",
+          "char_start": 195,
+          "char_end": 202,
+          "start": 10.997,
+          "end": 11.338,
+          "score": 0.9999
+        },
+        {
+          "word": "no",
+          "char_start": 205,
+          "char_end": 207,
+          "start": 11.979,
+          "end": 12.079,
+          "score": 0.9999
+        },
+        {
+          "word": "meat",
+          "char_start": 208,
+          "char_end": 212,
+          "start": 12.179,
+          "end": 12.4,
+          "score": 0.96
+        },
+        {
+          "word": "no",
+          "char_start": 214,
+          "char_end": 216,
+          "start": 12.68,
+          "end": 12.76,
+          "score": 0.9998
+        },
+        {
+          "word": "fur",
+          "char_start": 217,
+          "char_end": 220,
+          "start": 12.9,
+          "end": 13.061,
+          "score": 0.9872
+        },
+        {
+          "word": "no",
+          "char_start": 222,
+          "char_end": 224,
+          "start": 13.361,
+          "end": 13.461,
+          "score": 0.9999
+        },
+        {
+          "word": "medicines",
+          "char_start": 225,
+          "char_end": 234,
+          "start": 13.541,
+          "end": 14.002,
+          "score": 0.9992
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "871a35cd16e0fa1f4289fb10774e2d376d4fd870ca678ef4a2d2c33548a94386"
     },
     "s07": {
       "id": "s07",
@@ -181,7 +1419,132 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "Asked",
+          "char_start": 0,
+          "char_end": 5,
+          "start": 0.221,
+          "end": 0.361,
+          "score": 0.8732
+        },
+        {
+          "word": "if",
+          "char_start": 6,
+          "char_end": 8,
+          "start": 0.482,
+          "end": 0.522,
+          "score": 0.9995
+        },
+        {
+          "word": "she",
+          "char_start": 9,
+          "char_end": 12,
+          "start": 0.562,
+          "end": 0.642,
+          "score": 0.9999
+        },
+        {
+          "word": "opposed",
+          "char_start": 13,
+          "char_end": 20,
+          "start": 0.722,
+          "end": 1.104,
+          "score": 0.9968
+        },
+        {
+          "word": "immunizations",
+          "char_start": 21,
+          "char_end": 34,
+          "start": 1.204,
+          "end": 1.806,
+          "score": 0.8021
+        },
+        {
+          "word": "she",
+          "char_start": 36,
+          "char_end": 39,
+          "start": 2.288,
+          "end": 2.368,
+          "score": 0.9999
+        },
+        {
+          "word": "wanted",
+          "char_start": 40,
+          "char_end": 46,
+          "start": 2.448,
+          "end": 2.669,
+          "score": 0.9997
+        },
+        {
+          "word": "to",
+          "char_start": 47,
+          "char_end": 49,
+          "start": 2.729,
+          "end": 2.79,
+          "score": 1.0
+        },
+        {
+          "word": "know",
+          "char_start": 50,
+          "char_end": 54,
+          "start": 2.85,
+          "end": 3.03,
+          "score": 0.9999
+        },
+        {
+          "word": "if",
+          "char_start": 55,
+          "char_end": 57,
+          "start": 3.231,
+          "end": 3.271,
+          "score": 0.9998
+        },
+        {
+          "word": "vaccines",
+          "char_start": 58,
+          "char_end": 66,
+          "start": 3.372,
+          "end": 3.893,
+          "score": 0.6449
+        },
+        {
+          "word": "come",
+          "char_start": 67,
+          "char_end": 71,
+          "start": 3.994,
+          "end": 4.154,
+          "score": 0.9998
+        },
+        {
+          "word": "from",
+          "char_start": 72,
+          "char_end": 76,
+          "start": 4.235,
+          "end": 4.335,
+          "score": 0.9998
+        },
+        {
+          "word": "animal",
+          "char_start": 77,
+          "char_end": 83,
+          "start": 4.536,
+          "end": 4.756,
+          "score": 0.9996
+        },
+        {
+          "word": "research",
+          "char_start": 84,
+          "char_end": 92,
+          "start": 4.857,
+          "end": 5.278,
+          "score": 0.9999
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "2cbd0e82e67eb6b0aefd39d662fb4b3316db9bdb6ae7fca225045ccf45d6fc6f"
     },
     "s08": {
       "id": "s08",
@@ -205,7 +1568,124 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "When",
+          "char_start": 0,
+          "char_end": 4,
+          "start": 0.141,
+          "end": 0.241,
+          "score": 0.9104
+        },
+        {
+          "word": "assured",
+          "char_start": 5,
+          "char_end": 12,
+          "start": 0.302,
+          "end": 0.543,
+          "score": 0.998
+        },
+        {
+          "word": "that",
+          "char_start": 13,
+          "char_end": 17,
+          "start": 0.583,
+          "end": 0.664,
+          "score": 0.9497
+        },
+        {
+          "word": "they",
+          "char_start": 18,
+          "char_end": 22,
+          "start": 0.704,
+          "end": 0.805,
+          "score": 0.9995
+        },
+        {
+          "word": "do",
+          "char_start": 23,
+          "char_end": 25,
+          "start": 0.865,
+          "end": 0.966,
+          "score": 0.993
+        },
+        {
+          "word": "she",
+          "char_start": 27,
+          "char_end": 30,
+          "start": 1.207,
+          "end": 1.288,
+          "score": 0.9998
+        },
+        {
+          "word": "replied",
+          "char_start": 31,
+          "char_end": 38,
+          "start": 1.348,
+          "end": 1.71,
+          "score": 0.9995
+        },
+        {
+          "word": "Then",
+          "char_start": 41,
+          "char_end": 45,
+          "start": 2.454,
+          "end": 2.555,
+          "score": 0.9987
+        },
+        {
+          "word": "I",
+          "char_start": 46,
+          "char_end": 47,
+          "start": 2.676,
+          "end": 2.696,
+          "score": 0.9995
+        },
+        {
+          "word": "would",
+          "char_start": 48,
+          "char_end": 53,
+          "start": 2.736,
+          "end": 2.857,
+          "score": 0.9985
+        },
+        {
+          "word": "have",
+          "char_start": 54,
+          "char_end": 58,
+          "start": 2.897,
+          "end": 2.977,
+          "score": 0.9994
+        },
+        {
+          "word": "to",
+          "char_start": 59,
+          "char_end": 61,
+          "start": 3.018,
+          "end": 3.058,
+          "score": 0.9964
+        },
+        {
+          "word": "say",
+          "char_start": 62,
+          "char_end": 65,
+          "start": 3.118,
+          "end": 3.219,
+          "score": 0.9999
+        },
+        {
+          "word": "yes",
+          "char_start": 66,
+          "char_end": 69,
+          "start": 3.279,
+          "end": 3.48,
+          "score": 0.9997
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "e079063a9f9bb9a5c1457be3519a6f5554f3cfe97ddf95d5ce57d327d5d19de4"
     },
     "s09": {
       "id": "s09",
@@ -231,7 +1711,164 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "Asked",
+          "char_start": 0,
+          "char_end": 5,
+          "start": 0.18,
+          "end": 0.381,
+          "score": 0.2851
+        },
+        {
+          "word": "what",
+          "char_start": 6,
+          "char_end": 10,
+          "start": 0.441,
+          "end": 0.521,
+          "score": 0.9726
+        },
+        {
+          "word": "will",
+          "char_start": 11,
+          "char_end": 15,
+          "start": 0.561,
+          "end": 0.682,
+          "score": 0.9895
+        },
+        {
+          "word": "happen",
+          "char_start": 16,
+          "char_end": 22,
+          "start": 0.722,
+          "end": 0.902,
+          "score": 0.9996
+        },
+        {
+          "word": "when",
+          "char_start": 23,
+          "char_end": 27,
+          "start": 0.963,
+          "end": 1.043,
+          "score": 0.9991
+        },
+        {
+          "word": "epidemics",
+          "char_start": 28,
+          "char_end": 37,
+          "start": 1.123,
+          "end": 1.564,
+          "score": 0.9939
+        },
+        {
+          "word": "return",
+          "char_start": 38,
+          "char_end": 44,
+          "start": 1.644,
+          "end": 1.945,
+          "score": 0.6813
+        },
+        {
+          "word": "she",
+          "char_start": 46,
+          "char_end": 49,
+          "start": 2.547,
+          "end": 2.627,
+          "score": 1.0
+        },
+        {
+          "word": "said",
+          "char_start": 50,
+          "char_end": 54,
+          "start": 2.687,
+          "end": 2.847,
+          "score": 0.9999
+        },
+        {
+          "word": "Don’t",
+          "char_start": 57,
+          "char_end": 62,
+          "start": 3.369,
+          "end": 3.529,
+          "score": 0.9993
+        },
+        {
+          "word": "worry",
+          "char_start": 63,
+          "char_end": 68,
+          "start": 3.569,
+          "end": 3.75,
+          "score": 0.9999
+        },
+        {
+          "word": "scientists",
+          "char_start": 70,
+          "char_end": 80,
+          "start": 4.131,
+          "end": 4.472,
+          "score": 0.9466
+        },
+        {
+          "word": "will",
+          "char_start": 81,
+          "char_end": 85,
+          "start": 4.492,
+          "end": 4.612,
+          "score": 0.9967
+        },
+        {
+          "word": "find",
+          "char_start": 86,
+          "char_end": 90,
+          "start": 4.652,
+          "end": 4.773,
+          "score": 0.9999
+        },
+        {
+          "word": "some",
+          "char_start": 91,
+          "char_end": 95,
+          "start": 4.853,
+          "end": 4.973,
+          "score": 1.0
+        },
+        {
+          "word": "way",
+          "char_start": 96,
+          "char_end": 99,
+          "start": 5.033,
+          "end": 5.134,
+          "score": 1.0
+        },
+        {
+          "word": "of",
+          "char_start": 100,
+          "char_end": 102,
+          "start": 5.194,
+          "end": 5.234,
+          "score": 0.9996
+        },
+        {
+          "word": "using",
+          "char_start": 103,
+          "char_end": 108,
+          "start": 5.294,
+          "end": 5.474,
+          "score": 0.9999
+        },
+        {
+          "word": "computers",
+          "char_start": 109,
+          "char_end": 118,
+          "start": 5.515,
+          "end": 5.956,
+          "score": 0.9997
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "f783e1382845e89590b7cf97ed347e50130cd768f69b20a832cbc2305deaa018"
     },
     "s10": {
       "id": "s10",
@@ -255,7 +1892,60 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "Such",
+          "char_start": 0,
+          "char_end": 4,
+          "start": 0.101,
+          "end": 0.322,
+          "score": 0.9999
+        },
+        {
+          "word": "well-meaning",
+          "char_start": 5,
+          "char_end": 17,
+          "start": 0.463,
+          "end": 0.966,
+          "score": 0.9978
+        },
+        {
+          "word": "people",
+          "char_start": 18,
+          "char_end": 24,
+          "start": 1.067,
+          "end": 1.369,
+          "score": 0.9994
+        },
+        {
+          "word": "just",
+          "char_start": 25,
+          "char_end": 29,
+          "start": 1.429,
+          "end": 1.61,
+          "score": 0.9994
+        },
+        {
+          "word": "don’t",
+          "char_start": 30,
+          "char_end": 35,
+          "start": 1.751,
+          "end": 2.013,
+          "score": 0.9997
+        },
+        {
+          "word": "understand",
+          "char_start": 36,
+          "char_end": 46,
+          "start": 2.174,
+          "end": 2.838,
+          "score": 1.0
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "0f0f5d45aeda2e758eea64d635baf15cfea9ac35785bd44689218fa69e10d6aa"
     },
     "s11": {
       "id": "s11",
@@ -281,7 +1971,196 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "Scientists",
+          "char_start": 0,
+          "char_end": 10,
+          "start": 0.12,
+          "end": 0.642,
+          "score": 0.9999
+        },
+        {
+          "word": "must",
+          "char_start": 11,
+          "char_end": 15,
+          "start": 0.722,
+          "end": 0.862,
+          "score": 0.9999
+        },
+        {
+          "word": "communicate",
+          "char_start": 16,
+          "char_end": 27,
+          "start": 0.922,
+          "end": 1.464,
+          "score": 0.9999
+        },
+        {
+          "word": "their",
+          "char_start": 28,
+          "char_end": 33,
+          "start": 1.524,
+          "end": 1.644,
+          "score": 0.9998
+        },
+        {
+          "word": "message",
+          "char_start": 34,
+          "char_end": 41,
+          "start": 1.724,
+          "end": 2.045,
+          "score": 1.0
+        },
+        {
+          "word": "to",
+          "char_start": 42,
+          "char_end": 44,
+          "start": 2.146,
+          "end": 2.226,
+          "score": 1.0
+        },
+        {
+          "word": "the",
+          "char_start": 45,
+          "char_end": 48,
+          "start": 2.286,
+          "end": 2.346,
+          "score": 0.9984
+        },
+        {
+          "word": "public",
+          "char_start": 49,
+          "char_end": 55,
+          "start": 2.406,
+          "end": 2.747,
+          "score": 1.0
+        },
+        {
+          "word": "in",
+          "char_start": 56,
+          "char_end": 58,
+          "start": 2.907,
+          "end": 2.948,
+          "score": 0.9998
+        },
+        {
+          "word": "a",
+          "char_start": 59,
+          "char_end": 60,
+          "start": 3.008,
+          "end": 3.028,
+          "score": 0.994
+        },
+        {
+          "word": "compassionate",
+          "char_start": 61,
+          "char_end": 74,
+          "start": 3.088,
+          "end": 3.77,
+          "score": 0.9999
+        },
+        {
+          "word": "understandable",
+          "char_start": 76,
+          "char_end": 90,
+          "start": 4.191,
+          "end": 4.893,
+          "score": 0.9999
+        },
+        {
+          "word": "way",
+          "char_start": 91,
+          "char_end": 94,
+          "start": 4.953,
+          "end": 5.153,
+          "score": 1.0
+        },
+        {
+          "word": "in",
+          "char_start": 97,
+          "char_end": 99,
+          "start": 5.554,
+          "end": 5.594,
+          "score": 1.0
+        },
+        {
+          "word": "human",
+          "char_start": 100,
+          "char_end": 105,
+          "start": 5.695,
+          "end": 5.935,
+          "score": 0.9999
+        },
+        {
+          "word": "terms",
+          "char_start": 106,
+          "char_end": 111,
+          "start": 6.015,
+          "end": 6.316,
+          "score": 1.0
+        },
+        {
+          "word": "not",
+          "char_start": 113,
+          "char_end": 116,
+          "start": 6.777,
+          "end": 6.998,
+          "score": 1.0
+        },
+        {
+          "word": "in",
+          "char_start": 117,
+          "char_end": 119,
+          "start": 7.118,
+          "end": 7.158,
+          "score": 0.9999
+        },
+        {
+          "word": "the",
+          "char_start": 120,
+          "char_end": 123,
+          "start": 7.219,
+          "end": 7.279,
+          "score": 0.9987
+        },
+        {
+          "word": "language",
+          "char_start": 124,
+          "char_end": 132,
+          "start": 7.319,
+          "end": 7.64,
+          "score": 1.0
+        },
+        {
+          "word": "of",
+          "char_start": 133,
+          "char_end": 135,
+          "start": 7.7,
+          "end": 7.74,
+          "score": 0.9999
+        },
+        {
+          "word": "molecular",
+          "char_start": 136,
+          "char_end": 145,
+          "start": 7.82,
+          "end": 8.221,
+          "score": 0.9965
+        },
+        {
+          "word": "biology",
+          "char_start": 146,
+          "char_end": 153,
+          "start": 8.281,
+          "end": 8.823,
+          "score": 0.9998
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "6073e670b4cff424185815d0b8a90d43c2d483dc15008d1348313058a4029b3e"
     },
     "s12": {
       "id": "s12",
@@ -305,7 +2184,228 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "We",
+          "char_start": 0,
+          "char_end": 2,
+          "start": 0.18,
+          "end": 0.26,
+          "score": 0.9996
+        },
+        {
+          "word": "need",
+          "char_start": 3,
+          "char_end": 7,
+          "start": 0.3,
+          "end": 0.42,
+          "score": 0.999
+        },
+        {
+          "word": "to",
+          "char_start": 8,
+          "char_end": 10,
+          "start": 0.48,
+          "end": 0.54,
+          "score": 0.9973
+        },
+        {
+          "word": "make",
+          "char_start": 11,
+          "char_end": 15,
+          "start": 0.58,
+          "end": 0.72,
+          "score": 0.9975
+        },
+        {
+          "word": "clear",
+          "char_start": 16,
+          "char_end": 21,
+          "start": 0.82,
+          "end": 1.06,
+          "score": 0.9999
+        },
+        {
+          "word": "the",
+          "char_start": 22,
+          "char_end": 25,
+          "start": 1.141,
+          "end": 1.201,
+          "score": 0.9992
+        },
+        {
+          "word": "connection",
+          "char_start": 26,
+          "char_end": 36,
+          "start": 1.281,
+          "end": 1.781,
+          "score": 0.9984
+        },
+        {
+          "word": "between",
+          "char_start": 37,
+          "char_end": 44,
+          "start": 1.881,
+          "end": 2.181,
+          "score": 1.0
+        },
+        {
+          "word": "animal",
+          "char_start": 45,
+          "char_end": 51,
+          "start": 2.361,
+          "end": 2.581,
+          "score": 0.9991
+        },
+        {
+          "word": "research",
+          "char_start": 52,
+          "char_end": 60,
+          "start": 2.681,
+          "end": 3.141,
+          "score": 0.9999
+        },
+        {
+          "word": "and",
+          "char_start": 61,
+          "char_end": 64,
+          "start": 3.582,
+          "end": 3.642,
+          "score": 0.9994
+        },
+        {
+          "word": "a",
+          "char_start": 65,
+          "char_end": 66,
+          "start": 3.682,
+          "end": 3.702,
+          "score": 0.9705
+        },
+        {
+          "word": "grandmother’s",
+          "char_start": 67,
+          "char_end": 80,
+          "start": 3.782,
+          "end": 4.322,
+          "score": 0.9999
+        },
+        {
+          "word": "hip",
+          "char_start": 81,
+          "char_end": 84,
+          "start": 4.402,
+          "end": 4.542,
+          "score": 0.9068
+        },
+        {
+          "word": "replacement",
+          "char_start": 85,
+          "char_end": 96,
+          "start": 4.622,
+          "end": 5.162,
+          "score": 0.9106
+        },
+        {
+          "word": "a",
+          "char_start": 98,
+          "char_end": 99,
+          "start": 5.783,
+          "end": 5.803,
+          "score": 0.8427
+        },
+        {
+          "word": "father’s",
+          "char_start": 100,
+          "char_end": 108,
+          "start": 5.863,
+          "end": 6.223,
+          "score": 1.0
+        },
+        {
+          "word": "bypass",
+          "char_start": 109,
+          "char_end": 115,
+          "start": 6.283,
+          "end": 6.743,
+          "score": 0.9959
+        },
+        {
+          "word": "operation",
+          "char_start": 116,
+          "char_end": 125,
+          "start": 6.863,
+          "end": 7.363,
+          "score": 1.0
+        },
+        {
+          "word": "a",
+          "char_start": 127,
+          "char_end": 128,
+          "start": 8.024,
+          "end": 8.044,
+          "score": 0.9973
+        },
+        {
+          "word": "baby’s",
+          "char_start": 129,
+          "char_end": 135,
+          "start": 8.124,
+          "end": 8.404,
+          "score": 0.9987
+        },
+        {
+          "word": "vaccinations",
+          "char_start": 136,
+          "char_end": 148,
+          "start": 8.464,
+          "end": 9.264,
+          "score": 0.9767
+        },
+        {
+          "word": "and",
+          "char_start": 150,
+          "char_end": 153,
+          "start": 9.764,
+          "end": 9.844,
+          "score": 0.9988
+        },
+        {
+          "word": "even",
+          "char_start": 154,
+          "char_end": 158,
+          "start": 9.964,
+          "end": 10.105,
+          "score": 1.0
+        },
+        {
+          "word": "a",
+          "char_start": 159,
+          "char_end": 160,
+          "start": 10.165,
+          "end": 10.185,
+          "score": 0.9833
+        },
+        {
+          "word": "pet’s",
+          "char_start": 161,
+          "char_end": 166,
+          "start": 10.245,
+          "end": 10.505,
+          "score": 0.9549
+        },
+        {
+          "word": "shots",
+          "char_start": 167,
+          "char_end": 172,
+          "start": 10.605,
+          "end": 10.985,
+          "score": 0.9957
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "55f2222dd3e7297b4560e46b379e01b24f13afc20bcd089a02e054d88f3054b4"
     },
     "s13": {
       "id": "s13",
@@ -331,7 +2431,260 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "To",
+          "char_start": 0,
+          "char_end": 2,
+          "start": 0.18,
+          "end": 0.24,
+          "score": 0.9994
+        },
+        {
+          "word": "those",
+          "char_start": 3,
+          "char_end": 8,
+          "start": 0.3,
+          "end": 0.481,
+          "score": 1.0
+        },
+        {
+          "word": "who",
+          "char_start": 9,
+          "char_end": 12,
+          "start": 0.541,
+          "end": 0.601,
+          "score": 1.0
+        },
+        {
+          "word": "are",
+          "char_start": 13,
+          "char_end": 16,
+          "start": 0.681,
+          "end": 0.761,
+          "score": 0.9959
+        },
+        {
+          "word": "unaware",
+          "char_start": 17,
+          "char_end": 24,
+          "start": 0.861,
+          "end": 1.262,
+          "score": 1.0
+        },
+        {
+          "word": "that",
+          "char_start": 25,
+          "char_end": 29,
+          "start": 1.342,
+          "end": 1.442,
+          "score": 0.9999
+        },
+        {
+          "word": "animal",
+          "char_start": 30,
+          "char_end": 36,
+          "start": 1.542,
+          "end": 1.742,
+          "score": 0.9959
+        },
+        {
+          "word": "research",
+          "char_start": 37,
+          "char_end": 45,
+          "start": 1.862,
+          "end": 2.263,
+          "score": 1.0
+        },
+        {
+          "word": "was",
+          "char_start": 46,
+          "char_end": 49,
+          "start": 2.303,
+          "end": 2.403,
+          "score": 0.9997
+        },
+        {
+          "word": "needed",
+          "char_start": 50,
+          "char_end": 56,
+          "start": 2.483,
+          "end": 2.724,
+          "score": 0.9991
+        },
+        {
+          "word": "to",
+          "char_start": 57,
+          "char_end": 59,
+          "start": 2.784,
+          "end": 2.824,
+          "score": 0.9999
+        },
+        {
+          "word": "produce",
+          "char_start": 60,
+          "char_end": 67,
+          "start": 2.884,
+          "end": 3.204,
+          "score": 1.0
+        },
+        {
+          "word": "these",
+          "char_start": 68,
+          "char_end": 73,
+          "start": 3.264,
+          "end": 3.405,
+          "score": 0.9999
+        },
+        {
+          "word": "treatments",
+          "char_start": 74,
+          "char_end": 84,
+          "start": 3.465,
+          "end": 3.865,
+          "score": 0.9999
+        },
+        {
+          "word": "as",
+          "char_start": 86,
+          "char_end": 88,
+          "start": 4.246,
+          "end": 4.286,
+          "score": 1.0
+        },
+        {
+          "word": "well",
+          "char_start": 89,
+          "char_end": 93,
+          "start": 4.346,
+          "end": 4.486,
+          "score": 1.0
+        },
+        {
+          "word": "as",
+          "char_start": 94,
+          "char_end": 96,
+          "start": 4.546,
+          "end": 4.586,
+          "score": 1.0
+        },
+        {
+          "word": "new",
+          "char_start": 97,
+          "char_end": 100,
+          "start": 4.706,
+          "end": 4.806,
+          "score": 0.9999
+        },
+        {
+          "word": "treatments",
+          "char_start": 101,
+          "char_end": 111,
+          "start": 4.907,
+          "end": 5.287,
+          "score": 0.9999
+        },
+        {
+          "word": "and",
+          "char_start": 112,
+          "char_end": 115,
+          "start": 5.347,
+          "end": 5.407,
+          "score": 0.9958
+        },
+        {
+          "word": "vaccines",
+          "char_start": 116,
+          "char_end": 124,
+          "start": 5.467,
+          "end": 6.068,
+          "score": 0.7302
+        },
+        {
+          "word": "animal",
+          "char_start": 126,
+          "char_end": 132,
+          "start": 6.489,
+          "end": 6.729,
+          "score": 0.9941
+        },
+        {
+          "word": "research",
+          "char_start": 133,
+          "char_end": 141,
+          "start": 6.809,
+          "end": 7.19,
+          "score": 1.0
+        },
+        {
+          "word": "seems",
+          "char_start": 142,
+          "char_end": 147,
+          "start": 7.29,
+          "end": 7.57,
+          "score": 0.9995
+        },
+        {
+          "word": "wasteful",
+          "char_start": 148,
+          "char_end": 156,
+          "start": 7.73,
+          "end": 8.111,
+          "score": 0.9998
+        },
+        {
+          "word": "at",
+          "char_start": 157,
+          "char_end": 159,
+          "start": 8.231,
+          "end": 8.271,
+          "score": 0.9986
+        },
+        {
+          "word": "best",
+          "char_start": 160,
+          "char_end": 164,
+          "start": 8.351,
+          "end": 8.632,
+          "score": 1.0
+        },
+        {
+          "word": "and",
+          "char_start": 165,
+          "char_end": 168,
+          "start": 9.072,
+          "end": 9.152,
+          "score": 0.9983
+        },
+        {
+          "word": "cruel",
+          "char_start": 169,
+          "char_end": 174,
+          "start": 9.312,
+          "end": 9.653,
+          "score": 0.9998
+        },
+        {
+          "word": "at",
+          "char_start": 175,
+          "char_end": 177,
+          "start": 9.853,
+          "end": 9.893,
+          "score": 0.9992
+        },
+        {
+          "word": "worst",
+          "char_start": 178,
+          "char_end": 183,
+          "start": 9.973,
+          "end": 10.294,
+          "score": 0.9999
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "f8262e02e8d5df8f7830474a00d10d95e094bd2488ac1b396928362ff74ed8e4"
     },
     "s14": {
       "id": "s14",
@@ -355,7 +2708,44 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "Much",
+          "char_start": 0,
+          "char_end": 4,
+          "start": 0.122,
+          "end": 0.326,
+          "score": 0.9998
+        },
+        {
+          "word": "can",
+          "char_start": 5,
+          "char_end": 8,
+          "start": 0.428,
+          "end": 0.53,
+          "score": 1.0
+        },
+        {
+          "word": "be",
+          "char_start": 9,
+          "char_end": 11,
+          "start": 0.591,
+          "end": 0.652,
+          "score": 1.0
+        },
+        {
+          "word": "done",
+          "char_start": 12,
+          "char_end": 16,
+          "start": 0.713,
+          "end": 0.937,
+          "score": 0.9997
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "f880ec8929342474fd6d444ca1c659580d270d59bdab66fa11bcc9f4505f9ad3"
     },
     "s15": {
       "id": "s15",
@@ -379,7 +2769,92 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "Scientists",
+          "char_start": 0,
+          "char_end": 10,
+          "start": 0.181,
+          "end": 0.763,
+          "score": 0.9999
+        },
+        {
+          "word": "could",
+          "char_start": 11,
+          "char_end": 16,
+          "start": 0.904,
+          "end": 1.145,
+          "score": 1.0
+        },
+        {
+          "word": "adopt",
+          "char_start": 18,
+          "char_end": 23,
+          "start": 1.386,
+          "end": 1.788,
+          "score": 1.0
+        },
+        {
+          "word": "middle-school",
+          "char_start": 25,
+          "char_end": 38,
+          "start": 2.029,
+          "end": 2.43,
+          "score": 1.0
+        },
+        {
+          "word": "classes",
+          "char_start": 39,
+          "char_end": 46,
+          "start": 2.491,
+          "end": 2.913,
+          "score": 1.0
+        },
+        {
+          "word": "and",
+          "char_start": 47,
+          "char_end": 50,
+          "start": 3.134,
+          "end": 3.194,
+          "score": 1.0
+        },
+        {
+          "word": "present",
+          "char_start": 51,
+          "char_end": 58,
+          "start": 3.274,
+          "end": 3.535,
+          "score": 1.0
+        },
+        {
+          "word": "their",
+          "char_start": 59,
+          "char_end": 64,
+          "start": 3.575,
+          "end": 3.716,
+          "score": 0.9989
+        },
+        {
+          "word": "own",
+          "char_start": 65,
+          "char_end": 68,
+          "start": 3.756,
+          "end": 3.837,
+          "score": 0.9999
+        },
+        {
+          "word": "research",
+          "char_start": 69,
+          "char_end": 77,
+          "start": 3.897,
+          "end": 4.319,
+          "score": 1.0
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "12f8efeecab3257375e8e96c62bc3b9c3c547cbee594673fffbb6922605d7756"
     },
     "s16": {
       "id": "s16",
@@ -405,7 +2880,196 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "They",
+          "char_start": 0,
+          "char_end": 4,
+          "start": 0.02,
+          "end": 0.14,
+          "score": 1.0
+        },
+        {
+          "word": "should",
+          "char_start": 5,
+          "char_end": 11,
+          "start": 0.2,
+          "end": 0.38,
+          "score": 0.9998
+        },
+        {
+          "word": "be",
+          "char_start": 12,
+          "char_end": 14,
+          "start": 0.42,
+          "end": 0.481,
+          "score": 1.0
+        },
+        {
+          "word": "quick",
+          "char_start": 15,
+          "char_end": 20,
+          "start": 0.621,
+          "end": 0.821,
+          "score": 0.9998
+        },
+        {
+          "word": "to",
+          "char_start": 21,
+          "char_end": 23,
+          "start": 0.901,
+          "end": 0.981,
+          "score": 1.0
+        },
+        {
+          "word": "respond",
+          "char_start": 24,
+          "char_end": 31,
+          "start": 1.061,
+          "end": 1.462,
+          "score": 1.0
+        },
+        {
+          "word": "to",
+          "char_start": 32,
+          "char_end": 34,
+          "start": 1.542,
+          "end": 1.602,
+          "score": 0.9999
+        },
+        {
+          "word": "letters",
+          "char_start": 35,
+          "char_end": 42,
+          "start": 1.682,
+          "end": 1.962,
+          "score": 0.9999
+        },
+        {
+          "word": "to",
+          "char_start": 43,
+          "char_end": 45,
+          "start": 2.042,
+          "end": 2.102,
+          "score": 0.9997
+        },
+        {
+          "word": "the",
+          "char_start": 46,
+          "char_end": 49,
+          "start": 2.162,
+          "end": 2.223,
+          "score": 1.0
+        },
+        {
+          "word": "editor",
+          "char_start": 50,
+          "char_end": 56,
+          "start": 2.323,
+          "end": 2.623,
+          "score": 1.0
+        },
+        {
+          "word": "lest",
+          "char_start": 58,
+          "char_end": 62,
+          "start": 2.903,
+          "end": 3.164,
+          "score": 1.0
+        },
+        {
+          "word": "animal-rights",
+          "char_start": 63,
+          "char_end": 76,
+          "start": 3.384,
+          "end": 3.965,
+          "score": 0.8588
+        },
+        {
+          "word": "misinformation",
+          "char_start": 77,
+          "char_end": 91,
+          "start": 4.045,
+          "end": 4.765,
+          "score": 0.9998
+        },
+        {
+          "word": "go",
+          "char_start": 92,
+          "char_end": 94,
+          "start": 4.846,
+          "end": 4.966,
+          "score": 1.0
+        },
+        {
+          "word": "unchallenged",
+          "char_start": 95,
+          "char_end": 107,
+          "start": 5.166,
+          "end": 5.807,
+          "score": 0.9999
+        },
+        {
+          "word": "and",
+          "char_start": 108,
+          "char_end": 111,
+          "start": 5.947,
+          "end": 6.027,
+          "score": 0.9999
+        },
+        {
+          "word": "acquire",
+          "char_start": 112,
+          "char_end": 119,
+          "start": 6.067,
+          "end": 6.447,
+          "score": 1.0
+        },
+        {
+          "word": "a",
+          "char_start": 120,
+          "char_end": 121,
+          "start": 6.547,
+          "end": 6.567,
+          "score": 0.999
+        },
+        {
+          "word": "deceptive",
+          "char_start": 122,
+          "char_end": 131,
+          "start": 6.628,
+          "end": 7.128,
+          "score": 0.9997
+        },
+        {
+          "word": "appearance",
+          "char_start": 132,
+          "char_end": 142,
+          "start": 7.188,
+          "end": 7.609,
+          "score": 1.0
+        },
+        {
+          "word": "of",
+          "char_start": 143,
+          "char_end": 145,
+          "start": 7.729,
+          "end": 7.769,
+          "score": 0.9999
+        },
+        {
+          "word": "truth",
+          "char_start": 146,
+          "char_end": 151,
+          "start": 7.889,
+          "end": 8.189,
+          "score": 0.9997
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "70fe10ea49d093d80db379b4ea02ff3741a47058c929c265488545064759173c"
     },
     "s17": {
       "id": "s17",
@@ -431,7 +3095,132 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "Research",
+          "char_start": 0,
+          "char_end": 8,
+          "start": 0.04,
+          "end": 0.341,
+          "score": 0.991
+        },
+        {
+          "word": "institutions",
+          "char_start": 9,
+          "char_end": 21,
+          "start": 0.422,
+          "end": 1.064,
+          "score": 0.9998
+        },
+        {
+          "word": "could",
+          "char_start": 22,
+          "char_end": 27,
+          "start": 1.204,
+          "end": 1.345,
+          "score": 0.9992
+        },
+        {
+          "word": "be",
+          "char_start": 28,
+          "char_end": 30,
+          "start": 1.385,
+          "end": 1.445,
+          "score": 1.0
+        },
+        {
+          "word": "opened",
+          "char_start": 31,
+          "char_end": 37,
+          "start": 1.586,
+          "end": 1.807,
+          "score": 0.7564
+        },
+        {
+          "word": "to",
+          "char_start": 38,
+          "char_end": 40,
+          "start": 1.867,
+          "end": 1.927,
+          "score": 0.9998
+        },
+        {
+          "word": "tours",
+          "char_start": 41,
+          "char_end": 46,
+          "start": 2.007,
+          "end": 2.369,
+          "score": 0.9996
+        },
+        {
+          "word": "to",
+          "char_start": 48,
+          "char_end": 50,
+          "start": 2.609,
+          "end": 2.69,
+          "score": 0.9991
+        },
+        {
+          "word": "show",
+          "char_start": 51,
+          "char_end": 55,
+          "start": 2.79,
+          "end": 2.951,
+          "score": 0.9949
+        },
+        {
+          "word": "that",
+          "char_start": 56,
+          "char_end": 60,
+          "start": 3.071,
+          "end": 3.171,
+          "score": 0.9999
+        },
+        {
+          "word": "laboratory",
+          "char_start": 61,
+          "char_end": 71,
+          "start": 3.232,
+          "end": 3.754,
+          "score": 0.9999
+        },
+        {
+          "word": "animals",
+          "char_start": 72,
+          "char_end": 79,
+          "start": 3.894,
+          "end": 4.215,
+          "score": 0.9999
+        },
+        {
+          "word": "receive",
+          "char_start": 80,
+          "char_end": 87,
+          "start": 4.336,
+          "end": 4.657,
+          "score": 0.9999
+        },
+        {
+          "word": "humane",
+          "char_start": 88,
+          "char_end": 94,
+          "start": 4.737,
+          "end": 5.078,
+          "score": 0.9996
+        },
+        {
+          "word": "care",
+          "char_start": 95,
+          "char_end": 99,
+          "start": 5.159,
+          "end": 5.42,
+          "score": 0.9999
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "5d8c3ec5f01f6d52d406b7f4681e94f711289644d9f28f8dae367d56b10d3f3f"
     },
     "s18": {
       "id": "s18",
@@ -457,7 +3246,340 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "Finally",
+          "char_start": 0,
+          "char_end": 7,
+          "start": 0.22,
+          "end": 0.62,
+          "score": 0.9999
+        },
+        {
+          "word": "because",
+          "char_start": 9,
+          "char_end": 16,
+          "start": 1.041,
+          "end": 1.281,
+          "score": 1.0
+        },
+        {
+          "word": "the",
+          "char_start": 17,
+          "char_end": 20,
+          "start": 1.341,
+          "end": 1.401,
+          "score": 0.9999
+        },
+        {
+          "word": "ultimate",
+          "char_start": 21,
+          "char_end": 29,
+          "start": 1.541,
+          "end": 1.881,
+          "score": 0.9998
+        },
+        {
+          "word": "stakeholders",
+          "char_start": 30,
+          "char_end": 42,
+          "start": 1.961,
+          "end": 2.581,
+          "score": 0.996
+        },
+        {
+          "word": "are",
+          "char_start": 43,
+          "char_end": 46,
+          "start": 2.681,
+          "end": 2.741,
+          "score": 0.9994
+        },
+        {
+          "word": "patients",
+          "char_start": 47,
+          "char_end": 55,
+          "start": 2.822,
+          "end": 3.242,
+          "score": 0.9809
+        },
+        {
+          "word": "the",
+          "char_start": 57,
+          "char_end": 60,
+          "start": 4.082,
+          "end": 4.162,
+          "score": 0.9995
+        },
+        {
+          "word": "health-research",
+          "char_start": 61,
+          "char_end": 76,
+          "start": 4.222,
+          "end": 4.843,
+          "score": 0.9998
+        },
+        {
+          "word": "community",
+          "char_start": 77,
+          "char_end": 86,
+          "start": 4.923,
+          "end": 5.343,
+          "score": 0.9998
+        },
+        {
+          "word": "should",
+          "char_start": 87,
+          "char_end": 93,
+          "start": 5.743,
+          "end": 5.923,
+          "score": 0.9999
+        },
+        {
+          "word": "actively",
+          "char_start": 94,
+          "char_end": 102,
+          "start": 6.143,
+          "end": 6.503,
+          "score": 0.9999
+        },
+        {
+          "word": "recruit",
+          "char_start": 103,
+          "char_end": 110,
+          "start": 6.604,
+          "end": 6.984,
+          "score": 0.9999
+        },
+        {
+          "word": "to",
+          "char_start": 111,
+          "char_end": 113,
+          "start": 7.164,
+          "end": 7.244,
+          "score": 1.0
+        },
+        {
+          "word": "its",
+          "char_start": 114,
+          "char_end": 117,
+          "start": 7.324,
+          "end": 7.424,
+          "score": 0.9984
+        },
+        {
+          "word": "cause",
+          "char_start": 118,
+          "char_end": 123,
+          "start": 7.484,
+          "end": 7.844,
+          "score": 0.9998
+        },
+        {
+          "word": "not",
+          "char_start": 124,
+          "char_end": 127,
+          "start": 8.364,
+          "end": 8.525,
+          "score": 1.0
+        },
+        {
+          "word": "only",
+          "char_start": 128,
+          "char_end": 132,
+          "start": 8.605,
+          "end": 8.765,
+          "score": 1.0
+        },
+        {
+          "word": "well-known",
+          "char_start": 133,
+          "char_end": 143,
+          "start": 8.845,
+          "end": 9.185,
+          "score": 0.9999
+        },
+        {
+          "word": "personalities",
+          "char_start": 144,
+          "char_end": 157,
+          "start": 9.245,
+          "end": 9.905,
+          "score": 0.9999
+        },
+        {
+          "word": "such",
+          "char_start": 158,
+          "char_end": 162,
+          "start": 10.125,
+          "end": 10.286,
+          "score": 0.9999
+        },
+        {
+          "word": "as",
+          "char_start": 163,
+          "char_end": 165,
+          "start": 10.346,
+          "end": 10.386,
+          "score": 0.9993
+        },
+        {
+          "word": "Stephen",
+          "char_start": 166,
+          "char_end": 173,
+          "start": 10.446,
+          "end": 10.706,
+          "score": 0.9942
+        },
+        {
+          "word": "Cooper",
+          "char_start": 174,
+          "char_end": 180,
+          "start": 10.786,
+          "end": 11.086,
+          "score": 1.0
+        },
+        {
+          "word": "who",
+          "char_start": 182,
+          "char_end": 185,
+          "start": 11.526,
+          "end": 11.606,
+          "score": 1.0
+        },
+        {
+          "word": "has",
+          "char_start": 186,
+          "char_end": 189,
+          "start": 11.666,
+          "end": 11.746,
+          "score": 0.9998
+        },
+        {
+          "word": "made",
+          "char_start": 190,
+          "char_end": 194,
+          "start": 11.826,
+          "end": 11.986,
+          "score": 1.0
+        },
+        {
+          "word": "courageous",
+          "char_start": 195,
+          "char_end": 205,
+          "start": 12.066,
+          "end": 12.567,
+          "score": 0.9998
+        },
+        {
+          "word": "statements",
+          "char_start": 206,
+          "char_end": 216,
+          "start": 12.627,
+          "end": 13.047,
+          "score": 0.9997
+        },
+        {
+          "word": "about",
+          "char_start": 217,
+          "char_end": 222,
+          "start": 13.127,
+          "end": 13.287,
+          "score": 0.9999
+        },
+        {
+          "word": "the",
+          "char_start": 223,
+          "char_end": 226,
+          "start": 13.327,
+          "end": 13.387,
+          "score": 0.9978
+        },
+        {
+          "word": "value",
+          "char_start": 227,
+          "char_end": 232,
+          "start": 13.447,
+          "end": 13.787,
+          "score": 1.0
+        },
+        {
+          "word": "of",
+          "char_start": 233,
+          "char_end": 235,
+          "start": 13.847,
+          "end": 13.887,
+          "score": 0.9997
+        },
+        {
+          "word": "animal",
+          "char_start": 236,
+          "char_end": 242,
+          "start": 14.048,
+          "end": 14.268,
+          "score": 0.9999
+        },
+        {
+          "word": "research",
+          "char_start": 243,
+          "char_end": 251,
+          "start": 14.348,
+          "end": 14.748,
+          "score": 1.0
+        },
+        {
+          "word": "but",
+          "char_start": 253,
+          "char_end": 256,
+          "start": 15.308,
+          "end": 15.408,
+          "score": 0.9999
+        },
+        {
+          "word": "all",
+          "char_start": 257,
+          "char_end": 260,
+          "start": 15.608,
+          "end": 15.728,
+          "score": 0.9999
+        },
+        {
+          "word": "who",
+          "char_start": 261,
+          "char_end": 264,
+          "start": 15.808,
+          "end": 15.909,
+          "score": 0.9999
+        },
+        {
+          "word": "receive",
+          "char_start": 265,
+          "char_end": 272,
+          "start": 15.989,
+          "end": 16.369,
+          "score": 0.9999
+        },
+        {
+          "word": "medical",
+          "char_start": 273,
+          "char_end": 280,
+          "start": 16.569,
+          "end": 16.869,
+          "score": 1.0
+        },
+        {
+          "word": "treatment",
+          "char_start": 281,
+          "char_end": 290,
+          "start": 16.949,
+          "end": 17.309,
+          "score": 1.0
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "006f7a07db7bf4dbf28a144606ef5d95d7d735a02fff87d3d2ae03f7de7c011d"
     },
     "s19": {
       "id": "s19",
@@ -483,7 +3605,188 @@
         "technical": "passed",
         "voice": "pending",
         "c_direction": "pending"
-      }
+      },
+      "words": [
+        {
+          "word": "If",
+          "char_start": 0,
+          "char_end": 2,
+          "start": 0.28,
+          "end": 0.32,
+          "score": 0.9999
+        },
+        {
+          "word": "good",
+          "char_start": 3,
+          "char_end": 7,
+          "start": 0.421,
+          "end": 0.581,
+          "score": 0.9999
+        },
+        {
+          "word": "people",
+          "char_start": 8,
+          "char_end": 14,
+          "start": 0.641,
+          "end": 0.901,
+          "score": 1.0
+        },
+        {
+          "word": "do",
+          "char_start": 15,
+          "char_end": 17,
+          "start": 0.981,
+          "end": 1.061,
+          "score": 1.0
+        },
+        {
+          "word": "nothing",
+          "char_start": 18,
+          "char_end": 25,
+          "start": 1.161,
+          "end": 1.522,
+          "score": 1.0
+        },
+        {
+          "word": "there",
+          "char_start": 27,
+          "char_end": 32,
+          "start": 2.042,
+          "end": 2.183,
+          "score": 0.9999
+        },
+        {
+          "word": "is",
+          "char_start": 33,
+          "char_end": 35,
+          "start": 2.243,
+          "end": 2.303,
+          "score": 0.9996
+        },
+        {
+          "word": "a",
+          "char_start": 36,
+          "char_end": 37,
+          "start": 2.383,
+          "end": 2.403,
+          "score": 0.9974
+        },
+        {
+          "word": "real",
+          "char_start": 38,
+          "char_end": 42,
+          "start": 2.483,
+          "end": 2.663,
+          "score": 1.0
+        },
+        {
+          "word": "possibility",
+          "char_start": 43,
+          "char_end": 54,
+          "start": 2.783,
+          "end": 3.544,
+          "score": 1.0
+        },
+        {
+          "word": "that",
+          "char_start": 55,
+          "char_end": 59,
+          "start": 3.684,
+          "end": 3.805,
+          "score": 0.9999
+        },
+        {
+          "word": "an",
+          "char_start": 60,
+          "char_end": 62,
+          "start": 3.885,
+          "end": 3.925,
+          "score": 0.9994
+        },
+        {
+          "word": "uninformed",
+          "char_start": 63,
+          "char_end": 73,
+          "start": 4.145,
+          "end": 4.846,
+          "score": 0.9999
+        },
+        {
+          "word": "citizenry",
+          "char_start": 74,
+          "char_end": 83,
+          "start": 4.986,
+          "end": 5.587,
+          "score": 0.9997
+        },
+        {
+          "word": "will",
+          "char_start": 84,
+          "char_end": 88,
+          "start": 5.727,
+          "end": 5.887,
+          "score": 1.0
+        },
+        {
+          "word": "extinguish",
+          "char_start": 89,
+          "char_end": 99,
+          "start": 5.967,
+          "end": 6.488,
+          "score": 1.0
+        },
+        {
+          "word": "the",
+          "char_start": 100,
+          "char_end": 103,
+          "start": 6.608,
+          "end": 6.688,
+          "score": 0.9999
+        },
+        {
+          "word": "precious",
+          "char_start": 104,
+          "char_end": 112,
+          "start": 6.748,
+          "end": 7.109,
+          "score": 0.9999
+        },
+        {
+          "word": "embers",
+          "char_start": 113,
+          "char_end": 119,
+          "start": 7.289,
+          "end": 7.629,
+          "score": 1.0
+        },
+        {
+          "word": "of",
+          "char_start": 120,
+          "char_end": 122,
+          "start": 7.809,
+          "end": 7.849,
+          "score": 0.9997
+        },
+        {
+          "word": "medical",
+          "char_start": 123,
+          "char_end": 130,
+          "start": 7.95,
+          "end": 8.23,
+          "score": 1.0
+        },
+        {
+          "word": "progress",
+          "char_start": 131,
+          "char_end": 139,
+          "start": 8.33,
+          "end": 8.811,
+          "score": 1.0
+        }
+      ],
+      "alignment_status": "passed",
+      "alignment_model": "torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1",
+      "aligned_generation_fingerprint": "6dcfeb75cbae9ddad130a70985d3a2667d58b70fa5d66f0a91ebb8984ae48519"
     }
   },
   "missing_segments": [],
@@ -491,5 +3794,6 @@
     "technical": "passed",
     "voice": "pending",
     "c_direction": "pending"
-  }
+  },
+  "alignment_status": "passed"
 }
