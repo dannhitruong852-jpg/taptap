@@ -139,3 +139,26 @@ test('opening phrasebook during playback scrolls to the first phrase of the acti
   assert.equal(scrollOptions?.block,'start','the matched phrase must become the first visible phrase under the column header');
  }finally{proto.scrollIntoView=original;app.close();}
 });
+
+
+test('opening phrasebook reserves enough tail space and scrolls the target to the first visible row',async()=>{
+ const activePhrases=[
+  {...phrase('2002-a','active-target',1),sentenceId:'s01',enStart:0,enEnd:5}
+ ];
+ const app=await setup({phrases:activePhrases});
+ const proto=app.window.HTMLElement.prototype;
+ const originalRect=proto.getBoundingClientRect;
+ try{
+  const list=app.$('#phrase-book-list');
+  Object.defineProperty(list,'clientHeight',{configurable:true,value:580});
+  proto.getBoundingClientRect=function(){
+   if(this===list)return {top:100,bottom:680,left:0,right:360,width:360,height:580,x:0,y:100,toJSON(){}};
+   if(this.classList?.contains('phrase-book-item'))return {top:400,bottom:464,left:0,right:360,width:360,height:64,x:0,y:400,toJSON(){}};
+   return originalRect.call(this);
+  };
+  await app.start();
+  app.$('#phrase-book-open').click();
+  assert.equal(list.style.getPropertyValue('--phrase-book-tail-space'),'532px','tail space must let even a near-end target reach the top row');
+  assert.equal(list.scrollTop,300,'target phrase must align with the top edge of the scrollable list');
+ }finally{proto.getBoundingClientRect=originalRect;app.close();}
+});
