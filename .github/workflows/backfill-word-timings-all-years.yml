@@ -110,7 +110,11 @@ jobs:
           merge-multiple: true
       - name: Overlay aligned manifests and reports
         run: |
-          cp -a /tmp/aligned/kaoyan-reader-v1/. kaoyan-reader-v1/
+          test -d /tmp/aligned/audio
+          test -d /tmp/aligned/reports
+          mkdir -p kaoyan-reader-v1/audio kaoyan-reader-v1/reports
+          cp -a /tmp/aligned/audio/. kaoyan-reader-v1/audio/
+          cp -a /tmp/aligned/reports/. kaoyan-reader-v1/reports/
       - name: Validate every production year before publish
         run: |
           python - <<'PY'
