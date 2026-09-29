@@ -1,0 +1,19 @@
+name: phrasebook-row-swipe-blur-tdd
+on:
+  push:
+    branches: [phrasebook-row-swipe-blur-20260929]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: kaoyan-reader-v1
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: kaoyan-reader-v1/package-lock.json
+      - run: npm ci
+      - run: npm run test:dom -- --test-name-pattern="right swipe|global blur|vertical movement|row blur state"
