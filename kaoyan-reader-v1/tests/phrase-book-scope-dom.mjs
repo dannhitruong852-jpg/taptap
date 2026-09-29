@@ -123,21 +123,27 @@ test('phrasebook ignores add/edit time and orders phrases by sentence then sourc
  }finally{app.close();}
 });
 
-test('opening phrasebook during playback scrolls to the first phrase of the active sentence',async()=>{
+test('opening phrasebook during playback aligns the first phrase of the active sentence to the list top',async()=>{
  const activePhrases=[
   {...phrase('2002-a','later-in-active',2),sentenceId:'s01',enStart:6,enEnd:11},
   {...phrase('2002-a','first-in-active',1),sentenceId:'s01',enStart:0,enEnd:5}
  ];
- const app=await setup({phrases:activePhrases});const proto=app.window.HTMLElement.prototype;const original=proto.scrollIntoView;let scrolled=null,scrollOptions=null;
+ const app=await setup({phrases:activePhrases});const proto=app.window.HTMLElement.prototype;const originalRect=proto.getBoundingClientRect;
  try{
-  proto.scrollIntoView=function(options){if(this.classList?.contains('phrase-book-item')){scrolled=this;scrollOptions=options;}};
+  const list=app.$('#phrase-book-list');
+  Object.defineProperty(list,'clientHeight',{configurable:true,value:580});
+  Object.defineProperty(list,'scrollHeight',{configurable:true,value:1200});
+  proto.getBoundingClientRect=function(){
+   if(this===list)return {top:100,bottom:680,left:0,right:360,width:360,height:580,x:0,y:100,toJSON(){}};
+   if(this.dataset?.phraseKey==='2002-a|s01|0|5')return {top:220,bottom:284,left:0,right:360,width:360,height:64,x:0,y:220,toJSON(){}};
+   if(this.dataset?.phraseKey==='2002-a|s01|6|11')return {top:500,bottom:564,left:0,right:360,width:360,height:64,x:0,y:500,toJSON(){}};
+   return originalRect.call(this);
+  };
   await app.start();
   app.$('#phrase-book-open').click();
   assert.equal(app.$('#phrase-book-scope').value,'article');
-  assert.equal(scrolled?.dataset.sentenceId,'s01');
-  assert.equal(scrolled?.dataset.phraseKey,'2002-a|s01|0|5');
-  assert.equal(scrollOptions?.block,'start','the matched phrase must become the first visible phrase under the column header');
- }finally{proto.scrollIntoView=original;app.close();}
+  assert.equal(list.scrollTop,120,'the first phrase in the active sentence must be the first visible phrase row');
+ }finally{proto.getBoundingClientRect=originalRect;app.close();}
 });
 
 
