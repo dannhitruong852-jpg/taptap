@@ -128,13 +128,14 @@ test('opening phrasebook during playback scrolls to the first phrase of the acti
   {...phrase('2002-a','later-in-active',2),sentenceId:'s01',enStart:6,enEnd:11},
   {...phrase('2002-a','first-in-active',1),sentenceId:'s01',enStart:0,enEnd:5}
  ];
- const app=await setup({phrases:activePhrases});const proto=app.window.HTMLElement.prototype;const original=proto.scrollIntoView;let scrolled=null;
+ const app=await setup({phrases:activePhrases});const proto=app.window.HTMLElement.prototype;const original=proto.scrollIntoView;let scrolled=null,scrollOptions=null;
  try{
-  proto.scrollIntoView=function(){if(this.classList?.contains('phrase-book-item'))scrolled=this;};
+  proto.scrollIntoView=function(options){if(this.classList?.contains('phrase-book-item')){scrolled=this;scrollOptions=options;}};
   await app.start();
   app.$('#phrase-book-open').click();
   assert.equal(app.$('#phrase-book-scope').value,'article');
   assert.equal(scrolled?.dataset.sentenceId,'s01');
   assert.equal(scrolled?.dataset.phraseKey,'2002-a|s01|0|5');
+  assert.equal(scrollOptions?.block,'start','the matched phrase must become the first visible phrase under the column header');
  }finally{proto.scrollIntoView=original;app.close();}
 });
