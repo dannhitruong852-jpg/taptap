@@ -10,7 +10,6 @@ from alignment.ctc_align import align_tokens
 from alignment.normalize_transcript import normalize_transcript, ctc_text
 
 ROOT=Path(__file__).resolve().parents[2]
-ARTICLES_2002=("cloze","text1","text2","text3","text4","translation")
 
 
 def attach_word_times(words:list[dict], char_frames:list[int], frame_seconds:float, audio_duration:float,
@@ -92,15 +91,19 @@ def main()->None:
     parser.add_argument('--year',type=int,required=True)
     parser.add_argument('--root',required=True)
     args=parser.parse_args()
-    if args.year!=2002:
-        raise ValueError('first production scope is 2002')
     root=Path(args.root)
+    catalog=json.loads((root/'content/catalog.json').read_text(encoding='utf-8'))
+    year_entries=[entry for entry in catalog.get('articles',[]) if int(entry.get('year',-1))==args.year]
+    if not year_entries:
+        raise ValueError(f'no catalog entries found for {args.year}')
     failures=[]
-    for article in ARTICLES_2002:
-        content=json.loads((root/f'content/{args.year}/c/{article}.json').read_text(encoding='utf-8'))
+    for catalog_entry in year_entries:
+        article_id=str(catalog_entry.get('id',''))
+        article=article_id.removeprefix(f'{args.year}-') or article_id
+        content_path=root/str(catalog_entry['content']).removeprefix('./')
+        manifest_path=root/str(catalog_entry['manifest']).removeprefix('./')
+        content=json.loads(content_path.read_text(encoding='utf-8'))
         by_id={s['id']:s for s in content.get('sentences',[])}
-        directory=root/f'audio/{args.year}/v4/c-{article}'
-        manifest_path=directory/'manifest.json'
         manifest=json.loads(manifest_path.read_text(encoding='utf-8'))
         for sid,entry in manifest.get('sentences',{}).items():
             source=by_id.get(sid)
@@ -109,7 +112,17 @@ def main()->None:
                 entry['alignment_status']='failed'
                 continue
             try:
-                entry['words']=align_sentence_audio(directory/f'v4-{sid}.opus',source['en'])
+                audio_rel=str(entry.get('mp3_path') or entry.get('path') or '').removeprefix('./')
+                if not audio_rel:
+                    raise ValueError('missing sentence audio path')
+                audio_path=root/audio_rel
+                if not audio_path.exists():
+                    alt=str(entry.get('mp3_path') or '').removeprefix('./')
+                    if alt and (root/alt).exists():
+                        audio_path=root/alt
+                    else:
+                        raise ValueError(f'audio file not found: {audio_rel}')
+                entry['words']=align_sentence_audio(audio_path,source['en'])
                 entry['alignment_status']='passed'
                 entry['alignment_model']='torchaudio-WAV2VEC2_ASR_BASE_960H-ctc-v1'
                 entry['aligned_generation_fingerprint']=entry.get('generation_fingerprint')
